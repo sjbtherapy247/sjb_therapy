@@ -12,6 +12,8 @@ export default function EcommerceLandingFeaturedProducts() {
     <Container
       sx={{
         py: { xs: 5, md: 8 },
+        m: 0,
+        px: 0,
       }}
     >
       <Typography
@@ -24,8 +26,8 @@ export default function EcommerceLandingFeaturedProducts() {
         Featured Products
       </Typography>
 
-      <Grid container spacing={3}>
-        <Grid xs={12} lg={8}>
+      <Grid container spacing={3} sx={{ p: 0, m: 0 }}>
+        <Grid xs={12} lg={8} p={0}>
           <Box
             gap={3}
             display="grid"
@@ -41,7 +43,7 @@ export default function EcommerceLandingFeaturedProducts() {
           </Box>
         </Grid>
 
-        <Grid xs={12} lg={4}>
+        <Grid xs={12} lg={4} p={0}>
           <Box
             gap={3}
             display="grid"

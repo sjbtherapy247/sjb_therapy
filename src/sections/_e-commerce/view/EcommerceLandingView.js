@@ -20,23 +20,14 @@ export default function EcommerceLandingView() {
   return (
     <>
       <EcommerceHeader />
-
       <EcommerceLandingHero />
-
       <EcommerceLandingCategories />
-
       <EcommerceLandingHotDealToday />
-
       <EcommerceLandingFeaturedProducts />
-
       <EcommerceLandingSpecialOffer />
-
       <EcommerceLandingFeaturedBrands />
-
       <EcommerceLandingPopularProducts />
-
       <EcommerceLandingTopProducts />
-
       <TestimonialEcommerce testimonials={_testimonials} />
     </>
   );

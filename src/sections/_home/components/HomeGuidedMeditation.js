@@ -44,7 +44,10 @@ export default function HomeGuidedMediation() {
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              <Typography color="primary.dark" variant="h1">
+              <Typography
+                color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.dark'}
+                variant="h1"
+              >
                 Hypnotherapy
               </Typography>
               <Typography variant="h4">It&apos;s Like A Guided Meditation</Typography>
