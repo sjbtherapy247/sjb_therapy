@@ -58,11 +58,7 @@ export default function MarketingPostView() {
       <Container>
         <CustomBreadcrumbs
           sx={{ my: 3 }}
-          links={[
-            { name: 'Home', href: '/' },
-            { name: 'Blog', href: paths.marketing.posts },
-            { name: title },
-          ]}
+          links={[{ name: 'Home', href: '/' }, { name: 'Posts', href: '/posts' }, { name: title }]}
         />
       </Container>
 

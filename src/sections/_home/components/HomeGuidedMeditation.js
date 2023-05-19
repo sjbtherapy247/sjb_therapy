@@ -4,7 +4,6 @@ import { Stack, Container, Typography, Unstable_Grid2 as Grid } from '@mui/mater
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // components
-import { useSettingsContext } from 'src/components/settings';
 import { useTheme } from '@emotion/react';
 
 // ----------------------------------------------------------------------
@@ -12,8 +11,8 @@ import { useTheme } from '@emotion/react';
 const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(10, 0),
   ...bgGradient({
-    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 0.8)} 0%`,
-    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 0.95)} 40%`,
+    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 0.7)} 0%`,
+    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 0.95)} 70%`,
     imgUrl: '/assets/images/simon/guided-med.jpg',
   }),
   [theme.breakpoints.up('md')]: {
@@ -45,7 +44,7 @@ export default function HomeGuidedMediation() {
               }}
             >
               <Typography
-                color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.dark'}
+                color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.darker'}
                 variant="h1"
               >
                 Hypnotherapy

@@ -11,6 +11,8 @@ HomePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
+// Entry point to website content
+
 export default function HomePage() {
   return (
     <>
