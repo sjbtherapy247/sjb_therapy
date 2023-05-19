@@ -15,7 +15,7 @@ export default function EcommerceAccountPaymentPage() {
   return (
     <>
       <Head>
-        <title>Account: Payment | ZONE UI</title>
+        <title>Account: Payment | SJB Therapy</title>
       </Head>
 
       <EcommerceAccountPaymentView />

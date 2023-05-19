@@ -15,7 +15,7 @@ export default function RegisterIllustrationPage() {
   return (
     <>
       <Head>
-        <title>Register Illustration | ZONE UI</title>
+        <title>Register Illustration | SJB Therapy</title>
       </Head>
 
       <RegisterIllustrationView />

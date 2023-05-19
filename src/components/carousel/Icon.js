@@ -3,7 +3,7 @@ import Iconify from '../iconify';
 
 // ----------------------------------------------------------------------
 
-export function LeftIcon({ icon = 'carbon:chevron-right', isRTL }) {
+export function LeftIcon({ icon = 'carbon:chevron-left', isRTL }) {
   return (
     <Iconify
       icon={icon}

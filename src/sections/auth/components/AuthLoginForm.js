@@ -57,7 +57,7 @@ export default function AuthLoginForm() {
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-      <Stack spacing={2.5} alignItems="flex-end">
+      <Stack spacing={1.5} alignItems="flex-end">
         <RHFTextField name="email" label="Email address" />
 
         <RHFTextField
@@ -87,7 +87,7 @@ export default function AuthLoginForm() {
 
         <LoadingButton
           fullWidth
-          color="inherit"
+          color="primary"
           size="large"
           type="submit"
           variant="contained"

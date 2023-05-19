@@ -17,6 +17,7 @@ export default function BackgroundView() {
     setCount(count + 1);
     setSelectVariant(event.target.value);
   };
+  console.log(count);
 
   return (
     <Card sx={{ p: 3 }}>

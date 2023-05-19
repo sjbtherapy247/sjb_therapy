@@ -15,7 +15,7 @@ export default function EcommerceAccountVouchersPage() {
   return (
     <>
       <Head>
-        <title>Account: Vouchers | ZONE UI</title>
+        <title>Account: Vouchers | SJB Therapy</title>
       </Head>
 
       <EcommerceAccountVouchersView />

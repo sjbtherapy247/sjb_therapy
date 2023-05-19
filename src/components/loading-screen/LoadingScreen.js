@@ -38,13 +38,13 @@ export default function LoadingScreen({ sx }) {
             opacity: [1, 0.48, 1, 0.48, 1],
           }}
           transition={{
-            duration: 2,
+            duration: 0.4,
             ease: 'easeInOut',
             repeatDelay: 1,
             repeat: Infinity,
           }}
         >
-          <Logo single sx={{ width: 128, height: 128 }} />
+          <Logo single />
         </m.div>
       </StyledRoot>
 

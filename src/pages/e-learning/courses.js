@@ -15,7 +15,7 @@ export default function ElearningCoursesPage() {
   return (
     <>
       <Head>
-        <title>Courses | ZONE UI</title>
+        <title>Courses | SJB Therapy</title>
       </Head>
 
       <ElearningCoursesView />

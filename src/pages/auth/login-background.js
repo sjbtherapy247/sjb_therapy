@@ -15,7 +15,7 @@ export default function LoginBackgroundPage() {
   return (
     <>
       <Head>
-        <title>Login Background | ZONE UI</title>
+        <title>Login Background | SJB Therapy</title>
       </Head>
 
       <LoginBackgroundView />

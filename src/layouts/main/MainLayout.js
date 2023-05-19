@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { Box } from '@mui/material';
 // config
 import { HEADER } from 'src/config-global';
-//
+// page components
 import Header from './header/Header';
 import Footer from './footer/Footer';
 
@@ -19,7 +19,7 @@ const spacingLayout = [...pathsOnDark, '/', '/e-learning/landing', '/marketing/l
 
 export default function MainLayout({ children }) {
   const { pathname } = useRouter();
-
+  // check if pathname is in the array
   const actionPage = (arr) => arr.some((path) => pathname === path);
 
   return (
@@ -32,7 +32,8 @@ export default function MainLayout({ children }) {
           flexGrow: 1,
         }}
       >
-        {!actionPage(spacingLayout) && <Spacing />}
+        {/* {!actionPage(spacingLayout) && <Spacing />}{' '} */}
+        {/* just puts xtra space above e-commerce menu  */}
         {children}
       </Box>
 

@@ -37,10 +37,10 @@ export default function ComponentsPage() {
   return (
     <>
       <Head>
-        <title>Components | ZONE UI</title>
+        <title>Components | SJB Therapy</title>
       </Head>
 
-      <Container sx={{ mt: 5, mb: 10 }}>
+      <Container sx={{ mt: 8, mb: 10 }}>
         <Typography variant="h4" paragraph>
           MUI Components
         </Typography>
@@ -63,8 +63,8 @@ export default function ComponentsPage() {
           gap={3}
           display="grid"
           gridTemplateColumns={{
-            xs: 'repeat(1, 1fr)',
-            sm: 'repeat(2, 1fr)',
+            xs: 'repeat(2, 1fr)',
+            sm: 'repeat(3, 1fr)',
             md: 'repeat(4, 1fr)',
           }}
         >

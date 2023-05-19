@@ -44,7 +44,7 @@ export default function AuthCarousel({ title, images }) {
   const theme = useTheme();
 
   const carouselSettings = {
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     fade: true,
     dots: true,
     arrows: false,
@@ -58,7 +58,7 @@ export default function AuthCarousel({ title, images }) {
         left: 0,
         right: 0,
         zIndex: 10,
-        bottom: 80,
+        top: 600,
         mx: 'auto',
         position: 'absolute',
       },
@@ -72,15 +72,16 @@ export default function AuthCarousel({ title, images }) {
       <Typography
         variant="h2"
         sx={{
-          p: 10,
+          // m: 0,
           width: 1,
           left: 0,
-          bottom: 80,
+          top: 500,
           zIndex: 9,
+          fontWeight: '300',
           textAlign: 'center',
           position: 'absolute',
           color: 'common.white',
-          whiteSpace: 'pre-line',
+          // whiteSpace: 'pre-line',
         }}
       >
         {title}

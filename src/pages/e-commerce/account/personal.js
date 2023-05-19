@@ -15,7 +15,7 @@ export default function EcommerceAccountPersonalPage() {
   return (
     <>
       <Head>
-        <title>Account: Personal | ZONE UI</title>
+        <title>Account: Personal | SJB Therapy</title>
       </Head>
 
       <EcommerceAccountPersonalView />

@@ -8,7 +8,7 @@ export const TRANSITION = {
 export const varPath = {
   animate: {
     fillOpacity: [0, 0, 1],
-    pathLength: [1, 0.4, 0],
+    pathLength: [1, 0.5, 0],
     transition: TRANSITION,
   },
 };

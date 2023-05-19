@@ -15,7 +15,7 @@ export default function TravelPostPage() {
   return (
     <>
       <Head>
-        <title>The A-Z Of Event Post | ZONE UI</title>
+        <title>The A-Z Of Event Post | SJB Therapy</title>
       </Head>
 
       <TravelPostView />

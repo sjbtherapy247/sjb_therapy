@@ -3,22 +3,22 @@ import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
-import { CareerAboutView } from 'src/sections/_career/view';
+import BlogView from 'src/sections/_simo/view/BlogView';
 
 // ----------------------------------------------------------------------
 
-CareerAboutPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+BlogPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function CareerAboutPage() {
+export default function BlogPage() {
   return (
     <>
       <Head>
-        <title>About Us | ZONE UI</title>
+        <title>Blog | SJB Therapy</title>
       </Head>
 
-      <CareerAboutView />
+      <BlogView />
     </>
   );
 }

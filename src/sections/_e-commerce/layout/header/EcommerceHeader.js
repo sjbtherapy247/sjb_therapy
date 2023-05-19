@@ -36,10 +36,11 @@ export default function EcommerceHeader() {
     <StyledRoot>
       <Container
         sx={{
+          mt: 8,
           display: 'flex',
           alignItems: 'center',
           position: 'relative',
-          height: { xs: 64, md: 72 },
+          height: { xs: 64, md: 64 },
         }}
       >
         {isMdUp ? (

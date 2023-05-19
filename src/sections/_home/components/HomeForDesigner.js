@@ -31,13 +31,13 @@ export default function HomeForDesigner() {
   return (
     <MotionViewport>
       <StyledRoot>
-        <m.div variants={varFade({ distance: 40 }).inUp}>
+        <m.div variants={varFade({ distance: 80 }).inUp}>
           <Typography variant="overline" sx={{ opacity: 0.48 }}>
             Professional Kit
           </Typography>
         </m.div>
 
-        <m.div variants={varFade({ distance: 40 }).inUp}>
+        <m.div variants={varFade({ distance: 60 }).inUp}>
           <Typography variant="h2" sx={{ mt: 2, mb: 5 }}>
             For Designer
           </Typography>

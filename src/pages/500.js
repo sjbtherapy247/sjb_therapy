@@ -15,7 +15,7 @@ export default function Page500() {
   return (
     <>
       <Head>
-        <title>500 Internal Server Error | ZONE UI</title>
+        <title>500 Internal Server Error</title>
       </Head>
 
       <Error500View />

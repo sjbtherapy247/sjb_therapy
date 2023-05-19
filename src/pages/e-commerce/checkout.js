@@ -15,7 +15,7 @@ export default function EcommerceCheckoutPage() {
   return (
     <>
       <Head>
-        <title>Checkout | ZONE UI</title>
+        <title>Checkout | SJB Therapy</title>
       </Head>
 
       <EcommerceCheckoutView />

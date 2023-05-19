@@ -15,7 +15,7 @@ export default function TravelToursPage() {
   return (
     <>
       <Head>
-        <title>Tours | ZONE UI</title>
+        <title>Tours | SJB Therapy</title>
       </Head>
 
       <TravelToursView />

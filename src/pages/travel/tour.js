@@ -15,7 +15,7 @@ export default function TravelTourPage() {
   return (
     <>
       <Head>
-        <title>Italian Delights - 12 Days | ZONE UI</title>
+        <title>Italian Delights - 12 Days | SJB Therapy</title>
       </Head>
 
       <TravelTourView />

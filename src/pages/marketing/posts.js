@@ -15,7 +15,7 @@ export default function MarketingBlogPage() {
   return (
     <>
       <Head>
-        <title>Blog | ZONE UI</title>
+        <title>Blog | SJB Therapy</title>
       </Head>
 
       <MarketingBlogView />

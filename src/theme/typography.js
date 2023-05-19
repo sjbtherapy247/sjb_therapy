@@ -1,4 +1,4 @@
-import { Public_Sans, Barlow } from 'next/font/google';
+import { Manrope, Public_Sans, Barlow } from 'next/font/google';
 
 // ----------------------------------------------------------------------
 
@@ -24,7 +24,7 @@ export function responsiveFontSizes({ sm, md, lg }) {
   };
 }
 
-export const primaryFont = Public_Sans({
+export const primaryFont = Manrope({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -45,50 +45,50 @@ export const secondaryFont = Barlow({
 
 const typography = {
   fontFamily: primaryFont.style.fontFamily,
-  fontWeightRegular: 400,
+  fontWeightRegular: 300,
   fontWeightMedium: 500,
   fontWeightSemiBold: 600,
   fontWeightBold: 700,
   h1: {
     fontWeight: 700,
     lineHeight: 80 / 64,
-    fontSize: pxToRem(40),
-    fontFamily: secondaryFont.style.fontFamily,
-    ...responsiveFontSizes({ sm: 52, md: 58, lg: 64 }),
+    fontSize: pxToRem(38),
+    fontFamily: primaryFont.style.fontFamily,
+    ...responsiveFontSizes({ sm: 50, md: 54, lg: 58 }),
   },
   h2: {
     fontWeight: 700,
     lineHeight: 64 / 48,
     fontSize: pxToRem(32),
-    fontFamily: secondaryFont.style.fontFamily,
+    fontFamily: primaryFont.style.fontFamily,
     ...responsiveFontSizes({ sm: 40, md: 44, lg: 48 }),
   },
   h3: {
     fontWeight: 700,
     lineHeight: 1.5,
     fontSize: pxToRem(24),
-    fontFamily: secondaryFont.style.fontFamily,
+    fontFamily: primaryFont.style.fontFamily,
     ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
   },
   h4: {
     fontWeight: 600,
     lineHeight: 1.5,
     fontSize: pxToRem(20),
-    fontFamily: secondaryFont.style.fontFamily,
+    fontFamily: primaryFont.style.fontFamily,
     ...responsiveFontSizes({ sm: 20, md: 24, lg: 24 }),
   },
   h5: {
     fontWeight: 600,
     lineHeight: 1.5,
     fontSize: pxToRem(18),
-    fontFamily: secondaryFont.style.fontFamily,
+    fontFamily: primaryFont.style.fontFamily,
     ...responsiveFontSizes({ sm: 19, md: 20, lg: 20 }),
   },
   h6: {
     fontWeight: 600,
     lineHeight: 28 / 18,
     fontSize: pxToRem(17),
-    fontFamily: secondaryFont.style.fontFamily,
+    fontFamily: primaryFont.style.fontFamily,
     ...responsiveFontSizes({ sm: 18, md: 18, lg: 18 }),
   },
   subtitle1: {

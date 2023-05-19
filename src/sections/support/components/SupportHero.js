@@ -12,7 +12,7 @@ const StyledRoot = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(15, 2.5),
   alignItems: 'center',
   ...bgGradient({
-    color: alpha(theme.palette.grey[900], 0.8),
+    color: alpha(theme.palette.grey[900], 0.7),
     imgUrl: '/assets/background/overlay_2.jpg',
   }),
 }));
@@ -22,11 +22,15 @@ const StyledRoot = styled(Stack)(({ theme }) => ({
 export default function SupportHero() {
   return (
     <StyledRoot>
-      <Typography variant="h2" sx={{ textAlign: 'center', color: 'common.white', mb: 5 }}>
+      <Typography
+        variant="h2"
+        sx={{ textAlign: 'center', color: 'common.white', mb: 5, fontWeight: '300' }}
+      >
         Welcome to <br />
-        <Box component="span" sx={{ color: 'primary.main' }}>
-          {`ZONE `}
+        <Box component="span" sx={{ color: 'primary.main', letterSpacing: '3px' }}>
+          SJB THERAPY
         </Box>
+        <br />
         Support
       </Typography>
 

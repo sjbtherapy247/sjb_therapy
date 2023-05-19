@@ -69,7 +69,7 @@ export default function EcommerceAccountMenu({ open, onClose }) {
         width: 1,
         ...(isMdUp && {
           width: NAV.W_DRAWER,
-          border: (theme) => `solid 1px ${alpha(theme.palette.grey[500], 0.24)}`,
+          border: (theme) => `solid 5px ${alpha(theme.palette.grey[500], 0.25)}`,
         }),
       }}
     >

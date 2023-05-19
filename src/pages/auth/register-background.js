@@ -15,7 +15,7 @@ export default function RegisterBackgroundPage() {
   return (
     <>
       <Head>
-        <title>Register Background | ZONE UI</title>
+        <title>Register Background | SJB Therapy</title>
       </Head>
 
       <RegisterBackgroundView />

@@ -15,7 +15,7 @@ export default function MarketingCaseStudyPage() {
   return (
     <>
       <Head>
-        <title>Bank of America - Case Study | ZONE UI</title>
+        <title>Bank of America - Case Study | SJB Therapy</title>
       </Head>
 
       <MarketingCaseStudyView />

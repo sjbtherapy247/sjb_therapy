@@ -15,7 +15,7 @@ export default function TravelContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us | ZONE UI</title>
+        <title>Contact Us | SJB Therapy</title>
       </Head>
 
       <TravelContactView />

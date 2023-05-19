@@ -3,6 +3,7 @@ import { _pricingHome } from 'src/_mock';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
+import { useSettingsContext } from 'src/components/settings';
 import PricingHome from '../../pricing/home';
 import {
   HomeHero,
@@ -11,8 +12,11 @@ import {
   HomeForDesigner,
   HomeCombination,
   HomeAdvertisement,
-  HomeFeatureHighlights,
-  HomeFlexibleComponents,
+  HomeGuidedMeditation,
+  HomeFamous,
+  // HomeFeatureHighlights,
+  // HomeFlexibleComponents,
+  // HomeGuidedMeditationDark,
 } from '../components';
 
 // ----------------------------------------------------------------------
@@ -21,23 +25,15 @@ export default function HomeView() {
   return (
     <>
       <ScrollProgress />
-
       <HomeHero />
-
-      <HomeNewStart />
-
-      <HomeFlexibleComponents />
-
-      <HomeFeatureHighlights />
-
-      <HomeForDesigner />
-
-      <PricingHome plans={_pricingHome} />
-
+      <HomeGuidedMeditation />
+      {/* {!lightMode && <HomeGuidedMeditationDark />} */}
+      <HomeFamous />
       <HomeFAQs />
-
+      <PricingHome plans={_pricingHome} />
+      <HomeNewStart />
+      <HomeForDesigner />
       <HomeCombination />
-
       <HomeAdvertisement />
     </>
   );
