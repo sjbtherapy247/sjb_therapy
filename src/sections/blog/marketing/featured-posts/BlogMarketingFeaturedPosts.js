@@ -72,7 +72,6 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
   };
 
   const isMdUp = useResponsive('up', 'md');
-  console.log(isMdUp);
   return (
     <StyledRoot>
       <Container sx={{ mx: 0, mt: 8, p: 1, position: 'relative', zIndex: 9 }}>
