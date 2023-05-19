@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 import { Box, Container, Typography } from '@mui/material';
 // components
 import { MotionViewport, varFade } from 'src/components/animate';
-//
+// local
 import PlanCard from './PlanCard';
 
 // ----------------------------------------------------------------------
