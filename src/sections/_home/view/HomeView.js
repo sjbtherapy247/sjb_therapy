@@ -31,10 +31,10 @@ export default function HomeView() {
       <HomeFamous />
       <HomeFAQs />
       <PricingHome plans={_pricingHome} />
-      <HomeNewStart />
-      <HomeForDesigner />
-      <HomeCombination />
-      <HomeAdvertisement />
+      {/* <HomeNewStart /> */}
+      {/* <HomeForDesigner /> */}
+      {/* <HomeCombination /> */}
+      {/* <HomeAdvertisement /> */}
     </>
   );
 }
