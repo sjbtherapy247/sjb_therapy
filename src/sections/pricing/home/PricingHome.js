@@ -43,14 +43,18 @@ export default function PricingHome({ plans }) {
 
           {/* <m.div variants={varFade().inDown}> */}
           <Typography variant="h2" sx={{ my: 3 }}>
-            The Right Plan <br />
-            For Your Business
+            Hypnotherapy Packages
+            <br />
+            And Session Fees
           </Typography>
           {/* </m.div> */}
 
           <m.div variants={varFade().inUp}>
             <Typography sx={{ color: 'text.secondary' }}>
-              Choose the perfect plan for your needs. Always flexible to grow
+              In summary.. you can pay on a per session basis or purchase a 3-session bundle.
+              Hypnotherapy is a process, it usually takes three sessions to address the issues
+              effectively, However, the Quit Smoking in 90 minutes therapy follows a different
+              approach. For more details check out our Hypnotherapy services page.
             </Typography>
           </m.div>
         </Box>
