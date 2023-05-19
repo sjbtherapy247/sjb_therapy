@@ -123,7 +123,7 @@ export const navConfig = [
     path: '/hypnotherapy',
     icon: <Iconify icon="mdi:timer-music-outline" />,
   },
-  { title: 'Psychotherapy', path: '/posts', icon: <Iconify icon="mdi:account-voice" /> },
+  // { title: 'Psychotherapy', path: '/posts', icon: <Iconify icon="mdi:account-voice" /> },
   { title: 'Research', path: '/posts', icon: <Iconify icon="mdi:bookshelf" /> },
   { title: 'Costs', path: '/costs', icon: <Iconify icon="mdi:currency-usd" /> },
   { title: 'Store', path: '/e-commerce/landing', icon: <Iconify icon="mdi:cart-arrow-right" /> },
