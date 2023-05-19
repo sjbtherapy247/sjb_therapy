@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>The starting point for your next project</title>
+        <title>SJB Therapy - Your next step to a better you!!</title>
       </Head>
 
       <HomeView />

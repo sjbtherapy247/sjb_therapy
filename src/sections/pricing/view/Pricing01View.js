@@ -5,7 +5,7 @@ import { Box, Stack, Container, Typography, ToggleButton, ToggleButtonGroup } fr
 // _mock
 import { _pricing01 } from 'src/_mock';
 //
-import { PlanCard } from '../pricing-01';
+import { PlanCard } from 'src/sections/pricing/pricing-01';
 
 // ----------------------------------------------------------------------
 

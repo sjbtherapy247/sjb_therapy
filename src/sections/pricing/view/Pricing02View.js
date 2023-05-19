@@ -7,7 +7,7 @@ import useResponsive from 'src/hooks/useResponsive';
 // components
 import Iconify from 'src/components/iconify';
 //
-import { PlanHeader, PlanContentMobile, PlanContentDesktop } from '../pricing-02';
+import { PlanHeader, PlanContentMobile, PlanContentDesktop } from 'src/sections/pricing/pricing-02';
 
 // ----------------------------------------------------------------------
 

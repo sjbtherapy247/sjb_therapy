@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 // @mui
 import { Card, Link, Stack, Button, Divider, Typography } from '@mui/material';
+
 // types
 import { paths } from 'src/routes/paths';
 // components
@@ -22,8 +23,8 @@ export default function PlanCard({ plan }) {
   return (
     <Card
       sx={{
-        p: 5,
-        boxShadow: (theme) => theme.customShadows.z8,
+        p: 4,
+        boxShadow: (theme) => theme.customShadows.z24,
         ...(plusLicense && {
           py: 10,
           boxShadow: (theme) => theme.customShadows.z24,
@@ -31,12 +32,12 @@ export default function PlanCard({ plan }) {
       }}
     >
       {plusLicense && (
-        <Label color="info" sx={{ position: 'absolute', top: 40, left: 40 }}>
+        <Label color="success" sx={{ position: 'absolute', top: 20, left: 20 }}>
           POPULAR
         </Label>
       )}
 
-      <Stack spacing={5}>
+      <Stack spacing={3}>
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase' }}>
             {license}
@@ -53,7 +54,7 @@ export default function PlanCard({ plan }) {
         </Stack>
 
         {license === 'Standard' ? (
-          <Image alt="standard" src={icons[0]} sx={{ width: 24, height: 24 }} />
+          <Image alt="standard" src={icons[0]} sx={{ width: 24, height: 24, color: 'primary' }} />
         ) : (
           <Stack direction="row" spacing={1.5}>
             {icons.map((icon) => (
