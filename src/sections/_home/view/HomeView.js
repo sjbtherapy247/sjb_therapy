@@ -3,15 +3,15 @@ import { _pricingHome } from 'src/_mock';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
-import { useSettingsContext } from 'src/components/settings';
+// import { useSettingsContext } from 'src/components/settings';
 import PricingHome from '../../pricing/home';
 import {
   HomeHero,
   HomeFAQs,
-  HomeNewStart,
-  HomeForDesigner,
-  HomeCombination,
-  HomeAdvertisement,
+  // HomeNewStart,
+  // HomeForDesigner,
+  // HomeCombination,
+  // HomeAdvertisement,
   HomeGuidedMeditation,
   HomeFamous,
   // HomeFeatureHighlights,

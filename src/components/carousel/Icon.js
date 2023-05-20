@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Iconify from '../iconify';
+import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 

@@ -3,10 +3,12 @@ import { Container, Unstable_Grid2 as Grid } from '@mui/material';
 // _mock
 import _mock, { _blogMarketingPosts, _categories, _tags } from 'src/_mock';
 //
+import ScrollProgress from 'src/components/scroll-progress';
+
 // import { PostSearchMobile } from 'src/sections/blog/components';
 import BlogSidebar from 'src/sections/blog/sidebar';
 import { BlogMarketingFeaturedPosts, BlogMarketingPosts } from 'src/sections/blog/marketing';
-import NewsletterMarketing from 'src/sections/newsletter/marketing';
+// import NewsletterMarketing from 'src/sections/newsletter/marketing';
 
 // ----------------------------------------------------------------------
 
@@ -14,6 +16,7 @@ export default function BlogView() {
   return (
     <>
       {/* <PostSearchMobile /> */}
+      <ScrollProgress />
 
       <BlogMarketingFeaturedPosts posts={_blogMarketingPosts.slice(0, 5)} />
 
@@ -45,7 +48,7 @@ export default function BlogView() {
         </Grid>
       </Container>
 
-      <NewsletterMarketing />
+      {/* <NewsletterMarketing /> */}
     </>
   );
 }

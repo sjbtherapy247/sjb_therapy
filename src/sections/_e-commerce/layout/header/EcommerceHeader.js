@@ -43,7 +43,7 @@ export default function EcommerceHeader() {
           height: { xs: 64, md: 64 },
         }}
       >
-        {isMdUp ? (
+        {/* {isMdUp ? (
           <MegaMenuDesktopHorizon data={data} />
         ) : (
           <MegaMenuMobile
@@ -61,7 +61,7 @@ export default function EcommerceHeader() {
               </Button>
             }
           />
-        )}
+        )} */}
 
         <Stack
           spacing={3}

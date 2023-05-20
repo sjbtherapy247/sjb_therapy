@@ -51,9 +51,11 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
     adaptiveHeight: true,
     rtl: Boolean(theme.direction === 'rtl'),
     beforeChange: (current, next) => setSelected(next),
@@ -83,9 +85,9 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
           onPrev={handlePrev}
           leftButtonProps={{
             sx: {
-              mt: -8,
-              left: 2,
-              opacity: 1,
+              // mt: -8,
+              left: 30,
+              opacity: 0.8,
               display: isMdUp ? 'inline-flex' : 'none',
               color: 'common.white',
               bgcolor: 'primary.lighter',
@@ -94,9 +96,9 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
           }}
           rightButtonProps={{
             sx: {
-              mt: -8,
-              right: 2,
-              opacity: 1,
+              // mt: -8,
+              right: 30,
+              opacity: 0.8,
               display: isMdUp ? 'inline-flex' : 'none',
 
               color: 'common.white',
