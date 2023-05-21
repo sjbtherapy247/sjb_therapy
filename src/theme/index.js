@@ -20,18 +20,17 @@ ThemeProvider.propTypes = {
 };
 
 export default function ThemeProvider({ children }) {
-  const { themeMode, themeDirection } = useSettingsContext();
+  const { themeMode } = useSettingsContext();
 
   const themeOptions = useMemo(
     () => ({
       palette: palette(themeMode),
       typography,
       shape: { borderRadius: 8 },
-      direction: themeDirection,
       shadows: shadows(themeMode),
       customShadows: customShadows(themeMode),
     }),
-    [themeDirection, themeMode]
+    [themeMode]
   );
 
   const theme = createTheme(themeOptions);

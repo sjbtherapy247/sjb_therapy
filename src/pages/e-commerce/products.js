@@ -15,7 +15,7 @@ export default function EcommerceProductsPage() {
   return (
     <>
       <Head>
-        <title>Products | ZONE UI</title>
+        <title>Products | SJB Therapy</title>
       </Head>
 
       <EcommerceProductsView />

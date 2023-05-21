@@ -3,57 +3,82 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, Link, Stack } from '@mui/material';
+import { AppBar, Toolbar, Link, Stack, Tooltip, IconButton } from '@mui/material';
 // config
 import { HEADER } from 'src/config-global';
 // utils
-import { bgBlur } from 'src/utils/cssStyles';
+// import { bgBlur } from 'src/utils/cssStyles';
 // routes
 import { paths } from 'src/routes/paths';
 // components
-import Logo from 'src/components/logo';
-import SettingsDrawer from 'src/components/settings/drawer';
-//
-import HeaderShadow from '../components/HeaderShadow';
+// import Logo from 'src/components/logo';
+// import SettingsDrawer from 'src/components/settings/drawer';
+import { Box } from '@mui/system';
+import Image from 'src/components/image/Image';
+// icons
+// import chatQuestionOutline from '@iconify/icons-mdi/chat-question-outline';
+import Iconify from 'src/components/iconify/Iconify';
 
 // ----------------------------------------------------------------------
 
 export default function Header({ isOffset }) {
   const theme = useTheme();
+  console.log(theme);
 
   return (
-    <AppBar color="transparent" sx={{ boxShadow: 'none' }}>
+    <AppBar color="transparent" sx={{ boxShadow: 'none', width: '100vw' }}>
       <Toolbar
+        disableGutters
         sx={{
-          justifyContent: 'space-between',
+          // justifyContent: 'space-between',
+          display: 'block',
+          color: 'common.white',
+          backgroundColor: theme.palette.primary.dark,
           height: {
             xs: HEADER.H_MOBILE,
-            md: HEADER.H_MAIN_DESKTOP,
+            // md: HEADER.H_MAIN_DESKTOP,
           },
-          transition: theme.transitions.create(['height', 'background-color'], {
-            easing: theme.transitions.easing.easeInOut,
-            duration: theme.transitions.duration.shorter,
-          }),
-          ...(isOffset && {
-            ...bgBlur({ color: theme.palette.background.default }),
-            height: {
-              md: HEADER.H_MAIN_DESKTOP - 16,
-            },
-          }),
+          // transition: theme.transitions.create(['height', 'background-color'], {
+          //   easing: theme.transitions.easing.easeInOut,
+          //   duration: theme.transitions.duration.shorter,
+          // }),
+          // ...(isOffset && {
+          //   ...bgBlur({ color: theme.palette.background.default }),
+          //   height: {
+          //     md: HEADER.H_MAIN_DESKTOP - 16,
+          //   },
+          // }),
         }}
       >
-        <Logo />
+        <Box sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ lineHeight: 0, position: 'relative' }}>
+            <Link href="/" component={NextLink}>
+              <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
+                <Box
+                  sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}
+                >
+                  <Image src="/assets/sjb-logo/hnav-logo.jpg" disabledEffect sx={{ height: 1 }} />
+                </Box>
+              </Tooltip>
+            </Link>
+          </Box>
 
-        <Stack spacing={1} direction="row" alignItems="center">
-          <SettingsDrawer />
-
-          <Link href={paths.support} component={NextLink} variant="subtitle2" color="inherit">
-            Need Help?
-          </Link>
-        </Stack>
+          <Stack
+            sx={{ mr: 1 }}
+            spacing={1}
+            direction="row"
+            alignItems="center"
+            flexGrow={1}
+            justifyContent="flex-end"
+          >
+            <Link href={paths.support} component={NextLink} color="inherit">
+              <IconButton color="inherit">
+                <Iconify icon="mdi:chat-question-outline" height="30" />
+              </IconButton>
+            </Link>
+          </Stack>
+        </Box>
       </Toolbar>
-
-      {isOffset && <HeaderShadow />}
     </AppBar>
   );
 }

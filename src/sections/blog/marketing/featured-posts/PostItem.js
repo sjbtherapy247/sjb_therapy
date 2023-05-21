@@ -26,13 +26,13 @@ export default function PostItem({ post }) {
       }}
       sx={{ bgcolor: 'background.default', borderRadius: 2 }}
     >
-      <Image src={coverImg} alt={title} sx={{ flexGrow: 1, height: { md: 560 } }} />
+      <Image src={coverImg} alt={title} sx={{ flexGrow: 1, height: { xs: 200, md: 500 } }} />
 
       <Stack
         justifyContent="space-between"
         sx={{
           mx: 'auto',
-          p: { xs: 3, md: 5 },
+          p: { xs: 2, md: 5 },
           maxWidth: { md: 396 },
         }}
       >

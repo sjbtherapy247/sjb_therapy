@@ -3,25 +3,25 @@ import _mock from '../_mock';
 // ----------------------------------------------------------------------
 
 export const _categories = [
-  { label: 'Marketing', path: '' },
-  { label: 'Community', path: '' },
-  { label: 'Tutorials', path: '' },
-  { label: 'Business', path: '' },
-  { label: 'Management', path: '' },
+  { label: 'Hypnotherapy', path: '' },
+  { label: 'Addictions', path: '' },
+  { label: 'Psycotherapy', path: '' },
+  { label: 'Wellness', path: '' },
+  { label: 'Anxiety', path: '' },
 ];
 
 // ----------------------------------------------------------------------
 
 export const _tags = [
-  { label: 'Marketing', path: '' },
-  { label: 'Development', path: '' },
-  { label: 'Banking', path: '' },
-  { label: 'HR & Recruting', path: '' },
-  { label: 'Design', path: '' },
-  { label: 'Management', path: '' },
-  { label: 'Business', path: '' },
-  { label: 'Community', path: '' },
-  { label: 'Tutorials', path: '' },
+  { label: 'Self Improvement', path: '' },
+  { label: 'Phobias', path: '' },
+  { label: 'Behaviourial Change', path: '' },
+  { label: 'Weight Management', path: '' },
+  { label: 'Stress', path: '' },
+  { label: 'Mental Health', path: '' },
+  { label: 'Personal Transformation', path: '' },
+  { label: 'Hypnosis', path: '' },
+  { label: 'Healing', path: '' },
 ];
 
 // ----------------------------------------------------------------------

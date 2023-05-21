@@ -15,7 +15,7 @@ export default function ElearningAboutPage() {
   return (
     <>
       <Head>
-        <title>About Us | ZONE UI</title>
+        <title>About Us | SJB Therapy</title>
       </Head>
 
       <ElearningAboutView />

@@ -1,42 +1,45 @@
 import PropTypes from 'prop-types';
 // @mui
 import { Card, Link, Stack, Button, Divider, Typography } from '@mui/material';
+
 // types
 import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
 import Image from 'src/components/image';
 import Label from 'src/components/label';
+import { useTheme } from '@emotion/react';
 
 // ----------------------------------------------------------------------
 
 export default function PlanCard({ plan }) {
   const { license, commons, options, icons, price } = plan;
+  const theme = useTheme();
 
-  const standardLicense = license === 'Standard';
+  const standardLicense = license === 'Single Session';
 
-  const plusLicense = license === 'Plus';
+  const plusLicense = license === '3-Session Bundle';
 
   const extendedLicense = license === 'Extended';
 
   return (
     <Card
       sx={{
-        p: 5,
-        boxShadow: (theme) => theme.customShadows.z8,
+        p: 4,
+        boxShadow: theme.customShadows.z24,
         ...(plusLicense && {
-          py: 10,
-          boxShadow: (theme) => theme.customShadows.z24,
+          py: 8,
+          boxShadow: theme.customShadows.z24,
         }),
       }}
     >
       {plusLicense && (
-        <Label color="info" sx={{ position: 'absolute', top: 40, left: 40 }}>
+        <Label color="success" sx={{ position: 'absolute', top: 20, left: 20 }}>
           POPULAR
         </Label>
       )}
 
-      <Stack spacing={5}>
+      <Stack spacing={3}>
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase' }}>
             {license}
@@ -53,7 +56,7 @@ export default function PlanCard({ plan }) {
         </Stack>
 
         {license === 'Standard' ? (
-          <Image alt="standard" src={icons[0]} sx={{ width: 24, height: 24 }} />
+          <Image alt="standard" src={icons[0]} sx={{ width: 24, height: 24, color: 'primary' }} />
         ) : (
           <Stack direction="row" spacing={1.5}>
             {icons.map((icon) => (
@@ -67,7 +70,8 @@ export default function PlanCard({ plan }) {
             <Stack key={option} spacing={1.5} direction="row" alignItems="center">
               <Iconify
                 icon="carbon:checkmark-outline"
-                sx={{ color: 'primary.main', width: 20, height: 20 }}
+                color={theme.palette.primary.main}
+                sx={{ width: 20, height: 20 }}
               />
               <Typography variant="body2">{option}</Typography>
             </Stack>
@@ -76,24 +80,13 @@ export default function PlanCard({ plan }) {
           <Divider sx={{ borderStyle: 'dashed' }} />
 
           {options.map((option) => (
-            <Stack
-              key={option.title}
-              direction="row"
-              alignItems="center"
-              sx={{
-                typography: 'body2',
-                ...(option.disabled && { color: 'text.disabled' }),
-              }}
-            >
+            <Stack key={option.title} spacing={1.5} direction="row" alignItems="center">
               <Iconify
-                icon={option.disabled ? 'carbon:close-outline' : 'carbon:checkmark-outline'}
-                sx={{
-                  mr: 2,
-                  color: 'primary.main',
-                  ...(option.disabled && { color: 'currentColor' }),
-                }}
+                icon="carbon:checkmark-outline"
+                color={theme.palette.primary.main}
+                sx={{ color: 'primary', width: 20, height: 20 }}
               />
-              {option.title}
+              <Typography variant="body2">{option.title}</Typography>
             </Stack>
           ))}
         </Stack>
@@ -102,8 +95,8 @@ export default function PlanCard({ plan }) {
           <Button
             size="large"
             fullWidth
-            variant={standardLicense ? 'outlined' : 'contained'}
-            color={extendedLicense ? 'primary' : 'inherit'}
+            variant="contained"
+            color="primary"
             target="_blank"
             rel="noopener"
             href={paths.zoneStore}
@@ -119,7 +112,7 @@ export default function PlanCard({ plan }) {
             href={paths.license}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            Read license
+            More Details
             <Iconify icon="carbon:chevron-right" width={16} sx={{ ml: 1 }} />
           </Link>
         </Stack>

@@ -15,7 +15,7 @@ export default function TravelBlogPage() {
   return (
     <>
       <Head>
-        <title>Blog | ZONE UI</title>
+        <title>Blog | SJB Therapy</title>
       </Head>
 
       <TravelBlogView />

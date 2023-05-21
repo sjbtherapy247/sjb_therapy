@@ -25,7 +25,7 @@ export default function ContainerView({ selectVariant, ...other }) {
       {isKenburns ? (
         <Box
           component={m.img}
-          src={_mock.image.travel(7)}
+          src={_mock.image.travel(1)}
           {...getVariant(selectVariant)}
           sx={{ width: 1, height: 1, objectFit: 'cover' }}
         />

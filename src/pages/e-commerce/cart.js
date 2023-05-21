@@ -15,7 +15,7 @@ export default function EcommerceCartPage() {
   return (
     <>
       <Head>
-        <title>Cart | ZONE UI</title>
+        <title>Cart | SJB Therapy</title>
       </Head>
 
       <EcommerceCartView />

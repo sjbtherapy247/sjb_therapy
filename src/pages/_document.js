@@ -23,12 +23,15 @@ const Favicon = () => (
 const Meta = () => (
   <>
     {/* PWA primary color */}
-    <meta name="theme-color" content={palette('light').primary.main} />
+    <meta name="theme-color" content={palette('dark').primary.main} />
     <meta
       name="description"
-      content="The ZONE is built on top of MUI, a powerful library that provides flexible, customizable, and easy-to-use components."
+      content="Cultivating the power of hypnotherapy unlocks the gateway to personal transformation, enabling individuals to tap into their inner potential, overcome obstacles, and create positive and lasting change in their lives."
     />
-    <meta name="keywords" content="react,material,kit,application,landing & corporate,template" />
+    <meta
+      name="keywords"
+      content="hypnotherapy, psychotherapy, mental health, personal transformation"
+    />
     <meta name="author" content="ZONE UI Kit" />
   </>
 );

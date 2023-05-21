@@ -15,7 +15,7 @@ export default function MaintenancePage() {
   return (
     <>
       <Head>
-        <title>Maintenance | ZONE UI</title>
+        <title>Maintenance | SJB Therapy</title>
       </Head>
 
       <MaintenanceView />

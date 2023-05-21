@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 // ----------------------------------------------------------------------
 
-export default function useOffSetTop(top = 0, options) {
+export default function useOffSetTop(top = 5, options) {
   const { scrollY } = useScroll(options);
 
   const [value, setValue] = useState(false);

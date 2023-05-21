@@ -15,7 +15,7 @@ export default function CareerContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us | ZONE UI</title>
+        <title>Contact Us | SJB Therapy</title>
       </Head>
 
       <CareerContactView />

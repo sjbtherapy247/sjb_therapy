@@ -59,7 +59,7 @@ export default function BlogSidebar({
 
         {popularTags && <BlogSidebarPopularTags popularTags={popularTags} />}
 
-        {advertisement && <Advertisement advertisement={advertisement} />}
+        {/* {advertisement && <Advertisement advertisement={advertisement} />} */}
       </Stack>
     </>
   );

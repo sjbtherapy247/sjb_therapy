@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { useMemo, useState, useEffect, useContext, useCallback, createContext } from 'react';
 //
 import { defaultSettings } from './config-setting';
-import { defaultPreset, getPresets, presetsOption } from './presets';
 
 // ----------------------------------------------------------------------
 
@@ -10,14 +9,6 @@ const initialState = {
   ...defaultSettings,
   // Mode
   onToggleMode: () => {},
-  // Direction
-  onToggleDirection: () => {},
-  // Color
-  onChangeColorPresets: () => {},
-  presetsColor: defaultPreset,
-  presetsOption: [],
-  // Reset
-  onResetSetting: () => {},
   // Open
   open: false,
   onToggle: () => {},
@@ -30,11 +21,11 @@ const initialState = {
 // ----------------------------------------------------------------------
 
 export const SettingsContext = createContext(initialState);
-
+// context settings hook
 export const useSettingsContext = () => {
   const context = useContext(SettingsContext);
 
-  if (!context) throw new Error('useSettingsContext must be use inside SettingsProvider');
+  if (!context) throw new Error('useSettingsContext must be used inside SettingsProvider');
 
   return context;
 };
@@ -45,17 +36,11 @@ export function SettingsProvider({ children }) {
   const [open, setOpen] = useState(false);
 
   const [themeMode, setThemeMode] = useState(defaultSettings.themeMode);
-  const [themeDirection, setThemeDirection] = useState(defaultSettings.themeDirection);
-  const [themeColorPresets, setThemeColorPresets] = useState(defaultSettings.themeColorPresets);
 
+  // looks for cookie in local storage with thememode - so that theme persists across tabs
   useEffect(() => {
     const mode = getCookie('themeMode') || defaultSettings.themeMode;
-    const direction = getCookie('themeDirection') || defaultSettings.themeDirection;
-    const colorPresets = getCookie('themeColorPresets') || defaultSettings.themeColorPresets;
-
     setThemeMode(mode);
-    setThemeDirection(direction);
-    setThemeColorPresets(colorPresets);
   }, []);
 
   // Mode
@@ -64,30 +49,6 @@ export function SettingsProvider({ children }) {
     setThemeMode(value);
     setCookie('themeMode', value);
   }, [themeMode]);
-
-  // Direction
-  const onToggleDirection = useCallback(() => {
-    const value = themeDirection === 'rtl' ? 'ltr' : 'rtl';
-    setThemeDirection(value);
-    setCookie('themeDirection', value);
-  }, [themeDirection]);
-
-  // Color
-  const onChangeColorPresets = useCallback((event) => {
-    const { value } = event.target;
-    setThemeColorPresets(value);
-    setCookie('themeColorPresets', value);
-  }, []);
-
-  // Reset
-  const onResetSetting = useCallback(() => {
-    setThemeMode(defaultSettings.themeMode);
-    setThemeDirection(defaultSettings.themeDirection);
-    setThemeColorPresets(defaultSettings.themeColorPresets);
-    removeCookie('themeMode');
-    removeCookie('themeDirection');
-    removeCookie('themeColorPresets');
-  }, []);
 
   const onToggle = useCallback(() => {
     setOpen(!open);
@@ -101,53 +62,27 @@ export function SettingsProvider({ children }) {
     setOpen(false);
   }, []);
 
-  const notDefault =
-    themeMode !== defaultSettings.themeMode ||
-    themeDirection !== defaultSettings.themeDirection ||
-    themeColorPresets !== defaultSettings.themeColorPresets;
-
   const memoizedValue = useMemo(
     () => ({
       // Mode
       themeMode,
       onToggleMode,
-      // Direction
-      themeDirection,
-      onToggleDirection,
-      // Color
-      themeColorPresets,
-      onChangeColorPresets,
-      presetsOption,
-      presetsColor: getPresets(themeColorPresets),
-      // Reset
-      onResetSetting,
       // Open
       open,
       onToggle,
       onOpen,
       onClose,
-      // Not default
-      notDefault,
     }),
     [
+      // dependency array
       // Mode
       themeMode,
       onToggleMode,
-      // Color
-      themeColorPresets,
-      onChangeColorPresets,
-      // Direction
-      themeDirection,
-      onToggleDirection,
-      // Reset
-      onResetSetting,
       // Open
       open,
       onToggle,
       onOpen,
       onClose,
-      // Not default
-      notDefault,
     ]
   );
 
@@ -185,6 +120,6 @@ function setCookie(name, value, exdays = 3) {
   document.cookie = `${name}=${value};${expires};path=/`;
 }
 
-function removeCookie(name) {
-  document.cookie = `${name}=;path=/;max-age=0`;
-}
+// function removeCookie(name) {
+//   document.cookie = `${name}=;path=/;max-age=0`;
+// }

@@ -15,7 +15,7 @@ export default function CareerJobsPage() {
   return (
     <>
       <Head>
-        <title>Jobs | ZONE UI</title>
+        <title>Jobs | SJB Therapy</title>
       </Head>
 
       <CareerJobsView />

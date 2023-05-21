@@ -39,7 +39,7 @@ export default function CareerJobView() {
 
   useEffect(() => {
     const fakeLoading = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       setLoading(false);
     };
     fakeLoading();

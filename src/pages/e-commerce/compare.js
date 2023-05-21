@@ -15,7 +15,7 @@ export default function EcommerceComparePage() {
   return (
     <>
       <Head>
-        <title>Compare | ZONE UI</title>
+        <title>Compare | SJB Therapy</title>
       </Head>
 
       <EcommerceCompareView />

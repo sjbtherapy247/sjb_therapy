@@ -15,7 +15,7 @@ export default function MarketingAboutPage() {
   return (
     <>
       <Head>
-        <title>About Us | ZONE UI</title>
+        <title>About Us | SJB Therapy</title>
       </Head>
 
       <MarketingAboutView />

@@ -21,13 +21,14 @@ export default function CarouselAnimation({ data }) {
   const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? data.length - 1 : 0);
 
   const carouselSettings = {
-    speed: 800,
-    dots: false,
-    arrows: false,
+    speed: 250,
+    dots: true,
+    arrows: true,
     autoplay: true,
+    autoplaySpeed: 10000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    rtl: Boolean(theme.direction === 'rtl'),
+    // rtl: Boolean(theme.direction === 'rtl'),
     beforeChange: (current, next) => setCurrentIndex(next),
   };
 
@@ -81,7 +82,7 @@ function CarouselItem({ item, isActive }) {
           ...bgGradient({
             direction: 'to top',
             startColor: `${theme.palette.grey[900]} 0%`,
-            endColor: `${alpha(theme.palette.grey[900], 0)} 100%`,
+            endColor: `${alpha(theme.palette.grey[900], 0.6)} 100%`,
           }),
         }}
       />

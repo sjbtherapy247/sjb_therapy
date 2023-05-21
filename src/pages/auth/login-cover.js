@@ -9,7 +9,7 @@ export default function LoginCoverPage() {
   return (
     <>
       <Head>
-        <title>Login Cover | ZONE UI</title>
+        <title>Login Cover</title>
       </Head>
 
       <LoginCoverView />

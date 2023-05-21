@@ -15,7 +15,7 @@ export default function ComingSoonPage() {
   return (
     <>
       <Head>
-        <title>Coming Soon | ZONE UI</title>
+        <title>Coming Soon | SJB Therapy</title>
       </Head>
 
       <ComingSoonView />

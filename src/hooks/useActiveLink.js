@@ -2,6 +2,11 @@
 import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
+// router object: {
+// pathname: what ever is after /pages
+// query: obj : ?xy=..   query string parsed into an object
+// aspath: string path as shown in the browser including search params and respecting trailing slash
+// router.push(url, as, options)
 
 export default function useActiveLink(path, deep = true) {
   const { pathname, asPath } = useRouter();

@@ -43,6 +43,8 @@ export default function EcommerceLandingSpecialOffer() {
     <Container
       sx={{
         py: { xs: 5, md: 8 },
+        px: 0,
+        mx: 0,
       }}
     >
       <Typography
@@ -59,6 +61,7 @@ export default function EcommerceLandingSpecialOffer() {
         gap={{ xs: 5, md: 8 }}
         display="grid"
         gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
+        sx={{ m: 0, p: 0 }}
       >
         <SpecialOfferCountdown
           label="New 2022"
@@ -90,7 +93,8 @@ function SpecialOfferCountdown({ expired, label, name, price, sx, ...other }) {
       alignItems="center"
       justifyContent="center"
       sx={{
-        p: 5,
+        py: 5,
+        px: 0,
         borderRadius: 2,
         textAlign: 'center',
         boxShadow: (theme) => theme.customShadows.z24,

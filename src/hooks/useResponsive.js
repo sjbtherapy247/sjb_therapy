@@ -31,6 +31,7 @@ export default function useResponsive(query, start, end) {
 }
 
 // ----------------------------------------------------------------------
+// returns the highest matching breakpoint of the current container where the func is called
 
 export function useWidth() {
   const theme = useTheme();

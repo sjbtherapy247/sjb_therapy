@@ -25,7 +25,7 @@ export default function AuthRegisterForm() {
       .min(6, 'Password should be of minimum 6 characters length'),
     confirmPassword: Yup.string()
       .required('Confirm password is required')
-      .oneOf([Yup.ref('password')], "Password's not match"),
+      .oneOf([Yup.ref('password')], "Password's do not match"),
   });
 
   const defaultValues = {
@@ -58,7 +58,7 @@ export default function AuthRegisterForm() {
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-      <Stack spacing={2.5}>
+      <Stack spacing={1.5}>
         <RHFTextField name="fullName" label="Full Name" />
 
         <RHFTextField name="email" label="Email address" />
@@ -95,7 +95,7 @@ export default function AuthRegisterForm() {
 
         <LoadingButton
           fullWidth
-          color="inherit"
+          color="primary"
           size="large"
           type="submit"
           variant="contained"

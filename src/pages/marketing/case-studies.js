@@ -15,7 +15,7 @@ export default function MarketingCaseStudiesPage() {
   return (
     <>
       <Head>
-        <title>Case Studies | ZONE UI</title>
+        <title>Case Studies | SJB Therapy</title>
       </Head>
 
       <MarketingCaseStudiesView />

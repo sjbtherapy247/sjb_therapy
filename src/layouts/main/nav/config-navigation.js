@@ -1,5 +1,13 @@
 // routes
 import { paths } from 'src/routes/paths';
+// icons
+import Iconify from 'src/components/iconify';
+// import bullseyeArrow from '@iconify/icons-mdi/bullseye-arrow';
+// import timerMusicOutline from '@iconify/icons-mdi/timer-music-outline';
+// import accountVoice from '@iconify/icons-mdi/account-voice';
+// import bookshelfIcon from '@iconify/icons-mdi/bookshelf';
+// import currencyUsd from '@iconify/icons-mdi/currency-usd';
+// import cartArrowRight from '@iconify/icons-mdi/cart-arrow-right';
 
 // ----------------------------------------------------------------------
 
@@ -109,12 +117,14 @@ export const pageLinks = [
 ];
 
 export const navConfig = [
-  { title: 'Home', path: '/' },
-  { title: 'Components', path: paths.components.root },
+  { title: 'Our Mission', path: '/', icon: <Iconify icon="mdi:bullseye-arrow" /> },
   {
-    title: 'Pages',
-    path: paths.pages,
-    children: [pageLinks[0], pageLinks[1], pageLinks[2], pageLinks[3], pageLinks[4], pageLinks[5]],
+    title: 'Hypnotherapy',
+    path: '/hypnotherapy',
+    icon: <Iconify icon="mdi:timer-music-outline" />,
   },
-  { title: 'Documentation', path: paths.docs },
+  // { title: 'Psychotherapy', path: '/posts', icon: <Iconify icon="mdi:account-voice" /> },
+  { title: 'Research', path: '/posts', icon: <Iconify icon="mdi:bookshelf" /> },
+  { title: 'Costs', path: '/costs', icon: <Iconify icon="mdi:currency-usd" /> },
+  { title: 'Store', path: '/e-commerce/landing', icon: <Iconify icon="mdi:cart-arrow-right" /> },
 ];

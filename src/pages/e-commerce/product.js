@@ -15,7 +15,7 @@ export default function EcommerceProductPage() {
   return (
     <>
       <Head>
-        <title>Apple iPhone | ZONE UI</title>
+        <title>Apple iPhone | SJB Therapy</title>
       </Head>
 
       <EcommerceProductView />

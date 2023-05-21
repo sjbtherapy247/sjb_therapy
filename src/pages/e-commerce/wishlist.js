@@ -15,7 +15,7 @@ export default function EcommerceWishlistPage() {
   return (
     <>
       <Head>
-        <title>Wishlist | ZONE UI</title>
+        <title>Wishlist | SJB Therapy</title>
       </Head>
 
       <EcommerceWishlistView />

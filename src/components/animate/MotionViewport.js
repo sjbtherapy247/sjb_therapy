@@ -5,8 +5,27 @@ import { Box } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 //
-import { varContainer } from './variants';
+// import { varContainer } from './variants';
+export const varContainer = (props) => {
+  const staggerIn = props?.staggerIn || 0.05;
+  const delayIn = props?.staggerIn || 0.05;
+  const staggerOut = props?.staggerIn || 0.05;
 
+  return {
+    animate: {
+      transition: {
+        staggerChildren: staggerIn,
+        delayChildren: delayIn,
+      },
+    },
+    exit: {
+      transition: {
+        staggerChildren: staggerOut,
+        staggerDirection: -1,
+      },
+    },
+  };
+};
 // ----------------------------------------------------------------------
 
 MotionViewport.propTypes = {

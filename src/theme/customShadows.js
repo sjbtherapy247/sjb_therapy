@@ -19,8 +19,8 @@ function createShadow(color) {
     z8: `-8px 8px 24px -4px ${transparent(0.08)}`,
     z12: `-12px 12px 36px -4px ${transparent(0.12)}`,
     z16: `-16px 16px 48px -8px ${transparent(0.16)}`,
-    z20: `-20px 20px 60px -8px ${transparent(0.2)}`,
-    z24: `-24px 24px 72px -8px ${transparent(0.24)}`,
+    z20: `-20px 20px 60px 8px ${transparent(0.2)}`,
+    z24: `-24px 24px 72px 8px ${transparent(0.24)}`,
     //
     primary: `0 8px 16px 0 ${alpha(palette('light').primary.main, 0.24)}`,
     info: `0 8px 16px 0 ${alpha(palette('light').info.main, 0.24)}`,

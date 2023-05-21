@@ -46,7 +46,7 @@ export default function Searchbar({ sx }) {
   return (
     <ClickAwayListener onClickAway={handleClose}>
       <div>
-        <IconButton color="inherit" aria-label="search" onClick={handleOpen} sx={sx}>
+        <IconButton color="inherit" aria-label="search" to="/login" sx={sx}>
           <Iconify icon="carbon:search" />
         </IconButton>
 

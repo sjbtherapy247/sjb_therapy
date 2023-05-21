@@ -1,5 +1,5 @@
 // next
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
 import Masonry from '@mui/lab/Masonry';
@@ -14,6 +14,7 @@ import {
   IconButton,
   InputAdornment,
   Unstable_Grid2 as Grid,
+  Box,
 } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
@@ -23,6 +24,7 @@ import { _socials } from 'src/_mock';
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 //
+import NewsletterMarketing from 'src/sections/newsletter/marketing';
 import { pageLinks, navConfig } from '../nav/config-navigation';
 import ListDesktop from './ListDesktop';
 import ListMobile from './ListMobile';
@@ -46,7 +48,7 @@ const StyledAppStoreButton = styled(Button)(({ theme }) => ({
 export default function Footer() {
   const isMdUp = useResponsive('up', 'md');
 
-  const { pathname } = useRouter();
+  // const { pathname } = useRouter();
 
   const mobileList = navConfig.find((i) => i.title === 'Pages')?.children || [];
 
@@ -54,16 +56,22 @@ export default function Footer() {
 
   const renderLists = isMdUp ? desktopList : mobileList;
 
-  const isHome = pathname === '/';
+  // const isHome = pathname === '/';
 
   const simpleFooter = (
-    <Container sx={{ py: 8, textAlign: 'center' }}>
+    <Box
+      sx={{
+        py: 0,
+        textAlign: 'center',
+        bgcolor: (theme) => (theme.palette.mode === 'light' ? '#FFF' : '#111111'),
+      }}
+    >
       <Logo single />
 
       <Typography variant="caption" component="div" sx={{ color: 'text.secondary' }}>
-        © 2023. All rights reserved
+        © 2023. All rights reserved. Website developed by TezD
       </Typography>
-    </Container>
+    </Box>
   );
 
   const mainFooter = (
@@ -143,7 +151,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={7}>
             {isMdUp ? (
               <Masonry columns={4} spacing={2} defaultColumns={4} defaultSpacing={2}>
                 {renderLists.map((list) => (
@@ -186,7 +194,13 @@ export default function Footer() {
     </>
   );
 
-  return <footer>{isHome ? simpleFooter : mainFooter}</footer>;
+  // return <footer>{isHome ? simpleFooter : mainFooter}</footer>;
+  return (
+    <>
+      <NewsletterMarketing />
+      {simpleFooter}
+    </>
+  );
 }
 
 // ----------------------------------------------------------------------

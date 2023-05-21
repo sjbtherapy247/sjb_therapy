@@ -29,7 +29,7 @@ import ThemeProvider from 'src/theme';
 import createEmotionCache from 'src/utils/createEmotionCache';
 // components
 import ProgressBar from 'src/components/progress-bar';
-import { ThemeSettings, SettingsProvider } from 'src/components/settings';
+import { SettingsProvider } from 'src/components/settings';
 import MotionLazyContainer from 'src/components/animate/MotionLazyContainer';
 
 // ----------------------------------------------------------------------
@@ -50,12 +50,12 @@ export default function MyApp(props) {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <SettingsProvider>
           <ThemeProvider>
-            <ThemeSettings>
-              <MotionLazyContainer>
-                <ProgressBar />
-                {getLayout(<Component {...pageProps} />)}
-              </MotionLazyContainer>
-            </ThemeSettings>
+            {/* <ThemeSettings> */}
+            <MotionLazyContainer>
+              <ProgressBar />
+              {getLayout(<Component {...pageProps} />)}
+            </MotionLazyContainer>
+            {/* </ThemeSettings> */}
           </ThemeProvider>
         </SettingsProvider>
       </LocalizationProvider>

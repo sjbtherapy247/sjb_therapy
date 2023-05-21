@@ -3,7 +3,7 @@ import { useState } from 'react';
 import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Stack, Badge, Container, IconButton, Button } from '@mui/material';
+import { Stack, Badge, Container, IconButton } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 // utils
@@ -12,9 +12,9 @@ import { bgGradient } from 'src/utils/cssStyles';
 import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
-import { MegaMenuDesktopHorizon, MegaMenuMobile } from 'src/components/mega-menu';
+// import { MegaMenuDesktopHorizon, MegaMenuMobile } from 'src/components/mega-menu';
 //
-import { data } from './config-navigation';
+// import { data } from './config-navigation';
 
 // ----------------------------------------------------------------------
 
@@ -36,13 +36,14 @@ export default function EcommerceHeader() {
     <StyledRoot>
       <Container
         sx={{
+          mt: 8,
           display: 'flex',
           alignItems: 'center',
           position: 'relative',
-          height: { xs: 64, md: 72 },
+          height: { xs: 64, md: 64 },
         }}
       >
-        {isMdUp ? (
+        {/* {isMdUp ? (
           <MegaMenuDesktopHorizon data={data} />
         ) : (
           <MegaMenuMobile
@@ -60,7 +61,7 @@ export default function EcommerceHeader() {
               </Button>
             }
           />
-        )}
+        )} */}
 
         <Stack
           spacing={3}

@@ -11,9 +11,9 @@ export default function BlogMarketingPosts({ posts }) {
     <>
       <Box
         sx={{
-          columnGap: 4,
+          columnGap: 2,
           display: 'grid',
-          rowGap: { xs: 4, md: 5 },
+          rowGap: { xs: 2, md: 3 },
           gridTemplateColumns: {
             xs: 'repeat(1, 1fr)',
             sm: 'repeat(2, 1fr)',
@@ -26,7 +26,7 @@ export default function BlogMarketingPosts({ posts }) {
       </Box>
 
       <Pagination
-        count={10}
+        count={4}
         color="primary"
         size="large"
         sx={{

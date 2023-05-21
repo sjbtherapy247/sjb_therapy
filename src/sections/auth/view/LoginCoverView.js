@@ -18,22 +18,23 @@ export default function LoginCoverView() {
         sx={{
           width: { xs: 1, md: 480 },
           p: (theme) => ({
-            xs: theme.spacing(5, 2),
-            md: theme.spacing(8, 10),
+            xs: theme.spacing(4, 2),
+            md: theme.spacing(5, 10),
           }),
         }}
       >
-        <Logo />
-
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Logo />
+        </Box>
         <Stack
           sx={{
             pb: 5,
-            pt: { xs: 5, md: 10 },
+            pt: { xs: 5, md: 5 },
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
           <Typography variant="h3" paragraph>
-            Login
+            Client Login
           </Typography>
 
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -61,10 +62,12 @@ export default function LoginCoverView() {
       </Box>
 
       <AuthCarousel
-        title="Hi, Welcome Back"
+        title="Welcome Back"
         images={[
-          '/assets/images/travel/travel_post_01.jpg',
-          '/assets/images/travel/travel_post_03.jpg',
+          '/assets/sjb-logo/Hmobile.jpg',
+          '/assets/sjb-logo/Hdocs-large.jpg',
+          '/assets/sjb-logo/Smobile.jpg',
+          '/assets/sjb-logo/Sdoco-large.jpg',
         ]}
       />
     </Stack>

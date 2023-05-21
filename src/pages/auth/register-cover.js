@@ -9,7 +9,7 @@ export default function RegisterCoverPage() {
   return (
     <>
       <Head>
-        <title>Register Cover | ZONE UI</title>
+        <title>Register Cover | SJB Therapy</title>
       </Head>
 
       <RegisterCoverView />

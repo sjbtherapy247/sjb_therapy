@@ -15,7 +15,7 @@ export default function TravelLandingPage() {
   return (
     <>
       <Head>
-        <title>Landing | ZONE UI</title>
+        <title>Landing | SJB Therapy</title>
       </Head>
 
       <TravelLandingView />

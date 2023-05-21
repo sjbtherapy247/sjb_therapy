@@ -65,9 +65,9 @@ const StyledMarkdown = styled('div', {
     },
     '&:before': {
       left: 16,
-      top: -8,
+      top: -4,
       display: 'block',
-      fontSize: '3em',
+      fontSize: '2.5em',
       content: '"\\201C"',
       position: 'absolute',
       color: theme.palette.text.disabled,

@@ -15,7 +15,7 @@ export default function EcommerceOrderCompletedPage() {
   return (
     <>
       <Head>
-        <title>Order Completed | ZONE UI</title>
+        <title>Order Completed | SJB Therapy</title>
       </Head>
 
       <EcommerceOrderCompletedView />

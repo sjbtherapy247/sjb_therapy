@@ -15,7 +15,7 @@ export default function Pricing01Page() {
   return (
     <>
       <Head>
-        <title>Pricing 01 | ZONE UI</title>
+        <title>Pricing 01 | SJB Therapy</title>
       </Head>
 
       <Pricing01View />

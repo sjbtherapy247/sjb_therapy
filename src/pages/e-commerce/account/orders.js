@@ -15,7 +15,7 @@ export default function EcommerceAccountOrdersPage() {
   return (
     <>
       <Head>
-        <title>Account: Orders | ZONE UI</title>
+        <title>Account: Orders | SJB Therapy</title>
       </Head>
 
       <EcommerceAccountOrdersView />

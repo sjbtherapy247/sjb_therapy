@@ -1,7 +1,15 @@
 // next
 import Head from 'next/head';
 // @mui
-import { Box, Stack, Card, Container, CardHeader, CardContent } from '@mui/material';
+import {
+  Box,
+  Stack,
+  Card,
+  Container,
+  CardHeader,
+  CardContent,
+  Unstable_Grid2 as Grid,
+} from '@mui/material';
 import { Masonry } from '@mui/lab';
 // routes
 import { paths } from 'src/routes/paths';
@@ -41,7 +49,7 @@ export default function DemoCarouselsPage() {
   return (
     <>
       <Head>
-        <title>Components: Carousels | ZONE UI</title>
+        <title>Components: Carousels | SJB Therapy</title>
       </Head>
 
       <Box

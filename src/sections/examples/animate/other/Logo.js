@@ -19,7 +19,7 @@ export default function Logo() {
       sx={{
         width: 240,
         height: 240,
-        strokeWidth: 4,
+        strokeWidth: 2,
         stroke: PRIMARY_MAIN,
       }}
     >

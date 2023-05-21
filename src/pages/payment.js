@@ -15,7 +15,7 @@ export default function PaymentPage() {
   return (
     <>
       <Head>
-        <title>Payment | ZONE UI</title>
+        <title>Payment</title>
       </Head>
 
       <PaymentView />

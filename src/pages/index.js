@@ -11,11 +11,13 @@ HomePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
+// Entry point to website content
+
 export default function HomePage() {
   return (
     <>
       <Head>
-        <title>The starting point for your next project | ZONE UI</title>
+        <title>SJB Therapy - Your next step to a better you!!</title>
       </Head>
 
       <HomeView />
