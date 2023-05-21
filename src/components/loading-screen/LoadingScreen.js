@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import { bgBlur } from 'src/utils/cssStyles';
 //
 import Logo from '../logo';
+import { useSettingsContext } from '../settings';
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +15,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   ...bgBlur({
     blur: 2,
     opacity: 0.24,
-    color: theme.palette.background.default,
+    color: '#111111',
   }),
   top: 0,
   zIndex: 9999,
@@ -29,6 +30,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function LoadingScreen({ sx }) {
+  const { themeMode } = useSettingsContext();
   return (
     <>
       <StyledRoot sx={sx}>
@@ -38,7 +40,7 @@ export default function LoadingScreen({ sx }) {
             opacity: [1, 0.48, 1, 0.48, 1],
           }}
           transition={{
-            duration: 0.4,
+            duration: 1,
             ease: 'easeInOut',
             repeatDelay: 1,
             repeat: Infinity,
@@ -48,7 +50,9 @@ export default function LoadingScreen({ sx }) {
         </m.div>
       </StyledRoot>
 
-      <Box sx={{ width: 1, height: '100vh' }} />
+      <Box
+        sx={{ width: 1, height: '100vh', bgcolor: themeMode === 'light' ? 'white' : '#111118' }}
+      />
     </>
   );
 }
