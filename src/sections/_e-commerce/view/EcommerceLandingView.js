@@ -2,8 +2,6 @@
 import { _testimonials } from 'src/_mock';
 //
 import ScrollProgress from 'src/components/scroll-progress';
-import TestimonialEcommerce from '../../testimonial/e-commerce';
-import { EcommerceHeader } from '../layout';
 import {
   EcommerceLandingHero,
   EcommerceLandingCategories,
@@ -13,7 +11,9 @@ import {
   EcommerceLandingFeaturedBrands,
   EcommerceLandingPopularProducts,
   EcommerceLandingFeaturedProducts,
-} from '../landing';
+} from 'src/sections/_e-commerce/landing';
+import TestimonialEcommerce from '../../testimonial/e-commerce';
+import { EcommerceHeader } from '../layout';
 
 // ----------------------------------------------------------------------
 
