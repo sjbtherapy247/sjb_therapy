@@ -146,7 +146,11 @@ export default function HomeFAQs() {
             </m.div>
 
             <m.div variants={varFade().inUp}>
-              <Stack direction="row" spacing={8} sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Stack
+                direction="row"
+                spacing={{ xs: 4, sm: 8 }}
+                sx={{ display: 'flex', justifyContent: 'center' }}
+              >
                 <Button
                   size="large"
                   color="primary"
@@ -155,7 +159,7 @@ export default function HomeFAQs() {
                   startIcon={<Iconify icon="mdi:cellphone-sound" />}
                   onClick={handleClick}
                 >
-                  Call {click ? ' 0407945789' : null}
+                  Call {click && isSmUp ? ' 0407945789' : null}
                   {/* Call */}
                 </Button>
                 <Button

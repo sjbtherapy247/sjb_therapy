@@ -13,7 +13,7 @@ import {
   Unstable_Grid2 as Grid,
 } from '@mui/material';
 // routes
-import { paths } from 'src/routes/paths';
+// import { paths } from 'src/routes/paths';
 // utils
 import { fDate } from 'src/utils/formatTime';
 // _mock
@@ -24,14 +24,12 @@ import Iconify from 'src/components/iconify';
 import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
-import NewsletterMarketing from '../../newsletter/marketing';
-import { MarketingLandingFreeSEO } from '../landing';
 import { BlogMarketingLatestPosts } from '../../blog/marketing';
 import { PostTags, PostAuthor, PostSocialsShare } from '../../blog/components';
 
 // ----------------------------------------------------------------------
 
-export default function MarketingPostView() {
+export default function PostView() {
   const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } =
     _blogMarketingPosts[0];
 
@@ -53,7 +51,7 @@ export default function MarketingPostView() {
 
   return (
     <>
-      <Image alt="hero" src={heroImg} ratio="21/9" />
+      <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" />
 
       <Container>
         <CustomBreadcrumbs
@@ -135,13 +133,13 @@ export default function MarketingPostView() {
       {/* <NewsletterMarketing /> */}
 
       <Popover
-        open={!!open}
+        open={!!open} /* open is e.currenttarget so force it to boolean */
         onClose={handleClose}
         anchorEl={open}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
         PaperProps={{
-          sx: { width: 220, p: 1 },
+          sx: { width: 200, p: 1 },
         }}
       >
         {_socials.map((social) => (

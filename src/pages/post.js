@@ -3,7 +3,7 @@ import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
-import { MarketingPostView } from 'src/sections/_marketing/view';
+import PostView from 'src/sections/_simo/view/PostView';
 
 // ----------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ export default function MarketingPostPage() {
         <title>The A-Z Of Event Post | SJB Therapy</title>
       </Head>
 
-      <MarketingPostView />
+      <PostView />
     </>
   );
 }

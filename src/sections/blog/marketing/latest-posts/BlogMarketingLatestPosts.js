@@ -54,7 +54,7 @@ export default function BlogMarketingLatestPosts({ posts }) {
   const viewAllBtn = (
     <Button
       component={NextLink}
-      href={paths.marketing.posts}
+      href="/posts"
       color="inherit"
       endIcon={<Iconify icon="carbon:chevron-right" />}
     >

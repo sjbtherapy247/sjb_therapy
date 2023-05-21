@@ -67,7 +67,7 @@ export default function PostItem({ post }) {
             sx={{ color: 'inherit', opacity: 0.72 }}
           />
 
-          <Link component={NextLink} href={paths.marketing.post} sx={{ color: 'common.white' }}>
+          <Link component={NextLink} href="/post" sx={{ color: 'common.white' }}>
             <TextMaxLine line={4} variant="h4">
               {title}
             </TextMaxLine>

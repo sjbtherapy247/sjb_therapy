@@ -37,11 +37,11 @@ export default function NewsletterMarketing({ sx, ...other }) {
 
             <div>
               <Typography variant="h4" gutterBottom>
-                Sign Up For Newsletter
+                Sign Up For Monthly Newsletter
               </Typography>
 
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                Receive 50% discount on first project
+                Receive 10% discount on first session
               </Typography>
             </div>
           </Stack>

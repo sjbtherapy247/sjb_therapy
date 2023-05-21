@@ -39,8 +39,10 @@ export default function PostItem({ post }) {
         <Stack spacing={1}>
           <PostTimeBlock createdAt={fDate(createdAt)} duration={duration} />
 
-          <Link component={NextLink} href={paths.marketing.post} color="inherit" variant="h3">
-            {title}
+          <Link component={NextLink} href="/post" color="inherit">
+            <TextMaxLine line={3} variant="h3">
+              {title}
+            </TextMaxLine>
           </Link>
 
           <TextMaxLine line={3} variant="body2" sx={{ color: 'text.secondary' }}>

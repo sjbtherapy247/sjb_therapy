@@ -4,9 +4,9 @@ import { _testimonials } from 'src/_mock';
 import ScrollProgress from 'src/components/scroll-progress';
 import {
   EcommerceLandingHero,
-  EcommerceLandingCategories,
+  // EcommerceLandingCategories,
   EcommerceLandingTopProducts,
-  EcommerceLandingHotDealToday,
+  // EcommerceLandingHotDealToday,
   EcommerceLandingSpecialOffer,
   EcommerceLandingFeaturedBrands,
   EcommerceLandingPopularProducts,
