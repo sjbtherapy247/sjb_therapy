@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
 // @mui
 import { styled, alpha, useTheme } from '@mui/material/styles';
-import { Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // components
@@ -76,7 +76,16 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
   const isMdUp = useResponsive('up', 'md');
   return (
     <StyledRoot>
-      <Container sx={{ mx: 0, mt: 8, p: 1, position: 'relative', zIndex: 9 }}>
+      <Box
+        sx={{
+          maxWidth: '2400px',
+          mx: 0,
+          mt: 8,
+          px: { xs: 1, sm: 2, md: 4 },
+          position: 'relative',
+          zIndex: 9,
+        }}
+      >
         <Typography sx={{ mb: 1, fontWeight: 500 }} variant="h3">
           Features Posts
         </Typography>
@@ -113,7 +122,7 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
             ))}
           </Carousel>
         </CarouselArrows>
-      </Container>
+      </Box>
 
       {posts.map(
         (post, index) =>

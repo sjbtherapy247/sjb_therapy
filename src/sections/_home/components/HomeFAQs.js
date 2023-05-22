@@ -108,12 +108,12 @@ export default function HomeFAQs() {
                     >
                       {faq.question}
                     </Typography>
-
-                    <Iconify
-                      width={24}
-                      color={theme.palette.primary.main}
-                      icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'}
-                    />
+                    <Box sx={{ minWidth: '25px' }}>
+                      <Iconify
+                        color={theme.palette.primary.main}
+                        icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'}
+                      />
+                    </Box>
                   </AccordionSummary>
 
                   <AccordionDetails>

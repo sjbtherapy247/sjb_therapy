@@ -13,6 +13,7 @@ import { BlogMarketingFeaturedPosts, BlogMarketingPosts } from 'src/sections/blo
 // ----------------------------------------------------------------------
 
 export default function BlogView() {
+  console.log(_blogMarketingPosts);
   return (
     <>
       {/* <PostSearchMobile /> */}

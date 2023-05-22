@@ -64,12 +64,12 @@ export default function PostView() {
 
       <Container>
         <Grid container spacing={3} justifyContent={{ md: 'center' }}>
-          <Grid xs={12} md={8}>
+          <Grid xs={12} md={10}>
             <Stack
               spacing={3}
               sx={{
                 textAlign: 'center',
-                pt: { xs: 5, md: 10 },
+                pt: { xs: 4, md: 6 },
                 pb: 5,
               }}
             >
