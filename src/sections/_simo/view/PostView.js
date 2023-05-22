@@ -17,13 +17,15 @@ import {
 // utils
 import { fDate } from 'src/utils/formatTime';
 // _mock
-import { _blogMarketingPosts, _socials } from 'src/_mock';
+// moved one level up
 // components
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
+import { _blogMarketingPosts, _socials } from 'src/_mock';
+import Head from 'next/head';
 import { BlogMarketingLatestPosts } from '../../blog/marketing';
 import { PostTags, PostAuthor, PostSocialsShare } from '../../blog/components';
 
@@ -51,6 +53,9 @@ export default function PostView() {
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" />
 
       <Container>
