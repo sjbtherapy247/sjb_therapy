@@ -32,7 +32,7 @@ const Meta = () => (
       name="keywords"
       content="hypnotherapy, psychotherapy, mental health, personal transformation"
     />
-    <meta name="author" content="ZONE UI Kit" />
+    <meta name="author" content="TezD" />
   </>
 );
 

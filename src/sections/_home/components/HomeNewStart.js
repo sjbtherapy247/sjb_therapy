@@ -43,16 +43,16 @@ export default function HomeNewStart() {
             <Typography variant="h2" sx={{ my: 3 }}>
               The
               <Box component="span" sx={{ color: 'primary.main' }}>
-                {` ZONE `}
+                {` SJB THERAPY `}
               </Box>
-              UI Kit
+              3-Session Bundle
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inDown}>
             <Typography sx={{ color: 'text.secondary' }}>
-              Modern ui kit to save your time, boost your creativity. Neat and super stylish layout
-              ready to help with your projects
+              Most treatments will require a few session to be effective. Save $90 on this 3-session
+              bundle
             </Typography>
           </m.div>
         </Box>
