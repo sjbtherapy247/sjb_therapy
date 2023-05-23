@@ -122,5 +122,5 @@ export const navConfig = [
   { title: 'Services', path: '/services', icon: <Iconify icon="mdi:timer-music-outline" /> },
   { title: 'Research', path: '/posts', icon: <Iconify icon="mdi:bookshelf" /> },
   { title: 'Store', path: '/e-commerce/landing', icon: <Iconify icon="mdi:cart-arrow-right" /> },
-  { title: 'test', path: '/components', icon: <Iconify icon="mdi:currency-usd" /> },
+  // { title: 'test', path: '/components', icon: <Iconify icon="mdi:currency-usd" /> },
 ];
