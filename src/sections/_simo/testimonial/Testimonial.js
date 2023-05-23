@@ -13,7 +13,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 import TestimonialItem from './TestimonialItem';
 
 const StyledRoot = styled('div')(({ theme }) => ({
-  padding: theme.spacing(6),
+  padding: theme.spacing(8),
   // paddingBottom: theme.spacing(8),
   ...bgGradient({
     color: alpha(theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800], 0.8),

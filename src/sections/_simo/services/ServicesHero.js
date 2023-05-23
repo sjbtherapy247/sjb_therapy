@@ -49,7 +49,7 @@ export default function ServicesHero() {
             <Stack
               spacing={3}
               sx={{
-                mb: 5,
+                mb: 0,
                 mx: 'auto',
                 // maxWidth: 480,
                 textAlign: 'center',
@@ -58,14 +58,10 @@ export default function ServicesHero() {
             >
               <Typography variant="h1">Our Services</Typography>
 
-              <Typography sx={{ opacity: 0.72 }}>
-                At SJB Therapy, we offer a wide range of services to address various mental and
-                emotional concerns. These therapies can help with issues such as anxiety, phobias,
-                stress management, self-esteem, weight management, smoking cessation, sleep
-                disorders, trauma, relationship difficulties, and personal growth. Whether you seek
-                relief from specific fears, want to improve your well-being, or desire to overcome
-                past traumas, hypnotherapy and psychotherapy provide effective interventions
-                tailored to your individual needs.
+              <Typography sx={{ opacity: 0.72, textAlign: { xs: 'left', sm: 'center' } }}>
+                At SJB Therapy, we offer a wide range of services to address various mental and emotional concerns. These therapies can help with issues such as anxiety, phobias, stress management, self-esteem, weight management, smoking cessation,
+                sleep disorders, trauma, relationship difficulties, and personal growth. Whether you seek relief from specific fears, want to improve your well-being, or desire to overcome past traumas, hypnotherapy and psychotherapy provide
+                effective interventions tailored to your individual needs.
               </Typography>
             </Stack>
           </Grid>
