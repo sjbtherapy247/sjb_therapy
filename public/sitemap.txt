@@ -1,0 +1,14 @@
+https://simo-dev.vercel.app/
+https://simo-dev.vercel.app/auth/login-cover/
+https://simo-dev.vercel.app/auth/register-cover/
+https://simo-dev.vercel.app/auth/reset-password/
+https://simo-dev.vercel.app/support/
+https://simo-dev.vercel.app/posts/
+https://simo-dev.vercel.app/post/
+https://simo-dev.vercel.app/e-commerce/landing/
+https://simo-dev.vercel.app/e-commerce/wishlist/
+https://simo-dev.vercel.app/e-commerce/cart/
+https://simo-dev.vercel.app/e-commerce/account/personal/
+https://simo-dev.vercel.app/e-commerce/product/
+https://simo-dev.vercel.app/e-commerce/checkout/
+https://simo-dev.vercel.app/e-commerce/products/
