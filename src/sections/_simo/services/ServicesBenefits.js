@@ -67,7 +67,7 @@ export default function ServicesBenefits() {
             mb: { xs: 8, md: 10 },
           }}
         >
-          These are just a few of the many benefits individuals can experience through hypnotherapy and psychotherapy treatments. The specific benefits may vary depending on the individual's needs and the therapeutic approach employed.{' '}
+          These are just a few of the many benefits individuals can experience through hypnotherapy and psychotherapy treatments. The specific benefits may vary depending on the individual&apos;s needs and the therapeutic approach employed.{' '}
         </Typography>
 
         <Box
