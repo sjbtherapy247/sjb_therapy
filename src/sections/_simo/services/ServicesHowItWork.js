@@ -1,13 +1,6 @@
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import {
-  Timeline,
-  TimelineDot,
-  TimelineItem,
-  TimelineContent,
-  TimelineSeparator,
-  TimelineConnector,
-} from '@mui/lab';
+import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineSeparator, TimelineConnector } from '@mui/lab';
 import { Typography, Container } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
@@ -19,31 +12,27 @@ import useResponsive from 'src/hooks/useResponsive';
 const TIMELINES = [
   {
     step: 'STEP 1',
-    title: 'Planning',
-    description:
-      'Curabitur ullamcorper ultricies nisi. Praesent nonummy mi in odio. Donec mollis hendrerit risus.',
+    title: 'Assessment',
+    description: 'Gathering relevant information about the individuals needs, goals, and medical history to determine the most appropriate treatment approach.',
   },
   {
     step: 'STEP 2',
-    title: 'Research',
-    description:
-      'Curabitur ullamcorper ultricies nisi. Praesent nonummy mi in odio. Donec mollis hendrerit risus.',
+    title: 'Induction',
+    description: 'Guiding the individual into a relaxed state of hypnosis, typically through relaxation techniques, visualization, or focused attention.',
   },
   {
     step: 'STEP 3',
-    title: 'Optimizing',
-    description:
-      'Curabitur ullamcorper ultricies nisi. Praesent nonummy mi in odio. Donec mollis hendrerit risus.',
+    title: 'Therapy',
+    description: 'Engaging in therapeutic interventions while in the hypnotic state, such as suggestion therapy, regression, cognitive restructuring, or visualization, tailored to address specific concerns or goals.',
   },
   {
     step: 'STEP 4',
-    title: 'Results',
-    description:
-      'Curabitur ullamcorper ultricies nisi. Praesent nonummy mi in odio. Donec mollis hendrerit risus.',
+    title: 'Termination and Integration',
+    description: 'Gradually bringing the individual out of hypnosis, allowing time for reflection, discussing the session, and integrating the insights gained into their daily life.',
   },
 ];
 
-const COLORS = ['primary', 'secondary', 'warning', 'success'];
+const COLORS = ['primary', 'warning', 'secondary', 'success'];
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
@@ -74,12 +63,12 @@ export default function MarketingServicesHowItWork() {
             mt: 3,
             mx: 'auto',
             opacity: 0.72,
-            maxWidth: 480,
+            // maxWidth: 480,
             textAlign: 'center',
             mb: { xs: 8, md: 10 },
           }}
         >
-          Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.
+          These steps serve as a general framework, and the specific techniques and approaches may vary depending on the therapist&apos;s style and the needs of the individual being treated.
         </Typography>
 
         <Timeline position={isMdUp ? 'alternate' : 'right'}>
