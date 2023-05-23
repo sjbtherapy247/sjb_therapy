@@ -9,6 +9,7 @@ import useResponsive from 'src/hooks/useResponsive';
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import CountUp from 'src/components/count-up';
+import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
@@ -30,16 +31,16 @@ const StyledIcon = styled('div', {
   height: 160,
   margin: 'auto',
   display: 'flex',
-  borderRadius: '50%',
+  borderRadius: '30%',
   alignItems: 'center',
   position: 'relative',
   justifyContent: 'center',
   color: theme.palette[color].darker,
-  border: `dashed 2px ${alpha(theme.palette[color].main, 0.24)}`,
+  border: `dashed 2px ${alpha(theme.palette[color].main, 0.25)}`,
   '&:before': {
     zIndex: 8,
     content: '""',
-    borderRadius: '50%',
+    borderRadius: '30%',
     position: 'absolute',
     width: 'calc(100% - 48px)',
     height: 'calc(100% - 48px)',
@@ -50,25 +51,39 @@ const StyledIcon = styled('div', {
   },
 }));
 
-// ----------------------------------------------------------------------
+const StyledRoot = styled('div')(({ theme }) => ({
+  // paddingTop: theme.spacing(5),
+  paddingBottom: theme.spacing(8),
+  ...bgGradient({
+    color: alpha(theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800], 0.8),
+    imgUrl: '/assets/background/overlay_2.jpg',
+  }),
+}));
+
+const StyledBgImage = styled('div')(({ theme }) => ({
+  padding: theme.spacing(6, 4),
+  ...bgGradient({
+    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
+    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
+    imgUrl: '/assets/images/travel/travel_1.jpg',
+  }),
+  [theme.breakpoints.up('md')]: {
+    ...bgGradient({
+      direction: 'to left',
+      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
+      endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 1)} 100%`,
+      imgUrl: '/assets/images/travel/travel_1.jpg',
+    }),
+  },
+})); // ----------------------------------------------------------------------
 
 export default function About() {
   const isMdUp = useResponsive('up', 'md');
 
   return (
-    <Container
-      sx={{
-        pt: { xs: 5, md: 10 },
-        pb: 10,
-      }}
-    >
-      <Grid container spacing={3} justifyContent="space-between" alignItems="center">
-        {isMdUp && (
-          <Grid xs={12} md={6} lg={5}>
-            <Image alt="teams" src="/assets/illustrations/illustration_teams.svg" />
-          </Grid>
-        )}
-
+    // <StyledRoot>
+    <StyledBgImage>
+      <Grid container spacing={3} justifyContent="flex-start" alignItems="center">
         <Grid
           xs={12}
           md={6}
@@ -80,21 +95,13 @@ export default function About() {
           <Typography variant="h2">Who We Are?</Typography>
 
           <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-            Vivamus consectetuer hendrerit lacus. Curabitur a felis in nunc fringilla tristique.
-            Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit.
+            Vivamus consectetuer hendrerit lacus. Curabitur a felis in nunc fringilla tristique. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit.
             <br />
             <br />
-            Nam pretium turpis et arcu. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl
-            dignissim dolor, a pretium mi sem ut ipsum. Praesent venenatis metus at tortor pulvinar
-            varius.
+            Nam pretium turpis et arcu. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Praesent venenatis metus at tortor pulvinar varius.
           </Typography>
 
-          <Button
-            variant="outlined"
-            color="inherit"
-            size="large"
-            endIcon={<Iconify icon="carbon:chevron-right" />}
-          >
+          <Button variant="outlined" color="inherit" size="large" endIcon={<Iconify icon="carbon:chevron-right" />}>
             Check Our Work
           </Button>
         </Grid>
@@ -116,21 +123,18 @@ export default function About() {
         {SUMMARY.map((value, index) => (
           <div key={value.title}>
             <StyledIcon color={COLORS[index]}>
-              <Iconify icon={value.icon} width={48} />
+              <Iconify icon={value.icon} height={48} />
             </StyledIcon>
 
             <Typography variant="h2" sx={{ mt: 2, mb: 1 }}>
-              <CountUp
-                start={value.total / 5}
-                end={value.total}
-                formattingFn={(newValue) => fShortenNumber(newValue)}
-              />
+              <CountUp start={value.total / 5} end={value.total} formattingFn={(newValue) => fShortenNumber(newValue)} />
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>{value.title}</Typography>
           </div>
         ))}
       </Box>
-    </Container>
+    </StyledBgImage>
+    // </StyledRoot>
   );
 }

@@ -26,7 +26,7 @@ export default function MissionView() {
       {/* <AboutStory /> */}
 
       <Testimonial testimonials={_testimonials} />
-      <Testimonial1 testimonials={_testimonials} />
+      {/* <Testimonial1 testimonials={_testimonials} /> */}
 
       <HomeFAQs />
     </>
