@@ -10,47 +10,46 @@ import Image from 'src/components/image';
 
 const BENEFITS = [
   {
-    title: 'Online Media',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
+    title: 'Emotional Healing',
+    description: 'A safe and supportive space to explore and heal emotional wounds, traumas, and unresolved issues, fostering emotional well-being.',
     iconColor: 'primary',
   },
   {
-    title: 'Design',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
+    title: 'Behavior Change',
+    description: 'Identify and modify unhealthy patterns, habits, and behaviors, make positive changes and adopt healthier ways of living. ',
     iconColor: 'success',
   },
   {
-    title: 'Marketing',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
+    title: 'Stress Reduction',
+    description: 'Effectively reduce stress levels by teaching relaxation techniques, coping strategies, and stress management skills, enhancing overall well-being and resilience.',
     iconColor: 'secondary',
   },
   {
-    title: 'HR & Recruiting',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
-    iconColor: 'secondary',
+    title: 'Increased Self-Awareness',
+    description: 'Gain a deeper understanding of yourself, your emotions, and your thought patterns, facilitating personal growth, self-acceptance, and self-empowerment.',
   },
   {
-    title: 'Management',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
+    title: 'Improved Relationships',
+    description: 'Develop healthier communication skills, resolving conflicts, and enhancing your relationships with others.',
     iconColor: 'success',
   },
   {
-    title: 'Branding',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
-    iconColor: 'primary',
+    title: 'Enhanced Mental Well-being',
+    description: 'Alleviate symptoms of anxiety, depression, and other mental health conditions, improving overall mental well-being and promoting a more balanced and fulfilling life.',
+    iconColor: 'secondary',
   },
 ];
 
 // ----------------------------------------------------------------------
 
-export default function MarketingServicesBenefits() {
+export default function ServicesBenefits() {
   const isMdUp = useResponsive('up', 'md');
 
   return (
     <Box
       sx={{
         bgcolor: 'background.neutral',
-        py: { xs: 10, md: 15 },
+        py: { xs: 8, md: 10 },
       }}
     >
       <Container>
@@ -63,19 +62,19 @@ export default function MarketingServicesBenefits() {
             mt: 3,
             mx: 'auto',
             opacity: 0.72,
-            maxWidth: 480,
+            // maxWidth: 480,
             textAlign: 'center',
             mb: { xs: 8, md: 10 },
           }}
         >
-          Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.
+          These are just a few of the many benefits individuals can experience through hypnotherapy and psychotherapy treatments. The specific benefits may vary depending on the individual's needs and the therapeutic approach employed.{' '}
         </Typography>
 
         <Box
           sx={{
             display: 'grid',
             alignItems: 'center',
-            gap: { xs: 4, md: 8 },
+            gap: { xs: 4, md: 1 },
             gridTemplateColumns: { md: 'repeat(3, 1fr)' },
           }}
         >
@@ -85,7 +84,7 @@ export default function MarketingServicesBenefits() {
             ))}
           </Stack>
 
-          {isMdUp && <Image alt="benefits" src="/assets/illustrations/illustration_benefits.svg" />}
+          {isMdUp && <Image alt="benefits" src="/assets/illustrations/illustration_map.svg" />}
 
           <Stack spacing={{ xs: 4, md: 10 }}>
             {BENEFITS.slice(-3).map((benefit, index) => (
@@ -127,15 +126,12 @@ function BenefitItem({ benefit, reverse, index }) {
           height: 16,
           flexShrink: 0,
           borderRadius: '50%',
-          background: (theme) =>
-            `linear-gradient(to bottom, ${theme.palette.primary.light}, ${theme.palette.primary.main})`,
+          background: (theme) => `linear-gradient(to bottom, ${theme.palette.primary.light}, ${theme.palette.primary.main})`,
           ...(iconColor === 'secondary' && {
-            background: (theme) =>
-              `linear-gradient(to bottom, ${theme.palette.secondary.light}, ${theme.palette.secondary.main})`,
+            background: (theme) => `linear-gradient(to bottom, ${theme.palette.secondary.light}, ${theme.palette.secondary.main})`,
           }),
           ...(iconColor === 'success' && {
-            background: (theme) =>
-              `linear-gradient(to bottom, ${theme.palette.success.light}, ${theme.palette.success.main})`,
+            background: (theme) => `linear-gradient(to bottom, ${theme.palette.success.light}, ${theme.palette.success.main})`,
           }),
         }}
       />
