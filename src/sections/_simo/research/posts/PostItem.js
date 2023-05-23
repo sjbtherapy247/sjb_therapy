@@ -4,17 +4,18 @@ import { m } from 'framer-motion';
 import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Link, Stack, Avatar } from '@mui/material';
+import { Stack, Avatar, Link } from '@mui/material';
 // routes
-import { paths } from 'src/routes/paths';
+// import { paths } from 'src/routes/paths';
 // utils
 import { fDate } from 'src/utils/formatTime';
 import { bgGradient } from 'src/utils/cssStyles';
 // components
 import Image from 'src/components/image';
+import TextMaxLine from 'src/components/text-max-line';
 import { varHover, varTranHover } from 'src/components/animate';
 //
-import PostTimeBlock from '../../components/PostTimeBlock';
+import PostTimeBlock from '../components/PostTimeBlock';
 
 // ----------------------------------------------------------------------
 
@@ -41,12 +42,9 @@ export default function PostItem({ post }) {
     <Stack
       component={m.div}
       whileHover="hover"
-      sx={{
-        borderRadius: 2,
-        overflow: 'hidden',
-        position: 'relative',
-        boxShadow: (theme) => theme.customShadows.z12,
-      }}
+      variants={varHover(1)}
+      transition={varTranHover()}
+      sx={{ borderRadius: 2, overflow: 'hidden', position: 'relative' }}
     >
       <m.div variants={varHover(1.25)} transition={varTranHover()}>
         <Image src={coverImg} alt={title} ratio="3/4" />
@@ -56,7 +54,6 @@ export default function PostItem({ post }) {
         justifyContent="space-between"
         sx={{
           p: 5,
-          width: 1,
           height: 1,
           zIndex: 9,
           position: 'absolute',
@@ -65,13 +62,15 @@ export default function PostItem({ post }) {
       >
         <Stack spacing={2}>
           <PostTimeBlock
-            createdAt={fDate(createdAt)}
             duration={duration}
+            createdAt={fDate(createdAt)}
             sx={{ color: 'inherit', opacity: 0.72 }}
           />
 
-          <Link component={NextLink} href="/post" variant="h4" color="inherit" underline="none">
-            {title}
+          <Link component={NextLink} href="/post" sx={{ color: 'common.white' }}>
+            <TextMaxLine line={4} variant="h4">
+              {title}
+            </TextMaxLine>
           </Link>
         </Stack>
 

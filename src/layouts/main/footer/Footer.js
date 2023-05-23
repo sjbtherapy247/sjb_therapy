@@ -24,7 +24,7 @@ import { _socials } from 'src/_mock';
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 //
-import NewsletterMarketing from 'src/sections/newsletter/marketing';
+import NewsletterMarketing from 'src/sections/_simo/newsletter';
 import { pageLinks, navConfig } from '../nav/config-navigation';
 import ListDesktop from './ListDesktop';
 import ListMobile from './ListMobile';
@@ -74,6 +74,7 @@ export default function Footer() {
     </Box>
   );
 
+  // eslint-disable-next-line no-unused-vars
   const mainFooter = (
     <>
       <Divider />

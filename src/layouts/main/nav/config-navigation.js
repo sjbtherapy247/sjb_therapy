@@ -117,14 +117,10 @@ export const pageLinks = [
 ];
 
 export const navConfig = [
-  { title: 'Our Mission', path: '/', icon: <Iconify icon="mdi:bullseye-arrow" /> },
-  {
-    title: 'Hypnotherapy',
-    path: '/hypnotherapy',
-    icon: <Iconify icon="mdi:timer-music-outline" />,
-  },
+  { title: 'Our Mission', path: '/mission', icon: <Iconify icon="mdi:bullseye-arrow" /> },
   // { title: 'Psychotherapy', path: '/posts', icon: <Iconify icon="mdi:account-voice" /> },
+  { title: 'Services', path: '/services', icon: <Iconify icon="mdi:timer-music-outline" /> },
   { title: 'Research', path: '/posts', icon: <Iconify icon="mdi:bookshelf" /> },
-  // { title: 'Costs', path: '/costs', icon: <Iconify icon="mdi:currency-usd" /> },
   { title: 'Store', path: '/e-commerce/landing', icon: <Iconify icon="mdi:cart-arrow-right" /> },
+  { title: 'test', path: '/components', icon: <Iconify icon="mdi:currency-usd" /> },
 ];

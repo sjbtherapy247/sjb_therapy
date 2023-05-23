@@ -67,7 +67,7 @@ export default function PostView() {
 
       <Divider />
 
-      <Container>
+      <Container maxWidth={false}>
         <Grid container spacing={3} justifyContent={{ md: 'center' }}>
           <Grid xs={12} md={10}>
             <Stack

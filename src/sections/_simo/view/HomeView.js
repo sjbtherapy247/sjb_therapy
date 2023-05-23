@@ -16,7 +16,7 @@ import {
   HomeFamous,
   // HomeFeatureHighlights,
   // HomeFlexibleComponents,
-} from '../components';
+} from 'src/sections/_simo/home';
 
 // ----------------------------------------------------------------------
 

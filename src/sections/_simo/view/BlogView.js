@@ -7,7 +7,7 @@ import ScrollProgress from 'src/components/scroll-progress';
 
 // import { PostSearchMobile } from 'src/sections/blog/components';
 import BlogSidebar from 'src/sections/blog/sidebar';
-import { BlogMarketingFeaturedPosts, BlogMarketingPosts } from 'src/sections/blog/marketing';
+import { BlogMarketingFeaturedPosts, BlogMarketingPosts } from 'src/sections/_simo/research';
 // import NewsletterMarketing from 'src/sections/newsletter/marketing';
 
 // ----------------------------------------------------------------------
@@ -22,6 +22,7 @@ export default function BlogView() {
       <BlogMarketingFeaturedPosts posts={_blogMarketingPosts.slice(0, 5)} />
 
       <Container
+        maxWidth={false}
         sx={{
           mt: 5,
           mx: 0,
@@ -35,9 +36,10 @@ export default function BlogView() {
 
           <Grid xs={12} md={4}>
             <BlogSidebar
+              author={{ name: 'Tezza D', role: 'Developer' }}
               popularTags={_tags}
               categories={_categories}
-              recentPosts={{ list: _blogMarketingPosts.slice(-4) }}
+              recentPosts={{ list: _blogMarketingPosts.slice(-6) }}
               advertisement={{
                 title: 'Advertisement',
                 description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',

@@ -14,7 +14,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 import Image from 'src/components/image';
 import { varHover, varTranHover } from 'src/components/animate';
 //
-import PostTimeBlock from '../../components/PostTimeBlock';
+import PostTimeBlock from '../components/PostTimeBlock';
 
 // ----------------------------------------------------------------------
 
