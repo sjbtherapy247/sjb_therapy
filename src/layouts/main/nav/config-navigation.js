@@ -4,7 +4,7 @@ import { paths } from 'src/routes/paths';
 import Iconify from 'src/components/iconify';
 // import bullseyeArrow from '@iconify/icons-mdi/bullseye-arrow';
 // import timerMusicOutline from '@iconify/icons-mdi/timer-music-outline';
-// import accountVoice from '@iconify/icons-mdi/account-voice';
+import accountVoice from '@iconify/icons-mdi/account-voice';
 // import bookshelfIcon from '@iconify/icons-mdi/bookshelf';
 // import currencyUsd from '@iconify/icons-mdi/currency-usd';
 // import cartArrowRight from '@iconify/icons-mdi/cart-arrow-right';

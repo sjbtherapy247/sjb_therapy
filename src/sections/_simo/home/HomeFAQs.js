@@ -2,18 +2,7 @@ import { m } from 'framer-motion';
 import { useState } from 'react';
 // @mui
 import { alpha } from '@mui/material/styles';
-import {
-  Box,
-  Button,
-  Accordion,
-  Container,
-  Typography,
-  AccordionDetails,
-  AccordionSummary,
-  Unstable_Grid2 as Grid,
-  useTheme,
-  Stack,
-} from '@mui/material';
+import { Box, Button, Accordion, Container, Typography, AccordionDetails, AccordionSummary, Unstable_Grid2 as Grid, useTheme, Stack } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 // assets
@@ -92,27 +81,14 @@ export default function HomeFAQs() {
             }}
           >
             {CONTENTS.map((faq) => (
-              <m.div key={faq.question} variants={varFade().in}>
-                <Accordion
-                  expanded={expanded === faq.question}
-                  onChange={handleChangeExpanded(faq.question)}
-                >
+              <m.div key={faq.question} variants={varFade().inRight}>
+                <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
                   <AccordionSummary>
-                    <Typography
-                      color="text.secondary"
-                      variant="h6"
-                      fontStyle="italic"
-                      fontWeight="400"
-                      component="div"
-                      sx={{ flexGrow: 1 }}
-                    >
+                    <Typography color="text.secondary" variant="h6" fontStyle="italic" fontWeight="400" component="div" sx={{ flexGrow: 1 }}>
                       {faq.question}
                     </Typography>
                     <Box sx={{ minWidth: '25px' }}>
-                      <Iconify
-                        color={theme.palette.primary.main}
-                        icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'}
-                      />
+                      <Iconify color={theme.palette.primary.main} icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
                     </Box>
                   </AccordionSummary>
 
@@ -140,35 +116,16 @@ export default function HomeFAQs() {
             </m.div>
 
             <m.div variants={varFade().inUp}>
-              <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-                Please feel free to reach out and contact us for more specific details.
-              </Typography>
+              <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please feel free to reach out and contact us for more specific details.</Typography>
             </m.div>
 
             <m.div variants={varFade().inUp}>
-              <Stack
-                direction="row"
-                spacing={{ xs: 4, sm: 8 }}
-                sx={{ display: 'flex', justifyContent: 'center' }}
-              >
-                <Button
-                  size="large"
-                  color="primary"
-                  variant="contained"
-                  href="tel:+61407945789"
-                  startIcon={<Iconify icon="mdi:cellphone-sound" />}
-                  onClick={handleClick}
-                >
+              <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Button size="large" color="primary" variant="contained" href="tel:+61407945789" startIcon={<Iconify icon="mdi:cellphone-sound" />} onClick={handleClick}>
                   Call {click && isSmUp ? ' 0407945789' : null}
                   {/* Call */}
                 </Button>
-                <Button
-                  size="large"
-                  color="primary"
-                  variant="contained"
-                  href="mailto:support@sjbtherapy.com?subject=Client questions"
-                  startIcon={<Iconify icon="mdi:email-outline" />}
-                >
+                <Button size="large" color="primary" variant="contained" href="mailto:support@sjbtherapy.com?subject=Client questions" startIcon={<Iconify icon="mdi:email-outline" />}>
                   Email
                 </Button>
               </Stack>
