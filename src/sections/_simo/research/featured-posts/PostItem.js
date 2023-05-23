@@ -11,7 +11,7 @@ import { fDate } from 'src/utils/formatTime';
 import Image from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
 //
-import PostTimeBlock from '../../components/PostTimeBlock';
+import PostTimeBlock from '../components/PostTimeBlock';
 
 // ----------------------------------------------------------------------
 
