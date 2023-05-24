@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 // @mui
 import { Card, Link, Stack, Button, Divider, Typography } from '@mui/material';
+import NextLink from 'next/link';
 
 // types
 import { paths } from 'src/routes/paths';
@@ -68,11 +69,7 @@ export default function PlanCard({ plan }) {
         <Stack spacing={2.5}>
           {commons.map((option) => (
             <Stack key={option} spacing={1.5} direction="row" alignItems="center">
-              <Iconify
-                icon="carbon:checkmark-outline"
-                color={theme.palette.primary.main}
-                sx={{ width: 20, height: 20 }}
-              />
+              <Iconify icon="carbon:checkmark-outline" color={theme.palette.primary.main} sx={{ width: 20, height: 20 }} />
               <Typography variant="body2">{option}</Typography>
             </Stack>
           ))}
@@ -81,35 +78,24 @@ export default function PlanCard({ plan }) {
 
           {options.map((option) => (
             <Stack key={option.title} spacing={1.5} direction="row" alignItems="center">
-              <Iconify
-                icon="carbon:checkmark-outline"
-                color={theme.palette.primary.main}
-                sx={{ color: 'primary', width: 20, height: 20 }}
-              />
+              <Iconify icon="carbon:checkmark-outline" color={theme.palette.primary.main} sx={{ color: 'primary', width: 20, height: 20 }} />
               <Typography variant="body2">{option.title}</Typography>
             </Stack>
           ))}
         </Stack>
 
         <Stack alignItems="flex-end" spacing={3}>
-          <Button
-            size="large"
-            fullWidth
-            variant="contained"
-            color="primary"
-            target="_blank"
-            rel="noopener"
-            href={paths.zoneStore}
-          >
+          <Button size="large" fullWidth variant="contained" color="primary" target="_blank" rel="noopener" href={paths.zoneStore}>
             Choose Package
           </Button>
 
           <Link
+            component={NextLink}
             color="text.secondary"
-            target="_blank"
-            rel="noopener"
+            // target="_blank"
+            // rel="noopener"
             variant="body2"
-            href={paths.license}
+            href="/services"
             sx={{ display: 'flex', alignItems: 'center' }}
           >
             More Details

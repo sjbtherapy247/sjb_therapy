@@ -1,17 +1,6 @@
 import { useState } from 'react';
 // @mui
-import {
-  Stack,
-  Avatar,
-  Divider,
-  Popover,
-  Checkbox,
-  MenuItem,
-  Container,
-  Typography,
-  IconButton,
-  Unstable_Grid2 as Grid,
-} from '@mui/material';
+import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme } from '@mui/material';
 // routes
 // import { paths } from 'src/routes/paths';
 // utils
@@ -26,18 +15,19 @@ import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
 import { _blogMarketingPosts, _socials } from 'src/_mock';
 import Head from 'next/head';
-import { BlogMarketingLatestPosts } from '../../blog/marketing';
-import { PostTags, PostAuthor, PostSocialsShare } from '../../blog/components';
+import { BlogMarketingLatestPosts } from 'src/sections/_simo/research';
+import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/research/components';
+import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
 export default function PostView() {
-  const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } =
-    _blogMarketingPosts[0];
+  const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } = _blogMarketingPosts[0];
 
   const [favorite, setFavorite] = useState(favorited);
 
   const [open, setOpen] = useState(null);
+  const theme = useTheme();
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -56,13 +46,63 @@ export default function PostView() {
       <Head>
         <title>{title}</title>
       </Head>
-      <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" />
+      <Box
+        sx={{
+          py: 10,
+          position: 'relative',
+          ...bgGradient({
+            startColor: `${alpha(theme.palette.common.black, 0.5)} 0%`,
+            endColor: `${theme.palette.common.black} 100%`,
+            imgUrl: heroImg,
+          }),
+        }}
+      >
+        <Container>
+          <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
+            <Grid xs={12} md={8}>
+              <Stack
+                spacing={2}
+                alignItems={{
+                  xs: 'center',
+                  md: 'center',
+                }}
+                sx={{
+                  color: 'common.white',
+                  textAlign: {
+                    xs: 'center',
+                    md: 'center',
+                  },
+                }}
+              >
+                <Typography variant="body2" sx={{ opacity: 0.72, pb: 0 }}>
+                  {duration}
+                </Typography>
+
+                <Typography variant="h2" component="h2" sx={{ mt: 0 }}>
+                  {title}
+                </Typography>
+
+                <Typography variant="caption" sx={{ opacity: 0.72 }}>
+                  {fDate(createdAt, 'dd/MM/yyyy p')}
+                </Typography>
+
+                <Stack direction="row">
+                  {_socials.map((social) => (
+                    <IconButton key={social.value}>
+                      <Iconify icon={social.icon} sx={{ color: social.color }} />
+                    </IconButton>
+                  ))}
+                </Stack>
+              </Stack>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" /> */}
 
       <Container>
-        <CustomBreadcrumbs
-          sx={{ my: 3 }}
-          links={[{ name: 'Home', href: '/' }, { name: 'Posts', href: '/posts' }, { name: title }]}
-        />
+        <CustomBreadcrumbs sx={{ my: 3 }} links={[{ name: 'Home', href: '/' }, { name: 'Posts', href: '/posts' }, { name: title }]} />
       </Container>
 
       <Divider />
@@ -78,18 +118,18 @@ export default function PostView() {
                 pb: 5,
               }}
             >
-              <Typography variant="body2" sx={{ color: 'text.disabled' }}>
+              {/* <Typography variant="body2" sx={{ color: 'text.disabled' }}>
                 {duration}
               </Typography>
 
               <Typography variant="h2" component="h1">
                 {title}
-              </Typography>
+              </Typography> */}
               <Typography variant="h5">{description}</Typography>
             </Stack>
 
             <Divider />
-            <Stack direction="row" justifyContent="space-between" spacing={1.5} sx={{ py: 3 }}>
+            <Stack direction="row" spacing={1.5} sx={{ py: 3 }}>
               <Avatar src={author.picture} sx={{ width: 48, height: 48 }} />
 
               <Stack spacing={0.5} flexGrow={1}>
@@ -104,17 +144,11 @@ export default function PostView() {
                   <Iconify icon="carbon:share" />
                 </IconButton>
 
-                <Checkbox
-                  color="error"
-                  checked={favorite}
-                  onChange={handleChangeFavorite}
-                  icon={<Iconify icon="carbon:favorite" />}
-                  checkedIcon={<Iconify icon="carbon:favorite-filled" />}
-                />
+                <Checkbox color="error" checked={favorite} onChange={handleChangeFavorite} icon={<Iconify icon="carbon:favorite" />} checkedIcon={<Iconify icon="carbon:favorite-filled" />} />
               </Stack>
             </Stack>
 
-            <Divider sx={{ mb: 6 }} />
+            <Divider sx={{ mb: 4 }} />
 
             <Markdown content={content} firstLetter />
 

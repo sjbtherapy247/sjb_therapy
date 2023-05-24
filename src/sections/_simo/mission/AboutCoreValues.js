@@ -1,3 +1,6 @@
+// animation
+import { m } from 'framer-motion';
+import { MotionViewport, varFade } from 'src/components/animate';
 // @mui
 import { Typography, Container, Box } from '@mui/material';
 // components
@@ -33,6 +36,7 @@ const CORE_VALUES = [
 export default function AboutCoreValues() {
   return (
     <Container
+      component={MotionViewport}
       sx={{
         textAlign: 'center',
         pt: { xs: 5, md: 10 },
@@ -49,9 +53,7 @@ export default function AboutCoreValues() {
           // maxWidth: { md: 540 },
         }}
       >
-        Etiam ultricies nisi vel augue. Suspendisse potenti. Sed mollis, eros et ultrices tempus,
-        mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Phasellus viverra nulla ut
-        metus varius laoreet.
+        Etiam ultricies nisi vel augue. Suspendisse potenti. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Phasellus viverra nulla ut metus varius laoreet.
       </Typography>
 
       <Box
@@ -66,18 +68,17 @@ export default function AboutCoreValues() {
         }}
       >
         {CORE_VALUES.map((value) => (
-          <Box key={value.title}>
-            <SvgColor
-              src={value.icon}
-              sx={{ width: 64, height: 64, mx: 'auto', color: 'primary.main' }}
-            />
+          <m.div key={value.title} variants={varFade({ distance: 300 }).inDown}>
+            {/* <Box key={value.title}> */}
+            <SvgColor src={value.icon} sx={{ width: 64, height: 64, mx: 'auto', color: 'primary.main' }} />
 
             <Typography variant="h5" sx={{ mt: 5, mb: 2 }}>
               {value.title}
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}> {value.description} </Typography>
-          </Box>
+            {/* </Box> */}
+          </m.div>
         ))}
       </Box>
     </Container>

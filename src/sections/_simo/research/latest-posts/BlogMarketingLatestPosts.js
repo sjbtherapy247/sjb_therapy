@@ -52,12 +52,7 @@ export default function BlogMarketingLatestPosts({ posts }) {
   };
 
   const viewAllBtn = (
-    <Button
-      component={NextLink}
-      href="/posts"
-      color="inherit"
-      endIcon={<Iconify icon="carbon:chevron-right" />}
-    >
+    <Button component={NextLink} href="/posts" color="inherit" endIcon={<Iconify icon="carbon:chevron-right" />}>
       View All
     </Button>
   );
@@ -66,26 +61,17 @@ export default function BlogMarketingLatestPosts({ posts }) {
     <Container
       sx={{
         overflow: 'hidden',
-        py: { xs: 8, md: 15 },
+        py: { xs: 6, md: 10 },
       }}
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        justifyContent={{ xs: 'center', md: 'space-between' }}
-      >
+      <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', md: 'space-between' }}>
         <Typography variant="h3">Latest Posts</Typography>
 
         {isMdUp && viewAllBtn}
       </Stack>
 
       <Box sx={{ position: 'relative' }}>
-        <CarouselArrows
-          onNext={handleNext}
-          onPrev={handlePrev}
-          leftButtonProps={{ sx: { left: { xs: 0, sm: -15, md: -20 } } }}
-          rightButtonProps={{ sx: { right: { xs: 0, sm: -15, md: -20 } } }}
-        >
+        <CarouselArrows onNext={handleNext} onPrev={handlePrev} leftButtonProps={{ sx: { left: { xs: 0, sm: -15, md: -20 } } }} rightButtonProps={{ sx: { right: { xs: 0, sm: -15, md: -20 } } }}>
           <Carousel ref={carouselRef} {...carouselSettings}>
             {posts.map((post) => (
               <Box

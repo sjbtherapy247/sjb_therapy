@@ -65,7 +65,7 @@ export default function MarketingServicesHowItWork() {
             opacity: 0.72,
             // maxWidth: 480,
             textAlign: 'center',
-            mb: { xs: 8, md: 10 },
+            mb: { xs: 4, md: 6 },
           }}
         >
           These steps serve as a general framework, and the specific techniques and approaches may vary depending on the therapist&apos;s style and the needs of the individual being treated.
@@ -86,7 +86,7 @@ export default function MarketingServicesHowItWork() {
                 <TimelineConnector />
               </TimelineSeparator>
 
-              <TimelineContent sx={{ pb: { xs: 3, md: 5 } }}>
+              <TimelineContent sx={{ pb: { xs: 3, md: 2 } }}>
                 <Typography variant="overline" sx={{ color: `${COLORS[index]}.main` }}>
                   {value.step}
                 </Typography>
@@ -99,7 +99,7 @@ export default function MarketingServicesHowItWork() {
                   variant="body2"
                   sx={{
                     opacity: 0.72,
-                    maxWidth: { md: 360 },
+                    // maxWidth: { md: 360 },
                     ...(index % 2 && {
                       ml: 'auto',
                     }),

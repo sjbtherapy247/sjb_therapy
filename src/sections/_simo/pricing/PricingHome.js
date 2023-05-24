@@ -51,10 +51,8 @@ export default function PricingHome({ plans }) {
 
           <m.div variants={varFade().inUp}>
             <Typography sx={{ color: 'text.secondary' }}>
-              In summary.. you can pay on a per session basis or purchase a 3-session bundle.
-              Hypnotherapy is a process, it usually takes three sessions to address the issues
-              effectively, However, the Quit Smoking in 90 minutes therapy follows a different
-              approach. For more details check out our Hypnotherapy services page.
+              In summary.. you can pay on a per session basis or purchase a 3-session bundle. Hypnotherapy is a process, it usually takes three sessions to address the issues effectively, However, the Quit Smoking in 90 minutes therapy follows a
+              different approach. For consultation details please check out our Hypnotherapy services page.
             </Typography>
           </m.div>
         </Box>

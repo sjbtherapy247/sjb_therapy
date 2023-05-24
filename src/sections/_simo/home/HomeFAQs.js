@@ -81,7 +81,7 @@ export default function HomeFAQs() {
             }}
           >
             {CONTENTS.map((faq) => (
-              <m.div key={faq.question} variants={varFade().inRight}>
+              <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
                 <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
                   <AccordionSummary>
                     <Typography color="text.secondary" variant="h6" fontStyle="italic" fontWeight="400" component="div" sx={{ flexGrow: 1 }}>

@@ -45,7 +45,8 @@ export default function AboutOurMission() {
       <Container
         sx={{
           overflow: 'hidden',
-          // py: { xs: 9, msd: 10 },
+          py: { xs: 4, md: 5 },
+          px: { xs: 2, md: 5 },
         }}
       >
         <Stack

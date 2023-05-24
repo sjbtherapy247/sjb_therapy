@@ -42,7 +42,7 @@ export default function PostItem({ post }) {
       component={m.div}
       whileHover="hover"
       sx={{
-        borderRadius: 2,
+        borderRadius: 4,
         overflow: 'hidden',
         position: 'relative',
         boxShadow: (theme) => theme.customShadows.z12,
@@ -55,7 +55,7 @@ export default function PostItem({ post }) {
       <Stack
         justifyContent="space-between"
         sx={{
-          p: 5,
+          p: 4,
           width: 1,
           height: 1,
           zIndex: 9,
@@ -64,11 +64,7 @@ export default function PostItem({ post }) {
         }}
       >
         <Stack spacing={2}>
-          <PostTimeBlock
-            createdAt={fDate(createdAt)}
-            duration={duration}
-            sx={{ color: 'inherit', opacity: 0.72 }}
-          />
+          <PostTimeBlock createdAt={fDate(createdAt)} duration={duration} sx={{ color: 'inherit', opacity: 0.72 }} />
 
           <Link component={NextLink} href="/post" variant="h4" color="inherit" underline="none">
             {title}
@@ -76,7 +72,7 @@ export default function PostItem({ post }) {
         </Stack>
 
         <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-          <Avatar src={author.picture} sx={{ mr: 1 }} />
+          <Avatar src={author.picture} sx={{ mr: 2 }} />
           {author.name}
         </Stack>
       </Stack>
@@ -94,11 +90,7 @@ PostItem.propTypes = {
       picture: PropTypes.string,
     }),
     coverImg: PropTypes.string,
-    createdAt: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-      PropTypes.instanceOf(Date),
-    ]),
+    createdAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),
     duration: PropTypes.string,
     title: PropTypes.string,
   }),
