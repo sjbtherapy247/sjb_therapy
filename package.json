@@ -1,8 +1,8 @@
 {
-  "name": "SJB Therapy",
+  "name": "SJB-Therapy",
   "author": "TezD",
   "version": "2.0.0",
-  "description": "SJB Therapy website",
+  "description": "SJB-Therapy-website",
   "private": true,
   "scripts": {
     "dev": "next dev -p 5002",
