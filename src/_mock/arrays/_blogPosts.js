@@ -66,7 +66,7 @@ const base = (index) => ({
   createdAt: _mock.time(index),
   duration: '3 minutes read',
   tags: [
-    { label: 'Marketing', path: '' },
+    { label: 'Hypnotherapy', path: '/' },
     { label: 'Development', path: '' },
     { label: 'HR & Recruiting', path: '' },
     { label: 'Design', path: '' },
@@ -77,8 +77,7 @@ const base = (index) => ({
     role: _mock.role(index),
     picture: _mock.image.avatar(index),
     quotes: 'Member since Mar 15, 2022',
-    about:
-      'Integer tincidunt. Nullam dictum felis eu pede mollis pretium. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.',
+    about: 'Integer tincidunt. Nullam dictum felis eu pede mollis pretium. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.',
   },
 });
 

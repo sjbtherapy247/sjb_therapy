@@ -80,14 +80,14 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
         sx={{
           maxWidth: '2400px',
           mx: 0,
-          mt: 8,
+          mt: 10,
           px: { xs: 1, sm: 2, md: 4 },
           position: 'relative',
           zIndex: 9,
         }}
       >
-        <Typography sx={{ mb: 1, fontWeight: 500 }} variant="h3">
-          Features Posts
+        <Typography sx={{ mb: 3, fontWeight: 500 }} variant="h2">
+          Featured Research
         </Typography>
         <CarouselArrows
           onNext={handleNext}
@@ -124,17 +124,7 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
         </CarouselArrows>
       </Box>
 
-      {posts.map(
-        (post, index) =>
-          selected === index && (
-            <Image
-              key={post.id}
-              alt="post cover"
-              src={post.coverImg}
-              sx={{ position: 'absolute', top: 0, width: 1, height: 1 }}
-            />
-          )
-      )}
+      {posts.map((post, index) => selected === index && <Image key={post.id} alt="post cover" src={post.coverImg} sx={{ position: 'absolute', top: 0, width: 1, height: 1 }} />)}
 
       <StyledOverlay />
     </StyledRoot>

@@ -54,26 +54,17 @@ export default function Header({ isOffset }) {
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
             <Link href="/" component={NextLink}>
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-                <Box
-                  sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}
-                >
-                  <Image src="/assets/sjb-logo/hnav-logo.jpg" disabledEffect sx={{ height: 1 }} />
+                <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
+                  <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="navigation" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
             </Link>
           </Box>
 
-          <Stack
-            sx={{ mr: 1 }}
-            spacing={1}
-            direction="row"
-            alignItems="center"
-            flexGrow={1}
-            justifyContent="flex-end"
-          >
+          <Stack sx={{ mr: 1 }} spacing={1} direction="row" alignItems="center" flexGrow={1} justifyContent="flex-end">
             <Link href={paths.support} component={NextLink} color="inherit">
               <IconButton color="inherit">
-                <Iconify icon="mdi:chat-question-outline" height="30" />
+                <Iconify icon="carbon:help" />
               </IconButton>
             </Link>
           </Stack>

@@ -11,7 +11,7 @@ import { BlogMarketingFeaturedPosts, BlogMarketingPosts } from 'src/sections/_si
 
 // ----------------------------------------------------------------------
 
-export default function BlogView() {
+export default function ReasearchView() {
   console.log(_blogMarketingPosts);
   return (
     <>

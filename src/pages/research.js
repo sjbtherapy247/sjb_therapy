@@ -3,7 +3,7 @@ import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
-import BlogView from 'src/sections/_simo/view/BlogView';
+import BlogView from 'src/sections/_simo/view/ResearchView';
 
 // ----------------------------------------------------------------------
 

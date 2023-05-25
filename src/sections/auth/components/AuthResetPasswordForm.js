@@ -39,15 +39,7 @@ export default function AuthResetPasswordForm() {
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <RHFTextField name="email" hiddenLabel placeholder="Email address" />
 
-      <LoadingButton
-        fullWidth
-        size="large"
-        color="inherit"
-        type="submit"
-        variant="contained"
-        loading={isSubmitting}
-        sx={{ mt: 2.5 }}
-      >
+      <LoadingButton fullWidth size="large" color="primary" type="submit" variant="contained" loading={isSubmitting} sx={{ mt: 2.5 }}>
         Reset Password
       </LoadingButton>
     </FormProvider>
