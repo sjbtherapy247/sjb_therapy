@@ -23,7 +23,6 @@ import {
 export default function HomeView() {
   return (
     <>
-      <ScrollProgress />
       <HomeHero />
       <HomeGuidedMeditation />
       {/* {!lightMode && <HomeGuidedMeditationDark />} */}

@@ -57,46 +57,44 @@ export default function PostView() {
           }),
         }}
       >
-        <Container>
-          <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
-            <Grid xs={12} md={8}>
-              <Stack
-                spacing={2}
-                alignItems={{
+        <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
+          <Grid xs={12} md={8}>
+            <Stack
+              spacing={2}
+              alignItems={{
+                xs: 'center',
+                md: 'center',
+              }}
+              sx={{
+                color: 'common.white',
+                textAlign: {
                   xs: 'center',
                   md: 'center',
-                }}
-                sx={{
-                  color: 'common.white',
-                  textAlign: {
-                    xs: 'center',
-                    md: 'center',
-                  },
-                }}
-              >
-                <Typography variant="body2" sx={{ opacity: 0.72, pb: 0 }}>
-                  {duration}
-                </Typography>
+                },
+              }}
+            >
+              <Typography variant="body2" sx={{ opacity: 0.72, pb: 0 }}>
+                {duration}
+              </Typography>
 
-                <Typography variant="h2" component="h2" sx={{ mt: 0 }}>
-                  {title}
-                </Typography>
+              <Typography variant="h2" component="h2" sx={{ mt: 0 }}>
+                {title}
+              </Typography>
 
-                <Typography variant="caption" sx={{ opacity: 0.72 }}>
-                  {fDate(createdAt, 'dd/MM/yyyy p')}
-                </Typography>
+              <Typography variant="caption" sx={{ opacity: 0.72 }}>
+                {fDate(createdAt, 'dd/MM/yyyy p')}
+              </Typography>
 
-                <Stack direction="row">
-                  {_socials.map((social) => (
-                    <IconButton key={social.value}>
-                      <Iconify icon={social.icon} sx={{ color: social.color }} />
-                    </IconButton>
-                  ))}
-                </Stack>
+              <Stack direction="row">
+                {_socials.map((social) => (
+                  <IconButton key={social.value}>
+                    <Iconify icon={social.icon} sx={{ color: social.color }} />
+                  </IconButton>
+                ))}
               </Stack>
-            </Grid>
+            </Stack>
           </Grid>
-        </Container>
+        </Grid>
       </Box>
 
       {/* <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" /> */}
