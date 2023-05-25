@@ -3,19 +3,7 @@
 // @mui
 import { alpha, styled } from '@mui/material/styles';
 import Masonry from '@mui/lab/Masonry';
-import {
-  Link,
-  Stack,
-  Button,
-  Divider,
-  Container,
-  TextField,
-  Typography,
-  IconButton,
-  InputAdornment,
-  Unstable_Grid2 as Grid,
-  Box,
-} from '@mui/material';
+import { Link, Stack, Button, Divider, Container, TextField, Typography, IconButton, InputAdornment, Unstable_Grid2 as Grid, Box } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 // _mock
@@ -24,7 +12,7 @@ import { _socials } from 'src/_mock';
 import Logo from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 //
-import NewsletterMarketing from 'src/sections/_simo/newsletter';
+import Newsletter from 'src/sections/_simo/newsletter';
 import { pageLinks, navConfig } from '../nav/config-navigation';
 import ListDesktop from './ListDesktop';
 import ListMobile from './ListMobile';
@@ -68,7 +56,7 @@ export default function Footer() {
     >
       <Logo single />
 
-      <Typography variant="caption" component="div" sx={{ color: 'text.secondary' }}>
+      <Typography variant="caption" component="div" sx={{ color: 'text.secondary', pb: 4 }}>
         © 2023. All rights reserved. Website developed by TezD
       </Typography>
     </Box>
@@ -91,8 +79,7 @@ export default function Footer() {
               <Stack alignItems="flex-start" spacing={3}>
                 <Logo />
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  The starting point for your next project based on easy-to-customize Material-UI ©
-                  helps you build apps faster and better.
+                  The starting point for your next project based on easy-to-customize Material-UI © helps you build apps faster and better.
                 </Typography>
               </Stack>
 
@@ -171,12 +158,7 @@ export default function Footer() {
       </Container>
       <Divider />
       <Container>
-        <Stack
-          spacing={2.5}
-          direction={{ xs: 'column', md: 'row' }}
-          justifyContent="space-between"
-          sx={{ py: 3, textAlign: 'center' }}
-        >
+        <Stack spacing={2.5} direction={{ xs: 'column', md: 'row' }} justifyContent="space-between" sx={{ py: 3, textAlign: 'center' }}>
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             © 2023. All rights reserved
           </Typography>
@@ -198,7 +180,7 @@ export default function Footer() {
   // return <footer>{isHome ? simpleFooter : mainFooter}</footer>;
   return (
     <>
-      <NewsletterMarketing />
+      <Newsletter />
       {simpleFooter}
     </>
   );

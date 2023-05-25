@@ -1,8 +1,8 @@
 {
-  "name": "@zone/mui-kit-react",
-  "author": "Minimals",
+  "name": "SJB Therapy",
+  "author": "TezD",
   "version": "2.0.0",
-  "description": "Next & JavaScript",
+  "description": "SJB Therapy website",
   "private": true,
   "scripts": {
     "dev": "next dev -p 5002",
@@ -56,6 +56,7 @@
     "@babel/eslint-parser": "^7.21.3",
     "eslint": "^8.37.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^13.4.3",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-flowtype": "^8.0.3",
