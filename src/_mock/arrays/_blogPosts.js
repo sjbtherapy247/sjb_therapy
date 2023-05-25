@@ -36,8 +36,9 @@ const content = (name) => `
 <p>Recent scientific research has shed light on the mechanisms underlying hypnotherapy's effectiveness. Neuroimaging studies have revealed that hypnosis can produce distinct patterns of brain activity. Functional magnetic resonance imaging (fMRI) scans have shown reduced activity in the default mode network (DMN), which is responsible for self-referential thoughts and mind-wandering. Simultaneously, increased connectivity has been observed between brain regions associated with attention, perception, and emotional regulation.</p>
 
 <p>This altered brain activity during hypnosis creates an optimal state for therapeutic intervention. By bypassing the critical faculty of the conscious mind, hypnotherapy allows access to the subconscious, where beliefs, memories, and emotions shape our thoughts and behaviors. It enables individuals to explore and reframe deeply held beliefs and overcome limiting patterns.</p>
-
-<p><img alt="alt marketing" src="/assets/images/${name}/${name}_post_01.jpg" /></p>
+<div>
+<img alt="research photo" height='350px' width='100%' style="object-fit:cover" src="/assets/images/${name}/${name}_post_01.jpg" />
+</div>
 
 <p>The mind-body connection is further elucidated through the examination of psychophysiological responses during hypnosis. Hypnotherapy has been shown to influence various physiological processes, such as heart rate, blood pressure, and hormone levels. Studies have demonstrated the ability of hypnosis to reduce stress, enhance immune function, and alleviate chronic pain.</p>
 
@@ -45,7 +46,7 @@ const content = (name) => `
 
 
 
-<p><img alt="alt marketing" src="/assets/images/${name}/${name}_post_02.jpg" /></p>
+<p><img alt="alt marketing"  height='350px' width='100%' style="object-fit:cover"  src="/assets/images/${name}/${name}_post_02.jpg" /></p>
 
 <p>Moreover, hypnotherapy incorporates visualization and guided imagery techniques. These methods leverage the mind's ability to create vivid mental images, evoking emotional and physiological responses. By imagining positive outcomes and engaging the senses, individuals can enhance motivation, confidence, and resilience.</p>
 

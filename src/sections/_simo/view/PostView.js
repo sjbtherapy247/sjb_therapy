@@ -8,7 +8,7 @@ import { fDate } from 'src/utils/formatTime';
 // _mock
 // moved one level up
 // components
-import Image from 'src/components/image';
+// import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
