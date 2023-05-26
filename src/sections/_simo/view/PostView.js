@@ -15,7 +15,7 @@ import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
 import { _blogMarketingPosts, _socials } from 'src/_mock';
 import Head from 'next/head';
-import { BlogMarketingLatestPosts } from 'src/sections/_simo/research';
+import { LatestPosts } from 'src/sections/_simo/research';
 import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/research/components';
 import { bgGradient } from 'src/utils/cssStyles';
 
@@ -57,7 +57,7 @@ export default function PostView() {
           }),
         }}
       >
-        <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
+        <Grid container spacing={3} sx={{ m: 0, justifyContent: 'center' }}>
           <Grid xs={12} md={8}>
             <Stack
               spacing={2}
@@ -163,7 +163,7 @@ export default function PostView() {
 
       <Divider />
 
-      <BlogMarketingLatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
+      <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
 
       {/* <MarketingLandingFreeSEO /> */}
 

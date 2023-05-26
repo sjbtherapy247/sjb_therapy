@@ -8,8 +8,8 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 const ScrollToTopStyled = styled('div')(({ theme }) => ({
   zIndex: 11,
   position: 'fixed',
-  right: theme.spacing(6),
-  bottom: theme.spacing(10),
+  right: theme.spacing(4),
+  bottom: theme.spacing(6),
 }));
 
 const ScrollToTop = (props) => {

@@ -40,7 +40,7 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function BlogMarketingFeaturedPosts({ posts }) {
+export default function FeaturedPosts({ posts }) {
   const theme = useTheme();
 
   const [selected, setSelected] = useState(0);
@@ -131,6 +131,6 @@ export default function BlogMarketingFeaturedPosts({ posts }) {
   );
 }
 
-BlogMarketingFeaturedPosts.propTypes = {
+FeaturedPosts.propTypes = {
   posts: PropTypes.array,
 };

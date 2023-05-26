@@ -6,7 +6,7 @@ import _mock, { _blogMarketingPosts, _categories, _tags } from 'src/_mock';
 
 // import { PostSearchMobile } from 'src/sections/blog/components';
 import BlogSidebar from 'src/sections/blog/sidebar';
-import { BlogMarketingFeaturedPosts, BlogMarketingPosts } from 'src/sections/_simo/research';
+import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/research';
 // import NewsletterMarketing from 'src/sections/newsletter/marketing';
 
 // ----------------------------------------------------------------------
@@ -17,7 +17,7 @@ export default function ReasearchView() {
     <>
       {/* <PostSearchMobile /> */}
 
-      <BlogMarketingFeaturedPosts posts={_blogMarketingPosts.slice(0, 5)} />
+      <FeaturedPosts posts={_blogMarketingPosts.slice(0, 5)} />
 
       <Container
         maxWidth={false}
@@ -29,7 +29,7 @@ export default function ReasearchView() {
       >
         <Grid container columnSpacing={{ xs: 0, md: 8 }}>
           <Grid xs={12} md={8}>
-            <BlogMarketingPosts posts={_blogMarketingPosts} />
+            <ResearchPosts posts={_blogMarketingPosts} />
           </Grid>
 
           <Grid xs={12} md={4}>

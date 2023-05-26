@@ -17,7 +17,7 @@ import PostItem from './PostItem';
 
 // ----------------------------------------------------------------------
 
-export default function BlogMarketingLatestPosts({ posts }) {
+export default function LatestPosts({ posts }) {
   const theme = useTheme();
 
   const isMdUp = useResponsive('up', 'md');
@@ -52,7 +52,7 @@ export default function BlogMarketingLatestPosts({ posts }) {
   };
 
   const viewAllBtn = (
-    <Button component={NextLink} href="/posts" color="inherit" endIcon={<Iconify icon="carbon:chevron-right" />}>
+    <Button component={NextLink} href="/research" color="primary" endIcon={<Iconify icon="carbon:chevron-right" />}>
       View All
     </Button>
   );
@@ -97,6 +97,6 @@ export default function BlogMarketingLatestPosts({ posts }) {
   );
 }
 
-BlogMarketingLatestPosts.propTypes = {
+LatestPosts.propTypes = {
   posts: PropTypes.array,
 };

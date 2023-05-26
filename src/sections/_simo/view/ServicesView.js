@@ -1,7 +1,7 @@
 // _mock
 import { _blogMarketingPosts, _testimonials } from 'src/_mock';
 //
-import { BlogMarketingLatestPosts } from 'src/sections/_simo/research';
+import { LatestPosts } from 'src/sections/_simo/research';
 import { Testimonial } from 'src/sections/_simo/testimonial';
 import {
   // Services,
@@ -28,7 +28,7 @@ export default function ServicesView() {
 
       <Testimonial testimonials={_testimonials} />
 
-      <BlogMarketingLatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
+      <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
     </>
   );
 }

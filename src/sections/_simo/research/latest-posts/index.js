@@ -1,1 +1,1 @@
-export { default } from './BlogMarketingLatestPosts';
+export { default } from './LatestPosts';
