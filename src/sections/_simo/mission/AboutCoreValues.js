@@ -68,7 +68,7 @@ export default function AboutCoreValues() {
         }}
       >
         {CORE_VALUES.map((value) => (
-          <m.div key={value.title} variants={varFade({ distance: 300 }).inDown}>
+          <m.div key={value.title} variants={varFade({ distance: 300 }).inUp}>
             {/* <Box key={value.title}> */}
             <SvgColor src={value.icon} sx={{ width: 64, height: 64, mx: 'auto', color: 'primary.main' }} />
 

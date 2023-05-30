@@ -51,8 +51,8 @@ export default function PostView() {
           py: 10,
           position: 'relative',
           ...bgGradient({
-            startColor: `${alpha(theme.palette.common.black, 0.5)} 0%`,
-            endColor: `${theme.palette.common.black} 100%`,
+            startColor: `${alpha(theme.palette.background.default, 0.0)} 0%`,
+            endColor: `${theme.palette.background.default} 100%`,
             imgUrl: heroImg,
           }),
         }}
@@ -66,7 +66,7 @@ export default function PostView() {
                 md: 'center',
               }}
               sx={{
-                color: 'common.white',
+                // color: 'common.white',
                 textAlign: {
                   xs: 'center',
                   md: 'center',

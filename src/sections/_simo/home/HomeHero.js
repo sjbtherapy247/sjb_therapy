@@ -13,7 +13,7 @@ import HomeSimon from './HomeSimon';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
-    color: alpha(theme.palette.background.default, 0.7),
+    color: alpha(theme.palette.background.default, 0.85),
     imgUrl: '/assets/background/overlay_2.jpg',
   }),
   position: 'relative',

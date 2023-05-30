@@ -61,7 +61,7 @@ export default function FeaturedPosts({ posts }) {
     beforeChange: (current, next) => setSelected(next),
     ...CarouselDots({
       rounded: true,
-      sx: { mt: 2 },
+      sx: { pt: 4 },
     }),
   };
 
@@ -80,13 +80,13 @@ export default function FeaturedPosts({ posts }) {
         sx={{
           maxWidth: '2400px',
           mx: 0,
-          mt: 10,
+          py: { xs: 10, md: 12 },
           px: { xs: 1, sm: 2, md: 4 },
           position: 'relative',
           zIndex: 9,
         }}
       >
-        <Typography sx={{ mb: 3, fontWeight: 500 }} variant="h2">
+        <Typography sx={{ mb: 3, fontWeight: 600 }} variant="h2">
           Featured Research
         </Typography>
         <CarouselArrows
@@ -106,6 +106,7 @@ export default function FeaturedPosts({ posts }) {
           rightButtonProps={{
             sx: {
               // mt: -8,
+
               right: 30,
               opacity: 0.8,
               display: isMdUp ? 'inline-flex' : 'none',
