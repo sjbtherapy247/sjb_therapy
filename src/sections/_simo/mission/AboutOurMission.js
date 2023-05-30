@@ -1,6 +1,6 @@
 // @mui
 import styled from '@emotion/styled';
-import { Stack, Container, Typography, Card, Unstable_Grid2 as Grid, alpha } from '@mui/material';
+import { Stack, Container, Typography, Card, Unstable_Grid2 as Grid, alpha, useTheme } from '@mui/material';
 // components
 // import Image from 'src/components/image';
 import { bgGradient } from 'src/utils/cssStyles';
@@ -23,16 +23,16 @@ const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(6, 0),
   paddingTop: '66px',
   ...bgGradient({
-    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
+    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.4)} 0%`,
     endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
-    imgUrl: '/assets/images/simon/mission.jpeg',
+    imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
   }),
   [theme.breakpoints.up('md')]: {
     ...bgGradient({
-      direction: 'to right',
-      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
-      endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 1)} 100%`,
-      imgUrl: '/assets/images/simon/mission.jpeg',
+      direction: 'to left',
+      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.4)} 0%`,
+      endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 1)} 120%`,
+      imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
     }),
   },
 }));
@@ -40,6 +40,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function AboutOurMission() {
+  const theme = useTheme();
   return (
     <StyledRoot>
       <Container
@@ -58,18 +59,14 @@ export default function AboutOurMission() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          <Typography variant="h2">Our Mission</Typography>
+          <Typography variant="h1">Our Mission</Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>Empowering individuals on their journey towards positive transformation and holistic well-being.</Typography>
         </Stack>
 
         <Grid container justifyContent="flex-start">
-          {/* <Grid xs={12} md={3} lg={5}>
-            <Image alt="vision" src="/assets/illustrations/illustration_vision.svg" />
-          </Grid> */}
-
-          <Grid xs={12} md={8} lg={6}>
-            <Stack alignItems={{ md: 'flex-end' }} sx={{ position: 'relative' }}>
+          <Grid xs={12} sm={9} lg={8}>
+            <Stack alignItems={{ sm: 'flex-end' }} sx={{ position: 'relative' }}>
               {VISIONS.map((vision, index) => {
                 const { name, description } = vision;
 
@@ -85,24 +82,38 @@ export default function AboutOurMission() {
                     sx={{
                       p: 4,
                       mt: 2,
-                      width: { md: 'calc(50% - 16px)' },
+                      width: { sm: 'calc(50% - 20px)' },
+                      bgcolor: theme.palette.mode === 'dark' ? 'primary.main' : 'primary.light',
+
+                      // ...(firstVision && {
+                      //   top: { md: 0 },
+                      //   left: { md: 0 },
+                      //   bottom: { md: 0 },
+                      //   my: { md: 'auto' },
+                      //   boxShadow: { md: 12 },
+                      //   maxHeight: { md: 280 },
+                      //   display: { md: 'flex' },
+                      //   position: { md: 'absolute' },
+                      //   flexDirection: { md: 'column' },
+                      //   justifyContent: { md: 'center' },
+                      // }),
                       ...(firstVision && {
-                        top: { md: 0 },
-                        left: { md: 0 },
-                        bottom: { md: 0 },
-                        my: { md: 'auto' },
-                        boxShadow: { md: 12 },
-                        maxHeight: { md: 280 },
-                        display: { md: 'flex' },
-                        position: { md: 'absolute' },
-                        flexDirection: { md: 'column' },
-                        justifyContent: { md: 'center' },
+                        top: { sm: 0 },
+                        left: { sm: 0 },
+                        bottom: { sm: 0 },
+                        my: { sm: 'auto' },
+                        boxShadow: { sm: 12 },
+                        maxHeight: { sm: 280 },
+                        display: { sm: 'flex' },
+                        position: { sm: 'absolute' },
+                        flexDirection: { sm: 'column' },
+                        justifyContent: { sm: 'center' },
                       }),
                       ...(secondVision && {
-                        boxShadow: (theme) => ({ md: theme.customShadows.z24 }),
+                        boxShadow: { md: theme.customShadows.z24 },
                       }),
                       ...(thirdVision && {
-                        boxShadow: { md: 0 },
+                        boxShadow: { md: 8 },
                       }),
                     }}
                   >

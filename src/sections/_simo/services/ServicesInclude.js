@@ -13,9 +13,9 @@ const SERVICES = [
   },
   {
     title: 'Sports Hypnotherapy - TRANCEformd',
-    description: 'Unlock your full potential and achieve next-level performance in business and sport through targeted hypnotherapy and psychotherapy interventions.',
+    description: 'Unlock your full potential and achieve next-level performance in sport through targeted hypnotherapy interventions.',
     content:
-      'Unlocking next-level performance in business and sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.',
+      'Unlocking next-level performance in sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.',
     icon: '/assets/icons/ic_file.svg',
   },
   {
@@ -99,7 +99,7 @@ export default function ServicesInclude() {
 
             <Typography variant="h5" sx={{ mt: 5, mb: 2 }}>
               {value.title}
-              {value.title.includes('Sports') && <sup style={{ fontSize: '10px' }}>TM</sup>}
+              {value.title.includes('TRANCE') && <sup style={{ fontSize: '10px' }}>TM</sup>}
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}> {value.description} </Typography>

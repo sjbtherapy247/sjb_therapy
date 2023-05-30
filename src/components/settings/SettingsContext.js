@@ -6,16 +6,13 @@ import { defaultSettings } from './config-setting';
 // ----------------------------------------------------------------------
 
 const initialState = {
+  // themeMode, themeDirection etc..
   ...defaultSettings,
-  // Mode
+  // toggle Mode
   onToggleMode: () => {},
-  // Open
-  open: false,
-  onToggle: () => {},
-  onOpen: () => {},
-  onClose: () => {},
-  // Not default
-  notDefault: false,
+  // Global state vars
+  loggedIn: false,
+  currentUser: null,
 };
 
 // ----------------------------------------------------------------------
@@ -33,9 +30,11 @@ export const useSettingsContext = () => {
 // ----------------------------------------------------------------------
 
 export function SettingsProvider({ children }) {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const [themeMode, setThemeMode] = useState(defaultSettings.themeMode);
+  const [themeMode, setThemeMode] = useState(initialState.themeMode);
+  const [loggedIn, setLoggedIn] = useState(initialState.loggedIn);
+  const [currentUser, setCurrentUser] = useState(initialState.currentUser);
 
   // looks for cookie in local storage with thememode - so that theme persists across tabs
   useEffect(() => {
@@ -50,39 +49,22 @@ export function SettingsProvider({ children }) {
     setCookie('themeMode', value);
   }, [themeMode]);
 
-  const onToggle = useCallback(() => {
-    setOpen(!open);
-  }, [open]);
-
-  const onOpen = useCallback(() => {
-    setOpen(true);
-  }, []);
-
-  const onClose = useCallback(() => {
-    setOpen(false);
-  }, []);
-
   const memoizedValue = useMemo(
     () => ({
       // Mode
       themeMode,
       onToggleMode,
-      // Open
-      open,
-      onToggle,
-      onOpen,
-      onClose,
+      loggedIn,
+      setLoggedIn,
+      currentUser,
     }),
     [
       // dependency array
-      // Mode
       themeMode,
       onToggleMode,
-      // Open
-      open,
-      onToggle,
-      onOpen,
-      onClose,
+      loggedIn,
+      setLoggedIn,
+      currentUser,
     ]
   );
 
@@ -97,9 +79,7 @@ SettingsProvider.propTypes = {
 
 function getCookie(name) {
   if (typeof document === 'undefined') {
-    throw new Error(
-      'getCookie() is not supported on the server. Fallback to a different value when rendering on the server.'
-    );
+    throw new Error('getCookie() is not supported on the server. Fallback to a different value when rendering on the server.');
   }
 
   const value = `; ${document.cookie}`;

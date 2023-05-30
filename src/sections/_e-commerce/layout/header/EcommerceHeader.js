@@ -36,40 +36,14 @@ export default function EcommerceHeader() {
     <StyledRoot>
       <Container
         sx={{
-          mt: 8,
+          // mt: 8,
           display: 'flex',
           alignItems: 'center',
           position: 'relative',
           height: { xs: 64, md: 64 },
         }}
       >
-        {/* {isMdUp ? (
-          <MegaMenuDesktopHorizon data={data} />
-        ) : (
-          <MegaMenuMobile
-            data={data}
-            open={openMenuMobile}
-            onOpen={() => setOpenMenuMobile(true)}
-            onClose={() => setOpenMenuMobile(false)}
-            action={
-              <Button
-                color="inherit"
-                onClick={() => setOpenMenuMobile(true)}
-                startIcon={<Iconify icon="carbon:menu" />}
-              >
-                Categories
-              </Button>
-            }
-          />
-        )} */}
-
-        <Stack
-          spacing={3}
-          direction="row"
-          alignItems="center"
-          flexGrow={1}
-          justifyContent="flex-end"
-        >
+        {/* <Stack spacing={3} direction="row" alignItems="center" flexGrow={1} justifyContent="flex-end">
           {!isMdUp && (
             <IconButton size="small" color="inherit" sx={{ p: 0 }}>
               <Iconify icon="carbon:search" width={24} />
@@ -77,39 +51,21 @@ export default function EcommerceHeader() {
           )}
 
           <Badge badgeContent={2} color="info">
-            <IconButton
-              component={NextLink}
-              href={paths.eCommerce.wishlist}
-              size="small"
-              color="inherit"
-              sx={{ p: 0 }}
-            >
+            <IconButton component={NextLink} href={paths.eCommerce.wishlist} size="small" color="inherit" sx={{ p: 0 }}>
               <Iconify icon="carbon:favorite" width={24} />
             </IconButton>
           </Badge>
 
           <Badge badgeContent={4} color="error">
-            <IconButton
-              component={NextLink}
-              href={paths.eCommerce.cart}
-              size="small"
-              color="inherit"
-              sx={{ p: 0 }}
-            >
+            <IconButton component={NextLink} href={paths.eCommerce.cart} size="small" color="inherit" sx={{ p: 0 }}>
               <Iconify icon="carbon:shopping-cart" width={24} />
             </IconButton>
           </Badge>
 
-          <IconButton
-            component={NextLink}
-            href={paths.eCommerce.account.personal}
-            size="small"
-            color="inherit"
-            sx={{ p: 0 }}
-          >
+          <IconButton component={NextLink} href={paths.eCommerce.account.personal} size="small" color="inherit" sx={{ p: 0 }}>
             <Iconify icon="carbon:user" width={24} />
           </IconButton>
-        </Stack>
+        </Stack> */}
       </Container>
     </StyledRoot>
   );

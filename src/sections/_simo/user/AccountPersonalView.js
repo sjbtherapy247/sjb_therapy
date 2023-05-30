@@ -11,8 +11,8 @@ import { countries } from 'src/assets/data';
 // components
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField, RHFSelect } from 'src/components/hook-form';
+import { EcommerceAccountLayout } from 'src/sections/_e-commerce/layout';
 //
-import { EcommerceAccountLayout } from '../layout';
 
 // ----------------------------------------------------------------------
 

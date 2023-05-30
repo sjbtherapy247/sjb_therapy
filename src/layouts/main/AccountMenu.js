@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { alpha } from '@mui/material/styles';
-import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListItemButton } from '@mui/material';
+import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListItemButton, Menu } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 import useActiveLink from 'src/hooks/useActiveLink';
@@ -49,19 +49,15 @@ const navigations = [
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceAccountMenu({ open, onClose }) {
-  const isMdUp = useResponsive('up', 'md');
+export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
+  // const isMdUp = useResponsive('up', 'md');
 
-  const renderContent = (
+  const menuContent = (
     <Stack
       sx={{
         flexShrink: 0,
         borderRadius: 2,
         width: 1,
-        ...(isMdUp && {
-          width: NAV.W_DRAWER,
-          border: (theme) => `solid 1px ${alpha(theme.palette.grey[500], 0.25)}`,
-        }),
       }}
     >
       <Stack spacing={2} sx={{ p: 3, pb: 2 }}>
@@ -77,9 +73,9 @@ export default function EcommerceAccountMenu({ open, onClose }) {
           <TextMaxLine variant="subtitle1" line={1}>
             Jayvion Simon
           </TextMaxLine>
-          <TextMaxLine variant="body2" line={1} sx={{ color: 'text.secondary' }}>
+          {/* <TextMaxLine variant="body2" line={1} sx={{ color: 'text.secondary' }}>
             nannie_abernathy70@yahoo.com
-          </TextMaxLine>
+          </TextMaxLine> */}
         </Stack>
       </Stack>
 
@@ -93,14 +89,8 @@ export default function EcommerceAccountMenu({ open, onClose }) {
 
       <Divider sx={{ borderStyle: 'dashed' }} />
 
-      <Stack sx={{ my: 1, px: 2 }}>
-        <ListItemButton
-          sx={{
-            px: 1,
-            height: 44,
-            borderRadius: 1,
-          }}
-        >
+      <Stack sx={{ my: 1, px: 1 }}>
+        <ListItemButton>
           <ListItemIcon>
             <Iconify icon="carbon:logout" />
           </ListItemIcon>
@@ -116,30 +106,28 @@ export default function EcommerceAccountMenu({ open, onClose }) {
   );
 
   return (
-    <>
-      {isMdUp ? (
-        renderContent
-      ) : (
-        <Drawer
-          open={open}
-          onClose={onClose}
-          ModalProps={{ keepMounted: true }}
-          PaperProps={{
-            sx: {
-              width: NAV.W_DRAWER,
-            },
-          }}
-        >
-          {renderContent}
-        </Drawer>
-      )}
-    </>
+    <Menu
+      anchorEl={anchorElUser}
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'right',
+      }}
+      keepMounted
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      open={!!anchorElUser}
+      onClick={handleCloseUserMenu}
+    >
+      {menuContent}
+    </Menu>
   );
 }
 
-EcommerceAccountMenu.propTypes = {
-  onClose: PropTypes.func,
-  open: PropTypes.bool,
+AccountMenu.propTypes = {
+  handleCloseUserMenu: PropTypes.func,
+  anchorElUser: PropTypes.node,
 };
 
 // ----------------------------------------------------------------------
