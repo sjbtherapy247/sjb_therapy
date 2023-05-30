@@ -14,7 +14,7 @@ export const StyledNavItem = styled(ListItemButton, {
     width: 6,
     height: 6,
     left: -10,
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.palette.mode === 'light' ? theme.palette.common.black : theme.palette.common.white,
   };
 
   return {

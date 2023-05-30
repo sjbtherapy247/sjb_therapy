@@ -25,9 +25,9 @@ export default function ServicesView() {
 
       <ServicesInclude />
 
-      <ServicesBenefits />
-
       <ServicesHowItWork />
+
+      <ServicesBenefits />
 
       <PricingHome plans={_pricingHome} />
       <Testimonial />

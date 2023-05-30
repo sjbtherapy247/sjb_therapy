@@ -2,15 +2,7 @@ import PropTypes from 'prop-types';
 import { useRef } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import {
-  Avatar,
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  Unstable_Grid2 as Grid,
-  Typography,
-} from '@mui/material';
+import { Avatar, Box, Card, CardContent, CardHeader, Unstable_Grid2 as Grid, Typography } from '@mui/material';
 // components
 import Image from 'src/components/image';
 import Carousel, { CarouselDots, CarouselArrows } from 'src/components/carousel';
@@ -38,8 +30,7 @@ export default function HomeFamous() {
       description: 'Fear Of Flying',
     },
     {
-      title:
-        'The renowned Hollywood actor has been open about his positive experience with hypnotherapy to quit smoking. He has credited hypnotherapy as a helpful tool in overcoming his addiction to cigarettes. ',
+      title: 'The renowned Hollywood actor has been open about his positive experience with hypnotherapy to quit smoking. He has credited hypnotherapy as a helpful tool in overcoming his addiction to cigarettes. ',
       image: '/assets/images/simon/Matt-Damon.jpeg',
       name: 'Matt Damon',
       description: 'Quit Smoking',
@@ -80,7 +71,7 @@ export default function HomeFamous() {
     <Box sx={{ py: 8, bgcolor: 'secondary.lighter' }}>
       <Grid container columnSpacing={3} alignItems="center" sx={{ m: 0, px: 0 }}>
         <Grid xs={12} md={4} pb={5}>
-          <Typography variant="h3" color="primary.dark" align="center" fontWeight="300">
+          <Typography variant="h3" color="primary.dark" align="center" fontWeight="600">
             Famous <br />
             Hypnotherapy <br />
             Advocates
@@ -130,11 +121,7 @@ function CarouselItem({ item }) {
         height: { xs: '480px', md: '380px' },
       }}
     >
-      <CardHeader
-        title={title}
-        sx={{ fontStyle: 'italic', textAlign: 'center' }}
-        titleTypographyProps={{ fontWeight: '200' }}
-      />
+      <CardHeader title={title} sx={{ fontStyle: 'italic', textAlign: 'center' }} titleTypographyProps={{ fontWeight: '200' }} />
       <CardHeader
         avatar={
           <Avatar sx={{ mr: 2, height: '70px', width: '70px' }} variant="rounded" src={image}>
