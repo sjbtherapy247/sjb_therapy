@@ -1,5 +1,5 @@
 // _mock
-import { _pricingHome } from 'src/_mock';
+import { _blogMarketingPosts } from 'src/_mock';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
@@ -17,6 +17,7 @@ import {
   // HomeFeatureHighlights,
   // HomeFlexibleComponents,
 } from 'src/sections/_simo/home';
+import { LatestPosts } from '../research';
 
 // ----------------------------------------------------------------------
 
@@ -28,7 +29,8 @@ export default function HomeView() {
       {/* {!lightMode && <HomeGuidedMeditationDark />} */}
       <HomeFamous />
       <HomeFAQs />
-      <PricingHome plans={_pricingHome} />
+      <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
+
       {/* <HomeNewStart /> */}
       {/* <HomeForDesigner /> */}
       {/* <HomeCombination /> */}

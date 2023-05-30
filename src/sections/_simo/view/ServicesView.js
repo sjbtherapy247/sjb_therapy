@@ -1,8 +1,11 @@
 // _mock
-import { _blogMarketingPosts, _testimonials } from 'src/_mock';
+import { _blogMarketingPosts, _pricingHome } from 'src/_mock';
+
 //
 import { LatestPosts } from 'src/sections/_simo/research';
 import { Testimonial } from 'src/sections/_simo/testimonial';
+import PricingHome from 'src/sections/_simo/pricing';
+
 import {
   // Services,
   ServicesHero,
@@ -26,9 +29,8 @@ export default function ServicesView() {
 
       <ServicesHowItWork />
 
+      <PricingHome plans={_pricingHome} />
       <Testimonial />
-
-      <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
     </>
   );
 }

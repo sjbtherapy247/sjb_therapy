@@ -81,13 +81,6 @@ export default function AboutCoreValues() {
           </m.div>
         ))}
       </Box>
-      <Box sx={{ mt: 10 }}>
-        <m.div variants={varFade({ distance: 300 }).inUp}>
-          <Typography variant="h3">Simply Just Believe</Typography>
-          <Typography sx={{ mt: 1, color: 'text.secondary' }}>in</Typography>
-          <Typography sx={{ mt: 1, color: 'text.secondary' }}>Hypnotherapy / Yourself / Progress / Never Giving Up</Typography>
-        </m.div>
-      </Box>
     </Container>
   );
 }
