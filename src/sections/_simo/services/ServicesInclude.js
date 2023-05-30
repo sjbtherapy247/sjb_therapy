@@ -12,19 +12,26 @@ const SERVICES = [
     icon: '/assets/icons/ic_statistics.svg',
   },
   {
+    title: 'Sports Hypnotherapy - TRANCEformd',
+    description: 'Unlock your full potential and achieve next-level performance in business and sport through targeted hypnotherapy and psychotherapy interventions.',
+    content:
+      'Unlocking next-level performance in business and sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.',
+    icon: '/assets/icons/ic_file.svg',
+  },
+  {
+    title: 'Quit Smoking Forever',
+    description: 'Specialized programs and interventions to help individuals quit smoking and overcome nicotine and/or other addictions',
+    icon: '/assets/icons/ic_checklist.svg',
+  },
+  {
     title: 'Stress Management',
     description: 'Teaching stress reduction techniques, relaxation exercises, and mindfulness practices to help individuals manage stress and improve overall well-being',
     icon: '/assets/icons/ic_social_media.svg',
   },
   {
     title: 'Insomnia and sleep disorders',
-    description: 'Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. ',
+    description: 'Conquer insomnia and enjoy restful sleep with our personalized hypnotherapy service. Relax, reduce anxiety, and retrain your mind for deep, rejuvenating rest.',
     icon: '/assets/icons/ic_real_time.svg',
-  },
-  {
-    title: 'Smoking cessation and other addictive behaviours',
-    description: 'Specialized programs and interventions to help individuals quit smoking and overcome nicotine and/or other addictions',
-    icon: '/assets/icons/ic_checklist.svg',
   },
   {
     title: 'Weight management and eating disorders',
@@ -47,18 +54,11 @@ const SERVICES = [
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
     icon: '/assets/icons/ic_report.svg',
   },
-  {
-    title: 'Unlock next level performance in business and sport',
-    description: 'Unlock your full potential and achieve next-level performance in business and sport through targeted hypnotherapy and psychotherapy interventions.',
-    content:
-      'Unlocking next-level performance in business and sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.',
-    icon: '/assets/icons/ic_file.svg',
-  },
 ];
 
 // ----------------------------------------------------------------------
 
-export default function MarketingServicesInclude() {
+export default function ServicesInclude() {
   return (
     <Container
       sx={{
@@ -99,6 +99,7 @@ export default function MarketingServicesInclude() {
 
             <Typography variant="h5" sx={{ mt: 5, mb: 2 }}>
               {value.title}
+              {value.title.includes('Sports') && <sup style={{ fontSize: '10px' }}>TM</sup>}
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}> {value.description} </Typography>
