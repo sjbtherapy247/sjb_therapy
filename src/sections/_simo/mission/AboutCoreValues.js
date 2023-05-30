@@ -10,23 +10,23 @@ import SvgColor from 'src/components/svg-color';
 
 const CORE_VALUES = [
   {
-    title: 'Customer Satisfaction',
-    description: 'Aenean urna dictum adipiscing nec, cras quisque.',
-    icon: '/assets/icons/ic_agreement.svg',
+    title: 'Mental Health',
+    description: 'Gain control over your mental health, permanently.',
+    icon: '/assets/icons/ic_optimization.svg',
   },
   {
-    title: 'Transparency',
-    description: 'Aenean urna dictum adipiscing nec, cras quisque.',
+    title: 'Action',
+    description: 'Take action to overcome your current situation.',
     icon: '/assets/icons/ic_transparency.svg',
   },
   {
-    title: 'Reputation',
-    description: 'Aenean urna dictum adipiscing nec, cras quisque.',
+    title: 'Transform & Grow',
+    description: 'Become the very best version of yourself.',
     icon: '/assets/icons/ic_reputation.svg',
   },
   {
-    title: 'Cooperation',
-    description: 'Aenean urna dictum adipiscing nec, cras quisque.',
+    title: 'Teamwork',
+    description: 'By us working together, you will become stronger.',
     icon: '/assets/icons/ic_popularity.svg',
   },
 ];
@@ -53,7 +53,7 @@ export default function AboutCoreValues() {
           // maxWidth: { md: 540 },
         }}
       >
-        Etiam ultricies nisi vel augue. Suspendisse potenti. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Phasellus viverra nulla ut metus varius laoreet.
+        Our core value revolves around unlocking the potential in every client. We are dedicated to helping individuals harness their inner abilities, overcome limitations, and achieve peak performance through the power of clinical hypnotherapy.
       </Typography>
 
       <Box
@@ -80,6 +80,13 @@ export default function AboutCoreValues() {
             {/* </Box> */}
           </m.div>
         ))}
+      </Box>
+      <Box sx={{ mt: 10 }}>
+        <m.div variants={varFade({ distance: 300 }).inUp}>
+          <Typography variant="h3">Simply Just Believe</Typography>
+          <Typography sx={{ mt: 1, color: 'text.secondary' }}>in</Typography>
+          <Typography sx={{ mt: 1, color: 'text.secondary' }}>Hypnotherapy / Yourself / Progress / Never Giving Up</Typography>
+        </m.div>
       </Box>
     </Container>
   );

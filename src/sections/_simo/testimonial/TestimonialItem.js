@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Typography, Stack, Rating } from '@mui/material';
+import { Typography, Stack, Rating, Avatar } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
-export default function TestimonialItem({ testimonial, sx, ...other }) {
-  const { name, review, role, rating } = testimonial;
+export default function TestimonialItem({ review, sx, ...other }) {
+  const { reviewer, comment, starRating, reviewReply, createTime } = review;
 
   return (
     <Stack
@@ -16,7 +16,7 @@ export default function TestimonialItem({ testimonial, sx, ...other }) {
       }}
       {...other}
     >
-      <Rating value={rating} readOnly />
+      <Rating value={starRating} readOnly />
 
       <Typography
         sx={{
@@ -25,13 +25,18 @@ export default function TestimonialItem({ testimonial, sx, ...other }) {
           fontSize: { md: 20 },
         }}
       >
-        {review}
+        {comment}
       </Typography>
-
-      <Typography variant="h6">{name}</Typography>
+      <Stack direction="row" sx={{ my: 3, alignItems: 'center', justifyContent: 'center' }}>
+        <Avatar src={reviewer.profilePhotoUrl} />
+        <Stack sx={{ ml: 2, textAlign: 'left' }}>
+          <Typography variant="h6">{reviewer.displayName}</Typography>
+          <Typography variant="body2">{createTime}</Typography>
+        </Stack>
+      </Stack>
 
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        {role}
+        Response - {reviewReply.comment}
       </Typography>
     </Stack>
   );

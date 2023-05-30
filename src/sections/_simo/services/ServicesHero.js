@@ -20,13 +20,14 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
-    startColor: `${alpha(theme.palette.common.black, 0)} 0%`,
-    endColor: `${theme.palette.common.black} 90%`,
+    startColor: `${alpha(theme.palette.background.default, 0.8)} 40%`,
+    endColor: `${theme.palette.common.black} 120%`,
     imgUrl: '/assets/images/travel/travel_post_04.jpg',
   }),
   padding: theme.spacing(15, 0),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(20, 0),
+    paddingTop: theme.spacing(10, 0),
+    paddingBottom: theme.spacing(20, 0),
   },
 }));
 
@@ -53,12 +54,14 @@ export default function ServicesHero() {
                 mx: 'auto',
                 // maxWidth: 480,
                 textAlign: 'center',
-                color: 'common.white',
+                // color: 'common.white',
               }}
             >
-              <Typography variant="h1">Our Services</Typography>
+              <Typography sx={{ pb: 4 }} variant="h1">
+                Our Services
+              </Typography>
 
-              <Typography sx={{ opacity: 0.72, textAlign: { xs: 'left', sm: 'center' } }}>
+              <Typography sx={{ opacity: 0.9, textAlign: { xs: 'left', sm: 'center' } }}>
                 At SJB Therapy, we offer a wide range of services to address various mental and emotional concerns. These therapies can help with issues such as anxiety, phobias, stress management, self-esteem, weight management, smoking cessation,
                 sleep disorders, trauma, relationship difficulties, and personal growth. Whether you seek relief from specific fears, want to improve your well-being, or desire to overcome past traumas, hypnotherapy and psychotherapy provide
                 effective interventions tailored to your individual needs.

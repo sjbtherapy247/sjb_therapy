@@ -9,14 +9,14 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 const VISIONS = [
   {
-    name: 'Vestibulum',
-    description: 'In dui magna, posuere eget, vestibulum et, tempor auctor, justo.',
+    name: 'Healing',
+    description: 'We believe in the power of the mind to heal.',
   },
   {
-    name: 'Fusce',
-    description: 'Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.',
+    name: 'Learning',
+    description: 'We are committed to continuous learning and improvement.',
   },
-  { name: 'Praesent', description: 'Suspendisse feugiat. Quisque id odio.' },
+  { name: 'Passion', description: 'We are passionate about helping people improve their lives' },
 ];
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -60,7 +60,7 @@ export default function AboutOurMission() {
         >
           <Typography variant="h2">Our Mission</Typography>
 
-          <Typography sx={{ color: 'text.secondary' }}>Curabitur ullamcorper ultricies nisi. Aenean viverra rhoncus pede.</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>Empowering individuals on their journey towards positive transformation and holistic well-being.</Typography>
         </Stack>
 
         <Grid container justifyContent="flex-start">

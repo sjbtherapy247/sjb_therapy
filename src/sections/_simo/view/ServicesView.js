@@ -26,7 +26,7 @@ export default function ServicesView() {
 
       <ServicesHowItWork />
 
-      <Testimonial testimonials={_testimonials} />
+      <Testimonial />
 
       <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
     </>

@@ -61,7 +61,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 }));
 
 const StyledBgImage = styled('div')(({ theme }) => ({
-  padding: theme.spacing(6, 4),
+  padding: theme.spacing(10, 4),
   ...bgGradient({
     startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
     endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
@@ -83,31 +83,39 @@ export default function About() {
   return (
     // <StyledRoot>
     <StyledBgImage>
-      <Grid container spacing={3} justifyContent="flex-start" alignItems="center">
+      <Grid container spacing={3} justifyContent="center" alignItems="center">
         <Grid
           xs={12}
-          md={6}
-          lg={6}
+          md={10}
+          lg={8}
           sx={{
-            textAlign: { xs: 'center', md: 'left' },
+            textAlign: { xs: 'center' },
+            // textAlign: { xs: 'center', md: 'left' },
           }}
         >
           <Typography variant="h2">Who We Are?</Typography>
 
           <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-            Vivamus consectetuer hendrerit lacus. Curabitur a felis in nunc fringilla tristique. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit.
+            SjB Therapy is a hypnotherapy practice that is dedicated to helping people improve their lives. We use hypnosis to help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.
             <br />
             <br />
-            Nam pretium turpis et arcu. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Praesent venenatis metus at tortor pulvinar varius.
+            We believe in hypnosis as it is a safe and effective way to make lasting changes, and we are fully committed to providing our clients with the highest quality care.
           </Typography>
 
-          <Button variant="outlined" color="inherit" size="large" endIcon={<Iconify icon="carbon:chevron-right" />}>
+          <Box sx={{ mt: 10 }}>
+            {/* <m.div variants={varFade({ distance: 300 }).inUp}> */}
+            <Typography variant="h3">Simply Just Believe</Typography>
+            <Typography sx={{ mt: 1, color: 'text.secondary' }}>in</Typography>
+            <Typography sx={{ mt: 1, color: 'text.secondary' }}>Hypnotherapy / Yourself / Progress / Never Giving Up</Typography>
+            {/* </m.div> */}
+          </Box>
+          {/* <Button variant="outlined" color="inherit" size="large" endIcon={<Iconify icon="carbon:chevron-right" />}>
             Check Our Work
-          </Button>
+          </Button> */}
         </Grid>
       </Grid>
 
-      <Box
+      {/* <Box
         sx={{
           mt: 10,
           textAlign: 'center',
@@ -133,7 +141,7 @@ export default function About() {
             <Typography sx={{ color: 'text.secondary' }}>{value.title}</Typography>
           </div>
         ))}
-      </Box>
+      </Box> */}
     </StyledBgImage>
     // </StyledRoot>
   );
