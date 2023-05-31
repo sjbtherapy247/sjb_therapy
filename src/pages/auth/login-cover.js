@@ -9,7 +9,7 @@ export default function LoginCoverPage() {
   return (
     <>
       <Head>
-        <title>Login Cover</title>
+        <title>Login | SJB Therapy</title>
       </Head>
 
       <LoginCoverView />

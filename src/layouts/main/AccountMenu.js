@@ -16,6 +16,7 @@ import _mock from 'src/_mock';
 // components
 import Iconify from 'src/components/iconify';
 import TextMaxLine from 'src/components/text-max-line';
+import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
@@ -51,6 +52,8 @@ const navigations = [
 
 export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
   // const isMdUp = useResponsive('up', 'md');
+
+  const { setLoggedIn } = useSettingsContext();
 
   const menuContent = (
     <Stack
@@ -90,7 +93,7 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
       <Divider sx={{ borderStyle: 'dashed' }} />
 
       <Stack sx={{ my: 1, px: 1 }}>
-        <ListItemButton>
+        <ListItemButton onClick={() => setLoggedIn(false)}>
           <ListItemIcon>
             <Iconify icon="carbon:logout" />
           </ListItemIcon>
@@ -110,12 +113,12 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
       anchorEl={anchorElUser}
       anchorOrigin={{
         vertical: 'bottom',
-        horizontal: 'right',
+        horizontal: 'center',
       }}
       keepMounted
       transformOrigin={{
         vertical: 'top',
-        horizontal: 'right',
+        horizontal: 'center',
       }}
       open={!!anchorElUser}
       onClick={handleCloseUserMenu}

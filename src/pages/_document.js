@@ -23,7 +23,7 @@ const Favicon = () => (
 const Meta = () => (
   <>
     {/* PWA primary color */}
-    <meta name="theme-color" content={palette('dark').primary.main} />
+    <meta name="theme-color" content={palette('dark').primary.dark} />
     <meta
       name="description"
       content="Cultivating the power of hypnotherapy unlocks the gateway to personal transformation, enabling individuals to tap into their inner potential, overcome obstacles, and create positive and lasting change in their lives."

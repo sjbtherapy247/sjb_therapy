@@ -23,14 +23,15 @@ const StyledRoot = styled('div')(({ theme }) => ({
   padding: theme.spacing(6, 0),
   paddingTop: '66px',
   ...bgGradient({
+    direction: 'to top',
     startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.4)} 0%`,
-    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
+    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.8)} 70%`,
     imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
   }),
   [theme.breakpoints.up('md')]: {
     ...bgGradient({
       direction: 'to left',
-      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.4)} 0%`,
+      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
       endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 1)} 120%`,
       imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
     }),

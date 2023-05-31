@@ -11,7 +11,7 @@ export const NAV = {
   W_DRAWER: 280,
   W_BASE: 185.44,
   //
-  H_ITEM: 44,
+  H_ITEM: 50,
   H_ITEM_SUB: 36,
 };
 

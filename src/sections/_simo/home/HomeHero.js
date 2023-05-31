@@ -38,8 +38,8 @@ export default function HomeHero() {
               }}
             >
               <div>
-                <Typography variant="h2">Unlock Your Mind</Typography>
-                <Typography variant="h3">Embrace Your Potential</Typography>
+                <Typography variant="h2">SJB Therapy</Typography>
+                <Typography variant="h3">Simply Just Believe</Typography>
               </div>
 
               <Typography color="text.secondary">

@@ -48,9 +48,10 @@ export default function Header({ headerOnDark }) {
   const { onToggleMode, loggedIn } = useSettingsContext();
   const [anchorElUser, setAnchorElUser] = useState(null);
 
-  console.log(loggedIn);
+  console.log(theme);
 
   const isMdUp = useResponsive('up', 'md');
+  const isSmUp = useResponsive('up', 'sm');
 
   const isOffset = useOffSetTop(2);
 
@@ -101,23 +102,41 @@ export default function Header({ headerOnDark }) {
             //   md: HEADER.H_MAIN_DESKTOP,
             // },
           }),
-          ...(!isMdUp && {
-            ...{ backgroundColor: theme.palette.primary.dark },
-            color: 'common.white',
-          }),
+          // ...(!isMdUp && {
+          //   ...{ backgroundColor: theme.palette.primary.dark },
+          //   color: 'common.white',
+          // }),
         }}
       >
         <Box sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Link href="/" component={NextLink}>
-            <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-              <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
-                <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
-              </Box>
-            </Tooltip>
-          </Link>
+          {isSmUp && (
+            <Link href="/" component={NextLink}>
+              <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
+                <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
+                  <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
+                </Box>
+              </Tooltip>
+            </Link>
+          )}
+          {!isSmUp && (
+            <Link href="/" component={NextLink}>
+              <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
+                <Box sx={{ lineHeight: 0, position: 'relative', height: '54px', borderRadius: 1, overflow: 'hidden' }}>
+                  <Image src="/assets/sjb-logo/hicon.png" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
+                </Box>
+              </Tooltip>
+            </Link>
+          )}
+          {!isMdUp && <NavMobile data={navConfig} />}
+
           {isMdUp && <NavDesktop data={navConfig} />}
 
           <Stack spacing={1} flexGrow={1} direction="row" alignItems="center" justifyContent="flex-end" sx={{ pr: { xs: 0, md: 2 } }}>
+            {!isMdUp && (
+              <IconButton color="inherit">
+                <Iconify icon="carbon:search" />
+              </IconButton>
+            )}
             {/* <Stack spacing={1} direction="row" alignItems="center" sx={{ pr: { xs: 0, md: 2 } }}> */}
             {!loggedIn && (
               <>
@@ -135,11 +154,6 @@ export default function Header({ headerOnDark }) {
                 </Tooltip>
               </>
             )}
-            {!isMdUp && (
-              <IconButton size="small" color="inherit">
-                <Iconify icon="carbon:search" />
-              </IconButton>
-            )}
 
             {/* <Badge badgeContent={2} color="info">
                 <IconButton component={NextLink} href={paths.eCommerce.wishlist} size="small" color="inherit" sx={{ p: 0 }}>
@@ -147,7 +161,7 @@ export default function Header({ headerOnDark }) {
                 </IconButton>
               </Badge> */}
 
-            {!loggedIn && (
+            {loggedIn && (
               <>
                 <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
                   <Badge badgeContent={4} color="error">
@@ -164,8 +178,6 @@ export default function Header({ headerOnDark }) {
             {/* </Stack> */}
           </Stack>
           <AccountMenu anchorElUser={anchorElUser} handleCloseUserMenu={handleCloseUserMenu} />
-
-          {!isMdUp && <NavMobile data={navConfig} />}
         </Box>
       </Toolbar>
     </AppBar>

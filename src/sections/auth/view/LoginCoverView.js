@@ -39,12 +39,7 @@ export default function LoginCoverView() {
 
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {`Don’t have an account? `}
-            <Link
-              component={NextLink}
-              href={paths.registerCover}
-              variant="subtitle2"
-              color="primary"
-            >
+            <Link component={NextLink} href={paths.registerCover} variant="subtitle2" color="primary">
               Get started
             </Link>
           </Typography>
@@ -66,8 +61,8 @@ export default function LoginCoverView() {
         images={[
           '/assets/sjb-logo/Hmobile.jpg',
           '/assets/sjb-logo/Hdocs-large.jpg',
-          '/assets/sjb-logo/Smobile.jpg',
-          '/assets/sjb-logo/Sdoco-large.jpg',
+          // '/assets/sjb-logo/Smobile.jpg',
+          // '/assets/sjb-logo/Sdoco-large.jpg',
         ]}
       />
     </Stack>

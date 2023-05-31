@@ -173,7 +173,7 @@ export default function PostView() {
         open={!!open} /* open is e.currenttarget so force it to boolean */
         onClose={handleClose}
         anchorEl={open}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
         PaperProps={{
           sx: { width: 200, p: 1 },

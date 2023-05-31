@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 // next
 import { useRouter } from 'next/router';
+// next
+import NextLink from 'next/link';
 // @mui
-import { List, Drawer, IconButton, Button, Stack } from '@mui/material';
+import { Link, List, Drawer, IconButton, Button, Stack } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 // config
 import { NAV } from 'src/config-global';
@@ -56,12 +58,11 @@ export default function NavMobile({ data }) {
         }}
       >
         <Scrollbar>
-          {/* <Logo sx={{ mx: 2.5, my: 3 }} /> */}
-          {/* <Tooltip arrow placement="right" title="home" enterDelay={100} enterTouchDelay={100}> */}
-          <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
-            <Image src="/assets/sjb-logo/hnav-logo.jpg" sx={{ height: 1 }} />
-          </Box>
-          {/* </Tooltip> */}
+          <Link component={NextLink} href="/">
+            <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
+              <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="go home" sx={{ height: 1 }} />
+            </Box>
+          </Link>
 
           <List component="nav" disablePadding>
             {data.map((link) => (

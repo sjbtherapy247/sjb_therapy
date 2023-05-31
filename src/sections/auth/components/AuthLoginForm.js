@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 // next
+import useRouter from 'next/router';
 import NextLink from 'next/link';
 // @mui
 import { LoadingButton } from '@mui/lab';
@@ -12,22 +13,23 @@ import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
+import { useSettingsContext } from 'src/components/settings';
+//
 
 // ----------------------------------------------------------------------
 
 export default function AuthLoginForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const { setLoggedIn } = useSettingsContext();
 
   const LoginSchema = Yup.object().shape({
     email: Yup.string().required('Email is required').email('That is not an email'),
-    password: Yup.string()
-      .required('Password is required')
-      .min(6, 'Password should be of minimum 6 characters length'),
+    password: Yup.string().required('Password is required').min(6, 'Password should be of minimum 6 characters length'),
   });
 
   const defaultValues = {
-    email: '',
-    password: '',
+    email: 'tez@this.com',
+    password: '@#er^&G*()',
   };
 
   const methods = useForm({
@@ -50,6 +52,8 @@ export default function AuthLoginForm() {
       await new Promise((resolve) => setTimeout(resolve, 500));
       reset();
       console.log('DATA', data);
+      setLoggedIn(true);
+      useRouter.push('/');
     } catch (error) {
       console.error(error);
     }
@@ -75,24 +79,11 @@ export default function AuthLoginForm() {
           }}
         />
 
-        <Link
-          component={NextLink}
-          href={paths.resetPassword}
-          variant="body2"
-          underline="always"
-          color="text.secondary"
-        >
+        <Link component={NextLink} href={paths.resetPassword} variant="body2" underline="always" color="text.secondary">
           Forgot password?
         </Link>
 
-        <LoadingButton
-          fullWidth
-          color="primary"
-          size="large"
-          type="submit"
-          variant="contained"
-          loading={isSubmitting}
-        >
+        <LoadingButton fullWidth color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
           Login
         </LoadingButton>
       </Stack>
