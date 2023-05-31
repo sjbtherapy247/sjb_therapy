@@ -20,9 +20,9 @@ export default function MissionView() {
     <>
       <AboutOurMission />
       {/* <AboutOurVision /> */}
-      <About />
 
       <AboutCoreValues />
+      <About />
 
       {/* <AboutStory /> */}
 

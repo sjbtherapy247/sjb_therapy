@@ -25,7 +25,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     direction: 'to top',
     startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.4)} 0%`,
-    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.8)} 70%`,
+    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
     imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
   }),
   [theme.breakpoints.up('md')]: {
@@ -36,6 +36,19 @@ const StyledRoot = styled('div')(({ theme }) => ({
       imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
     }),
   },
+}));
+
+const StyledCard = styled('div')(({ theme }) => ({
+  padding: theme.spacing(6, 0),
+  paddingTop: '66px',
+  ...bgGradient({
+    direction: 'to top',
+    // startColor: `${alpha(theme.palette.primary[theme.palette.mode === 'light' ? 'main' : 'light'], 0.4)} 0%`,
+    // endColor: `${alpha(theme.palette.primary[theme.palette.mode === 'light' ? 'light' : 'lighter'], 0.8)} 70%`,
+    // eslint-disable-next-line dot-notation
+    startColor: `${alpha(theme.palette.primary['light'], 0.4)} 0%`,
+    endColor: `${alpha(theme.palette.primary[theme.palette.mode === 'light' ? 'light' : 'lighter'], 0.8)} 70%`,
+  }),
 }));
 
 // ----------------------------------------------------------------------
