@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { alpha } from '@mui/material/styles';
-import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListItemButton, Menu } from '@mui/material';
+import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListItemButton, Menu, useTheme } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 import useActiveLink from 'src/hooks/useActiveLink';
@@ -24,6 +24,7 @@ import { useSettingsContext } from 'src/components/settings';
 
 export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
   const { setLoggedIn, themeMode, onToggleMode } = useSettingsContext();
+  const theme = useTheme();
 
   const navigations = [
     {
@@ -54,8 +55,10 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
     <Stack
       sx={{
         flexShrink: 0,
-        borderRadius: 2,
+        borderRadius: 1,
         width: 1,
+        bgcolor: alpha(theme.palette.primary.main, 0.25),
+        py: 0,
       }}
     >
       <Stack spacing={2} sx={{ p: 2, pb: 2 }}>
@@ -114,6 +117,7 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
 
   return (
     <Menu
+      MenuListProps={{ disablePadding: true }}
       anchorEl={anchorElUser}
       anchorOrigin={{
         vertical: 'bottom',
