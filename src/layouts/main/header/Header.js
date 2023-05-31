@@ -112,7 +112,7 @@ export default function Header({ headerOnDark }) {
           {isSmUp && (
             <Link href="/" component={NextLink}>
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-                <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
+                <Box sx={{ ml: '2px', lineHeight: 0, position: 'relative', height: isOffset ? '64px' : '54px', width: '185.44px', borderRadius: isOffset ? 0 : 1, overflow: 'hidden' }}>
                   <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
