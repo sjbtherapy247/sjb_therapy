@@ -20,40 +20,35 @@ import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
-const navigations = [
-  {
-    title: 'Personal Info',
-    path: paths.eCommerce.account.personal,
-    icon: <Iconify icon="carbon:user" />,
-  },
-  {
-    title: 'Wishlist',
-    path: paths.eCommerce.account.wishlist,
-    icon: <Iconify icon="carbon:favorite" />,
-  },
-  {
-    title: 'Vouchers',
-    path: paths.eCommerce.account.vouchers,
-    icon: <Iconify icon="carbon:cut-out" />,
-  },
-  {
-    title: 'Orders',
-    path: paths.eCommerce.account.orders,
-    icon: <Iconify icon="carbon:document" />,
-  },
-  {
-    title: 'Payment',
-    path: paths.eCommerce.account.payment,
-    icon: <Iconify icon="carbon:purchase" />,
-  },
-];
-
 // ----------------------------------------------------------------------
 
 export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
-  // const isMdUp = useResponsive('up', 'md');
+  const { setLoggedIn, themeMode, onToggleMode } = useSettingsContext();
 
-  const { setLoggedIn } = useSettingsContext();
+  const navigations = [
+    {
+      title: 'Personal Info',
+      path: paths.eCommerce.account.personal,
+      icon: <Iconify icon="carbon:user" />,
+    },
+    {
+      title: 'Session Audio',
+      path: paths.eCommerce.account.wishlist,
+      icon: <Iconify icon="carbon:favorite" />,
+    },
+    {
+      title: 'Account Settings',
+      path: paths.eCommerce.account.vouchers,
+      icon: <Iconify icon="carbon:cut-out" />,
+    },
+    {
+      title: 'Payment',
+      path: paths.eCommerce.account.payment,
+      icon: <Iconify icon="carbon:purchase" />,
+    },
+  ];
+
+  // const isMdUp = useResponsive('up', 'md');
 
   const menuContent = (
     <Stack
@@ -63,7 +58,7 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
         width: 1,
       }}
     >
-      <Stack spacing={2} sx={{ p: 3, pb: 2 }}>
+      <Stack spacing={2} sx={{ p: 2, pb: 2 }}>
         <Stack spacing={2} direction="row" alignItems="center">
           <Avatar src={_mock.image.avatar(0)} sx={{ width: 64, height: 64 }} />
           <Stack direction="row" alignItems="center" sx={{ typography: 'caption', cursor: 'pointer', '&:hover': { opacity: 0.72 } }}>
@@ -93,6 +88,15 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
       <Divider sx={{ borderStyle: 'dashed' }} />
 
       <Stack sx={{ my: 1, px: 1 }}>
+        <ListItemButton onClick={onToggleMode}>
+          <ListItemIcon>{themeMode === 'dark' ? <Iconify icon="mdi:brightness-7" /> : <Iconify icon="mdi:brightness-2" />}</ListItemIcon>
+          <ListItemText
+            primary={themeMode === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            primaryTypographyProps={{
+              typography: 'body2',
+            }}
+          />
+        </ListItemButton>
         <ListItemButton onClick={() => setLoggedIn(false)}>
           <ListItemIcon>
             <Iconify icon="carbon:logout" />
@@ -145,6 +149,7 @@ function MenuItem({ item }) {
           px: 1,
           height: 44,
           borderRadius: 1,
+          // color: 'text.primary',
         }}
       >
         <ListItemIcon>{item.icon}</ListItemIcon>
