@@ -10,7 +10,7 @@ import {
   AboutCoreValues,
 } from 'src/sections/_simo/mission';
 import { HomeFAQs } from 'src/sections/_home/components';
-import { Testimonial, Testimonial1 } from 'src/sections/_simo/testimonial';
+import { Testimonial } from 'src/sections/_simo/testimonial';
 // import Testimonial1 from 'src/sections/_simo/testimonial';
 
 // ----------------------------------------------------------------------

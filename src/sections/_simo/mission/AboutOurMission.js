@@ -25,7 +25,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     direction: 'to top',
     startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.4)} 0%`,
-    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
+    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.87)} 70%`,
     imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
   }),
   [theme.breakpoints.up('md')]: {
@@ -94,7 +94,7 @@ export default function AboutOurMission() {
                   <Card
                     key={name}
                     sx={{
-                      p: 4,
+                      p: 3,
                       mt: 2,
                       width: { sm: 'calc(50% - 20px)' },
                       bgcolor: theme.palette.mode === 'dark' ? 'primary.main' : 'primary.light',
@@ -117,29 +117,29 @@ export default function AboutOurMission() {
                         bottom: { sm: 0 },
                         my: { sm: 'auto' },
                         boxShadow: { sm: 12 },
-                        maxHeight: { sm: 280 },
+                        maxHeight: { sm: 230 },
                         display: { sm: 'flex' },
                         position: { sm: 'absolute' },
                         flexDirection: { sm: 'column' },
                         justifyContent: { sm: 'center' },
                       }),
                       ...(secondVision && {
-                        boxShadow: { md: theme.customShadows.z24 },
+                        boxShadow: { sm: theme.customShadows.z24 },
                       }),
                       ...(thirdVision && {
-                        boxShadow: { md: 8 },
+                        boxShadow: { sm: 8 },
                       }),
                     }}
                   >
-                    <Typography variant="h1" component="h2" sx={{ color: 'text.disabled', opacity: 0.5, mb: 3 }}>
+                    <Typography variant="h1" component="h2" sx={{ color: 'text.disabled', opacity: 0.8, mb: { sx: 1, md: 3 } }}>
                       {`0${index + 1}`}
                     </Typography>
 
-                    <Typography variant="h4" paragraph>
+                    <Typography variant="h4" paragraph sx={{ mb: { xs: 0, md: 1 } }}>
                       {name}
                     </Typography>
 
-                    <Typography sx={{ color: 'text.secondary', opacity: 0.75 }}>{description}</Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>{description}</Typography>
                   </Card>
                 );
               })}

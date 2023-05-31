@@ -13,7 +13,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 import TestimonialItem from './TestimonialItem';
 
 const StyledRoot = styled('div')(({ theme }) => ({
-  padding: theme.spacing(8),
+  padding: theme.spacing(6, 1),
   // paddingBottom: theme.spacing(8),
   ...bgGradient({
     color: alpha(theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800], 0.8),
@@ -110,23 +110,23 @@ export default function Testimonial() {
 
   return (
     <StyledRoot>
-      <Container>
-        <Grid container spacing={3} justifyContent="center">
-          <Grid xs={12} md={8}>
-            <Typography variant="h2" sx={{ mb: 5, textAlign: 'center' }}>
-              What Our Clients Say
-            </Typography>
+      {/* <Container> */}
+      <Grid container spacing={3} justifyContent="center" sx={{ m: 0 }}>
+        <Grid xs={12} md={8}>
+          <Typography variant="h2" sx={{ mb: 5, textAlign: 'center' }}>
+            What Our Clients Say
+          </Typography>
 
-            <Carousel ref={carouselRef} {...carouselSettings}>
-              {reviews.map((review) => (
-                <TestimonialItem key={review.reviewId} review={review} />
-              ))}
-            </Carousel>
-          </Grid>
+          <Carousel ref={carouselRef} {...carouselSettings}>
+            {reviews.map((review) => (
+              <TestimonialItem key={review.reviewId} review={review} />
+            ))}
+          </Carousel>
         </Grid>
+      </Grid>
 
-        {isMdUp && <CarouselArrows spacing={2} justifyContent="center" onNext={handleNext} onPrev={handlePrev} sx={{ mt: 4, width: 1 }} />}
-      </Container>
+      {isMdUp && <CarouselArrows spacing={2} justifyContent="center" onNext={handleNext} onPrev={handlePrev} sx={{ mt: 4, width: 1 }} />}
+      {/* </Container> */}
     </StyledRoot>
   );
 }
