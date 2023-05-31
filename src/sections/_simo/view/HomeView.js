@@ -26,7 +26,6 @@ export default function HomeView() {
     <>
       <HomeHero />
       <HomeGuidedMeditation />
-      {/* {!lightMode && <HomeGuidedMeditationDark />} */}
       <HomeFamous />
       <HomeFAQs />
       <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />

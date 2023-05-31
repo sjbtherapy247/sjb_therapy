@@ -65,6 +65,7 @@ export default function HomeFAQs() {
       sx={{
         position: 'relative',
         py: { xs: 4, md: 8 },
+        overflow: 'hidden',
       }}
     >
       <Grid container spacing={{ md: 3 }} justifyContent="center">
