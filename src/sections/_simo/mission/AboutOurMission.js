@@ -97,7 +97,7 @@ export default function AboutOurMission() {
                       p: 3,
                       mt: 2,
                       width: { sm: 'calc(50% - 20px)' },
-                      bgcolor: theme.palette.mode === 'dark' ? 'primary.main' : 'primary.light',
+                      bgcolor: theme.palette.mode === 'dark' ? alpha(theme.palette.primary.main, 0.7) : alpha(theme.palette.primary.light, 0.8),
 
                       // ...(firstVision && {
                       //   top: { md: 0 },

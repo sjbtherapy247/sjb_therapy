@@ -79,7 +79,7 @@ export default function Header({ headerOnDark }) {
           },
           transition: theme.transitions.create(['height', 'background-color'], {
             easing: theme.transitions.easing.easeInOut,
-            duration: '1s',
+            duration: 800,
             // duration: theme.transitions.duration.shorter,
           }),
 
@@ -112,7 +112,22 @@ export default function Header({ headerOnDark }) {
           {isSmUp && (
             <Link href="/" component={NextLink}>
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-                <Box sx={{ ml: '2px', lineHeight: 0, position: 'relative', height: isOffset ? '64px' : '54px', width: '185.44px', borderRadius: isOffset ? 0 : 1, overflow: 'hidden' }}>
+                <Box
+                  sx={{
+                    ml: '2px',
+                    lineHeight: 0,
+                    position: 'relative',
+                    height: isOffset ? '64px' : '54px',
+                    width: '185.44px',
+                    borderRadius: isOffset ? 0 : 1,
+                    overflow: 'hidden',
+                    transition: theme.transitions.create(['height'], {
+                      easing: theme.transitions.easing.easeInOut,
+                      duration: 500,
+                      // duration: theme.transitions.duration.shorter,
+                    }),
+                  }}
+                >
                   <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
