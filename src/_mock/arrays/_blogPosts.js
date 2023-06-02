@@ -27,8 +27,6 @@ const TITLE = [
 
 const content = (name) => `
 
-
-
 <h4>Introduction</h4>
 
 <p>Hypnotherapy is rooted in the understanding that the mind and body are intricately connected, and influencing one can impact the other. Through the induction of a hypnotic state, hypnotherapy taps into the subconscious mind, where deeply ingrained beliefs, emotions, and patterns reside.</p>

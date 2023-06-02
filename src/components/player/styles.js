@@ -9,9 +9,20 @@ const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
 // ----------------------------------------------------------------------
 
-export const StyledReactPlayer = styled(ReactPlayer)(() => ({
+export const StyledReactPlayer = styled(ReactPlayer)(({ theme }) => ({
   width: '100% !important',
   height: '100% !important',
+  minHeight: '80px',
+  borderRadius: 10,
+  overflow: 'hidden',
+  '& audio': {
+    '&::-webkit-media-controls-play-button': {
+      backgroundColor: theme.palette.primary.light,
+    },
+    '&::-webkit-media-controls-panel': {
+      backgroundColor: theme.palette.primary.light,
+    },
+  },
   '& video': {
     objectFit: 'cover',
   },

@@ -20,38 +20,28 @@ import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
-// ----------------------------------------------------------------------
-
-export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
+export function MenuContent() {
   const { setLoggedIn, themeMode, onToggleMode } = useSettingsContext();
   const theme = useTheme();
 
   const navigations = [
     {
       title: 'Personal Info',
-      path: paths.eCommerce.account.personal,
+      path: '/account/personal',
       icon: <Iconify icon="carbon:user" />,
     },
     {
       title: 'Session Audio',
-      path: paths.eCommerce.account.wishlist,
+      path: '/account/media',
       icon: <Iconify icon="carbon:favorite" />,
     },
     {
       title: 'Account Settings',
-      path: paths.eCommerce.account.vouchers,
+      path: '/account/vouchers',
       icon: <Iconify icon="carbon:cut-out" />,
     },
-    {
-      title: 'Payment',
-      path: paths.eCommerce.account.payment,
-      icon: <Iconify icon="carbon:purchase" />,
-    },
   ];
-
-  // const isMdUp = useResponsive('up', 'md');
-
-  const menuContent = (
+  return (
     <Stack
       sx={{
         flexShrink: 0,
@@ -114,6 +104,11 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
       </Stack>
     </Stack>
   );
+}
+// ----------------------------------------------------------------------
+
+export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
+  // const isMdUp = useResponsive('up', 'md');
 
   return (
     <Menu
@@ -131,7 +126,7 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
       open={!!anchorElUser}
       onClick={handleCloseUserMenu}
     >
-      {menuContent}
+      <MenuContent />
     </Menu>
   );
 }

@@ -6,3 +6,15 @@ export { default as ServicesView } from './ServicesView';
 // export { default as ContactView } from './ContactView';
 // export { default as CaseStudyView } from './CaseStudyView';
 // export { default as CaseStudiesView } from './CaseStudiesView';
+// export { default as EcommerceCartView } from './EcommerceCartView';
+// export { default as EcommerceLandingView } from './EcommerceLandingView';
+// export { default as EcommerceProductView } from './EcommerceProductView';
+// export { default as EcommerceProductsView } from './EcommerceProductsView';
+// export { default as EcommerceCheckoutView } from './EcommerceCheckoutView';
+// export { default as EcommerceOrderCompletedView } from './EcommerceOrderCompletedView';
+// export { default as EcommerceWishlistView } from './EcommerceWishlistView';
+// export { default as EcommerceCompareView } from './EcommerceCompareView';
+// //
+export { default as AccountPersonalView } from './AccountPersonalView';
+export { default as AccountMediaView } from './AccountMediaView';
+export { default as AccountVouchersView } from './AccountVouchersView';
