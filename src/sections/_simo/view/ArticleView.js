@@ -14,14 +14,14 @@ import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
 import { _socials } from 'src/_mock';
-import Head from 'next/head';
+// import Head from 'next/head';
 import { LatestPosts } from 'src/sections/_simo/research';
 import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/research/components';
 import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-export default function PostView({ post, allPosts }) {
+export default function ArticleView({ post, allPosts }) {
   const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } = post;
 
   const [favorite, setFavorite] = useState(favorited);
@@ -43,9 +43,9 @@ export default function PostView({ post, allPosts }) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{title}</title>
-      </Head>
+      </Head> */}
       <Box
         sx={{
           py: 10,

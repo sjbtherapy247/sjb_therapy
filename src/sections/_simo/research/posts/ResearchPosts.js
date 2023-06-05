@@ -6,7 +6,8 @@ import PostItem from './PostItem';
 
 // ----------------------------------------------------------------------
 
-export default function BlogMarketingPosts({ posts }) {
+export default function ResearchPosts({ posts }) {
+  console.log(posts);
   return (
     <>
       <Box
@@ -21,7 +22,7 @@ export default function BlogMarketingPosts({ posts }) {
           },
         }}
       >
-        {posts.slice(0, 12).map((post) => (
+        {posts.map((post) => (
           <PostItem key={post.id} post={post} />
         ))}
       </Box>
@@ -41,6 +42,6 @@ export default function BlogMarketingPosts({ posts }) {
   );
 }
 
-BlogMarketingPosts.propTypes = {
+ResearchPosts.propTypes = {
   posts: PropTypes.array,
 };

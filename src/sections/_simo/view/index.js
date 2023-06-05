@@ -1,5 +1,5 @@
 export { default as HomeView } from './HomeView';
-export { default as PostView } from './PostView';
+export { default as ArticleView } from './ArticleView';
 export { default as MissionView } from './MissionView';
 export { default as ResearchView } from './ResearchView';
 export { default as ServicesView } from './ServicesView';

@@ -5,13 +5,7 @@ import { _pricingHome } from 'src/_mock';
 import { Testimonial } from 'src/sections/_simo/testimonial';
 import PricingHome from 'src/sections/_simo/pricing';
 
-import {
-  // Services,
-  ServicesHero,
-  ServicesInclude,
-  ServicesBenefits,
-  ServicesHowItWork,
-} from '../services';
+import { ServicesHero, ServicesInclude, ServicesBenefits, ServicesHowItWork, services } from '../services';
 
 // ----------------------------------------------------------------------
 
@@ -20,9 +14,7 @@ export default function ServicesView() {
     <>
       <ServicesHero />
 
-      {/* <Services /> */}
-
-      <ServicesInclude />
+      <ServicesInclude services={services} />
 
       <ServicesHowItWork />
 

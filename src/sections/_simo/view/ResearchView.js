@@ -3,7 +3,6 @@ import { Container, Unstable_Grid2 as Grid } from '@mui/material';
 // _mock
 import _mock, { _blogMarketingPosts, _categories, _tags } from 'src/_mock';
 //
-import { research } from 'src/sections/_simo/research/articles';
 
 // import { PostSearchMobile } from 'src/sections/blog/components';
 import BlogSidebar from 'src/sections/blog/sidebar';
@@ -48,8 +47,6 @@ export default function ReasearchView({ researchDocs }) {
           </Grid>
         </Grid>
       </Container>
-
-      {/* <NewsletterMarketing /> */}
     </>
   );
 }

@@ -3,7 +3,7 @@ import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
-import PostView from 'src/sections/_simo/view/PostView';
+import ArticleView from 'src/sections/_simo/view/ArticleView';
 
 import { research } from 'src/sections/_simo/research/articles';
 
@@ -39,10 +39,10 @@ export default function ResearchArticlePage({ researchDoc, researchDocs }) {
   return (
     <>
       <Head>
-        <title>The A-Z Of Event Post | SJB Therapy</title>
+        <title>{researchDoc.title} | SJB Therapy</title>
       </Head>
 
-      <PostView post={researchDoc} allPosts={researchDocs} />
+      <ArticleView post={researchDoc} allPosts={researchDocs} />
     </>
   );
 }

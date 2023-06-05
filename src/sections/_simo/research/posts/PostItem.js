@@ -36,16 +36,10 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function PostItem({ post }) {
-  const { title, duration, coverImg, author, createdAt } = post;
+  const { url, title, duration, coverImg, author, createdAt } = post;
 
   return (
-    <Stack
-      component={m.div}
-      whileHover="hover"
-      variants={varHover(1)}
-      transition={varTranHover()}
-      sx={{ borderRadius: 2, overflow: 'hidden', position: 'relative' }}
-    >
+    <Stack component={m.div} whileHover="hover" variants={varHover(1)} transition={varTranHover()} sx={{ borderRadius: 2, overflow: 'hidden', position: 'relative' }}>
       <m.div variants={varHover(1.25)} transition={varTranHover()}>
         <Image src={coverImg} alt={title} ratio="3/4" />
       </m.div>
@@ -61,13 +55,9 @@ export default function PostItem({ post }) {
         }}
       >
         <Stack spacing={2}>
-          <PostTimeBlock
-            duration={duration}
-            createdAt={fDate(createdAt)}
-            sx={{ color: 'inherit', opacity: 0.72 }}
-          />
+          <PostTimeBlock duration={duration} createdAt={fDate(createdAt)} sx={{ color: 'inherit', opacity: 0.72 }} />
 
-          <Link component={NextLink} href="/post" sx={{ color: 'common.white' }}>
+          <Link component={NextLink} href={`/research/${url}`} sx={{ color: 'common.white' }}>
             <TextMaxLine line={4} variant="h4">
               {title}
             </TextMaxLine>
@@ -93,11 +83,7 @@ PostItem.propTypes = {
       picture: PropTypes.string,
     }),
     coverImg: PropTypes.string,
-    createdAt: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-      PropTypes.instanceOf(Date),
-    ]),
+    createdAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),
     duration: PropTypes.string,
     title: PropTypes.string,
   }),
