@@ -7,7 +7,6 @@ import ResearchView from 'src/sections/_simo/view/ResearchView';
 import { research } from 'src/sections/_simo/research/articles';
 
 export async function getStaticProps() {
-  console.log(research);
   return {
     props: {
       researchDocs: [...research],
@@ -22,7 +21,6 @@ ResearchPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ResearchPage({ researchDocs }) {
-  console.log(researchDocs);
   return (
     <>
       <Head>

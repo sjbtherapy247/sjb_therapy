@@ -22,7 +22,6 @@ ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ServicesPage({ servicesDocs }) {
-  console.log(servicesDocs);
   return (
     <>
       <Head>
