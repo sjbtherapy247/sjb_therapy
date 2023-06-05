@@ -5,12 +5,12 @@ import { _pricingHome } from 'src/_mock';
 import { Testimonial } from 'src/sections/_simo/testimonial';
 import PricingHome from 'src/sections/_simo/pricing';
 
-import { services } from 'src/sections/_simo/services/services';
-import { ServicesHero, ServicesInclude, ServicesBenefits, ServicesHowItWork } from '../services';
+// import { services } from 'src/sections/_simo/services/services';
+import { ServicesHero, ServicesInclude, ServicesBenefits, ServicesHowItWork } from 'src/sections/_simo/services';
 
 // ----------------------------------------------------------------------
 
-export default function ServicesView() {
+export default function ServicesView({ services }) {
   return (
     <>
       <ServicesHero />
