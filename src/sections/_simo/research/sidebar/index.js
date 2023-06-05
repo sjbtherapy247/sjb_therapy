@@ -6,7 +6,6 @@ import useResponsive from 'src/hooks/useResponsive';
 // components
 import Iconify from 'src/components/iconify';
 //
-import Advertisement from '../../advertisement';
 import BlogSidebarAuthor from './BlogSidebarAuthor';
 import BlogSidebarCategories from './BlogSidebarCategories';
 import BlogSidebarPopularTags from './BlogSidebarPopularTags';
@@ -14,15 +13,7 @@ import BlogSidebarRecentPosts from './BlogSidebarRecentPosts';
 
 // ----------------------------------------------------------------------
 
-export default function BlogSidebar({
-  author,
-  categories,
-  popularTags,
-  recentPosts,
-  advertisement,
-  sx,
-  ...other
-}) {
+export default function BlogSidebar({ author, categories, popularTags, recentPosts, advertisement, sx, ...other }) {
   const isMdUp = useResponsive('up', 'md');
 
   return (
