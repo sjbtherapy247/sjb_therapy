@@ -5,13 +5,16 @@ import MainLayout from 'src/layouts/main';
 // sections
 import { ServicesView } from 'src/sections/_simo/view';
 
-// ----------------------------------------------------------------------
-
-MarketingServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+import { servicesDescription } from 'src/sections/_simo/services/services';
 
 // ----------------------------------------------------------------------
 
-export default function MarketingServicesPage() {
+ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+
+// ----------------------------------------------------------------------
+
+export default function ServicesPage() {
+  console.log(servicesDescription);
   return (
     <>
       <Head>

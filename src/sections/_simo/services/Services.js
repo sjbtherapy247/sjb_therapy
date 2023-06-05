@@ -1,4 +1,4 @@
-export const services = [
+export const servicesDescription = [
   {
     title: 'Anxiety and Phobias',
     url: 'anxiety-and-phobias',

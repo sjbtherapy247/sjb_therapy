@@ -61,8 +61,6 @@ import SvgColor from 'src/components/svg-color';
 // ----------------------------------------------------------------------
 
 export default function ServicesInclude({ services }) {
-  console.log(services);
-
   return (
     <Container
       sx={{
