@@ -1,3 +1,3 @@
-export { default as EcommerceCartItem } from './EcommerceCartItem';
-export { default as EcommerceCartList } from './EcommerceCartList';
-export { default as EcommerceCartSummary } from './EcommerceCartSummary';
+export { default as CartItem } from './CartItem';
+export { default as CartList } from './CartList';
+export { default as CartSummary } from './CartSummary';

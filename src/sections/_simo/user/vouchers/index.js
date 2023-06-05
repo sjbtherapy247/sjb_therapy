@@ -1,1 +1,1 @@
-export { default as EcommerceAccountVoucherItem } from './EcommerceAccountVoucherItem';
+export { default as AccountVoucherItem } from './AccountVoucherItem';

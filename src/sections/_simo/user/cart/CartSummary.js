@@ -11,7 +11,7 @@ import { paths } from 'src/routes/paths';
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceCartSummary({ tax, total, subtotal, shipping, discount }) {
+export default function CartSummary({ tax, total, subtotal, shipping, discount }) {
   return (
     <Stack
       spacing={3}
@@ -56,20 +56,14 @@ export default function EcommerceCartSummary({ tax, total, subtotal, shipping, d
         }}
       />
 
-      <Button
-        component={NextLink}
-        href={paths.eCommerce.checkout}
-        size="large"
-        variant="contained"
-        color="inherit"
-      >
+      <Button component={NextLink} href={paths.eCommerce.checkout} size="large" variant="contained" color="inherit">
         Checkout
       </Button>
     </Stack>
   );
 }
 
-EcommerceCartSummary.propTypes = {
+CartSummary.propTypes = {
   discount: PropTypes.number,
   shipping: PropTypes.number,
   subtotal: PropTypes.number,
@@ -81,13 +75,7 @@ EcommerceCartSummary.propTypes = {
 
 function Row({ label, value, sx, ...other }) {
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      justifyContent="space-between"
-      sx={{ typography: 'subtitle2', ...sx }}
-      {...other}
-    >
+    <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ typography: 'subtitle2', ...sx }} {...other}>
       <Box component="span" sx={{ typography: 'body2' }}>
         {label}
       </Box>

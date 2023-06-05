@@ -9,7 +9,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 import Image from 'src/components/image';
 import Carousel, { CarouselDots, CarouselArrows } from 'src/components/carousel';
 //
-import PostItem from 'src/sections/blog/marketing/featured-posts/PostItem';
+import PostItem from 'src/sections/_simo/research/featured-posts/PostItem';
 import useResponsive from 'src/hooks/useResponsive';
 
 // ----------------------------------------------------------------------
@@ -51,11 +51,11 @@ export default function FeaturedPosts({ posts }) {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4000,
-    speed: 2000,
+    autoplaySpeed: 5000,
+    speed: 10,
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
+    // fade: true,
     adaptiveHeight: true,
     rtl: Boolean(theme.direction === 'rtl'),
     beforeChange: (current, next) => setSelected(next),
@@ -119,7 +119,7 @@ export default function FeaturedPosts({ posts }) {
         >
           <Carousel ref={carouselRef} {...carouselSettings}>
             {posts.map((post) => (
-              <PostItem key={post.id} post={post} />
+              <PostItem key={post.url} post={post} />
             ))}
           </Carousel>
         </CarouselArrows>

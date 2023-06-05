@@ -16,7 +16,7 @@ import PostTimeBlock from '../components/PostTimeBlock';
 // ----------------------------------------------------------------------
 
 export default function PostItem({ post }) {
-  const { title, duration, coverImg, author, description, createdAt } = post;
+  const { url, title, duration, coverImg, author, description, createdAt } = post;
 
   return (
     <Stack
@@ -33,13 +33,13 @@ export default function PostItem({ post }) {
         sx={{
           mx: 'auto',
           p: { xs: 2, md: 5 },
-          maxWidth: { md: 396 },
+          maxWidth: { md: 400 },
         }}
       >
         <Stack spacing={1}>
           <PostTimeBlock createdAt={fDate(createdAt)} duration={duration} />
 
-          <Link component={NextLink} href="/post" color="inherit">
+          <Link component={NextLink} href={`/research/${url}`} color="inherit">
             <TextMaxLine line={3} variant="h3">
               {title}
             </TextMaxLine>
@@ -67,13 +67,10 @@ PostItem.propTypes = {
       picture: PropTypes.string,
     }),
     coverImg: PropTypes.string,
-    createdAt: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-      PropTypes.instanceOf(Date),
-    ]),
+    createdAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),
     description: PropTypes.string,
     duration: PropTypes.string,
     title: PropTypes.string,
+    url: PropTypes.string,
   }),
 };

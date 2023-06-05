@@ -9,7 +9,7 @@ import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceCartItem({ product, wishlist }) {
+export default function CartItem({ product, wishlist }) {
   return (
     <Stack
       direction="row"
@@ -73,7 +73,7 @@ export default function EcommerceCartItem({ product, wishlist }) {
   );
 }
 
-EcommerceCartItem.propTypes = {
+CartItem.propTypes = {
   product: PropTypes.shape({
     coverImg: PropTypes.string,
     name: PropTypes.string,

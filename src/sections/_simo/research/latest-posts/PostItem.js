@@ -35,7 +35,7 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function PostItem({ post }) {
-  const { title, duration, coverImg, author, createdAt } = post;
+  const { url, title, duration, coverImg, author, createdAt } = post;
 
   return (
     <Stack
@@ -66,7 +66,7 @@ export default function PostItem({ post }) {
         <Stack spacing={2}>
           <PostTimeBlock createdAt={fDate(createdAt)} duration={duration} sx={{ color: 'inherit', opacity: 0.72 }} />
 
-          <Link component={NextLink} href="/post" variant="h4" color="inherit" underline="none">
+          <Link component={NextLink} href={`/research/${url}`} variant="h4" color="inherit" underline="none">
             {title}
           </Link>
         </Stack>

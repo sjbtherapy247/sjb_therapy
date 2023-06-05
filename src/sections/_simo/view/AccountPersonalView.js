@@ -12,7 +12,7 @@ import { countries } from 'src/assets/data';
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField, RHFSelect } from 'src/components/hook-form';
 //
-import { EcommerceAccountLayout } from '../layout';
+import { AccountLayout } from '../layout';
 
 // ----------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ export default function AccountPersonalView() {
     setShowPassword(!showPassword);
   };
 
-  const EcommerceAccountPersonalSchema = Yup.object().shape({
+  const AccountPersonalSchema = Yup.object().shape({
     firstName: Yup.string().required('First name is required'),
     lastName: Yup.string().required('Last name is required'),
     emailAddress: Yup.string().required('Email address is required'),
@@ -56,7 +56,7 @@ export default function AccountPersonalView() {
   };
 
   const methods = useForm({
-    resolver: yupResolver(EcommerceAccountPersonalSchema),
+    resolver: yupResolver(AccountPersonalSchema),
     defaultValues,
   });
 
@@ -77,7 +77,7 @@ export default function AccountPersonalView() {
   };
 
   return (
-    <EcommerceAccountLayout>
+    <AccountLayout>
       <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
         <Typography variant="h5" sx={{ mb: 3 }}>
           Personal
@@ -188,6 +188,6 @@ export default function AccountPersonalView() {
           Save Changes
         </LoadingButton>
       </FormProvider>
-    </EcommerceAccountLayout>
+    </AccountLayout>
   );
 }

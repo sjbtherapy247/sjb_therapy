@@ -3,6 +3,7 @@ import { Container, Unstable_Grid2 as Grid } from '@mui/material';
 // _mock
 import _mock, { _blogMarketingPosts, _categories, _tags } from 'src/_mock';
 //
+import { research } from 'src/sections/_simo/research/articles';
 
 // import { PostSearchMobile } from 'src/sections/blog/components';
 import BlogSidebar from 'src/sections/blog/sidebar';
@@ -11,13 +12,12 @@ import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/research';
 
 // ----------------------------------------------------------------------
 
-export default function ReasearchView() {
-  console.log(_blogMarketingPosts);
+export default function ReasearchView({ researchDocs }) {
   return (
     <>
       {/* <PostSearchMobile /> */}
 
-      <FeaturedPosts posts={_blogMarketingPosts.slice(0, 5)} />
+      <FeaturedPosts posts={researchDocs.slice(0, 3)} />
 
       <Container
         maxWidth={false}
@@ -29,7 +29,7 @@ export default function ReasearchView() {
       >
         <Grid container columnSpacing={{ xs: 0, md: 8 }}>
           <Grid xs={12} md={8}>
-            <ResearchPosts posts={_blogMarketingPosts} />
+            <ResearchPosts posts={researchDocs} />
           </Grid>
 
           <Grid xs={12} md={4}>
@@ -37,7 +37,7 @@ export default function ReasearchView() {
               author={{ name: 'Tezza D', role: 'Developer' }}
               popularTags={_tags}
               categories={_categories}
-              recentPosts={{ list: _blogMarketingPosts.slice(-6) }}
+              recentPosts={{ list: researchDocs.slice(-4) }}
               advertisement={{
                 title: 'Advertisement',
                 description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',

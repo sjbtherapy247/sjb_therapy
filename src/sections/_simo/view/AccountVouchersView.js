@@ -5,8 +5,8 @@ import { Box, Tab, Tabs, Button, Divider, TextField, Typography, InputAdornment 
 // _mock
 import _mock from 'src/_mock';
 //
-import { EcommerceAccountLayout } from '../layout';
-import { EcommerceAccountVoucherItem } from '../user/vouchers';
+import { AccountLayout } from '../layout';
+import { AccountVoucherItem } from '../user/vouchers';
 
 // ----------------------------------------------------------------------
 
@@ -81,7 +81,7 @@ export default function AccountVouchersView() {
   };
 
   return (
-    <EcommerceAccountLayout>
+    <AccountLayout>
       <Typography variant="h5" sx={{ mb: 3 }}>
         Vouchers
       </Typography>
@@ -117,9 +117,9 @@ export default function AccountVouchersView() {
         }}
       >
         {VOUCHERS.map((voucher) => (
-          <EcommerceAccountVoucherItem key={voucher.id} voucher={voucher} />
+          <AccountVoucherItem key={voucher.id} voucher={voucher} />
         ))}
       </Box>
-    </EcommerceAccountLayout>
+    </AccountLayout>
   );
 }

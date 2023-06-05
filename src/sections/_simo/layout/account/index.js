@@ -1,1 +1,1 @@
-export { default } from './EcommerceAccountLayout';
+export { default } from './AccountLayout';

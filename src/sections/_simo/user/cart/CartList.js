@@ -4,11 +4,11 @@ import { Stack } from '@mui/material';
 // components
 import Scrollbar from 'src/components/scrollbar';
 //
-import EcommerceCartItem from './EcommerceCartItem';
+import EcommerceCartItem from './CartItem';
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceCartList({ products, wishlist = false }) {
+export default function CartList({ products, wishlist = false }) {
   return (
     <Scrollbar>
       <Stack
@@ -35,7 +35,7 @@ export default function EcommerceCartList({ products, wishlist = false }) {
   );
 }
 
-EcommerceCartList.propTypes = {
+CartList.propTypes = {
   products: PropTypes.array,
   wishlist: PropTypes.bool,
 };

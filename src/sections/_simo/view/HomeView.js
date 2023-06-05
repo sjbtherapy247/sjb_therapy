@@ -1,5 +1,5 @@
 // _mock
-import { _blogMarketingPosts } from 'src/_mock';
+import { research } from 'src/sections/_simo/research/articles';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
@@ -28,12 +28,7 @@ export default function HomeView() {
       <HomeGuidedMeditation />
       <HomeFamous />
       <HomeFAQs />
-      <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
-
-      {/* <HomeNewStart /> */}
-      {/* <HomeForDesigner /> */}
-      {/* <HomeCombination /> */}
-      {/* <HomeAdvertisement /> */}
+      <LatestPosts posts={research.slice(0, 4)} />
     </>
   );
 }

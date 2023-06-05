@@ -10,7 +10,7 @@ import TextMaxLine from 'src/components/text-max-line';
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceAccountVoucherItem({ voucher }) {
+export default function AccountVoucherItem({ voucher }) {
   const dayLeft = differenceInCalendarDays(voucher.dueOn, new Date());
 
   return (
@@ -66,7 +66,7 @@ export default function EcommerceAccountVoucherItem({ voucher }) {
   );
 }
 
-EcommerceAccountVoucherItem.propTypes = {
+AccountVoucherItem.propTypes = {
   voucher: PropTypes.shape({
     description: PropTypes.string,
     dueOn: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),

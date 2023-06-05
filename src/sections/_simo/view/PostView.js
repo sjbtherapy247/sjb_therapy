@@ -13,7 +13,7 @@ import Iconify from 'src/components/iconify';
 import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
-import { _blogMarketingPosts, _socials } from 'src/_mock';
+import { _socials } from 'src/_mock';
 import Head from 'next/head';
 import { LatestPosts } from 'src/sections/_simo/research';
 import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/research/components';
@@ -21,8 +21,8 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-export default function PostView() {
-  const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } = _blogMarketingPosts[0];
+export default function PostView({ post, allPosts }) {
+  const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } = post;
 
   const [favorite, setFavorite] = useState(favorited);
 
@@ -163,11 +163,7 @@ export default function PostView() {
 
       <Divider />
 
-      <LatestPosts posts={_blogMarketingPosts.slice(0, 4)} />
-
-      {/* <MarketingLandingFreeSEO /> */}
-
-      {/* <NewsletterMarketing /> */}
+      <LatestPosts posts={allPosts.slice(0, 6)} />
 
       <Popover
         open={!!open} /* open is e.currenttarget so force it to boolean */

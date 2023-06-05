@@ -1,2 +1,2 @@
-export { default as EcommerceHeader } from './header';
-export { default as EcommerceAccountLayout } from './account';
+export { default as AccountHeader } from './header';
+export { default as AccountLayout } from './account';

@@ -62,6 +62,7 @@ export default function LatestPosts({ posts }) {
       sx={{
         overflow: 'hidden',
         py: { xs: 6, md: 10 },
+        px: 1,
       }}
     >
       <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', md: 'space-between' }}>
@@ -71,13 +72,13 @@ export default function LatestPosts({ posts }) {
       </Stack>
 
       <Box sx={{ position: 'relative' }}>
-        <CarouselArrows onNext={handleNext} onPrev={handlePrev} leftButtonProps={{ sx: { left: { xs: 0, sm: -15, md: -20 } } }} rightButtonProps={{ sx: { right: { xs: 0, sm: -15, md: -20 } } }}>
+        <CarouselArrows onNext={handleNext} onPrev={handlePrev} leftButtonProps={{ sx: { left: { xs: 0, sm: -20, md: -20 } } }} rightButtonProps={{ sx: { right: { xs: 0, sm: -20, md: -20 } } }}>
           <Carousel ref={carouselRef} {...carouselSettings}>
             {posts.map((post) => (
               <Box
                 key={post.id}
                 sx={{
-                  px: 2,
+                  px: 1,
                   py: { xs: 8, md: 10 },
                 }}
               >

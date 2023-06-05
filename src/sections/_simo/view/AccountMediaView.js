@@ -12,8 +12,8 @@ import Iconify from 'src/components/iconify';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Player from 'src/components/player/Player';
-import { EcommerceAccountLayout } from '../layout';
-import { EcommerceCartList } from '../user/cart';
+import { AccountLayout } from '../layout';
+import { CartList } from '../user/cart';
 
 // ----------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ export default function AccountMediaView() {
   const [play, setPlay] = useState(false);
 
   return (
-    <EcommerceAccountLayout>
+    <AccountLayout>
       <Container>
         <Typography variant="h3" sx={{ mb: 5 }}>
           Music and Therapy Session Audio
@@ -69,7 +69,7 @@ export default function AccountMediaView() {
           />
         </Box>
       </Container>
-    </EcommerceAccountLayout>
+    </AccountLayout>
   );
 }
 
