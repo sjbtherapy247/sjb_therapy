@@ -40,12 +40,12 @@ export const servicesDescription = [
 
 
 <ol>
- <li><strong>Hypnotic Laser Focus</strong></li>
- Discover the power of hypnosis-induced laser focus, where distractions vanish, leaving you with a crystal-clear focus on your athletic performance. Imagine a cricketer, basketball player, cyclist, or golfer benefiting from this heightened concentration and precision.
+  <li><strong>Hypnotic Laser Focus</strong></li>
+  <p>Discover the power of hypnosis-induced laser focus, where distractions vanish, leaving you with a crystal-clear focus on your athletic performance. Imagine a cricketer, basketball player, cyclist, or golfer benefiting from this heightened concentration and precision.</p>
   <li><strong>Fast Future Progression</strong></li>
- Break out of performance slumps and bounce back from injury fast through future progression. Harness the power of kinesthetic hypnosis to ignite newfound enjoyment, self-assurance, and performance. Imagine an athlete crystallizing their performance goals to return to excellence with speed and ease.
+  <p> Break out of performance slumps and bounce back from injury fast through future progression. Harness the power of kinesthetic hypnosis to ignite newfound enjoyment, self-assurance, and performance. Imagine an athlete crystallizing their performance goals to return to excellence with speed and ease.</p>
   <li><strong>Automatic Response</strong></li>
- Implement effortless, lasting change with posthypnotic suggestions linked to a simple gesture, item, or word. Automate perceptual shifts, habitual patterns, and experiences, to pre-program improvements that effortlessly enhance your performance. Imagine the surge of confidence and focus a snowboarder feels simply by placing their goggles on.
+  <p>Implement effortless, lasting change with posthypnotic suggestions linked to a simple gesture, item, or word. Automate perceptual shifts, habitual patterns, and experiences, to pre-program improvements that effortlessly enhance your performance. Imagine the surge of confidence and focus a snowboarder feels simply by placing their goggles on.</p>
 </ol>
 
 
