@@ -1,1 +1,1 @@
-export { default } from './EcommerceHeader';
+export { default } from './AccountHeader';
