@@ -14,43 +14,54 @@ export const services = [
     description: 'Unlock your full potential and achieve next-level performance in sport through targeted hypnotherapy interventions.',
     content: `<h4>Sports Hypnotherapy - TRANCEformd<sup style='font-size: 12px' >TM</sup></h4>
 
+
 <p>Welcome to the transformative world of sports hypnotherapy, where the power of the mind meets the realm of athletic excellence. As a dedicated hypnotherapist, I invite you on a journey that goes beyond physical training, delving into the immense power of your subconscious mind to unlock peak performance and conquer your sporting goals.</p>
+
 
 <p>Whether you're a professional athlete seeking that extra edge or an aspiring enthusiast looking to enhance your skills, this tailored approach utilizes a range of hypnotic techniques and phenomena to propel you beyond your previous limits and guide you to unparalleled performance.</p>
 
+
 <p>Hypnotherapy challenges the traditional notions surrounding sport psychology by providing an individualized and dynamic methodology that goes beyond visualization and relaxation. The ultimate addition to your existing sports strategies, to optimize your performance and guide you towards newfound success in your athletic endeavors.</p>
+
 
 <h5>Breaking Free from Conventional Approaches</h5>
 <p>In the world of sports psychology, the overemphasis on visualization and relaxation has limited the potential for true transformation. By harnessing the power of alert hypnosis, where you remain awake and engaged while undergoing hypnotic states, interventions seamlessly transfer into the sporting arena, maximizing the impact on performance.</p>
 
+
 <h5>Harnessing the Power of Hyhpnotic Phenomena</h5>
 <p>At SJB Hypnotherapy, I elicit a wide range of hypnotic phenomena to help you achieve your goals. The active hypnotic techniques are designed to reshape your mindset and enhance your performance. By exploring the entire spectrum of hypnotic phenomena, the approach empowers you to push boundaries and achieve your personal best.</p>
+
 
 <h5>Tailored Interventions for Unparalleled Results</h5>
 <p>Drawing inspiration from the renowned Dr. Milton H. Erickson, the TRANCEformdTM approach centers around your unique needs as an athlete both on and off the field. A variety of challenges are addressed, including motivation issues, attitudinal barriers, fears, self-sabotage, distractions, and the pressure to perform. All interventions are customized to fit your individual circumstances, setting you on the path to even greater success.</p>
 
+
 <h5>Examples of Empowering Hypnotic Interventions</h5>
 
+
 <ol>
-  <li><strong>Hypnotic Laser Focus</strong><br>
-  Discover the power of hypnosis-induced laser focus, where distractions vanish, leaving you with a crystal-clear focus on your athletic performance. Imagine a cricketer, basketball player, cyclist, or golfer benefiting from this heightened concentration and precision.</li>
-  
+ <li><strong>Hypnotic Laser Focus</strong><br>
+ Discover the power of hypnosis-induced laser focus, where distractions vanish, leaving you with a crystal-clear focus on your athletic performance. Imagine a cricketer, basketball player, cyclist, or golfer benefiting from this heightened concentration and precision.</li>
   <li><strong>Fast Future Progression</strong><br>
-  Break out of performance slumps and bounce back from injury fast through future progression. Harness the power of kinesthetic hypnosis to ignite newfound enjoyment, self-assurance, and performance. Imagine an athlete crystallizing their performance goals to return to excellence with speed and ease.</li>
-  
+ Break out of performance slumps and bounce back from injury fast through future progression. Harness the power of kinesthetic hypnosis to ignite newfound enjoyment, self-assurance, and performance. Imagine an athlete crystallizing their performance goals to return to excellence with speed and ease.</li>
   <li><strong>Automatic Response</strong><br>
-  Implement effortless, lasting change with posthypnotic suggestions linked to a simple gesture, item, or word. Automate perceptual shifts, habitual patterns, and experiences, to pre-program improvements that effortlessly enhance your performance. Imagine the surge of confidence and focus a snowboarder feels simply by pulling down their goggles.</li>
+ Implement effortless, lasting change with posthypnotic suggestions linked to a simple gesture, item, or word. Automate perceptual shifts, habitual patterns, and experiences, to pre-program improvements that effortlessly enhance your performance. Imagine the surge of confidence and focus a snowboarder feels simply by pulling down their goggles.</li>
 </ol>
+
 
 <p>Unlock Your Peak Performance Potential Today</p>
 <p>Are you ready to revolutionize your performance? Contact Simon at sjb.hynotherapy today for a no-commitment discussion, to understand how the innovative TRANCEformdTM program from sjb.hynotherapy can reshape your sports experience and propel you or your whole team towards unparalleled success.</p>
 
+
 <p><strong>How and where this can be applied</strong></p>
 <p>Hypnosis or hypnotherapy (same thing!) is never a one-size-fits-all, and the TRANCEformd™ model is the structure that we work from to shape our sessions together.</p>
 
+
 <p><strong>Button - Book Now</strong></p>
 
+
 <p><strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a></p>
+
 
 <p><strong>Links to other Services below?</strong></p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
@@ -62,21 +73,30 @@ export const services = [
     description: 'Specialized programs and interventions to help individuals quit smoking and overcome nicotine and/or other addictions',
     content: `<h4>Quit Smoking With Hypnotherapy</h4>
 
+
 <p>Quitting smoking is a journey I understand all too well, but I also know that it can be a truly empowering and life-changing experience. As a clinical hypnotherapist, I offer a positive and effective path towards achieving a smoke-free life through the transformative practice of hypnotherapy in only 90 minutes.</p>
+
 
 <p>In my practice, I recognize that smoking addiction operates on both conscious and subconscious levels. By delving deep into the subconscious, hypnotherapy allows us to uncover the root causes of your smoking behaviors and reprogram them for a smoke-free life.</p>
 
+
 <p>"Hypnosis was over three times as effective as nicotine replacement"</p>
+
 
 <p>Extensive studies have consistently highlighted the effectiveness of hypnotherapy as a smoking cessation tool. In fact, a meta-analysis published in the Journal of Applied Psychology revealed that hypnosis was over three times as effective as nicotine replacement therapy and five times more effective than unassisted quit attempts.</p>
 
+
 <p>At the core of hypnotherapy lies the power to reprogram the subconscious mind. By accessing this powerful realm, we can eliminate cravings, reduce withdrawal symptoms, and strengthen the desire for a smoke-free life. Through positive suggestions and imagining techniques, individuals like you gain confidence and commitment on their journey to quit smoking.</p>
+
 
 <p>Embrace freedom today and a smoke-free life forever more, through the power of clinical hypnotherapy. Together, I can help you break free from the chains of addiction, instill confidence, resilience, and self-control, and show you how to pave the way for a brighter and healthier future.</p>
 
+
 <p>This program will only work if you are 100% committed to making the change. If you are, then I'd love to help you.</p>
 
+
 <p>Book your session today and let's kick this smoking habit into touch together.</p>
+
 
 <p>*Smoking service Stripe or whatever here...*</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',

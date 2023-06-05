@@ -5,7 +5,8 @@ import { _pricingHome } from 'src/_mock';
 import { Testimonial } from 'src/sections/_simo/testimonial';
 import PricingHome from 'src/sections/_simo/pricing';
 
-import { ServicesHero, ServicesInclude, ServicesBenefits, ServicesHowItWork, services } from '../services';
+import { services } from 'src/sections/_simo/services/services';
+import { ServicesHero, ServicesInclude, ServicesBenefits, ServicesHowItWork } from '../services';
 
 // ----------------------------------------------------------------------
 
