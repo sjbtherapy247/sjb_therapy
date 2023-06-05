@@ -9,14 +9,14 @@ import { paths } from 'src/routes/paths';
 import Iconify from 'src/components/iconify';
 import { MotionContainer, varBounce } from 'src/components/animate';
 //
-import { EcommerceHeader } from '../layout';
+import { AccountHeader } from '../layout';
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceOrderCompletedView() {
+export default function AccountOrderCompletedView() {
   return (
     <>
-      <EcommerceHeader />
+      <AccountHeader />
 
       <Container
         component={MotionContainer}
@@ -33,19 +33,10 @@ export default function EcommerceOrderCompletedView() {
         <Stack spacing={1} sx={{ my: 5 }}>
           <Typography variant="h3">Your order is complete!</Typography>
 
-          <Typography sx={{ color: 'text.secondary' }}>
-            You will be receiving a confirmation email with order details.
-          </Typography>
+          <Typography sx={{ color: 'text.secondary' }}>You will be receiving a confirmation email with order details.</Typography>
         </Stack>
 
-        <Button
-          component={NextLink}
-          href={paths.eCommerce.products}
-          size="large"
-          color="inherit"
-          variant="contained"
-          startIcon={<Iconify icon="carbon:chevron-left" />}
-        >
+        <Button component={NextLink} href={paths.eCommerce.products} size="large" color="inherit" variant="contained" startIcon={<Iconify icon="carbon:chevron-left" />}>
           Continue Shopping
         </Button>
       </Container>

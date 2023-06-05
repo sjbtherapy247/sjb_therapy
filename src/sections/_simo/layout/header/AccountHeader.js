@@ -16,7 +16,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function EcommerceHeader() {
+export default function AccountHeader() {
   return (
     <StyledRoot>
       <Container
