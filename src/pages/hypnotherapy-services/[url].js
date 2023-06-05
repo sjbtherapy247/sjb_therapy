@@ -5,6 +5,7 @@ import MainLayout from 'src/layouts/main';
 // sections
 import ServiceView from 'src/sections/_simo/view/ServiceView';
 
+import { servicesDescription } from 'src/sections/_simo/services/svcs';
 // import { services } from 'src/sections/_simo/services/services';
 
 export async function getStaticPaths() {
@@ -25,17 +26,19 @@ export async function getStaticProps(context) {
     props: {
       // researchDocs: [...research],
       serviceDoc,
+      services: servicesDescription,
     },
   };
 }
 
 // ----------------------------------------------------------------------
 
-ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function ServicesPage({ serviceDoc }) {
+export default function ServicePage({ serviceDoc, services }) {
+  console.log(services);
   return (
     <>
       <Head>

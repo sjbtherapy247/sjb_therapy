@@ -29,7 +29,7 @@ export default function ServicesPage({ servicesDocs }) {
         <title>Our Services | SJB Therapy</title>
       </Head>
 
-      <ServicesView services={services} />
+      <ServicesView services={servicesDocs} />
     </>
   );
 }
