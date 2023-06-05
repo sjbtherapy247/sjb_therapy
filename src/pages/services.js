@@ -5,16 +5,24 @@ import MainLayout from 'src/layouts/main';
 // sections
 import { ServicesView } from 'src/sections/_simo/view';
 
-import { servicesDescription } from 'src/sections/_simo/services/services';
+import { servicesDescription } from 'src/sections/_simo/services/svcs';
 
+export async function getStaticProps() {
+  console.log(servicesDescription);
+  return {
+    props: {
+      servicesDocs: [...servicesDescription],
+    },
+  };
+}
 // ----------------------------------------------------------------------
 
 ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function ServicesPage() {
-  console.log(servicesDescription);
+export default function ServicesPage({ servicesDocs }) {
+  console.log(servicesDocs);
   return (
     <>
       <Head>
