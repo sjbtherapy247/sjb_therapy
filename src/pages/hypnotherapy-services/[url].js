@@ -6,11 +6,10 @@ import MainLayout from 'src/layouts/main';
 import ServiceView from 'src/sections/_simo/view/ServiceView';
 
 import { servicesDescription } from 'src/sections/_simo/services/svcs';
-// import { services } from 'src/sections/_simo/services/services';
 
 export async function getStaticPaths() {
   return {
-    paths: services.map((doc) => ({
+    paths: servicesDescription.map((doc) => ({
       params: {
         url: doc.url,
       },
@@ -20,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const serviceDoc = services.filter((doc) => doc.url === context.params.url)[0];
+  const serviceDoc = servicesDescription.filter((doc) => doc.url === context.params.url)[0];
 
   return {
     props: {
