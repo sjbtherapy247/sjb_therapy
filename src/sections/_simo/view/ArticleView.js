@@ -51,7 +51,7 @@ export default function ArticleView({ post, allPosts }) {
           py: 10,
           position: 'relative',
           ...bgGradient({
-            startColor: `${alpha(theme.palette.background.default, 0.0)} 0%`,
+            startColor: `${alpha(theme.palette.background.default, 0.4)} 0%`,
             endColor: `${theme.palette.background.default} 100%`,
             imgUrl: heroImg,
           }),

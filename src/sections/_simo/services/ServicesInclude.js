@@ -65,23 +65,13 @@ export default function ServicesInclude({ services }) {
     <Container
       sx={{
         textAlign: 'center',
-        pt: { xs: 5, md: 10 },
+        pt: { xs: 5, md: 6 },
         pb: { xs: 10, md: 15 },
       }}
     >
       <Typography variant="h2">Services Include</Typography>
 
-      <Typography
-        sx={{
-          mt: 3,
-          mx: 'auto',
-          maxWidth: 480,
-          color: 'text.secondary',
-          mb: { xs: 8, md: 10 },
-        }}
-      >
-        Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.
-      </Typography>
+      {/* <Typography sx={{ mt: 3, mx: 'auto', maxWidth: 480, color: 'text.secondary', mb: { xs: 8, md: 10 } }}>Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</Typography> */}
 
       <Box
         sx={{

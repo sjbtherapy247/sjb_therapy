@@ -17,4 +17,4 @@ export { default as ServicesView } from './ServicesView';
 // //
 export { default as AccountPersonalView } from './AccountPersonalView';
 export { default as AccountMediaView } from './AccountMediaView';
-export { default as AccountVouchersView } from './AccountVouchersView';
+export { default as AccountSettingsView } from './AccountSettingsView';

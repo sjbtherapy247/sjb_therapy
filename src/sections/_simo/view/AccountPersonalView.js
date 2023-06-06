@@ -43,13 +43,13 @@ export default function AccountPersonalView() {
     firstName: 'Jayvion',
     lastName: 'Simon',
     emailAddress: 'nannie_abernathy70@yahoo.com',
-    phoneNumber: '365-374-4961',
+    phoneNumber: '0401234567',
     birthday: null,
     gender: 'Male',
     streetAddress: '',
     zipCode: '',
     city: '',
-    country: 'United States',
+    country: 'Australia',
     oldPassword: '',
     newPassword: '',
     confirmNewPassword: '',
@@ -80,7 +80,7 @@ export default function AccountPersonalView() {
     <AccountLayout>
       <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
         <Typography variant="h5" sx={{ mb: 3 }}>
-          Personal
+          Personal Details
         </Typography>
 
         <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
@@ -133,58 +133,7 @@ export default function AccountPersonalView() {
           </RHFSelect>
         </Box>
 
-        <Stack spacing={3} sx={{ my: 5 }}>
-          <Typography variant="h5"> Change Password </Typography>
-
-          <Stack spacing={2.5}>
-            <RHFTextField
-              name="oldPassword"
-              label="Old Password"
-              type={showPassword ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} edge="end">
-                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
-
-            <RHFTextField
-              name="newPassword"
-              label="New Password"
-              type={showPassword ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} edge="end">
-                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
-
-            <RHFTextField
-              name="confirmNewPassword"
-              label="Confirm New Password"
-              type={showPassword ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} edge="end">
-                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Stack>
-        </Stack>
-
-        <LoadingButton color="inherit" size="large" type="submit" variant="contained" loading={isSubmitting}>
+        <LoadingButton sx={{ my: 6 }} color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
           Save Changes
         </LoadingButton>
       </FormProvider>

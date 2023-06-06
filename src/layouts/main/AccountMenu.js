@@ -37,7 +37,7 @@ export function MenuContent() {
     },
     {
       title: 'Account Settings',
-      path: '/account/vouchers',
+      path: '/account/settings',
       icon: <Iconify icon="carbon:cut-out" />,
     },
   ];

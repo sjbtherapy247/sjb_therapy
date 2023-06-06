@@ -7,15 +7,15 @@ import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
-import { AccountVouchersView } from 'src/sections/_simo/view';
+import { AccountSettingsView } from 'src/sections/_simo/view';
 
 // ----------------------------------------------------------------------
 
-AccountVouchersPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+AccountSettingsPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function AccountVouchersPage() {
+export default function AccountSettingsPage() {
   const { loggedIn } = useSettingsContext();
   const { push } = useRouter();
 
@@ -32,7 +32,7 @@ export default function AccountVouchersPage() {
         <title>Account: Settings | SJB Therapy</title>
       </Head>
 
-      <AccountVouchersView />
+      <AccountSettingsView />
     </>
   );
 }
