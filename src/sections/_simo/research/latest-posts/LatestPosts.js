@@ -66,7 +66,7 @@ export default function LatestPosts({ posts }) {
       }}
     >
       <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', md: 'space-between' }}>
-        <Typography variant="h3">Latest Posts</Typography>
+        <Typography variant="h3">Latest InSights & Research</Typography>
 
         {isMdUp && viewAllBtn}
       </Stack>
