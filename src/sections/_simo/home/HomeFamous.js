@@ -68,7 +68,7 @@ export default function HomeFamous() {
   // };
 
   return (
-    <Box sx={{ py: 8, bgcolor: 'secondary.lighter' }}>
+    <Box sx={{ py: 8, bgcolor: theme.mode === 'light' ? 'secondary.lighter' : 'background.default' }}>
       <Grid container columnSpacing={3} alignItems="center" sx={{ m: 0, px: 0 }}>
         <Grid xs={12} md={4} pb={5}>
           <Typography variant="h3" color="primary.dark" align="center" fontWeight="600">
