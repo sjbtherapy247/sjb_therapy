@@ -137,7 +137,7 @@ const StyledMarkdown = styled('div', {
         float: 'left',
         fontSize: 80,
         lineHeight: 1,
-        paddingRight: theme.spacing(2),
+        paddingRight: theme.spacing(1.4),
         fontWeight: theme.typography.fontWeightBold,
       },
     },

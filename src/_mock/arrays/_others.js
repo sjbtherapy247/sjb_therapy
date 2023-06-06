@@ -33,8 +33,7 @@ export const _testimonials = [...Array(8)].map((_, index) => ({
   avatar: _mock.image.avatar(index),
   postDate: _mock.time(index),
   rating: 5,
-  review:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
+  review: 'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
 }));
 
 // ----------------------------------------------------------------------
@@ -58,12 +57,12 @@ export const _socials = [
     icon: 'carbon:logo-linkedin',
     color: '#007EBB',
   },
-  {
-    value: 'twitter',
-    label: 'Twitter',
-    icon: 'carbon:logo-twitter',
-    color: '#00AAEC',
-  },
+  // {
+  //   value: 'twitter',
+  //   label: 'Twitter',
+  //   icon: 'carbon:logo-twitter',
+  //   color: '#00AAEC',
+  // },
 ];
 
 // ----------------------------------------------------------------------
@@ -86,20 +85,7 @@ export const _offices = ['Jordan', 'Canada', 'Portugal'].map((office, index) => 
 
 // ----------------------------------------------------------------------
 
-const BRANDS_NAME = [
-  'airbnb',
-  'dropbox',
-  'facebook',
-  'google',
-  'heroku',
-  'lenovo',
-  'microsoft',
-  'netflix',
-  'slack',
-  'spotify',
-  'tripadvisor',
-  'vimeo',
-];
+const BRANDS_NAME = ['airbnb', 'dropbox', 'facebook', 'google', 'heroku', 'lenovo', 'microsoft', 'netflix', 'slack', 'spotify', 'tripadvisor', 'vimeo'];
 
 export const _brands = BRANDS_NAME.map((brand, index) => ({
   id: _mock.id(index),
@@ -115,18 +101,13 @@ export const _brandsColor = BRANDS_NAME.map((brand, index) => ({
 
 // ----------------------------------------------------------------------
 
-export const _faqs = [
-  'Sed augue ipsum, egestas nec, vestibulum et',
-  'alesuada adipiscing, dui vestibulum suscipit nulla quis orci.',
-  'Ut varius tincidunt libero',
-  'In ut quam vitae odio lacinia tincidunt.',
-  'Fusce vel dui Morbi nec metus.',
-].map((question, index) => ({
-  id: _mock.id(index),
-  question,
-  answer:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
-}));
+export const _faqs = ['Sed augue ipsum, egestas nec, vestibulum et', 'alesuada adipiscing, dui vestibulum suscipit nulla quis orci.', 'Ut varius tincidunt libero', 'In ut quam vitae odio lacinia tincidunt.', 'Fusce vel dui Morbi nec metus.'].map(
+  (question, index) => ({
+    id: _mock.id(index),
+    question,
+    answer: 'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
+  })
+);
 
 export const _faqsSupport = [
   `[Covid] Seasonal Shopping Guide`,
@@ -142,6 +123,5 @@ export const _faqsSupport = [
 ].map((question, index) => ({
   id: _mock.id(index),
   question,
-  answer:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
+  answer: 'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
 }));

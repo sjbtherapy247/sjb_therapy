@@ -1,6 +1,8 @@
+//next
+import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Stack, Container, Typography, Unstable_Grid2 as Grid } from '@mui/material';
+import { Stack, Container, Typography, Unstable_Grid2 as Grid, Button, Link } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // components
@@ -43,29 +45,26 @@ export default function HomeGuidedMediation() {
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              <Typography
-                color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.darker'}
-                variant="h1"
-              >
-                Hypnotherapy
+              <Typography color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.darker'} variant="h1">
+                What Is Hypnotherapy?
               </Typography>
               <Typography variant="h4">It&apos;s Like A Guided Meditation</Typography>
               <Typography color={theme.palette.grey[theme.palette.mode === 'light' ? 800 : 400]}>
                 <br />
-                Hypnotherapy uses hypnosis to bring you into a relaxed state where we work on the
-                goals most important to you.
+                Hypnotherapy or hypnosis, is used to bring you into a relaxed state where we work on the goals most important to you.
                 <br />
-                <br /> Once you have committed to making a change, your practitioner will invite you
-                to relax and allow your mind to be free. Free to choose a different path, with new
-                outcomes from the ones you’re currently heading towards. Options will be presented
-                to you and you are free to choose which options you take and embed in your new
-                future. <br />
+                <br /> Once you have discussed your preferred outcome, Simon will invite you to relax and allow your mind to be free. Free to choose the different path you have chosen, with the new outcomes you have chosen. Options will be presented
+                to you and you are free to choose which options you take and begin your new life. <br />
                 <br />
-                Your subconscious mind is the one that runs the programs that trip you up, and this
-                is the part of you that we will help.
-                <br /> You are in charge throughout the process, we are there purely as your guide.
+                Your subconscious mind is the one that runs the programs that trip you up, this is the part of you that the hypnosis will re-train. By creating new neural pathways for your subconscious, you will have a new default setting. Forgetting
+                that you ever ran the old pattern.
               </Typography>
             </Stack>
+            <Link component={NextLink} href="/research/hypnotherapy-understanding-the-mind-body-connection/">
+              <Button sx={{ mt: 4 }} variant="outlined">
+                Read More
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Container>

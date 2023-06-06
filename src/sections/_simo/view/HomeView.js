@@ -17,6 +17,7 @@ import {
   // HomeFeatureHighlights,
   // HomeFlexibleComponents,
 } from 'src/sections/_simo/home';
+import TestFooter from 'src/layouts/main/footer/TestFooter';
 import { LatestPosts } from '../research';
 
 // ----------------------------------------------------------------------
@@ -29,6 +30,7 @@ export default function HomeView() {
       <HomeFamous />
       <HomeFAQs />
       <LatestPosts posts={research.slice(0, 4)} />
+      <TestFooter />
     </>
   );
 }
