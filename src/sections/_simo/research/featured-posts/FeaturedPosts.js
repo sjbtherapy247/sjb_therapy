@@ -87,7 +87,7 @@ export default function FeaturedPosts({ posts }) {
         }}
       >
         <Typography sx={{ mb: 3, fontWeight: 600 }} variant="h2">
-          Featured Research
+          Featured InSights{' '}
         </Typography>
         <CarouselArrows
           onNext={handleNext}
