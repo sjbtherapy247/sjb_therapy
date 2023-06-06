@@ -65,6 +65,36 @@ export const _socials = [
   // },
 ];
 
+export const _socialsSimo = [
+  {
+    value: 'facebook',
+    label: 'FaceBook',
+    icon: 'carbon:logo-facebook',
+    color: '#1877F2',
+    href: 'https://www.facebook.com/simplyjustbelieve',
+  },
+  {
+    value: 'instagram',
+    label: 'Instagram',
+    icon: 'carbon:logo-instagram',
+    color: '#E02D69',
+    href: 'https://www.instagram.com/simplyjustbelieve/',
+  },
+  {
+    value: 'linkedin',
+    label: 'Linkedin',
+    icon: 'carbon:logo-linkedin',
+    color: '#007EBB',
+    href: 'https://www.linkedin.com/in/simon-baker-84694719/',
+  },
+  // {
+  //   value: 'twitter',
+  //   label: 'Twitter',
+  //   icon: 'carbon:logo-twitter',
+  //   color: '#00AAEC',
+  // },
+];
+
 // ----------------------------------------------------------------------
 
 const LAT_LONG = [

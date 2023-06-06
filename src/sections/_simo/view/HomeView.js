@@ -14,10 +14,11 @@ import {
   // HomeAdvertisement,
   HomeGuidedMeditation,
   HomeFamous,
+  HomeBanner,
   // HomeFeatureHighlights,
   // HomeFlexibleComponents,
 } from 'src/sections/_simo/home';
-import TestFooter from 'src/layouts/main/footer/TestFooter';
+// import TestFooter from 'src/layouts/main/footer/TestFooter';
 import { LatestPosts } from '../research';
 
 // ----------------------------------------------------------------------
@@ -27,10 +28,11 @@ export default function HomeView() {
     <>
       <HomeHero />
       <HomeGuidedMeditation />
+      <HomeBanner />
       <HomeFamous />
       <HomeFAQs />
       <LatestPosts posts={research.slice(0, 4)} />
-      <TestFooter />
+      {/* <TestFooter /> */}
     </>
   );
 }

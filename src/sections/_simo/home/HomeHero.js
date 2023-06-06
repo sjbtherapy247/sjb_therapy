@@ -14,7 +14,8 @@ import HomeSimon from './HomeSimon';
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     color: alpha(theme.palette.background.default, 0.85),
-    imgUrl: '/assets/background/overlay_2.jpg',
+    imgUrl: '/assets/images/simon/20230513_145715.jpg',
+    // imgUrl: '/assets/background/overlay_2.jpg',
   }),
   position: 'relative',
   overflow: 'hidden',
@@ -38,15 +39,19 @@ export default function HomeHero() {
               }}
             >
               <div>
-                <Typography variant="h2">SJB Therapy</Typography>
                 <Typography variant="h3">Simply Just Believe</Typography>
+                <Typography variant="h5">SJB Therapy</Typography>
+              </div>
+              <div>
+                <Typography variant="h2">Unlock Your Mind</Typography>
+                <Typography variant="h4">Embrace Your Potential</Typography>
               </div>
 
               <Typography color="text.secondary">
-                Cultivating the power of hypnotherapy unlocks the gateway to personal transformation, enabling individuals to tap into their inner potential and create positive and lasting change in their lives. <br />
+                Hi, I&apos;m Simon, welcome to sjb.hypnotherapy. I&apos;m glad you&apos;ve found your way here because I suspect that you’re either facing a challenge or seeking to unlock your true potential. Whatever it is, know that you&apos;re in
+                the right place. Please book your free 15-minute consultation so we can explore the best path forward together. <br />
                 <br />
-                At SjB Therapy, our team is fully trained in hypnotherapy, psychotherapy, and counseling. Experience comprehensive support tailored to your needs. <br />
-                Book your first session below and enjoy a complimentary 15-minute consultation. No commitment required – explore our services and make an informed decision.
+                Remember, you don&apos;t have to face your challenges alone. Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Let your tomorrow begin today!
                 {/* <br /> Here at SjB Therapy we are fully trained in healing hypnotherapy,
                 psychotherapy and counselling, so whatever you need, we can almost certainly help.
                 Hit the button below and book in for your first session.
@@ -57,7 +62,7 @@ export default function HomeHero() {
               </Typography>
 
               <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />} target="_blank" rel="noopener" href={paths.figmaPreview}>
-                Book Your Session
+                Book Your Free Session
               </Button>
             </Stack>
           </Grid>

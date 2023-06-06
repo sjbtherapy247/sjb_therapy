@@ -1,10 +1,10 @@
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Typography, Card, Box, Stack, IconButton } from '@mui/material';
+import { Typography, Card, Box, Stack, IconButton, Button, Link } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // _mock
-import { _socials } from 'src/_mock';
+import { _socials, _socialsSimo } from 'src/_mock';
 // components
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
@@ -34,39 +34,43 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 
 export default function HomeSimon() {
   const name = 'Simon Baker';
-  const role = 'Healing Hypnotherapy & Psychotherapy Specialist';
+  const role = 'Clinical Hypnotherapist & Mental Health Coach';
   const photo = '/assets/images/simon/simon-photo.jpeg';
 
   return (
-    <Card sx={{ maxHeight: '500px', maxWidth: '400px', width: '100%' }}>
-      <Stack spacing={0.5} sx={{ textAlign: 'center', pt: 2, pb: 1.5 }}>
-        <Typography variant="h6">{name}</Typography>
+    <Stack alignItems="center">
+      <Card sx={{ maxHeight: '500px', maxWidth: '400px', width: '100%' }}>
+        <Stack spacing={0.5} sx={{ textAlign: 'center', pt: 2, pb: 1.5 }}>
+          <Typography variant="h6">{name}</Typography>
 
-        <Typography variant="body2" sx={{ color: 'text.disabled' }}>
-          {role}
-        </Typography>
-      </Stack>
+          <Typography variant="body2" sx={{ color: 'text.disabled' }}>
+            {role}
+          </Typography>
+        </Stack>
 
-      <Box sx={{ position: 'relative' }}>
-        <Shape />
+        <Box sx={{ position: 'relative' }}>
+          <Shape />
 
-        <StyledOverlay>
-          <Stack
-            direction="row"
-            justifyContent="center"
-            sx={{ width: 1, zIndex: 9, bottom: { xs: 115, md: 100 }, position: 'absolute' }}
-          >
-            {_socials.map((social) => (
-              <IconButton key={social.value} color="primary">
-                <Iconify icon={social.icon} />
-              </IconButton>
-            ))}
-          </Stack>
-        </StyledOverlay>
+          <StyledOverlay>
+            <Stack direction="row" justifyContent="center" sx={{ width: 1, zIndex: 9, bottom: { xs: 115, md: 100 }, position: 'absolute' }}>
+              {_socialsSimo.map((social) => (
+                <Link key={social.value} target="_blank" href={social.href}>
+                  <IconButton color="primary">
+                    <Iconify icon={social.icon} />
+                  </IconButton>
+                </Link>
+              ))}
+            </Stack>
+          </StyledOverlay>
 
-        <Image src={photo} alt={name} sx={{ height: '500px' }} />
-      </Box>
-    </Card>
+          <Image src={photo} alt={name} sx={{ height: '500px' }} />
+        </Box>
+      </Card>
+
+      <Button variant="outlined" size="small" sx={{ width: 150, mt: 4 }}>
+        More About Simon
+      </Button>
+    </Stack>
   );
 }
 

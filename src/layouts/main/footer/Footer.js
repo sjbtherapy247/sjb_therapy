@@ -1,218 +1,118 @@
-// next
-// import { useRouter } from 'next/router';
-// @mui
-import { alpha, styled } from '@mui/material/styles';
-import Masonry from '@mui/lab/Masonry';
-import { Link, Stack, Button, Divider, Container, TextField, Typography, IconButton, InputAdornment, Unstable_Grid2 as Grid, Box } from '@mui/material';
-// hooks
-import useResponsive from 'src/hooks/useResponsive';
-// _mock
-import { _socials } from 'src/_mock';
-// components
-import Logo from 'src/components/logo';
-import Iconify from 'src/components/iconify';
-//
-import Newsletter from 'src/sections/_simo/newsletter';
-import { pageLinks, navConfig } from '../nav/config-navigation';
-import ListDesktop from './ListDesktop';
-import ListMobile from './ListMobile';
+import { Box, Button, Container, Divider, Unstable_Grid2 as Grid, IconButton, InputAdornment, Link, Stack, TextField, Typography, alpha, useTheme } from '@mui/material';
+import { _socialsSimo } from 'src/_mock';
+import Iconify from 'src/components/iconify/Iconify';
 
-// ----------------------------------------------------------------------
+const Footer = () => {
+  // something
+  const theme = useTheme();
 
-const StyledAppStoreButton = styled(Button)(({ theme }) => ({
-  flexShrink: 0,
-  padding: '5px 12px',
-  margin: theme.spacing(1),
-  color: theme.palette.common.white,
-  border: `solid 1px ${alpha(theme.palette.common.black, 0.24)}`,
-  background: `linear-gradient(180deg, ${theme.palette.grey[900]} 0%, ${theme.palette.common.black} 100%)`,
-  '& .MuiButton-startIcon': {
-    marginLeft: 0,
-  },
-}));
-
-// ----------------------------------------------------------------------
-
-export default function Footer() {
-  const isMdUp = useResponsive('up', 'md');
-
-  // const { pathname } = useRouter();
-
-  const mobileList = navConfig.find((i) => i.title === 'Pages')?.children || [];
-
-  const desktopList = pageLinks.sort((listA, listB) => Number(listA.order) - Number(listB.order));
-
-  const renderLists = isMdUp ? desktopList : mobileList;
-
-  // const isHome = pathname === '/';
-
-  const simpleFooter = (
-    <Box
-      sx={{
-        py: 0,
-        textAlign: 'center',
-        bgcolor: (theme) => (theme.palette.mode === 'light' ? '#FFF' : '#111111'),
-      }}
-    >
-      <Logo single />
-
-      <Typography variant="caption" component="div" sx={{ color: 'text.secondary', pb: 4 }}>
-        © 2023. All rights reserved. Website developed by TezD
-      </Typography>
-    </Box>
-  );
-
-  // eslint-disable-next-line no-unused-vars
-  const mainFooter = (
+  return (
     <>
-      <Divider />
-
-      <Container
-        sx={{
-          overflow: 'hidden',
-          py: { xs: 8, md: 10 },
-        }}
-      >
-        <Grid container spacing={3} justifyContent={{ md: 'space-between' }}>
-          <Grid xs={12} md={4}>
-            <Stack spacing={{ xs: 3, md: 5 }}>
-              <Stack alignItems="flex-start" spacing={3}>
-                <Logo />
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  The starting point for your next project based on easy-to-customize Material-UI © helps you build apps faster and better.
-                </Typography>
-              </Stack>
-
-              <Stack spacing={1} alignItems="flex-start">
-                <Typography variant="h6">Community</Typography>
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
-                  Documentation
+      <Grid container justifyContent={{ md: 'space-between' }}>
+        <Grid xs={12} md={5.5} sx={{ p: 4, bgcolor: 'background.neutral', display: 'flex', alignItems: 'center' }}>
+          <Stack spacing={{ xs: 3, md: 5 }}>
+            <Box display="grid" gridTemplateColumns="repeat(3, 1fr)">
+              <Stack spacing={1} alignItems="center">
+                <Link href="/services" variant="body2" sx={{ color: 'text.primary' }}>
+                  Services
                 </Link>
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
-                  Changelog
-                </Link>
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
-                  Contributing
+                <Link href="/research" variant="body2" sx={{ color: 'text.primary' }}>
+                  InSights/Research
                 </Link>
               </Stack>
-
-              <Stack spacing={2}>
-                <Stack spacing={1}>
-                  <Typography variant="h6">Let’s stay in touch</Typography>
-                  <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                    Ubscribe to our newsletter to receive latest articles to your inbox weekly.
-                  </Typography>
-                </Stack>
-
-                <TextField
-                  fullWidth
-                  hiddenLabel
-                  placeholder="Email address"
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <Button variant="contained" color="inherit" size="large">
-                          Subscribe
-                        </Button>
-                      </InputAdornment>
-                    ),
-                    sx: { pr: 0.5 },
-                  }}
-                />
+              <Stack spacing={1} alignItems="center">
+                <Link href="/mission" variant="body2" sx={{ color: 'text.primary' }}>
+                  Our Mission
+                </Link>
+                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                  Privacy
+                </Link>
               </Stack>
-
-              <Stack spacing={2}>
-                <Typography variant="h6">Social</Typography>
-                <Stack direction="row" alignItems="center">
-                  {_socials.map((social) => (
-                    <IconButton key={social.value} color="primary">
-                      <Iconify icon={social.icon} />
-                    </IconButton>
-                  ))}
-                </Stack>
+              <Stack spacing={1} alignItems="center">
+                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                  About Simon
+                </Link>
+                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                  Contact Us
+                </Link>
               </Stack>
-
-              <Stack spacing={2}>
-                <Typography variant="h6">Apps</Typography>
-                <AppStoreButton />
-              </Stack>
+            </Box>
+            <Stack alignItems="flex-start" spacing={3}>
+              <Typography variant="body2" textAlign="center" sx={{ color: 'text.secondary', opacity: 0.8 }}>
+                Simon Baker is a clinical hypnotherapist, mental strength coach, radio host and former racing driver who is giving you the mental edge.{' '}
+              </Typography>
             </Stack>
-          </Grid>
-
-          <Grid xs={12} md={7}>
-            {isMdUp ? (
-              <Masonry columns={4} spacing={2} defaultColumns={4} defaultSpacing={2}>
-                {renderLists.map((list) => (
-                  <ListDesktop key={list.subheader} list={list} />
-                ))}
-              </Masonry>
-            ) : (
-              <Stack spacing={1.5}>
-                {renderLists.map((list) => (
-                  <ListMobile key={list.subheader} list={list} />
-                ))}
-              </Stack>
-            )}
-          </Grid>
+          </Stack>
         </Grid>
-      </Container>
-      <Divider />
+
+        {/* <Grid xs={12} md={6} sx={{ p: 4, backgroundColor: 'primary.main' }}> */}
+        <Grid xs={12} md={6.5} sx={{ p: 4, backgroundColor: alpha(theme.palette.primary.main, 0.1) }}>
+          <Stack spacing={2}>
+            <Stack spacing={1} sx={{ alignItems: 'center' }}>
+              <Typography variant="h5">InSights In Your Inbox</Typography>
+              <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+                <br />
+                The newsletter that will inspire you to continue your improvement journey.
+              </Typography>
+            </Stack>
+            <Stack spacing={1} direction={{ xs: 'column', sm: 'row' }} justifyContent="center">
+              <TextField hiddenLabel required placeholder="First Name" sx={{ minWidth: 160 }} />
+              <TextField
+                fullWidth
+                hiddenLabel
+                placeholder="Enter your email"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <Button size="large" color="primary" variant="contained" sx={{ p: 0, height: 53, borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}>
+                        <Iconify icon="carbon:send" />
+                      </Button>
+                    </InputAdornment>
+                  ),
+                  sx: { pr: 0 },
+                }}
+                // sx={{ maxWidth: 360 }}
+              />
+            </Stack>
+          </Stack>
+
+          <Stack direction="row" alignItems="center" justifyContent="center" sx={{ pt: 4 }}>
+            <Typography variant="body2" sx={{ letterSpacing: '3px', mr: 3 }}>
+              FIND ME ON
+            </Typography>
+            {_socialsSimo.map((social) => (
+              <Link key={social.value} href={social.href} target="_blank">
+                <IconButton color="primary">
+                  <Iconify icon={social.icon} />
+                </IconButton>
+              </Link>
+            ))}
+          </Stack>
+        </Grid>
+      </Grid>
+      {/* <Divider /> */}
       <Container>
-        <Stack spacing={2.5} direction={{ xs: 'column', md: 'row' }} justifyContent="space-between" sx={{ py: 3, textAlign: 'center' }}>
+        <Stack spacing={2.5} direction="row" justifyContent="space-between" sx={{ py: 2, textAlign: 'center' }}>
+          <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+            Website by TezD
+          </Typography>
+
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             © 2023. All rights reserved
           </Typography>
 
           <Stack direction="row" spacing={3} justifyContent="center">
             <Link variant="caption" sx={{ color: 'text.secondary' }}>
-              Help Center
+              Privacy
             </Link>
 
             <Link variant="caption" sx={{ color: 'text.secondary' }}>
-              Terms of Service
+              Terms
             </Link>
           </Stack>
         </Stack>
       </Container>
     </>
   );
-
-  // return <footer>{isHome ? simpleFooter : mainFooter}</footer>;
-  return (
-    <>
-      <Newsletter />
-      {simpleFooter}
-    </>
-  );
-}
-
-// ----------------------------------------------------------------------
-
-function AppStoreButton({ ...other }) {
-  return (
-    <Stack direction="row" flexWrap="wrap" {...other}>
-      <StyledAppStoreButton startIcon={<Iconify icon="ri:apple-fill" width={28} />}>
-        <Stack alignItems="flex-start">
-          <Typography variant="caption" sx={{ opacity: 0.72 }}>
-            Download on the
-          </Typography>
-
-          <Typography variant="h6" sx={{ mt: -0.5 }}>
-            Apple Store
-          </Typography>
-        </Stack>
-      </StyledAppStoreButton>
-
-      <StyledAppStoreButton startIcon={<Iconify icon="logos:google-play-icon" width={28} />}>
-        <Stack alignItems="flex-start">
-          <Typography variant="caption" sx={{ opacity: 0.72 }}>
-            Download from
-          </Typography>
-          <Typography variant="h6" sx={{ mt: -0.5 }}>
-            Google Play
-          </Typography>
-        </Stack>
-      </StyledAppStoreButton>
-    </Stack>
-  );
-}
+};
+export default Footer;
