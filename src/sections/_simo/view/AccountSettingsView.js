@@ -8,7 +8,7 @@ import FormProvider, { RHFTextField, RHFSelect } from 'src/components/hook-form'
 
 import { useState } from 'react';
 // @mui
-import { Divider, Typography, InputAdornment, Stack, IconButton } from '@mui/material';
+import { Divider, Typography, InputAdornment, Stack, IconButton, Container } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 
 //
@@ -20,7 +20,7 @@ const TABS = ['All Vouchers', 'Latest', 'Popular', 'Expiring'];
 
 // ----------------------------------------------------------------------
 
-export default function AccountVouchersView() {
+export default function AccountSettingsView() {
   // const [tab, setTab] = useState('All Vouchers');
 
   // const handleChangeTab = (event, newValue) => {
@@ -84,73 +84,75 @@ export default function AccountVouchersView() {
 
   return (
     <AccountLayout>
-      <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-        <Typography variant="h5" sx={{ mb: 3 }}>
-          Account Settings
-        </Typography>
+      <Container>
+        <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
+          <Typography variant="h3" sx={{ mb: 3 }}>
+            Account Settings
+          </Typography>
 
-        <Stack spacing={3} sx={{ my: 5 }}>
-          <Typography variant="h5"> Change Password </Typography>
+          <Stack spacing={3} sx={{ my: 5 }}>
+            <Typography variant="h5"> Change Password </Typography>
 
-          <Stack spacing={2.5}>
-            <RHFTextField
-              name="oldPassword"
-              label="Old Password"
-              type={showPassword ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} edge="end">
-                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
+            <Stack spacing={2.5}>
+              <RHFTextField
+                name="oldPassword"
+                label="Old Password"
+                type={showPassword ? 'text' : 'password'}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={handleShowPassword} edge="end">
+                        <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
 
-            <RHFTextField
-              name="newPassword"
-              label="New Password"
-              type={showPassword ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} edge="end">
-                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
+              <RHFTextField
+                name="newPassword"
+                label="New Password"
+                type={showPassword ? 'text' : 'password'}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={handleShowPassword} edge="end">
+                        <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
 
-            <RHFTextField
-              name="confirmNewPassword"
-              label="Confirm New Password"
-              type={showPassword ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleShowPassword} edge="end">
-                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-            />
+              <RHFTextField
+                name="confirmNewPassword"
+                label="Confirm New Password"
+                type={showPassword ? 'text' : 'password'}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={handleShowPassword} edge="end">
+                        <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Stack>
           </Stack>
-        </Stack>
 
-        <Divider sx={{ my: 3, borderStyle: 'dashed' }} />
-        <LoadingButton sx={{ my: 6 }} color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
-          Change Password
-        </LoadingButton>
+          <Divider sx={{ my: 3, borderStyle: 'dashed' }} />
+          <LoadingButton sx={{ my: 6 }} color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
+            Change Password
+          </LoadingButton>
 
-        {/* <Tabs value={tab} scrollButtons="auto" variant="scrollable" allowScrollButtonsMobile onChange={handleChangeTab} sx={{ mb: 3 }}>
+          {/* <Tabs value={tab} scrollButtons="auto" variant="scrollable" allowScrollButtonsMobile onChange={handleChangeTab} sx={{ mb: 3 }}>
         {TABS.map((category) => (
           <Tab key={category} value={category} label={category} />
         ))}
       </Tabs> */}
-      </FormProvider>
+        </FormProvider>
+      </Container>
     </AccountLayout>
   );
 }

@@ -35,9 +35,11 @@ export default function AccountLayout({ children }) {
         <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative', height: { xs: 64 } }} />
       </StyledRoot>
 
-      <Container sx={{ my: 5 }}>
-        <Typography variant="h3">Client Account</Typography>
-      </Container>
+      {isMdUp && (
+        <Container sx={{ my: 5 }}>
+          <Typography variant="h3">Client Account</Typography>
+        </Container>
+      )}
 
       <Container>
         <Stack direction={{ md: 'row' }} alignItems={{ md: 'flex-start' }} sx={{ mb: { xs: 8, md: 10 } }}>
