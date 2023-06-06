@@ -52,12 +52,12 @@ const StyledMarkdown = styled('div', {
     fontFamily: 'Georgia, serif',
     fontStyle: 'italic',
     textAlign: 'center',
-    padding: theme.spacing(3, 6, 3, 6),
+    padding: theme.spacing(3, 5, 3, 5),
     borderRadius: Number(theme.shape.borderRadius) * 2,
     backgroundColor: theme.palette.background.neutral,
     color: `${theme.palette.text.secondary} !important`,
     [theme.breakpoints.up('md')]: {
-      width: '60%',
+      width: '70%',
     },
     '& p, & span': {
       marginBottom: '0 !important',

@@ -37,9 +37,18 @@ const Footer = () => {
                 </Link>
               </Stack>
             </Box>
-            <Stack alignItems="flex-start" spacing={3}>
+            <Stack alignItems="flex-start" spacing={0}>
               <Typography variant="body2" textAlign="center" sx={{ color: 'text.secondary', opacity: 0.8 }}>
                 Simon Baker is a clinical hypnotherapist, mental strength coach, radio host and former racing driver who is giving you the mental edge.{' '}
+              </Typography>
+            </Stack>
+            <Stack direction="row" justifyContent="space-between">
+              <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+                Website by TezD
+              </Typography>
+
+              <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+                © 2023. All rights reserved
               </Typography>
             </Stack>
           </Stack>
@@ -91,7 +100,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       {/* <Divider /> */}
-      <Container>
+      {/* <Container>
         <Stack spacing={2.5} direction="row" justifyContent="space-between" sx={{ py: 2, textAlign: 'center' }}>
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             Website by TezD
@@ -111,7 +120,7 @@ const Footer = () => {
             </Link>
           </Stack>
         </Stack>
-      </Container>
+      </Container> */}
     </>
   );
 };

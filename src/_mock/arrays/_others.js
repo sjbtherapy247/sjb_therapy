@@ -57,12 +57,12 @@ export const _socials = [
     icon: 'carbon:logo-linkedin',
     color: '#007EBB',
   },
-  // {
-  //   value: 'twitter',
-  //   label: 'Twitter',
-  //   icon: 'carbon:logo-twitter',
-  //   color: '#00AAEC',
-  // },
+  {
+    value: 'twitter',
+    label: 'Twitter',
+    icon: 'carbon:logo-twitter',
+    color: '#00AAEC',
+  },
 ];
 
 export const _socialsSimo = [
