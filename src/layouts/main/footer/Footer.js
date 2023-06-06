@@ -16,8 +16,8 @@ const Footer = () => {
                 <Link href="/services" variant="body2" sx={{ color: 'text.primary' }}>
                   Services
                 </Link>
-                <Link href="/research" variant="body2" sx={{ color: 'text.primary' }}>
-                  InSights/Research
+                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                  About Simon
                 </Link>
               </Stack>
               <Stack spacing={1} alignItems="center">
@@ -29,8 +29,8 @@ const Footer = () => {
                 </Link>
               </Stack>
               <Stack spacing={1} alignItems="center">
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
-                  About Simon
+                <Link href="/research" variant="body2" sx={{ color: 'text.primary' }}>
+                  InSights
                 </Link>
                 <Link variant="body2" sx={{ color: 'text.primary' }}>
                   Contact Us
