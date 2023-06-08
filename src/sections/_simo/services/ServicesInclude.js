@@ -63,13 +63,17 @@ import SvgColor from 'src/components/svg-color';
 export default function ServicesInclude({ services }) {
   return (
     <Container
+      id="servicesInclude"
       sx={{
         textAlign: 'center',
         pt: { xs: 5, md: 6 },
         pb: { xs: 10, md: 15 },
+        // id:"servicesInclude"
       }}
     >
-      <Typography variant="h2">Services Include</Typography>
+      <Typography sx={{ pb: 6 }} variant="h2">
+        HypnoTherapy Services
+      </Typography>
 
       {/* <Typography sx={{ mt: 3, mx: 'auto', maxWidth: 480, color: 'text.secondary', mb: { xs: 8, md: 10 } }}>Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</Typography> */}
 

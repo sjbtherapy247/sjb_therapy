@@ -33,16 +33,16 @@ export default function ReasearchView({ researchDocs }) {
 
           <Grid xs={12} md={4}>
             <BlogSidebar
-              author={{ name: 'Tezza D', role: 'Developer' }}
               popularTags={_tags}
               categories={_categories}
-              recentPosts={{ list: researchDocs.slice(-4) }}
-              advertisement={{
-                title: 'Advertisement',
-                description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',
-                imageUrl: _mock.image.marketing(9),
-                path: '',
-              }}
+              recentPosts={researchDocs.slice(-4)}
+              // recentPosts={{ list: researchDocs.slice(-4) }}
+              // advertisement={{
+              //   title: 'Advertisement',
+              //   description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',
+              //   imageUrl: _mock.image.marketing(9),
+              //   path: '',
+              // }}
             />
           </Grid>
         </Grid>

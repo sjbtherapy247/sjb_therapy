@@ -21,6 +21,7 @@ export default function ServicesView({ services, pricing }) {
       <ServicesBenefits />
 
       <PricingHome plans={pricing} />
+
       <Testimonial />
     </>
   );

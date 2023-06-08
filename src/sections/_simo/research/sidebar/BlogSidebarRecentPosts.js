@@ -7,13 +7,11 @@ import PostItemMobile from '../components/PostItemMobile';
 // ----------------------------------------------------------------------
 
 export default function BlogSidebarRecentPosts({ recentPosts }) {
-  const { list } = recentPosts;
-
   return (
     <Stack spacing={3}>
-      <Typography variant="h5">Recent Posts</Typography>
+      <Typography variant="h5">Recent InSights</Typography>
 
-      {list.map((post) => (
+      {recentPosts.map((post) => (
         <PostItemMobile key={post.id} post={post} onSiderbar />
       ))}
     </Stack>

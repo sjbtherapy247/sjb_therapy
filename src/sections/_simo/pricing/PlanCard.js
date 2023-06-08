@@ -96,10 +96,10 @@ export default function PlanCard({ plan }) {
             // target="_blank"
             // rel="noopener"
             variant="body2"
-            href="/services"
+            href="#servicesInclude"
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            More Details
+            Hypnotherapy Services
             <Iconify icon="carbon:chevron-right" width={16} sx={{ ml: 1 }} />
           </Link>
         </Stack>

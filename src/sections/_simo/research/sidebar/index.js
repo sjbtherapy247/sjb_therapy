@@ -18,7 +18,7 @@ export default function BlogSidebar({ author, categories, popularTags, recentPos
 
   return (
     <>
-      {author && isMdUp && <BlogSidebarAuthor author={author} />}
+      {/* {author && isMdUp && <BlogSidebarAuthor author={author} />} */}
 
       {isMdUp && (
         <TextField
