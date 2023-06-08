@@ -88,7 +88,7 @@ export default function ServiceView({ service }) {
 
       <Container>
         <Stack direction="row" alignItems="center">
-          <CustomBreadcrumbs sx={{ my: 3, flexGrow: 1 }} links={[{ name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: title }]} />
+          <CustomBreadcrumbs sx={{ my: 3, flexGrow: 1 }} links={[{ name: 'Home', href: '/' }, { name: 'Services', href: '/services#hypnotherapyServices' }, { name: title }]} />
           <IconButton onClick={handleOpen} color={open ? 'primary' : 'default'}>
             <Iconify icon="carbon:share" />
           </IconButton>
