@@ -43,7 +43,9 @@ export default function AboutCoreValues() {
         pb: { xs: 5, md: 15 },
       }}
     >
-      <Typography variant="h2">Our Core Values</Typography>
+      <Typography sx={{ mb: 4 }} variant="h2">
+        Our Core Values
+      </Typography>
       <Typography
         sx={{
           mt: 1,

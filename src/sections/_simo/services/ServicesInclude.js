@@ -65,7 +65,7 @@ export default function ServicesInclude({ services }) {
   return (
     <>
       <div style={{ position: 'relative' }}>
-        <div id="servicesInclude" style={{ position: 'absolute', top: '-60px' }} />
+        <div id="hypnotherapyServices" style={{ position: 'absolute', top: '-60px' }} />
       </div>
 
       <Container
@@ -73,11 +73,11 @@ export default function ServicesInclude({ services }) {
           textAlign: 'center',
           pt: { xs: 5, md: 6 },
           pb: { xs: 10, md: 15 },
-          // id:"servicesInclude"   looks shit
+          // id:"hypnotherapyServices"   looks shit
         }}
       >
         <Typography sx={{ pb: 6 }} variant="h2">
-          HypnoTherapy Services
+          Hypnotherapy Services
         </Typography>
 
         {/* <Typography sx={{ mt: 3, mx: 'auto', maxWidth: 480, color: 'text.secondary', mb: { xs: 8, md: 10 } }}>Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</Typography> */}
@@ -104,7 +104,7 @@ export default function ServicesInclude({ services }) {
                 </Typography>
               </Link>
 
-              <Typography sx={{ color: 'text.secondary' }}> {service.description} </Typography>
+              <Typography sx={{ color: 'text.disabled' }}> {service.description} </Typography>
             </div>
           ))}
         </Box>

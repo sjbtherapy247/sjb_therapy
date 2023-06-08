@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Typography, useTheme } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import { bgGradient } from 'src/utils/cssStyles';
 // components
@@ -11,6 +11,8 @@ import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel'
 // local
 import { useRef } from 'react';
 import useResponsive from 'src/hooks/useResponsive';
+import Iconify from 'src/components/iconify/Iconify';
+import { Stack } from '@mui/system';
 import PlanCard from './PlanCard';
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -89,10 +91,16 @@ export default function PricingHome({ plans }) {
           {/* </m.div> */}
 
           <m.div variants={varFade().inUp}>
-            <Typography sx={{ color: 'text.secondary' }}>
-              In summary.. you can pay on a per session basis or purchase a 3-session bundle. Hypnotherapy is a process, it usually takes three sessions to address the issues effectively, However, the Quit Smoking in 90 minutes therapy follows a
-              different approach. For consultation details please check out our Hypnotherapy services page.
-            </Typography>
+            <Stack spacing={6} alignItems="center">
+              <Typography sx={{ color: 'text.secondary' }}>
+                Pay on a per session basis or purchase a 4-session bundle. Hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, However, the Quit Smoking follows a different approach and can be done in a
+                single 90 minute session. We also offer a free 15 min initial consultation so you can explore if this is right for you.
+              </Typography>
+
+              <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />} target="_blank" rel="noopener" href="/">
+                Book Your Free Session
+              </Button>
+            </Stack>
           </m.div>
         </Box>
 

@@ -7,7 +7,6 @@ import NextLink from 'next/link';
 import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
-import Image from 'src/components/image';
 import Label from 'src/components/label';
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/system';
@@ -15,10 +14,10 @@ import { Box } from '@mui/system';
 // ----------------------------------------------------------------------
 
 export default function PlanCard({ plan }) {
-  const { license, commons, options, icons, price } = plan;
+  const { license, commons, options, price } = plan;
   const theme = useTheme();
 
-  const popular = license === '3-Session Bundle';
+  const popular = license === '4-Session Bundle';
 
   return (
     <Card
@@ -39,7 +38,7 @@ export default function PlanCard({ plan }) {
 
       <Stack spacing={3}>
         <Stack direction="row" justifyContent="flex-end">
-          <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase', position: 'absolute', top: 70, left: 32, zIndex: 9 }}>
+          <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase', position: 'absolute', top: 70, left: 32 }}>
             {license}
           </Typography>
 
@@ -96,7 +95,7 @@ export default function PlanCard({ plan }) {
             // target="_blank"
             // rel="noopener"
             variant="body2"
-            href="#servicesInclude"
+            href="#hypnotherapyServices"
             sx={{ display: 'flex', alignItems: 'center' }}
           >
             Hypnotherapy Services

@@ -4,7 +4,7 @@ export const sessionPricing = [
     price: '245',
     commons: ['90 min initial consultation', 'Personalised trance session audios', 'After session notes', 'Online or in person'],
     options: [
-      { title: 'Returning consultation $175', disabled: false },
+      { title: 'Return consultation sessions - $175', disabled: false },
       { title: 'Important to reinforce previous session', disabled: false },
     ],
   },
