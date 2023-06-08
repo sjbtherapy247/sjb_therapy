@@ -56,7 +56,7 @@ export default function FeaturedPosts({ posts }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     // fade: true,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     rtl: Boolean(theme.direction === 'rtl'),
     beforeChange: (current, next) => setSelected(next),
     ...CarouselDots({
@@ -124,7 +124,7 @@ export default function FeaturedPosts({ posts }) {
           </Carousel>
         </CarouselArrows>
       </Box>
-
+      {/* background image */}
       {posts.map((post, index) => selected === index && <Image key={post.id} alt="post cover" src={post.coverImg} sx={{ position: 'absolute', top: 0, width: 1, height: 1 }} />)}
 
       <StyledOverlay />

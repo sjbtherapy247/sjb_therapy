@@ -15,8 +15,8 @@ export default function MarketingServicesPage() {
   return (
     <>
       <Head>
-        <title>Simply Just Believe | SJB Therapy</title>
-        <meta name="SjB Therapy" content="SjB Therapy - Our Hypnotherapy Mission - Simply just Believe" />
+        <title>Our Mission | SJB Therapy</title>
+        <meta name="Our Mission" content="Our mission at sjb.hypnotherapy is to combine power, passion and commitment to everything we do. Whether it's healing or performance you're after, we're here." />
       </Head>
 
       <MissionView />

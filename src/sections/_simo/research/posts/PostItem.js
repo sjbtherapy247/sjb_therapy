@@ -39,7 +39,7 @@ export default function PostItem({ post }) {
   const { url, title, duration, coverImg, author, createdAt } = post;
 
   return (
-    <Stack component={m.div} whileHover="hover" variants={varHover(1)} transition={varTranHover()} sx={{ borderRadius: 2, overflow: 'hidden', position: 'relative' }}>
+    <Stack component={m.div} whileHover="hover" variants={varHover(1)} transition={varTranHover()} sx={{ borderRadius: 1, overflow: 'hidden', position: 'relative' }}>
       <m.div variants={varHover(1.25)} transition={varTranHover()}>
         <Image src={coverImg} alt={title} ratio="3/4" />
       </m.div>

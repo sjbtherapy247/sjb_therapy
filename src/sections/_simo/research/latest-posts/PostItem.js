@@ -42,7 +42,7 @@ export default function PostItem({ post }) {
       component={m.div}
       whileHover="hover"
       sx={{
-        borderRadius: 4,
+        borderRadius: 1,
         overflow: 'hidden',
         position: 'relative',
         boxShadow: (theme) => theme.customShadows.z12,

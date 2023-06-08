@@ -24,9 +24,9 @@ export default function PostItem({ post }) {
         xs: 'column',
         md: 'row',
       }}
-      sx={{ bgcolor: 'background.default', borderRadius: 2 }}
+      sx={{ bgcolor: 'background.default' }}
     >
-      <Image src={coverImg} alt={title} sx={{ flexGrow: 1, height: { xs: 200, md: 500 } }} />
+      <Image src={coverImg} alt={title} sx={{ flexGrow: 1, height: { xs: 200, md: 400 } }} />
 
       <Stack
         justifyContent="space-between"

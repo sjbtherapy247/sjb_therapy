@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import NextLink from 'next/link';
 // @mui
 import { Stack, Link } from '@mui/material';
 // utils
@@ -12,15 +13,10 @@ import PostTimeBlock from './PostTimeBlock';
 // ----------------------------------------------------------------------
 
 export default function PostItemMobile({ post, onSiderbar }) {
-  const { title, duration, coverImg, createdAt } = post;
+  const { url, title, duration, coverImg, createdAt } = post;
 
   return (
-    <Stack
-      spacing={2}
-      direction="row"
-      alignItems={{ xs: 'flex-start', md: 'unset' }}
-      sx={{ width: 1 }}
-    >
+    <Stack spacing={2} direction="row" alignItems={{ xs: 'flex-start', md: 'unset' }} sx={{ width: 1 }}>
       <Image
         alt={title}
         src={coverImg}
@@ -28,12 +24,12 @@ export default function PostItemMobile({ post, onSiderbar }) {
           width: 80,
           height: 80,
           flexShrink: 0,
-          borderRadius: 1.5,
+          borderRadius: 1,
         }}
       />
 
       <Stack spacing={onSiderbar ? 0.5 : 1}>
-        <Link color="inherit">
+        <Link component={NextLink} href={`/research/${url}`} color="inherit">
           <TextMaxLine variant={onSiderbar ? 'subtitle2' : 'h6'}>{title}</TextMaxLine>
         </Link>
 
@@ -47,11 +43,7 @@ PostItemMobile.propTypes = {
   onSiderbar: PropTypes.bool,
   post: PropTypes.shape({
     coverImg: PropTypes.string,
-    createdAt: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-      PropTypes.instanceOf(Date),
-    ]),
+    createdAt: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),
     duration: PropTypes.string,
     title: PropTypes.string,
   }),

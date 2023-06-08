@@ -10,6 +10,7 @@ import Iconify from 'src/components/iconify';
 import Image from 'src/components/image';
 import Label from 'src/components/label';
 import { useTheme } from '@emotion/react';
+import { Box } from '@mui/system';
 
 // ----------------------------------------------------------------------
 
@@ -17,32 +18,28 @@ export default function PlanCard({ plan }) {
   const { license, commons, options, icons, price } = plan;
   const theme = useTheme();
 
-  const standardLicense = license === 'Single Session';
-
-  const plusLicense = license === '3-Session Bundle';
-
-  const extendedLicense = license === 'Extended';
+  const popular = license === '3-Session Bundle';
 
   return (
     <Card
       sx={{
         p: 4,
         boxShadow: theme.customShadows.z24,
-        ...(plusLicense && {
-          py: 8,
+        ...(popular && {
+          // py: 8,
           boxShadow: theme.customShadows.z24,
         }),
       }}
     >
-      {plusLicense && (
+      {popular && (
         <Label color="success" sx={{ position: 'absolute', top: 20, left: 20 }}>
           POPULAR
         </Label>
       )}
 
       <Stack spacing={3}>
-        <Stack direction="row" justifyContent="space-between">
-          <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase' }}>
+        <Stack direction="row" justifyContent="flex-end">
+          <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase', position: 'absolute', top: 70, left: 32, zIndex: 9 }}>
             {license}
           </Typography>
 
@@ -56,7 +53,7 @@ export default function PlanCard({ plan }) {
           </Stack>
         </Stack>
 
-        {license === 'Standard' ? (
+        {/* {license === 'Standard' ? (
           <Image alt="standard" src={icons[0]} sx={{ width: 24, height: 24, color: 'primary' }} />
         ) : (
           <Stack direction="row" spacing={1.5}>
@@ -64,12 +61,14 @@ export default function PlanCard({ plan }) {
               <Image key={icon} alt={icon} src={icon} sx={{ width: 24, height: 24 }} />
             ))}
           </Stack>
-        )}
+        )} */}
 
-        <Stack spacing={2.5}>
+        <Stack spacing={2.5} sx={{ pt: 4 }}>
           {commons.map((option) => (
             <Stack key={option} spacing={1.5} direction="row" alignItems="center">
-              <Iconify icon="carbon:checkmark-outline" color={theme.palette.primary.main} sx={{ width: 20, height: 20 }} />
+              <Box sx={{ minWidth: 20 }}>
+                <Iconify icon="carbon:checkmark-outline" color={theme.palette.primary.main} sx={{ color: 'primary', width: 20, height: 20 }} />
+              </Box>{' '}
               <Typography variant="body2">{option}</Typography>
             </Stack>
           ))}
@@ -77,8 +76,10 @@ export default function PlanCard({ plan }) {
           <Divider sx={{ borderStyle: 'dashed' }} />
 
           {options.map((option) => (
-            <Stack key={option.title} spacing={1.5} direction="row" alignItems="center">
-              <Iconify icon="carbon:checkmark-outline" color={theme.palette.primary.main} sx={{ color: 'primary', width: 20, height: 20 }} />
+            <Stack key={option.title} spacing={1.5} direction="row" alignItems="center" sx={{ minWidth: 24 }}>
+              <Box sx={{ minWidth: 20 }}>
+                <Iconify icon="carbon:checkmark-outline" color={theme.palette.primary.main} sx={{ color: 'primary', width: 20, height: 20 }} />
+              </Box>
               <Typography variant="body2">{option.title}</Typography>
             </Stack>
           ))}
