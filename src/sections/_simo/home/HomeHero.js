@@ -1,10 +1,12 @@
+// next
+import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Stack, Button, Container, Typography, Unstable_Grid2 as Grid } from '@mui/material';
+import { Stack, Button, Container, Typography, Unstable_Grid2 as Grid, Link } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // routes
-import { paths } from 'src/routes/paths';
+// import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
 import HomeSimon from './HomeSimon';
@@ -56,9 +58,11 @@ export default function HomeHero() {
                 your tomorrow begin today.
               </Typography>
 
-              <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />} target="_blank" rel="noopener" href={paths.figmaPreview}>
-                Your Free 15
-              </Button>
+              <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">
+                <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
+                  Your Free 15
+                </Button>
+              </Link>
             </Stack>
           </Grid>
 

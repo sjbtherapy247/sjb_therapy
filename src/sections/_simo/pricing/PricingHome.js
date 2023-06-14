@@ -63,6 +63,9 @@ export default function PricingHome({ plans }) {
 
   return (
     <StyledRoot>
+      <div style={{ position: 'relative' }}>
+        <div id="hypnotherapyPackages" style={{ position: 'absolute', top: '-100px' }} />
+      </div>
       <Container
         component={MotionViewportReAnimate}
         sx={{
