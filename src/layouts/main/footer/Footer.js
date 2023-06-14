@@ -1,3 +1,6 @@
+// next
+import NextLink from 'next/link';
+// mui
 import { Box, Button, Container, Divider, Unstable_Grid2 as Grid, IconButton, InputAdornment, Link, Stack, TextField, Typography, alpha, useTheme } from '@mui/material';
 import { _socialsSimo } from 'src/_mock';
 import Iconify from 'src/components/iconify/Iconify';
@@ -13,26 +16,26 @@ const Footer = () => {
           <Stack spacing={{ xs: 3, md: 5 }}>
             <Box display="grid" gridTemplateColumns="repeat(3, 1fr)">
               <Stack spacing={1} alignItems="center">
-                <Link href="/services" variant="body2" sx={{ color: 'text.primary' }}>
+                <Link component={NextLink} href="/services" variant="body2" sx={{ color: 'text.primary' }}>
                   Services
                 </Link>
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                <Link component={NextLink} href="/" variant="body2" sx={{ color: 'text.primary' }}>
                   About Simon
                 </Link>
               </Stack>
               <Stack spacing={1} alignItems="center">
-                <Link href="/mission" variant="body2" sx={{ color: 'text.primary' }}>
+                <Link component={NextLink} href="/mission" variant="body2" sx={{ color: 'text.primary' }}>
                   Our Mission
                 </Link>
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                <Link component={NextLink} href="/" variant="body2" sx={{ color: 'text.primary' }}>
                   Privacy
                 </Link>
               </Stack>
               <Stack spacing={1} alignItems="center">
-                <Link href="/insights" variant="body2" sx={{ color: 'text.primary' }}>
+                <Link component={NextLink} href="/insights" variant="body2" sx={{ color: 'text.primary' }}>
                   InSights
                 </Link>
-                <Link variant="body2" sx={{ color: 'text.primary' }}>
+                <Link component={NextLink} href="/" variant="body2" sx={{ color: 'text.primary' }}>
                   Contact Us
                 </Link>
               </Stack>
