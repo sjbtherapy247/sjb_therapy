@@ -116,7 +116,7 @@ export default function ServiceView({ service }) {
             <Markdown content={content} />
 
             {/* {tags.length && <PostTags tags={tags} />} */}
-            <Link component={NextLink} href={buttonLink}>
+            <Link component={NextLink} href="/services#hypnotherapyPackages">
               <Button variant="contained" sx={{ mb: 3 }} endIcon={<Iconify icon="carbon:launch" />}>
                 Book Now
               </Button>
