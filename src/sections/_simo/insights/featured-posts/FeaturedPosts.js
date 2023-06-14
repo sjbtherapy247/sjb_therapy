@@ -28,7 +28,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 const StyledOverlay = styled('div')(({ theme }) => ({
   ...bgGradient({
     startColor: `${alpha(theme.palette.common.black, theme.palette.mode === 'light' ? 0 : 0.6)} 0%`,
-    endColor: `${theme.palette.common.black} 75%`,
+    endColor: `${theme.palette.common.black} 95%`,
   }),
   top: 0,
   left: 0,
