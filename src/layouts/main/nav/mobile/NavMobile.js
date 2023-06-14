@@ -71,9 +71,11 @@ export default function NavMobile({ data }) {
           </List>
 
           <Stack spacing={1.5} sx={{ p: 3 }}>
-            <Button fullWidth variant="contained">
-              Book Now
-            </Button>
+            <Link component={NextLink} href="/services#hypnotherapyPackages">
+              <Button fullWidth variant="contained">
+                Book Now
+              </Button>
+            </Link>
           </Stack>
         </Scrollbar>
       </Drawer>

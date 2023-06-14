@@ -85,7 +85,7 @@ export default function PlanCard({ plan }) {
         </Stack>
 
         <Stack alignItems="flex-end" spacing={3}>
-          <Button size="large" fullWidth variant="contained" color="primary" target="_blank" rel="noopener" href={paths.zoneStore}>
+          <Button size="large" fullWidth variant="contained" color="primary" target="_blank" rel="noopener" href="/">
             Choose Package
           </Button>
 
