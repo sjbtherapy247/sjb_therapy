@@ -178,8 +178,7 @@ export default function ArticleView({ post, allPosts }) {
 
       <Divider />
 
-      {/* <LatestPosts posts={allPosts.filter((doc) => doc.title !== title).slice(0, 6)} /> */}
-      {/* <LatestPosts posts={allPosts.slice(0, 6)} /> */}
+      <LatestPosts posts={allPosts.filter((doc) => doc.title !== title).slice(0, 6)} />
 
       <Popover
         open={!!open} /* open is e.currenttarget so force it to boolean */
