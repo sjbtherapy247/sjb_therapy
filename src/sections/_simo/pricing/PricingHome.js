@@ -1,20 +1,21 @@
+// react
+import { useRef } from 'react';
+// next
+import NextLink from 'next/link';
+// libs
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
-import { Box, Button, Container, Link, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Link, Typography, useTheme, Stack } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import { bgGradient } from 'src/utils/cssStyles';
 // components
 import { varFade, MotionViewportReAnimate } from 'src/components/animate';
 import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel';
-
 // local
-import { useRef } from 'react';
 import useResponsive from 'src/hooks/useResponsive';
 import Iconify from 'src/components/iconify/Iconify';
-import { Stack } from '@mui/system';
 import PlanCard from './PlanCard';
-import NextLink from 'next/link';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(5),
@@ -30,8 +31,6 @@ export default function PricingHome({ plans }) {
   const theme = useTheme();
 
   const isMdUp = useResponsive('up', 'md');
-
-  console.log(isMdUp);
 
   const carouselRef = useRef(null);
 

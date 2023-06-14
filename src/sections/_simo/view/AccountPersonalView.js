@@ -16,7 +16,7 @@ import { AccountLayout } from '../layout';
 
 // ----------------------------------------------------------------------
 
-const GENDER_OPTIONS = ['Male', 'Female', 'Other'];
+const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ export default function AccountPersonalView() {
     // gender: Yup.string().required('Gender is required'),
     // streetAddress: Yup.string().required('Street address is required'),
     // city: Yup.string().required('City is required'),
-    // zipCode: Yup.string().required('Zip code is required'),
+    // postCode: Yup.string().required('Zip code is required'),
   });
 
   const defaultValues = {
@@ -45,9 +45,9 @@ export default function AccountPersonalView() {
     emailAddress: 'nannie_abernathy70@yahoo.com',
     phoneNumber: '0401234567',
     birthday: null,
-    gender: 'Male',
+    gender: 'female',
     streetAddress: '',
-    zipCode: '',
+    postCode: '2096',
     city: '',
     country: 'Australia',
     oldPassword: '',
@@ -120,7 +120,7 @@ export default function AccountPersonalView() {
 
             <RHFTextField name="streetAddress" label="Street Address" />
 
-            <RHFTextField name="zipCode" label="Zip Code" />
+            <RHFTextField name="postCode" label="Post Code" />
 
             <RHFTextField name="city" label="City" />
 
