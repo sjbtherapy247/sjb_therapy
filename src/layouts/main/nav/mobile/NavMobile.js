@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 // next
 import NextLink from 'next/link';
 // @mui
-import { Link, List, Drawer, IconButton, Button, Stack } from '@mui/material';
+import { Link, List, Drawer, IconButton, Button, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 // config
 import { NAV } from 'src/config-global';
@@ -13,7 +13,6 @@ import { NAV } from 'src/config-global';
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
 //
-import { Box } from '@mui/system';
 import Image from 'src/components/image/Image';
 //
 import NavList from './NavList';
@@ -70,13 +69,13 @@ export default function NavMobile({ data }) {
             ))}
           </List>
 
-          <Stack spacing={1.5} sx={{ p: 3 }}>
+          <Box sx={{ p: 3 }}>
             <Link component={NextLink} href="/services#hypnotherapyPackages">
-              <Button fullWidth variant="contained">
+              <Button fullWidth variant="contained" onClick={handleClose}>
                 Book Now
               </Button>
             </Link>
-          </Stack>
+          </Box>
         </Scrollbar>
       </Drawer>
     </>
