@@ -61,15 +61,7 @@ export const servicesDescription = [
 
       <p><strong>How and where this can be applied</strong></p>
       <p>Hypnotherapy is never a one-size-fits-all, and the TRANCEformd™ model is the structure that we work from to shape our sessions together.</p>
-
-
-      <p><strong>Button - Book Now</strong></p>
-
-
-      <p><strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a></p>
-
-
-      <p><strong>Links to other Services below?</strong></p>`,
+      <p>If you're ready to take the next step, book your free 15 minute consultation and lets go!</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_file.svg',
   },
