@@ -83,12 +83,12 @@ export default function PlanCard({ plan }) {
             </Stack>
           ))}
         </Stack>
-
-        <Stack alignItems="flex-end" spacing={3}>
-          <Button size="large" fullWidth variant="contained" color="primary" target="_blank" rel="noopener" href="/">
+        <Link component={NextLink} href="/">
+          <Button size="large" fullWidth variant="contained" color="primary">
             Choose Package
           </Button>
-
+        </Link>
+        <Stack alignItems="flex-end" spacing={3}>
           <Link
             component={NextLink}
             color="text.secondary"
