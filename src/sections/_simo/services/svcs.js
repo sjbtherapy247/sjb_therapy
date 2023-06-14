@@ -3,7 +3,7 @@ export const servicesDescription = [
     title: 'Anxiety and Phobias',
     url: 'anxiety-and-phobias',
     buttonLink: '/insights',
-    buttonTitle: 'Insights - Hypnotherapy for Sports and Performance',
+    buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
     description: 'Using therapeutic approaches to address and alleviate anxiety disorders, phobias, and panic attacks.',
     content:
       'Unlocking next-level performance in sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.',
