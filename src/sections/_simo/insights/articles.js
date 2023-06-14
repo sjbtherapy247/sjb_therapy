@@ -78,7 +78,7 @@ export const research = [
     url: 'quit-smoking-with-hypnosis',
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
     buttonLink: '/hypnotherapy-services/quit-smoking-with-hypnotherapy/',
-    services: 'If would like to know more about our Quit Smoking Forever service.. .',
+    services: 'If would like to know more about our Quit Smoking Forever service..',
     title: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
     description:
       "Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let's explore how",

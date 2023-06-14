@@ -68,7 +68,7 @@ export const servicesDescription = [
   {
     title: 'Quit Smoking Forever',
     url: 'quit-smoking-with-hypnotherapy',
-    buttonTitle: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
+    buttonTitle: 'InSights - Quit Smoking with Hypnosis: Achieve Lasting Results',
     buttonLink: '/insights/quit-smoking-with-hypnosis/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Specialized program and interventions to help you quit smoking and overcome nicotine and/or other addictions',
