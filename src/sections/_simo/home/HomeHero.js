@@ -26,9 +26,9 @@ const StyledRoot = styled('div')(({ theme }) => ({
 export default function HomeHero() {
   return (
     <StyledRoot>
-      <Container sx={{ p: 0, height: 1 }}>
+      <Container sx={{ p: 0 }}>
         <Grid container columnSpacing={3} alignItems="center" sx={{ height: 1 }}>
-          <Grid xs={12} md={5}>
+          <Grid xs={12} md={6} sx={{ px: 4 }}>
             <Stack
               spacing={4}
               justifyContent="center"
@@ -40,7 +40,7 @@ export default function HomeHero() {
             >
               <div>
                 <Typography variant="h3">Simply Just Believe</Typography>
-                <Typography variant="h5">SJB Therapy</Typography>
+                <Typography variant="h5">sjb.hypnotherapy</Typography>
               </div>
               <div>
                 <Typography variant="h2">Unlock Your Mind</Typography>
@@ -48,26 +48,21 @@ export default function HomeHero() {
               </div>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon, welcome to sjb.hypnotherapy. I&apos;m glad you&apos;ve found your way here because I suspect that you’re either facing a challenge or seeking to unlock your true potential. Whatever it is, know that you&apos;re in
-                the right place. Please book your free 15-minute consultation so we can explore the best path forward together. <br />
+                Hi, I&apos;m Simon, welcome to sjb.hypnotherapy, i&apos;m glad you&apos;ve found your way here. Whether you&apos;ve arrived because you’re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
+                place and you don&apos;t have to face things alone.
                 <br />
-                Remember, you don&apos;t have to face your challenges alone. Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Let your tomorrow begin today!
-                {/* <br /> Here at SjB Therapy we are fully trained in healing hypnotherapy,
-                psychotherapy and counselling, so whatever you need, we can almost certainly help.
-                Hit the button below and book in for your first session.
-                <br /> Oh and we give you the first 15 minutes free. <br />
-                No matter what is causing your current issue, you can still book in for your first
-                consult safe in the knowledge that if you don’t feel it’s for you, there’s no
-                commitment. */}
+                <br />
+                Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Please book your free 15-minute consultation so we can explore the best path forward together and let
+                your tomorrow begin today.
               </Typography>
 
               <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />} target="_blank" rel="noopener" href={paths.figmaPreview}>
-                Book Your Free Session
+                Your Free 15
               </Button>
             </Stack>
           </Grid>
 
-          <Grid xs={12} md={7} sx={{ pb: { xs: 4, md: 0 }, display: 'flex', justifyContent: 'center' }}>
+          <Grid xs={12} md={6} sx={{ pb: { xs: 4, md: 0 }, display: 'flex', justifyContent: 'center' }}>
             <HomeSimon />
           </Grid>
         </Grid>

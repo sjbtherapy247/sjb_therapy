@@ -39,7 +39,7 @@ export default function PostItem({ post }) {
         <Stack spacing={1}>
           <PostTimeBlock createdAt={fDate(createdAt)} duration={duration} />
 
-          <Link component={NextLink} href={`/research/${url}`} color="inherit">
+          <Link component={NextLink} href={`/insights/${url}`} color="inherit">
             <TextMaxLine line={3} variant="h3">
               {title}
             </TextMaxLine>

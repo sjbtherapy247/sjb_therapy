@@ -52,7 +52,7 @@ export default function LatestPosts({ posts }) {
   };
 
   const viewAllBtn = (
-    <Button component={NextLink} href="/research" color="primary" endIcon={<Iconify icon="carbon:chevron-right" />}>
+    <Button component={NextLink} href="/insights" color="primary" endIcon={<Iconify icon="carbon:chevron-right" />}>
       View All
     </Button>
   );

@@ -15,8 +15,8 @@ import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
 import { _socials } from 'src/_mock';
 // import Head from 'next/head';
-import { LatestPosts } from 'src/sections/_simo/research';
-import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/research/components';
+import { LatestPosts } from 'src/sections/_simo/insights';
+import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/insights/components';
 import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
@@ -100,7 +100,7 @@ export default function ArticleView({ post, allPosts }) {
       {/* <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" /> */}
 
       <Container>
-        <CustomBreadcrumbs sx={{ my: 3 }} links={[{ name: 'Home', href: '/' }, { name: 'Research', href: '/research' }, { name: title }]} />
+        <CustomBreadcrumbs sx={{ my: 3 }} links={[{ name: 'Home', href: '/' }, { name: 'InSights', href: '/insights' }, { name: title }]} />
       </Container>
 
       <Divider />

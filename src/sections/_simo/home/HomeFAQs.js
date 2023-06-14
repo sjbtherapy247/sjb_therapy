@@ -17,11 +17,11 @@ import { bgGradient } from 'src/utils/cssStyles';
 const CONTENTS = [
   {
     question: `What is hypnotherapy?`,
-    answer: `Hypnotherapy is a therapeutic approach that utilizes hypnosis to induce a relaxed state of focused attention. In this state, individuals become more open to suggestions, allowing for exploration of the subconscious mind and addressing various issues.`,
+    answer: `Hypnotherapy is a therapeutic approach that utilises hypnosis to induce a relaxed state of focused attention. In this state, individuals become more open to suggestions, allowing for exploration of the subconscious mind and addressing various issues.`,
   },
   {
     question: 'How does hypnotherapy work?',
-    answer: `Hypnotherapy works by guiding individuals into a state of deep relaxation and heightened suggestibility. In this state, the therapist can help individuals access their subconscious mind, where they can explore and address underlying thoughts, emotions, and behaviors.`,
+    answer: `Hypnotherapy works by guiding individuals into a state of deep relaxation and heightened suggestibility. In this state, the therapist can help individuals access their subconscious mind, where they can explore and address underlying thoughts, emotions, and behaviours.`,
   },
   {
     question: 'What can hypnotherapy help with?',
@@ -29,11 +29,11 @@ const CONTENTS = [
   },
   {
     question: 'What does it feel like to be hypnotized?',
-    answer: `Being hypnotized is often described as a state of deep relaxation and focused concentration. Individuals may feel calm, peaceful, and detached from their surroundings. Some people may experience heightened awareness or a sense of inward focus.`,
+    answer: `Being hypnotised is often described as a state of deep relaxation and focused concentration. Individuals mostly feel calm, peaceful, and detached from their surroundings. Some people may experience heightened awareness or a sense of inward focus.`,
   },
   {
     question: 'What is the difference between hypnotherapy and psychotherapy?',
-    answer: `Hypnotherapy is a therapeutic approach that utilizes hypnosis to access the subconscious mind, whereas psychotherapy encompasses various talk therapies focused on addressing emotional and mental health issues.`,
+    answer: `Hypnotherapy is a therapeutic approach that utilises hypnosis to access the subconscious mind, whereas psychotherapy encompasses various talk therapies focused on addressing emotional and mental health issues.`,
   },
   {
     question: 'How long does hypnotherapy or psychotherapy treatment typically last?',
@@ -134,7 +134,7 @@ export default function HomeFAQs() {
               <m.div variants={varFade().inUp}>
                 <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                   <Button size="large" color="primary" variant="contained" href="tel:+61407945789" startIcon={<Iconify icon="mdi:cellphone-sound" />} onClick={handleClick}>
-                    Call {click && isSmUp ? ' 0407945789' : null}
+                    Call {click && isSmUp ? ' 0421046147' : null}
                     {/* Call */}
                   </Button>
                   <Button size="large" color="primary" variant="contained" href="mailto:support@sjbtherapy.com?subject=Client questions" startIcon={<Iconify icon="mdi:email-outline" />}>

@@ -29,7 +29,7 @@ export default function PostItemMobile({ post, onSiderbar }) {
       />
 
       <Stack spacing={onSiderbar ? 0.5 : 1}>
-        <Link component={NextLink} href={`/research/${url}`} color="inherit">
+        <Link component={NextLink} href={`/insights/${url}`} color="inherit">
           <TextMaxLine variant={onSiderbar ? 'subtitle2' : 'h6'}>{title}</TextMaxLine>
         </Link>
 

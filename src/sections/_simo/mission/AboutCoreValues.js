@@ -55,7 +55,8 @@ export default function AboutCoreValues() {
           // maxWidth: { md: 540 },
         }}
       >
-        Our core value revolves around unlocking the potential in every client. We are dedicated to helping individuals harness their inner abilities, overcome limitations, and achieve peak performance through the power of clinical hypnotherapy.
+        Our core values revolve around unlocking the potential in every client. We are dedicated to helping individuals heal and harness their inner abilities, overcome limitations, and achieve peak performance through the power of clinical
+        hypnotherapy.
       </Typography>
 
       <Box

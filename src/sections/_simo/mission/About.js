@@ -1,6 +1,7 @@
+import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Box, Container, Typography, Button, Unstable_Grid2 as Grid } from '@mui/material';
+import { Box, Container, Typography, Button, Unstable_Grid2 as Grid, Link } from '@mui/material';
 // utils
 import { fShortenNumber } from 'src/utils/formatNumber';
 // hooks
@@ -13,14 +14,14 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-const COLORS = ['primary', 'secondary', 'warning', 'success'];
+// const COLORS = ['primary', 'secondary', 'warning', 'success'];
 
-const SUMMARY = [
-  { title: 'Years of experience', total: 12, icon: 'carbon:increase-level' },
-  { title: 'Awards', total: 20, icon: 'carbon:trophy' },
-  { title: 'Projects', total: 150, icon: 'carbon:data-vis-4' },
-  { title: 'Happy clients', total: 32000, icon: 'carbon:user-certification' },
-];
+// const SUMMARY = [
+//   { title: 'Years of experience', total: 12, icon: 'carbon:increase-level' },
+//   { title: 'Awards', total: 20, icon: 'carbon:trophy' },
+//   { title: 'Projects', total: 150, icon: 'carbon:data-vis-4' },
+//   { title: 'Happy clients', total: 32000, icon: 'carbon:user-certification' },
+// ];
 
 // ----------------------------------------------------------------------
 
@@ -106,12 +107,17 @@ export default function About() {
             {/* <m.div variants={varFade({ distance: 300 }).inUp}> */}
             <Typography variant="h3">Simply Just Believe</Typography>
             <Typography sx={{ mt: 1, color: 'text.secondary' }}>in</Typography>
-            <Typography sx={{ mt: 1, color: 'text.secondary' }}>Hypnotherapy / Yourself / Progress / Never Giving Up</Typography>
+            <Typography sx={{ mt: 1, color: 'text.secondary' }}>Yourself / Progress / Never Giving Up / Hypnotherapy / Possibilities</Typography>
             {/* </m.div> */}
           </Box>
           {/* <Button variant="outlined" color="inherit" size="large" endIcon={<Iconify icon="carbon:chevron-right" />}>
             Check Our Work
           </Button> */}
+          <Link component={NextLink} href="/services/#hypnotherapyServices">
+            <Button sx={{ mt: 4 }} variant="outlined">
+              Our Services
+            </Button>
+          </Link>
         </Grid>
       </Grid>
 

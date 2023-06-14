@@ -5,7 +5,7 @@ import MainLayout from 'src/layouts/main';
 // sections
 import ArticleView from 'src/sections/_simo/view/ArticleView';
 
-import { research } from 'src/sections/_simo/research/articles';
+import { research } from 'src/sections/_simo/insights/articles';
 
 export async function getStaticPaths() {
   return {

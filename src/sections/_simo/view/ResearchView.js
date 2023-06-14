@@ -5,8 +5,8 @@ import _mock, { _blogMarketingPosts, _categories, _tags } from 'src/_mock';
 //
 
 // import { PostSearchMobile } from 'src/sections/blog/components';
-import BlogSidebar from 'src/sections/_simo/research/sidebar';
-import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/research';
+import BlogSidebar from 'src/sections/_simo/insights/sidebar';
+import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/insights';
 // import NewsletterMarketing from 'src/sections/newsletter/marketing';
 
 // ----------------------------------------------------------------------

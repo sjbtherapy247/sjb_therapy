@@ -1,5 +1,5 @@
 // _mock
-import { research } from 'src/sections/_simo/research/articles';
+import { research } from 'src/sections/_simo/insights/articles';
 // components
 import ScrollProgress from 'src/components/scroll-progress';
 //
@@ -19,7 +19,7 @@ import {
   // HomeFlexibleComponents,
 } from 'src/sections/_simo/home';
 // import TestFooter from 'src/layouts/main/footer/TestFooter';
-import { LatestPosts } from '../research';
+import { LatestPosts } from '../insights';
 
 // ----------------------------------------------------------------------
 

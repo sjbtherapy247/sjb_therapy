@@ -9,7 +9,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 import Image from 'src/components/image';
 import Carousel, { CarouselDots, CarouselArrows } from 'src/components/carousel';
 //
-import PostItem from 'src/sections/_simo/research/featured-posts/PostItem';
+import PostItem from 'src/sections/_simo/insights/featured-posts/PostItem';
 import useResponsive from 'src/hooks/useResponsive';
 
 // ----------------------------------------------------------------------

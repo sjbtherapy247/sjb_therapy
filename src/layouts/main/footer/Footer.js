@@ -29,7 +29,7 @@ const Footer = () => {
                 </Link>
               </Stack>
               <Stack spacing={1} alignItems="center">
-                <Link href="/research" variant="body2" sx={{ color: 'text.primary' }}>
+                <Link href="/insights" variant="body2" sx={{ color: 'text.primary' }}>
                   InSights
                 </Link>
                 <Link variant="body2" sx={{ color: 'text.primary' }}>
@@ -39,7 +39,7 @@ const Footer = () => {
             </Box>
             <Stack alignItems="flex-start" spacing={0}>
               <Typography variant="body2" textAlign="center" sx={{ color: 'text.secondary', opacity: 0.8 }}>
-                Simon Baker is a clinical hypnotherapist, mental strength coach, radio host and former racing driver who is giving you the mental edge.{' '}
+                Simon Baker is a clinical hypnotherapist and mental strength coach, who is giving you the mental edge.{' '}
               </Typography>
             </Stack>
             <Stack direction="row" justifyContent="space-between">

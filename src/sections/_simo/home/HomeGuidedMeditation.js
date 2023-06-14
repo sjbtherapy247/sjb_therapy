@@ -21,7 +21,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
     ...bgGradient({
       direction: 'to right',
       startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 0)} 0%`,
-      endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 1)} 60%`,
+      endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800], 1)} 55%`,
       imgUrl: '/assets/images/simon/guided-med.jpg',
     }),
     backgroundPosition: 'center, left ',
@@ -38,7 +38,7 @@ export default function HomeGuidedMediation() {
     <StyledRoot>
       <Container>
         <Grid container spacing={3} justifyContent="flex-end">
-          <Grid xs={12} md={5}>
+          <Grid xs={12} md={6}>
             <Stack
               spacing={1}
               sx={{
@@ -53,14 +53,15 @@ export default function HomeGuidedMediation() {
                 <br />
                 Hypnotherapy or hypnosis, is used to bring you into a relaxed state where we work on the goals most important to you.
                 <br />
-                <br /> Once you have discussed your preferred outcome, Simon will invite you to relax and allow your mind to be free. Free to choose the different path you have chosen, with the new outcomes you have chosen. Options will be presented
-                to you and you are free to choose which options you take and begin your new life. <br />
+                <br /> Your subconscious mind is the one that runs the programs that trip you up, this is the part of you that the hypnosis will re-train. By creating new neural pathways for your subconscious, you will have a new default setting.
+                Forgetting that you ever ran the old pattern. <br />
                 <br />
-                Your subconscious mind is the one that runs the programs that trip you up, this is the part of you that the hypnosis will re-train. By creating new neural pathways for your subconscious, you will have a new default setting. Forgetting
-                that you ever ran the old pattern.
+                Once we&apos;ve explored your desired outcome, you&apos;ll be invited to embrace a state of deep relaxation, allowing your mind to soar freely. In this state of liberation, you&apos;ll have the power to choose a new path and embrace
+                the transformative outcomes you&apos;ve envisioned. We&apos;ll present you with a range of options, empowering you to make choices that resonate with your aspirations and embark on your journey towards a renewed life. Take control of
+                your destiny and embrace the freedom to craft your own extraordinary future.
               </Typography>
             </Stack>
-            <Link component={NextLink} href="/research/hypnotherapy-understanding-the-mind-body-connection/">
+            <Link component={NextLink} href="/insights/hypnotherapy-understanding-the-mind-body-connection/">
               <Button sx={{ mt: 4 }} variant="outlined">
                 Read More
               </Button>

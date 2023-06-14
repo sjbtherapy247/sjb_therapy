@@ -16,7 +16,9 @@ export default function MarketingServicesPage() {
     <>
       <Head>
         <title>Our Mission | SJB Therapy</title>
-        <meta name="Our Mission" content="Our mission at sjb.hypnotherapy is to combine power, passion and commitment to everything we do. Whether it's healing or performance you're after, we're here." />
+        <meta name="Our Mission" content="Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found." />
+        <meta name="keywords" content="Our Mission, healing and performance" />
+        <meta name="description" content="Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found." />
       </Head>
 
       <MissionView />

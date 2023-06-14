@@ -17,8 +17,8 @@ import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 //
 import { _socials } from 'src/_mock';
 // import Head from 'next/head';
-// import { LatestPosts } from 'src/sections/_simo/research';
-import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/research/components';
+// import { LatestPosts } from 'src/sections/_simo/insights';
+import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/insights/components';
 import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
