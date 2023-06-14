@@ -71,7 +71,7 @@ export default function NavMobile({ data }) {
           </List>
 
           <Stack spacing={1.5} sx={{ p: 3 }}>
-            <Button fullWidth variant="contained" color="inherit">
+            <Button fullWidth variant="contained">
               Book Now
             </Button>
           </Stack>

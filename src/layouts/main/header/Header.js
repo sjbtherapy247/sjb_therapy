@@ -14,6 +14,7 @@ import {
   Tooltip,
   IconButton,
   Badge,
+  Avatar,
 } from '@mui/material';
 // hooks
 import useOffSetTop from 'src/hooks/useOffSetTop';
@@ -38,6 +39,7 @@ import Iconify from 'src/components/iconify/Iconify';
 
 import { bgBlur } from 'src/utils/cssStyles';
 import { useState } from 'react';
+import _mock from 'src/_mock/_mock';
 import { NavMobile, NavDesktop, navConfig } from '../nav';
 import AccountMenu from '../AccountMenu';
 
@@ -178,15 +180,16 @@ export default function Header({ headerOnDark }) {
 
             {loggedIn && (
               <>
-                <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
+                {/* <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
                   <Badge badgeContent={4} color="error">
                     <Iconify icon="carbon:shopping-cart" />
                   </Badge>
-                </IconButton>
+                </IconButton> */}
 
                 {/* <IconButton component={NextLink} href={paths.eCommerce.account.personal} color="inherit"> */}
                 <IconButton onClick={handleOpenUserMenu} color="inherit">
-                  <Iconify icon="carbon:user" />
+                  {/* <Iconify icon="carbon:user" /> */}
+                  <Avatar src={_mock.image.avatar(0)} sx={{ width: 40, height: 40 }} />
                 </IconButton>
               </>
             )}

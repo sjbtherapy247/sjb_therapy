@@ -48,7 +48,7 @@ export default function HomeHero() {
               </div>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon, welcome to sjb.hypnotherapy, i&apos;m glad you&apos;ve found your way here. Whether you&apos;ve arrived because you’re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
+                Hi, I&apos;m Simon, welcome to sjb.hypnotherapy, I&apos;m glad you&apos;ve found your way here. Whether you&apos;ve arrived because you’re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
                 place and you don&apos;t have to face things alone.
                 <br />
                 <br />

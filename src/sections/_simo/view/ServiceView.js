@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NextLink from 'next/link';
 
 // @mui
-import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link } from '@mui/material';
+import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
 // routes
 // import { paths } from 'src/routes/paths';
 // utils
@@ -24,7 +24,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 // ----------------------------------------------------------------------
 
 export default function ServiceView({ service }) {
-  const { url, title, description, heroImg, /* tags, */ content } = service;
+  const { insights, buttonLink, buttonTitle, url, title, description, heroImg, /* tags, */ content } = service;
 
   const [open, setOpen] = useState(null);
   const theme = useTheme();
@@ -116,6 +116,17 @@ export default function ServiceView({ service }) {
             <Markdown content={content} />
 
             {/* {tags.length && <PostTags tags={tags} />} */}
+            <Link component={NextLink} href={buttonLink}>
+              <Button variant="contained" sx={{ mb: 3 }} endIcon={<Iconify icon="carbon:launch" />}>
+                Book Now
+              </Button>
+            </Link>
+            <Typography>{insights}</Typography>
+            <Link component={NextLink} href={buttonLink}>
+              <Button variant="text" sx={{ mt: 0 }} endIcon={<Iconify icon="carbon:launch" />}>
+                {buttonTitle}
+              </Button>
+            </Link>
 
             <PostSocialsShare />
           </Grid>

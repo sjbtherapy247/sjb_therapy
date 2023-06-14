@@ -29,7 +29,7 @@ export default function MissionView() {
       <Testimonial />
       {/* <Testimonial1 testimonials={_testimonials} /> */}
 
-      <HomeFAQs />
+      {/* <HomeFAQs /> */}
     </>
   );
 }

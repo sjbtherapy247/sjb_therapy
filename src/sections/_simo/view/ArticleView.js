@@ -1,6 +1,9 @@
+// next
+import NextLink from 'next/link';
+
 import { useState } from 'react';
 // @mui
-import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme } from '@mui/material';
+import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
 // routes
 // import { paths } from 'src/routes/paths';
 // utils
@@ -22,7 +25,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 // ----------------------------------------------------------------------
 
 export default function ArticleView({ post, allPosts }) {
-  const { title, description, duration, createdAt, author, favorited, heroImg, tags, content } = post;
+  const { title, description, buttonTitle, buttonLink, services, duration, createdAt, author, favorited, heroImg, tags, content } = post;
 
   const [favorite, setFavorite] = useState(favorited);
 
@@ -150,6 +153,18 @@ export default function ArticleView({ post, allPosts }) {
 
             <Markdown content={content} firstLetter />
 
+            <Link component={NextLink} href={buttonLink}>
+              <Button variant="contained" sx={{ mb: 3 }} endIcon={<Iconify icon="carbon:launch" />}>
+                Book Now
+              </Button>
+            </Link>
+            <Typography>{services}</Typography>
+            <Link component={NextLink} href={buttonLink}>
+              <Button variant="text" sx={{ mt: 0 }} endIcon={<Iconify icon="carbon:launch" />}>
+                {buttonTitle}
+              </Button>
+            </Link>
+
             {tags.length && <PostTags tags={tags} />}
 
             <PostSocialsShare />
@@ -163,7 +178,8 @@ export default function ArticleView({ post, allPosts }) {
 
       <Divider />
 
-      <LatestPosts posts={allPosts.slice(0, 6)} />
+      {/* <LatestPosts posts={allPosts.filter((doc) => doc.title !== title).slice(0, 6)} /> */}
+      {/* <LatestPosts posts={allPosts.slice(0, 6)} /> */}
 
       <Popover
         open={!!open} /* open is e.currenttarget so force it to boolean */
