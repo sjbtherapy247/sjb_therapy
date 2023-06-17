@@ -14,7 +14,8 @@ export default function HomeView({ insights }) {
       <HomeBanner />
       <HomeFamous />
       <HomeFAQs />
-      <LatestPosts posts={insights.slice(0, 4)} />
+      <LatestPosts posts={insights} />
+      {/* <LatestPosts posts={insights.slice(0, 4)} /> */}
       {/* <TestFooter /> */}
     </>
   );
