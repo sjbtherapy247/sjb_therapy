@@ -12,12 +12,15 @@ import { useTheme } from '@emotion/react';
 import { Box } from '@mui/system';
 // lib
 import { checkout } from 'src/lib/checkout';
+import { LoadingButton } from '@mui/lab';
 
 // ----------------------------------------------------------------------
 
 export default function PlanCard({ plan, prices }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
+
+  let loading = false;
 
   const popular = license === '4-Session Bundle';
   let purchase = null;
@@ -35,6 +38,7 @@ export default function PlanCard({ plan, prices }) {
   }
 
   const handleCheckout = () => {
+    loading = true;
     checkout(purchase);
   };
 
@@ -103,9 +107,9 @@ export default function PlanCard({ plan, prices }) {
           ))}
         </Stack>
         {/* <Link component={NextLink} href="/"> */}
-        <Button size="large" fullWidth variant="contained" color="primary" onClick={handleCheckout}>
+        <LoadingButton size="large" fullWidth loading={loading} variant="contained" color="primary" onClick={handleCheckout}>
           Choose Package
-        </Button>
+        </LoadingButton>
         {/* </Link> */}
         <Stack alignItems="flex-end" spacing={3}>
           <Link
