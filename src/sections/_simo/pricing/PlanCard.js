@@ -13,6 +13,7 @@ import { Box } from '@mui/system';
 // lib
 import { checkout } from 'src/lib/checkout';
 import { LoadingButton } from '@mui/lab';
+import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
@@ -20,7 +21,7 @@ export default function PlanCard({ plan, prices }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
 
-  let loading = false;
+  const [loading, setLoading] = useState(false);
 
   const popular = license === '4-Session Bundle';
   let purchase = null;
@@ -38,7 +39,7 @@ export default function PlanCard({ plan, prices }) {
   }
 
   const handleCheckout = () => {
-    loading = true;
+    setLoading(true);
     checkout(purchase);
   };
 
