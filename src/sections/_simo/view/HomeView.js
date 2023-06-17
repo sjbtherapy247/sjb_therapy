@@ -27,11 +27,11 @@ export default function HomeView() {
   return (
     <>
       <HomeHero />
-      {/* <HomeGuidedMeditation />
+      <HomeGuidedMeditation />
       <HomeBanner />
       <HomeFamous />
       <HomeFAQs />
-      <LatestPosts posts={research.slice(0, 4)} /> */}
+      {/* <LatestPosts posts={research.slice(0, 4)} /> */}
       {/* <TestFooter /> */}
     </>
   );
