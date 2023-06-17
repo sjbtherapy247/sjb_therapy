@@ -227,7 +227,7 @@ export default function ServicesPage({ servicesDocs, packages, prices }) {
         <title>Our Services | SJB Therapy</title>
       </Head>
 
-      <ServicesView services={servicesDocs} packages={packages} prices={prices} />
+      <ServicesView services={servicesDocs} packages={packages} prices={pricelist || prices} />
     </>
   );
 }
