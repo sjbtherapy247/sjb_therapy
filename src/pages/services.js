@@ -26,7 +26,7 @@ import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
 //   };
 // }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
   const { data: prices } = await stripe.prices.list({
     active: true,
