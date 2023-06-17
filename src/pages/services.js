@@ -9,6 +9,7 @@ import { ServicesView } from 'src/sections/_simo/view';
 
 import { servicesDescription } from 'src/sections/_simo/services/svcs';
 import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
+import { useState } from 'react';
 
 // export async function getServerSideProps() {
 //   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -216,9 +217,10 @@ ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ServicesPage({ servicesDocs, packages, prices }) {
-  let pricelist = null;
+  const [pricelist, setPricelist] = useState(null);
   const getPricelist = async () => {
-    pricelist = await fetch('/api/stripe/pricelist').then((res) => res.json());
+    const price = await fetch('/api/stripe/pricelist').then((res) => res.json());
+    setPricelist(price);
   };
   getPricelist();
   return (
