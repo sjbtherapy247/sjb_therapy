@@ -18,7 +18,7 @@ export const sessionPricing = [
     ],
   },
   {
-    license: 'Quit Smoking ',
+    license: 'Quit Smoking',
     price: '425',
     commons: ['Are you ready to Quit!', 'Single 90 minute session', 'Personalised to improve effectiveness', 'Online or in person'],
     options: [

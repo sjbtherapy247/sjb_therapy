@@ -70,6 +70,6 @@ BlogSidebar.propTypes = {
   }),
   categories: PropTypes.array,
   popularTags: PropTypes.array,
-  recentPosts: PropTypes.object,
+  recentPosts: PropTypes.array,
   sx: PropTypes.object,
 };

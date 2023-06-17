@@ -19,5 +19,5 @@ export default function BlogSidebarRecentPosts({ recentPosts }) {
 }
 
 BlogSidebarRecentPosts.propTypes = {
-  recentPosts: PropTypes.object,
+  recentPosts: PropTypes.array,
 };

@@ -1,7 +1,7 @@
 // next
 import Head from 'next/head';
 // stripe
-// import Stripe from 'stripe';
+import Stripe from 'stripe';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
@@ -20,16 +20,24 @@ import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
 //   return {
 //     props: {
 //       prices,
+//       servicesDocs: [...servicesDescription],
+//       pricing: [...sessionPricing],
 //     },
 //   };
 // }
 
 export async function getStaticProps() {
-  console.log(servicesDescription);
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
+  const { data: prices } = await stripe.prices.list({
+    active: true,
+    limit: 10,
+    expand: ['data.product'],
+  });
   return {
     props: {
+      prices,
       servicesDocs: [...servicesDescription],
-      pricing: [...sessionPricing],
+      packages: [...sessionPricing],
     },
   };
 }
@@ -39,7 +47,7 @@ ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function ServicesPage({ servicesDocs, pricing, prices }) {
+export default function ServicesPage({ servicesDocs, packages, prices }) {
   console.log(prices);
   return (
     <>
@@ -47,7 +55,7 @@ export default function ServicesPage({ servicesDocs, pricing, prices }) {
         <title>Our Services | SJB Therapy</title>
       </Head>
 
-      <ServicesView services={servicesDocs} pricing={pricing} />
+      <ServicesView services={servicesDocs} packages={packages} prices={prices} />
     </>
   );
 }

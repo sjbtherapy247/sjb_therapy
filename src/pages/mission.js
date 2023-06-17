@@ -7,11 +7,11 @@ import { MissionView } from 'src/sections/_simo/view';
 
 // ----------------------------------------------------------------------
 
-MarketingServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+OurMissionPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function MarketingServicesPage() {
+export default function OurMissionPage() {
   return (
     <>
       <Head>

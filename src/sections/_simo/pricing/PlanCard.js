@@ -10,14 +10,33 @@ import Iconify from 'src/components/iconify';
 import Label from 'src/components/label';
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/system';
+// lib
+import { checkout } from 'src/lib/checkout';
 
 // ----------------------------------------------------------------------
 
-export default function PlanCard({ plan }) {
+export default function PlanCard({ plan, prices }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
 
   const popular = license === '4-Session Bundle';
+  let purchase = null;
+  let itemPrice = null;
+  const newClient = true;
+
+  if (prices) {
+    purchase = prices.filter((item) => item?.product?.name === license);
+    if (license === 'Single Session' && newClient) purchase.shift();
+    if (license === 'Single Session' && !newClient) purchase.pop();
+
+    itemPrice = purchase[0].unit_amount / 100;
+    // if (license === 'Single Session' && newClient) itemPrice = purchase[1].unit_amount / 100;
+    console.log(purchase, itemPrice);
+  }
+
+  const handleCheckout = () => {
+    checkout(purchase);
+  };
 
   return (
     <Card
@@ -47,7 +66,7 @@ export default function PlanCard({ plan }) {
               $
             </Typography>
             <Typography variant="h3" component="span">
-              {price}
+              {itemPrice || price}
             </Typography>
           </Stack>
         </Stack>
@@ -83,11 +102,11 @@ export default function PlanCard({ plan }) {
             </Stack>
           ))}
         </Stack>
-        <Link component={NextLink} href="/">
-          <Button size="large" fullWidth variant="contained" color="primary">
-            Choose Package
-          </Button>
-        </Link>
+        {/* <Link component={NextLink} href="/"> */}
+        <Button size="large" fullWidth variant="contained" color="primary" onClick={handleCheckout}>
+          Choose Package
+        </Button>
+        {/* </Link> */}
         <Stack alignItems="flex-end" spacing={3}>
           <Link
             component={NextLink}

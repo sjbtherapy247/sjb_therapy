@@ -1,0 +1,26 @@
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
+
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    try {
+      const { lineitems } = req.body;
+      console.log(lineitems);
+      if (!lineitems.length) return res.status(400).json({ error: 'Bad request - no line items!' });
+      const session = await stripe.checkout.sessions.create({
+        line_items: lineitems,
+        mode: 'payment',
+        // success_url: `${req.headers.origin}/checkout/success?sessionId={CHECKOUT_SESSION_ID}`,
+        success_url: `${req.headers.origin}/services?sessionId={CHECKOUT_SESSION_ID}#hypnotherapyPackages`,
+        cancel_url: `${req.headers.origin}/services?sessionId={CHECKOUT_SESSION_ID}#hypnotherapyPackages`,
+      });
+      return res.status(200).json({ session });
+    } catch (error) {
+      console.log(error);
+      return res.status(error.statusCode || 500).json({ message: error.message });
+    }
+  }
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
+}

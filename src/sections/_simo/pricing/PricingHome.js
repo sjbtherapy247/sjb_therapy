@@ -27,7 +27,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 }));
 // ----------------------------------------------------------------------
 
-export default function PricingHome({ plans }) {
+export default function PricingHome({ plans, prices }) {
   const theme = useTheme();
 
   const isMdUp = useResponsive('up', 'md');
@@ -122,7 +122,7 @@ export default function PricingHome({ plans }) {
           >
             {plans.map((plan) => (
               <m.div key={plan.license} variants={varFade({ distance: 140 }).inDown}>
-                <PlanCard plan={plan} />
+                <PlanCard plan={plan} prices={prices} />
               </m.div>
             ))}
           </Box>
