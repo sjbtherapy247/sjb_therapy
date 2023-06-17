@@ -140,7 +140,7 @@ export default function PricingHome({ plans, prices }) {
               {plans.map((plan) => (
                 <Box key={plan.license} sx={{ position: 'relative', px: 1, py: { xs: 8, md: 10 } }}>
                   {/* <m.div key={plan.license} variants={varFade({ distance: 240 }).inDown}> */}
-                  <PlanCard plan={plan} />
+                  <PlanCard plan={plan} prices={prices} />
                   {/* </m.div> */}
                 </Box>
               ))}
