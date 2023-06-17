@@ -200,6 +200,8 @@ export async function getStaticProps() {
   //   limit: 10,
   //   expand: ['data.product'],
   // });
+  const responseJson = await fetch('http://192.168.0.220:5002/api/stripe/pricelist').then((res) => res.json());
+  console.log(responseJson);
   return {
     props: {
       prices: [...svcs],
