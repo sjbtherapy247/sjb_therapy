@@ -23,7 +23,10 @@ import { LatestPosts } from '../insights';
 
 // ----------------------------------------------------------------------
 
-export default function HomeView() {
+// ----------------------------------------------------------------------
+
+export default function HomeView({ insights }) {
+  console.log('hello', insights);
   return (
     <>
       <HomeHero />

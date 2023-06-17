@@ -11,22 +11,6 @@ import { servicesDescription } from 'src/sections/_simo/services/svcs';
 import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
 import { useEffect, useState } from 'react';
 
-// export async function getServerSideProps() {
-//   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-//   const { data: prices } = await stripe.prices.list({
-//     active: true,
-//     limit: 10,
-//     expand: ['data.product'],
-//   });
-//   return {
-//     props: {
-//       prices,
-//       servicesDocs: [...servicesDescription],
-//       pricing: [...sessionPricing],
-//     },
-//   };
-// }
-
 const svcs = [
   {
     id: 'price_1NJqm8Eu94tSBGzWieZNBnw2',
