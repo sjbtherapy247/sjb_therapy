@@ -216,12 +216,11 @@ ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ServicesPage({ servicesDocs, packages, prices }) {
+  let pricelist = null;
   const getPricelist = async () => {
-    const responseJson = await fetch('/api/stripe/pricelist').then((res) => res.json());
-    console.log(responseJson);
+    pricelist = await fetch('/api/stripe/pricelist').then((res) => res.json());
   };
   getPricelist();
-  console.log(prices);
   return (
     <>
       <Head>
