@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
 // Entry point to website content
 
-export default function HomePage(insights = { insights }) {
+export default function HomePage({ insights }) {
   return (
     <>
       <Head>
