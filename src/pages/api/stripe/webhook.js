@@ -6,7 +6,7 @@ export const config = {
     bodyParser: false,
   },
 };
-
+// every webhook endpoint has unique key
 export default async function handler(req, res) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev;
