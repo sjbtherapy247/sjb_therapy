@@ -6,7 +6,6 @@ import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typogra
 // routes
 // import { paths } from 'src/routes/paths';
 // utils
-import { fDate } from 'src/utils/formatTime';
 // _mock
 // moved one level up
 // components
@@ -39,9 +38,6 @@ export default function ServiceView({ service }) {
 
   return (
     <>
-      {/* <Head>
-        <title>{title} | SJB Therapy</title>
-      </Head> */}
       <Box
         sx={{
           py: 10,

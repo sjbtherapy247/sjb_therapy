@@ -6,7 +6,6 @@ import { Stack, Avatar, Link } from '@mui/material';
 // routes
 // import { paths } from 'src/routes/paths';
 // utils
-import { fDate } from 'src/utils/formatTime';
 // components
 import Image from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
@@ -37,7 +36,7 @@ export default function PostItem({ post }) {
         }}
       >
         <Stack spacing={1}>
-          <PostTimeBlock createdAt={fDate(createdAt)} duration={duration} />
+          <PostTimeBlock createdAt={createdAt} duration={duration} />
 
           <Link component={NextLink} href={`/insights/${url}`} color="inherit">
             <TextMaxLine line={3} variant="h3">

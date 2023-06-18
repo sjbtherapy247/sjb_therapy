@@ -8,7 +8,6 @@ import { Stack, Avatar, Link } from '@mui/material';
 // routes
 // import { paths } from 'src/routes/paths';
 // utils
-import { fDate } from 'src/utils/formatTime';
 import { bgGradient } from 'src/utils/cssStyles';
 // components
 import Image from 'src/components/image';
@@ -55,7 +54,7 @@ export default function PostItem({ post }) {
         }}
       >
         <Stack spacing={2}>
-          <PostTimeBlock duration={duration} createdAt={fDate(createdAt)} sx={{ color: 'inherit', opacity: 0.72 }} />
+          <PostTimeBlock duration={duration} createdAt={createdAt} sx={{ color: 'inherit', opacity: 0.72 }} />
 
           <Link component={NextLink} href={`/insights/${url}`} sx={{ color: 'common.white' }}>
             <TextMaxLine line={4} variant="h4">

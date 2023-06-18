@@ -1,7 +1,7 @@
 // next
 import NextLink from 'next/link';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // @mui
 import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
 // routes
@@ -31,6 +31,13 @@ export default function ArticleView({ post, allPosts }) {
 
   const [open, setOpen] = useState(null);
   const theme = useTheme();
+
+  // clientside render dates to avoid react hydration issues caused by server rendering differences creating dates
+  const [clientsideDate, setClientsideDate] = useState(null);
+
+  useEffect(() => {
+    setClientsideDate(fDate(createdAt, 'dd/MM/yyyy p'));
+  }, [createdAt]);
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -85,7 +92,7 @@ export default function ArticleView({ post, allPosts }) {
               </Typography>
 
               <Typography variant="caption" sx={{ opacity: 0.72 }}>
-                {fDate(createdAt, 'dd/MM/yyyy p')}
+                {clientsideDate}
               </Typography>
 
               <Stack direction="row">
@@ -136,7 +143,7 @@ export default function ArticleView({ post, allPosts }) {
               <Stack spacing={0.5} flexGrow={1}>
                 <Typography variant="subtitle2">{author.name}</Typography>
                 <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                  {fDate(createdAt, 'dd/MM/yyyy p')}
+                  {clientsideDate}
                 </Typography>
               </Stack>
 

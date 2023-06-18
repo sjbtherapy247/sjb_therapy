@@ -16,10 +16,9 @@ export default function PostTimeBlock({ createdAt, duration, sx, ...other }) {
 
   return (
     <Stack flexWrap="wrap" direction="row" alignItems="center" sx={{ typography: 'caption', color: 'text.disabled', ...sx }} {...other}>
-      {clientsideDate}
-
       {duration && (
         <>
+          {duration}
           <Box
             component="span"
             sx={{
@@ -30,10 +29,9 @@ export default function PostTimeBlock({ createdAt, duration, sx, ...other }) {
               backgroundColor: 'currentColor',
             }}
           />
-
-          {duration}
         </>
       )}
+      {clientsideDate}
     </Stack>
   );
 }
