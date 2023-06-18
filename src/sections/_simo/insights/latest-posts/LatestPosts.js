@@ -82,7 +82,7 @@ export default function LatestPosts({ posts }) {
                   py: { xs: 8, md: 10 },
                 }}
               >
-                <PostItem post={post} />
+                {/* <PostItem post={post} /> */}
               </Box>
             ))}
           </Carousel>
