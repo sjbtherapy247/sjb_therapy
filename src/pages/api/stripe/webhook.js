@@ -7,10 +7,10 @@ export const config = {
   },
 };
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev;
-
 export default async function handler(req, res) {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev;
+
   if (req.method === 'POST') {
     const buf = await buffer(req);
     const sig = req.headers['stripe-signature'];
