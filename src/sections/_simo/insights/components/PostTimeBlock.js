@@ -8,14 +8,8 @@ import { fDate } from 'src/utils/formatTime';
 
 export default function PostTimeBlock({ createdAt, duration, sx, ...other }) {
   return (
-    <Stack
-      flexWrap="wrap"
-      direction="row"
-      alignItems="center"
-      sx={{ typography: 'caption', color: 'text.disabled', ...sx }}
-      {...other}
-    >
-      {fDate(createdAt)}
+    <Stack flexWrap="wrap" direction="row" alignItems="center" sx={{ typography: 'caption', color: 'text.disabled', ...sx }} {...other}>
+      {/* {fDate(createdAt)} */}
 
       {duration && (
         <>
