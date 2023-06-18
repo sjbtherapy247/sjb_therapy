@@ -34,6 +34,7 @@
     "framer-motion": "^10.9.2",
     "google-map-react": "^2.2.0",
     "lodash.merge": "^4.6.2",
+    "micro": "^10.0.1",
     "next": "^13.2.4",
     "nprogress": "^0.2.0",
     "numeral": "^2.0.6",
