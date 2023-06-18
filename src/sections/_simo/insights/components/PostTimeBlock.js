@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 import { Stack, Box } from '@mui/material';
 // utils
 import { fDate } from 'src/utils/formatTime';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // ----------------------------------------------------------------------
 
 export default function PostTimeBlock({ createdAt, duration, sx, ...other }) {
-  let createClientDate = null;
+  const [clientsideDate, setClientsideDate] = useState(null);
+
   useEffect(() => {
-    createClientDate = fDate(createdAt);
+    setClientsideDate(fDate(createdAt));
   }, [createdAt]);
 
   return (
     <Stack flexWrap="wrap" direction="row" alignItems="center" sx={{ typography: 'caption', color: 'text.disabled', ...sx }} {...other}>
-      {createClientDate}
+      {clientsideDate}
 
       {duration && (
         <>
