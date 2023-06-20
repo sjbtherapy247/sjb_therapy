@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       res.status(400).send(`Webhook Error: ${err.message}`);
       return;
     }
-    // Handle the event   curl -X POST http://192.168.0.220:5002/api/stripe/webhook -H "Content-Type: application/json" -d '{"Id": 79, "status": 3}'
+    // Handle the event   curl -X POST http://192.168.0.220:5002/api/stripe/webhook/ -H "Content-Type: application/json" -d '{"Id": 79, "status": 3}'
     switch (event.type) {
       case 'payment_intent.succeeded': {
         const paymentIntent = event.data.object;

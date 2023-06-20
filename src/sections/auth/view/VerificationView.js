@@ -36,13 +36,6 @@ export default function RegisterCoverView() {
           <Typography variant="h3" paragraph>
             Client Registration
           </Typography>
-
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            {`Already have an account? `}
-            <Link component={NextLink} href={paths.loginCover} variant="subtitle2" color="primary">
-              Login
-            </Link>
-          </Typography>
         </Stack>
 
         <AuthWithSocial />
@@ -56,7 +49,7 @@ export default function RegisterCoverView() {
         <AuthRegisterForm />
       </Box>
 
-      <AuthCarousel title="Client registration" images={['/assets/sjb-logo/Hmobile.jpg', '/assets/sjb-logo/Hdocs-large.jpg']} />
+      <AuthCarousel title="One Moment..  verifying your details" images={['/assets/sjb-logo/Hmobile.jpg', '/assets/sjb-logo/Hdocs-large.jpg']} />
     </Stack>
   );
 }
