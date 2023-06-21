@@ -34,11 +34,11 @@ export default async function handler(req, res) {
           // dynamicLinkDomain: 'coolapp.page.link',
         };
         currentUser = await getAuth().getUserByEmail(email);
-        // const link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
-        // const emailVerify = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
+        const link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
+        const emailVerify = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
         // console.log(currentUser, link);
-        return res.status(200).json({ ...currentUser });
-        // return res.status(200).json({ ...currentUser, signin: link, emailverify: emailVerify });
+        // return res.status(200).json({ ...currentUser });
+        return res.status(200).json({ ...currentUser, signin: link, emailverify: emailVerify });
       } catch (error) {
         console.log('Error fetching user data:', error.message);
         currentUser = 'Error fetching user';
