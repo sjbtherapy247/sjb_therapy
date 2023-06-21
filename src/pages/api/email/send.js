@@ -34,11 +34,11 @@ export default async function handler(req, res) {
           // dynamicLinkDomain: 'coolapp.page.link',
         };
         currentUser = await getAuth().getUserByEmail(email);
-        const link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
-        const emailVerify = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
+        // const link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
+        // const emailVerify = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
         // console.log(currentUser, link);
-        // return res.status(200).json({ ...currentUser });
-        return res.status(200).json({ ...currentUser, signin: link, emailverify: emailVerify });
+        return res.status(200).json({ ...currentUser });
+        // return res.status(200).json({ ...currentUser, signin: link, emailverify: emailVerify });
       } catch (error) {
         console.log('Error fetching user data:', error.message);
         currentUser = 'Error fetching user';
@@ -46,20 +46,20 @@ export default async function handler(req, res) {
       }
     }
 
-    try {
-      const data = await resend.emails.send({
-        from: 'onboarding@resend.dev',
-        to: email,
-        subject: 'TezD Nextjs Proj',
-        html: '<strong>It works!</strong>',
-        react: emailTemplate({ firstName: 'John' }),
-      });
+    // try {
+    //   const data = await resend.emails.send({
+    //     from: 'onboarding@resend.dev',
+    //     to: email,
+    //     subject: 'TezD Nextjs Proj',
+    //     html: '<strong>It works!</strong>',
+    //     react: emailTemplate({ firstName: 'John' }),
+    //   });
 
-      res.status(200).json(data);
-    } catch (error) {
-      console.log(error);
-      return res.status(error.statusCode || 500).json({ message: error.message });
-    }
+    //   res.status(200).json(data);
+    // } catch (error) {
+    //   console.log(error);
+    //   return res.status(error.statusCode || 500).json({ message: error.message });
+    // }
   } else {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
