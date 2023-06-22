@@ -11,6 +11,7 @@ import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { useSettingsContext } from 'src/components/settings';
 import { useRouter } from 'next/router';
 
+// http://simo-dev.vercel.app/auth/verification/?mode=signIn&oobCode=5wnsIjvAj3XQX2SF2OQPTF1OmZbg1uBfvhRokTxMB6EAAAGI4pOKSA&apiKey=AIzaSyCGufgus2CDlS-4k3ITmQVZ4GdgzclH_no&continueUrl=https%3A%2F%2Fsimo-dev.vercel.app&lang=en
 // ----------------------------------------------------------------------
 
 export default function AuthRegisterForm() {
@@ -18,9 +19,9 @@ export default function AuthRegisterForm() {
 
   const {
     dispatch,
-    state: { alert, modal },
+    state: { alert },
   } = useSettingsContext();
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
 
   const RegisterSchema = Yup.object().shape({
     fullName: Yup.string().required('Full name is required').min(8, 'Mininum 8 characters').max(15, 'Maximum 15 characters'),
@@ -92,7 +93,7 @@ export default function AuthRegisterForm() {
           ...alert,
           open: true,
           severity: 'success',
-          message: `An account verification email sent to ${data.email}. To complete the account registration process please follow the instructions in your email.`,
+          message: `An account verification email has been sent to ${data.email}. To complete the account registration process please follow the instructions in your email.`,
           duration: 12000,
         },
       });
