@@ -20,7 +20,8 @@ export default async function handler(req, res) {
       const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for
         // this URL must be whitelisted in the Firebase Console.
-        url: 'http://192.168.0.220:5002',
+        url: 'https://simo-dev.vercel.app',
+        // url: 'http://192.168.0.220:5002',
         // This must be true for email link sign-in.
         // handleCodeInApp: true,
         // iOS: {
