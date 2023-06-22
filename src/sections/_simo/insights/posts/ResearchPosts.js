@@ -7,7 +7,6 @@ import PostItem from './PostItem';
 // ----------------------------------------------------------------------
 
 export default function ResearchPosts({ posts }) {
-  console.log(posts);
   return (
     <>
       <Box

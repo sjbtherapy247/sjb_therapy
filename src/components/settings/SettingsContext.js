@@ -1,11 +1,27 @@
 import PropTypes from 'prop-types';
-import { useMemo, useState, useEffect, useContext, useCallback, createContext } from 'react';
+import { useMemo, useState, useEffect, useContext, useCallback, createContext, useReducer } from 'react';
+// firebase
+import { auth } from 'src/lib/createFirebaseApp';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { connectAuthEmulator } from 'firebase/auth';
+
 //
 import { defaultSettings } from './config-setting';
+import reducer from './reducer';
 
 // ----------------------------------------------------------------------
+if (process.env.NODE_ENV_T === 'development') {
+  connectAuthEmulator(auth, 'http://127.0.0.1:9099');
+}
+console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV_T);
 
 const initialState = {
+  // reducer
+  alert: { open: false, severity: 'info', message: '', variant: 'filled', color: '', duration: 1000 },
+  modal: { open: false, title: '', content: '' },
+  loadingSpinner: false,
   // themeMode, themeDirection etc..
   ...defaultSettings,
   // toggle Mode
@@ -18,6 +34,7 @@ const initialState = {
 // ----------------------------------------------------------------------
 
 export const SettingsContext = createContext(initialState);
+
 // context settings hook
 export const useSettingsContext = () => {
   const context = useContext(SettingsContext);
@@ -31,10 +48,24 @@ export const useSettingsContext = () => {
 
 export function SettingsProvider({ children }) {
   // const [open, setOpen] = useState(false);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const [themeMode, setThemeMode] = useState(initialState.themeMode);
   const [loggedIn, setLoggedIn] = useState(initialState.loggedIn);
   const [currentUser, setCurrentUser] = useState(initialState.currentUser);
+
+  const [user, loading, error] = useAuthState(auth);
+
+  useEffect(() => {
+    if (user) {
+      console.log('user loaded', user);
+      setLoggedIn(true);
+      setCurrentUser({ ...user });
+    } else {
+      console.log('App logged out');
+      setLoggedIn(false);
+    }
+  }, [user]);
 
   // looks for cookie in local storage with thememode - so that theme persists across tabs
   useEffect(() => {
@@ -51,20 +82,29 @@ export function SettingsProvider({ children }) {
 
   const memoizedValue = useMemo(
     () => ({
+      // reducer
+      state,
+      dispatch,
       // Mode
       themeMode,
       onToggleMode,
       loggedIn,
       setLoggedIn,
       currentUser,
+      loading,
     }),
     [
       // dependency array
+      // reducer
+      state,
+      dispatch,
+      // the rest
       themeMode,
       onToggleMode,
       loggedIn,
       setLoggedIn,
       currentUser,
+      loading,
     ]
   );
 

@@ -7,21 +7,20 @@ import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListI
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 import useActiveLink from 'src/hooks/useActiveLink';
-// config
-import { NAV } from 'src/config-global';
-// routes
-import { paths } from 'src/routes/paths';
+
 // _mock
 import _mock from 'src/_mock';
 // components
 import Iconify from 'src/components/iconify';
 import TextMaxLine from 'src/components/text-max-line';
 import { useSettingsContext } from 'src/components/settings';
+import { auth } from 'src/lib/createFirebaseApp';
+import { useSignOut } from 'react-firebase-hooks/auth';
 
 // ----------------------------------------------------------------------
 
 export function MenuContent() {
-  const { setLoggedIn, themeMode, onToggleMode } = useSettingsContext();
+  const { setLoggedIn, themeMode, onToggleMode, currentUser } = useSettingsContext();
   const theme = useTheme();
 
   const navigations = [
@@ -41,6 +40,17 @@ export function MenuContent() {
       icon: <Iconify icon="carbon:cut-out" />,
     },
   ];
+  const [signOut, loading, error] = useSignOut(auth);
+
+  const handleLogout = () => {
+    const success = signOut();
+    if (success) {
+      // setLoggedIn(false);
+      console.log('logged out');
+      //
+    }
+  };
+
   return (
     <Stack
       sx={{
@@ -61,11 +71,11 @@ export function MenuContent() {
 
         <Stack spacing={0.5}>
           <TextMaxLine variant="subtitle1" line={1}>
-            Jayvion Simon
+            {currentUser?.displayName}
           </TextMaxLine>
-          {/* <TextMaxLine variant="body2" line={1} sx={{ color: 'text.secondary' }}>
-            nannie_abernathy70@yahoo.com
-          </TextMaxLine> */}
+          <TextMaxLine variant="caption" line={1} sx={{ color: 'text.secondary' }}>
+            {currentUser?.email}
+          </TextMaxLine>
         </Stack>
       </Stack>
 
@@ -89,7 +99,7 @@ export function MenuContent() {
             }}
           />
         </ListItemButton>
-        <ListItemButton onClick={() => setLoggedIn(false)}>
+        <ListItemButton onClick={handleLogout}>
           <ListItemIcon>
             <Iconify icon="carbon:logout" />
           </ListItemIcon>
@@ -130,10 +140,10 @@ export default function AccountMenu({ anchorElUser, handleCloseUserMenu }) {
   );
 }
 
-AccountMenu.propTypes = {
-  handleCloseUserMenu: PropTypes.func,
-  anchorElUser: PropTypes.node,
-};
+// AccountMenu.propTypes = {
+//   handleCloseUserMenu: PropTypes.func,
+//   anchorElUser: PropTypes.node,
+// };
 
 // ----------------------------------------------------------------------
 

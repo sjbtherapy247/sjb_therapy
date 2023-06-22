@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 // next
-import useRouter from 'next/router';
+import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 // @mui
 import { LoadingButton } from '@mui/lab';
@@ -15,45 +15,44 @@ import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { useSettingsContext } from 'src/components/settings';
 //
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from 'src/lib/createFirebaseApp';
+// import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 // ----------------------------------------------------------------------
 
 export default function AuthLoginForm() {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const { setLoggedIn } = useSettingsContext();
 
   const LoginSchema = Yup.object().shape({
     email: Yup.string().required('Email is required').email('That is not an email'),
     password: Yup.string().required('Password is required').min(6, 'Password should be of minimum 6 characters length'),
   });
-
   const defaultValues = {
-    email: 'tez@this.com',
-    password: '@#er^&G*()',
+    email: 'holymoly@this.com',
+    password: 'qwaszxer',
   };
-
   const methods = useForm({
     resolver: yupResolver(LoginSchema),
     defaultValues,
   });
-
   const {
     reset,
     handleSubmit,
     formState: { isSubmitting },
   } = methods;
-
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      reset();
-      console.log('DATA', data);
-      setLoggedIn(true);
-      useRouter.push('/');
+      // await new Promise((resolve) => setTimeout(resolve, 500));
+      const userDoc = await signInWithEmailAndPassword(auth, data.email, data.password);
+      console.log(userDoc);
+      // reset();
+      router.push('/');
     } catch (error) {
       console.error(error);
     }

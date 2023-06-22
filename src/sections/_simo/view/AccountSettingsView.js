@@ -34,28 +34,12 @@ export default function AccountSettingsView() {
   };
 
   const AccountPersonalSchema = Yup.object().shape({
-    firstName: Yup.string().required('First name is required'),
-    lastName: Yup.string().required('Last name is required'),
-    emailAddress: Yup.string().required('Email address is required'),
-    phoneNumber: Yup.string().required('Phone number is required'),
-    // birthday: Yup.string().required('Birthday is required'),
-    // gender: Yup.string().required('Gender is required'),
-    // streetAddress: Yup.string().required('Street address is required'),
-    // city: Yup.string().required('City is required'),
-    // zipCode: Yup.string().required('Zip code is required'),
+    oldPassword: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
+    newPassword: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
+    confirmNewPassword: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
   });
 
   const defaultValues = {
-    firstName: 'Jayvion',
-    lastName: 'Simon',
-    emailAddress: 'nannie_abernathy70@yahoo.com',
-    phoneNumber: '0401234567',
-    birthday: null,
-    gender: 'Male',
-    streetAddress: '',
-    zipCode: '',
-    city: '',
-    country: 'Australia',
     oldPassword: '',
     newPassword: '',
     confirmNewPassword: '',

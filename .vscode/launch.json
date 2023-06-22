@@ -1,11 +1,16 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "name": "Next.js: debug server-side",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm run dev"
+      "command": "npm run dev",
+      "env": {
+        "NODE_ENV_T": "development",
+        "FIREBASE_AUTH_EMULATOR_HOST": "127.0.0.1:9099"
+      }
     },
     {
       "name": "Next.js: debug client-side",

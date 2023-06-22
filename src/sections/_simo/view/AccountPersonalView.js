@@ -12,6 +12,7 @@ import { countries } from 'src/assets/data';
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField, RHFSelect } from 'src/components/hook-form';
 //
+import { useSettingsContext } from 'src/components/settings';
 import { AccountLayout } from '../layout';
 
 // ----------------------------------------------------------------------
@@ -22,6 +23,8 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 
 export default function AccountPersonalView() {
   const [showPassword, setShowPassword] = useState(false);
+  const { currentUser } = useSettingsContext();
+  console.log(currentUser);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -40,19 +43,16 @@ export default function AccountPersonalView() {
   });
 
   const defaultValues = {
-    firstName: 'Jayvion',
-    lastName: 'Simon',
-    emailAddress: 'nannie_abernathy70@yahoo.com',
-    phoneNumber: '0401234567',
+    firstName: currentUser?.displayName,
+    lastName: '',
+    emailAddress: currentUser?.email,
+    phoneNumber: currentUser?.phoneNumber || '',
     birthday: null,
     gender: 'female',
     streetAddress: '',
-    postCode: '2096',
+    postCode: '',
     city: '',
     country: 'Australia',
-    oldPassword: '',
-    newPassword: '',
-    confirmNewPassword: '',
   };
 
   const methods = useForm({

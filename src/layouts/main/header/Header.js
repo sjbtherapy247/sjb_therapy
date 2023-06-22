@@ -47,10 +47,8 @@ import AccountMenu from '../AccountMenu';
 
 export default function Header({ headerOnDark }) {
   const theme = useTheme();
-  const { onToggleMode, loggedIn } = useSettingsContext();
-  const [anchorElUser, setAnchorElUser] = useState(null);
-
-  console.log(theme);
+  const { onToggleMode, loggedIn, loading } = useSettingsContext();
+  const [anchorElUser, setAnchorElUser] = useState();
 
   const isMdUp = useResponsive('up', 'md');
   const isSmUp = useResponsive('up', 'sm');
@@ -154,8 +152,25 @@ export default function Header({ headerOnDark }) {
                 <Iconify icon="carbon:search" />
               </IconButton>
             )}
+
+            {loggedIn && !loading && (
+              <>
+                {/* <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
+                  <Badge badgeContent={4} color="error">
+                    <Iconify icon="carbon:shopping-cart" />
+                  </Badge>
+                </IconButton> */}
+
+                {/* <IconButton component={NextLink} href={paths.eCommerce.account.personal} color="inherit"> */}
+                <IconButton onClick={handleOpenUserMenu} color="inherit">
+                  {/* <Iconify icon="carbon:user" /> */}
+                  <Avatar src={_mock.image.avatar(0)} sx={{ width: 40, height: 40 }} />
+                </IconButton>
+              </>
+            )}
+
             {/* <Stack spacing={1} direction="row" alignItems="center" sx={{ pr: { xs: 0, md: 2 } }}> */}
-            {!loggedIn && (
+            {!loggedIn && !loading && (
               <>
                 <Tooltip title={theme.palette.mode === 'dark' ? 'Light Mode' : 'Dark Mode'} arrow placement="bottom-end">
                   <IconButton onClick={onToggleMode} color="inherit">
@@ -178,21 +193,6 @@ export default function Header({ headerOnDark }) {
                 </IconButton>
               </Badge> */}
 
-            {loggedIn && (
-              <>
-                {/* <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
-                  <Badge badgeContent={4} color="error">
-                    <Iconify icon="carbon:shopping-cart" />
-                  </Badge>
-                </IconButton> */}
-
-                {/* <IconButton component={NextLink} href={paths.eCommerce.account.personal} color="inherit"> */}
-                <IconButton onClick={handleOpenUserMenu} color="inherit">
-                  {/* <Iconify icon="carbon:user" /> */}
-                  <Avatar src={_mock.image.avatar(0)} sx={{ width: 40, height: 40 }} />
-                </IconButton>
-              </>
-            )}
             {/* </Stack> */}
           </Stack>
           <AccountMenu anchorElUser={anchorElUser} handleCloseUserMenu={handleCloseUserMenu} />

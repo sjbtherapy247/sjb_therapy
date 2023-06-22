@@ -9,41 +9,65 @@ console.log(admin.apps);
 createFirebaseAdminApp();
 
 export default async function handler(req, res) {
-  const test = true;
   let currentUser = {};
   const email = req.body?.currentUserEmail;
+  const newUserEmail = req.body?.newUserEmail;
+  const mode = req.body?.mode;
+  let link = null;
 
   if (req.method === 'POST') {
-    if (test) {
-      try {
-        const actionCodeSettings = {
-          // URL you want to redirect back to. The domain (www.example.com) for
-          // this URL must be whitelisted in the Firebase Console.
-          url: 'http://192.168.0.220:5002',
-          // This must be true for email link sign-in.
-          // handleCodeInApp: true,
-          // iOS: {
-          //   bundleId: 'com.example.ios',
-          // },
-          // android: {
-          //   packageName: 'com.example.android',
-          //   installApp: true,
-          //   minimumVersion: '12',
-          // },
-          // // FDL custom domain.
-          // dynamicLinkDomain: 'coolapp.page.link',
-        };
-        currentUser = await getAuth().getUserByEmail(email);
-        const link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
-        const emailVerify = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
-        // console.log(currentUser, link);
-        // return res.status(200).json({ ...currentUser });
-        return res.status(200).json({ ...currentUser, signin: link, emailverify: emailVerify });
-      } catch (error) {
-        console.log('Error fetching user data:', error.message);
-        currentUser = 'Error fetching user';
-        return res.status(200).json(currentUser);
+    try {
+      const actionCodeSettings = {
+        // URL you want to redirect back to. The domain (www.example.com) for
+        // this URL must be whitelisted in the Firebase Console.
+        url: 'http://192.168.0.220:5002',
+        // This must be true for email link sign-in.
+        // handleCodeInApp: true,
+        // iOS: {
+        //   bundleId: 'com.example.ios',
+        // },
+        // android: {
+        //   packageName: 'com.example.android',
+        //   installApp: true,
+        //   minimumVersion: '12',
+        // },
+        // // FDL custom domain.
+        // dynamicLinkDomain: 'coolapp.page.link',
+      };
+      // Expirations
+      // Password reset (generatePasswordResetLink): 1 hour
+      // Email verification (generateEmailVerificationLink): 3 days (not using as users are forced to signIn with email from the start)
+      // Email link sign-in (generateSignInWithEmailLink): 6 hours
+
+      switch (mode) {
+        case 'signInWithEmail': {
+          link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
+          return res.status(200).json({ signin: link });
+        }
+        case 'emailVerify': {
+          link = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
+          return res.status(200).json({ signin: link });
+        }
+        case 'resetPassword': {
+          link = await getAuth().generatePasswordResetLink(email, actionCodeSettings);
+          return res.status(200).json({ signin: link });
+        }
+        case 'changeEmail': {
+          link = await getAuth().generateVerifyAndChangeEmailLink(email, newUserEmail, actionCodeSettings);
+          return res.status(200).json({ signin: link });
+        }
+        case 'isClient': {
+          currentUser = await getAuth().getUserByEmail(email);
+          return res.status(200).json({ ...currentUser });
+        }
+        default: {
+          return res.status(200).json({ error: 'No mode' });
+        }
       }
+    } catch (error) {
+      console.log('Error fetching user data:', error.message);
+      currentUser = 'Error fetching user';
+      return res.status(200).json(currentUser);
     }
 
     // try {
@@ -64,7 +88,7 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
   }
-  return null;
+  // return null;
 }
 
 const emailTemplate = ({ firstName }) => (
