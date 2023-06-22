@@ -1,3 +1,8 @@
+// Expirations
+// Password reset (generatePasswordResetLink): 1 hour
+// Email verification (generateEmailVerificationLink): 3 days (not using as users are forced to signIn with email from the start)
+// Email link sign-in (generateSignInWithEmailLink): 6 hours
+
 import { Resend } from 'resend';
 import admin from 'firebase-admin';
 import { getAuth } from 'firebase-admin/auth';
@@ -35,20 +40,27 @@ export default async function handler(req, res) {
         // // FDL custom domain.
         // dynamicLinkDomain: 'coolapp.page.link',
       };
-      // Expirations
-      // Password reset (generatePasswordResetLink): 1 hour
-      // Email verification (generateEmailVerificationLink): 3 days (not using as users are forced to signIn with email from the start)
-      // Email link sign-in (generateSignInWithEmailLink): 6 hours
 
       switch (mode) {
         case 'signInWithEmail': {
           link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
+          try {
+            const data = await resend.emails.send({
+              from: 'onboarding@resend.dev',
+              to: email,
+              subject: 'Welcome to SJB Therapy',
+              html: '<strong>Please finalise your account setup</strong>',
+              react: emailTemplate({ link, email }),
+            });
+          } catch (error) {
+            console.log(error);
+          }
           return res.status(200).json({ signin: link });
         }
-        case 'emailVerify': {
-          link = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
-          return res.status(200).json({ signin: link });
-        }
+        // case 'emailVerify': {
+        //   link = await getAuth().generateEmailVerificationLink(email, actionCodeSettings);
+        //   return res.status(200).json({ signin: link });
+        // }
         case 'resetPassword': {
           link = await getAuth().generatePasswordResetLink(email, actionCodeSettings);
           return res.status(200).json({ signin: link });
@@ -92,12 +104,13 @@ export default async function handler(req, res) {
   // return null;
 }
 
-const emailTemplate = ({ firstName }) => (
+const emailTemplate = ({ link, email }) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
-    <p>To reset your account please hit the button</p>
+    <p>email sent to {email}</p>
+    <h1>Welcome to SJB Therapy!</h1>
+    <p>To finalise your account setup please hit the button</p>
     <div>
-      <a href="https://simo-dev.vercel.app" target="_blank">
+      <a href={link} target="_blank">
         <button type="button">Reset</button>
       </a>
     </div>
