@@ -15,7 +15,7 @@ function ProgressBar() {
   useEffect(() => {
     let timeout;
     if (!router.isReady) {
-      handleStop();
+      return null;
     }
 
     const handleStart = () => {
