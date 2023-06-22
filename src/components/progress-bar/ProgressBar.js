@@ -14,6 +14,9 @@ function ProgressBar() {
 
   useEffect(() => {
     let timeout;
+    if (!router.isReady) {
+      handleStop();
+    }
 
     const handleStart = () => {
       timeout = setTimeout(() => NProgress.start(), 300);
@@ -35,7 +38,7 @@ function ProgressBar() {
       clearTimeout(timeout);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [router.isReady]);
 
   return <StyledProgressBar />;
 }
