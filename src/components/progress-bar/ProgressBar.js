@@ -14,9 +14,6 @@ function ProgressBar() {
 
   useEffect(() => {
     let timeout;
-    if (!router.isReady) {
-      return null;
-    }
 
     const handleStart = () => {
       timeout = setTimeout(() => NProgress.start(), 300);
