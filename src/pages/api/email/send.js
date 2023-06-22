@@ -111,7 +111,7 @@ const emailTemplate = ({ link, email }) => (
     <p>To finalise your account setup please hit the button</p>
     <div>
       <a href={link} target="_blank">
-        <button type="button">Reset</button>
+        <button type="button">I Love SJB Therapy.. YEAY!!!</button>
       </a>
     </div>
   </div>
