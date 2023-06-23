@@ -46,7 +46,7 @@ export default async function handler(req, res) {
           link = await getAuth().generateSignInWithEmailLink(email, actionCodeSettings);
           try {
             const data = await resend.emails.send({
-              from: 'onboarding@resend.dev',
+              from: 'onboarding@sjbtherapy.com',
               to: email,
               subject: 'Welcome to SJB Therapy',
               html: '<strong>Please finalise your account setup</strong>',
