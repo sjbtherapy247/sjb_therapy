@@ -1,4 +1,4 @@
-import SJBTherapyResetPasswordEmail from 'src/pages/api/email/resetEmail';
+import SJBTherapyResetPasswordEmail from 'src/components/email/ResetEmail';
 
 const test = () => <SJBTherapyResetPasswordEmail email="this" link="that" />;
 
