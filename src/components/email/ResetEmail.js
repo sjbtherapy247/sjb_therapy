@@ -58,7 +58,7 @@ const button = {
   backgroundColor: '#7987CB',
   borderRadius: '5px',
   color: '#fff',
-  fontFamily: "'Open Sans', 'Helvetica Neue', Arial",
+  fontFamily: "'Roboto', 'Helvetica Neue', Arial",
   fontSize: '15px',
   fontWeight: '500',
   padding: '40px',
