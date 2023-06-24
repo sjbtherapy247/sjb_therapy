@@ -130,7 +130,7 @@ const EmailSignInSetPassword = () => {
     <form onSubmit={handleSubmit}>
       {!emailSaved && (
         <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          <DialogContentText>It appears you are using a different device or browser to complete the signin process. For security we need to confirm your email again.</DialogContentText>
+          <DialogContentText>It appears you are using a different device or browser to complete the signin process. For security reasons we need to confirm your email again.</DialogContentText>
           <TextField sx={{ my: 2 }} size="small" inputRef={emailRef} error={emailError} label="Email" />
           {/* <DialogContentText>Confirm new password:</DialogContentText> */}
         </DialogContent>
