@@ -110,7 +110,7 @@ export default function ArticleView({ post, allPosts }) {
       {/* <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" /> */}
 
       <Container>
-        <CustomBreadcrumbs sx={{ my: 3 }} links={[{ name: 'Home', href: '/' }, { name: 'InSights', href: '/insights' }, { name: title }]} />
+        <CustomBreadcrumbs sx={{ my: 3 }} links={[{ name: 'Home', href: '/' }, { name: 'InSights', href: '/insights#insights' }, { name: title }]} />
       </Container>
 
       <Divider />

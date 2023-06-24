@@ -9,6 +9,9 @@ import PostItem from './PostItem';
 export default function ResearchPosts({ posts }) {
   return (
     <>
+      <div style={{ position: 'relative' }}>
+        <div id="insights" style={{ position: 'absolute', top: '-100px' }} />
+      </div>
       <Box
         sx={{
           columnGap: 2,

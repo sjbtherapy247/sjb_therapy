@@ -23,6 +23,7 @@ export const SJBTherapySignUpEmail = ({ email, link }) => (
             </Link>
           </Text>
           <Text style={text}>Simply Just Believe!</Text>
+          <Text style={text}>Simon</Text>
         </Section>
       </Container>
     </Body>
