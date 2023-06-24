@@ -7,7 +7,7 @@ import { Resend } from 'resend';
 import admin from 'firebase-admin';
 import { getAuth } from 'firebase-admin/auth';
 import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
-import ResetPasswordEmail from 'src/components/email/ResetEmail';
+import ResetPasswordEmail from 'src/components/email/ResetPasswordEmail';
 import SignUpEmail from 'src/components/email/SignupEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
