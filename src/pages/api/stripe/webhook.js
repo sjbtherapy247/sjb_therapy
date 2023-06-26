@@ -47,7 +47,7 @@ export default async function handler(req, res) {
       }
       case 'charge.succeeded': {
         const checkoutID = event.data.object.payment_intent;
-        // console.log(event.data.object);
+        console.log(event.data.object?.billing_details);
         // store the purchase
         const userRef = purchases.child(event.data.object.payment_intent);
         userRef.update(event);
