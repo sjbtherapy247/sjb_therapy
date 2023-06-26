@@ -33,8 +33,8 @@ export const TABLE_HEAD = [
 export default function AccountOrdersPage() {
   // const [tab, setTab] = useState('All Orders');
   const { currentUser } = useSettingsContext();
-  const [order, setOrder] = useState('asc');
-  const [orderBy, setOrderBy] = useState('orderId');
+  const [order, setOrder] = useState('desc');
+  const [orderBy, setOrderBy] = useState('created');
   const [selected, setSelected] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);

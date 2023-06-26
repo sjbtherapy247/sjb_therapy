@@ -22,7 +22,7 @@ export default function AccountOrdersTableHead({ order, onSort, orderBy, rowCoun
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{ width: headCell.width, minWidth: headCell.minWidth }}
           >
-            <TableSortLabel active={orderBy === headCell.id} direction={orderBy === headCell.id ? order : 'asc'} onClick={() => onSort(headCell.id)}>
+            <TableSortLabel active={orderBy === headCell.id} direction={orderBy === headCell.id ? order : 'desc'} onClick={() => onSort(headCell.id)}>
               {headCell.label}
               {orderBy === headCell.id ? (
                 <Box component="span" sx={visuallyHidden}>
