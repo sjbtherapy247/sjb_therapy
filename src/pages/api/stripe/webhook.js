@@ -6,6 +6,7 @@ import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
 console.log('init webhook');
 
 const { db } = createFirebaseAdminApp();
+console.log(db);
 
 const ref = db.ref('ter');
 ref.once('value', (snapshot) => {
@@ -47,7 +48,7 @@ export default async function handler(req, res) {
       }
       case 'charge.succeeded': {
         const checkoutID = event.data.object.payment_intent;
-        console.log(event.data.object?.billing_details);
+        // console.log(event.data.object?.billing_details);
         // store the purchase
         const userRef = purchases.child(event.data.object.payment_intent);
         userRef.update(event);
