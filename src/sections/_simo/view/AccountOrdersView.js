@@ -20,7 +20,7 @@ import { AccountLayout } from '../layout';
 // const TABS = ['All Orders', 'Completed', 'To Process', 'Cancelled', 'Return & Refund'];
 
 export const TABLE_HEAD = [
-  { id: 'orderId', label: 'Receipt #', width: 140 },
+  { id: 'orderId', label: 'Order ID', width: 140 },
   { id: 'item', label: 'Session Package' },
   { id: 'created', label: 'Purchase date', width: 180 },
   { id: 'price', label: 'Price', width: 100 },

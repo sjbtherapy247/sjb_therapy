@@ -43,7 +43,7 @@ export default function PricingHome({ plans, prices }) {
         const items = Object?.values(snapshot.val());
         console.log(items);
 
-        setCurrentClient([...items.filter((item) => item.data.object?.billing_details?.email === currentUser.email)].length);
+        setCurrentClient([...items.filter((item) => item.data.object?.billing_details?.email === currentUser?.email)].length);
       }
     });
     return () => listener();

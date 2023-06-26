@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import NextLink from 'next/link';
 // @mui
-import { Popover, Divider, TableRow, Checkbox, MenuItem, TableCell, IconButton, InputBase, Typography } from '@mui/material';
+import { Popover, Divider, TableRow, Checkbox, MenuItem, TableCell, IconButton, InputBase, Typography, Link } from '@mui/material';
 //  utils
 import { fDate } from 'src/utils/formatTime';
 import { fCurrency } from 'src/utils/formatNumber';
@@ -80,10 +81,14 @@ export default function AccountOrdersTableRow({ row, onSelectRow, selected }) {
           sx: { p: 1, width: 160 },
         }}
       >
-        <MenuItem onClick={handleClose}>
-          <Iconify icon="carbon:document" sx={{ mr: 10 }} />
-          <Typography sx={{ pl: 1 }}>View Receipt</Typography>
-        </MenuItem>
+        <Link underline="none" target="_blank" component={NextLink} href={row.data.object.receipt_url}>
+          <MenuItem onClick={handleClose}>
+            <Iconify icon="carbon:document" sx={{ mr: 10 }} />
+            <Typography variant="body2" sx={{ pl: 1 }}>
+              View Receipt
+            </Typography>
+          </MenuItem>
+        </Link>
 
         {/* <MenuItem onClick={handleClose}>
           <Iconify icon="carbon:edit" sx={{ mr: 1 }} /> Edit
