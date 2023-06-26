@@ -1,16 +1,16 @@
 import { buffer } from 'micro';
 import Stripe from 'stripe';
-import admin from 'firebase-admin';
+// import admin from 'firebase-admin';
 import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
 
 console.log('init webhook');
 
-const { app, db } = createFirebaseAdminApp();
+const { db } = createFirebaseAdminApp();
 
-// const ref = db.ref('ter');
-// ref.once('value', (snapshot) => {
-//   // console.log(snapshot.val());
-// });
+const ref = db.ref('ter');
+ref.once('value', (snapshot) => {
+  console.log(snapshot.val());
+});
 
 const purchases = db.ref('purchases');
 
@@ -51,6 +51,7 @@ export default async function handler(req, res) {
         // store the purchase
         const userRef = purchases.child(event.data.object.payment_intent);
         userRef.update(event);
+
         break;
       }
       case 'payment_method.attached': {
