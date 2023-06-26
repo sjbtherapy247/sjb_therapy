@@ -39,6 +39,11 @@ export function MenuContent() {
       path: '/account/settings',
       icon: <Iconify icon="carbon:cut-out" />,
     },
+    {
+      title: 'Account Orders',
+      path: '/account/orders',
+      icon: <Iconify icon="carbon:purchase" />,
+    },
   ];
   const [signOut, loading, error] = useSignOut(auth);
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useMemo, useState, useEffect, useContext, useCallback, createContext, useReducer } from 'react';
 // firebase
-import { auth } from 'src/lib/createFirebaseApp';
+import { auth, db } from 'src/lib/createFirebaseApp';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { connectAuthEmulator } from 'firebase/auth';
@@ -14,9 +14,8 @@ import reducer from './reducer';
 if (process.env.NODE_ENV_T === 'development') {
   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
 }
-console.log(process.env.NODE_ENV);
-console.log(process.env.NODE_ENV_T);
 
+// console.log(db, auth);
 const initialState = {
   // reducer
   alert: { open: false, severity: 'info', message: '', variant: 'filled', color: '', duration: 1000 },

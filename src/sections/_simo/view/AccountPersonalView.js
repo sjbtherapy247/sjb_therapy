@@ -13,6 +13,7 @@ import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField, RHFSelect } from 'src/components/hook-form';
 //
 import { useSettingsContext } from 'src/components/settings';
+
 import { AccountLayout } from '../layout';
 
 // ----------------------------------------------------------------------
@@ -43,7 +44,7 @@ export default function AccountPersonalView() {
   });
 
   const defaultValues = {
-    firstName: currentUser?.displayName,
+    firstName: currentUser?.displayName || '',
     lastName: '',
     emailAddress: currentUser?.email,
     phoneNumber: currentUser?.phoneNumber || '',

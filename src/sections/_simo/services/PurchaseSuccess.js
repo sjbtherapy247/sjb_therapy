@@ -50,7 +50,6 @@ export default function PurchaseSuccess({ checkout }) {
         }),
       }).then((res) => res.json());
       // if the account already exists exit
-      console.log(user);
       if (user.uid) return;
 
       const response = await fetch('/api/email/send', {

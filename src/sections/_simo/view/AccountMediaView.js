@@ -2,22 +2,25 @@
 import NextLink from 'next/link';
 // @mui
 import { Box, Container, Typography, Button, Stack, Autocomplete, TextField, Fab } from '@mui/material';
-// routes
-import { paths } from 'src/routes/paths';
-// _mock
-import { _products } from 'src/_mock';
+
+// fb
+import { db } from 'src/lib/createFirebaseApp';
+import { ref, onValue } from 'firebase/database';
 // components
 import Iconify from 'src/components/iconify';
 //
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Player from 'src/components/player/Player';
+import { useSettingsContext } from 'src/components/settings';
 import { AccountLayout } from '../layout';
-import { CartList } from '../user/cart';
+// import { CartList } from '../user/cart';
 
 // ----------------------------------------------------------------------
 
 export default function AccountMediaView() {
+  const { currentUser } = useSettingsContext();
+
   const OPTIONS = [
     { link: '/assets/relax-mp3/fireflies.mp3', label: 'Fireflies' },
     { link: '/assets/relax-mp3/catch-my-breath.mp3', label: 'Just Breath' },
