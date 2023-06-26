@@ -33,7 +33,6 @@ export default function PlanCard({ plan, prices, currentClient }) {
     if (license === 'Single Session' && !currentClient) purchase.shift();
 
     itemPrice = purchase[0].unit_amount / 100;
-    // if (license === 'Single Session' && currentClient) itemPrice = purchase[1].unit_amount / 100;
   }
 
   const handleCheckout = () => {
