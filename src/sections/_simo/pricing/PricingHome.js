@@ -41,7 +41,7 @@ export default function PricingHome({ plans, prices }) {
     const listener = onValue(purchaseRef, (snapshot) => {
       if (snapshot.val()) {
         const items = Object?.values(snapshot.val());
-        console.log(items);
+        console.log(items, currentUser?.uid);
 
         setCurrentClient([...items.filter((item) => item.data.object?.billing_details?.email === currentUser?.email)].length);
       }
