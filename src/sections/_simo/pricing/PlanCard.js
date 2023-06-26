@@ -17,7 +17,7 @@ import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
-export default function PlanCard({ plan, prices }) {
+export default function PlanCard({ plan, prices, currentClient }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
 
@@ -26,15 +26,14 @@ export default function PlanCard({ plan, prices }) {
   const popular = license === '4-Session Bundle';
   let purchase = null;
   let itemPrice = null;
-  const newClient = true;
 
   if (prices) {
     purchase = prices.filter((item) => item?.product?.name === license);
-    if (license === 'Single Session' && newClient) purchase.shift();
-    if (license === 'Single Session' && !newClient) purchase.pop();
+    if (license === 'Single Session' && currentClient) purchase.pop();
+    if (license === 'Single Session' && !currentClient) purchase.shift();
 
     itemPrice = purchase[0].unit_amount / 100;
-    // if (license === 'Single Session' && newClient) itemPrice = purchase[1].unit_amount / 100;
+    // if (license === 'Single Session' && currentClient) itemPrice = purchase[1].unit_amount / 100;
   }
 
   const handleCheckout = () => {

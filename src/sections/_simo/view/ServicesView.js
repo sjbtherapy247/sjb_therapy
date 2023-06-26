@@ -41,7 +41,6 @@ export default function ServicesView({ services, packages, prices }) {
         'Content-Type': 'application/json',
       },
     }).then((res) => res.json());
-    // setCheckoutSuccess(true);
     dispatch({
       type: 'MODAL',
       payload: {
@@ -52,7 +51,6 @@ export default function ServicesView({ services, packages, prices }) {
       },
     });
     // update db with the line-items which for some reason are not in any of the webhook events
-
     const purchaseRef = ref(db, `purchases/${responseJson.payment_intent.id.slice(-7).toUpperCase()}/data/object/line_items`);
     console.log(responseJson.line_items.data[0]);
     update(purchaseRef, responseJson.line_items.data[0]);

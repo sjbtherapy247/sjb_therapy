@@ -1,5 +1,5 @@
 // react
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // next
 import NextLink from 'next/link';
 // libs
@@ -15,6 +15,9 @@ import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel'
 // local
 import useResponsive from 'src/hooks/useResponsive';
 import Iconify from 'src/components/iconify/Iconify';
+import { onValue, ref } from 'firebase/database';
+import { db } from 'src/lib/createFirebaseApp';
+import { useSettingsContext } from 'src/components/settings';
 import PlanCard from './PlanCard';
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -29,6 +32,22 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export default function PricingHome({ plans, prices }) {
   const theme = useTheme();
+  const { currentUser } = useSettingsContext();
+
+  const [currentClient, setCurrentClient] = useState(0);
+
+  const purchaseRef = ref(db, 'purchases/');
+  useEffect(() => {
+    const listener = onValue(purchaseRef, (snapshot) => {
+      if (snapshot.val()) {
+        const items = Object?.values(snapshot.val());
+        console.log(items);
+
+        setCurrentClient([...items.filter((item) => item.data.object?.billing_details?.email === currentUser.email)].length);
+      }
+    });
+    return () => listener();
+  }, []);
 
   const isMdUp = useResponsive('up', 'md');
 
@@ -122,7 +141,7 @@ export default function PricingHome({ plans, prices }) {
           >
             {plans.map((plan) => (
               <m.div key={plan.license} variants={varFade({ distance: 140 }).inDown}>
-                <PlanCard plan={plan} prices={prices} />
+                <PlanCard plan={plan} prices={prices} currentClient={currentClient} />
               </m.div>
             ))}
           </Box>
