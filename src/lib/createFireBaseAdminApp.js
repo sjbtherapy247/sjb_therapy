@@ -5,10 +5,15 @@ const serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN_KEY || {});
 export function createFirebaseAdminApp() {
   // if already created, return the same instance
   if (admin.apps.length > 0) {
-    return admin.app();
+    const db = admin.database();
+    return { app: admin.app(), db };
   }
 
-  return admin.initializeApp({
+  const app = admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
+    // The database URL depends on the location of the database
+    databaseURL: 'https://sjbtherapy-365805-default-rtdb.asia-southeast1.firebasedatabase.app',
   });
+  const db = admin.database();
+  return { app, db };
 }

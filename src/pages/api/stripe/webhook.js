@@ -1,5 +1,18 @@
 import { buffer } from 'micro';
 import Stripe from 'stripe';
+import admin from 'firebase-admin';
+import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
+
+console.log('init webhook');
+
+const { app, db } = createFirebaseAdminApp();
+
+// const ref = db.ref('ter');
+// ref.once('value', (snapshot) => {
+//   // console.log(snapshot.val());
+// });
+
+const purchases = db.ref('purchases');
 
 export const config = {
   api: {
@@ -27,28 +40,29 @@ export default async function handler(req, res) {
     switch (event.type) {
       case 'payment_intent.succeeded': {
         const paymentIntent = event.data.object;
-        console.log(event.type, paymentIntent);
+        // console.log(event.type, paymentIntent);
         // Then define and call a method to handle the successful payment intent.
         // handlePaymentIntentSucceeded(paymentIntent);
         break;
       }
       case 'charge.succeeded': {
-        const charge = event.data.object;
-        console.log(event.type, charge);
-        // Then define and call a method to handle the successful payment intent.
-        // handlePaymentIntentSucceeded(paymentIntent);
+        const checkoutID = event.data.object.payment_intent;
+        // console.log(event.data.object);
+        // store the purchase
+        const userRef = purchases.child(event.data.object.payment_intent);
+        userRef.update(event);
         break;
       }
       case 'payment_method.attached': {
         const paymentMethod = event.data.object;
-        console.log(event.type, paymentMethod);
+        // console.log(event.type, paymentMethod);
         // Then define and call a method to handle the successful attachment of a PaymentMethod.
         // handlePaymentMethodAttached(paymentMethod);
         break;
       }
       // ... handle other event types
       default:
-        console.log(`Unhandled event type ${event.type}`);
+      // console.log(`Unhandled event type ${event.type}`);
     }
 
     res.json({ received: true });
