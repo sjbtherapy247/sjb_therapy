@@ -47,7 +47,7 @@ export default function PricingHome({ plans, prices }) {
       }
     });
     return () => listener();
-  });
+  }, []);
 
   const isMdUp = useResponsive('up', 'md');
 
