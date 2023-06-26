@@ -46,8 +46,6 @@ export default function AccountOrdersPage() {
     const listener = onValue(purchaseRef, (snapshot) => {
       if (snapshot.val()) {
         const items = Object?.values(snapshot.val());
-        console.log(items);
-
         setProductsTable([...items.filter((item) => item.data.object?.billing_details?.email === currentUser.email)]);
       }
     });
