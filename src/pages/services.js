@@ -177,18 +177,18 @@ const svcs = [
     unit_amount_decimal: '64000',
   },
 ];
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
+// const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
 
 export async function getStaticProps() {
-  const { data: xprices } = await stripe.prices.list({
-    active: true,
-    limit: 10,
-    expand: ['data.product'],
-  });
+  //   const { data: xprices } = await stripe.prices.list({
+  //     active: true,
+  //     limit: 10,
+  //     expand: ['data.product'],
+  //   });
 
   return {
     props: {
-      prices: [...xprices],
+      // prices: [...xprices],
       servicesDocs: [...servicesDescription],
       packages: [...sessionPricing],
     },
@@ -200,8 +200,7 @@ ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function ServicesPage({ servicesDocs, packages, prices }) {
-  console.log(prices);
+export default function ServicesPage({ servicesDocs, packages }) {
   const [pricelist, setPricelist] = useState(null);
 
   const getPricelist = async () => {
@@ -211,6 +210,7 @@ export default function ServicesPage({ servicesDocs, packages, prices }) {
 
   useEffect(() => {
     //
+    console.log('running pricelist');
     getPricelist();
   }, []);
 
