@@ -20,37 +20,25 @@ import { AccountLayout } from '../layout';
 // const TABS = ['All Orders', 'Completed', 'To Process', 'Cancelled', 'Return & Refund'];
 
 export const TABLE_HEAD = [
-  { id: 'orderId', label: 'Order ID', width: 140 },
+  { id: 'orderId', label: 'Order ID', width: 115 },
   { id: 'item', label: 'Session Package' },
   { id: 'created', label: 'Purchase date', width: 180 },
-  { id: 'price', label: 'Price', width: 100 },
+  { id: 'price', label: 'Price', width: 60 },
   { id: 'status', label: 'Status', width: 100 },
-  { id: 'viewReceipt' },
+  { id: '', width: 0 },
+  // { id: 'viewReceipt', label: 'Receipt' },
 ];
 
 // ----------------------------------------------------------------------
 
 export default function AccountOrdersPage() {
   // const [tab, setTab] = useState('All Orders');
-  const { currentUser } = useSettingsContext();
+  const { productsTable } = useSettingsContext();
   const [order, setOrder] = useState('desc');
   const [orderBy, setOrderBy] = useState('created');
   const [selected, setSelected] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [productsTable, setProductsTable] = useState([]);
-
-  const purchaseRef = ref(db, 'purchases/');
-
-  useEffect(() => {
-    const listener = onValue(purchaseRef, (snapshot) => {
-      if (snapshot.val()) {
-        const items = Object?.values(snapshot.val());
-        setProductsTable([...items.filter((item) => item.data.object?.billing_details?.email === currentUser.email)]);
-      }
-    });
-    return () => listener();
-  }, []);
 
   const handleSort = (id) => {
     const isAsc = orderBy === id && order === 'asc';
@@ -73,7 +61,7 @@ export default function AccountOrdersPage() {
 
   return (
     <AccountLayout>
-      <Typography variant="h5" sx={{ mb: 3 }}>
+      <Typography variant="h3" sx={{ pl: 2, mb: 3 }}>
         Orders
       </Typography>
 
@@ -105,7 +93,7 @@ export default function AccountOrdersPage() {
                   <AccountOrdersTableRow key={row.id} row={row} selected={selected.includes(row.id)} />
                 ))}
 
-              {emptyRows > 0 && (
+              {/* {emptyRows > 0 && (
                 <TableRow
                   sx={{
                     height: 57 * emptyRows,
@@ -113,7 +101,7 @@ export default function AccountOrdersPage() {
                 >
                   <TableCell colSpan={9} />
                 </TableRow>
-              )}
+              )} */}
             </TableBody>
           </Table>
         </Scrollbar>

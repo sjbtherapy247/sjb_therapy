@@ -10,6 +10,10 @@ export default async function handler(req, res) {
       if (!lineitems.length) return res.status(400).json({ error: 'Bad request - no line items!' });
       const session = await stripe.checkout.sessions.create({
         line_items: lineitems,
+        phone_number_collection: {
+          enabled: true,
+        },
+        customer_creation: 'always',
         mode: 'payment',
         // success_url: `${req.headers.origin}/checkout/success?sessionId={CHECKOUT_SESSION_ID}`,
         success_url: `${req.headers.origin}/services?sessionId={CHECKOUT_SESSION_ID}#hypnotherapyPackages`,

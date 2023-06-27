@@ -6,14 +6,12 @@ import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
 console.log('init webhook');
 
 const { db } = createFirebaseAdminApp();
-console.log(db);
+// console.log(db);
 
-const ref = db.ref('ter');
-ref.once('value', (snapshot) => {
-  console.log(snapshot.val());
-});
-
-const purchases = db.ref('purchases');
+// const ref = db.ref('ter');
+// ref.once('value', (snapshot) => {
+//   console.log(snapshot.val());
+// });
 
 export const config = {
   api: {
@@ -46,10 +44,18 @@ export default async function handler(req, res) {
         // handlePaymentIntentSucceeded(paymentIntent);
         break;
       }
+      case 'customer.created': {
+        // console.log(event.data.object?.billing_details);
+        // store the purchase
+        const custRef = db.ref('customers').child(event.data.object.id);
+        custRef.update(event);
+
+        break;
+      }
       case 'charge.succeeded': {
         // console.log(event.data.object?.billing_details);
         // store the purchase
-        const userRef = purchases.child(event.data.object.payment_intent.slice(-7).toUpperCase());
+        const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
         userRef.update(event);
 
         break;

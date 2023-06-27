@@ -7,6 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { connectAuthEmulator } from 'firebase/auth';
 
 //
+import { onValue, ref } from 'firebase/database';
 import { defaultSettings } from './config-setting';
 import reducer from './reducer';
 
@@ -52,18 +53,30 @@ export function SettingsProvider({ children }) {
   const [themeMode, setThemeMode] = useState(initialState.themeMode);
   const [loggedIn, setLoggedIn] = useState(initialState.loggedIn);
   const [currentUser, setCurrentUser] = useState(initialState.currentUser);
+  const [productsTable, setProductsTable] = useState([]);
 
   const [user, loading, error] = useAuthState(auth);
 
+  const purchaseRef = ref(db, 'purchases/');
+
   useEffect(() => {
+    let listener = () => {};
     if (user) {
       console.log('user loaded', user);
       setLoggedIn(true);
       setCurrentUser({ ...user });
+      listener = onValue(purchaseRef, (snapshot) => {
+        if (snapshot.val()) {
+          const items = Object?.values(snapshot.val());
+          console.log('new snapshot loaded');
+          setProductsTable([...items.filter((item) => item.data.object?.billing_details?.email === user.email)]);
+        }
+      });
     } else {
       console.log('App logged out');
       setLoggedIn(false);
     }
+    return () => listener();
   }, [user]);
 
   // looks for cookie in local storage with thememode - so that theme persists across tabs
@@ -91,6 +104,7 @@ export function SettingsProvider({ children }) {
       setLoggedIn,
       currentUser,
       loading,
+      productsTable,
     }),
     [
       // dependency array
@@ -104,6 +118,7 @@ export function SettingsProvider({ children }) {
       setLoggedIn,
       currentUser,
       loading,
+      productsTable,
     ]
   );
 
