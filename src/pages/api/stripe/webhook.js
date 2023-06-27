@@ -48,7 +48,7 @@ export default async function handler(req, res) {
         // console.log(event.data.object?.billing_details);
         // store the purchase
         const custRef = db.ref('customers').child(event.data.object.id);
-        custRef.update(event);
+        custRef.update(event.data.object);
 
         break;
       }
@@ -56,7 +56,7 @@ export default async function handler(req, res) {
         // console.log(event.data.object?.billing_details);
         // store the purchase
         const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
-        userRef.update(event);
+        userRef.update(event.data.object);
 
         break;
       }

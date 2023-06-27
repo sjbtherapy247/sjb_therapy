@@ -54,10 +54,12 @@ export function SettingsProvider({ children }) {
   const [loggedIn, setLoggedIn] = useState(initialState.loggedIn);
   const [currentUser, setCurrentUser] = useState(initialState.currentUser);
   const [productsTable, setProductsTable] = useState([]);
+  const [custId, setCustId] = useState('');
 
   const [user, loading, error] = useAuthState(auth);
 
   const purchaseRef = ref(db, 'purchases/');
+  const custRef = ref(db, 'customers/');
 
   useEffect(() => {
     let listener = () => {};
@@ -68,8 +70,18 @@ export function SettingsProvider({ children }) {
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
           const items = Object?.values(snapshot.val());
-          console.log('new snapshot loaded');
-          setProductsTable([...items.filter((item) => item.data.object?.billing_details?.email === user.email)]);
+          console.log('purchases loaded');
+          setProductsTable([...items.filter((item) => item?.billing_details?.email === user.email)]);
+        }
+      });
+      onValue(custRef, (snapshot) => {
+        if (snapshot.val()) {
+          const customers = Object?.values(snapshot.val());
+
+          console.log('custIds loaded');
+          console.log(customers);
+          console.log(customers.filter((item) => item.email === user.email)[0]?.id);
+          setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
         }
       });
     } else {
@@ -105,6 +117,7 @@ export function SettingsProvider({ children }) {
       currentUser,
       loading,
       productsTable,
+      custId,
     }),
     [
       // dependency array
@@ -119,6 +132,7 @@ export function SettingsProvider({ children }) {
       currentUser,
       loading,
       productsTable,
+      custId,
     ]
   );
 

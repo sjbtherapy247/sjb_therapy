@@ -2,17 +2,17 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_Simo_Dev);
 
-export const checkout = async (items) => {
+export const checkout = async (items, custId) => {
   console.log(items);
   try {
     const lineitems = items.map((product) => ({ price: product.id, quantity: 1 }));
-    console.log(lineitems);
+    console.log(lineitems, custId);
     const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ lineitems }),
+      body: JSON.stringify({ lineitems, custId }),
     });
     if (!response.ok) throw new Error('failed to fetch stripe session');
     const data = await response.json();

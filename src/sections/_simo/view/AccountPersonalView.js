@@ -23,13 +23,8 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 // ----------------------------------------------------------------------
 
 export default function AccountPersonalView() {
-  const [showPassword, setShowPassword] = useState(false);
-  const { currentUser } = useSettingsContext();
+  const { currentUser, productsTable } = useSettingsContext();
   console.log(currentUser);
-
-  const handleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
 
   const AccountPersonalSchema = Yup.object().shape({
     firstName: Yup.string().required('First name is required'),
@@ -43,17 +38,24 @@ export default function AccountPersonalView() {
     // postCode: Yup.string().required('Zip code is required'),
   });
 
+  const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
+  const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
+
+  console.log(productsTable);
+  console.log(name, email, address, phone);
+
   const defaultValues = {
-    firstName: currentUser?.displayName || '',
-    lastName: '',
-    emailAddress: currentUser?.email,
-    phoneNumber: currentUser?.phoneNumber || '',
+    firstName: name.split(/[ ,]+/)[0] || currentUser?.displayName,
+    lastName: name.indexOf(' ') >= 0 ? name.split(/[ ,]+/)[1] : '',
+    emailAddress: email || currentUser?.email,
+    phoneNumber: phone || currentUser?.phoneNumber || 'will update soon',
     birthday: null,
     gender: 'female',
-    streetAddress: '',
-    postCode: '',
-    city: '',
-    country: 'Australia',
+    streetAddress: address?.line1 || '',
+    postCode: address?.postal_code || '',
+    city: address.city || '',
+    state: address.state || '',
+    country: address.country || 'AU',
   };
 
   const methods = useForm({
@@ -81,19 +83,40 @@ export default function AccountPersonalView() {
     <AccountLayout>
       <Container>
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-          <Typography variant="h3" sx={{ mb: 3 }}>
-            Update Personal Details
+          <Typography variant="h3" sx={{ mb: 0 }}>
+            Personal Details
           </Typography>
-
+          <Typography sx={{ pb: 3 }}>Based on your billing information</Typography>
           <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
-            <RHFTextField name="firstName" label="First Name" />
+            <RHFTextField name="firstName" label="First Name" disabled={productsTable.length} />
 
-            <RHFTextField name="lastName" label="Last Name" />
+            <RHFTextField color="primary" name="lastName" label="Last Name" disabled={productsTable.length} inputProps={{ style: { color: '#FFF' } }} />
 
-            <RHFTextField name="emailAddress" label="Email Address" />
+            <RHFTextField name="emailAddress" label="Email Address" disabled={productsTable.length} />
 
-            <RHFTextField name="phoneNumber" label="Phone Number" />
+            <RHFTextField name="phoneNumber" label="Phone Number" disabled={productsTable.length} />
 
+            <RHFTextField name="streetAddress" label="Street Address" disabled={productsTable.length} />
+
+            <RHFTextField name="city" label="City" disabled={productsTable.length} />
+            <RHFTextField name="state" label="State" disabled={productsTable.length} />
+            <RHFTextField name="postCode" label="Post Code" disabled={productsTable.length} />
+
+            <RHFTextField name="country" label="Country" disabled={productsTable.length} />
+
+            {/* <RHFSelect native name="country" label="Country">
+              <option value="" />
+              {countries.map((country) => (
+                <option key={country.code} value={country.label}>
+                  {country.label}
+                </option>
+              ))}
+            </RHFSelect> */}
+          </Box>
+          <Typography paragraph fullWidth variant="h5" sx={{ my: 3 }}>
+            Optional Details
+          </Typography>
+          <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
             <Controller
               name="birthday"
               render={({ field, fieldState: { error } }) => (
@@ -110,7 +133,6 @@ export default function AccountPersonalView() {
                 />
               )}
             />
-
             <RHFSelect native name="gender" label="Gender">
               {GENDER_OPTIONS.map((option) => (
                 <option key={option} value={option}>
@@ -118,25 +140,10 @@ export default function AccountPersonalView() {
                 </option>
               ))}
             </RHFSelect>
-
-            <RHFTextField name="streetAddress" label="Street Address" />
-
-            <RHFTextField name="postCode" label="Post Code" />
-
-            <RHFTextField name="city" label="City" />
-
-            <RHFSelect native name="country" label="Country">
-              <option value="" />
-              {countries.map((country) => (
-                <option key={country.code} value={country.label}>
-                  {country.label}
-                </option>
-              ))}
-            </RHFSelect>
           </Box>
 
-          <LoadingButton sx={{ my: 6 }} color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
-            Save Changes
+          <LoadingButton sx={{ my: 6 }} color="primary" size="medium" type="submit" variant="contained" loading={isSubmitting}>
+            Update Optional Details
           </LoadingButton>
         </FormProvider>
       </Container>

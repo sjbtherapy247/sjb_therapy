@@ -39,13 +39,13 @@ export default function AccountOrdersTableRow({ row, onSelectRow, selected }) {
 
         <TableCell sx={{ px: 1 }}>
           <Typography variant="body2" sx={inputStyles}>
-            {row.data.object.payment_intent.slice(-7).toUpperCase()}
+            {row.payment_intent.slice(-7).toUpperCase()}
           </Typography>{' '}
         </TableCell>
 
         <TableCell sx={{ px: 1 }}>
           <Typography variant="body2" sx={inputStyles}>
-            {row.data.object?.line_items?.description || 'Session'}
+            {row?.line_items?.description || 'Session'}
           </Typography>
           {/* <InputBase value={row.item} sx={inputStyles} /> */}
         </TableCell>
@@ -56,7 +56,7 @@ export default function AccountOrdersTableRow({ row, onSelectRow, selected }) {
         <TableCell sx={{ px: 1 }}>
           {/* <InputBase value={fCurrency(row.price)} sx={inputStyles} /> */}
           <Typography variant="body2" sx={inputStyles}>
-            {fCurrency(row.data.object.amount / 100)}
+            {fCurrency(row.amount / 100)}
           </Typography>
         </TableCell>
 
@@ -81,7 +81,7 @@ export default function AccountOrdersTableRow({ row, onSelectRow, selected }) {
           sx: { p: 1, width: 160 },
         }}
       >
-        <Link underline="none" target="_blank" component={NextLink} href={row.data.object.receipt_url}>
+        <Link underline="none" target="_blank" component={NextLink} href={row.receipt_url}>
           <MenuItem onClick={handleClose}>
             <Iconify icon="carbon:document" sx={{ mr: 10 }} />
             <Typography variant="body2" sx={{ pl: 1 }}>

@@ -17,7 +17,7 @@ import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
-export default function PlanCard({ plan, prices, currentClient }) {
+export default function PlanCard({ plan, prices, currentClient, custId }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
 
@@ -37,7 +37,7 @@ export default function PlanCard({ plan, prices, currentClient }) {
 
   const handleCheckout = () => {
     setLoading(true);
-    checkout(purchase);
+    checkout(purchase, custId);
   };
 
   return (
