@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 import { useSettingsContext } from 'src/components/settings';
 // next
@@ -25,7 +25,7 @@ export default function AccountSettingsPage() {
     }
   }, [user, loading]);
 
-  if (!user && loading) {
+  if (!user) {
     return <LoadingScreen />;
   }
 
@@ -38,4 +38,5 @@ export default function AccountSettingsPage() {
       <AccountSettingsView />
     </>
   );
+  // }
 }
