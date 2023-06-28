@@ -15,14 +15,14 @@ export default function LoginCoverPage() {
 
   useEffect(() => {
     if (!loading && user) {
-      router.push('/');
+      router.back();
     }
   }, [user, loading]);
 
   if (!user && loading) {
     return <LoadingScreen />;
   }
-
+  // !loading !user
   return (
     <>
       <Head>
