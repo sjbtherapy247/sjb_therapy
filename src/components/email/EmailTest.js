@@ -2,14 +2,16 @@ import { Body, Button, Container, Head, Html, Hr, Img, Link, Preview, Section, T
 
 const image = 'https://firebasestorage.googleapis.com/v0/b/sjbtherapy-365805.appspot.com/o/email.jpg?alt=media&token=5208b883-d055-4b40-9b08-9e2e07d88bc1';
 
-export const SJBTherapySignUpEmail = ({ email, link, name }) => (
+export const SJBTherapyEmailTest = ({ email, link, name }) => (
   // <Html>
   // <Head />
   // <Preview>Welcome to SJB Therapy</Preview>
   // <Body style={main}>
   <div>
     <Container style={container}>
-      <Img style={img} src={image} width="350" alt="SJB Therapy" />
+      <Link href={link}>
+        <Img style={img} src={image} width="350" alt="SJB Therapy" />
+      </Link>
       <Section>
         <Text style={text}>Hi {name || email},</Text>
         <Text style={text}>Someone recently requested a password change for your SJB Therapy account. If this was you, you can set a new password here:</Text>
@@ -33,7 +35,9 @@ export const SJBTherapySignUpEmail = ({ email, link, name }) => (
       </Section>
     </Container>
     <Container style={container}>
-      <Img style={img} src={image} width="350" alt="SJB Therapy" />
+      <Link href={link}>
+        <Img style={img} src={image} width="350" alt="SJB Therapy" />
+      </Link>
       <Section>
         <Text style={text}>Hi {name},</Text>
         <Text style={text}>Welcome to SJB Therapy. Thank you for commiting to the next steps towards a better you. We look forward to providing you with the best possible outcome and care. To finalise your account setup please continue here:</Text>
@@ -62,7 +66,7 @@ export const SJBTherapySignUpEmail = ({ email, link, name }) => (
   // </Html>
 );
 
-export default SJBTherapySignUpEmail;
+export default SJBTherapyEmailTest;
 
 const main = {
   backgroundColor: '#f6f9fc',
