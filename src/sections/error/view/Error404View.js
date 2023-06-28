@@ -19,10 +19,7 @@ export default function Error404View() {
       </m.div>
 
       <m.div variants={varBounce().in}>
-        <Typography sx={{ color: 'text.secondary' }}>
-          Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL? Be
-          sure to check your spelling.
-        </Typography>
+        <Typography sx={{ color: 'text.secondary' }}>Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL? Be sure to check your spelling.</Typography>
       </m.div>
 
       <m.div variants={varBounce().in}>
@@ -37,7 +34,7 @@ export default function Error404View() {
         />
       </m.div>
 
-      <Button component={NextLink} href="/" size="large" color="inherit" variant="contained">
+      <Button component={NextLink} href="/" size="large" color="primary" variant="contained">
         Go to Home
       </Button>
     </MotionContainer>

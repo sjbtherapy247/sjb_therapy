@@ -19,9 +19,7 @@ export default function Error500View() {
       </m.div>
 
       <m.div variants={varBounce().in}>
-        <Typography sx={{ color: 'text.secondary' }}>
-          There was an error, please try again later.
-        </Typography>
+        <Typography sx={{ color: 'text.secondary' }}>There was an error, please try again later.</Typography>
       </m.div>
 
       <m.div variants={varBounce().in}>
@@ -36,7 +34,7 @@ export default function Error500View() {
         />
       </m.div>
 
-      <Button component={NextLink} href="/" size="large" color="inherit" variant="contained">
+      <Button component={NextLink} href="/" size="large" color="primary" variant="contained">
         Go to Home
       </Button>
     </MotionContainer>

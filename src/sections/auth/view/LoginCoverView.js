@@ -39,19 +39,19 @@ export default function LoginCoverView() {
 
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {`Don’t have an account? `}
-            <Link component={NextLink} href={paths.registerCover} variant="subtitle2" color="primary">
-              Get started
+            <Link component={NextLink} href="/services/#hypnotherapyServices" variant="subtitle2" color="primary">
+              Book your free session
             </Link>
           </Typography>
         </Stack>
 
-        <AuthWithSocial />
+        {/* <AuthWithSocial />
 
         <Divider sx={{ py: 3 }}>
           <Typography variant="body2" sx={{ color: 'text.disabled' }}>
             OR
           </Typography>
-        </Divider>
+        </Divider> */}
 
         <AuthLoginForm />
       </Box>
