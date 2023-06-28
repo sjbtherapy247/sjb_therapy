@@ -3,36 +3,38 @@ import { Body, Button, Container, Head, Html, Hr, Img, Link, Preview, Section, T
 const image = 'https://firebasestorage.googleapis.com/v0/b/sjbtherapy-365805.appspot.com/o/email.jpg?alt=media&token=5208b883-d055-4b40-9b08-9e2e07d88bc1';
 
 export const SJBTherapyResetPasswordEmail = ({ name, email, link }) => (
-  // <Html>
-  //   <Head />
-  //   <Preview>SJB Therapy - Reset your password</Preview>
-  // <Body style={main}>
-  <Container style={container}>
-    <Img style={img} src={image} width="350" alt="SJB Therapy" />
-    <Section>
-      <Text style={text}>Hi {name},</Text>
-      <Text style={text}>Someone recently requested a password change for your SJB Therapy account. If this was you, you can set a new password here:</Text>
-      <Button pX={10} pY={10} style={button} href={link}>
-        Reset password
-      </Button>
-      <Text style={text}>If you don&apos;t want to change your password or didn&apos;t request this, just ignore and delete this message.</Text>
-      <Text style={text}>
-        To keep your account secure, please don&apos;t forward this email to anyone. Head over to our Support Page for{' '}
-        <Link style={anchor} href="https://simo-dev.vercel.app/support">
-          more security tips.
+  <Html>
+    <Head />
+    <Preview>SJB Therapy - Reset your password</Preview>
+    <Body style={main}>
+      <Container style={container}>
+        <Link href={link}>
+          <Img style={img} src={image} width="350" alt="SJB Therapy" />
         </Link>
-      </Text>
-      <Text style={text}>Simply Just Believe!</Text>
-      <Text style={text}>Simon</Text>
-      <Link style={anchor} href="https://simo-dev.vercel.app/">
-        @SJB Therapy
-      </Link>
-      <Hr style={hr} />
-      <Text style={subtext}>This email was originally sent to {email}. Please do not click on any links you cannot verify. All links should have origin https://simo-dev.vercel.app</Text>
-    </Section>
-  </Container>
-  // </Body>
-  // </Html>
+        <Section>
+          <Text style={text}>Hi {name || email},</Text>
+          <Text style={text}>Someone recently requested a password change for your SJB Therapy account. If this was you, you can set a new password here:</Text>
+          <Button pX={10} pY={10} style={button} href={link}>
+            Reset password
+          </Button>
+          <Text style={text}>If you don&apos;t want to change your password or didn&apos;t request this, just ignore and delete this message.</Text>
+          <Text style={text}>
+            To keep your account secure, please do not forward this email to anyone. Head over to our Support Page for{' '}
+            <Link style={anchor} href="https://simo-dev.vercel.app/support">
+              more security tips.
+            </Link>
+          </Text>
+          <Text style={text}>Simply Just Believe!</Text>
+          <Text style={text}>Simon</Text>
+          <Link style={anchor} href="https://simo-dev.vercel.app/">
+            @SJB Therapy
+          </Link>
+          <Hr style={hr} />
+          <Text style={subtext}>This email was originally sent to {email}. Please do not click on any links you cannot verify. All links should have origin https://simo-dev.vercel.app</Text>
+        </Section>
+      </Container>
+    </Body>
+  </Html>
 );
 
 export default SJBTherapyResetPasswordEmail;

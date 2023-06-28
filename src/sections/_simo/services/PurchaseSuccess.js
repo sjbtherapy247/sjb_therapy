@@ -59,6 +59,7 @@ export default function PurchaseSuccess({ checkout }) {
         },
         body: JSON.stringify({
           currentUserEmail: checkout.customer_details.email,
+          currentUserName: checkout.customer_details.name.split(/[ ]+/)[0], // first name or nickname
           mode: 'signInWithEmail',
         }),
       }).then((res) => res.json());

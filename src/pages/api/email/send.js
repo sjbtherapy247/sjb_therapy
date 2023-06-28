@@ -16,11 +16,15 @@ console.log(admin.apps);
 createFirebaseAdminApp();
 
 export default async function handler(req, res) {
-  let currentUser = {};
-  const email = req.body?.currentUserEmail;
-  const newUserEmail = req.body?.newUserEmail;
+  let currentUser = {}; // if user is a current client it will populate
+  // operation
   const mode = req.body?.mode;
+  // will hold the correct link depending on mode
   let link = null;
+  // email variables
+  const email = req.body?.currentUserEmail;
+  const name = req.body?.currentUserName;
+  const newUserEmail = req.body?.newUserEmail;
 
   if (req.method === 'POST') {
     try {
@@ -52,7 +56,7 @@ export default async function handler(req, res) {
               to: email,
               subject: 'Welcome to SJB Therapy',
               html: '<strong>Please finalise your account setup</strong>',
-              react: SignUpEmail({ link, email }),
+              react: SignUpEmail({ link, email, name }),
             });
           } catch (error) {
             console.log(error);
@@ -71,7 +75,7 @@ export default async function handler(req, res) {
               to: email,
               subject: 'SJB Therapy - Reset Password',
               html: '<strong>Request to reset password</strong>',
-              react: ResetPasswordEmail({ link, email }),
+              react: ResetPasswordEmail({ link, email, name }),
             });
           } catch (error) {
             console.log(error);
