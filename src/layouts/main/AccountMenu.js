@@ -16,12 +16,14 @@ import TextMaxLine from 'src/components/text-max-line';
 import { useSettingsContext } from 'src/components/settings';
 import { auth } from 'src/lib/createFirebaseApp';
 import { useSignOut } from 'react-firebase-hooks/auth';
+import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
 
 export function MenuContent() {
   const { setLoggedIn, themeMode, onToggleMode, currentUser } = useSettingsContext();
   const theme = useTheme();
+  const router = useRouter();
 
   const navigations = [
     {
@@ -48,6 +50,8 @@ export function MenuContent() {
   const [signOut, loading, error] = useSignOut(auth);
 
   const handleLogout = () => {
+    router.push('/');
+    // router.reload();
     const success = signOut();
     if (success) {
       // setLoggedIn(false);

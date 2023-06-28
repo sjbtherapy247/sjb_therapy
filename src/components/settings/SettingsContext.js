@@ -90,6 +90,8 @@ export function SettingsProvider({ children }) {
       // off(listener); // detach listeners
       // custRef.off('customers/'); // detach listeners
       console.log('App logged out');
+      setCurrentUser(null);
+      setProductsTable([]);
       setLoggedIn(false);
       onValue(custRef, (snapshot) => {
         if (snapshot.val()) {
