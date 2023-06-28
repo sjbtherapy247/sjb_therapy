@@ -52,7 +52,7 @@ export default function AuthLoginForm() {
       const userDoc = await signInWithEmailAndPassword(auth, data.email, data.password);
       console.log(userDoc);
       // reset();
-      router.push('/');
+      router.back();
     } catch (error) {
       console.error(error);
     }

@@ -13,7 +13,7 @@ export default function LoginCoverPage() {
   const router = useRouter();
 
   if (loggedIn) {
-    router.push('/');
+    router.back();
     return <LoadingScreen />;
   }
 

@@ -25,11 +25,13 @@ export default function VerificationView() {
       query: { oobCode, mode },
     } = router;
 
+    if (!oobCode || !mode) {
+      router.back();
+      return;
+    }
+
     verifyUser(oobCode, mode);
   }, [router.isReady]);
-
-  // const oobCode = null;
-  // const mode = null;
 
   const {
     currentUser,
