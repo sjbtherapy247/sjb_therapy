@@ -92,6 +92,7 @@ export function SettingsProvider({ children }) {
       console.log('App logged out');
       setCurrentUser(null);
       setProductsTable([]);
+      setCustId('');
       setLoggedIn(false);
       onValue(custRef, (snapshot) => {
         if (snapshot.val()) {
@@ -134,6 +135,7 @@ export function SettingsProvider({ children }) {
       productsTable,
       custId,
       clients,
+      user,
     }),
     [
       // dependency array
@@ -150,6 +152,7 @@ export function SettingsProvider({ children }) {
       productsTable,
       custId,
       clients,
+      user,
     ]
   );
 

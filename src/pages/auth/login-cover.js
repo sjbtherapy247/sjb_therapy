@@ -5,15 +5,21 @@ import { useSettingsContext } from 'src/components/settings';
 import { LoginCoverView } from 'src/sections/auth/view';
 import { useRouter } from 'next/router';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
+import { useEffect } from 'react';
 
 // ----------------------------------------------------------------------
 
 export default function LoginCoverPage() {
-  const { loggedIn } = useSettingsContext();
+  const { loading, user } = useSettingsContext();
   const router = useRouter();
 
-  if (loggedIn) {
-    router.back();
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push('/');
+    }
+  }, [user, loading]);
+
+  if (!user && loading) {
     return <LoadingScreen />;
   }
 

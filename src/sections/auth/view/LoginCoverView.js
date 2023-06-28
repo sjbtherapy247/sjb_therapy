@@ -39,7 +39,7 @@ export default function LoginCoverView() {
 
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {`Don’t have an account? `}
-            <Link component={NextLink} href="/services/#hypnotherapyServices" variant="subtitle2" color="primary">
+            <Link component={NextLink} href="/services/#hypnotherapyPackages" variant="subtitle2" color="primary">
               Book your free session
             </Link>
           </Typography>

@@ -16,15 +16,18 @@ AccountSettingsPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function AccountSettingsPage() {
-  const { loggedIn } = useSettingsContext();
-  const { push } = useRouter();
+  const { loading, user } = useSettingsContext();
+  const router = useRouter();
 
   useEffect(() => {
-    if (!loggedIn) push('/auth/login-cover');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loggedIn]);
+    if (!loading && !user) {
+      router.push('/');
+    }
+  }, [user, loading]);
 
-  if (!loggedIn) return <LoadingScreen />;
+  if (!user && loading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <>

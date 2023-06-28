@@ -27,15 +27,14 @@ export default function AccountPersonalView() {
   console.log(currentUser);
 
   const AccountPersonalSchema = Yup.object().shape({
-    firstName: Yup.string().required('First name is required'),
-    lastName: Yup.string().required('Last name is required'),
+    name: Yup.string().required('First name is required'),
     emailAddress: Yup.string().required('Email address is required'),
     phoneNumber: Yup.string().required('Phone number is required'),
-    // birthday: Yup.string().required('Birthday is required'),
+    birthday: Yup.string(),
     // gender: Yup.string().required('Gender is required'),
-    // streetAddress: Yup.string().required('Street address is required'),
-    // city: Yup.string().required('City is required'),
-    // postCode: Yup.string().required('Zip code is required'),
+    streetAddress: Yup.string(),
+    city: Yup.string(),
+    postCode: Yup.string(),
   });
 
   const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
@@ -45,9 +44,8 @@ export default function AccountPersonalView() {
   console.log(name, email, address, phone);
 
   const defaultValues = {
-    firstName: name.split(/[ ,]+/)[0] || currentUser?.displayName,
-    lastName: name.indexOf(' ') >= 0 ? name.split(/[ ,]+/)[1] : '',
-    emailAddress: email || currentUser?.email,
+    name: name || currentUser?.displayName || '',
+    emailAddress: email || currentUser?.email || '',
     phoneNumber: phone || currentUser?.phoneNumber || 'will update soon',
     birthday: null,
     gender: 'female',
@@ -78,31 +76,52 @@ export default function AccountPersonalView() {
       console.error(error);
     }
   };
+  console.log(address);
 
   return (
     <AccountLayout>
       <Container>
+        <Typography variant="h3" sx={{ mb: 3 }}>
+          Billing Details
+        </Typography>
+        <Box
+          sx={{
+            mb: 4,
+            rowGap: 2.5,
+            columnGap: 3,
+            display: 'grid',
+            gridTemplateColumns: {
+              xs: 'repeat(1, 1fr)',
+              sm: 'repeat(2, 1fr)',
+            },
+          }}
+        >
+          <OverviewItem icon="carbon:user" label="Name on card" text={name || currentUser?.displayName} />
+          <OverviewItem icon="carbon:mobile" label="Phone Number" text={phone || ''} />
+          <OverviewItem icon="carbon:email" label="Email" text={email} />
+          <OverviewItem icon="carbon:location" label="Location" text={address.country} />
+          {/* <OverviewItem icon="carbon:time" label="Durations" text={email} />
+          <OverviewItem icon="carbon:receipt" label="Languages" text={email} /> */}
+        </Box>
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
           <Typography variant="h3" sx={{ mb: 0 }}>
             Personal Details
           </Typography>
-          <Typography sx={{ pb: 3 }}>Based on your billing information</Typography>
+          <Typography sx={{ pb: 3 }}>Certain fields must remain as per billing information</Typography>
           <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
-            <RHFTextField name="firstName" label="First Name" disabled={productsTable.length} />
+            <RHFTextField name="name" label="Name" />
 
-            <RHFTextField color="primary" name="lastName" label="Last Name" disabled={productsTable.length} inputProps={{ style: { color: '#FFF' } }} />
+            <RHFTextField name="emailAddress" label="Email Address" disabled={!!productsTable.length} />
 
-            <RHFTextField name="emailAddress" label="Email Address" disabled={productsTable.length} />
+            <RHFTextField name="phoneNumber" label="Phone Number" disabled={!!productsTable.length} />
 
-            <RHFTextField name="phoneNumber" label="Phone Number" disabled={productsTable.length} />
+            <RHFTextField name="streetAddress" label="Street Address" />
 
-            <RHFTextField name="streetAddress" label="Street Address" disabled={productsTable.length} />
+            <RHFTextField name="city" label="City" />
+            <RHFTextField name="state" label="State" />
+            <RHFTextField name="postCode" label="Post Code" />
 
-            <RHFTextField name="city" label="City" disabled={productsTable.length} />
-            <RHFTextField name="state" label="State" disabled={productsTable.length} />
-            <RHFTextField name="postCode" label="Post Code" disabled={productsTable.length} />
-
-            <RHFTextField name="country" label="Country" disabled={productsTable.length} />
+            <RHFTextField name="country" label="Country" disabled={!!productsTable.length} />
 
             {/* <RHFSelect native name="country" label="Country">
               <option value="" />
@@ -113,7 +132,7 @@ export default function AccountPersonalView() {
               ))}
             </RHFSelect> */}
           </Box>
-          <Typography paragraph fullWidth variant="h5" sx={{ my: 3 }}>
+          <Typography paragraph variant="h5" sx={{ my: 3 }}>
             Optional Details
           </Typography>
           <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
@@ -142,11 +161,31 @@ export default function AccountPersonalView() {
             </RHFSelect>
           </Box>
 
-          <LoadingButton sx={{ my: 6 }} color="primary" size="medium" type="submit" variant="contained" loading={isSubmitting}>
-            Update Optional Details
+          <LoadingButton sx={{ my: 6 }} color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
+            Update Personal Details
           </LoadingButton>
         </FormProvider>
       </Container>
     </AccountLayout>
   );
 }
+
+function OverviewItem({ icon, label, text = '-' }) {
+  return (
+    <Stack spacing={1.5} direction="row" alignItems="flex-start">
+      <Iconify icon={icon} width={24} />
+      <Stack spacing={0.5}>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          {label}
+        </Typography>
+        <Typography>{text}</Typography>
+      </Stack>
+    </Stack>
+  );
+}
+
+// OverviewItem.propTypes = {
+//   icon: PropTypes.node,
+//   label: PropTypes.string,
+//   text: PropTypes.string,
+// };

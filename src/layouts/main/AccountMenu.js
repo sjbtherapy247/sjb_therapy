@@ -21,7 +21,7 @@ import { useRouter } from 'next/router';
 // ----------------------------------------------------------------------
 
 export function MenuContent() {
-  const { setLoggedIn, themeMode, onToggleMode, currentUser } = useSettingsContext();
+  const { themeMode, onToggleMode, currentUser } = useSettingsContext();
   const theme = useTheme();
   const router = useRouter();
 

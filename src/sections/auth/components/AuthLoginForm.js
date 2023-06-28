@@ -50,7 +50,7 @@ export default function AuthLoginForm() {
     try {
       // await new Promise((resolve) => setTimeout(resolve, 500));
       const userDoc = await signInWithEmailAndPassword(auth, data.email, data.password);
-      console.log(userDoc);
+      // console.log(userDoc);
       // reset();
       router.back();
     } catch (error) {

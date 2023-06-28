@@ -47,7 +47,7 @@ import AccountMenu from '../AccountMenu';
 
 export default function Header({ headerOnDark }) {
   const theme = useTheme();
-  const { onToggleMode, loggedIn, loading } = useSettingsContext();
+  const { onToggleMode, user, loading } = useSettingsContext();
   const [anchorElUser, setAnchorElUser] = useState();
 
   const isMdUp = useResponsive('up', 'md');
@@ -153,7 +153,7 @@ export default function Header({ headerOnDark }) {
               </IconButton>
             )}
 
-            {loggedIn && !loading && (
+            {user && !loading && (
               <>
                 {/* <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
                   <Badge badgeContent={4} color="error">
@@ -170,7 +170,7 @@ export default function Header({ headerOnDark }) {
             )}
 
             {/* <Stack spacing={1} direction="row" alignItems="center" sx={{ pr: { xs: 0, md: 2 } }}> */}
-            {!loggedIn && !loading && (
+            {!user && !loading && (
               <>
                 <Tooltip title={theme.palette.mode === 'dark' ? 'Light Mode' : 'Dark Mode'} arrow placement="bottom-end">
                   <IconButton onClick={onToggleMode} color="inherit">

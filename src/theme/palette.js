@@ -113,8 +113,8 @@ export default function palette(themeMode) {
     mode: 'dark',
     text: {
       primary: '#FFFFFF',
-      secondary: GREY[400],
-      disabled: GREY[300],
+      secondary: GREY[300],
+      disabled: GREY[400],
     },
     background: {
       paper: GREY[800],
