@@ -25,7 +25,7 @@ export default function AccountPersonalPage() {
     }
   }, [user, loading]);
 
-  if (!user && loading) {
+  if (!user) {
     return <LoadingScreen />;
   }
 
