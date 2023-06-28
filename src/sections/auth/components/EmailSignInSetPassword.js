@@ -70,6 +70,7 @@ const EmailSignInSetPassword = () => {
             console.log('password updated');
             // An error ocurred
           });
+
         // You can access the new user via result.user
         // Additional user info profile not available via:
 

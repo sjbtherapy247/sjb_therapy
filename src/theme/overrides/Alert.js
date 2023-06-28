@@ -15,26 +15,50 @@ export default function Alert(theme) {
     const outlinedVariant = ownerState.variant === 'outlined';
 
     const colorStyle = COLORS.map((color) => ({
-      ...(ownerState.severity === color && {
+      ...(ownerState.severity === color &&
+        color !== 'success' && {
+          // STANDARD
+          ...(standardVariant && {
+            color: theme.palette[color][isLight ? 'darker' : 'lighter'],
+            backgroundColor: theme.palette[color][isLight ? 'lighter' : 'darker'],
+            '& .MuiAlert-icon': {
+              color: theme.palette[color][isLight ? 'main' : 'light'],
+            },
+          }),
+          // FILLED
+          ...(filledVariant && {
+            color: theme.palette[color].contrastText,
+            backgroundColor: theme.palette[color].main,
+          }),
+          // OUTLINED
+          ...(outlinedVariant && {
+            border: `solid 2px ${theme.palette[color].main}`,
+            color: theme.palette[color][isLight ? 'dark' : 'light'],
+            '& .MuiAlert-icon': {
+              color: theme.palette[color].main,
+            },
+          }),
+        }),
+      ...(ownerState.severity === 'success' && {
         // STANDARD
         ...(standardVariant && {
-          color: theme.palette[color][isLight ? 'darker' : 'lighter'],
-          backgroundColor: theme.palette[color][isLight ? 'lighter' : 'darker'],
+          color: theme.palette.primary[isLight ? 'darker' : 'lighter'],
+          backgroundColor: theme.palette.primary[isLight ? 'lighter' : 'darker'],
           '& .MuiAlert-icon': {
-            color: theme.palette[color][isLight ? 'main' : 'light'],
+            color: theme.palette.primary[isLight ? 'main' : 'light'],
           },
         }),
         // FILLED
         ...(filledVariant && {
-          color: theme.palette[color].contrastText,
-          backgroundColor: theme.palette[color].main,
+          color: theme.palette.primary.contrastText,
+          backgroundColor: theme.palette.primary.main,
         }),
         // OUTLINED
         ...(outlinedVariant && {
-          border: `solid 2px ${theme.palette[color].main}`,
-          color: theme.palette[color][isLight ? 'dark' : 'light'],
+          border: `solid 2px ${theme.palette.primary.main}`,
+          color: theme.palette.primary[isLight ? 'dark' : 'light'],
           '& .MuiAlert-icon': {
-            color: theme.palette[color].main,
+            color: theme.palette.primary.main,
           },
         }),
       }),

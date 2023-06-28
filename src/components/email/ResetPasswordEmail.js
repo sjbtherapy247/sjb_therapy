@@ -12,7 +12,7 @@ export const SJBTherapyResetPasswordEmail = ({ name, email, link }) => (
           <Img style={img} src={image} width="350" alt="SJB Therapy" />
         </Link>
         <Section>
-          <Text style={text}>Hi {name || email},</Text>
+          <Text style={text}>Hi {name},</Text>
           <Text style={text}>Someone recently requested a password change for your SJB Therapy account. If this was you, you can set a new password here:</Text>
           <Button pX={10} pY={10} style={button} href={link}>
             Reset password

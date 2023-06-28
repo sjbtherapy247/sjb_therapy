@@ -7,7 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { connectAuthEmulator } from 'firebase/auth';
 
 //
-import { onValue, ref } from 'firebase/database';
+import { onValue, ref, off } from 'firebase/database';
 import { defaultSettings } from './config-setting';
 import reducer from './reducer';
 
@@ -54,6 +54,7 @@ export function SettingsProvider({ children }) {
   const [loggedIn, setLoggedIn] = useState(initialState.loggedIn);
   const [currentUser, setCurrentUser] = useState(initialState.currentUser);
   const [productsTable, setProductsTable] = useState([]);
+  const [clients, setClients] = useState([]);
   const [custId, setCustId] = useState('');
 
   const [user, loading, error] = useAuthState(auth);
@@ -63,6 +64,7 @@ export function SettingsProvider({ children }) {
 
   useEffect(() => {
     let listener = () => {};
+    let custlistener = () => {};
     if (user) {
       console.log('user loaded', user);
       setLoggedIn(true);
@@ -74,7 +76,7 @@ export function SettingsProvider({ children }) {
           setProductsTable([...items.filter((item) => item?.billing_details?.email === user.email)]);
         }
       });
-      onValue(custRef, (snapshot) => {
+      custlistener = onValue(custRef, (snapshot) => {
         if (snapshot.val()) {
           const customers = Object?.values(snapshot.val());
 
@@ -85,8 +87,19 @@ export function SettingsProvider({ children }) {
         }
       });
     } else {
+      // off(listener); // detach listeners
+      // custRef.off('customers/'); // detach listeners
       console.log('App logged out');
       setLoggedIn(false);
+      onValue(custRef, (snapshot) => {
+        if (snapshot.val()) {
+          const customers = Object?.values(snapshot.val());
+
+          console.log(' logged out custIds loaded');
+          console.log(customers);
+          setClients(customers);
+        }
+      });
     }
     return () => listener();
   }, [user]);
@@ -118,6 +131,7 @@ export function SettingsProvider({ children }) {
       loading,
       productsTable,
       custId,
+      clients,
     }),
     [
       // dependency array
@@ -133,6 +147,7 @@ export function SettingsProvider({ children }) {
       loading,
       productsTable,
       custId,
+      clients,
     ]
   );
 

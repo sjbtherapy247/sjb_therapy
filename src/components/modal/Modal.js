@@ -14,6 +14,7 @@ const Modal = () => {
     if (modal.title.includes('Password')) {
       //  a user has just closed the reset password verification or email signin windown
       router.push('/');
+      window.localStorage.removeItem('emailForSignIn');
     }
     dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
   };

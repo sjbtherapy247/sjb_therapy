@@ -16,6 +16,7 @@ export default function AuthResetPasswordForm() {
   const {
     dispatch,
     state: { alert, modal },
+    clients,
   } = useSettingsContext();
 
   const ResetPasswordSchema = Yup.object().shape({
@@ -50,8 +51,11 @@ export default function AuthResetPasswordForm() {
       }).then((res) => res.json());
       // if the account already existing throw a wobbler
       if (!user.uid) throw new Error('Error - It appears there is no account on our system with that email address.');
-      console.log(user);
+
+      const name = clients.filter((item) => item.email === user.email)[0].name.split(/[ ]+/)[0];
+
       // await new Promise((resolve) => setTimeout(resolve, 500));
+
       const response = await fetch('/api/email/send', {
         method: 'POST',
         headers: {
@@ -59,6 +63,7 @@ export default function AuthResetPasswordForm() {
         },
         body: JSON.stringify({
           currentUserEmail: data.email,
+          currentUserName: name,
           // newUserEmail: data.email,
           mode: 'resetPassword',
           // test: 'true',
@@ -68,8 +73,6 @@ export default function AuthResetPasswordForm() {
       console.log(resJson);
       router.push('/');
 
-      reset();
-      // console.log('DATA', data);
       dispatch({
         type: 'UPDATE_ALERT',
         payload: {
