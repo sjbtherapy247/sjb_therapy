@@ -27,7 +27,6 @@ const initialState = {
   // toggle Mode
   onToggleMode: () => {},
   // Global state vars
-  loggedIn: false,
   currentUser: null,
 };
 
@@ -51,7 +50,6 @@ export function SettingsProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const [themeMode, setThemeMode] = useState(initialState.themeMode);
-  const [loggedIn, setLoggedIn] = useState(initialState.loggedIn);
   const [currentUser, setCurrentUser] = useState(initialState.currentUser);
   const [productsTable, setProductsTable] = useState([]);
   const [clients, setClients] = useState([]);
@@ -67,7 +65,6 @@ export function SettingsProvider({ children }) {
     let custlistener = () => {};
     if (user) {
       console.log('user loaded', user);
-      setLoggedIn(true);
       setCurrentUser({ ...user });
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
@@ -93,7 +90,6 @@ export function SettingsProvider({ children }) {
       setCurrentUser(null);
       setProductsTable([]);
       setCustId('');
-      setLoggedIn(false);
       onValue(custRef, (snapshot) => {
         if (snapshot.val()) {
           const customers = Object?.values(snapshot.val());
@@ -128,8 +124,6 @@ export function SettingsProvider({ children }) {
       // Mode
       themeMode,
       onToggleMode,
-      loggedIn,
-      setLoggedIn,
       currentUser,
       loading,
       productsTable,
@@ -145,8 +139,6 @@ export function SettingsProvider({ children }) {
       // the rest
       themeMode,
       onToggleMode,
-      loggedIn,
-      setLoggedIn,
       currentUser,
       loading,
       productsTable,

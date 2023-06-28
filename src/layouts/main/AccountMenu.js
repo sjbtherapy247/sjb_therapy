@@ -54,7 +54,6 @@ export function MenuContent() {
     // router.reload();
     const success = signOut();
     if (success) {
-      // setLoggedIn(false);
       console.log('logged out');
       //
     }
