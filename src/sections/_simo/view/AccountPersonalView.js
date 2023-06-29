@@ -1,13 +1,15 @@
 import * as Yup from 'yup';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useState } from 'react';
+import { useEffect } from 'react';
+// fb
+import { db } from 'src/lib/createFirebaseApp';
+import { ref, update } from 'firebase/database';
 // @mui
 import { LoadingButton } from '@mui/lab';
 import { DatePicker } from '@mui/x-date-pickers';
-import { Box, Typography, Stack, IconButton, InputAdornment, Container } from '@mui/material';
+import { Box, Typography, Stack, Container } from '@mui/material';
 // assets
-import { countries } from 'src/assets/data';
 // components
 import Iconify from 'src/components/iconify';
 import FormProvider, { RHFTextField, RHFSelect } from 'src/components/hook-form';
@@ -23,60 +25,80 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 // ----------------------------------------------------------------------
 
 export default function AccountPersonalView() {
-  const { currentUser, productsTable } = useSettingsContext();
-  console.log(currentUser);
+  const { user, productsTable, custId, clients } = useSettingsContext();
+  console.log(user);
 
   const AccountPersonalSchema = Yup.object().shape({
-    name: Yup.string().required('First name is required'),
-    emailAddress: Yup.string().required('Email address is required'),
-    phoneNumber: Yup.string().required('Phone number is required'),
+    name: Yup.string(),
+    emailAddress: Yup.string(),
+    phoneNumber: Yup.string(),
     birthday: Yup.string(),
-    // gender: Yup.string().required('Gender is required'),
-    streetAddress: Yup.string(),
-    city: Yup.string(),
-    postCode: Yup.string(),
+    gender: Yup.string().required('Gender is required'),
+    streetAddress: Yup.string().required('Gender is required'),
+    city: Yup.string().required('Gender is required'),
+    state: Yup.string().required('Gender is required'),
+    postCode: Yup.string().required('Gender is required'),
+    country: Yup.string(),
   });
 
   const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
   const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
 
-  console.log(productsTable);
-  console.log(name, email, address, phone);
-
   const defaultValues = {
-    name: name || currentUser?.displayName || '',
-    emailAddress: email || currentUser?.email || '',
-    phoneNumber: phone || currentUser?.phoneNumber || 'will update soon',
+    fname: '',
+    emailAddress: '',
+    phoneNumber: '',
     birthday: null,
     gender: 'female',
-    streetAddress: address?.line1 || '',
-    postCode: address?.postal_code || '',
-    city: address.city || '',
-    state: address.state || '',
-    country: address.country || 'AU',
+    streetAddress: '',
+    city: '',
+    state: '',
+    postCode: '',
+    country: 'AU',
   };
-
   const methods = useForm({
     resolver: yupResolver(AccountPersonalSchema),
     defaultValues,
   });
-
   const {
     reset,
     handleSubmit,
     formState: { isSubmitting },
   } = methods;
+  console.log('clients', clients);
+
+  useEffect(() => {
+    const personal = { ...clients[0]?.acct_per_details };
+    console.log('personal', personal);
+    const resetValues = {
+      fname: personal?.fname || name,
+      emailAddress: email || user?.email || '',
+      phoneNumber: phone || '',
+      birthday: new Date(),
+      gender: 'female',
+      streetAddress: personal.streetAddress || address?.line1 || '',
+      city: personal?.city || address.city || '',
+      state: personal?.state || address.state || '',
+      postCode: personal?.postCode || address?.postal_code || '',
+      country: address.country || 'AU',
+    };
+    console.log('qwerty');
+    if (!user || productsTable.length === 0) return;
+    reset(resetValues);
+    console.log('reset');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productsTable, user]);
 
   const onSubmit = async (data) => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 500));
-      reset();
+      // reset();
       console.log('DATA', data);
+      update(ref(db, `customers/${custId}/acct_per_details`), data);
     } catch (error) {
       console.error(error);
     }
   };
-  console.log(address);
 
   return (
     <AccountLayout>
@@ -96,7 +118,7 @@ export default function AccountPersonalView() {
             },
           }}
         >
-          <OverviewItem icon="carbon:user" label="Name on card" text={name || currentUser?.displayName} />
+          <OverviewItem icon="carbon:user" label="Name on card" text={name || user?.displayName} />
           <OverviewItem icon="carbon:mobile" label="Phone Number" text={phone || ''} />
           <OverviewItem icon="carbon:email" label="Email" text={email} />
           <OverviewItem icon="carbon:location" label="Location" text={address.country} />
@@ -109,11 +131,11 @@ export default function AccountPersonalView() {
           </Typography>
           <Typography sx={{ pb: 3 }}>Certain fields must remain as per billing information</Typography>
           <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
-            <RHFTextField name="name" label="Name" />
+            <RHFTextField name="fname" label="Name" />
 
-            <RHFTextField name="emailAddress" label="Email Address" disabled={!!productsTable.length} />
+            <RHFTextField name="emailAddress" label="Email Address" disabled />
 
-            <RHFTextField name="phoneNumber" label="Phone Number" disabled={!!productsTable.length} />
+            <RHFTextField name="phoneNumber" label="Phone Number" disabled />
 
             <RHFTextField name="streetAddress" label="Street Address" />
 
@@ -121,7 +143,7 @@ export default function AccountPersonalView() {
             <RHFTextField name="state" label="State" />
             <RHFTextField name="postCode" label="Post Code" />
 
-            <RHFTextField name="country" label="Country" disabled={!!productsTable.length} />
+            <RHFTextField name="country" label="Country" disabled />
 
             {/* <RHFSelect native name="country" label="Country">
               <option value="" />

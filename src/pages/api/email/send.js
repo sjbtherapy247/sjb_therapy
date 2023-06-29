@@ -6,14 +6,30 @@
 import { Resend } from 'resend';
 import admin from 'firebase-admin';
 import { getAuth } from 'firebase-admin/auth';
+
+// import { getAuth } from 'firebase-admin/auth';
 import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
 import ResetPasswordEmail from 'src/components/email/ResetPasswordEmail';
 import SignUpEmail from 'src/components/email/SignupEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const { db } = createFirebaseAdminApp();
+
+// Lets connect the email API server to the customer database
+const ref = db.ref('customers/');
+let customers = [];
+ref.on(
+  'value',
+  (snapshot) => {
+    if (snapshot.val()) customers = Object.values(snapshot.val());
+  },
+  (error) => {
+    console.log('Error reading DB', error.name, error.message);
+  }
+);
 
 console.log(admin.apps);
-createFirebaseAdminApp();
+// createFirebaseAdminApp();
 
 export default async function handler(req, res) {
   let currentUser = {}; // if user is a current client it will populate
@@ -61,6 +77,7 @@ export default async function handler(req, res) {
           } catch (error) {
             console.log(error);
           }
+          db.ref('server_customers/').update({ ...customers }); // sends update to db - lets us know the server is in sync
           return res.status(200).json({ signin: link });
         }
         // case 'emailVerify': {
@@ -69,18 +86,22 @@ export default async function handler(req, res) {
         // }
         case 'resetPassword': {
           link = await getAuth().generatePasswordResetLink(email, actionCodeSettings);
+          const user = customers.filter((cust) => cust.email === email);
+          const fullName = user[0]?.acct_per_details?.fname || user[0].name;
+          const firstName = fullName.split(/[ ]+/)[0];
           try {
             const data = await resend.emails.send({
               from: 'support@sjbtherapy.com',
               to: email,
               subject: 'SJB Therapy - Reset Password',
               html: '<strong>Request to reset password</strong>',
-              react: ResetPasswordEmail({ link, email, name }),
+              react: ResetPasswordEmail({ link, email, name: firstName }),
             });
           } catch (error) {
             console.log(error);
           }
-          return res.status(200).json({ signin: link });
+          db.ref('server_customers/').update({ ...customers });
+          return res.status(200).json({ signin: link, user: user[0], fullName, firstName });
         }
         case 'changeEmail': {
           link = await getAuth().generateVerifyAndChangeEmailLink(email, newUserEmail, actionCodeSettings);
@@ -95,9 +116,9 @@ export default async function handler(req, res) {
         }
       }
     } catch (error) {
-      console.log('Error fetching user data:', error.message);
+      console.log('Error in Email API', error.message);
       currentUser = 'Error fetching user';
-      return res.status(200).json(currentUser);
+      return res.status(200).json({ error: 'Error in Email API', reason: error });
     }
 
     // try {

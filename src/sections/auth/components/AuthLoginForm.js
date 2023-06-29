@@ -22,6 +22,10 @@ import { auth } from 'src/lib/createFirebaseApp';
 // ----------------------------------------------------------------------
 
 export default function AuthLoginForm() {
+  const {
+    state: { alert },
+    dispatch,
+  } = useSettingsContext();
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -50,11 +54,31 @@ export default function AuthLoginForm() {
     try {
       // await new Promise((resolve) => setTimeout(resolve, 500));
       const userDoc = await signInWithEmailAndPassword(auth, data.email, data.password);
+      dispatch({
+        type: 'UPDATE_ALERT',
+        payload: {
+          ...alert,
+          open: true,
+          severity: 'success',
+          message: 'Login Successful - Welcome back!',
+          duration: 3000,
+        },
+      });
       // console.log(userDoc);
       // reset();
-      router.back();
+      // router.push('/account/orders/');
     } catch (error) {
-      console.error(error);
+      dispatch({
+        type: 'UPDATE_ALERT',
+        payload: {
+          ...alert,
+          open: true,
+          severity: 'error',
+          message: `Login failed. Please check your details are correct. To recover a lost password please use 'Forgot password?`,
+          duration: 10000,
+        },
+      });
+      console.log(error);
     }
   };
 

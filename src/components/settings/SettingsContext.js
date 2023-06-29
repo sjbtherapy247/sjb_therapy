@@ -7,7 +7,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { connectAuthEmulator } from 'firebase/auth';
 
 //
-import { onValue, ref, off } from 'firebase/database';
+import { onValue, ref } from 'firebase/database';
 import { defaultSettings } from './config-setting';
 import reducer from './reducer';
 
@@ -73,32 +73,33 @@ export function SettingsProvider({ children }) {
           setProductsTable([...items.filter((item) => item?.billing_details?.email === user.email)]);
         }
       });
-      custlistener = onValue(custRef, (snapshot) => {
-        if (snapshot.val()) {
-          const customers = Object?.values(snapshot.val());
-
-          console.log('custIds loaded');
-          console.log(customers);
-          console.log(customers.filter((item) => item.email === user.email)[0]?.id);
-          setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
-        }
-      });
+      custlistener = onValue(
+        custRef,
+        (snapshot) => {
+          if (snapshot.val()) {
+            const customers = Object?.values(snapshot.val());
+            console.log('custIds loaded');
+            console.log(customers.filter((item) => item.email === user.email)[0]?.id);
+            setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
+            setClients(customers.filter((item) => item.email === user.email));
+          }
+        },
+        { onlyOnce: true }
+      );
     } else {
-      // off(listener); // detach listeners
-      // custRef.off('customers/'); // detach listeners
       console.log('App logged out');
       setCurrentUser(null);
       setProductsTable([]);
       setCustId('');
-      onValue(custRef, (snapshot) => {
-        if (snapshot.val()) {
-          const customers = Object?.values(snapshot.val());
+      // onValue(custRef, (snapshot) => {
+      //   if (snapshot.val()) {
+      //     const customers = Object?.values(snapshot.val());
 
-          console.log(' logged out custIds loaded');
-          console.log(customers);
-          setClients(customers);
-        }
-      });
+      //     console.log(' logged out custIds loaded');
+      //     console.log(customers);
+      //     setClients(customers);
+      //   }
+      // });
     }
     return () => listener();
   }, [user]);

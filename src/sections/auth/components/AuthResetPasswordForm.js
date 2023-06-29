@@ -16,7 +16,7 @@ export default function AuthResetPasswordForm() {
   const {
     dispatch,
     state: { alert, modal },
-    clients,
+    // clients,
   } = useSettingsContext();
 
   const ResetPasswordSchema = Yup.object().shape({
@@ -49,13 +49,9 @@ export default function AuthResetPasswordForm() {
           // test: 'true',
         }),
       }).then((res) => res.json());
-      // if the account already existing throw a wobbler
+      // if the account does not existing throw a wobbler - client will see same message on screen for security
       if (!user.uid) throw new Error('Error - It appears there is no account on our system with that email address.');
-
-      const name = clients.filter((item) => item.email === user.email)[0].name.split(/[ ]+/)[0];
-
-      // await new Promise((resolve) => setTimeout(resolve, 500));
-
+      // if the user exists send the email
       const response = await fetch('/api/email/send', {
         method: 'POST',
         headers: {
@@ -63,10 +59,7 @@ export default function AuthResetPasswordForm() {
         },
         body: JSON.stringify({
           currentUserEmail: data.email,
-          currentUserName: name,
-          // newUserEmail: data.email,
           mode: 'resetPassword',
-          // test: 'true',
         }),
       });
       const resJson = await response.json();
@@ -95,7 +88,7 @@ export default function AuthResetPasswordForm() {
           ...alert,
           open: true,
           severity: 'success',
-          message: `An account password reset email has been sent to ${data.email}. To complete the account recovery process please follow the instructions in your email.xx`,
+          message: `An account password reset email has been sent to ${data.email}. To complete the account recovery process please follow the instructions in your email.`,
           duration: 12000,
         },
       });

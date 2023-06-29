@@ -29,7 +29,7 @@ const StyledBgImage = styled('div')(({ theme }) => ({
 })); // ----------------------------------------------------------------------
 
 export default function PurchaseSuccess({ checkout }) {
-  const isMdUp = useResponsive('up', 'md');
+  // const isMdUp = useResponsive('up', 'md');
 
   useEffect(() => {
     createClient();
