@@ -75,7 +75,7 @@ export default function AccountPersonalView() {
       emailAddress: email || user?.email || '',
       phoneNumber: phone || '',
       birthday: new Date(),
-      gender: 'female',
+      gender: personal?.gender || 'female',
       streetAddress: personal.streetAddress || address?.line1 || '',
       city: personal?.city || address.city || '',
       state: personal?.state || address.state || '',
