@@ -25,7 +25,7 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 // ----------------------------------------------------------------------
 
 export default function AccountPersonalView() {
-  const { user, productsTable, custId, clients } = useSettingsContext();
+  const { user, productsTable, custId, client } = useSettingsContext();
   console.log(user);
 
   const AccountPersonalSchema = Yup.object().shape({
@@ -65,10 +65,10 @@ export default function AccountPersonalView() {
     handleSubmit,
     formState: { isSubmitting },
   } = methods;
-  console.log('clients', clients);
+  console.log('client', client);
 
   useEffect(() => {
-    const personal = { ...clients[0]?.acct_per_details };
+    const personal = client.acct_per_details;
     console.log('personal', personal);
     const resetValues = {
       fname: personal?.fname || name,
@@ -76,7 +76,7 @@ export default function AccountPersonalView() {
       phoneNumber: phone || '',
       birthday: new Date(),
       gender: personal?.gender || 'female',
-      streetAddress: personal.streetAddress || address?.line1 || '',
+      streetAddress: personal?.streetAddress || address?.line1 || '',
       city: personal?.city || address.city || '',
       state: personal?.state || address.state || '',
       postCode: personal?.postCode || address?.postal_code || '',
@@ -87,7 +87,7 @@ export default function AccountPersonalView() {
     reset(resetValues);
     console.log('reset');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productsTable, user, clients]);
+  }, [productsTable, user, client]);
 
   const onSubmit = async (data) => {
     try {

@@ -1,6 +1,6 @@
 import { Button, DialogActions, DialogContent, DialogContentText, TextField } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
-import { signInWithEmailLink, updatePassword } from 'firebase/auth';
+import { signInWithEmailLink, updatePassword, updateProfile } from 'firebase/auth';
 import { auth } from 'src/lib/createFirebaseApp';
 import { useSettingsContext } from 'src/components/settings';
 import { useRouter } from 'next/router';
@@ -70,6 +70,9 @@ const EmailSignInSetPassword = () => {
             console.log('password updated');
             // An error ocurred
           });
+        // pick a profile pic from /assets/images/avatar/avatar_x
+        const pic = Math.floor(Math.random() * 25);
+        updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
 
         // You can access the new user via result.user
         // Additional user info profile not available via:

@@ -20,25 +20,15 @@ import {
 import useOffSetTop from 'src/hooks/useOffSetTop';
 import useResponsive from 'src/hooks/useResponsive';
 import { useSettingsContext } from 'src/components/settings/SettingsContext';
-// utils
-// import { bgBlur } from 'src/utils/cssStyles';
-// routes
-import { paths } from 'src/routes/paths';
+
 // config
 import { HEADER } from 'src/config-global';
-// components
-// import Logo from 'src/components/logo';
-// import Label from 'src/components/label';
-//
+
 import Image from 'src/components/image/Image';
 import Iconify from 'src/components/iconify/Iconify';
-// Icons
-// import'mdi:loginIcon'from '@iconify/icons-mdi/login';
-// import brightness7 from '@iconify/icons-mdi/brightness-7';
-// import brightness2 from '@iconify/icons-mdi/brightness-2';
 
 import { bgBlur } from 'src/utils/cssStyles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import _mock from 'src/_mock/_mock';
 import { NavMobile, NavDesktop, navConfig } from '../nav';
 import AccountMenu from '../AccountMenu';
@@ -47,7 +37,7 @@ import AccountMenu from '../AccountMenu';
 
 export default function Header({ headerOnDark }) {
   const theme = useTheme();
-  const { onToggleMode, user, loading } = useSettingsContext();
+  const { onToggleMode, user, loading, avatar } = useSettingsContext();
   const [anchorElUser, setAnchorElUser] = useState();
 
   const isMdUp = useResponsive('up', 'md');
@@ -62,6 +52,8 @@ export default function Header({ headerOnDark }) {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const fallbackAvatar = `/assets/images/avatar/avatar_19.jpg`;
 
   // const handleUserClick = () => {
   //   //
@@ -147,11 +139,11 @@ export default function Header({ headerOnDark }) {
           {isMdUp && <NavDesktop data={navConfig} />}
 
           <Stack spacing={1} flexGrow={1} direction="row" alignItems="center" justifyContent="flex-end" sx={{ pr: { xs: 0, md: 2 } }}>
-            {!isMdUp && (
+            {/* {!isMdUp && (
               <IconButton color="inherit">
                 <Iconify icon="carbon:search" />
               </IconButton>
-            )}
+            )} */}
 
             {user && !loading && (
               <>
@@ -164,7 +156,7 @@ export default function Header({ headerOnDark }) {
                 {/* <IconButton component={NextLink} href={paths.eCommerce.account.personal} color="inherit"> */}
                 <IconButton onClick={handleOpenUserMenu} color="inherit">
                   {/* <Iconify icon="carbon:user" /> */}
-                  <Avatar src={_mock.image.avatar(0)} sx={{ width: 40, height: 40 }} />
+                  <Avatar src={avatar} sx={{ width: 40, height: 40 }} />
                 </IconButton>
               </>
             )}

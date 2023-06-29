@@ -12,44 +12,44 @@ import { Divider, Typography, InputAdornment, Stack, IconButton, Container } fro
 import { LoadingButton } from '@mui/lab';
 
 //
+import { EmailAuthProvider, reauthenticateWithCredential, updatePassword } from 'firebase/auth';
+import { useSettingsContext } from 'src/components/settings';
 import { AccountLayout } from '../layout';
 
 // ----------------------------------------------------------------------
 
-const TABS = ['All Vouchers', 'Latest', 'Popular', 'Expiring'];
-
 // ----------------------------------------------------------------------
 
 export default function AccountSettingsView() {
-  // const [tab, setTab] = useState('All Vouchers');
-
-  // const handleChangeTab = (event, newValue) => {
-  //   setTab(newValue);
-  // };
-
+  const {
+    user,
+    dispatch,
+    state: { alert },
+  } = useSettingsContext();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
-  const AccountPersonalSchema = Yup.object().shape({
-    oldPassword: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
-    newPassword: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
-    confirmNewPassword: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
+  const ResetPwSchema = Yup.object().shape({
+    original: Yup.string().required('Current password required'),
+    // email: Yup.string().required('Email is required').email('Invalid email format'),
+    // mobile: Yup.string().required('Phone number is required'),
+    password: Yup.string().required('Password is required').min(8, 'Password should be of minimum 8 characters length'),
+    confirmPassword: Yup.string()
+      .required('Confirm password is required')
+      .oneOf([Yup.ref('password')], "Password's do not match"),
   });
-
   const defaultValues = {
-    oldPassword: '',
-    newPassword: '',
-    confirmNewPassword: '',
+    original: '',
+    password: '',
+    confirmPassword: '',
   };
-
   const methods = useForm({
-    resolver: yupResolver(AccountPersonalSchema),
+    resolver: yupResolver(ResetPwSchema),
     defaultValues,
   });
-
   const {
     reset,
     handleSubmit,
@@ -57,14 +57,106 @@ export default function AccountSettingsView() {
   } = methods;
 
   const onSubmit = async (data) => {
+    dispatch({ type: 'START_LOADING' });
+    console.log('DATA', data);
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      reset();
-      console.log('DATA', data);
+      try {
+        const credential = EmailAuthProvider.credential(user?.email, data.original);
+        await reauthenticateWithCredential(user, credential);
+        console.log('reauth success');
+      } catch (error) {
+        dispatch({ type: 'END_LOADING' });
+
+        console.log(error.message);
+        dispatch({
+          type: 'UPDATE_ALERT',
+          payload: { ...alert, open: true, severity: 'error', message: 'Current password invalid, please check your details and try again.', duration: 4000 },
+        });
+      }
+      await updatePassword(user, data.password);
     } catch (error) {
-      console.error(error);
+      console.error(error.message, error);
+      dispatch({ type: 'END_LOADING' });
+      dispatch({
+        type: 'UPDATE_ALERT',
+        payload: { ...alert, open: true, severity: 'error', message: 'There seems to be a problem reaching the authtentication services. Please check your network', duration: 4000 },
+      });
     }
+    // success password updated - reset the form
+    reset();
+    dispatch({
+      type: 'UPDATE_ALERT',
+      payload: { ...alert, open: true, severity: 'success', message: 'Your password has been updated. Good to go!', duration: 4000 },
+    });
+    dispatch({ type: 'END_LOADING' });
   };
+  // const onSubmit = async (data) => {
+  //   // dispatch({ type: 'START_LOADING' });
+  //   // window.localStorage.setItem('emailForSignIn', data?.email);
+  //   // try {
+  //   //   const user = await fetch('/api/email/send', {
+  //   //     method: 'POST',
+  //   //     headers: {
+  //   //       'Content-Type': 'application/json',
+  //   //     },
+  //   //     body: JSON.stringify({
+  //   //       currentUserEmail: data.email,
+  //   //       // newUserEmail: data.email,
+  //   //       mode: 'isClient',
+  //   //       // test: 'true',
+  //   //     }),
+  //   //   }).then((res) => res.json());
+  //   //   // if the account already existing throw a wobbler
+  //   //   if (user.uid) throw new Error('Error - It appears there is already an account on our system with that email address.');
+  //   //   console.log(user);
+  //   //   // await new Promise((resolve) => setTimeout(resolve, 500));
+  //   //   const response = await fetch('/api/email/send', {
+  //   //     method: 'POST',
+  //   //     headers: {
+  //   //       'Content-Type': 'application/json',
+  //   //     },
+  //   //     body: JSON.stringify({
+  //   //       currentUserEmail: data.email,
+  //   //       // newUserEmail: data.email,
+  //   //       mode: 'signInWithEmail',
+  //   //       // test: 'true',
+  //   //     }),
+  //   //   });
+  //   //   const resJson = await response.json();
+  //   // console.log(resJson);
+  //   // router.push('/');
+
+  //   // reset();
+  //   console.log('DATA', data);
+  //   //   dispatch({
+  //   //     type: 'UPDATE_ALERT',
+  //   //     payload: {
+  //   //       ...alert,
+  //   //       open: true,
+  //   //       severity: 'success',
+  //   //       message: `An account verification email has been sent to ${data.email}. To complete the account registration process please follow the instructions in your email.`,
+  //   //       duration: 12000,
+  //   //     },
+  //   //   });
+
+  //   //   dispatch({ type: 'END_LOADING' });
+  //   // } catch (error) {
+  //   //   console.error(error);
+  //   //   router.push('/');
+  //   //   dispatch({ type: 'END_LOADING' });
+  //   //   dispatch({
+  //   //     type: 'UPDATE_ALERT',
+  //   //     payload: {
+  //   //       ...alert,
+  //   //       open: true,
+  //   //       severity: 'error',
+  //   //       message: `An account with email ${data.email} already exists. To recover your account please use the 'Forgot password?' on the Client Login page`,
+  //   //       duration: 12000,
+  //   //     },
+  //   //   });
+  //   // }
+  // };
 
   return (
     <AccountLayout>
@@ -73,68 +165,59 @@ export default function AccountSettingsView() {
           <Typography variant="h3" sx={{ mb: 3 }}>
             Account Settings
           </Typography>
-
-          <Stack spacing={3} sx={{ my: 5 }}>
+          <Stack spacing={3} sx={{ my: 4 }}>
             <Typography variant="h5"> Change Password </Typography>
 
-            <Stack spacing={2.5}>
-              <RHFTextField
-                name="oldPassword"
-                label="Old Password"
-                type={showPassword ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton onClick={handleShowPassword} edge="end">
-                        <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
-              />
+            <RHFTextField
+              name="original"
+              label="Current Password"
+              type={showPassword ? 'text' : 'password'}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
 
-              <RHFTextField
-                name="newPassword"
-                label="New Password"
-                type={showPassword ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton onClick={handleShowPassword} edge="end">
-                        <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
-              />
+            <RHFTextField
+              name="password"
+              label="Password"
+              type={showPassword ? 'text' : 'password'}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
 
-              <RHFTextField
-                name="confirmNewPassword"
-                label="Confirm New Password"
-                type={showPassword ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton onClick={handleShowPassword} edge="end">
-                        <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
-              />
-            </Stack>
+            <RHFTextField
+              name="confirmPassword"
+              label="Confirm Password"
+              type={showPassword ? 'text' : 'password'}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                      <Iconify icon={showPassword ? 'carbon:view' : 'carbon:view-off'} />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <Divider sx={{ borderStyle: 'dashed' }} />
+
+            <LoadingButton fullWidth color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
+              Change Password
+            </LoadingButton>
           </Stack>
-
-          <Divider sx={{ my: 3, borderStyle: 'dashed' }} />
-          <LoadingButton sx={{ my: 6 }} color="primary" size="large" type="submit" variant="contained" loading={isSubmitting}>
-            Change Password
-          </LoadingButton>
-
-          {/* <Tabs value={tab} scrollButtons="auto" variant="scrollable" allowScrollButtonsMobile onChange={handleChangeTab} sx={{ mb: 3 }}>
-        {TABS.map((category) => (
-          <Tab key={category} value={category} label={category} />
-        ))}
-      </Tabs> */}
         </FormProvider>
       </Container>
     </AccountLayout>

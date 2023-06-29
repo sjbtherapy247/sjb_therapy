@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { alpha } from '@mui/material/styles';
-import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListItemButton, Menu, useTheme } from '@mui/material';
+import { Link, Stack, Drawer, Avatar, Divider, ListItemIcon, ListItemText, ListItemButton, Menu, useTheme, IconButton } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 import useActiveLink from 'src/hooks/useActiveLink';
@@ -17,11 +17,12 @@ import { useSettingsContext } from 'src/components/settings';
 import { auth } from 'src/lib/createFirebaseApp';
 import { useSignOut } from 'react-firebase-hooks/auth';
 import { useRouter } from 'next/router';
+import { updateProfile } from 'firebase/auth';
 
 // ----------------------------------------------------------------------
 
 export function MenuContent() {
-  const { themeMode, onToggleMode, currentUser } = useSettingsContext();
+  const { themeMode, onToggleMode, user, avatar, setAvatar, client } = useSettingsContext();
   const theme = useTheme();
   const router = useRouter();
 
@@ -47,7 +48,7 @@ export function MenuContent() {
       icon: <Iconify icon="carbon:purchase" />,
     },
   ];
-  const [signOut, loading, error] = useSignOut(auth);
+  const [signOut] = useSignOut(auth);
 
   const handleLogout = () => {
     router.push('/');
@@ -57,6 +58,15 @@ export function MenuContent() {
       console.log('logged out');
       //
     }
+  };
+
+  const handleProfile = async () => {
+    // pick a profile pic from /assets/images/avatar/avatar_x
+    const pic = Math.floor(Math.random() * 25);
+    await updateProfile(user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
+    setAvatar(user.photoURL);
+
+    // dispatch({ type: 'MODAL', payload: { ...modal, open: true } });
   };
 
   return (
@@ -71,18 +81,21 @@ export function MenuContent() {
     >
       <Stack spacing={2} sx={{ p: 2, pb: 2 }}>
         <Stack spacing={2} direction="row" alignItems="center">
-          <Avatar src={_mock.image.avatar(0)} sx={{ width: 64, height: 64 }} />
+          <Avatar src={avatar} sx={{ width: 64, height: 64 }} />
           <Stack direction="row" alignItems="center" sx={{ typography: 'caption', cursor: 'pointer', '&:hover': { opacity: 0.72 } }}>
-            <Iconify icon="mdi:edit" sx={{ mr: 1 }} />
+            <IconButton onClick={handleProfile} sx={{ color: 'inherit' }}>
+              <Iconify icon="mdi:edit" sx={{ mr: 1 }} />
+            </IconButton>
+            lucky pic
           </Stack>
         </Stack>
 
         <Stack spacing={0.5}>
           <TextMaxLine variant="subtitle1" line={1}>
-            {currentUser?.displayName}
+            {client.acct_per_details.fname || client?.name}
           </TextMaxLine>
           <TextMaxLine variant="caption" line={1} sx={{ color: 'text.secondary' }}>
-            {currentUser?.email}
+            {user?.email}
           </TextMaxLine>
         </Stack>
       </Stack>

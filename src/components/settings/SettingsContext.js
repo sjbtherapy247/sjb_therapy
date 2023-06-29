@@ -52,8 +52,9 @@ export function SettingsProvider({ children }) {
   const [themeMode, setThemeMode] = useState(initialState.themeMode);
   const [currentUser, setCurrentUser] = useState(initialState.currentUser);
   const [productsTable, setProductsTable] = useState([]);
-  const [clients, setClients] = useState([]);
+  const [client, setClient] = useState([]);
   const [custId, setCustId] = useState('');
+  const [avatar, setAvatar] = useState('');
 
   const [user, loading, error] = useAuthState(auth);
 
@@ -66,6 +67,7 @@ export function SettingsProvider({ children }) {
     if (user) {
       console.log('user loaded', user);
       setCurrentUser({ ...user });
+      setAvatar(user.photoURL || `/assets/images/avatar/avatar_19.jpg`);
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
           const items = Object?.values(snapshot.val());
@@ -81,7 +83,7 @@ export function SettingsProvider({ children }) {
             console.log('custIds loaded');
             console.log(customers.filter((item) => item.email === user.email)[0]?.id);
             setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
-            setClients(customers.filter((item) => item.email === user.email));
+            setClient({ ...customers.filter((item) => item.email === user.email)[0] });
           }
         },
         { onlyOnce: true }
@@ -90,6 +92,7 @@ export function SettingsProvider({ children }) {
       console.log('App logged out');
       setCurrentUser(null);
       setProductsTable([]);
+      setClient({});
       setCustId('');
       // onValue(custRef, (snapshot) => {
       //   if (snapshot.val()) {
@@ -97,7 +100,7 @@ export function SettingsProvider({ children }) {
 
       //     console.log(' logged out custIds loaded');
       //     console.log(customers);
-      //     setClients(customers);
+      //     setClient(customers);
       //   }
       // });
     }
@@ -124,12 +127,14 @@ export function SettingsProvider({ children }) {
       dispatch,
       // Mode
       themeMode,
+      avatar,
+      setAvatar,
       onToggleMode,
       currentUser,
       loading,
       productsTable,
       custId,
-      clients,
+      client,
       user,
     }),
     [
@@ -139,12 +144,14 @@ export function SettingsProvider({ children }) {
       dispatch,
       // the rest
       themeMode,
+      avatar,
+      setAvatar,
       onToggleMode,
       currentUser,
       loading,
       productsTable,
       custId,
-      clients,
+      client,
       user,
     ]
   );
