@@ -1,6 +1,7 @@
 // @mui
 import PropTypes from 'prop-types';
 import { Stack, Link, Typography, Box } from '@mui/material';
+import NextLink from 'next/link';
 
 // ----------------------------------------------------------------------
 
@@ -15,7 +16,7 @@ export default function BlogSidebarCategories({ categories }) {
         <Stack key={category.label} direction="row" alignItems="center">
           <Box sx={{ width: 6, height: 6, mr: 2, bgcolor: 'primary.main', borderRadius: '50%' }} />
 
-          <Link variant="body2" href={category.path} color="inherit">
+          <Link component={NextLink} variant="body2" href={category.path} color="inherit">
             {category.label}
           </Link>
         </Stack>
