@@ -87,7 +87,7 @@ export default function AccountPersonalView() {
     reset(resetValues);
     console.log('reset');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productsTable, user]);
+  }, [productsTable, user, clients]);
 
   const onSubmit = async (data) => {
     try {
