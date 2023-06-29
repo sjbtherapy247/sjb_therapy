@@ -33,10 +33,10 @@ export default function AccountPersonalView() {
     phoneNumber: Yup.string(),
     birthday: Yup.string(),
     gender: Yup.string().required('Gender is required'),
-    streetAddress: Yup.string().required('Gender is required'),
-    city: Yup.string().required('Gender is required'),
-    state: Yup.string().required('Gender is required'),
-    postCode: Yup.string().required('Gender is required'),
+    streetAddress: Yup.string().required('Required to update your address'),
+    city: Yup.string().required('Required to update your address'),
+    state: Yup.string().required('Required to update your address'),
+    postCode: Yup.string().required('Required to update your address'),
     country: Yup.string(),
   });
 
