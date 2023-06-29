@@ -47,6 +47,11 @@ export function MenuContent() {
       path: '/account/orders',
       icon: <Iconify icon="carbon:purchase" />,
     },
+    {
+      title: 'Billing Details',
+      path: '/account/billing',
+      icon: <Iconify icon="carbon:receipt" />,
+    },
   ];
   const [signOut] = useSignOut(auth);
 

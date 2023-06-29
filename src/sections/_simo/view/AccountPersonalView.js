@@ -101,28 +101,6 @@ export default function AccountPersonalView() {
   return (
     <AccountLayout>
       <Container>
-        <Typography variant="h3" sx={{ mb: 3 }}>
-          Billing Details
-        </Typography>
-        <Box
-          sx={{
-            mb: 4,
-            rowGap: 2.5,
-            columnGap: 3,
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: 'repeat(1, 1fr)',
-              sm: 'repeat(2, 1fr)',
-            },
-          }}
-        >
-          <OverviewItem icon="carbon:user" label="Name on card" text={name || user?.displayName} />
-          <OverviewItem icon="carbon:mobile" label="Phone Number" text={phone || ''} />
-          <OverviewItem icon="carbon:email" label="Email" text={email} />
-          <OverviewItem icon="carbon:location" label="Location" text={address.country} />
-          {/* <OverviewItem icon="carbon:time" label="Durations" text={email} />
-          <OverviewItem icon="carbon:receipt" label="Languages" text={email} /> */}
-        </Box>
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
           <Typography variant="h3" sx={{ mb: 0 }}>
             Personal Details

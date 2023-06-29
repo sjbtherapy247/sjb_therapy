@@ -16,6 +16,7 @@ export { default as ServicesView } from './ServicesView';
 // export { default as EcommerceCompareView } from './EcommerceCompareView';
 // //
 export { default as AccountPersonalView } from './AccountPersonalView';
+export { default as AccountBillingDetailsView } from './AccountBillingDetailsView';
 export { default as AccountMediaView } from './AccountMediaView';
 export { default as AccountSettingsView } from './AccountSettingsView';
 export { default as AccountOrdersView } from './AccountOrdersView';
