@@ -38,82 +38,47 @@ const EmailSignInSetPassword = () => {
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
 
+    // no email saved locally and no email input in email field
+    if (!email && !emailSaved) {
+      setEmailError(true);
+      throw new Error('Please provide an email');
+    }
+    if (password !== confirmPassword) {
+      setPwordError(true);
+      throw new Error('Passwords do not match, please check for typos');
+    }
+    if (password.length < 8) {
+      setPwordError(true);
+      throw new Error('Passwords must be a minimum of 8 characters!');
+    }
+    dispatch({ type: 'START_LOADING' });
     try {
-      // password error boundary
-      // no email saved locally and no email input in email field
-      if (!email && !emailSaved) {
-        setEmailError(true);
-        throw new Error('Please provide an email');
-      }
+      // The client SDK will parse the code from the link for you.
+      const result = await signInWithEmailLink(auth, email, window.location.href);
+      console.log(result.user);
+      // Clear email from storage.
+      window.localStorage.removeItem('emailForSignIn');
+      updatePassword(result.user, password);
+      // pick a profile pic from /assets/images/avatar/avatar_x
+      const pic = Math.floor(Math.random() * 25);
+      updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
 
-      if (password !== confirmPassword) {
-        setPwordError(true);
-        throw new Error('Passwords do not match, please check for typos');
-      }
-      if (password.length < 8) {
-        setPwordError(true);
-        throw new Error('Passwords must be a minimum of 8 characters!');
-      }
-      dispatch({ type: 'START_LOADING' });
-      try {
-        // The client SDK will parse the code from the link for you.
-        const result = await signInWithEmailLink(auth, email, window.location.href);
-        console.log(result.user);
-        // Clear email from storage.
-        window.localStorage.removeItem('emailForSignIn');
-        updatePassword(result.user, password)
-          .then(() => {
-            console.log('password updated');
-            // Update successful.
-          })
-          .catch((error) => {
-            console.log('password updated');
-            // An error ocurred
-          });
-        // pick a profile pic from /assets/images/avatar/avatar_x
-        const pic = Math.floor(Math.random() * 25);
-        updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
-
-        // You can access the new user via result.user
-        // Additional user info profile not available via:
-
-        // result.additionalUserInfo.profile == null
-        // You can check if the user is new or existing:
-        // result.additionalUserInfo.isNewUser
-        // http://192.168.0.220:5002/auth/verification/action?mode=signIn&lang=en&oobCode=kjQ4SFm7DbheHU9oID9qW87_musf5suXkGbS_Ha94fPCJ7siAPaZFO&apiKey=fake-api-key&continueUrl=http%3A%2F%2F192.168.0.220%3A5002
-        // http://127.0.0.1:9099/emulator/action?mode=signIn&lang=en&oobCode=kjQ4SFm7DbheHU9oID9qW87_musf5suXkGbS_Ha94fPCJ7siAPaZFO&apiKey=fake-api-key&continueUrl=http%3A%2F%2F192.168.0.220%3A5002
-
-        dispatch({ type: 'END_LOADING' });
-        dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
-        dispatch({
-          type: 'UPDATE_ALERT',
-          payload: {
-            ...alert,
-            open: true,
-            severity: 'success',
-            message: 'Your password has been secured. Your account is all setup! You can view your account specifics top right',
-            duration: 12000,
-          },
-        });
-        router.push('/');
-      } catch (error) {
-        console.log(error.message, error);
-        dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
-
-        dispatch({
-          type: 'UPDATE_ALERT',
-          payload: {
-            ...alert,
-            open: true,
-            severity: 'error',
-            message: `Authentication error: ${error.code}. Your email link seems to have expired. Please re-start the process!`,
-            duration: 8000,
-          },
-        });
-        router.push('/auth/login-cover/');
-      }
+      dispatch({ type: 'END_LOADING' });
+      dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
+      dispatch({
+        type: 'UPDATE_ALERT',
+        payload: {
+          ...alert,
+          open: true,
+          severity: 'success',
+          message: 'Your password has been secured. Your account is all setup! You can view your account specifics top right',
+          duration: 12000,
+        },
+      });
+      router.push('/');
     } catch (error) {
-      console.log(error.message);
+      console.log(error.message, error);
+      dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
 
       dispatch({
         type: 'UPDATE_ALERT',
@@ -121,10 +86,11 @@ const EmailSignInSetPassword = () => {
           ...alert,
           open: true,
           severity: 'error',
-          message: error.message,
-          duration: 5000,
+          message: `Authentication error: ${error.code}. Your email link seems to have expired. Please re-start the process!`,
+          duration: 8000,
         },
       });
+      router.push('/auth/login-cover/');
     }
 
     dispatch({ type: 'END_LOADING' });

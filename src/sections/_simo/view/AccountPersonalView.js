@@ -66,11 +66,11 @@ export default function AccountPersonalView() {
   } = methods;
 
   useEffect(() => {
-    const personal = client.acct_per_details;
+    const personal = client?.acct_per_details;
     const resetValues = {
       fname: personal?.fname || name,
       emailAddress: email || user?.email || '',
-      phoneNumber: phone || '',
+      phoneNumber: client.phone || '',
       birthday: new Date(),
       gender: personal?.gender || 'female',
       streetAddress: personal?.streetAddress || address?.line1 || '',

@@ -28,6 +28,7 @@ export default function AccountPersonalView() {
   const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
   const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
 
+  console.log(productsTable);
   return (
     <AccountLayout>
       <Container>
@@ -46,12 +47,14 @@ export default function AccountPersonalView() {
             },
           }}
         >
-          <OverviewItem icon="carbon:user" label="Name on card" text={name || user?.displayName} />
-          <OverviewItem icon="carbon:mobile" label="Phone Number" text={phone || ''} />
-          <OverviewItem icon="carbon:email" label="Email" text={email} />
+          <OverviewItem icon="carbon:user" label="Name on card" text={client?.name || ''} />
+          <OverviewItem icon="carbon:mobile" label="Phone Number" text={client?.phone || ''} />
+          <OverviewItem icon="carbon:email" label="Email" text={client?.email || ''} />
           <OverviewItem icon="carbon:location" label="Location" text={address.country} />
-          {/* <OverviewItem icon="carbon:time" label="Durations" text={email} />
-          <OverviewItem icon="carbon:receipt" label="Languages" text={email} /> */}
+          <OverviewItem icon="carbon:time" label="Card" text={productsTable[0]?.payment_method_details?.card?.brand.toUpperCase()} />
+          <OverviewItem icon="carbon:document" label="Card ending" text={productsTable[0]?.payment_method_details?.card?.last4} />
+          <OverviewItem icon="carbon:time" label="Client ID" text={client.id} />
+          <OverviewItem icon="carbon:document" label="Invoice Prefix" text={client.invoice_prefix} />
         </Box>
       </Container>
     </AccountLayout>
