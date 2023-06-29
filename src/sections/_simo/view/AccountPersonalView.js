@@ -67,7 +67,6 @@ export default function AccountPersonalView() {
 
   useEffect(() => {
     const personal = client.acct_per_details;
-    console.log('personal', personal);
     const resetValues = {
       fname: personal?.fname || name,
       emailAddress: email || user?.email || '',
@@ -80,10 +79,8 @@ export default function AccountPersonalView() {
       postCode: personal?.postCode || address?.postal_code || '',
       country: address.country || 'AU',
     };
-    console.log('qwerty');
     if (!user || productsTable.length === 0) return;
     reset(resetValues);
-    console.log('reset');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productsTable, user, client]);
 
