@@ -26,7 +26,6 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 
 export default function AccountPersonalView() {
   const { user, productsTable, custId, client } = useSettingsContext();
-  console.log(user);
 
   const AccountPersonalSchema = Yup.object().shape({
     name: Yup.string(),
@@ -65,7 +64,6 @@ export default function AccountPersonalView() {
     handleSubmit,
     formState: { isSubmitting },
   } = methods;
-  console.log('client', client);
 
   useEffect(() => {
     const personal = client.acct_per_details;
