@@ -16,7 +16,6 @@ export default function AccountPersonalView() {
   const { user, productsTable, custId, client } = useSettingsContext();
 
   const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
-  const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
 
   console.log(productsTable);
   return (
