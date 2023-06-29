@@ -45,7 +45,7 @@ export function MenuContent() {
     {
       title: 'Account Orders',
       path: '/account/orders',
-      icon: <Iconify icon="carbon:purchase" />,
+      icon: <Iconify icon="carbon:document" />,
     },
     {
       title: 'Billing Details',

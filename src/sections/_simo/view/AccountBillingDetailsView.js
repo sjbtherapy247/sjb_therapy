@@ -40,10 +40,10 @@ export default function AccountPersonalView() {
           <OverviewItem icon="carbon:mobile" label="Phone Number" text={client?.phone || ''} />
           <OverviewItem icon="carbon:email" label="Email" text={client?.email || ''} />
           <OverviewItem icon="carbon:location" label="Location" text={address.country} />
-          <OverviewItem icon="carbon:time" label="Card" text={productsTable[0]?.payment_method_details?.card?.brand.toUpperCase()} />
-          <OverviewItem icon="carbon:document" label="Card ending" text={productsTable[0]?.payment_method_details?.card?.last4} />
-          <OverviewItem icon="carbon:time" label="Client ID" text={client.id} />
-          <OverviewItem icon="carbon:document" label="Invoice Prefix" text={client.invoice_prefix} />
+          <OverviewItem icon="carbon:purchase" label="Card" text={productsTable[0]?.payment_method_details?.card?.brand.toUpperCase()} />
+          <OverviewItem icon="mdi:account-credit-card" label="Card ending" text={productsTable[0]?.payment_method_details?.card?.last4} />
+          <OverviewItem icon="carbon:identification" label="Client ID" text={client.id} />
+          <OverviewItem icon="carbon:intrusion-prevention" label="Invoice Prefix" text={client.invoice_prefix} />
         </Box>
       </Container>
     </AccountLayout>
