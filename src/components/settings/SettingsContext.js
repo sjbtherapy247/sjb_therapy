@@ -75,19 +75,15 @@ export function SettingsProvider({ children }) {
           setProductsTable([...items.filter((item) => item?.billing_details?.email === user.email)]);
         }
       });
-      custlistener = onValue(
-        custRef,
-        (snapshot) => {
-          if (snapshot.val()) {
-            const customers = Object?.values(snapshot.val());
-            console.log('custIds loaded');
-            console.log(customers.filter((item) => item.email === user.email)[0]?.id);
-            setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
-            setClient({ ...customers.filter((item) => item.email === user.email)[0] });
-          }
-        },
-        { onlyOnce: true }
-      );
+      custlistener = onValue(custRef, (snapshot) => {
+        if (snapshot.val()) {
+          const customers = Object?.values(snapshot.val());
+          console.log('custIds loaded');
+          console.log(customers.filter((item) => item.email === user.email)[0]?.id);
+          setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
+          setClient({ ...customers.filter((item) => item.email === user.email)[0] });
+        }
+      });
     } else {
       console.log('App logged out');
       setCurrentUser(null);
