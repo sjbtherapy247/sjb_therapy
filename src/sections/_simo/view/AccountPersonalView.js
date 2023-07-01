@@ -121,7 +121,7 @@ export default function AccountPersonalView() {
             Personal Details
           </Typography>
           <Typography sx={{ pb: 3 }}>Certain fields must remain as per billing information</Typography>
-          <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
+          <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }}>
             <RHFTextField name="fname" label="Name" />
 
             <RHFTextField name="emailAddress" label="Email Address" disabled />
@@ -148,7 +148,7 @@ export default function AccountPersonalView() {
           <Typography paragraph variant="h5" sx={{ my: 3 }}>
             Optional Details
           </Typography>
-          <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}>
+          <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }}>
             <Controller
               name="birthday"
               render={({ field, fieldState: { error } }) => (
