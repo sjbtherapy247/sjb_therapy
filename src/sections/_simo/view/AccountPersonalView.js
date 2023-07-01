@@ -25,7 +25,14 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 // ----------------------------------------------------------------------
 
 export default function AccountPersonalView() {
-  const { user, productsTable, custId, client } = useSettingsContext();
+  const {
+    user,
+    productsTable,
+    custId,
+    client,
+    dispatch,
+    state: { alert },
+  } = useSettingsContext();
 
   const AccountPersonalSchema = Yup.object().shape({
     name: Yup.string(),
@@ -41,7 +48,7 @@ export default function AccountPersonalView() {
   });
 
   const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
-  const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
+  // const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
 
   const defaultValues = {
     fname: '',
@@ -86,10 +93,20 @@ export default function AccountPersonalView() {
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // await new Promise((resolve) => setTimeout(resolve, 500));
       // reset();
       console.log('DATA', data);
-      update(ref(db, `customers/${custId}/acct_per_details`), data);
+      await update(ref(db, `customers/${custId}/acct_per_details`), data);
+      dispatch({
+        type: 'UPDATE_ALERT',
+        payload: {
+          ...alert,
+          open: true,
+          severity: 'success',
+          message: 'Your details have been updated.',
+          duration: 1000,
+        },
+      });
     } catch (error) {
       console.error(error);
     }
