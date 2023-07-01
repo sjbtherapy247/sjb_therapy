@@ -31,7 +31,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     ...bgGradient({
       direction: 'to left',
-      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
+      startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 700 : 900], 0.5)} 0%`,
       endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 1)} 120%`,
       imgUrl: '/assets/images/simon/snowies-sunset-tezd.jpeg',
     }),
