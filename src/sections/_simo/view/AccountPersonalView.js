@@ -105,6 +105,7 @@ export default function AccountPersonalView() {
           severity: 'success',
           message: 'Your details have been updated.',
           duration: 1000,
+          posn: 'center',
         },
       });
     } catch (error) {

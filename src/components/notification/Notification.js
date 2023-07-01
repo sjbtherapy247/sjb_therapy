@@ -18,7 +18,7 @@ const Notification = () => {
       open={alert?.open}
       autoHideDuration={alert.duration}
       onClose={handleClose}
-      anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      anchorOrigin={{ vertical: alert.posn || 'top', horizontal: 'center' }}
       // sx={{ width: { xs: 400, sm: 'auto' } }}
     >
       <Alert onClose={handleClose} severity={alert.severity} sx={{ width: '100%' }} variant={alert.variant} elevation={10}>
