@@ -87,7 +87,7 @@ export function MenuContent() {
       <Stack spacing={2} sx={{ p: 2, pb: 2 }}>
         <Stack spacing={2} direction="row" alignItems="center">
           <Avatar src={avatar} sx={{ width: 64, height: 64 }} />
-          <Stack direction="row" alignItems="center" sx={{ typography: 'caption', '&:hover': { opacity: 0.72 } }}>
+          <Stack direction="row" alignItems="center" sx={{ typography: 'caption', '&:hover': { opacity: 0.65 } }}>
             <IconButton onClick={handleProfile} sx={{ color: 'inherit' }}>
               <Iconify icon="mdi:edit" sx={{ mr: 1 }} />
             </IconButton>
