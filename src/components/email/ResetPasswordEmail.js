@@ -8,7 +8,7 @@ export const SJBTherapyResetPasswordEmail = ({ name, email, link }) => (
     <Preview>SJB Therapy - Reset your password</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Link href={link}>
+        <Link href="https://simo-dev.vercel.com">
           <Img style={img} src={image} width="350" alt="SJB Therapy" />
         </Link>
         <Section>

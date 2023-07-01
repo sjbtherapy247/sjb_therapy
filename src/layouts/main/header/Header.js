@@ -128,7 +128,7 @@ export default function Header({ headerOnDark }) {
           {!isSmUp && (
             <Link href="/" component={NextLink}>
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-                <Box sx={{ ml: 1, lineHeight: 0, position: 'relative', height: '54px', borderRadius: 1, overflow: 'hidden' }}>
+                <Box sx={{ ml: 1, lineHeight: 0, position: 'relative', height: '54px', width: '54px', borderRadius: 1, overflow: 'hidden' }}>
                   <Image src="/assets/sjb-logo/hicon.png" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
