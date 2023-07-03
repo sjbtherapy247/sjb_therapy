@@ -37,22 +37,21 @@ export default function AuthResetPasswordForm() {
   const onSubmit = async (data) => {
     dispatch({ type: 'START_LOADING' });
     try {
-      const user = await fetch('/api/email/send', {
+      const user = await fetch(`/api/email/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           currentUserEmail: data.email,
-          // newUserEmail: data.email,
           mode: 'isClient',
-          // test: 'true',
+          api_key: process.env.NEXT_PUBLIC_API_ROUTE_SECRET,
         }),
       }).then((res) => res.json());
       // if the account does not existing throw a wobbler - client will see same message on screen for security
       if (!user.uid) throw new Error('Error - It appears there is no account on our system with that email address.');
       // if the user exists send the email
-      const response = await fetch('/api/email/send', {
+      const response = await fetch(`/api/email/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,6 +59,7 @@ export default function AuthResetPasswordForm() {
         body: JSON.stringify({
           currentUserEmail: data.email,
           mode: 'resetPassword',
+          api_key: process.env.NEXT_PUBLIC_API_ROUTE_SECRET,
         }),
       });
       const resJson = await response.json();
@@ -79,7 +79,7 @@ export default function AuthResetPasswordForm() {
 
       dispatch({ type: 'END_LOADING' });
     } catch (error) {
-      console.error(error);
+      console.error('Error api/email/send', error);
       router.push('/');
       dispatch({ type: 'END_LOADING' });
       dispatch({

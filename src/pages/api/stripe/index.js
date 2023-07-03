@@ -5,9 +5,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const { lineitems, custId } = req.body;
-      console.log(lineitems);
-      if (!lineitems.length) return res.status(400).json({ error: 'Bad request - no line items!' });
+      const { lineitems, custId, api_key } = req.body;
+      // check api key
+      if (api_key !== process.env.API_ROUTE_SECRET) return res.status(401).json({ error: 'Bad request - Unauthorised Access' });
+      // check for line items
+      if (!lineitems?.length) return res.status(400).json({ error: 'Bad request - no line items!' });
 
       const sessionObj = {
         line_items: lineitems,

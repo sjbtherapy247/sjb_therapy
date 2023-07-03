@@ -37,10 +37,11 @@ export default function ServicesView({ services, packages, prices }) {
 
   async function getCheckoutSession(Id) {
     const responseJson = await fetch(`/api/stripe/${Id}`, {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
+      body: JSON.stringify({ api_key: process.env.NEXT_PUBLIC_API_ROUTE_SECRET }),
     }).then((res) => res.json());
     // make sure we got a successful payment otherwise just quietly log the cancelled payment
     if (responseJson?.payment_intent?.status === 'succeeded') {

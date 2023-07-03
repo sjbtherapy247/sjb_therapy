@@ -3,9 +3,12 @@ import Stripe from 'stripe';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
 
 export default async function handler(req, res) {
-  if (req.method === 'GET') {
+  if (req.method === 'POST') {
     try {
       const { sessionId } = req.query;
+      const { api_key } = req.body;
+      // check api key
+      if (api_key !== process.env.API_ROUTE_SECRET) return res.status(401).json({ error: 'Bad request - Unauthorised Access' });
       if (!sessionId.startsWith('cs_')) throw new Error('Incorrect checkout session ID');
       const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId, {
         expand: ['payment_intent', 'line_items.data.price.product', 'customer'],

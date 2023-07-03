@@ -2,6 +2,8 @@
 // Password reset (generatePasswordResetLink): 1 hour
 // Email verification (generateEmailVerificationLink): 3 days (not using as users are forced to signIn with email from the start)
 // Email link sign-in (generateSignInWithEmailLink): 6 hours
+// generate an API key
+// node -e "console.log(crypto.randomBytes(32).toString('hex'))"
 
 import { Resend } from 'resend';
 import admin from 'firebase-admin';
@@ -32,15 +34,14 @@ console.log(admin.apps);
 // createFirebaseAdminApp();
 
 export default async function handler(req, res) {
+  if (req.body.api_key !== process.env.API_ROUTE_SECRET) {
+    return res.status(401).send('Not Authorised To Access This API');
+  }
   let currentUser = {}; // if user is a current client it will populate
-  // operation
-  const mode = req.body?.mode;
+  // mode and email vars
+  const { mode, currentUserEmail: email, currentUserName: name } = req.body;
   // will hold the correct link depending on mode
   let link = null;
-  // email variables
-  const email = req.body?.currentUserEmail;
-  const name = req.body?.currentUserName;
-  const newUserEmail = req.body?.newUserEmail;
 
   if (req.method === 'POST') {
     try {
@@ -103,10 +104,10 @@ export default async function handler(req, res) {
           db.ref('server_customers/').update({ ...customers });
           return res.status(200).json({ signin: link, user: user[0], fullName, firstName });
         }
-        case 'changeEmail': {
-          link = await getAuth().generateVerifyAndChangeEmailLink(email, newUserEmail, actionCodeSettings);
-          return res.status(200).json({ signin: link });
-        }
+        // case 'changeEmail': {
+        //   link = await getAuth().generateVerifyAndChangeEmailLink(email, newUserEmail, actionCodeSettings);
+        //   return res.status(200).json({ signin: link });
+        // }
         case 'isClient': {
           currentUser = await getAuth().getUserByEmail(email);
           return res.status(200).json({ ...currentUser });
@@ -141,16 +142,3 @@ export default async function handler(req, res) {
   }
   // return null;
 }
-
-const emailTemplate = ({ link, email }) => (
-  <div>
-    <p>email sent to {email}</p>
-    <h1>Welcome to SJB Therapy!</h1>
-    <p>To finalise your account setup please hit the button</p>
-    <div>
-      <a href={link} target="_blank">
-        <button type="button">I Love SJB Therapy.. YEAY!!!</button>
-      </a>
-    </div>
-  </div>
-);

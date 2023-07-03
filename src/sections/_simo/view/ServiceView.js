@@ -72,8 +72,8 @@ export default function ServiceView({ service }) {
 
               <Stack direction="row">
                 {_socials.map((social) => (
-                  <IconButton key={social.value}>
-                    <Iconify icon={social.icon} sx={{ color: social.color }} />
+                  <IconButton key={social.value} color="primary" /* sx={{ color: social.color }} */>
+                    <Iconify icon={social.icon} />
                   </IconButton>
                 ))}
               </Stack>
@@ -126,8 +126,8 @@ export default function ServiceView({ service }) {
                 Share:
               </Typography>
               {_socials.map((social) => (
-                <IconButton key={social.value}>
-                  <Iconify icon={social.icon} sx={{ color: social.color }} />
+                <IconButton key={social.value} sx={{ color: social.color }}>
+                  <Iconify icon={social.icon} />
                 </IconButton>
               ))}
             </Stack>

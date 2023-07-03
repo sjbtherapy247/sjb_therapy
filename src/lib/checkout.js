@@ -12,7 +12,7 @@ export const checkout = async (items, custId) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ lineitems, custId }),
+      body: JSON.stringify({ lineitems, custId, api_key: process.env.NEXT_PUBLIC_API_ROUTE_SECRET }),
     });
     if (!response.ok) throw new Error('failed to fetch stripe session');
     const data = await response.json();
