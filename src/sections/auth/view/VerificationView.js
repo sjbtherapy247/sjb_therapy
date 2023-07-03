@@ -34,7 +34,7 @@ export default function VerificationView() {
   }, [router.isReady]);
 
   const {
-    currentUser,
+    user,
     // setLogin,
     dispatch,
     state: { alert, modal },
@@ -50,41 +50,6 @@ export default function VerificationView() {
       try {
         // action code boundary
         switch (mode) {
-          // case 'verifyEmail': {
-          //   // const result = await checkActionCode(auth, oobCode);
-          //   await applyActionCode(auth, oobCode);
-          //   // await reload(auth.currentUser);
-          //   console.log(auth.currentUser);
-          //   console.log(currentUser);
-          //   // setLogin(true);
-
-          //   router.push('/');
-          //   dispatch({ type: 'END_LOADING' });
-          //   dispatch({
-          //     type: 'UPDATE_ALERT',
-          //     payload: {
-          //       ...alert,
-          //       open: true,
-          //       severity: 'success',
-          //       message: 'Email verified. Welcome to SCC Members',
-          //       duration: 6000,
-          //     },
-          //   });
-          //   getUserDoc(auth.currentUser.uid).then((userDoc) => {
-          //     let user = Object.assign(auth.currentUser, userDoc.data());
-
-          //     //TODO fix this
-          //     if (user?.emailVerified && user?.uRole?.createPost === undefined) {
-          //       // let x = { uRole: { ...user?.uRole, createPost: true, nippersEditor: false } };
-          //       updateUserRecords('Users', user.uid, {
-          //         uRole: { ...user?.uRole, createPost: true, nippersEditor: false, email: false },
-          //       })
-          //         .then((result) => console.log('User role updated', result))
-          //         .catch((error) => console.log('Error updated user roles', error));
-          //     }
-          //   });
-          //   break;
-          // }
           case 'signIn': {
             if (isSignInWithEmailLink(auth, window.location.href)) {
               // Additional state parameters can also be passed via URL.
@@ -104,8 +69,6 @@ export default function VerificationView() {
           case 'verifyAndChangeEmail': {
             // const result = await checkActionCode(auth, oobCode);
             await applyActionCode(auth, oobCode);
-            console.log(auth.currentUser);
-            console.log(currentUser);
 
             router.push('/');
             dispatch({ type: 'END_LOADING' });
@@ -125,10 +88,8 @@ export default function VerificationView() {
           case 'recoverEmail': {
             // const result = await checkActionCode(auth, oobCode);
             await applyActionCode(auth, oobCode);
-            // await reload(auth.currentUser);
+            // await reload(auth.user);
             dispatch({ type: 'END_LOADING' });
-            console.log(auth.currentUser);
-            console.log(currentUser);
             router.push('/');
             dispatch({
               type: 'UPDATE_ALERT',

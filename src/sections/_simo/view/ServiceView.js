@@ -106,11 +106,8 @@ export default function ServiceView({ service }) {
             >
               <Typography variant="h5">{description}</Typography>
             </Stack>
-
             <Divider sx={{ mb: 4 }} />
-
             <Markdown content={content} />
-
             {/* {tags.length && <PostTags tags={tags} />} */}
             <Link component={NextLink} href="/services#hypnotherapyPackages">
               <Button variant="contained" sx={{ mb: 3 }} endIcon={<Iconify icon="carbon:launch" />}>
@@ -119,12 +116,21 @@ export default function ServiceView({ service }) {
             </Link>
             <Typography>{insights}</Typography>
             <Link component={NextLink} href={buttonLink}>
-              <Button variant="text" sx={{ mt: 0 }} endIcon={<Iconify icon="carbon:launch" />}>
+              <Button variant="outlined" size="large" sx={{ mt: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                 {buttonTitle}
               </Button>
             </Link>
-
-            <PostSocialsShare />
+            {/* <PostSocialsShare /> */}
+            <Stack direction="row" alignItems="center" sx={{ my: 3 }}>
+              <Typography variant="subtitle2" sx={{ mr: 1.5 }}>
+                Share:
+              </Typography>
+              {_socials.map((social) => (
+                <IconButton key={social.value}>
+                  <Iconify icon={social.icon} sx={{ color: social.color }} />
+                </IconButton>
+              ))}
+            </Stack>
           </Grid>
         </Grid>
       </Container>

@@ -1,16 +1,18 @@
 import { Button, DialogActions, DialogContent, DialogContentText, TextField } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { signInWithEmailLink, updatePassword, updateProfile } from 'firebase/auth';
-import { auth } from 'src/lib/createFirebaseApp';
+import { auth, db } from 'src/lib/createFirebaseApp';
 import { useSettingsContext } from 'src/components/settings';
 import { useRouter } from 'next/router';
 import Iconify from 'src/components/iconify/Iconify';
+import { ref, update } from 'firebase/database';
 import PasswordField from './PasswordField';
 
 const EmailSignInSetPassword = () => {
   const router = useRouter();
 
   const {
+    custId,
     dispatch,
     state: { alert, modal },
   } = useSettingsContext();
@@ -120,3 +122,9 @@ const EmailSignInSetPassword = () => {
   );
 };
 export default EmailSignInSetPassword;
+
+/*
+
+http://192.168.0.220:5002/auth/verification/?mode=signIn&oobCode=No_s_jOfw7wbN6no1urUtMM_1528UaICgncptS1gYEoAAAGJGcQDdw&apiKey=AIzaSyCGufgus2CDlS-4k3ITmQVZ4GdgzclH_no&continueUrl=https%3A%2F%2Fsimo-dev.vercel.app&lang=en
+https://simo-dev.vercel.app/auth/verification/?mode=signIn&oobCode=No_s_jOfw7wbN6no1urUtMM_1528UaICgncptS1gYEoAAAGJGcQDdw&apiKey=AIzaSyCGufgus2CDlS-4k3ITmQVZ4GdgzclH_no&continueUrl=https%3A%2F%2Fsimo-dev.vercel.app&lang=en
+*/

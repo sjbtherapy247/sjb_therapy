@@ -161,20 +161,30 @@ export default function ArticleView({ post, allPosts }) {
             <Markdown content={content} firstLetter />
 
             <Link component={NextLink} href="/services#hypnotherapyPackages">
-              <Button variant="contained" sx={{ mb: 3 }} endIcon={<Iconify icon="carbon:launch" />}>
+              <Button variant="contained" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                 Book Now
               </Button>
             </Link>
             <Typography>{services}</Typography>
             <Link component={NextLink} href={buttonLink}>
-              <Button variant="text" sx={{ mt: 0 }} endIcon={<Iconify icon="carbon:launch" />}>
+              <Button variant="outlined" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                 {buttonTitle}
               </Button>
             </Link>
 
             {tags.length && <PostTags tags={tags} />}
 
-            <PostSocialsShare />
+            {/* <PostSocialsShare /> */}
+            <Stack direction="row" alignItems="center" sx={{ my: 3 }}>
+              <Typography variant="subtitle2" sx={{ mr: 1.5 }}>
+                Share:
+              </Typography>
+              {_socials.map((social) => (
+                <IconButton key={social.value}>
+                  <Iconify icon={social.icon} sx={{ color: social.color }} />
+                </IconButton>
+              ))}
+            </Stack>
 
             <Divider sx={{ mt: 8 }} />
 

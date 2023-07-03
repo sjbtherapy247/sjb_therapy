@@ -77,8 +77,8 @@ export default function AccountPersonalView() {
     const resetValues = {
       fname: personal?.fname || name,
       emailAddress: email || user?.email || '',
-      phoneNumber: client.phone || '',
-      birthday: new Date(),
+      phoneNumber: client?.phone || '',
+      birthday: new Date(personal?.birthday) || new Date(),
       gender: personal?.gender || 'female',
       streetAddress: personal?.streetAddress || address?.line1 || '',
       city: personal?.city || address.city || '',

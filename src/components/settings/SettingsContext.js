@@ -79,9 +79,9 @@ export function SettingsProvider({ children }) {
         if (snapshot.val()) {
           const customers = Object?.values(snapshot.val());
           console.log('custIds loaded');
-          console.log(customers.filter((item) => item.email === user.email)[0]?.id);
-          setCustId(customers.filter((item) => item.email === user.email)[0]?.id);
-          setClient({ ...customers.filter((item) => item.email === user.email)[0] });
+          const cust = customers.filter((item) => item.email === user.email);
+          setCustId(cust[0]?.id);
+          setClient({ ...cust[0] });
         }
       });
     } else {
