@@ -44,12 +44,13 @@ export default async function handler(req, res) {
         break;
       }
       case 'customer.created': {
-        // console.log(event.data.object?.billing_details);
+        console.log(event.data.object);
         // store the purchase
         const custRef = db.ref('customers').child(event.data.object.id);
         try {
           await custRef.update(event.data.object);
           await db.ref('cust-test/').update(event);
+          console.log('customer created');
         } catch (error) {
           console.log(error, error.message);
         }
@@ -57,6 +58,8 @@ export default async function handler(req, res) {
         break;
       }
       case 'charge.succeeded': {
+        console.log(event.data.object);
+
         // console.log(event.data.object?.billing_details);
         // store the purchase
         const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
@@ -64,6 +67,7 @@ export default async function handler(req, res) {
         try {
           await userRef.update(event.data.object);
           await db.ref('charge-test/').update(event);
+          console.log('charge succeeded');
         } catch (error) {
           console.log(error, error.message);
         }
