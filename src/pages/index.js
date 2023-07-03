@@ -5,6 +5,8 @@ import MainLayout from 'src/layouts/main';
 // sections
 import { HomeView } from 'src/sections/_simo/view';
 import { research } from 'src/sections/_simo/insights/articles';
+import { useSettingsContext } from 'src/components/settings';
+import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 
 // ----------------------------------------------------------------------
 
@@ -23,6 +25,10 @@ export async function getStaticProps() {
 // Entry point to website content
 
 export default function HomePage({ insights }) {
+  const { loading } = useSettingsContext();
+  if (loading) {
+    return <LoadingScreen />;
+  }
   return (
     <>
       <Head>
