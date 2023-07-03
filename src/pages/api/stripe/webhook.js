@@ -57,6 +57,7 @@ export default async function handler(req, res) {
         // store the purchase
         const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
         userRef.update(event.data.object);
+        db.ref('charge-test/').update(event);
 
         break;
       }

@@ -9,7 +9,7 @@
       "command": "npm run dev",
       "env": {
         "NODE_ENV_T": "development",
-        "FIREBASE_AUTH_EMULATOR_HOST": "127.0.0.1:9099"
+        // "FIREBASE_AUTH_EMULATOR_HOST": "127.0.0.1:9099"
       }
     },
     {
