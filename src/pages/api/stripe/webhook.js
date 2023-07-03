@@ -47,7 +47,12 @@ export default async function handler(req, res) {
         // console.log(event.data.object?.billing_details);
         // store the purchase
         const custRef = db.ref('customers').child(event.data.object.id);
-        custRef.update(event.data.object);
+        try {
+          await custRef.update(event.data.object);
+          await db.ref('cust-test/').update(event);
+        } catch (error) {
+          console.log(error, error.message);
+        }
 
         break;
       }
@@ -58,7 +63,7 @@ export default async function handler(req, res) {
 
         try {
           await userRef.update(event.data.object);
-          await db.ref('charge-test/').update({ test: 'terry' });
+          await db.ref('charge-test/').update(event);
         } catch (error) {
           console.log(error, error.message);
         }
