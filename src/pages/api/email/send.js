@@ -78,7 +78,7 @@ export default async function handler(req, res) {
           } catch (error) {
             console.log(error);
           }
-          db.ref('server_customers/').update({ ...customers }); // sends update to db - lets us know the server is in sync
+          await db.ref('server_customers/').update({ ...customers }); // sends update to db - lets us know the server is in sync
           return res.status(200).json({ signin: link });
         }
         // case 'emailVerify': {
@@ -101,7 +101,7 @@ export default async function handler(req, res) {
           } catch (error) {
             console.log(error);
           }
-          db.ref('server_customers/').update({ ...customers });
+          await db.ref('server_customers/').update({ ...customers });
           return res.status(200).json({ signin: link, user: user[0], fullName, firstName });
         }
         // case 'changeEmail': {
