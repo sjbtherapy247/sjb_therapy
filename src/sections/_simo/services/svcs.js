@@ -7,8 +7,8 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Using therapeutic approaches to address and alleviate anxiety disorders, phobias, and panic attacks.',
     content:
-      'Unlocking next-level performance in sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+      '<p>Unlocking next-level performance in sport is another area where Hypnotherapy and psychotherapy can be beneficial. These therapies can help individuals overcome mental blocks, boost confidence, enhance focus and concentration, manage stress and anxiety, improve motivation, and develop mental resilience. Whether you are an athlete aiming to achieve peak performance or a business professional seeking to excel in your career, hypnotherapy and psychotherapy can provide tools and strategies to optimize your mindset, unlock your potential, and achieve outstanding results. With the guidance of a skilled practitioner, you can tap into your inner resources and unleash your full capabilities in the realms of business and sport.</p>',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_statistics.svg',
   },
   {
@@ -62,7 +62,7 @@ export const servicesDescription = [
       <p><strong>How and where this can be applied</strong></p>
       <p>Hypnotherapy is never a one-size-fits-all, and the TRANCEformd™ model is the structure that we work from to shape our sessions together.</p>
       <p>If you're ready to take the next step, book your free 15 minute consultation and lets go!</p>`,
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_file.svg',
   },
   {
@@ -93,7 +93,7 @@ export const servicesDescription = [
 
 
         <p>Book your session today and let's kick this smoking habit into touch together.</p>`,
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_checklist.svg',
   },
   {
@@ -104,7 +104,7 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Teaching stress reduction techniques, relaxation exercises, and mindfulness practices to help individuals manage stress and improve overall well-being',
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_social_media.svg',
   },
   {
@@ -115,7 +115,7 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Conquer insomnia and enjoy restful sleep with our personalized hypnotherapy service. Relax, reduce anxiety, and retrain your mind for deep, rejuvenating rest.',
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_real_time.svg',
   },
   {
@@ -126,7 +126,7 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Providing support and guidance in developing healthy eating habits, managing emotional eating, and fostering a positive body image.',
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_report.svg',
   },
   {
@@ -137,7 +137,7 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Supporting individuals who have experienced traumatic events by providing trauma-focused therapy to process and heal from the effects of trauma.',
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_file.svg',
   },
   {
@@ -148,7 +148,7 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Boost your emotional well-being and improve self-esteem by effectively addressing depression through personalized hypnotherapy and psychotherapy interventions.',
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_checklist.svg',
   },
   {
@@ -159,7 +159,7 @@ export const servicesDescription = [
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
     content: 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
+    heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_report.svg',
   },
 ];

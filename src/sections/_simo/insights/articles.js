@@ -115,7 +115,7 @@ export const research = [
       quotes: 'Member since Mar 15, 2022',
       about: 'Integer tincidunt. Nullam dictum felis eu pede mollis pretium. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.',
     },
-    content: `<h4>Harnessing the Power of the Mind</h4
+    content: `<h4>Harnessing the Power of the Mind</h4>
       <p>By harnessing the power of the mind, hypnotherapy offers a positive and transformative path to finally achieve smoke-free living. You can quit smoking with hypnosis today if you are motivated to. Let's explore the statistics and efficacy behind this remarkable approach.</p>
 
       <p>Clinical hypnosis recognises that smoking addiction operates on both conscious and subconscious levels. While many individuals attempt to quit smoking through sheer willpower, addressing the subconscious mind is key to achieving lasting change. Hypnotherapy or hypnosis (same thing) dives deep into the subconscious, uncovering the root causes and reprogramming deeply ingrained smoking behaviours.</p>
