@@ -47,7 +47,7 @@ export default function AccountPersonalView() {
     country: Yup.string(),
   });
 
-  const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
+  const { name = '', email = '', phone = '', address = {} } = client;
   // const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
 
   const defaultValues = {
@@ -76,8 +76,8 @@ export default function AccountPersonalView() {
     const personal = client?.acct_per_details;
     const resetValues = {
       fname: personal?.fname || name,
-      emailAddress: email || user?.email || '',
-      phoneNumber: client?.phone || '',
+      emailAddress: email || '',
+      phoneNumber: phone || '',
       birthday: new Date(personal?.birthday) || new Date(),
       gender: personal?.gender || 'female',
       streetAddress: personal?.streetAddress || address?.line1 || '',
@@ -89,7 +89,7 @@ export default function AccountPersonalView() {
     if (!user || productsTable.length === 0) return;
     reset(resetValues);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productsTable, user, client]);
+  }, [client]);
 
   const onSubmit = async (data) => {
     try {
