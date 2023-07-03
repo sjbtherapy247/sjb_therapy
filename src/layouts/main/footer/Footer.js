@@ -44,9 +44,27 @@ const Footer = () => {
     formState: { isSubmitting },
   } = methods;
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     // all new subscriptions are stored under a timestamp
-    get();
+    let subs = [];
+    const getdoc = (await get(ref(db, `InSights/`))).val();
+    if (getdoc) {
+      subs = Object?.values(getdoc);
+      if (subs?.filter((sub) => sub.email === data.email).length !== 0) {
+        dispatch({
+          type: 'UPDATE_ALERT',
+          payload: {
+            ...alert,
+            open: true,
+            severity: 'success',
+            message: `Thank you ${data.fname} for subscribing to InSights.  ${data.email} is registered.`,
+            duration: 5000,
+            posn: 'bottom',
+          },
+        });
+        return;
+      }
+    }
     update(ref(db, `InSights/${Date.now()}`), { first_name: data.fname, email: data.email, timestamp: serverTimestamp() });
     dispatch({
       type: 'UPDATE_ALERT',
