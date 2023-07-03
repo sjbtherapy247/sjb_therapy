@@ -10,6 +10,8 @@ import { ServicesView } from 'src/sections/_simo/view';
 import { servicesDescription } from 'src/sections/_simo/services/svcs';
 import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
 import { useEffect, useState } from 'react';
+import { useSettingsContext } from 'src/components/settings';
+import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 
 const svcs = [
   {
@@ -213,6 +215,11 @@ export default function ServicesPage({ servicesDocs, packages }) {
     console.log('running pricelist');
     getPricelist();
   }, []);
+
+  const { loading } = useSettingsContext();
+  if (loading) {
+    return <LoadingScreen />;
+  }
 
   return (
     <>

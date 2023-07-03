@@ -5,6 +5,9 @@ import MainLayout from 'src/layouts/main';
 // sections
 import { MissionView } from 'src/sections/_simo/view';
 
+import { useSettingsContext } from 'src/components/settings';
+import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
+
 // ----------------------------------------------------------------------
 
 OurMissionPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -12,6 +15,10 @@ OurMissionPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function OurMissionPage() {
+  const { loading } = useSettingsContext();
+  if (loading) {
+    return <LoadingScreen />;
+  }
   return (
     <>
       <Head>
