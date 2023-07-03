@@ -6,7 +6,6 @@ import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
 console.log('init webhook');
 
 const { db } = createFirebaseAdminApp();
-// console.log(db);
 
 // const ref = db.ref('ter');
 // ref.once('value', (snapshot) => {
@@ -56,8 +55,13 @@ export default async function handler(req, res) {
         // console.log(event.data.object?.billing_details);
         // store the purchase
         const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
-        userRef.update(event.data.object);
-        db.ref('charge-test/').update(event);
+
+        try {
+          await userRef.update(event.data.object);
+          await db.ref('charge-test/').update({ test: 'terry' });
+        } catch (error) {
+          console.log(error, error.message);
+        }
 
         break;
       }
