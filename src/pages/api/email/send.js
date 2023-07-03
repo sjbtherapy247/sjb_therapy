@@ -39,7 +39,8 @@ export default async function handler(req, res) {
   }
   let currentUser = {}; // if user is a current client it will populate
   // mode and email vars
-  const { mode, currentUserEmail: email, currentUserName: name } = req.body;
+  const { mode, currentUserEmail: email } = req.body;
+  const name = req.body?.currentUserName;
   // will hold the correct link depending on mode
   let link = null;
 
