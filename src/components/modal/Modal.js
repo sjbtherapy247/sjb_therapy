@@ -16,6 +16,10 @@ const Modal = () => {
       router.push('/');
       window.localStorage.removeItem('emailForSignIn');
     }
+    if (modal.title === 'Purchase Success') {
+      // shallow routing to /services/
+      router.push('/services/', undefined, { shallow: true });
+    }
     dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
   };
 
