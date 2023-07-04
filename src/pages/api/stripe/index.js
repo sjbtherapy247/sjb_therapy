@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         mode: 'payment',
         // success_url: `${req.headers.origin}/checkout/success?sessionId={CHECKOUT_SESSION_ID}`,
         success_url: `${req.headers.origin}/services?sessionId={CHECKOUT_SESSION_ID}#hypnotherapyPackages`,
-        cancel_url: `${req.headers.origin}/services?sessionId={CHECKOUT_SESSION_ID}#hypnotherapyPackages`,
+        cancel_url: `${req.headers.origin}/services#hypnotherapyPackages`,
       };
       const session = await stripe.checkout.sessions.create(sessionObj);
       return res.status(200).json({ session });

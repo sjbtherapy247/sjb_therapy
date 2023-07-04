@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Card, Link, Stack, Button, Divider, Typography } from '@mui/material';
+import { Card, Link, Stack, Button, Divider, Typography, CircularProgress } from '@mui/material';
 import NextLink from 'next/link';
 
 // types
@@ -105,7 +105,7 @@ export default function PlanCard({ plan, prices, currentClient, custId }) {
           ))}
         </Stack>
         {/* <Link component={NextLink} href="/"> */}
-        <LoadingButton size="large" fullWidth loading={loading} variant="contained" color="primary" onClick={handleCheckout}>
+        <LoadingButton size="large" fullWidth loading={loading} variant="contained" color="primary" loadingIndicator={<CircularProgress color="primary" size={24} />} onClick={handleCheckout}>
           Choose Package
         </LoadingButton>
         {/* </Link> */}
