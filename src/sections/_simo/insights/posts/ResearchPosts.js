@@ -15,6 +15,7 @@ export default function ResearchPosts({ posts }) {
       <Box
         sx={{
           columnGap: 2,
+          mb: 10,
           display: 'grid',
           rowGap: { xs: 2, md: 3 },
           gridTemplateColumns: {
@@ -29,7 +30,7 @@ export default function ResearchPosts({ posts }) {
         ))}
       </Box>
 
-      <Pagination
+      {/* <Pagination
         count={4}
         color="primary"
         size="large"
@@ -39,7 +40,7 @@ export default function ResearchPosts({ posts }) {
             justifyContent: 'center',
           },
         }}
-      />
+      /> */}
     </>
   );
 }

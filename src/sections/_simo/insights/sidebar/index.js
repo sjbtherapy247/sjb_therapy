@@ -20,7 +20,7 @@ export default function BlogSidebar({ author, categories, popularTags, recentPos
     <>
       {/* {author && isMdUp && <BlogSidebarAuthor author={author} />} */}
 
-      {isMdUp && (
+      {/* {isMdUp && (
         <TextField
           fullWidth
           hiddenLabel
@@ -33,7 +33,7 @@ export default function BlogSidebar({ author, categories, popularTags, recentPos
             ),
           }}
         />
-      )}
+      )} */}
 
       <Stack
         spacing={5}
@@ -44,11 +44,11 @@ export default function BlogSidebar({ author, categories, popularTags, recentPos
         }}
         {...other}
       >
-        {categories && <BlogSidebarCategories categories={categories} />}
+        {/* {categories && <BlogSidebarCategories categories={categories} />} */}
 
         {recentPosts && <BlogSidebarRecentPosts recentPosts={recentPosts} />}
 
-        {popularTags && <BlogSidebarPopularTags popularTags={popularTags} />}
+        {/* {popularTags && <BlogSidebarPopularTags popularTags={popularTags} />} */}
 
         {/* {advertisement && <Advertisement advertisement={advertisement} />} */}
       </Stack>
