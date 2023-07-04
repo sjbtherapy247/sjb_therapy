@@ -39,13 +39,13 @@ export default async function handler(req, res) {
     }
     // Handle the event   curl -X POST http://192.168.0.220:5002/api/stripe/webhook/ -H "Content-Type: application/json" -d '{"Id": 79, "status": 3}'
     switch (event.type) {
-      case 'payment_intent.succeeded': {
-        const paymentIntent = event.data.object;
-        // console.log(event.type, paymentIntent);
-        // Then define and call a method to handle the successful payment intent.
-        // handlePaymentIntentSucceeded(paymentIntent);
-        break;
-      }
+      // case 'payment_intent.succeeded': {
+      //   const paymentIntent = event.data.object;
+      //   // console.log(event.type, paymentIntent);
+      //   // Then define and call a method to handle the successful payment intent.
+      //   // handlePaymentIntentSucceeded(paymentIntent);
+      //   break;
+      // }
       case 'customer.created': {
         console.log(event.data.object);
         // store the purchase
@@ -77,13 +77,13 @@ export default async function handler(req, res) {
 
         break;
       }
-      case 'payment_method.attached': {
-        const paymentMethod = event.data.object;
-        // console.log(event.type, paymentMethod);
-        // Then define and call a method to handle the successful attachment of a PaymentMethod.
-        // handlePaymentMethodAttached(paymentMethod);
-        break;
-      }
+      // case 'payment_method.attached': {
+      //   const paymentMethod = event.data.object;
+      //   // console.log(event.type, paymentMethod);
+      //   // Then define and call a method to handle the successful attachment of a PaymentMethod.
+      //   // handlePaymentMethodAttached(paymentMethod);
+      //   break;
+      // }
       // ... handle other event types
       default:
       // console.log(`Unhandled event type ${event.type}`);
