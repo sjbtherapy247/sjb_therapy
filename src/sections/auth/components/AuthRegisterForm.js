@@ -11,7 +11,6 @@ import FormProvider, { RHFTextField } from 'src/components/hook-form';
 import { useSettingsContext } from 'src/components/settings';
 import { useRouter } from 'next/router';
 
-// http://simo-dev.vercel.app/auth/verification/?mode=signIn&oobCode=5wnsIjvAj3XQX2SF2OQPTF1OmZbg1uBfvhRokTxMB6EAAAGI4pOKSA&apiKey=AIzaSyCGufgus2CDlS-4k3ITmQVZ4GdgzclH_no&continueUrl=https%3A%2F%2Fsimo-dev.vercel.app&lang=en
 // ----------------------------------------------------------------------
 
 export default function AuthRegisterForm() {

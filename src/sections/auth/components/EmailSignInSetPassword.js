@@ -122,9 +122,3 @@ const EmailSignInSetPassword = () => {
   );
 };
 export default EmailSignInSetPassword;
-
-/*
-
-http://192.168.0.220:5002/auth/verification/?mode=signIn&oobCode=No_s_jOfw7wbN6no1urUtMM_1528UaICgncptS1gYEoAAAGJGcQDdw&apiKey=AIzaSyCGufgus2CDlS-4k3ITmQVZ4GdgzclH_no&continueUrl=https%3A%2F%2Fsimo-dev.vercel.app&lang=en
-https://simo-dev.vercel.app/auth/verification/?mode=signIn&oobCode=No_s_jOfw7wbN6no1urUtMM_1528UaICgncptS1gYEoAAAGJGcQDdw&apiKey=AIzaSyCGufgus2CDlS-4k3ITmQVZ4GdgzclH_no&continueUrl=https%3A%2F%2Fsimo-dev.vercel.app&lang=en
-*/
