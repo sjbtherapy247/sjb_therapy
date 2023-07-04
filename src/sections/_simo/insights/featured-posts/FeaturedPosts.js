@@ -21,14 +21,14 @@ const StyledRoot = styled('div')(({ theme }) => ({
     borderRadius: Number(theme.shape.borderRadius) * 2,
   },
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(1, 0, 5, 0),
+    padding: theme.spacing(1, 0, 1, 0),
   },
 }));
 
 const StyledOverlay = styled('div')(({ theme }) => ({
   ...bgGradient({
     startColor: `${alpha(theme.palette.common.black, theme.palette.mode === 'light' ? 0 : 0.6)} 0%`,
-    endColor: `${theme.palette.common.black} 95%`,
+    endColor: `${theme.palette.background.default} 100%`,
   }),
   top: 0,
   left: 0,

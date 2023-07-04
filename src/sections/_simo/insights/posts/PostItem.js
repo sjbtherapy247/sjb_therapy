@@ -21,8 +21,8 @@ import PostTimeBlock from '../components/PostTimeBlock';
 const StyledOverlay = styled('div')(({ theme }) => ({
   ...bgGradient({
     direction: 'to top',
-    startColor: `${alpha(theme.palette.common.black, 0)} 0%`,
-    endColor: `${theme.palette.common.black} 75%`,
+    startColor: `${alpha(theme.palette.background.default, 0.2)} 0%`,
+    endColor: theme.palette.mode === 'light' ? `${alpha(theme.palette.background.neutral, 1)} 75%` : `${alpha(theme.palette.common.black, 1)} 85%`,
   }),
   top: 0,
   left: 0,
@@ -50,13 +50,13 @@ export default function PostItem({ post }) {
           height: 1,
           zIndex: 9,
           position: 'absolute',
-          color: 'common.white',
+          // color: 'common.black',
         }}
       >
         <Stack spacing={2}>
           <PostTimeBlock duration={duration} createdAt={createdAt} sx={{ color: 'inherit', opacity: 0.72 }} />
 
-          <Link component={NextLink} href={`/insights/${url}`} sx={{ color: 'common.white' }}>
+          <Link component={NextLink} href={`/insights/${url}`} sx={{ color: 'inherit' }}>
             <TextMaxLine line={4} variant="h4">
               {title}
             </TextMaxLine>
