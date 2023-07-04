@@ -26,6 +26,15 @@ export default function ServicesView({ services, packages, prices }) {
   useEffect(() => {
     if (!router.isReady) return;
     // code using router.query
+    // fallback for BS behaviour of anchors not working on reloads
+    if (router.asPath.includes('#')) {
+      const anchor = router.asPath.split('#')[1];
+      const el = document.getElementById(anchor);
+      if (el) {
+        el.scrollIntoView({ behavior: 'instant' });
+      }
+    }
+
     const {
       query: { sessionId },
     } = router;

@@ -100,7 +100,7 @@ export default function PricingHome({ plans, prices }) {
           <m.div variants={varFade().inUp}>
             <Stack spacing={6} alignItems="center">
               <Typography sx={{ color: 'text.secondary' }}>
-                Pay on a per session basis or purchase a 4-session bundle. Hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, However, the Quit Smoking follows a different approach and can be done in a
+                Pay on a per session basis or purchase a 4-session bundle. Hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, however, the Quit Smoking follows a different approach and can be done in a
                 single 90 minute session. We also offer a free 15 min initial consultation so you can explore if this is right for you.
               </Typography>
               <Link component={NextLink} rel="noopener" href="/">
