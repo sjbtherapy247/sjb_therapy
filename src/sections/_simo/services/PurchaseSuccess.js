@@ -14,8 +14,8 @@ import { useEffect } from 'react';
 const StyledBgImage = styled('div')(({ theme }) => ({
   padding: theme.spacing(4, 4),
   ...bgGradient({
-    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.7)} 0%`,
-    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 500 : 900], 0.9)} 70%`,
+    startColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 300 : 900], 0.7)} 0%`,
+    endColor: `${alpha(theme.palette.grey[theme.palette.mode === 'light' ? 200 : 900], 0.9)} 70%`,
     imgUrl: '/assets/images/travel/travel_1.jpg',
   }),
   // [theme.breakpoints.up('md')]: {

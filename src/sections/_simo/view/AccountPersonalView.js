@@ -8,6 +8,10 @@ import { ref, update } from 'firebase/database';
 // @mui
 import { LoadingButton } from '@mui/lab';
 import { DatePicker } from '@mui/x-date-pickers';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import enAU from 'date-fns/locale/en-AU';
+
 import { Box, Typography, Stack, Container } from '@mui/material';
 // assets
 // components
@@ -149,22 +153,26 @@ export default function AccountPersonalView() {
             Optional Details
           </Typography>
           <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }}>
-            <Controller
-              name="birthday"
-              render={({ field, fieldState: { error } }) => (
-                <DatePicker
-                  label="Birthday"
-                  slotProps={{
-                    textField: {
-                      helperText: error?.message,
-                      error: !!error?.message,
-                    },
-                  }}
-                  {...field}
-                  value={field.value}
-                />
-              )}
-            />
+            {/* wrap date picker in en-AU locale for date formatting */}
+            <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
+              <Controller
+                name="birthday"
+                render={({ field, fieldState: { error } }) => (
+                  <DatePicker
+                    label="Birthday"
+                    slotProps={{
+                      textField: {
+                        helperText: error?.message,
+                        error: !!error?.message,
+                      },
+                    }}
+                    {...field}
+                    value={field.value}
+                  />
+                )}
+              />
+            </LocalizationProvider>
+
             <RHFSelect native name="gender" label="Gender">
               {GENDER_OPTIONS.map((option) => (
                 <option key={option} value={option}>
