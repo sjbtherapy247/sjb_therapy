@@ -18,8 +18,8 @@ export const config = {
   },
 };
 // every webhook endpoint has unique key
-// for some reason the local key works for a while..
-// TODO - switch whsec key to endpoint specific key in prod
+// for some reason the local dev key works for a while..
+// TODO - switch whsec key to endpoint specific key in prod - DONE!
 export default async function handler(req, res) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
 
@@ -37,7 +37,6 @@ export default async function handler(req, res) {
       res.status(400).send(`Webhook Error: ${err.message}`);
       return;
     }
-    // Handle the event   curl -X POST http://192.168.0.220:5002/api/stripe/webhook/ -H "Content-Type: application/json" -d '{"Id": 79, "status": 3}'
     switch (event.type) {
       // case 'payment_intent.succeeded': {
       //   const paymentIntent = event.data.object;
@@ -57,16 +56,13 @@ export default async function handler(req, res) {
         } catch (error) {
           console.log(error, error.message);
         }
-
         break;
       }
       case 'charge.succeeded': {
         console.log(event.data.object);
-
         // console.log(event.data.object?.billing_details);
         // store the purchase
         const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
-
         try {
           await userRef.update(event.data.object);
           await db.ref('charge-test/').update(event);
@@ -74,7 +70,6 @@ export default async function handler(req, res) {
         } catch (error) {
           console.log(error, error.message);
         }
-
         break;
       }
       // case 'payment_method.attached': {
@@ -86,7 +81,7 @@ export default async function handler(req, res) {
       // }
       // ... handle other event types
       default:
-      // console.log(`Unhandled event type ${event.type}`);
+        console.log(`Unhandled event type ${event.type}`);
     }
 
     res.json({ received: true });
