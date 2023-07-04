@@ -1,6 +1,7 @@
 import { Body, Button, Container, Head, Html, Hr, Img, Link, Preview, Section, Text } from '@react-email/components';
 
 const image = 'https://firebasestorage.googleapis.com/v0/b/sjbtherapy-365805.appspot.com/o/email.jpg?alt=media&token=5208b883-d055-4b40-9b08-9e2e07d88bc1';
+const host = process.env.NODE_ENV === 'development' ? 'http://192.168.0.220:5002' : 'https://simo-dev.vercel.app'; /* : 'https://www.sjtherapy.com'; */
 
 export const SJBTherapySignUpEmail = ({ email, link, name }) => (
   <Html>
@@ -22,18 +23,21 @@ export const SJBTherapySignUpEmail = ({ email, link, name }) => (
             </Button>
             {/* <Text style={text}>If you didn&apos;t initwant to change your password or didn&apos;t request this, just ignore and delete this message.</Text> */}
             <Text style={text}>
-              To keep your account secure, please do not forward this email to anyone. Head over to our Support page for{' '}
-              <Link style={anchor} href="https://simo-dev.vercel.app/support">
+              To keep your account secure, please do not forward this email to anyone.{' '}
+              {/* Head over to our Support page for{' '}
+              <Link style={anchor} href={`${host}/support`}>
                 more security tips.
-              </Link>
+              </Link> */}
             </Text>
             <Text style={text}>Simply Just Believe!</Text>
             <Text style={text}>Simon</Text>
-            <Link style={anchor} href="https://simo-dev.vercel.app/">
+            <Link style={anchor} href={host}>
               @SJB Therapy
             </Link>
             <Hr style={hr} />
-            <Text style={subtext}>This email was originally sent to {email}. Please do not click on any links you cannot verify. All links should have origin https://simo-dev.vercel.app</Text>
+            <Text style={subtext}>
+              This email was originally sent to {email}. Please do not click on any links you cannot verify. All links should have origin {host}
+            </Text>
           </Section>
         </Container>
       </div>

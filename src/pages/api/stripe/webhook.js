@@ -18,9 +18,12 @@ export const config = {
   },
 };
 // every webhook endpoint has unique key
+// for some reason the local key works for a while..
+// TODO - switch whsec key to endpoint specific key in prod
 export default async function handler(req, res) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev;
+
+  const webhookSecret = process.env.NODE_ENV === 'development' ? process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev : process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev_Vercel;
 
   if (req.method === 'POST') {
     const buf = await buffer(req);
