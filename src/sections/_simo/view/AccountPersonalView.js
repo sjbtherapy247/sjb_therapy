@@ -30,8 +30,6 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 
 export default function AccountPersonalView() {
   const {
-    user,
-    productsTable,
     custId,
     client,
     dispatch,
@@ -77,6 +75,7 @@ export default function AccountPersonalView() {
   } = methods;
 
   useEffect(() => {
+    if (!client) return;
     const personal = client?.acct_per_details;
     const resetValues = {
       fname: personal?.fname || name,
@@ -85,12 +84,11 @@ export default function AccountPersonalView() {
       birthday: new Date(personal?.birthday) || new Date(),
       gender: personal?.gender || 'female',
       streetAddress: personal?.streetAddress || address?.line1 || '',
-      city: personal?.city || address.city || '',
-      state: personal?.state || address.state || '',
+      city: personal?.city || address?.city || '',
+      state: personal?.state || address?.state || '',
       postCode: personal?.postCode || address?.postal_code || '',
-      country: address.country || 'AU',
+      country: address?.country || 'AU',
     };
-    if (!user || productsTable.length === 0) return;
     reset(resetValues);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [client]);
