@@ -36,11 +36,11 @@ const COLORS = ['primary', 'warning', 'secondary', 'success'];
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
-    color: alpha(theme.palette.grey[900], 0.8),
+    color: alpha(theme.palette.grey[theme.palette.mode === 'light' ? 100 : 800], 0.8),
     imgUrl: '/assets/background/overlay_2.jpg',
   }),
   padding: theme.spacing(10, 0),
-  color: theme.palette.common.white,
+  color: theme.palette.text.primary,
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(15, 0),
   },
