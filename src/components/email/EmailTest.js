@@ -10,7 +10,7 @@ export const SJBTherapyEmailTest = ({ email, link, name }) => (
   // <Body style={main}>
   <div>
     <Container style={container}>
-      <Link href={link}>
+      <Link href={host}>
         <Img style={img} src={image} width="350" alt="SJB Therapy" />
       </Link>
       <Section>
@@ -39,7 +39,7 @@ export const SJBTherapyEmailTest = ({ email, link, name }) => (
       </Section>
     </Container>
     <Container style={container}>
-      <Link href={link}>
+      <Link href={host}>
         <Img style={img} src={image} width="350" alt="SJB Therapy" />
       </Link>
       <Section>

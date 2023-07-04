@@ -10,7 +10,7 @@ export const SJBTherapySignUpEmail = ({ email, link, name }) => (
     <Body style={main}>
       <div>
         <Container style={container}>
-          <Link href="https://simo-dev.vercel.com">
+          <Link href={host}>
             <Img style={img} src={image} width="350" alt="SJB Therapy" />
           </Link>
           <Section>
