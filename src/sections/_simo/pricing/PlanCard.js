@@ -14,12 +14,14 @@ import { Box } from '@mui/system';
 import { checkout } from 'src/lib/checkout';
 import { LoadingButton } from '@mui/lab';
 import { useState } from 'react';
+import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
-export default function PlanCard({ plan, prices, currentClient, custId }) {
+export default function PlanCard({ plan, prices, currentClient }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
+  const { custId } = useSettingsContext();
 
   const [loading, setLoading] = useState(false);
 
