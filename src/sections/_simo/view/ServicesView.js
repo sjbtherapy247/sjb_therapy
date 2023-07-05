@@ -69,7 +69,10 @@ export default function ServicesView({ services, packages, prices }) {
       console.log(responseJson);
       update(purchaseRef, { line_items: responseJson.line_items.data[0] });
       update(purchaseRef, { customer_details: responseJson.customer_details });
-    } else console.log('payment canceled!');
+    } else {
+      console.log('payment canceled!');
+      console.log(responseJson);
+    }
   }
   return (
     <>
