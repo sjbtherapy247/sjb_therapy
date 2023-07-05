@@ -18,10 +18,10 @@ import { useSettingsContext } from 'src/components/settings';
 
 // ----------------------------------------------------------------------
 
-export default function PlanCard({ plan, prices, currentClient }) {
+export default function PlanCard({ plan, prices }) {
   const { license, commons, options, price } = plan;
   const theme = useTheme();
-  const { custId } = useSettingsContext();
+  const { custId, user } = useSettingsContext();
 
   const [loading, setLoading] = useState(false);
 
@@ -31,8 +31,8 @@ export default function PlanCard({ plan, prices, currentClient }) {
 
   if (prices) {
     purchase = prices.filter((item) => item?.product?.name === license);
-    if (license === 'Single Session' && currentClient) purchase.pop();
-    if (license === 'Single Session' && !currentClient) purchase.shift();
+    if (license === 'Single Session' && user) purchase.pop();
+    if (license === 'Single Session' && !user) purchase.shift();
 
     itemPrice = purchase[0].unit_amount / 100;
   }

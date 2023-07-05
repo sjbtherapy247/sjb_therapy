@@ -13,8 +13,8 @@ import useResponsive from 'src/hooks/useResponsive';
 import Iconify from 'src/components/iconify';
 import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel';
 //
-import PostItem from './PostItem';
-
+import PostItem from 'src/sections/_simo/insights/posts/PostItem';
+// use postItem from regular posts and not recent posts
 // ----------------------------------------------------------------------
 
 export default function LatestPosts({ posts }) {
@@ -66,7 +66,7 @@ export default function LatestPosts({ posts }) {
       }}
     >
       <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', md: 'space-between' }}>
-        <Typography variant="h3">Latest InSights & Research</Typography>
+        <Typography variant="h3">Our Latest InSights</Typography>
 
         {isMdUp && viewAllBtn}
       </Stack>

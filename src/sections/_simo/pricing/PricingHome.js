@@ -32,7 +32,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export default function PricingHome({ plans, prices }) {
   const theme = useTheme();
-  const { productsTable } = useSettingsContext();
+  const { user } = useSettingsContext();
 
   const isMdUp = useResponsive('up', 'md');
 
@@ -126,7 +126,7 @@ export default function PricingHome({ plans, prices }) {
           >
             {plans.map((plan) => (
               <m.div key={plan.license} variants={varFade({ distance: 140 }).inDown}>
-                <PlanCard plan={plan} prices={prices} currentClient={productsTable.length} />
+                <PlanCard plan={plan} prices={prices} currentClient={user} />
               </m.div>
             ))}
           </Box>
@@ -143,9 +143,7 @@ export default function PricingHome({ plans, prices }) {
             <Carousel ref={carouselRef} {...carouselSettings}>
               {plans.map((plan) => (
                 <Box key={plan.license} sx={{ position: 'relative', px: 1, py: { xs: 8, md: 10 } }}>
-                  {/* <m.div key={plan.license} variants={varFade({ distance: 240 }).inDown}> */}
-                  <PlanCard plan={plan} prices={prices} currentClient={productsTable.length} />
-                  {/* </m.div> */}
+                  <PlanCard plan={plan} prices={prices} />
                 </Box>
               ))}
             </Carousel>

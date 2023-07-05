@@ -8,9 +8,6 @@ import { ref, update } from 'firebase/database';
 // @mui
 import { LoadingButton } from '@mui/lab';
 import { DatePicker } from '@mui/x-date-pickers';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import enAU from 'date-fns/locale/en-AU';
 
 import { Box, Typography, Stack, Container } from '@mui/material';
 // assets
@@ -77,11 +74,12 @@ export default function AccountPersonalView() {
   useEffect(() => {
     if (!client) return;
     const personal = client?.acct_per_details;
+    const bday = personal ? new Date(personal.birthday) : new Date('01-01-2001');
     const resetValues = {
       fname: personal?.fname || name,
       emailAddress: email || '',
       phoneNumber: phone || '',
-      birthday: new Date(personal?.birthday) || new Date(),
+      birthday: bday,
       gender: personal?.gender || 'female',
       streetAddress: personal?.streetAddress || address?.line1 || '',
       city: personal?.city || address?.city || '',
@@ -107,7 +105,7 @@ export default function AccountPersonalView() {
           severity: 'success',
           message: 'Your details have been updated.',
           duration: 1000,
-          posn: 'center',
+          posn: 'bottom',
         },
       });
     } catch (error) {
@@ -151,25 +149,22 @@ export default function AccountPersonalView() {
             Optional Details
           </Typography>
           <Box rowGap={2.5} columnGap={2} display="grid" gridTemplateColumns={{ xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }}>
-            {/* wrap date picker in en-AU locale for date formatting */}
-            <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
-              <Controller
-                name="birthday"
-                render={({ field, fieldState: { error } }) => (
-                  <DatePicker
-                    label="Birthday"
-                    slotProps={{
-                      textField: {
-                        helperText: error?.message,
-                        error: !!error?.message,
-                      },
-                    }}
-                    {...field}
-                    value={field.value}
-                  />
-                )}
-              />
-            </LocalizationProvider>
+            <Controller
+              name="birthday"
+              render={({ field, fieldState: { error } }) => (
+                <DatePicker
+                  label="Birthday"
+                  slotProps={{
+                    textField: {
+                      helperText: error?.message,
+                      error: !!error?.message,
+                    },
+                  }}
+                  {...field}
+                  value={field.value}
+                />
+              )}
+            />
 
             <RHFSelect native name="gender" label="Gender">
               {GENDER_OPTIONS.map((option) => (

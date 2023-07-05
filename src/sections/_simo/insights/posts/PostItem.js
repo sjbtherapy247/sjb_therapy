@@ -57,7 +57,7 @@ export default function PostItem({ post }) {
           <PostTimeBlock duration={duration} createdAt={createdAt} sx={{ color: 'inherit', opacity: 0.72 }} />
 
           <Link component={NextLink} href={`/insights/${url}`} sx={{ color: 'inherit' }}>
-            <TextMaxLine line={4} variant="h4">
+            <TextMaxLine line={6} variant="h4">
               {title}
             </TextMaxLine>
           </Link>

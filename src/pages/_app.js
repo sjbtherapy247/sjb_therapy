@@ -23,6 +23,8 @@ import Head from 'next/head';
 // @mui
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import enAU from 'date-fns/locale/en-AU';
+
 // theme
 import ThemeProvider from 'src/theme';
 // utils
@@ -51,7 +53,7 @@ export default function MyApp(props) {
         <meta name="google-site-verification" content="0vx-WRanXJjemAmzQwVItX0iCJHquCTSgJPldrJ_dz8" />
       </Head>
 
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
         <SettingsProvider>
           <ThemeProvider>
             <LoadingCircular />
