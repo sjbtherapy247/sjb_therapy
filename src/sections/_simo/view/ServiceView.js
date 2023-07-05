@@ -65,16 +65,18 @@ export default function ServiceView({ service }) {
                 },
               }}
             >
-              <Typography variant="h2" component="h2" sx={{ mt: 0 }}>
+              <Typography variant="h1" component="h1" sx={{ mt: 0 }}>
                 {title}
                 {title.includes('TRANCE') && <sup style={{ fontSize: '20px' }}>TM</sup>}
               </Typography>
 
               <Stack direction="row">
                 {_socials.map((social) => (
-                  <IconButton key={social.value} color="primary" /* sx={{ color: social.color }} */>
-                    <Iconify icon={social.icon} />
-                  </IconButton>
+                  <Link key={social.value} href={social.href} target="_blank" underline="none">
+                    <IconButton color="primary" /* sx={{ color: social.color }} */>
+                      <Iconify icon={social.icon} />
+                    </IconButton>
+                  </Link>
                 ))}
               </Stack>
             </Stack>
@@ -126,9 +128,11 @@ export default function ServiceView({ service }) {
                 Share:
               </Typography>
               {_socials.map((social) => (
-                <IconButton key={social.value} sx={{ color: social.color }}>
-                  <Iconify icon={social.icon} />
-                </IconButton>
+                <Link key={social.value} href={social.href} target="_blank" underline="none">
+                  <IconButton sx={{ color: social.color }}>
+                    <Iconify icon={social.icon} />
+                  </IconButton>
+                </Link>
               ))}
             </Stack>
           </Grid>
@@ -148,10 +152,12 @@ export default function ServiceView({ service }) {
         }}
       >
         {_socials.map((social) => (
-          <MenuItem key={social.value} onClick={handleClose} sx={{ typography: 'body2' }}>
-            <Iconify icon={social.icon} width={24} sx={{ mr: 1, color: social.color }} />
-            Share via {social.label}
-          </MenuItem>
+          <Link key={social.value} href={social.href} target="_blank" underline="none">
+            <MenuItem onClick={handleClose} sx={{ typography: 'body2', color: theme.palette.primary.main }}>
+              <Iconify icon={social.icon} width={24} sx={{ mr: 1, color: social.color }} />
+              Share via {social.label}
+            </MenuItem>
+          </Link>
         ))}
       </Popover>
     </>

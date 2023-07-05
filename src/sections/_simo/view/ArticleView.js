@@ -97,9 +97,11 @@ export default function ArticleView({ post, allPosts }) {
 
               <Stack direction="row">
                 {_socials.map((social) => (
-                  <IconButton key={social.value}>
-                    <Iconify icon={social.icon} sx={{ color: social.color }} />
-                  </IconButton>
+                  <Link key={social.value} href={social.href} target="_blank" underline="none">
+                    <IconButton color="primary">
+                      <Iconify icon={social.icon} />
+                    </IconButton>
+                  </Link>
                 ))}
               </Stack>
             </Stack>
@@ -180,9 +182,11 @@ export default function ArticleView({ post, allPosts }) {
                 Share:
               </Typography>
               {_socials.map((social) => (
-                <IconButton key={social.value}>
-                  <Iconify icon={social.icon} sx={{ color: social.color }} />
-                </IconButton>
+                <Link key={social.value} href={social.href} target="_blank" underline="none">
+                  <IconButton sx={{ color: social.color }}>
+                    <Iconify icon={social.icon} />
+                  </IconButton>
+                </Link>
               ))}
             </Stack>
 
@@ -208,10 +212,12 @@ export default function ArticleView({ post, allPosts }) {
         }}
       >
         {_socials.map((social) => (
-          <MenuItem key={social.value} onClick={handleClose} sx={{ typography: 'body2' }}>
-            <Iconify icon={social.icon} width={24} sx={{ mr: 1, color: social.color }} />
-            Share via {social.label}
-          </MenuItem>
+          <Link key={social.value} href={social.href} target="_blank" underline="none">
+            <MenuItem onClick={handleClose} sx={{ typography: 'body2', color: theme.palette.primary.main }}>
+              <Iconify icon={social.icon} width={24} sx={{ mr: 1 }} />
+              Share via {social.label}
+            </MenuItem>
+          </Link>
         ))}
       </Popover>
     </>

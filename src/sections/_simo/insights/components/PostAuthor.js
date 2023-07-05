@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Stack, Typography, Avatar, IconButton } from '@mui/material';
+import { Stack, Typography, Avatar, IconButton, Link } from '@mui/material';
 // _mock
-import { _socials } from 'src/_mock';
+import { _socialsSimo } from 'src/_mock';
 // components
 import Iconify from 'src/components/iconify';
 
@@ -22,12 +22,7 @@ export default function PostAuthor({ author }) {
       <Avatar src={picture} sx={{ width: 96, height: 96 }} />
 
       <Stack spacing={2}>
-        <Stack
-          spacing={2}
-          alignItems={{ md: 'center' }}
-          direction={{ xs: 'column', md: 'row' }}
-          justifyContent={{ md: 'space-between' }}
-        >
+        <Stack spacing={2} alignItems={{ md: 'center' }} direction={{ xs: 'column', md: 'row' }} justifyContent={{ md: 'space-between' }}>
           <Stack spacing={0.5}>
             <Typography variant="h5">{name}</Typography>
 
@@ -37,10 +32,12 @@ export default function PostAuthor({ author }) {
           </Stack>
 
           <Stack direction="row">
-            {_socials.map((social) => (
-              <IconButton key={social.value}>
-                <Iconify icon={social.icon} sx={{ color: social.color }} />
-              </IconButton>
+            {_socialsSimo.map((social) => (
+              <Link key={social.value} href={social.href} target="_blank" underline="none">
+                <IconButton sx={{ color: social.color }}>
+                  <Iconify icon={social.icon} />
+                </IconButton>
+              </Link>
             ))}
           </Stack>
         </Stack>
