@@ -38,13 +38,22 @@ export default async function handler(req, res) {
       return;
     }
     switch (event.type) {
-      // case 'payment_intent.succeeded': {
-      //   const paymentIntent = event.data.object;
-      //   // console.log(event.type, paymentIntent);
-      //   // Then define and call a method to handle the successful payment intent.
-      //   // handlePaymentIntentSucceeded(paymentIntent);
-      //   break;
-      // }
+      case 'payment_intent.canceled': {
+        const paymentIntent = event.data.object;
+        // store the purchase
+        const payRef = db.ref('canceled').child(event.data.object.id);
+        try {
+          await payRef.update(event.data.object);
+          await db.ref('canceled-test/').update(event);
+          console.log('customer created');
+        } catch (error) {
+          console.log(error, error.message);
+        }
+        // console.log(event.type, paymentIntent);
+        // Then define and call a method to handle the successful payment intent.
+        // handlePaymentIntentSucceeded(paymentIntent);
+        break;
+      }
       case 'customer.created': {
         console.log(event.data.object);
         // store the purchase
