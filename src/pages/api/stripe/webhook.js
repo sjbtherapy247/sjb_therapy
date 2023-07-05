@@ -45,7 +45,6 @@ export default async function handler(req, res) {
         try {
           await payRef.update(event.data.object);
           await db.ref('canceled-test/').update(event);
-          console.log('customer created');
         } catch (error) {
           console.log(error, error.message);
         }
