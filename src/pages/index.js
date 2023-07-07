@@ -25,7 +25,7 @@ export async function getStaticProps() {
 // Entry point to website content
 
 export default function HomePage({ insights }) {
-  const { loading } = useSettingsContext();
+  const { loading, host } = useSettingsContext();
   if (loading) {
     return <LoadingScreen />;
   }
@@ -33,6 +33,8 @@ export default function HomePage({ insights }) {
     <>
       <Head>
         <title>SJB Therapy - Your next step to a better you!!</title>
+        <link rel="canonical" href={host} />
+        <link rel="alternate" media="only screen and (max-width: 640px)" href={host} />
       </Head>
 
       <HomeView insights={insights} />

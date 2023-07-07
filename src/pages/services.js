@@ -196,6 +196,7 @@ export async function getStaticProps() {
     },
   };
 }
+
 // ----------------------------------------------------------------------
 
 ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -222,7 +223,7 @@ export default function ServicesPage({ servicesDocs, packages }) {
     getPricelist();
   }, []);
 
-  const { loading } = useSettingsContext();
+  const { loading, host } = useSettingsContext();
   if (loading) {
     return <LoadingScreen />;
   }
@@ -231,6 +232,8 @@ export default function ServicesPage({ servicesDocs, packages }) {
     <>
       <Head>
         <title>Our Services | SJB Therapy</title>
+        <link rel="canonical" href={`${host}/services/`} />
+        <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/services/`} />
       </Head>
 
       <ServicesView services={servicesDocs} packages={packages} prices={pricelist} />

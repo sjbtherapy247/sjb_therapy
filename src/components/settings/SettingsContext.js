@@ -60,6 +60,7 @@ export function SettingsProvider({ children }) {
 
   const purchaseRef = ref(db, 'purchases/');
   const custRef = ref(db, 'customers/');
+  const host = process.env.NODE_ENV === 'development' ? 'https://simo-dev.vercel.com' : 'https://simo-dev.vercel.com';
 
   useEffect(() => {
     let listener = () => {};
@@ -132,6 +133,7 @@ export function SettingsProvider({ children }) {
       custId,
       client,
       user,
+      host,
     }),
     [
       // dependency array
@@ -149,6 +151,7 @@ export function SettingsProvider({ children }) {
       custId,
       client,
       user,
+      host,
     ]
   );
 

@@ -23,7 +23,7 @@ ResearchPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ResearchPage({ researchDocs }) {
-  const { loading } = useSettingsContext();
+  const { loading, host } = useSettingsContext();
   if (loading) {
     return <LoadingScreen />;
   }
@@ -31,6 +31,8 @@ export default function ResearchPage({ researchDocs }) {
     <>
       <Head>
         <title>InSights | SJB Therapy</title>
+        <link rel="canonical" href={`${host}/insights/`} />
+        <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/insights/`} />
       </Head>
 
       <ResearchView researchDocs={researchDocs} />

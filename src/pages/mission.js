@@ -15,7 +15,7 @@ OurMissionPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function OurMissionPage() {
-  const { loading } = useSettingsContext();
+  const { loading, host } = useSettingsContext();
   if (loading) {
     return <LoadingScreen />;
   }
@@ -23,6 +23,8 @@ export default function OurMissionPage() {
     <>
       <Head>
         <title>Our Mission | SJB Therapy</title>
+        <link rel="canonical" href={`${host}/mission/`} />
+        <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/mission/`} />
         <meta name="Our Mission" content="Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found." />
         <meta name="keywords" content="Our Mission, healing and performance" />
         <meta name="description" content="Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found." />
