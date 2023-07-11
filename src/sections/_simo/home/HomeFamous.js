@@ -6,7 +6,6 @@ import { Avatar, Box, Card, CardContent, CardHeader, Unstable_Grid2 as Grid, Typ
 // components
 import Image from 'src/components/image';
 import Carousel, { CarouselDots, CarouselArrows } from 'src/components/carousel';
-import { fontWeight } from '@mui/system';
 
 // ----------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Card, Link, Stack, Button, Divider, Typography, CircularProgress } from '@mui/material';
+import { Box, Card, Link, Stack, Button, Divider, Typography, CircularProgress } from '@mui/material';
 import NextLink from 'next/link';
 
 // types
@@ -9,7 +9,6 @@ import { paths } from 'src/routes/paths';
 import Iconify from 'src/components/iconify';
 import Label from 'src/components/label';
 import { useTheme } from '@emotion/react';
-import { Box } from '@mui/system';
 // lib
 import { checkout } from 'src/lib/checkout';
 import { LoadingButton } from '@mui/lab';

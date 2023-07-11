@@ -60,7 +60,7 @@ export function SettingsProvider({ children }) {
 
   const purchaseRef = ref(db, 'purchases/');
   const custRef = ref(db, 'customers/');
-  const host = process.env.NODE_ENV === 'development' ? 'https://simo-dev.vercel.com' : 'https://simo-dev.vercel.com';
+  const host = process.env.NODE_ENV === 'development' ? 'https://simo-dev.vercel.app' : 'https://simo-dev.vercel.app';
 
   useEffect(() => {
     let listener = () => {};

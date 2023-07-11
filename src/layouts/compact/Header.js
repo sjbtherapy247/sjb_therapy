@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, Link, Stack, Tooltip, IconButton } from '@mui/material';
+import { AppBar, Box, Toolbar, Link, Stack, Tooltip, IconButton } from '@mui/material';
 // config
 import { HEADER } from 'src/config-global';
 // utils
@@ -13,7 +13,6 @@ import { paths } from 'src/routes/paths';
 // components
 // import Logo from 'src/components/logo';
 // import SettingsDrawer from 'src/components/settings/drawer';
-import { Box } from '@mui/system';
 import Image from 'src/components/image/Image';
 // icons
 import chatQuestionOutline from '@iconify/icons-mdi/chat-question-outline';

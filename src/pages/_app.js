@@ -2,7 +2,6 @@
 import 'simplebar-react/dist/simplebar.min.css';
 
 // lightbox
-/* eslint-disable import/no-unresolved */
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
