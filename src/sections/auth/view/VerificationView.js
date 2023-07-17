@@ -66,47 +66,7 @@ export default function VerificationView() {
             }
             break;
           }
-          case 'verifyAndChangeEmail': {
-            // const result = await checkActionCode(auth, oobCode);
-            await applyActionCode(auth, oobCode);
 
-            router.push('/');
-            dispatch({ type: 'END_LOADING' });
-            dispatch({
-              type: 'UPDATE_ALERT',
-              payload: {
-                ...alert,
-                open: true,
-                severity: 'success',
-                message: 'Your new email has been verified. You now have full access to SCC Members',
-                duration: 8000,
-              },
-            });
-
-            break;
-          }
-          case 'recoverEmail': {
-            // const result = await checkActionCode(auth, oobCode);
-            await applyActionCode(auth, oobCode);
-            // await reload(auth.user);
-            dispatch({ type: 'END_LOADING' });
-            router.push('/');
-            dispatch({
-              type: 'UPDATE_ALERT',
-              payload: {
-                ...alert,
-                open: true,
-                severity: 'success',
-                message: `Your email change has been reversed. For security reasons existing sessions have expired. You can sign back in using your original credentials. We strongly recommend you change your password if you did not initiate this email change!`,
-                duration: 10000,
-              },
-            });
-
-            router.push('/');
-            signOut(auth);
-
-            break;
-          }
           case 'resetPassword': {
             await checkActionCode(auth, oobCode);
             // if the code is ok proceed
@@ -124,8 +84,22 @@ export default function VerificationView() {
             break;
           }
 
-          default:
+          default: {
+            dispatch({ type: 'END_LOADING' });
+            dispatch({
+              type: 'UPDATE_ALERT',
+              payload: {
+                ...alert,
+                open: true,
+                severity: 'error',
+                message: 'Verification failed. Unsupported mode',
+                duration: 6000,
+              },
+            });
+            router.push('/');
+
             break;
+          }
         }
       } catch (error) {
         dispatch({ type: 'END_LOADING' });

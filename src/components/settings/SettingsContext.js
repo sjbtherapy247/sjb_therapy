@@ -90,7 +90,7 @@ export function SettingsProvider({ children }) {
       setCurrentUser(null);
       setProductsTable([]);
       setClient({});
-      setCustId('unset');
+      setCustId('');
       // onValue(custRef, (snapshot) => {
       //   if (snapshot.val()) {
       //     const customers = Object?.values(snapshot.val());
