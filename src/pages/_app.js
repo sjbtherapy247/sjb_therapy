@@ -58,12 +58,10 @@ export default function MyApp(props) {
             <LoadingCircular />
             <Modal />
             <Notification />
-            {/* <ThemeSettings> */}
             <MotionLazyContainer>
               <ProgressBar />
               {getLayout(<Component {...pageProps} />)}
             </MotionLazyContainer>
-            {/* </ThemeSettings> */}
           </ThemeProvider>
         </SettingsProvider>
       </LocalizationProvider>

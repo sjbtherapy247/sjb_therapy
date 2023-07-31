@@ -15,7 +15,7 @@ import { paths } from 'src/routes/paths';
 // import SettingsDrawer from 'src/components/settings/drawer';
 import Image from 'src/components/image/Image';
 // icons
-import chatQuestionOutline from '@iconify/icons-mdi/chat-question-outline';
+// import chatQuestionOutline from '@iconify/icons-mdi/chat-question-outline';
 import Iconify from 'src/components/iconify/Iconify';
 
 // ----------------------------------------------------------------------
