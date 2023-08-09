@@ -28,6 +28,8 @@ const GENDER_OPTIONS = ['Female', 'Male', 'Other'];
 export default function AccountPersonalView() {
   const {
     custId,
+    user,
+    productsTable,
     client,
     dispatch,
     state: { alert },
@@ -46,7 +48,7 @@ export default function AccountPersonalView() {
     country: Yup.string(),
   });
 
-  const { name = '', email = '', phone = '', address = {} } = client;
+  const { name = '', phone = '', address = {} } = client;
   // const { phone } = productsTable.length ? productsTable[0]?.customer_details || '' : '';
 
   const defaultValues = {
@@ -77,7 +79,7 @@ export default function AccountPersonalView() {
     const bday = personal ? new Date(personal.birthday) : new Date('01-01-2001');
     const resetValues = {
       fname: personal?.fname || name,
-      emailAddress: email || '',
+      emailAddress: user.email || '',
       phoneNumber: phone || '',
       birthday: bday,
       gender: personal?.gender || 'female',
@@ -184,19 +186,19 @@ export default function AccountPersonalView() {
   );
 }
 
-function OverviewItem({ icon, label, text = '-' }) {
-  return (
-    <Stack spacing={1.5} direction="row" alignItems="flex-start">
-      <Iconify icon={icon} width={24} />
-      <Stack spacing={0.5}>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {label}
-        </Typography>
-        <Typography>{text}</Typography>
-      </Stack>
-    </Stack>
-  );
-}
+// function OverviewItem({ icon, label, text = '-' }) {
+//   return (
+//     <Stack spacing={1.5} direction="row" alignItems="flex-start">
+//       <Iconify icon={icon} width={24} />
+//       <Stack spacing={0.5}>
+//         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+//           {label}
+//         </Typography>
+//         <Typography>{text}</Typography>
+//       </Stack>
+//     </Stack>
+//   );
+// }
 
 // OverviewItem.propTypes = {
 //   icon: PropTypes.node,
