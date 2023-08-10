@@ -67,7 +67,7 @@ export const research = [
 
       <p>Hypnotherapy harnesses the mind-body connection for transformative change, backed by scientific evidence.</p>
 
-      <p>If you're ready to take the next step and change your life through hypnotherapy, book your free initial consultation now</p>
+      <p>If you're ready to take the next step and change your life through hypnotherapy, book your free discovery call now</p>
 
 `,
     coverImg: '/assets/images/marketing/marketing_1.jpg',
@@ -136,7 +136,7 @@ export const research = [
 
       <p>With its impressive success rates and personalised approach, clinical hypnotherapy stands out as the most effective way to quit smoking. By unlocking the power of the mind, hypnotherapy enables individuals to transform their relationship with smoking, paving the way for a brighter and healthier future. Embrace this positive and transformative journey and discover the freedom that awaits beyond smoking addiction.</p>
 
-      <p>If you would like to explore how hypnotherapy can change your life and help you quit smoking for good, book your free initial consultation now!</p>`,
+      <p>If you would like to explore how hypnotherapy can change your life and help you quit smoking for good, book your free discovery call now!</p>`,
     coverImg: '/assets/images/marketing/marketing_2.jpg',
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
   },
@@ -208,7 +208,7 @@ export const research = [
       <h4>Conclusion:</h4>
       <p>In conclusion, hypnotherapy has emerged as a powerful tool for enhancing sports and business performance. By tapping into the immense power of the subconscious mind, individuals can overcome mental barriers, improve focus, increase motivation, and unleash their full potential. Whether you're an athlete seeking to achieve peak performance or a business professional striving for success, hypnotherapy can be a game-changer on your journey to excellence. Embrace the transformative possibilities of hypnotherapy, and elevate your sports and business performance to new heights.</p>
       
-      <p>If you're ready to take the next step and find out more, book your free initial consultation now!</p>`,
+      <p>If you're ready to take the next step and find out more, book your free discovery call now!</p>`,
     coverImg: '/assets/images/marketing/marketing_3.jpg',
     heroImg: '/assets/images/marketing/marketing_post_01.jpg',
   },

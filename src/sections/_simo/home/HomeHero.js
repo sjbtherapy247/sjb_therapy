@@ -54,13 +54,13 @@ export default function HomeHero() {
                 place and you don&apos;t have to face things alone.
                 <br />
                 <br />
-                Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Please book your free 15-minute consultation so we can explore the best path forward together and let
-                your tomorrow begin today.
+                Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Please book your free discovery call now so we can explore the best path forward together and let your
+                tomorrow begin today.
               </Typography>
 
               <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">
                 <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
-                  Your Free Initial Consultation
+                  Your Free Discovery Call
                 </Button>
               </Link>
             </Stack>

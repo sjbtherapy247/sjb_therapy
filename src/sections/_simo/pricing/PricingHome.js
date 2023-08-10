@@ -128,11 +128,11 @@ export default function PricingHome({ plans, prices }) {
             <Stack spacing={6} alignItems="center">
               <Typography sx={{ color: 'text.secondary' }}>
                 Pay on a per session basis or purchase a 3-session bundle. Hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, however, the Quit Smoking service follows a different approach and can be
-                done in a single 90 minute session. Book your free initial consultation so you can explore if this is right for you.
+                done in a single 90 minute session. Book your free discovery call so you can explore if this is right for you.
               </Typography>
               {/* <Link component={NextLink} rel="noopener" href="/"> */}
               <Button data-cal-link="simonjbaker" color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
-                Book Your Free Consultation
+                Book Your Free Discovery Call
               </Button>
               {/* </Link> */}
             </Stack>

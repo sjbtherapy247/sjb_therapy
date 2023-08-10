@@ -61,7 +61,7 @@ export const servicesDescription = [
 
       <p><strong>How and where this can be applied</strong></p>
       <p>Hypnotherapy is never a one-size-fits-all, and the TRANCEformd™ model is the structure that we work from to shape our sessions together.</p>
-      <p>If you're ready to take the next step, book your free initial consultation and lets go!</p>`,
+      <p>If you're ready to take the next step, book your free discovery call and lets go!</p>`,
     heroImg: '/assets/images/simon/services_2.jpeg',
     icon: '/assets/icons/ic_file.svg',
   },
