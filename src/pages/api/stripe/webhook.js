@@ -73,12 +73,11 @@ export default async function handler(req, res) {
         // check if purchase was a deposit customer and create the customer ID
         if (event.data.object?.customer === null) {
           console.log('guest customer charge');
-          // const { address = '', email, phone = '', name = '' } = event.data.object.billing_details;
           const newCust = await stripe.customers.create(event.data.object.billing_details);
-          const custRef = db.ref('customers').child(newCust.id);
+          // const custRef = db.ref('customers').child(newCust.id);
           event.data.object.customer = newCust.id;
           try {
-            await custRef.update(newCust);
+            // await custRef.update(newCust);
             await db.ref('guest-cust-test/').update(newCust);
             console.log('guest customer created');
           } catch (error) {
@@ -91,7 +90,7 @@ export default async function handler(req, res) {
         const userRef = db.ref('purchases').child(event.data.object.payment_intent.slice(-7).toUpperCase());
         try {
           await userRef.update(event.data.object);
-          await db.ref('charge-test/').update(event);
+          await db.ref('charge-test/').update(event.data.object);
           console.log('charge succeeded');
         } catch (error) {
           console.log(error, error.message);

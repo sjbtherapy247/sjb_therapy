@@ -7,7 +7,7 @@ export const checkout = async (items, custId) => {
   try {
     const lineitems = items.map((product) => ({ price: product.id, quantity: 1 }));
     console.log(lineitems, custId);
-    const response = await fetch('/api/stripe', {
+    const response = await fetch('/api/stripe/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

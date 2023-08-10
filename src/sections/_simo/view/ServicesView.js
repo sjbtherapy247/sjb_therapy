@@ -45,7 +45,7 @@ export default function ServicesView({ services, packages, prices }) {
   }, [router.isReady]);
 
   async function getCheckoutSession(Id) {
-    const responseJson = await fetch(`/api/stripe/${Id}`, {
+    const responseJson = await fetch(`/api/stripe/${Id}/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

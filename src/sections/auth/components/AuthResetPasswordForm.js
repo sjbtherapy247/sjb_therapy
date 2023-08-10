@@ -37,7 +37,7 @@ export default function AuthResetPasswordForm() {
   const onSubmit = async (data) => {
     dispatch({ type: 'START_LOADING' });
     try {
-      const user = await fetch(`/api/email/send`, {
+      const user = await fetch(`/api/email/send/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export default function AuthResetPasswordForm() {
       // if the account does not existing throw a wobbler - client will see same message on screen for security
       if (!user.uid) throw new Error('Error - It appears there is no account on our system with that email address.');
       // if the user exists send the email
-      const response = await fetch(`/api/email/send`, {
+      const response = await fetch(`/api/email/send/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

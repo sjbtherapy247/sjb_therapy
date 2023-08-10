@@ -37,7 +37,7 @@ export default function PurchaseSuccess({ checkout }) {
 
   async function createClient() {
     try {
-      const user = await fetch('/api/email/send', {
+      const user = await fetch('/api/email/send/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export default function PurchaseSuccess({ checkout }) {
       // if the account already exists exit
       if (user.uid) return;
 
-      const response = await fetch('/api/email/send', {
+      const response = await fetch('/api/email/send/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

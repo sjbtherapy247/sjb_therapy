@@ -89,7 +89,15 @@ export default function AccountPersonalView() {
       postCode: personal?.postCode || address?.postal_code || '',
       country: address?.country || 'AU',
     };
+    // check if phone is null - fixes case of payment link usage charge succedded event does not provide phone
+    if (phone === '') {
+      resetValues.phoneNumber = productsTable[0].customer_details.phone;
+      update(ref(db, `customers/${custId}`), { phone: productsTable[0].customer_details.phone });
+      console.log('phone blank', productsTable);
+    }
+
     reset(resetValues);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [client]);
 

@@ -18,7 +18,6 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const { db } = createFirebaseAdminApp();
 const host = process.env.NODE_ENV === 'development' ? 'http://192.168.0.220:5002' : 'https://simo-dev.vercel.app'; /* : 'https://www.sjtherapy.com'; */
 
-
 // Lets connect the email API server to the customer database
 const ref = db.ref('customers/');
 let customers = [];
@@ -32,8 +31,7 @@ ref.on(
   }
 );
 
-console.log(admin.apps);
-// createFirebaseAdminApp();
+console.log('init fb apps', admin.apps);
 
 export default async function handler(req, res) {
   if (req.body.api_key !== process.env.API_ROUTE_SECRET) {

@@ -205,7 +205,7 @@ export default function ServicesPage({ servicesDocs, packages }) {
   const [pricelist, setPricelist] = useState(null);
 
   const getPricelist = async () => {
-    const price = await fetch(`/api/stripe/pricelist`, {
+    const price = await fetch(`/api/stripe/pricelist/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

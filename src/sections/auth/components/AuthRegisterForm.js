@@ -52,7 +52,7 @@ export default function AuthRegisterForm() {
     // dispatch({ type: 'START_LOADING' });
     // window.localStorage.setItem('emailForSignIn', data?.email);
     // try {
-    //   const user = await fetch('/api/email/send', {
+    //   const user = await fetch('/api/email/send/', {
     //     method: 'POST',
     //     headers: {
     //       'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export default function AuthRegisterForm() {
     //   if (user.uid) throw new Error('Error - It appears there is already an account on our system with that email address.');
     //   console.log(user);
     //   // await new Promise((resolve) => setTimeout(resolve, 500));
-    //   const response = await fetch('/api/email/send', {
+    //   const response = await fetch('/api/email/send/', {
     //     method: 'POST',
     //     headers: {
     //       'Content-Type': 'application/json',

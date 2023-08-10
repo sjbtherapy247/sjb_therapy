@@ -27,7 +27,6 @@ const initialState = {
   // toggle Mode
   onToggleMode: () => {},
   // Global state vars
-  currentUser: null,
 };
 
 // ----------------------------------------------------------------------
@@ -50,7 +49,6 @@ export function SettingsProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const [themeMode, setThemeMode] = useState(initialState.themeMode);
-  const [currentUser, setCurrentUser] = useState(initialState.currentUser);
   const [productsTable, setProductsTable] = useState([]);
   const [client, setClient] = useState([]);
   const [custId, setCustId] = useState('');
@@ -67,7 +65,6 @@ export function SettingsProvider({ children }) {
     let custlistener = () => {};
     if (user) {
       console.log('user loaded', user);
-      setCurrentUser({ ...user });
       setAvatar(user.photoURL || `/assets/images/avatar/avatar_19.jpg`);
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
@@ -87,7 +84,6 @@ export function SettingsProvider({ children }) {
       });
     } else {
       console.log('App logged out');
-      setCurrentUser(null);
       setProductsTable([]);
       setClient({});
       setCustId('');
@@ -127,7 +123,6 @@ export function SettingsProvider({ children }) {
       avatar,
       setAvatar,
       onToggleMode,
-      currentUser,
       loading,
       productsTable,
       custId,
@@ -145,7 +140,6 @@ export function SettingsProvider({ children }) {
       avatar,
       setAvatar,
       onToggleMode,
-      currentUser,
       loading,
       productsTable,
       custId,
