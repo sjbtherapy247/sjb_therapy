@@ -63,7 +63,7 @@ const EmailSignInSetPassword = () => {
       const pic = Math.floor(Math.random() * 25);
       setAvatar(`/assets/images/avatar/avatar_${pic}.jpg`);
       await updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
-      updatePassword(result.user, password);
+      await updatePassword(result.user, password);
       // Clear email from storage.
       window.localStorage.removeItem('emailForSignIn');
 

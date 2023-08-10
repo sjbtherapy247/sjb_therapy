@@ -65,7 +65,7 @@ export function SettingsProvider({ children }) {
     let custlistener = () => {};
     if (user) {
       console.log('user loaded', user);
-      setAvatar(user.photoURL || '');
+      if (avatar === '') setAvatar(user.photoURL || '');
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
           const items = Object?.values(snapshot.val());

@@ -53,8 +53,6 @@ export default function Header({ headerOnDark }) {
     setAnchorElUser(null);
   };
 
-  const fallbackAvatar = `/assets/images/avatar/avatar_19.jpg`;
-
   // const handleUserClick = () => {
   //   //
   // }
