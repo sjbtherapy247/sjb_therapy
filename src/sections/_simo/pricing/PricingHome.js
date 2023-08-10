@@ -43,9 +43,6 @@ export default function PricingHome({ plans, prices }) {
       const cal = await getCalApi();
       cal('ui', {
         theme: 'dark',
-        styles: {
-          branding: { brandColor: '#7987CB' },
-        },
       });
     })();
   }, []);
