@@ -1,7 +1,3 @@
-// fb
-import { db } from 'src/lib/createFirebaseApp';
-import { ref, update } from 'firebase/database';
-
 //
 import { Testimonial } from 'src/sections/_simo/testimonial';
 import PricingHome from 'src/sections/_simo/pricing';
@@ -9,9 +5,8 @@ import PricingHome from 'src/sections/_simo/pricing';
 // import { services } from 'src/sections/_simo/services/services';
 import { ServicesHero, ServicesInclude, ServicesBenefits, ServicesHowItWork } from 'src/sections/_simo/services';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSettingsContext } from 'src/components/settings';
-import { About } from '../mission';
 import PurchaseSuccess from '../services/PurchaseSuccess';
 
 // ----------------------------------------------------------------------

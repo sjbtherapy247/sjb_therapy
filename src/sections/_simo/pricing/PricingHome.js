@@ -1,12 +1,12 @@
 // react
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useEffect } from 'react';
 // next
-import NextLink from 'next/link';
+// import NextLink from 'next/link';
 // libs
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
-import { Box, Button, Container, Link, Typography, useTheme, Stack } from '@mui/material';
+import { Box, Button, Container, Typography, useTheme, Stack } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import { bgGradient } from 'src/utils/cssStyles';
 // components
@@ -15,9 +15,9 @@ import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel'
 // local
 import useResponsive from 'src/hooks/useResponsive';
 import Iconify from 'src/components/iconify/Iconify';
-import { onValue, ref } from 'firebase/database';
-import { db } from 'src/lib/createFirebaseApp';
 import { useSettingsContext } from 'src/components/settings';
+import CalComBooking from 'src/components/cal-com/CalComBooking';
+import { getCalApi } from '@calcom/embed-react';
 import PlanCard from './PlanCard';
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -32,7 +32,23 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export default function PricingHome({ plans, prices }) {
   const theme = useTheme();
-  const { user } = useSettingsContext();
+  const {
+    user,
+    dispatch,
+    state: { modal },
+  } = useSettingsContext();
+
+  useEffect(() => {
+    (async function calcom() {
+      const cal = await getCalApi();
+      cal('ui', {
+        theme: 'dark',
+        styles: {
+          branding: { brandColor: '#7987CB' },
+        },
+      });
+    })();
+  }, []);
 
   const isMdUp = useResponsive('up', 'md');
 
@@ -56,13 +72,24 @@ export default function PricingHome({ plans, prices }) {
       },
     ],
   };
-
   const handlePrev = () => {
     carouselRef.current?.slickPrev();
   };
-
   const handleNext = () => {
     carouselRef.current?.slickNext();
+  };
+
+  const handleClick = () => {
+    //
+    dispatch({
+      type: 'MODAL',
+      payload: {
+        ...modal,
+        open: true,
+        title: 'SjB Thearapy Booking',
+        content: <CalComBooking />,
+      },
+    });
   };
 
   return (
@@ -103,11 +130,11 @@ export default function PricingHome({ plans, prices }) {
                 Pay on a per session basis or purchase a 3-session bundle. Hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, however, the Quit Smoking service follows a different approach and can be
                 done in a single 90 minute session. Book your free initial consultation so you can explore if this is right for you.
               </Typography>
-              <Link component={NextLink} rel="noopener" href="/">
-                <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
-                  Book Your Free Consultation
-                </Button>
-              </Link>
+              {/* <Link component={NextLink} rel="noopener" href="/"> */}
+              <Button data-cal-link="simonjbaker" color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
+                Book Your Free Consultation
+              </Button>
+              {/* </Link> */}
             </Stack>
           </m.div>
         </Box>
