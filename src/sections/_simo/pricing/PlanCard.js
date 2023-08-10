@@ -18,18 +18,18 @@ import { useSettingsContext } from 'src/components/settings';
 // ----------------------------------------------------------------------
 
 export default function PlanCard({ plan, prices }) {
-  const { license, commons, options, price } = plan;
+  const { stripeName, license, commons, options, price } = plan;
   const theme = useTheme();
   const { custId, user } = useSettingsContext();
 
   const [loading, setLoading] = useState(false);
 
-  const popular = license === '4-Session Bundle';
+  const popular = license === '3-Session Bundle';
   let purchase = null;
   let itemPrice = null;
 
   if (prices) {
-    purchase = prices.filter((item) => item?.product?.name === license);
+    purchase = prices.filter((item) => item?.product?.name === stripeName);
     if (license === 'Single Session' && user) purchase.pop();
     if (license === 'Single Session' && !user) purchase.shift();
 
@@ -60,7 +60,7 @@ export default function PlanCard({ plan, prices }) {
 
       <Stack spacing={3}>
         <Stack direction="row" justifyContent="flex-end">
-          <Typography variant="h5" component="div" sx={{ textTransform: 'uppercase', position: 'absolute', top: 70, left: 32 }}>
+          <Typography variant="h5" component="div" sx={{ position: 'absolute', top: 70, left: 32 }}>
             {license}
           </Typography>
 

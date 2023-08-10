@@ -53,7 +53,6 @@ export function SettingsProvider({ children }) {
   const [client, setClient] = useState([]);
   const [custId, setCustId] = useState('');
   const [avatar, setAvatar] = useState('');
-  console.log('avatar initialised again');
 
   const [user, loading, error] = useAuthState(auth);
 

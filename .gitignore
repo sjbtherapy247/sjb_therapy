@@ -3,6 +3,8 @@
 /pages-hold
 
 # dependencies
+/emulator
+*.key
 /node_modules
 /.pnp
 .pnp.js

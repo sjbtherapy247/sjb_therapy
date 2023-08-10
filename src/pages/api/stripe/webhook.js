@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     }
     switch (event.type) {
       case 'payment_intent.canceled': {
-        const paymentIntent = event.data.object;
+        // const paymentIntent = event.data.object;
         // store the purchase
         const payRef = db.ref('canceled').child(event.data.object.id);
         try {

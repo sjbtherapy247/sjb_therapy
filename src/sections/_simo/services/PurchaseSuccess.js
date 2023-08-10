@@ -1,10 +1,10 @@
-import NextLink from 'next/link';
+// import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Box, Container, Typography, Button, Unstable_Grid2 as Grid, Link } from '@mui/material';
+import { Box, Typography, Unstable_Grid2 as Grid } from '@mui/material';
 // utils
 // hooks
-import useResponsive from 'src/hooks/useResponsive';
+// import useResponsive from 'src/hooks/useResponsive';
 // components
 import { bgGradient } from 'src/utils/cssStyles';
 import { useEffect } from 'react';

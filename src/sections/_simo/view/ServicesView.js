@@ -39,7 +39,7 @@ export default function ServicesView({ services, packages, prices }) {
       query: { sessionId },
     } = router;
     if (sessionId) {
-      console.log('calling checkout');
+      console.log('calling getcheckoutsession');
       getCheckoutSession(sessionId);
     }
   }, [router.isReady]);
