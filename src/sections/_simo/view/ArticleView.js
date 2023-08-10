@@ -163,7 +163,7 @@ export default function ArticleView({ post, allPosts }) {
             <Markdown content={content} firstLetter />
 
             <Link component={NextLink} href="/services#hypnotherapyPackages">
-              <Button variant="contained" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
+              <Button variant="contained" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                 Book Now
               </Button>
             </Link>

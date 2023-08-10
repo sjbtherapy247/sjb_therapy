@@ -60,7 +60,7 @@ export default function HomeHero() {
 
               <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">
                 <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
-                  Your Free 15
+                  Your Free Initial Consultation
                 </Button>
               </Link>
             </Stack>
