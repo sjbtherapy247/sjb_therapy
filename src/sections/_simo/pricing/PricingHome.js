@@ -131,7 +131,7 @@ export default function PricingHome({ plans, prices }) {
                 done in a single 90 minute session. Book your free discovery call so you can explore if this is right for you.
               </Typography>
               {/* <Link component={NextLink} rel="noopener" href="/"> */}
-              <Button data-cal-link="simonjbaker" color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
+              <Button data-cal-link="simonjbaker/discovery-call" color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
                 Book Your Free Discovery Call
               </Button>
               {/* </Link> */}
