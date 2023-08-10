@@ -74,8 +74,9 @@ export default async function handler(req, res) {
         if (event.data.object?.customer === null) {
           console.log('guest customer charge');
           const newCust = await stripe.customers.create(event.data.object.billing_details);
-          // const custRef = db.ref('customers').child(newCust.id);
           event.data.object.customer = newCust.id;
+          // const custRef = db.ref('customers').child(newCust.id);
+          // no need as the stripe create fires a customer created event so it can create the customer in db
           try {
             // await custRef.update(newCust);
             await db.ref('guest-cust-test/').update(newCust);

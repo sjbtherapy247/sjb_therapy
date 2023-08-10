@@ -59,13 +59,13 @@ const EmailSignInSetPassword = () => {
       // The client SDK will parse the code from the link for you.
       const result = await signInWithEmailLink(auth, email, window.location.href);
       console.log(result.user);
-      // Clear email from storage.
-      window.localStorage.removeItem('emailForSignIn');
-      updatePassword(result.user, password);
       // pick a profile pic from /assets/images/avatar/avatar_x
       const pic = Math.floor(Math.random() * 25);
-      updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
       setAvatar(`/assets/images/avatar/avatar_${pic}.jpg`);
+      await updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
+      updatePassword(result.user, password);
+      // Clear email from storage.
+      window.localStorage.removeItem('emailForSignIn');
 
       dispatch({ type: 'END_LOADING' });
       dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
