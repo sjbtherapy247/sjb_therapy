@@ -13,6 +13,7 @@ const EmailSignInSetPassword = () => {
 
   const {
     custId,
+    setAvatar,
     dispatch,
     state: { alert, modal },
   } = useSettingsContext();
@@ -64,6 +65,7 @@ const EmailSignInSetPassword = () => {
       // pick a profile pic from /assets/images/avatar/avatar_x
       const pic = Math.floor(Math.random() * 25);
       updateProfile(result.user, { photoURL: `/assets/images/avatar/avatar_${pic}.jpg` });
+      setAvatar(`/assets/images/avatar/avatar_${pic}.jpg`);
 
       dispatch({ type: 'END_LOADING' });
       dispatch({ type: 'MODAL', payload: { ...modal, open: false } });

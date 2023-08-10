@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect, useContext, useCallback, createContext, u
 import { auth, db } from 'src/lib/createFirebaseApp';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { connectAuthEmulator } from 'firebase/auth';
+// import { connectAuthEmulator } from 'firebase/auth';
 
 //
 import { onValue, ref } from 'firebase/database';
@@ -12,9 +12,9 @@ import { defaultSettings } from './config-setting';
 import reducer from './reducer';
 
 // ----------------------------------------------------------------------
-if (process.env.NODE_ENV_T === 'development') {
-  connectAuthEmulator(auth, 'http://127.0.0.1:9099');
-}
+// if (process.env.NODE_ENV_T === 'development') {
+//   connectAuthEmulator(auth, 'http://127.0.0.1:9099');
+// }
 
 // console.log(db, auth);
 const initialState = {
@@ -65,7 +65,7 @@ export function SettingsProvider({ children }) {
     let custlistener = () => {};
     if (user) {
       console.log('user loaded', user);
-      setAvatar(user.photoURL || `/assets/images/avatar/avatar_19.jpg`);
+      setAvatar(user.photoURL || '');
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
           const items = Object?.values(snapshot.val());
