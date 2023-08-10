@@ -53,19 +53,20 @@ export function SettingsProvider({ children }) {
   const [client, setClient] = useState([]);
   const [custId, setCustId] = useState('');
   const [avatar, setAvatar] = useState('');
+  console.log('avatar initialised again');
 
   const [user, loading, error] = useAuthState(auth);
 
-  const purchaseRef = ref(db, 'purchases/');
-  const custRef = ref(db, 'customers/');
   const host = process.env.NODE_ENV === 'development' ? 'https://simo-dev.vercel.app' : 'https://simo-dev.vercel.app';
 
   useEffect(() => {
+    const purchaseRef = ref(db, 'purchases/');
+    const custRef = ref(db, 'customers/');
     let listener = () => {};
     let custlistener = () => {};
     if (user) {
       console.log('user loaded', user);
-      if (avatar === '') setAvatar(user.photoURL || '');
+      if (user.photoURL) setAvatar(user.photoURL);
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
           const items = Object?.values(snapshot.val());
