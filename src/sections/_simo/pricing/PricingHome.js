@@ -16,7 +16,7 @@ import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel'
 import useResponsive from 'src/hooks/useResponsive';
 import Iconify from 'src/components/iconify/Iconify';
 import { useSettingsContext } from 'src/components/settings';
-import CalComBooking from 'src/components/cal-com/CalComBooking';
+// import CalComBooking from 'src/components/cal-com/CalComBooking';
 import { getCalApi } from '@calcom/embed-react';
 import PlanCard from './PlanCard';
 
@@ -76,18 +76,18 @@ export default function PricingHome({ plans, prices }) {
     carouselRef.current?.slickNext();
   };
 
-  const handleClick = () => {
-    //
-    dispatch({
-      type: 'MODAL',
-      payload: {
-        ...modal,
-        open: true,
-        title: 'SjB Thearapy Booking',
-        content: <CalComBooking />,
-      },
-    });
-  };
+  // const handleClick = () => {
+  //   //
+  //   dispatch({
+  //     type: 'MODAL',
+  //     payload: {
+  //       ...modal,
+  //       open: true,
+  //       title: 'SjB Thearapy Booking',
+  //       content: <CalComBooking />,
+  //     },
+  //   });
+  // };
 
   return (
     <StyledRoot>

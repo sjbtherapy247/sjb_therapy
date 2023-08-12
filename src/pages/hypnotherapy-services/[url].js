@@ -5,7 +5,7 @@ import MainLayout from 'src/layouts/main';
 // sections
 import ServiceView from 'src/sections/_simo/view/ServiceView';
 
-import { servicesDescription } from 'src/sections/_simo/services/svcs';
+import { servicesDescription } from 'src/sections/_simo/services/updated-svcs';
 
 export async function getStaticPaths() {
   return {

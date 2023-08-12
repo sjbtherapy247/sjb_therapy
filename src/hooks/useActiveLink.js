@@ -12,7 +12,7 @@ export default function useActiveLink(path, deep = true) {
   const { pathname, asPath } = useRouter();
 
   const checkPath = path.startsWith('#');
-
+  // this works if nextjs conf has trailingSlash = true
   const currentPath = path === '/' ? '/' : `${path}/`;
 
   const normalActive = (!checkPath && pathname === currentPath) || (!checkPath && asPath === currentPath);
