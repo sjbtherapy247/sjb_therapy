@@ -59,10 +59,7 @@ function Icon({ content, color, sx, ...other }) {
       sx={{
         p: 1.5,
         borderRadius: 2.5,
-        background: `linear-gradient(to bottom, ${alpha(color, 0.24)} -8%, ${alpha(
-          color,
-          0
-        )} 120%)`,
+        background: `linear-gradient(to bottom, ${alpha(color, 0.24)} -8%, ${alpha(color, 0)} 120%)`,
         ...sx,
       }}
       {...other}

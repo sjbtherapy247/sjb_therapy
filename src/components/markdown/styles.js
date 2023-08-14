@@ -18,7 +18,7 @@ const StyledMarkdown = styled('div', {
   '& h4': { ...MARGIN, ...theme.typography.h4 },
   '& h5': { ...MARGIN, ...theme.typography.h5 },
   '& h6': { ...MARGIN, ...theme.typography.h6 },
-  '& p': { ...MARGIN },
+  '& p': { ...MARGIN, ...theme.typography.body1, color: theme.palette.text.secondary, fontSize: '15px' },
 
   // Link
   a: {
@@ -50,12 +50,14 @@ const StyledMarkdown = styled('div', {
     margin: '40px auto',
     position: 'relative',
     fontFamily: 'Georgia, serif',
-    padding: theme.spacing(3, 3, 3, 8),
+    fontStyle: 'italic',
+    textAlign: 'center',
+    padding: theme.spacing(3, 5, 3, 5),
     borderRadius: Number(theme.shape.borderRadius) * 2,
     backgroundColor: theme.palette.background.neutral,
     color: `${theme.palette.text.secondary} !important`,
     [theme.breakpoints.up('md')]: {
-      width: '80%',
+      width: '70%',
     },
     '& p, & span': {
       marginBottom: '0 !important',
@@ -69,6 +71,15 @@ const StyledMarkdown = styled('div', {
       display: 'block',
       fontSize: '2.5em',
       content: '"\\201C"',
+      position: 'absolute',
+      color: theme.palette.text.disabled,
+    },
+    '&:after': {
+      right: 16,
+      top: -4,
+      display: 'block',
+      fontSize: '2.5em',
+      content: '"\\201D"',
       position: 'absolute',
       color: theme.palette.text.disabled,
     },
@@ -137,7 +148,7 @@ const StyledMarkdown = styled('div', {
         float: 'left',
         fontSize: 80,
         lineHeight: 1,
-        paddingRight: theme.spacing(2),
+        paddingRight: theme.spacing(1.4),
         fontWeight: theme.typography.fontWeightBold,
       },
     },

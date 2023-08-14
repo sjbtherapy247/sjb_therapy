@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, Link, Stack, Tooltip, IconButton } from '@mui/material';
+import { AppBar, Box, Toolbar, Link, Stack, Tooltip, IconButton } from '@mui/material';
 // config
 import { HEADER } from 'src/config-global';
 // utils
@@ -13,7 +13,6 @@ import { paths } from 'src/routes/paths';
 // components
 // import Logo from 'src/components/logo';
 // import SettingsDrawer from 'src/components/settings/drawer';
-import { Box } from '@mui/system';
 import Image from 'src/components/image/Image';
 // icons
 // import chatQuestionOutline from '@iconify/icons-mdi/chat-question-outline';
@@ -54,26 +53,17 @@ export default function Header({ isOffset }) {
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
             <Link href="/" component={NextLink}>
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-                <Box
-                  sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}
-                >
-                  <Image src="/assets/sjb-logo/hnav-logo.jpg" disabledEffect sx={{ height: 1 }} />
+                <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
+                  <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="go to home page" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
             </Link>
           </Box>
 
-          <Stack
-            sx={{ mr: 1 }}
-            spacing={1}
-            direction="row"
-            alignItems="center"
-            flexGrow={1}
-            justifyContent="flex-end"
-          >
+          <Stack sx={{ mr: 1 }} spacing={1} direction="row" alignItems="center" flexGrow={1} justifyContent="flex-end">
             <Link href={paths.support} component={NextLink} color="inherit">
               <IconButton color="inherit">
-                <Iconify icon="mdi:chat-question-outline" height="30" />
+                <Iconify icon="carbon:help" />
               </IconButton>
             </Link>
           </Stack>

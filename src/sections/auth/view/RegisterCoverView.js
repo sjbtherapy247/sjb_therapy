@@ -56,15 +56,7 @@ export default function RegisterCoverView() {
         <AuthRegisterForm />
       </Box>
 
-      <AuthCarousel
-        title="Client registration"
-        images={[
-          '/assets/sjb-logo/Hmobile.jpg',
-          '/assets/sjb-logo/Hdocs-large.jpg',
-          '/assets/sjb-logo/Smobile.jpg',
-          '/assets/sjb-logo/Sdoco-large.jpg',
-        ]}
-      />
+      <AuthCarousel title="Client registration" images={['/assets/sjb-logo/Hmobile.jpg', '/assets/sjb-logo/Hdocs-large.jpg']} />
     </Stack>
   );
 }

@@ -2,7 +2,6 @@
 import 'simplebar-react/dist/simplebar.min.css';
 
 // lightbox
-/* eslint-disable import/no-unresolved */
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
@@ -23,6 +22,8 @@ import Head from 'next/head';
 // @mui
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import enAU from 'date-fns/locale/en-AU';
+
 // theme
 import ThemeProvider from 'src/theme';
 // utils
@@ -31,6 +32,9 @@ import createEmotionCache from 'src/utils/createEmotionCache';
 import ProgressBar from 'src/components/progress-bar';
 import { SettingsProvider } from 'src/components/settings';
 import MotionLazyContainer from 'src/components/animate/MotionLazyContainer';
+import LoadingCircular from 'src/components/loading-circular/LoadingCircular';
+import Notification from 'src/components/notification/Notification';
+import Modal from 'src/components/modal/Modal';
 
 // ----------------------------------------------------------------------
 
@@ -45,17 +49,19 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="google-site-verification" content="0vx-WRanXJjemAmzQwVItX0iCJHquCTSgJPldrJ_dz8" />
       </Head>
 
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
         <SettingsProvider>
           <ThemeProvider>
-            {/* <ThemeSettings> */}
+            <LoadingCircular />
+            <Modal />
+            <Notification />
             <MotionLazyContainer>
               <ProgressBar />
               {getLayout(<Component {...pageProps} />)}
             </MotionLazyContainer>
-            {/* </ThemeSettings> */}
           </ThemeProvider>
         </SettingsProvider>
       </LocalizationProvider>

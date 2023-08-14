@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------
 
 export const fullName = [
-  'Jayvion Simon',
+  'Simon J Baker',
   'Lucian Obrien',
   'Deja Brady',
   'Harrison Stein',

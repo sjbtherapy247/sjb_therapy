@@ -13,41 +13,49 @@ import {
   // Container,
   Tooltip,
   IconButton,
+  Badge,
+  Avatar,
 } from '@mui/material';
 // hooks
 import useOffSetTop from 'src/hooks/useOffSetTop';
 import useResponsive from 'src/hooks/useResponsive';
 import { useSettingsContext } from 'src/components/settings/SettingsContext';
-// utils
-// import { bgBlur } from 'src/utils/cssStyles';
-// routes
-// import { paths } from 'src/routes/paths';
+
 // config
 import { HEADER } from 'src/config-global';
-// components
-// import Logo from 'src/components/logo';
-// import Label from 'src/components/label';
-//
+
 import Image from 'src/components/image/Image';
 import Iconify from 'src/components/iconify/Iconify';
-// Icons
-// import'mdi:loginIcon'from '@iconify/icons-mdi/login';
-// import brightness7 from '@iconify/icons-mdi/brightness-7';
-// import brightness2 from '@iconify/icons-mdi/brightness-2';
 
 import { bgBlur } from 'src/utils/cssStyles';
+import { useEffect, useState } from 'react';
+import _mock from 'src/_mock/_mock';
 import { NavMobile, NavDesktop, navConfig } from '../nav';
+import AccountMenu from '../AccountMenu';
 
 // ----------------------------------------------------------------------
 
 export default function Header({ headerOnDark }) {
   const theme = useTheme();
-  const { onToggleMode } = useSettingsContext();
-  console.log(theme);
+  const { onToggleMode, user, loading, avatar } = useSettingsContext();
+  const [anchorElUser, setAnchorElUser] = useState();
 
   const isMdUp = useResponsive('up', 'md');
+  const isSmUp = useResponsive('up', 'sm');
 
-  const isOffset = useOffSetTop(4);
+  const isOffset = useOffSetTop(2);
+
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  // const handleUserClick = () => {
+  //   //
+  // }
 
   return (
     <AppBar color="transparent" sx={{ boxShadow: 'none', width: '100vw' }}>
@@ -61,7 +69,7 @@ export default function Header({ headerOnDark }) {
           },
           transition: theme.transitions.create(['height', 'background-color'], {
             easing: theme.transitions.easing.easeInOut,
-            duration: '1s',
+            duration: 800,
             // duration: theme.transitions.duration.shorter,
           }),
 
@@ -84,59 +92,100 @@ export default function Header({ headerOnDark }) {
             //   md: HEADER.H_MAIN_DESKTOP,
             // },
           }),
-          ...(!isMdUp && {
-            ...{ backgroundColor: theme.palette.primary.dark },
-            color: 'common.white',
-          }),
+          // ...(!isMdUp && {
+          //   ...{ backgroundColor: theme.palette.primary.dark },
+          //   color: 'common.white',
+          // }),
         }}
       >
         <Box sx={{ height: 1, display: 'flex', alignItems: 'center' }}>
-          <Link href="/" component={NextLink}>
-            <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
-              <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
-                <Image src="/assets/sjb-logo/hnav-logo.jpg" disabledEffect sx={{ height: 1 }} />
-              </Box>
-            </Tooltip>
-          </Link>
+          {isSmUp && (
+            <Link href="/" component={NextLink}>
+              <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
+                <Box
+                  sx={{
+                    ml: '2px',
+                    lineHeight: 0,
+                    position: 'relative',
+                    height: isOffset ? '64px' : '54px',
+                    width: '185.44px',
+                    borderRadius: isOffset ? 0 : 1,
+                    overflow: 'hidden',
+                    transition: theme.transitions.create(['height'], {
+                      easing: theme.transitions.easing.easeInOut,
+                      duration: 500,
+                      // duration: theme.transitions.duration.shorter,
+                    }),
+                  }}
+                >
+                  <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
+                </Box>
+              </Tooltip>
+            </Link>
+          )}
+          {!isSmUp && (
+            <Link href="/" component={NextLink}>
+              <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
+                <Box sx={{ ml: 1, lineHeight: 0, position: 'relative', height: '54px', width: '54px', borderRadius: 1, overflow: 'hidden' }}>
+                  <Image src="/assets/sjb-logo/hicon.png" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
+                </Box>
+              </Tooltip>
+            </Link>
+          )}
+          {!isMdUp && <NavMobile data={navConfig} />}
+
           {isMdUp && <NavDesktop data={navConfig} />}
 
-          <Stack
-            spacing={2}
-            flexGrow={1}
-            direction="row"
-            alignItems="center"
-            justifyContent="flex-end"
-          >
-            <Stack spacing={1} direction="row" alignItems="center" sx={{ pr: { xs: 0, md: 2 } }}>
-              <Tooltip
-                title={theme.palette.mode === 'dark' ? 'Light Mode' : 'Dark Mode'}
-                arrow
-                placement="bottom-end"
-              >
-                <IconButton onClick={onToggleMode} color="inherit">
-                  {theme.palette.mode === 'dark' ? (
-                    <Iconify icon="mdi:brightness-7" />
-                  ) : (
-                    <Iconify icon="mdi:brightness-2" />
-                  )}
-                </IconButton>
-              </Tooltip>
-              <Tooltip title="Sign in" arrow placement="bottom">
-                <Link
-                  component={NextLink}
-                  href="/auth/login-cover"
-                  underline="none"
-                  color="inherit"
-                >
-                  <IconButton color="inherit" aria-label="search">
-                    <Iconify icon="mdi:login" />
-                  </IconButton>
-                </Link>
-              </Tooltip>
-            </Stack>
-          </Stack>
+          <Stack spacing={1} flexGrow={1} direction="row" alignItems="center" justifyContent="flex-end" sx={{ pr: { xs: 0, md: 2 } }}>
+            {/* {!isMdUp && (
+              <IconButton color="inherit">
+                <Iconify icon="carbon:search" />
+              </IconButton>
+            )} */}
 
-          {!isMdUp && <NavMobile data={navConfig} />}
+            {user && !loading && (
+              <>
+                {/* <IconButton component={NextLink} href={paths.eCommerce.cart} color="inherit">
+                  <Badge badgeContent={4} color="error">
+                    <Iconify icon="carbon:shopping-cart" />
+                  </Badge>
+                </IconButton> */}
+
+                {/* <IconButton component={NextLink} href={paths.eCommerce.account.personal} color="inherit"> */}
+                <IconButton onClick={handleOpenUserMenu} color="inherit">
+                  {/* <Iconify icon="carbon:user" /> */}
+                  <Avatar src={avatar} sx={{ width: 40, height: 40 }} />
+                </IconButton>
+              </>
+            )}
+
+            {/* <Stack spacing={1} direction="row" alignItems="center" sx={{ pr: { xs: 0, md: 2 } }}> */}
+            {!user && !loading && (
+              <>
+                <Tooltip title={theme.palette.mode === 'dark' ? 'Light Mode' : 'Dark Mode'} arrow placement="bottom-end">
+                  <IconButton onClick={onToggleMode} color="inherit">
+                    {theme.palette.mode === 'dark' ? <Iconify icon="mdi:brightness-7" /> : <Iconify icon="mdi:brightness-2" />}
+                  </IconButton>
+                </Tooltip>
+                <Tooltip title="Sign in" arrow placement="bottom">
+                  <Link component={NextLink} href="/auth/login-cover" underline="none" color="inherit">
+                    <IconButton color="inherit" aria-label="search">
+                      <Iconify icon="mdi:login" />
+                    </IconButton>
+                  </Link>
+                </Tooltip>
+              </>
+            )}
+
+            {/* <Badge badgeContent={2} color="info">
+                <IconButton component={NextLink} href={paths.eCommerce.wishlist} size="small" color="inherit" sx={{ p: 0 }}>
+                  <Iconify icon="carbon:favorite" width={24} />
+                </IconButton>
+              </Badge> */}
+
+            {/* </Stack> */}
+          </Stack>
+          <AccountMenu anchorElUser={anchorElUser} handleCloseUserMenu={handleCloseUserMenu} />
         </Box>
       </Toolbar>
     </AppBar>

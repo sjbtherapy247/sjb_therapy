@@ -84,7 +84,7 @@ const COMMON = {
   action: {
     hover: alpha(GREY[500], 0.08),
     selected: alpha(GREY[500], 0.16),
-    disabled: alpha(GREY[500], 0.8),
+    disabled: alpha(GREY[300], 0.8),
     disabledBackground: alpha(GREY[500], 0.24),
     focus: alpha(GREY[500], 0.24),
     hoverOpacity: 0.08,
@@ -113,8 +113,8 @@ export default function palette(themeMode) {
     mode: 'dark',
     text: {
       primary: '#FFFFFF',
-      secondary: GREY[400],
-      disabled: GREY[500],
+      secondary: GREY[300],
+      disabled: GREY[400],
     },
     background: {
       paper: GREY[800],

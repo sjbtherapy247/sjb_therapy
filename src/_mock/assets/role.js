@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------
 
 export const role = [
-  'UX Designer',
+  'Hypnotherapist and Pschotherapist',
   'Full Stack Designer',
   'Backend Developer',
   'UX Designer',

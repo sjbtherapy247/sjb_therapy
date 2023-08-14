@@ -2,10 +2,13 @@ import PropTypes from 'prop-types';
 // next
 import { useRouter } from 'next/router';
 // @mui
-import { Box } from '@mui/material';
+import { Box, Fab } from '@mui/material';
 // config
 import { HEADER } from 'src/config-global';
 // page components
+import ScrollToTop from 'src/components/scroll-to-top/ScrollToTop';
+import Iconify from 'src/components/iconify/Iconify';
+import ScrollProgress from 'src/components/scroll-progress/ScrollProgress';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 
@@ -25,6 +28,7 @@ export default function MainLayout({ children }) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: 1 }}>
       <Header headerOnDark={actionPage(pathsOnDark)} />
+      <ScrollProgress />
 
       <Box
         component="main"
@@ -36,6 +40,11 @@ export default function MainLayout({ children }) {
         {/* just puts xtra space above e-commerce menu  */}
         {children}
       </Box>
+      <ScrollToTop className="mui-fixed">
+        <Fab color="primary" size="small" aria-label="scroll back to top" sx={{ opacity: 0.8 }}>
+          <Iconify icon="mdi:arrow-up" />
+        </Fab>
+      </ScrollToTop>
 
       <Footer />
     </Box>

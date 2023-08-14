@@ -1,0 +1,22 @@
+export { default as HomeView } from './HomeView';
+export { default as ArticleView } from './ArticleView';
+export { default as MissionView } from './MissionView';
+export { default as ResearchView } from './ResearchView';
+export { default as ServicesView } from './ServicesView';
+// export { default as ContactView } from './ContactView';
+// export { default as CaseStudyView } from './CaseStudyView';
+// export { default as CaseStudiesView } from './CaseStudiesView';
+// export { default as EcommerceCartView } from './EcommerceCartView';
+// export { default as EcommerceLandingView } from './EcommerceLandingView';
+// export { default as EcommerceProductView } from './EcommerceProductView';
+// export { default as EcommerceProductsView } from './EcommerceProductsView';
+// export { default as EcommerceCheckoutView } from './EcommerceCheckoutView';
+// export { default as EcommerceOrderCompletedView } from './EcommerceOrderCompletedView';
+// export { default as EcommerceWishlistView } from './EcommerceWishlistView';
+// export { default as EcommerceCompareView } from './EcommerceCompareView';
+// //
+export { default as AccountPersonalView } from './AccountPersonalView';
+export { default as AccountBillingDetailsView } from './AccountBillingDetailsView';
+export { default as AccountMediaView } from './AccountMediaView';
+export { default as AccountSettingsView } from './AccountSettingsView';
+export { default as AccountOrdersView } from './AccountOrdersView';

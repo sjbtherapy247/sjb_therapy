@@ -14,8 +14,8 @@ import { useSettingsContext } from '../settings';
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgBlur({
     blur: 2,
-    opacity: 0.24,
-    color: '#111111',
+    opacity: 0.99,
+    color: theme.palette.mode === 'dark' ? '#111111' : '#fff',
   }),
   top: 0,
   zIndex: 9999,
@@ -50,9 +50,7 @@ export default function LoadingScreen({ sx }) {
         </m.div>
       </StyledRoot>
 
-      <Box
-        sx={{ width: 1, height: '100vh', bgcolor: themeMode === 'light' ? 'white' : '#111118' }}
-      />
+      <Box sx={{ width: 1, height: '100vh', bgcolor: themeMode === 'light' ? 'white' : '#111118' }} />
     </>
   );
 }

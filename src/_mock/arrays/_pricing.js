@@ -6,31 +6,17 @@ export const _pricingHome = [
     license: 'Single Session',
     price: '215',
     icons: ['/assets/icons/platforms/ic_js.svg'],
-    commons: [
-      '90 minute duration',
-      'Personalised Session Audio Download',
-      'After session notes',
-      'Online or Sydney Northern Beaches',
-    ],
+    commons: ['90 minute duration', 'Personalised Session Audio Download', 'After session notes', 'Online or Sydney Northern Beaches'],
     options: [
-      { title: 'Free 15 minute initial consultation', disabled: false },
+      { title: 'Free initial initial consultation', disabled: false },
       { title: 'Pay as you go', disabled: false },
     ],
   },
   {
     license: '3-Session Bundle',
     price: '555',
-    icons: [
-      '/assets/icons/platforms/ic_js.svg',
-      '/assets/icons/platforms/ic_ts.svg',
-      '/assets/icons/platforms/ic_figma.svg',
-    ],
-    commons: [
-      '60-90 min Session Durations',
-      '3 x Personalised Hypnosis Session Audios',
-      'After session notes',
-      'Online or Sydney Northern Beaches',
-    ],
+    icons: ['/assets/icons/platforms/ic_js.svg', '/assets/icons/platforms/ic_ts.svg', '/assets/icons/platforms/ic_figma.svg'],
+    commons: ['60-90 min Session Durations', '3 x Personalised Hypnosis Session Audios', 'After session notes', 'Online or Sydney Northern Beaches'],
     options: [
       { title: '$185 per session', disabled: false },
       { title: '*Save $90 when you pay in full ', disabled: false },
@@ -39,17 +25,8 @@ export const _pricingHome = [
   {
     license: 'Quit Smoking ',
     price: '475',
-    icons: [
-      '/assets/icons/platforms/ic_js.svg',
-      '/assets/icons/platforms/ic_ts.svg',
-      '/assets/icons/platforms/ic_figma.svg',
-    ],
-    commons: [
-      'Quit smoking in single 90 minute session',
-      'Personalised Quit Smoking audio Download',
-      'After session notes',
-      'Online or Sydney Northern Beaches',
-    ],
+    icons: ['/assets/icons/platforms/ic_js.svg', '/assets/icons/platforms/ic_ts.svg', '/assets/icons/platforms/ic_figma.svg'],
+    commons: ['Quit smoking in single 90 minute session', 'Personalised Quit Smoking audio Download', 'After session notes', 'Online or Sydney Northern Beaches'],
     options: [
       { title: 'Works for smoking, vaping or marijuana', disabled: false },
       { title: 'Group Support for 3 months', disabled: false },
@@ -70,25 +47,14 @@ export const _pricingMarketing = [
     price: '59',
     icon: '/assets/icons/pricing/ic_plan_starter03.svg',
     caption: 'Sed lectus. Sed consequat, leo eget bibendum sodales',
-    options: [
-      'Auto update mode',
-      'Online operator 24/7',
-      'Unique newsletters',
-      'International posting',
-    ],
+    options: ['Auto update mode', 'Online operator 24/7', 'Unique newsletters', 'International posting'],
   },
   {
     license: 'Premium',
     price: '99',
     icon: '/assets/icons/pricing/ic_plan_premium03.svg',
     caption: 'Maecenas nec odio et ante tincidunt tempus.',
-    options: [
-      'Auto update mode',
-      'Online operator 24/7',
-      'Unique newsletters',
-      'International posting',
-      '20 Design templates',
-    ],
+    options: ['Auto update mode', 'Online operator 24/7', 'Unique newsletters', 'International posting', '20 Design templates'],
   },
 ];
 

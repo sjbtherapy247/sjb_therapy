@@ -1,6 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+#pages out
+/pages-hold
 
 # dependencies
+/emulator
+*.key
 /node_modules
 /.pnp
 .pnp.js
@@ -38,3 +42,6 @@ yarn-error.log*
 .netlify
 
 _static
+
+# firebase
+sjbtherapy-365805-firebase-adminsdk-aqc8g-9a4351c27d.json

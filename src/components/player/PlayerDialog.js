@@ -19,7 +19,7 @@ export default function PlayerDialog({ videoPath, open, onClose, ...other }) {
 
   return (
     <Dialog
-      fullScreen
+      // fullScreen
       open={open}
       PaperProps={{
         sx: { bgcolor: 'unset' },

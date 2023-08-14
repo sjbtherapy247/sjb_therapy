@@ -11,8 +11,8 @@ import Carousel, { CarouselDots } from 'src/components/carousel';
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
-  display: 'none',
-  [theme.breakpoints.up('md')]: {
+  // display: 'block',
+  [theme.breakpoints.up('xs')]: {
     width: 1,
     flexGrow: 1,
     display: 'block',
@@ -44,7 +44,8 @@ export default function AuthCarousel({ title, images }) {
   const theme = useTheme();
 
   const carouselSettings = {
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
+    speed: 1000,
     fade: true,
     dots: true,
     arrows: false,
@@ -75,7 +76,7 @@ export default function AuthCarousel({ title, images }) {
           // m: 0,
           width: 1,
           left: 0,
-          top: 500,
+          bottom: 100,
           zIndex: 9,
           fontWeight: '300',
           textAlign: 'center',

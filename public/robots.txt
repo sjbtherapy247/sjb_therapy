@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://simo-dev.vercel.app
+
+# Sitemaps
+Sitemap: https://simo-dev.vercel.app/sitemap.xml

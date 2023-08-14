@@ -13,35 +13,21 @@ function Logo({ single = false, sx }) {
   const theme = useTheme();
 
   const singleLogo = (
-    <Box sx={{ lineHeight: 0, position: 'relative', height: 300 }}>
-      <Image
-        src={
-          theme.palette.mode === 'light'
-            ? '/assets/sjb-logo/sjb-loadingwhite.png'
-            : '/assets/sjb-logo/sjb-loadingblack.png'
-        }
-        sx={{ height: 1 }}
-        disabledEffect
-      />
+    <Box sx={{ position: 'relative', height: '300px', maxWidth: '460px' }}>
+      <Image src={theme.palette.mode === 'light' ? '/assets/sjb-logo/sjb-loadingwhite.png' : '/assets/sjb-logo/sjb-loadingblack.png'} sx={{ height: 1 }} disabledEffect />
     </Box>
   );
 
   const fullLogo = (
     <Tooltip arrow placement="bottom" title="home" enterDelay={100}>
       <Box sx={{ lineHeight: 0, position: 'relative', height: '64px', width: '185.44px' }}>
-        <Image src="/assets/sjb-logo/hnav-logo.jpg" disabledEffect sx={{ height: 1 }} />
+        <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB Logo" disabledEffect sx={{ height: 1 }} />
       </Box>
     </Tooltip>
   );
 
   return (
-    <Link
-      component={NextLink}
-      href="/"
-      color="inherit"
-      aria-label="go to homepage"
-      sx={{ lineHeight: 0 }}
-    >
+    <Link component={NextLink} href="/" color="inherit" aria-label="go to homepage" sx={{ lineHeight: 0 }}>
       <Box
         sx={{
           // width: single ? 64 : 75,
