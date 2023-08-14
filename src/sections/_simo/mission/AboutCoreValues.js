@@ -21,12 +21,12 @@ const CORE_VALUES = [
   },
   {
     title: 'Transform & Grow',
-    description: 'Become the very best version of yourself.',
+    description: 'Evolve in ways you never dreamt possible.',
     icon: '/assets/icons/ic_reputation.svg',
   },
   {
     title: 'Teamwork',
-    description: 'By us working together, you will become stronger.',
+    description: 'We work together, and you achieve great things.',
     icon: '/assets/icons/ic_popularity.svg',
   },
 ];
