@@ -263,8 +263,7 @@ export const research = [
     },
     content: `<h4>Hypnotherapy and Psychotherapy: A Holistic Approach</h4>
       
-      <p>Let's explore how this combination can bring about transformative results in overcoming a wide range of challenges.</p>
-      <p>Hypnotherapy and psychotherapy are both potent tools that can lead individuals toward positive change, but they work in different ways. Hypnotherapy taps into the subconscious mind, where entrenched beliefs and emotions reside, while psychotherapy delves into conscious thoughts and emotions. By integrating these approaches, we're able to address the complete spectrum of a person's experiences.</p>
+      <p>Let's explore how this combination can bring about transformative results in overcoming a wide range of challenges. Hypnotherapy and psychotherapy are both potent tools that can lead individuals toward positive change, but they work in different ways. Hypnotherapy taps into the subconscious mind, where entrenched beliefs and emotions reside, while psychotherapy delves into conscious thoughts and emotions. By integrating these approaches, we're able to address the complete spectrum of a person's experiences.</p>
 
       <h4>The Research-Backed Benefits</h4>
       

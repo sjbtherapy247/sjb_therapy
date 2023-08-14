@@ -11,8 +11,8 @@ import SvgColor from 'src/components/svg-color';
 const CORE_VALUES = [
   {
     title: 'Mental Health',
-    description: 'Gain control over your mental health, permanently.',
-    icon: '/assets/icons/ic_optimization.svg',
+    description: 'Re-gain control over your mental health, permanently.',
+    icon: '/assets/images/simon/asset-37.png',
   },
   {
     title: 'Action',
