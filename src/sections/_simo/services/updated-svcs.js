@@ -1,11 +1,11 @@
 export const servicesDescription = [
   {
-    title: 'Overcoming Anxiety and Removing Phobias',
-    url: 'anxiety-and-phobias',
-    buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
-    buttonLink: '/insights',
-    insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Using therapeutic approaches to address and alleviate anxiety disorders, phobias, and panic attacks.',
+    title: 'Overcome Anxiety and Remove Phobias',
+    url: 'overcome-anxiety-and-remove-phobias',
+    buttonTitle: 'Insights - Mind Body Connection',
+    buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
+    insights: 'For more information on the mind body connection please see our InSights article.',
+    description: 'Using hypnotherapy to Overcome anxiety and Remove Phobias.',
     content: `<p><h4>Overcoming Anxiety and Removing Phobias<sup style='font-size: 12px'</h4></p>
 
       <p>Anxiety and phobias can affect every aspect of your life, robbing you of joy, opportunities, and the ability to fully embrace new experiences. But I believe that within you lies the power to conquer these obstacles and rewrite your story. Through the transformative tool of hypnotherapy, we will embark on a journey together, exploring the root causes of your anxiety and phobias, and unlocking the door to lasting relief and empowerment.</p>
@@ -16,7 +16,7 @@ export const servicesDescription = [
 
       <p>I am passionate about empowering individuals like you to break free from the grip of anxiety and phobias. Witnessing the transformative journey of my clients fills me with immense joy and fulfillment. Your well-being is my utmost priority, and I am committed to providing unwavering support, guidance, and encouragement throughout our sessions.</p>
 
-      <p>So, if you are ready to release the burden of anxiety and phobias, I invite you to take the first step towards a brighter future. Together, we will create a personalised roadmap to conquer your fears, restore your peace of mind, and embrace a life filled with confidence and limitless possibilities.</p>
+      <p>So, if you are ready to overcome anxiety or remove your phobia, I invite you to take the first step towards a brighter future. Together, we will create a personalised roadmap to conquer your fears, restore your peace of mind, and embrace a life filled with confidence and limitless possibilities.</p>
 
       <p>Contact me today to schedule a consultation and let's embark on this life-changing journey together. Remember, you have the power within you to overcome anxiety and remove phobias. I am here to guide you every step of the way.</p>`,
 
@@ -29,8 +29,8 @@ export const servicesDescription = [
     buttonTitle: 'Insights - Hypnotherapy for Sports and Performance',
     buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you achieve the next level of performance in sport or business, please read our InSights article',
-    description: 'Unlock your full potential and achieve next-level performance in business or sport through hypnotherapy.',
-    content: `<h4>Performance Hypnotherapy - TRANCEformd<sup style='font-size: 12px' >TM</sup></h4>
+    description: 'Let performance hypnotherapy unlock your peak performance. Our TRANCEformd program puts you at the heart of everything. Sport or Business, this is the program.',
+    content: `<p><h4>Performance Hypnotherapy - TRANCEformd<sup style='font-size: 12px'</h4></p>
 
       <p>Welcome to the transformative world of Performance hypnotherapy, where the power of the mind meets the realm of athletic excellence. As a dedicated hypnotherapist, I invite you on a journey that goes beyond physical training, delving into the immense power of your subconscious mind to unlock your peak performance and conquer your sporting or business goals.</p>
 
@@ -60,17 +60,8 @@ export const servicesDescription = [
       </ol>
 
       <p><strong>Unlock Your Peak Performance Potential Today</strong></p>
-      <p>Are you ready to revolutionise your performance? Contact me today for a no-commitment discovery call, to understand how our innovative TRANCEformd<sup>TM</sup> program can reshape your Performance experience and propel you or your whole team towards unparalleled success.</p>
-
-      <p><strong>How and where this can be applied</strong></p>
-      <p>Hypnotherapy is never a one-size-fits-all, and the TRANCEformd™ model is the structure that we work from to shape our sessions together.</p>
-
-      <p><strong>Button - Book Now</strong></p>
-
-      <p><strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a></p>
-
-
-      <p><strong>Links to other Services below?</strong></p>`,
+      <p>Are you ready to revolutionise your performance? Contact me today for a no-commitment discovery call, to understand how our innovative TRANCEformd<sup>TM</sup> program can reshape your Performance experience and propel you or your whole team towards unparalleled success.</p>`,
+      
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_file.svg',
   },
