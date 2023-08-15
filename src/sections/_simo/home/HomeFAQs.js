@@ -135,7 +135,7 @@ export default function HomeFAQs() {
                 <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                   <Button size="large" color="primary" variant="contained" href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"target="_blank" startIcon={<Iconify icon="mdi:cellphone-sound" />} onClick={handleClick}>
                     WhatsApp {click && isSmUp ? ' ' : null}
-                    {/* Call */}
+                    {/* Message */}
                   </Button>
                   <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com? subject=SjB Therapy Home Enquiry "target="_blank" startIcon={<Iconify icon="mdi:email-outline" />}>
                     Email

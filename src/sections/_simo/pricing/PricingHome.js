@@ -124,8 +124,9 @@ export default function PricingHome({ plans, prices }) {
           <m.div variants={varFade().inUp}>
             <Stack spacing={6} alignItems="center">
               <Typography sx={{ color: 'text.secondary' }}>
-                Pay on a per session basis or purchase a 3-session bundle. Hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, however, the Quit Smoking service follows a different approach and can be
-                done in a single 90 minute session. Book your free discovery call so you can explore if this is right for you.
+              Your first 20 minutes are on me, so book your discovery call first, let&apos;s un-pack what&apos;s happening for you, and then we&apos;ll discuss the rest. <p>From then on it will be either a session bundle or a one off session. As hypnotherapy is a process, it usually takes a couple of sessions to address the issues effectively, however, some challenges need a slightly different approach and can be done in a single 90 minute session, in rare cases, some challenges may take more.</p> 
+              Book your discovery call today and let&apos;s get you firing on all cylinders again. I love cars by the way!
+
               </Typography>
               {/* <Link component={NextLink} rel="noopener" href="/"> */}
               <Button data-cal-link="simonjbaker/discovery-call" color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
