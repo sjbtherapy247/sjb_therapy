@@ -6,7 +6,7 @@ export const servicesDescription = [
     buttonLink: '/insights',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Using therapeutic approaches to address and alleviate anxiety disorders, phobias, and panic attacks.',
-    content: `<h4>Overcoming Anxiety and Removing Phobias<sup style='font-size: 12px'</h4>
+    content: `<p><h4>Overcoming Anxiety and Removing Phobias<sup style='font-size: 12px'</h4></p>
 
       <p>Anxiety and phobias can affect every aspect of your life, robbing you of joy, opportunities, and the ability to fully embrace new experiences. But I believe that within you lies the power to conquer these obstacles and rewrite your story. Through the transformative tool of hypnotherapy, we will embark on a journey together, exploring the root causes of your anxiety and phobias, and unlocking the door to lasting relief and empowerment.</p>
 
@@ -18,13 +18,7 @@ export const servicesDescription = [
 
       <p>So, if you are ready to release the burden of anxiety and phobias, I invite you to take the first step towards a brighter future. Together, we will create a personalised roadmap to conquer your fears, restore your peace of mind, and embrace a life filled with confidence and limitless possibilities.</p>
 
-      <p>Contact me today to schedule a consultation and let's embark on this life-changing journey together. Remember, you have the power within you to overcome anxiety and remove phobias. I am here to guide you every step of the way.</p>
-      
-      <p><strong>Button - Book Now</strong></p>
-
-      <p><strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a></p>
-
-      <p><strong>Links to other Services below?</strong></p>`,
+      <p>Contact me today to schedule a consultation and let's embark on this life-changing journey together. Remember, you have the power within you to overcome anxiety and remove phobias. I am here to guide you every step of the way.</p>`,
 
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_statistics.svg',
