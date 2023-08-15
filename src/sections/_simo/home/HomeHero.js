@@ -41,8 +41,8 @@ export default function HomeHero() {
               }}
             >
               <div>
-                <Typography variant="h3">Simply Just Believe</Typography>
-                <Typography variant="h5">sjb.hypnotherapy</Typography>
+                <Typography variant="h3">SjB Therapy</Typography>
+                <Typography variant="h5">Simply Just Believe</Typography>
               </div>
               <div>
                 <Typography variant="h2">Unlock Your Mind</Typography>
@@ -50,12 +50,11 @@ export default function HomeHero() {
               </div>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon, welcome to sjb.hypnotherapy, I&apos;m glad you&apos;ve found your way here. Whether you&apos;ve arrived because you’re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
+                Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you’re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
                 place and you don&apos;t have to face things alone.
                 <br />
                 <br />
-                Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Please book your free discovery call now so we can explore the best path forward together and let your
-                tomorrow begin today.
+                Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Book your free discovery call and we can explore the best path forward together and let your tomorrow begin today.
               </Typography>
 
               <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">

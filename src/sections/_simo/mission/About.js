@@ -97,10 +97,13 @@ export default function About() {
           <Typography variant="h2">Who We Are?</Typography>
 
           <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-            SjB Therapy is a hypnotherapy practice that is dedicated to helping people improve their lives. We use hypnosis to help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.
+          SjB Therapy is my hypnotherapy practice and I am dedicated to helping people improve their lives. I use hypnosis to help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.
             <br />
             <br />
-            We believe in hypnosis as it is a safe and effective way to make lasting changes, and we are fully committed to providing our clients with the highest quality care.
+            I believe that hypnotherapy with psychotherapy is a safe and effective way to make permanent changes in your life. It has been proven by experts and also by my many clients, that this modality provides the fastest way to make the changes you seek.
+            <br />
+            <br />
+            I am also grateful for the opportunity to help you with whatever challenge/problem/belief you believe you have, and I will do everything possible to give you your desired outcome.
           </Typography>
 
           <Box sx={{ mt: 10 }}>

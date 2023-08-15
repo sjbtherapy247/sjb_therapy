@@ -12,23 +12,23 @@ import useResponsive from 'src/hooks/useResponsive';
 const TIMELINES = [
   {
     step: 'STEP 1',
-    title: 'Assessment',
-    description: 'Gathering relevant information about the individuals needs, goals, and medical history to determine the most appropriate treatment approach.',
+    title: 'Discovery Call',
+    description: 'Where I get to understand what’s going on for you and to see how hypnotherapy will work for you.',
   },
   {
     step: 'STEP 2',
-    title: 'Induction',
-    description: 'Guiding the individual into a relaxed state of hypnosis, typically through relaxation techniques, visualization, or focused attention.',
+    title: 'First Session',
+    description: 'Get a deeper level of understanding about how you are running things and then we determine the best approach. You will then have a hypnosis session where we implement your desired changes. Tasking and follow-ups are also set or focused attention.',
   },
   {
     step: 'STEP 3',
-    title: 'Therapy',
-    description: 'Engaging in therapeutic interventions while in the hypnotic state, such as suggestion therapy, regression, cognitive restructuring, or visualization, tailored to address specific concerns or goals.',
+    title: 'Tasking',
+    description: 'During the following week, you will carry out the tasking that has been set. This is generally listening to an audio and following some simple agreed requests to further strengthen your neural pathways. These will vary for each client.',
   },
   {
     step: 'STEP 4',
-    title: 'Termination and Integration',
-    description: 'Gradually bringing the individual out of hypnosis, allowing time for reflection, discussing the session, and integrating the insights gained into their daily life.',
+    title: 'Integration',
+    description: 'This is where you note down the changes in your behaviour and feedback via a follow-up form. If already booked, you will then also look forward to your next session, if not then you will move be moving on with your life free of whatever it was you saw me for.',
   },
 ];
 
