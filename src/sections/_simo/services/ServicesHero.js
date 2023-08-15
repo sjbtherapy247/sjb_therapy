@@ -65,7 +65,7 @@ export default function ServicesHero() {
                 Here at SjB Therapy, I offer a wide range of services to address various mental and emotional concerns. These therapies can help with issues such as anxiety, phobias, stress management, self-esteem, weight management, smoking cessation,
                 sleep disorders, trauma, relationship difficulties, and personal growth. 
                 <p>Whether you seek relief from specific fears, want to improve your well-being, or desire to overcome past traumas, our hypnotherapy and psychotherapy solutions will provide effective interventions that are then tailored to your individual needs.</p>
-                <p>If your specific circumstances aren't listed below, please reach out for your discovery call to discuss.</p>
+                <p>If your specific circumstances aren&apos;t listed below, please reach out for your discovery call to discuss.</p>
               </Typography>
             </Stack>
           </Grid>
