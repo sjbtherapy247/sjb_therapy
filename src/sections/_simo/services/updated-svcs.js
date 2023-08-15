@@ -5,7 +5,7 @@ export const servicesDescription = [
     buttonTitle: 'Insights - Mind Body Connection',
     buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
     insights: 'For more information on the mind body connection please see our InSights article.',
-    description: 'Using hypnotherapy to Overcome anxiety and Remove Phobias.',
+    description: 'You can overcome anxiety and remove phobias quickly and effectively with hypnosis. We have highly effective methods to treat a wide range of symptoms.',
     content: `<p><h4>Overcoming Anxiety and Removing Phobias<sup style='font-size: 12px'</h4></p>
 
       <p>Anxiety and phobias can affect every aspect of your life, robbing you of joy, opportunities, and the ability to fully embrace new experiences. But I believe that within you lies the power to conquer these obstacles and rewrite your story. Through the transformative tool of hypnotherapy, we will embark on a journey together, exploring the root causes of your anxiety and phobias, and unlocking the door to lasting relief and empowerment.</p>
@@ -61,7 +61,7 @@ export const servicesDescription = [
 
       <p><strong>Unlock Your Peak Performance Potential Today</strong></p>
       <p>Are you ready to revolutionise your performance? Contact me today for a no-commitment discovery call, to understand how our innovative TRANCEformd<sup>TM</sup> program can reshape your Performance experience and propel you or your whole team towards unparalleled success.</p>`,
-      
+
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_file.svg',
   },
@@ -71,10 +71,10 @@ export const servicesDescription = [
     buttonTitle: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
     buttonLink: '/insights/quit-smoking-with-hypnosis/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Specialised program and interventions to help you quit smoking, vaping and overcome nicotine and/or other habits',
-    content: `<h4>Quit Smoking With Hypnotherapy</h4>
+    description: 'You can quit smoking with hypnotherapy today. It generally only takes one session and you’ll be smoke free for life. Book in today and change your life forever.',
+    content: `<p><h4>Quit Smoking or Vaping With Hypnotherapy<sup style='font-size: 12px'</h4></p>
 
-    <p>How to quit smoking with hypnotherapy is a journey that is a truly empowering and life-changing experience. As a clinical hypnotherapist, I offer a positive and effective path towards achieving a smoke-free life through the transformative practice of hypnotherapy.</p>
+    <p>How to quit smoking or vaping with hypnotherapy is a journey that is a truly empowering and life-changing experience. As a clinical hypnotherapist, I offer a positive and effective path towards achieving a smoke-free life through the transformative practice of hypnotherapy.</p>
 
     <p>I recognise that smoking and vaping operate on both conscious and subconscious levels. By delving deep into the subconscious, hypnotherapy allows us to uncover the root causes of your smoking behaviors and reprogram them for a smoke-free life.</p>
 
@@ -88,57 +88,46 @@ export const servicesDescription = [
 
     <p>Like all hypnotherapy, this program will only work if you are 100% committed to making the change. If you are, then I'd love to help you.</p>
 
-    <p>Book your discovery call or your full session today and let me help you kick this smoking habit into touch.</p>
-
-    <strong>Button - Book Now</strong></p>
-
-    <p><strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a></p>`,
+    <p>Book your discovery call or your Quit Smoking 90 minute session today and let me help you kick this smoking habit into touch.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_checklist.svg',
   },
   {
-    title: 'Stress Management',
+    title: 'Stress Management Techniques',
     url: 'hypnosis-for-stress-management',
-    buttonTitle: 'Insights - Harnessing your Potential',
-    buttonLink: '/insights/hypnotherapy-harnessing-your-potential/',
+    buttonTitle: 'Insights - Powerful Healing Benefits',
+    buttonLink: '/insights/hypnotherapy-synergy/',
     insights: 'For more information on how hypnotherapy can help you to harness your potential, please see our InSights article.',
-    description: 'Looking for Stress reduction techniques, relaxation exercises or mindfulness practices to help manage stress and improve overall well-being?',
+    description: 'Looking for Stress management techniques, relaxation exercises or mindfulness practices to help manage stress and improve overall well-being?',
     content: `<title>Stress Management Techniques</title>
 
   <p>Are you grappling with the constant strain of everyday life? Stress is a universal experience, but mastering effective techniques to manage it can be challenging. That's where hypnotherapy comes in. My evidence-based and personalised approach can help you regain control and embrace a more balanced life.</p>
 
-  <h2>Why Choose SjB Therapy?</h2>
+  <h5>Why Choose SjB Therapy?</h5>
 
   <p>The methods I use are rooted in scientific research. Numerous studies have shown that hypnotherapy is a potent tool for stress management. In fact, an extensive study by the American Psychological Association revealed that over 75% of participants reported lower stress levels after integrating hypnosis into their routines.</p>
 
-  <h2>Personalised Stress-Relief Solutions</h2>
+  <h5>Personalised Stress-Relief Solutions</h5>
 
   <p>I understand that each person's stressors are unique. Hence, our sessions are custom-tailored to address your specific needs. Through personalised hypnotherapy sessions, we can delve into the core causes of your stress and equip you with powerful coping mechanisms that you can then take with you.</p>
 
-  <h2>Benefits of Hypnotherapy for Stress Management</h2>
+  <h5>Benefits of Hypnotherapy for Stress Management</h5>
 
   <p>Hypnotherapy empowers you to access the subconscious mind, where many of our stress triggers originate. By reaching this profound level of consciousness, we can reframe negative thought patterns and replace them with positive, empowering beliefs. Studies have demonstrated that individuals undergoing hypnotherapy experienced an astounding 80% reduction in stress-related symptoms.</p>
 
-  <h2>A Holistic Approach</h2>
+  <h5>A Holistic Approach</h5>
 
   <p>Beyond hypnotherapy, I embrace a holistic approach to stress management. Alongside the transformative hypnotherapy sessions, we explore mindfulness practices, relaxation techniques, and offer guidance in self-hypnosis for continued support beyond our sessions.</p>
 
-  <h2>Join the SjB Therapy Community</h2>
+  <h5>Join the SjB Therapy Community</h5>
 
   <p>Become a part of our community of individuals who have already embraced a stress-free lifestyle. Over 90% of our clients have reported significant improvements in overall well-being and reduced stress levels after just a few sessions.</p>
 
-  <h2>Book Your Free Consultation Today</h2>
+  <h5>Book Your Free Consultation Today</h5>
 
   <p>Take the first step towards inner peace and serenity. Book a free consultation with me and let's discuss how I can guide you towards a more serene and centered life.</p>
 
-  <p>Remember, a tranquil and stress-free life lies within your grasp. Let's unlock its potential together.</p>
-
-  <p>Don't hesitate; your path to inner peace starts now.</p>
-  <p> 'Overcome performance anxiety and stage fright with specialized hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.</p>
-
-  <p><strong>Button - Book Now</strong></p>
-
-  <p><strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a></p>`,
+  <p>Remember, a tranquil and stress-free life lies within your grasp. Let's unlock its potential together.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_social_media.svg',
   },
@@ -147,73 +136,62 @@ export const servicesDescription = [
     url: 'hypnosis-for-insomnia-and-sleep-disorders',
     buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
     buttonLink: '/insights',
-    insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Conquer insomnia and enjoy restful sleep with our personalised hypnotherapy service. Relax, reduce anxiety, and retrain your mind for deep, rejuvenating rest.',
-    content: `<h1>Rediscover Restful Nights with Hypnosis for Insomnia</h1>
+    insights: 'For more information on how hypnotherapy can help with Anxiety & Phobias, please see our InSights article.',
+    description: 'Using hypnosis for sleep disorders and insomnia is one of the best solutions available. Studies have shown that using hypnosis can bring amazing results, fast.',
+    content: `<h4>Rediscover Restful Nights with Hypnosis for Insomnia</h4>
 
-      If insomnia or sleep disorders are causing you distress, know that you're not alone. It's estimated that around 30% of adults struggle with insomnia. As a certified hypnotherapist, I want to share how hypnotherapy can be a transformative solution for your sleep challenges.
+      <p>If insomnia or sleep disorders are causing you distress, know that you're not alone. It's estimated that around 30% of adults struggle with insomnia. As a certified hypnotherapist, I want to share how hypnotherapy can be a transformative solution for your sleep challenges.</p>
 
-      Having worked with numerous clients, I've witnessed firsthand the difficulties that insomnia can bring. Restless nights, disrupted sleep, and morning fatigue can significantly impact your quality of life. It's a struggle that affects your energy, mood, and overall well-being.
+      <p>Having worked with numerous clients, I've witnessed firsthand the difficulties that insomnia can bring. Restless nights, disrupted sleep, and morning fatigue can significantly impact your quality of life. It's a struggle that affects your energy, mood, and overall well-being.</p>
 
-      In my journey as a hypnotherapist, I came across research that shed light on the effectiveness of hypnotherapy in addressing sleep issues. Contrary to common misconceptions, hypnotherapy isn't about mind control; it's a guided process that helps you achieve a deeply relaxed state of mind. Experience and scientific studies suggest that hypnotherapy can directly target the underlying causes of sleep disorders and significantly improve sleep quality.
+      <p>In my journey as a hypnotherapist, I came across research that shed light on the effectiveness of hypnotherapy in addressing sleep issues. Contrary to common misconceptions, hypnotherapy isn't about mind control; it's a guided process that helps you achieve a deeply relaxed state of mind. Experience and scientific studies suggest that hypnotherapy can directly target the underlying causes of sleep disorders and significantly improve sleep quality.</p>
 
-      What intrigued me most about hypnotherapy is its holistic approach. Rather than just masking symptoms, it delves into the root causes of your sleep struggles. By engaging with your subconscious mind, hypnotherapy aims to tackle stress, anxiety, and negative thought patterns that often contribute to insomnia.
+      <p>What intrigued me most about hypnotherapy is its holistic approach. Rather than just masking symptoms, it delves into the root causes of your sleep struggles. By engaging with your subconscious mind, hypnotherapy aims to tackle stress, anxiety, and negative thought patterns that often contribute to insomnia.</p>
 
-      The results speak for themselves. A study published in the Journal of Clinical Sleep Medicine highlighted how hypnotherapy led to notable improvements in sleep for individuals with chronic insomnia. Other research demonstrated that hypnotherapy not only reduced the time taken to fall asleep but also increased total sleep duration.
+      <p>The results speak for themselves. A study published in the Journal of Clinical Sleep Medicine highlighted how hypnotherapy led to notable improvements in sleep for individuals with chronic insomnia. Other research demonstrated that hypnotherapy not only reduced the time taken to fall asleep but also increased total sleep duration.</p>
 
-      I've witnessed clients transform their sleep patterns through guided hypnotherapy sessions. Learning relaxation techniques and addressing anxious thoughts can pave the way for a more serene bedtime routine. Over time, these changes can translate into waking up refreshed and revitalised.
+      <p>I've witnessed clients transform their sleep patterns through guided hypnotherapy sessions. Learning relaxation techniques and addressing anxious thoughts can pave the way for a more serene bedtime routine. Over time, these changes can translate into waking up refreshed and revitalised.</p>
 
-      If you're eager to bid farewell to sleepless nights and embark on a journey toward improved sleep, consider hypnotherapy as your ally. As your guide, I'm here to help you navigate the intricacies of hypnotherapy tailored to sleep disorders. Reach out to embark on this journey toward restful nights and rejuvenating days.
+      <p>If you're eager to bid farewell to sleepless nights and embark on a journey toward improved sleep, consider hypnotherapy as your ally. As your guide, I'm here to help you navigate the intricacies of hypnotherapy tailored to sleep disorders. Reach out to embark on this journey toward restful nights and rejuvenating days.</p>
 
-      Sleep is a foundation of well-being, and it's within your reach to rediscover its benefits. Hypnotherapy offers a scientifically grounded approach that addresses the core causes of sleep struggles. If you're ready to make a positive change, I invite you to explore the potential of hypnotherapy as a pathway to rejuvenating sleep and a more vibrant life.
+      <p>Sleep is a foundation of well-being, and it's within your reach to rediscover its benefits. Hypnotherapy offers a scientifically grounded approach that addresses the core causes of sleep struggles. If you're ready to make a positive change, I invite you to explore the potential of hypnotherapy as a pathway to rejuvenating sleep and a more vibrant life.</p>
 
-      Click the link to book in your discovery call today
-
-      <strong>Button - Book Now</strong>
-
-      <strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a>`,
+      <p>Click the button below and book in your discovery call today</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_real_time.svg',
   },
   {
     title: 'Hypnosis for Weight Loss and Binge Eating',
-    url: 'weight-loss-and-eating-disorders',
-    buttonTitle: 'Insights - Hypnotherapy for Weight management and Eating disorders',
-    buttonLink: '/insights',
-    insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Providing support and guidance in developing healthy eating habits, managing emotional eating, and fostering a positive body image.',
-    content: `<h1>Welcome to Hypnosis for Weight Loss and Eating Disorders with SjB Therapy</h1>
+    url: 'weight-loss-and-binge-eating',
+    buttonTitle: 'Insights - The Mind Body Connection',
+    buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
+    insights: 'For more information on how the mind and the body connect please see our InSights article.',
+    description: 'Using the power of hypnosis for weight loss and binge eating is the most effective solution. Book your free call back today and lets start your new journey.',
+    content: `<h3>Hypnosis for Weight Loss and Eating Disorders</h3>
 
-    <p>Hello, I'm Simon, and I'm dedicated to helping you achieve your goals of a healthier mind and body. If you're struggling with weight management or battling eating disorders, you're not alone. My personalised hypnotherapy sessions are here to guide you on a journey towards positive change.</p>
+    <p>I am totally dedicated to helping you achieve your goals of a healthier mind and body. If you're struggling with weight management or battling eating disorders, you're not alone. My personalised hypnotherapy sessions are here to guide you on a journey towards positive change.</p>
   
-    <h2>The Power of Hypnosis for Weight Loss and Eating Disorders</h2>
+    <h5>The Power of Hypnosis for Weight Loss and Eating Disorders</h5>
   
-    <p>Did you know that hypnotherapy has shown remarkable effectiveness in aiding weight loss and treating eating disorders? According to a study published in the <em>International Journal of Clinical and Experimental Hypnosis</em>, participants who incorporated hypnosis into their weight loss journey lost more weight and maintained it longer compared to those who didn't use hypnosis.</p>
+    <p>Did you know that hypnotherapy has shown remarkable effectiveness in aiding weight loss and treating eating disorders? Of course you did or you wouldn't be readg this! According to a study published in the <strong><em>International Journal of Clinical and Experimental Hypnosis</em></strong>, participants who incorporated hypnosis into their weight loss journey lost more weight and maintained it longer compared to those who didn't use hypnosis.</p>
   
-    <h2>Personalized Approach for Lasting Change</h2>
+    <h5>Personalised Approach for Lasting Change</h5>
   
-    <p>At SjB Therapy, I understand that weight management and eating disorders are complex and can be deeply personal. My sessions are tailored to your unique needs, addressing any underlying causes of your challenges. 'But I don't have any causes' I hear you cry... "I just want to stop 'Binge, stress, comfort, or what ever eating you believe you are doing". Well this is where, using a combination of psychotherapy and hypnotherapy, we will work together to reshape your relationship with food and your body image.</p>
+    <p>I understand that weight management and eating disorders are complex and can be deeply personal. My sessions are tailored to your unique needs, addressing any underlying causes of your challenges. 'But I don't have any causes' I hear you cry... "I just want to stop 'Binge, stress, comfort, or what ever eating you believe you are doing". Well this is where, using a combination of psychotherapy and hypnotherapy, we will work together to reshape your relationship with food and your body image.</p>
   
-    <h2>Your Journey to a Healthier You Starts Here</h2>
+    <h5>Your Journey to a Healthier You Starts Here</h5>
   
     <p>Imagine embracing a healthier lifestyle, free from the burdens of past struggles. Being released of your old eating habits and set free to embrace a new future that's filled with control over these things and crushing your new life and body that I will help you create. Take the first step towards lasting change by booking your free discovery call with me today.</p>
   
-    <h2>Client Success Stories</h2>
+    <h5>Client Success Stories</h5>
   
-    <p>"Simon's hypnotherapy sessions have been life-changing for me. I've experienced a shift in my mindset and approach to food, leading to sustainable and fast weight loss. I'm grateful for his empathetic guidance." - Sarah</p>
+    <em><p>"Simon's hypnotherapy sessions have been life-changing for me. I've experienced a shift in my mindset and approach to food, leading to sustainable and fast weight loss. I'm grateful for his empathetic guidance." - Sarah</p></em>
   
-    <p>"Hypnosis with Simon has helped me overcome my eating disorder tendencies. I've gained control over my eating habits and developed a healthier relationship with food and myself." - Anon Client</p>
+    <em><p>"Hypnosis with Simon has helped me overcome my eating disorder tendencies. I've gained control over my eating habits and developed a healthier relationship with food and myself." - Anon Client</p></em>
   
-    <h2>Book Your Free Discovery Call</h2>
+    <h5>Book Your Free Discovery Call</h5>
   
-    <p>Ready to take control of your journey towards a healthier you? Book your free discovery call with me, Simon, and let's discuss how hypnosis can support your weight loss and eating disorder goals.</p>
-  
-    <p><strong>Button - Book Now</strong>
-
-    <strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a>
-  
-    <p>Let's embark on this transformative journey together.</p>
-  `,
+    <p>Ready to take control of your journey towards a healthier you? Book your free discovery call with me, and let's discuss how hypnosis can support your weight loss and eating disorder goals.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_report.svg',
   },
