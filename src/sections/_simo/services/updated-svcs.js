@@ -198,39 +198,33 @@ export const servicesDescription = [
   {
     title: 'Effective Treatment for PTSD and Trauma',
     url: 'treatment-for-ptsd-and-trauma',
-    buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
-    buttonLink: '/insights',
+    buttonTitle: 'Insights - Hypnotherapy for Sports & Business Performance',
+    buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
     description: 'Supporting individuals who have experienced traumatic events by providing trauma-focused therapy to process and heal from the effects of trauma.',
-    content: `<h1>Effective Treatment for PTSD and Trauma</h1>
+    content: `<h3>Effective Treatment for PTSD and Trauma</h3>
 
-    <p>I'm here to guide you on a path of healing and recovery from PTSD and trauma. If you've experienced trauma that's affecting your well-being, know that you're not alone. My personalized hypnotherapy sessions are designed to help you overcome the pain and regain control over your life.</p>
+    <p>I'm here to guide you on a path of healing and recovery from PTSD and trauma. If you've experienced trauma that's affecting your well-being, know that you're not alone. Your highly personalised hypnotherapy sessions are designed to help you overcome the pain and regain control over your life.</p>
   
-    <h2>The Healing Potential of Hypnotherapy for PTSD and Trauma</h2>
+    <h5>The Healing Potential of Hypnotherapy for PTSD and Trauma</h5>
   
     <p>Hypnotherapy has demonstrated remarkable success in alleviating the symptoms of PTSD and trauma. According to a study published in the <em>Journal of Traumatic Stress</em>, participants who underwent hypnotherapy experienced significant reductions in anxiety, depression, and PTSD symptoms compared to those who didn't receive hypnotherapy.</p>
   
-    <h2>Your Personalised Path to Recovery</h2>
+    <h5>Your Personalised Path to Recovery</h5>
   
     <p>I understand that healing from trauma is a deeply personal journey. My sessions are tailored to your unique experiences, providing a safe space for you to process and release the pain. Through hypnotherapy, we work together to reframe negative thought patterns and cultivate resilience.</p>
   
-    <h2>Your Journey to Healing Starts Now</h2>
+    <h5>Your Journey to Healing Starts Now</h5>
   
     <p>Imagine living a life free from the haunting grip of trauma. You have the power to reclaim your well-being and find inner peace. Begin your journey to healing by booking your free discovery call with me today.</p>
   
-    <h2>Client Stories of Transformation</h2>
+    <h5>Client Stories of Transformation</h5>
   
-    <p>"Working with Simon using hypnotherapy has been a turning point in my journey of healing from trauma. I've experienced a profound shift in my perspective and emotional state, allowing me to move forward with renewed hope." - Client</p>
+    <em><p>"Working with Simon using hypnotherapy has been a turning point in my journey of healing from trauma. I've experienced a profound shift in my perspective and emotional state, allowing me to move forward with renewed hope." - Client</p></em>
   
-    <p>"Hypnosis with Simon has empowered me to confront and release the trauma that has held me back. I've gained tools to manage triggers and have regained a sense of control over my life." - Alex</p>
+    <em><p>"Hypnosis with Simon has empowered me to confront and release the trauma that has held me back. I've gained tools to manage triggers and have regained a sense of control over my life." - Alex</p></em>
   
-    <p>Ready to embark on your path to healing and recovery? Book your free discovery call with me, Simon, and let's discuss how hypnotherapy can support your journey towards overcoming PTSD and trauma.</p>
-
-    <p><strong>Button - Book Now</strong>
-
-    <strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a>
-
-    <p>Your path to healing awaits.</p>`,
+    <p>Ready to embark on your path to healing and recovery? Book your free discovery call with me, Simon, and let's discuss how hypnotherapy can support your journey towards overcoming PTSD and trauma.</p>`,
 
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
     icon: '/assets/icons/ic_file.svg',
