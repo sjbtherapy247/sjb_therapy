@@ -36,7 +36,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -111,7 +111,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -179,7 +179,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -257,7 +257,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
