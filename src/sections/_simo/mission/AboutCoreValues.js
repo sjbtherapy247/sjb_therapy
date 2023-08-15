@@ -12,7 +12,7 @@ const CORE_VALUES = [
   {
     title: 'Mental Health',
     description: 'Re-gain control over your mental health, permanently.',
-    icon: '/assets/images/simon/asset-37.png',
+    icon: '/assets/images/simon/Asset-37.png',
   },
   {
     title: 'Action',
