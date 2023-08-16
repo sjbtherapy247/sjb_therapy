@@ -28,7 +28,7 @@ const CONTENTS = [
     answer: `Hypnotherapy can assist with a wide range of issues, including managing stress and anxiety, overcoming phobias and fears, improving sleep patterns, boosting confidence and self-esteem, addressing habits or addictions, managing pain, and promoting overall well-being.`,
   },
   {
-    question: 'What does it feel like to be hypnotized?',
+    question: 'What does it feel like to be hypnotised?',
     answer: `Being hypnotised is often described as a state of deep relaxation and focused concentration. Individuals mostly feel calm, peaceful, and detached from their surroundings. Some people may experience heightened awareness or a sense of inward focus.`,
   },
   {
@@ -37,7 +37,7 @@ const CONTENTS = [
   },
   {
     question: 'How long does hypnotherapy or psychotherapy treatment typically last?',
-    answer: `The duration of treatment varies depending on the individual and their specific needs. Some issues may be resolved in a few sessions, while others may require longer-term therapy. Your therapist will work with you to determine the appropriate treatment length.`,
+    answer: `A typical session lasts 60 minutes, the number of appointments varies depending on the individual and their specific needs. Some issues may be resolved in one session, while others may require more. Simon will work with you to determine the appropriate treatment length.`,
   },
   {
     question: 'Are hypnotherapy and psychotherapy evidence-based practices?',
@@ -128,16 +128,16 @@ export default function HomeFAQs() {
               </m.div>
 
               <m.div variants={varFade().inUp}>
-                <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please feel free to reach out and contact us for more specific details.</Typography>
+                <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please reach out with any specific questions you have.</Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Button size="large" color="primary" variant="contained" href="tel:+61407945789" startIcon={<Iconify icon="mdi:cellphone-sound" />} onClick={handleClick}>
-                    Call {click && isSmUp ? ' 0421046147' : null}
-                    {/* Call */}
+                  <Button size="large" color="primary" variant="contained" href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"target="_blank" startIcon={<Iconify icon="mdi:cellphone-sound" />} onClick={handleClick}>
+                    WhatsApp {click && isSmUp ? ' ' : null}
+                    {/* Message */}
                   </Button>
-                  <Button size="large" color="primary" variant="contained" href="mailto:support@sjbtherapy.com?subject=Client questions" startIcon={<Iconify icon="mdi:email-outline" />}>
+                  <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com? subject=SjB Therapy Home Enquiry "target="_blank" startIcon={<Iconify icon="mdi:email-outline" />}>
                     Email
                   </Button>
                 </Stack>

@@ -34,8 +34,8 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 
 export default function HomeSimon() {
   const name = 'Simon Baker';
-  const role = 'Clinical Hypnotherapist & Mental Health Coach';
-  const photo = '/assets/images/simon/simon-photo.jpeg';
+  const role = 'Clinical Hypnotherapist & Strategic Psychotherapist';
+  const photo = '/assets/images/simon/simon-baker-main-sjbtherapy.webp';
 
   return (
     <Stack alignItems="center">
@@ -67,9 +67,7 @@ export default function HomeSimon() {
         </Box>
       </Card>
 
-      <Button variant="outlined" size="small" sx={{ width: 150, mt: 4 }}>
-        More About Simon
-      </Button>
+    
     </Stack>
   );
 }

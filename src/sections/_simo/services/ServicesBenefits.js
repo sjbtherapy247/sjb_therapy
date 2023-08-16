@@ -11,31 +11,31 @@ import Image from 'src/components/image';
 const BENEFITS = [
   {
     title: 'Emotional Healing',
-    description: 'A safe and supportive space to explore and heal emotional wounds, traumas, and unresolved issues, fostering emotional well-being.',
+    description: 'You will heal emotional wounds, traumas, and unresolved issues, fostering emotional well-being and a new sense of inner acceptance.',
     iconColor: 'primary',
   },
   {
     title: 'Behavior Change',
-    description: 'Identify and modify unhealthy patterns, habits, and behaviors, make positive changes and adopt healthier ways of living. ',
+    description: 'We will Identify and modify any unhealthy patterns, habits, and behaviours, make positive changes and help you adopt healthier ways of living.',
     iconColor: 'success',
   },
   {
     title: 'Stress Reduction',
-    description: 'Effectively reduce stress levels by teaching relaxation techniques, coping strategies, and stress management skills, enhancing overall well-being and resilience.',
+    description: 'Effectively reduce your stress levels by teaching you relaxation techniques, coping strategies, and stress management skills, enhancing your overall well-being and resilience.',
     iconColor: 'secondary',
   },
   {
     title: 'Increased Self-Awareness',
-    description: 'Gain a deeper understanding of yourself, your emotions, and your thought patterns, facilitating personal growth, self-acceptance, and self-empowerment.',
+    description: 'You will gain a deeper understanding of yourself, your emotions, and your thought patterns, facilitating your personal growth, self-acceptance, and self-empowerment.',
   },
   {
     title: 'Improved Relationships',
-    description: 'Develop healthier communication skills, resolving conflicts, and enhancing your relationships with others.',
+    description: 'You will develop healthier communication skills, resolve conflicts easier, or navigate them much better, and enhance your relationships with everyone around you.',
     iconColor: 'success',
   },
   {
     title: 'Enhanced Mental Well-being',
-    description: 'Alleviate symptoms of anxiety, depression, and other mental health conditions, improving overall mental well-being and promoting a more balanced and fulfilling life.',
+    description: 'Learn to alleviate any symptoms of anxiety, depression, and other mental health conditions, improve your overall mental well-being and promote a more balanced and fulfilling life for yourself.',
     iconColor: 'secondary',
   },
 ];
@@ -67,7 +67,7 @@ export default function ServicesBenefits() {
             mb: { xs: 8, md: 10 },
           }}
         >
-          These are just a few of the many benefits individuals can experience through hypnotherapy and psychotherapy treatments. The specific benefits may vary depending on the individual&apos;s needs and the therapeutic approach employed.{' '}
+          Here are just a few of the many benefits you can experience after a hypnotherapy and psychotherapy session. The specific benefits may vary depending on the individual&apos;s needs and the therapeutic approach employed.{' '}
         </Typography>
 
         <Box

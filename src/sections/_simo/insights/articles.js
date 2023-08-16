@@ -36,7 +36,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -111,7 +111,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -179,7 +179,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -257,7 +257,7 @@ export const research = [
     author: {
       name: 'Simon J Baker',
       role: 'Hypnotherapist',
-      picture: '/assets/images/avatar/avatar_1.jpg',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
@@ -273,7 +273,7 @@ export const research = [
 
       <p>When it comes to treating trauma, the synergy between these therapies is equally promising. A study in the Journal of Traumatic Stress revealed that the combined use of hypnotherapy and psychotherapy led to a greater reduction in post-traumatic stress symptoms compared to using either therapy on its own.</p>
       
-      <h4>A Personalized Healing Journey</h4>
+      <h4>A Personalised Healing Journey</h4>
       
       <p>I've witnessed firsthand the profound impact of combining hypnotherapy and psychotherapy. Every individual's journey is unique, and this holistic approach allows me to tailor the treatment to their specific needs. By addressing both the conscious and subconscious aspects of their challenges, we're able to facilitate deeper and more lasting transformation.</p>
       
