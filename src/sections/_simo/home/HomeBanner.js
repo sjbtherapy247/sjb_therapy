@@ -8,7 +8,7 @@ import Markdown from 'src/components/markdown/Markdown';
 // ----------------------------------------------------------------------
 
 export default function HomeBanner({ sx, ...other }) {
-  const quote = `<blockquote>Make your problems become your strengths</blockquote> `;
+  const quote = `<blockquote>Turn your problems into your strengths with Hypnotherapy</blockquote> `;
   return (
     <Box sx={{ py: 4, bgcolor: 'background.neutral' }} {...other}>
       <Container>
