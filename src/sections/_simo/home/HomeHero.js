@@ -50,7 +50,7 @@ export default function HomeHero() {
               </div>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you’re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
+                Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
                 place and you don&apos;t have to face things alone.
                 <br />
                 <br />
