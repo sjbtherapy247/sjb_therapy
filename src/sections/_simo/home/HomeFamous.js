@@ -16,20 +16,20 @@ export default function HomeFamous() {
   const data = [
     {
       title:
-        'The American singer and former member of the Black Eyed Peas, whose real name is Stacy Ferguson, has publicly shared her use of hypnotherapy to overcome her addiction to crystal meth. She has credited hypnotherapy as an important part of her recovery process.	',
+        'Fergie the American singer and former member of the Black Eyed Peas, whose real name is Stacy Ferguson, has publicly shared her use of hypnotherapy to overcome her addiction to crystal meth. She has credited hypnotherapy as an important part of her recovery process.	',
       image: '/assets/images/simon/Fergie.png',
       name: 'Fergie',
       description: 'Beat Drug Addiction',
     },
     {
       title:
-        'The English actor, known for his roles in "Pirates of the Caribbean" and "Lord of the Rings" franchises, has reportedly used hypnotherapy to overcome a fear of flying. He has spoken about how hypnotherapy helped him deal with his anxiety and conquer his fear of flying.	',
+        'Orlando Bloom the English actor, known for his roles in "Pirates of the Caribbean" and "Lord of the Rings" franchises, has reportedly used hypnotherapy to overcome a fear of flying. He has spoken about how hypnotherapy helped him deal with his anxiety and conquer his fear of flying.	',
       image: '/assets/images/simon/Orlando-Bloom.jpeg',
       name: 'Orlando Bloom',
       description: 'Fear Of Flying',
     },
     {
-      title: 'The renowned Hollywood actor has been open about his positive experience with hypnotherapy to quit smoking. He has credited hypnotherapy as a helpful tool in overcoming his addiction to cigarettes. ',
+      title: 'Matt Damon the Hollywood actor has been open about his positive experience with hypnotherapy to quit smoking. He has credited hypnotherapy as a helpful tool in overcoming his addiction to cigarettes. ',
       image: '/assets/images/simon/Matt-Damon.jpeg',
       name: 'Matt Damon',
       description: 'Quit Smoking',
