@@ -21,7 +21,7 @@ export const servicesDescription = [
       <p>Contact me today to schedule a consultation and let's embark on this life-changing journey together. Remember, you have the power within you to overcome anxiety and remove phobias. I am here to guide you every step of the way.</p>`,
 
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_statistics.svg',
+    icon: '/assets/icons/mental-health/anxiety-and-phobia-icon-sjbtherapy.png',
   },
   {
     title: 'Performance Hypnotherapy - TRANCEformd',
@@ -40,7 +40,6 @@ export const servicesDescription = [
 
       <h5>Breaking Free from Conventional Approaches</h5>
       <p>In the world of Performance psychology, the overemphasis on visualisation and relaxation has limited the potential for true transformation. By harnessing the power of alert hypnosis, where you remain awake and engaged while undergoing hypnotic states, interventions seamlessly transfer into the sporting arena or the boardroom, maximising the impact on your performance.</p>
-
 
       <h5>Harnessing the Power of Hyhpnotic Phenomena</h5>
       <p>Here at sjb.therapy, I elicit a wide range of hypnotic phenomena to help you achieve your goals. The active hypnotic techniques are designed to reshape your mindset and enhance your performance. By exploring the entire spectrum of hypnotic phenomena, the approach empowers you to push boundaries and achieve your personal best.</p>
@@ -63,7 +62,7 @@ export const servicesDescription = [
       <p>Are you ready to revolutionise your performance? Contact me today for a no-commitment discovery call, to understand how our innovative TRANCEformd<sup>TM</sup> program can reshape your Performance experience and propel you or your whole team towards unparalleled success.</p>`,
 
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_file.svg',
+    icon: '/assets/icons/mental-health/tranceformd-head-icon.png',
   },
   {
     title: 'Quit Smoking with Hypnotherapy',
@@ -71,7 +70,7 @@ export const servicesDescription = [
     buttonTitle: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
     buttonLink: '/insights/quit-smoking-with-hypnosis/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'You can quit smoking with hypnotherapy today. It generally only takes one session and you’ll be smoke free for life. Book in today and change your life forever.',
+    description: 'You can quit smoking with hypnotherapy today. It generally only takes one session and you&apos;ll be smoke free for life. Book in today and change your life forever.',
     content: `<p><h4>Quit Smoking or Vaping With Hypnotherapy<sup style='font-size: 12px'</h4></p>
 
     <p>How to quit smoking or vaping with hypnotherapy is a journey that is a truly empowering and life-changing experience. As a clinical hypnotherapist, I offer a positive and effective path towards achieving a smoke-free life through the transformative practice of hypnotherapy.</p>
@@ -88,9 +87,9 @@ export const servicesDescription = [
 
     <p>Like all hypnotherapy, this program will only work if you are 100% committed to making the change. If you are, then I'd love to help you.</p>
 
-    <p>Book your discovery call or your Quit Smoking 90 minute session today and let me help you kick this smoking habit into touch.</p>`,
+    <p>Book your discovery call today and let me help you kick this smoking habit into touch.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_checklist.svg',
+    icon: '/assets/icons/mental-health/quit-smoking-head-icon.png',
   },
   {
     title: 'Stress Management Techniques',
@@ -129,7 +128,7 @@ export const servicesDescription = [
 
   <p>Remember, a tranquil and stress-free life lies within your grasp. Let's unlock its potential together.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_social_media.svg',
+    icon: '/assets/icons/mental-health/stress-management-head-icon-sjbtherapy.png',
   },
   {
     title: 'Hypnosis for Insomnia and sleep disorders',
@@ -148,7 +147,7 @@ export const servicesDescription = [
 
       <p>What intrigued me most about hypnotherapy is its holistic approach. Rather than just masking symptoms, it delves into the root causes of your sleep struggles. By engaging with your subconscious mind, hypnotherapy aims to tackle stress, anxiety, and negative thought patterns that often contribute to insomnia.</p>
 
-      <p>The results speak for themselves. A study published in the Journal of Clinical Sleep Medicine highlighted how hypnotherapy led to notable improvements in sleep for individuals with chronic insomnia. Other research demonstrated that hypnotherapy not only reduced the time taken to fall asleep but also increased total sleep duration.</p>
+      <p>The results speak for themselves. A study published in the <em><a href="https://jcsm.aasm.org/doi/10.5664/jcsm.6952" target="_blank">Journal of Clinical Sleep Medicine</a></em> highlighted how hypnotherapy led to notable improvements in sleep for individuals with chronic insomnia. Other research demonstrated that hypnotherapy not only reduced the time taken to fall asleep but also increased total sleep duration.</p>
 
       <p>I've witnessed clients transform their sleep patterns through guided hypnotherapy sessions. Learning relaxation techniques and addressing anxious thoughts can pave the way for a more serene bedtime routine. Over time, these changes can translate into waking up refreshed and revitalised.</p>
 
@@ -158,7 +157,7 @@ export const servicesDescription = [
 
       <p>Click the button below and book in your discovery call today</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_real_time.svg',
+    icon: '/assets/icons/mental-health/insomnia-and-sleep-disorders-icon-sjbtherapy.png',
   },
   {
     title: 'Hypnosis for Weight Loss and Binge Eating',
@@ -167,13 +166,13 @@ export const servicesDescription = [
     buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
     insights: 'For more information on how the mind and the body connect please see our InSights article.',
     description: 'Using the power of hypnosis for weight loss and binge eating is the most effective solution. Book your free call back today and lets start your new journey.',
-    content: `<h3>Hypnosis for Weight Loss and Eating Disorders</h3>
+    content: `<h4>Hypnosis for Weight Loss and Eating Disorders</h4>
 
-    <p>I am totally dedicated to helping you achieve your goals of a healthier mind and body. If you're struggling with weight management or battling eating disorders, you're not alone. My personalised hypnotherapy sessions are here to guide you on a journey towards positive change.</p>
+    <p>I am totally dedicated to helping you achieve your goals of a healthier mind and body. If you&apos;re struggling with weight management or battling eating disorders, you're not alone. My personalised hypnotherapy sessions are here to guide you on a journey towards positive change.</p>
   
     <h5>The Power of Hypnosis for Weight Loss and Eating Disorders</h5>
   
-    <p>Did you know that hypnotherapy has shown remarkable effectiveness in aiding weight loss and treating eating disorders? Of course you did or you wouldn't be readg this! According to a study published in the <strong><em>International Journal of Clinical and Experimental Hypnosis</em></strong>, participants who incorporated hypnosis into their weight loss journey lost more weight and maintained it longer compared to those who didn't use hypnosis.</p>
+    <p>Did you know that hypnotherapy has shown remarkable effectiveness in aiding weight loss and treating eating disorders? Of course you did or you wouldn't be reading this! According to a study published in the <strong><em><a href="https://www.tandfonline.com/doi/full/10.1080/00207144.2023.2227237" target="_blank">International Journal of Clinical and Experimental Hypnosis</a></em></strong>, participants who incorporated hypnosis into their weight loss journey lost more weight and maintained it longer compared to those who didn&apos;t use hypnosis.</p>
   
     <h5>Personalised Approach for Lasting Change</h5>
   
@@ -192,8 +191,8 @@ export const servicesDescription = [
     <h5>Book Your Free Discovery Call</h5>
   
     <p>Ready to take control of your journey towards a healthier you? Book your free discovery call with me, and let's discuss how hypnosis can support your weight loss and eating disorder goals.</p>`,
-    heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_report.svg',
+    heroImg: '/assets/images/simon/weight-loss-binge-eating-med-sjbtherapy.webp',
+    icon: '/assets/icons/mental-health/weight-loss-binge-eating-icon-sjbtherapy.png',
   },
   {
     title: 'Effective Treatment for PTSD and Trauma',
@@ -201,14 +200,14 @@ export const servicesDescription = [
     buttonTitle: 'Insights - Hypnotherapy for Sports & Business Performance',
     buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Supporting individuals who have experienced traumatic events by providing trauma-focused therapy to process and heal from the effects of trauma.',
-    content: `<h3>Effective Treatment for PTSD and Trauma</h3>
+    description: 'Stop! You have found your treatment for ptsd and trauma. Hypnotherapy is the No1 treatment for anyone suffering from these symptoms.',
+    content: `<h4>Effective Treatment for PTSD and Trauma</h4>
 
-    <p>I'm here to guide you on a path of healing and recovery from PTSD and trauma. If you've experienced trauma that's affecting your well-being, know that you're not alone. Your highly personalised hypnotherapy sessions are designed to help you overcome the pain and regain control over your life.</p>
+    <p>I'm here to guide you on a path of healing and recovery from PTSD and trauma. If you've experienced trauma that&apos;s affecting your well-being, know that you&apos;re not alone. Your highly personalised hypnotherapy sessions are designed to help you overcome the pain and regain control over your life.</p>
   
     <h5>The Healing Potential of Hypnotherapy for PTSD and Trauma</h5>
   
-    <p>Hypnotherapy has demonstrated remarkable success in alleviating the symptoms of PTSD and trauma. According to a study published in the <em>Journal of Traumatic Stress</em>, participants who underwent hypnotherapy experienced significant reductions in anxiety, depression, and PTSD symptoms compared to those who didn't receive hypnotherapy.</p>
+    <p>Hypnotherapy has demonstrated remarkable success in alleviating the symptoms of PTSD and trauma. According to a study published in the <em><a href="https://onlinelibrary.wiley.com/journal/15736598" target="_blank">Journal of Traumatic Stress</a></em>, participants who underwent hypnotherapy experienced significant reductions in anxiety, depression, and PTSD symptoms compared to those who didn't receive hypnotherapy.</p>
   
     <h5>Your Personalised Path to Recovery</h5>
   
@@ -224,91 +223,77 @@ export const servicesDescription = [
   
     <em><p>"Hypnosis with Simon has empowered me to confront and release the trauma that has held me back. I've gained tools to manage triggers and have regained a sense of control over my life." - Alex</p></em>
   
-    <p>Ready to embark on your path to healing and recovery? Book your free discovery call with me, Simon, and let's discuss how hypnotherapy can support your journey towards overcoming PTSD and trauma.</p>`,
+    <p>Ready to embark on your path to healing and recovery? Book your free discovery call with me, Simon, and let&apos;s discuss how hypnotherapy can support your journey towards overcoming your PTSD or trauma.</p>`,
 
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_file.svg',
+    icon: '/assets/icons/mental-health/ptsd-and-trauma-icon-sjbtherapy.png',
   },
   {
-    title: 'Hypnotherapy for Depression and Low Self-Esteem | SjB Therapy',
+    title: 'Hypnotherapy for Depression and Low Self-Esteem',
     url: 'hypnotherapy-for-depression-and-low-self-esteem',
-    buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
-    buttonLink: '/insights',
-    insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Boost your emotional well-being and improve self-esteem by effectively addressing depression through personalized hypnotherapy and psychotherapy interventions.',
-    content: `<h1>Finding Hope and Confidence through Hypnotherapy</h1>
+    buttonTitle: 'Insights - Hypnotherapy and Psychotherapy',
+    buttonLink: '/insights/hypnotherapy-synergy/',
+    insights: '*Note, I am not a medical doctor and these sessions are to help alieviate symptoms and change your subconscious mindset towards a brighter future. If you have experienced deeply personal childhood trauma or trauma of a sexual nature and have not talked to anyone about this yet, I recommend seeing your GP first to understand what help is available to you, given the correct diagnosis. I do work with other professionals to create a better outcome for clients, so please follow the GPs advice and then feel free to contact me to discuss your options.',
+    description: 'Using hypnotherapy for depression and low self esteem is the way to get back control of your subconscious mind and develop mental strength. Book your session today.',
+    content: `<h4>Hypnotherapy for depression and low self esteem</h4>
 
-    <p>Welcome, I'm dedicated to helping you overcome the burdens of depression and low self-esteem. If you're struggling with these challenges, know that there is a path to healing and empowerment. Through personalised hypnotherapy sessions, I'm here to guide you towards a brighter and more confident future.</p>
+    <p>I'm dedicated to helping you overcome the burdens of depression and low self-esteem. If you&apos;re struggling with these challenges, know that there is a path to healing and empowerment. Through personalised hypnotherapy sessions, I'm here to guide you towards a brighter and more confident future.</p>
   
-    <h2>Transforming Lives with Hypnotherapy</h2>
+    <h5>Transforming Lives with Hypnotherapy</h5>
   
-    <p>Hypnotherapy has shown incredible promise in alleviating the symptoms of depression and boosting self-esteem. A study published in the <em>Journal of Consulting and Clinical Psychology</em> found that participants who underwent hypnotherapy experienced significant reductions in depressive symptoms and increased self-esteem compared to those who didn't receive hypnotherapy.</p>
+    <p>Hypnotherapy has shown incredible promise in alleviating the symptoms of depression and boosting self-esteem. A study published in the <em><a href="https://journalofsocial.com/?mod=makale_tr_ozet&makale_id=68545" target="_blank">Journal of Social, Humanities and Administerative Sciences</a></em> found that participants who underwent hypnotherapy experienced significant reductions in depressive symptoms and increased self-esteem compared to those who didn't receive hypnotherapy.</p>
   
-    <p>At SjB Therapy, I understand the weight that depression and low self-esteem can carry. My approach is deeply rooted in personalisation, providing you with a safe and supportive environment to address these challenges. Together, we'll work on rewiring negative thought patterns and building a foundation of self-worth to give you a new outlook on life.</p>
+    <p>I understand the weight that depression and low self-esteem can carry. My approach is deeply rooted in personalisation, providing you with a safe and supportive environment to address these challenges. Together, we'll work on rewiring negative thought patterns and building a foundation of self-worth to give you a new outlook on life.</p>
   
-    <h2>Embrace a Brighter Future</h2>
+    <h5>Embrace a Brighter Future</h5>
   
     <p>Imagine waking up with a renewed sense of purpose and self-assurance. You deserve to experience the joy of life and the confidence to pursue your dreams. Take the first step towards a brighter future by booking your free discovery call with me today.</p>
   
-    <h2>Stories of Resilience and Empowerment</h2>
+    <h5>Stories of Resilience and Empowerment</h5>
   
-    <p>"Simon's hypnotherapy sessions have been a lifeline in my journey out of depression. I've gained tools to manage my emotions and discovered a newfound sense of hope." - Mark</p>
+    <em><p>"Simon's hypnotherapy sessions have been a lifeline in my journey out of depression. I've gained tools to manage my emotions and discovered a newfound sense of hope." - Mark</p></em>
   
-    <p>"Through hypnosis, I've shattered the chains of low self-esteem that held me back. Simon's guidance has given me the confidence to step into my potential and embrace my worth." - Client</p>
+    <em><p>"Through hypnosis, I've shattered the chains of low self-esteem that held me back. Simon's guidance has given me the confidence to step into my potential and embrace my worth." - Client</p></em>
   
-    <h2>Book Your Free Discovery Call</h2>
+    <h5>Book Your Free Discovery Call</h5>
   
-    <p>Are you ready to take control of your emotional well-being and regain your self-esteem? Book your free discovery call with me, Simon, and let's explore how hypnotherapy can guide you towards a life of positivity and empowerment.</p>
-  
-    <p><strong>Button - Book Now</strong>
-
-    <strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a>
-  
-    <p>Your journey to healing and self-discovery starts now.</p>
-
-    *Note, I am not a medical doctor and these sessions are to help alieviate symptoms and change your subconscious mindset towards a brighter future. If you have experienced deeply personal childhood trauma or trauma of a sexual nature and haven't talked to anyone about this yet, I recommend seeing your GP first to understand what help is available to you given the correct diagnosis. I do work with other professionals to create a better outcome for clients, so please follow the GP's advice and then feel free to contact me to discuss your options.`,
+    <p>Are you ready to take control of your emotional well-being and regain your self-esteem? Book your free discovery call with me, and let's explore how hypnotherapy can guide you towards a life of positivity and empowerment.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_checklist.svg',
+    icon: '/assets/icons/mental-health/depression-and-low-self-esteem-icon-sjbtherapy.png',
   },
   {
     title: 'Break Performance Anxiety and Stage Fright',
     url: 'performance-anxiety-and-stage-fright',
-    buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
+    buttonTitle: 'Insights - Hypnotherapy uses',
     buttonLink: '/insights',
-    insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Specialised hypnotherapy and psychotherapy techniques tailored to help individuals gain confidence, manage stress, and enhance their performance in high-pressure situations.',
-    content: `<h1>Unleash Your True Potential: Overcoming Performance Anxiety</h1>
+    insights: 'For more information on how hypnotherapy can help you, please see our InSights articles.',
+    description: ' If you are suffering from performance anxiety or stage fright of any kind, we can help. Using our proven techniques we will break those fears and instill belief',
+    content: `<h4>Unleash Your True Potential: Overcoming Performance Anxiety</h4>
 
     <p>Think of me as your partner in conquering performance anxiety and stage fright. If you find yourself overwhelmed by nervousness before presentations, performances, or public speaking, know that there's a solution. Through specialised hypnotherapy sessions, I'm here to guide you towards confident and captivating performances.</p>
   
-    <h2>Empowerment through Hypnotherapy</h2>
+    <h5>Empowerment through Hypnotherapy</h5>
   
-    <p>Hypnotherapy holds the key to breaking free from the chains of performance anxiety. Studies have shown that individuals who underwent hypnotherapy experienced significant reductions in performance-related anxiety, an increase in self-confidence and also pay! Your potential for more success is within reach.</p>
+    <p>Hypnotherapy holds the key to breaking free from the chains of performance anxiety. Studies have shown that individuals who underwent hypnotherapy experienced significant reductions in performance-related anxiety, an increase in self-confidence and also pay! Your potential for more success is within reach and it's not just visualising people naked in the crowd!</p>
   
-    <h2>Your Journey to Unshakable Confidence</h2>
+    <h5>Your Journey to Unshakable Confidence</h5>
   
-    <p>I fully understand the impact that performance anxiety can have on your success and well-being. My approach is focused on equipping you with the tools to transform fear into power. Through tailored hypnotherapy, we'll address the root causes of your anxiety and cultivate unwavering self-assurance.</p>
+    <p>I fully understand the impact that performance anxiety can have on your success and well-being. My approach is focused on equipping you with the tools to transform fear into power. Through tailored hypnotherapy, we&apos;ll address the root causes of your anxiety and cultivate unwavering self-assurance.</p>
   
-    <h2>Step into the Spotlight with Confidence</h2>
+    <h5>Step into the Spotlight with Confidence</h5>
   
     <p>Imagine stepping onto the stage or into the boardroom with a sense of calm and control. Your audience is waiting to be captivated by your presence. Take the first step towards confident performances by booking your free discovery call with me today.</p>
   
-    <h2>Empowering Stories of Triumph</h2>
+    <h5>Empowering Stories of Triumph</h5>
   
-    <p>"Thanks to Simon's hypnotherapy, I've turned stage fright into stage delight. His sessions have equipped me with strategies to channel nervous energy into a powerful presence." - Jessica</p>
+    <em><p>"Thanks to Simon's hypnotherapy, I've turned stage fright into stage delight. His sessions have equipped me with strategies to channel nervous energy into a powerful presence." - Jessica</p></em>
   
-    <p>"Hypnosis with Simon has unlocked my inner performer. I've shed the anxiety that held me back and embraced the spotlight with newfound confidence." - Alex D</p>
+    <em><p>"Hypnosis with Simon has unlocked my inner performer. I've shed the anxiety that held me back and embraced the spotlight with newfound confidence." - Alex D</p></em>
   
-    <h2>Book Your Free Discovery Call</h2>
+    <h5>Book Your Free Discovery Call</h5>
   
-    <p>Are you ready to step into the spotlight with unshakable confidence? Book your free discovery call with me, Simon, and let's explore how hypnotherapy can guide you towards breaking performance anxiety and achieving greatness.</p>
-  
-    <p><strong>Button - Book Now</strong>
-
-    <strong>Link to:</strong> <a href="https://sjbtherapy.com/initial-consult/">https://sjbtherapy.com/initial-consult/</a>
-  
-    <p>Your journey to confident performances starts now.</p>`,
+    <p>Are you ready to step into the spotlight with unshakable confidence? Book your free discovery call with me and let's explore how hypnotherapy can guide you towards breaking performance anxiety and achieving your greatness.</p>`,
     heroImg: '/assets/images/marketing/marketing_post_02.jpg',
-    icon: '/assets/icons/ic_report.svg',
+    icon: '/assets/icons/mental-health/performance-anxiety-stage-freight-icon2-sjbtherapy.png',
   },
 ];
