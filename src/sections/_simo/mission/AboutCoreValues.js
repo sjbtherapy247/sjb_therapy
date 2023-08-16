@@ -12,22 +12,22 @@ const CORE_VALUES = [
   {
     title: 'Mental Health',
     description: 'Re-gain control over your mental health, permanently.',
-    icon: '/assets/images/simon/Asset-37.png',
+    icon: '/assets/icons/mental-health/mental-health-icon.png',
   },
   {
     title: 'Action',
     description: 'Take action to overcome your current situation.',
-    icon: '/assets/icons/ic_transparency.svg',
+    icon: '/assets/icons/mental-health/Action_icon.png',
   },
   {
-    title: 'Transform & Grow',
+    title: 'TRANCEform & Grow',
     description: 'Evolve in ways you never dreamt possible.',
-    icon: '/assets/icons/ic_reputation.svg',
+    icon: '/assets/icons/mental-health/TRANCEform-grow-icon.png',
   },
   {
     title: 'Teamwork',
     description: 'We work together, and you achieve great things.',
-    icon: '/assets/icons/ic_popularity.svg',
+    icon: '/assets/icons/mental-health/Teamwork-icon.png',
   },
 ];
 
