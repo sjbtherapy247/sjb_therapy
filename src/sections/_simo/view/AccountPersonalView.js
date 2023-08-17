@@ -74,7 +74,7 @@ export default function AccountPersonalView() {
   } = methods;
 
   useEffect(() => {
-    if (!client) return;
+    if (!client?.id) return;
     const personal = client?.acct_per_details;
     const bday = personal ? new Date(personal.birthday) : new Date('01-01-2001');
     const resetValues = {
@@ -90,9 +90,9 @@ export default function AccountPersonalView() {
       country: address?.country || 'AU',
     };
     // check if phone is null - fixes case of payment link usage charge succedded event does not provide phone
-    if (phone === '') {
-      resetValues.phoneNumber = productsTable[0].customer_details.phone;
-      update(ref(db, `customers/${custId}`), { phone: productsTable[0].customer_details.phone });
+    if (phone === '' && productsTable?.length) {
+      resetValues.phoneNumber = productsTable[0]?.customer_details.phone;
+      update(ref(db, `customers/${custId}`), { phone: productsTable[0]?.customer_details.phone });
       console.log('phone blank', productsTable);
     }
 
