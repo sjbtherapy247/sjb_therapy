@@ -30,6 +30,7 @@ const TIMELINES = [
     title: 'Integration',
     description: 'This is where you note down the changes in your behaviour and feedback via a follow-up form. If already booked, you will then also look forward to your next session, if not then you will move be moving on with your life free of whatever it was you saw me for.',
   },
+
 ];
 
 const COLORS = ['primary', 'warning', 'secondary', 'success'];
