@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import * as React from 'react';
 // next
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+
 // emotion
 import createEmotionServer from '@emotion/server/create-instance';
 // utils
@@ -9,6 +9,8 @@ import createEmotionCache from 'src/utils/createEmotionCache';
 // theme
 import palette from 'src/theme/palette';
 import { primaryFont } from 'src/theme/typography';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
 
 // ----------------------------------------------------------------------
 
@@ -24,14 +26,6 @@ const Meta = () => (
   <>
     {/* PWA primary color */}
     <meta name="theme-color" content={palette('dark').primary.dark} />
-    <meta
-      name="description"
-      content="Cultivating the power of hypnotherapy unlocks the gateway to personal transformation, enabling individuals to tap into their inner potential, overcome obstacles, and create positive and lasting change in their lives."
-    />
-    <meta name="keywords" content="hypnotherapy, psychotherapy, mental health, personal transformation" />
-    <meta name="author" content="TezD" />
-    {/* stop iOS causing hydration issues */}
-    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
   </>
 );
 
@@ -39,14 +33,17 @@ export default function MyDocument({ emotionStyleTags }) {
   return (
     <Html lang="en" className={primaryFont.className}>
       <Head>
+      
         <Favicon />
-        <Meta />
+        <Meta/>
         {/* Emotion */}
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}
+
       </Head>
       <body>
-        <Main />
+          
+        <Main/>
         <NextScript />
       </body>
     </Html>

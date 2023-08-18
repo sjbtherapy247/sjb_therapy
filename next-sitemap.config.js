@@ -1,5 +1,5 @@
 const config = {
-  siteUrl: 'https://sjbtherapy-g07k3520z-sjbtherapy.vercel.app',
+  siteUrl: 'https://dev247.sjbtherapy.com',
   generateRobotsTxt: true, // (Optional parameter for creating robots.txt file)
   // Other available options..
 };

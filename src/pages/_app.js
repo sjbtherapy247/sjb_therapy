@@ -36,6 +36,10 @@ import LoadingCircular from 'src/components/loading-circular/LoadingCircular';
 import Notification from 'src/components/notification/Notification';
 import Modal from 'src/components/modal/Modal';
 
+// data&SEO
+// import Script from 'next/script';
+// import TagManager from 'react-gtm-module';
+// import { NextSeo } from 'next-seo';
 // ----------------------------------------------------------------------
 
 const clientSideEmotionCache = createEmotionCache();
