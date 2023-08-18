@@ -6,7 +6,7 @@ export const research = [
     buttonLink: '/services#hypnotheraptServices',
     services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
     title: 'The Science Behind Hypnotherapy: Understanding the Mind-Body Connection',
-    description: "Hypnotherapy has gained recognition for its ability to harness the mind-body connection. Let's explore the scientific basis behind this powerful therapeutic approach.",
+    description: 'Hypnotherapy has gained recognition for its ability to harness the mind-body connection. Let&apos;s explore the scientific basis behind this powerful therapeutic approach.',
     category: 'hypnotherapy',
     favorited: true,
     createdAt: '2023-06-05T01:21:51.781Z',
@@ -80,8 +80,7 @@ export const research = [
     buttonLink: '/hypnotherapy-services/quit-smoking-with-hypnotherapy/',
     services: 'If would like to know more about our Quit Smoking Forever service.. .',
     title: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
-    description:
-      "Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let's explore how",
+    description: 'Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let&apos;s explore how',
     category: 'Quit smoking',
     favorited: true,
     createdAt: '2023-03-29T23:21:51.781Z',
@@ -226,8 +225,7 @@ export const research = [
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
     buttonLink: '/services#hypnotheraptServices',
     services: "If you're ready to take the next step.. take a look at our services specific to your needs.",
-    description:
-      'I want to delve into a topic that lies at the heart of my practice: the dynamic synergy between hypnotherapy and psychotherapy. These two therapeutic approaches, when combined, create a powerful avenue for healing that goes beyond what either can achieve alone.',
+    description: 'I want to delve into a topic that lies at the heart of my practice: the dynamic synergy between hypnotherapy and psychotherapy. These two therapeutic approaches, when combined, create a powerful avenue for healing that goes beyond what either can achieve alone.',
     category: 'Marketing',
     favorited: false,
     createdAt: '2022-11-16T21:21:51.781Z',
