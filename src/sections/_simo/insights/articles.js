@@ -146,8 +146,8 @@ export const research = [
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b3',
     url: 'hypnotherapy-enhancing-your-sports-and-business-performance',
     buttonTitle: 'Services - Sports Hypnotherapy - TRANCEformd',
-    buttonLink: '/hypnotherapy-services/sports-hypnotherapy-tranceformd/',
-    services: "If you're ready to take the next step.. take a look at our services specific to your needs.",
+    buttonLink: '/hypnotherapy-services/performance-hypnotherapy-tranceformd/',
+    services: 'If you are ready to take the next step.. take a look at our services specific to your needs.',
     title: 'Harnessing the Power of Hypnotherapy for Enhanced Sports and Business Performance',
     description: 'Discover the transformative effects of hypnotherapy on sports and business performance. Unleash your full potential, overcome mental barriers, and achieve peak performance in your chosen field.',
     category: 'Sports and Business',
@@ -184,7 +184,7 @@ export const research = [
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
     content: `<h4>Introduction:</h4>
-      <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximizing your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
+      <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximising your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
 
       <h4>Benefits of Hypnotherapy for Sports and Business Performance:</h4>
 
