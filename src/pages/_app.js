@@ -40,6 +40,10 @@ import Modal from 'src/components/modal/Modal';
 // import Script from 'next/script';
 // import TagManager from 'react-gtm-module';
 // import { NextSeo } from 'next-seo';
+// import SEO from '/next-seo.config';
+// import metadata from 'next'
+
+
 // ----------------------------------------------------------------------
 
 const clientSideEmotionCache = createEmotionCache();
