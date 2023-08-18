@@ -214,7 +214,7 @@ export const research = [
       <h4>Conclusion:</h4>
       <p>In conclusion, hypnotherapy has emerged as a powerful tool for enhancing sports and business performance. By tapping into the immense power of the subconscious mind, individuals can overcome mental barriers, improve focus, increase motivation, and unleash their full potential. Whether you're an athlete seeking to achieve peak performance or a business professional striving for success, hypnotherapy can be a game-changer on your journey to excellence. Embrace the transformative possibilities of hypnotherapy, and elevate your sports and business performance to new heights.</p>
       
-      <p>Book your Free Discovery call today and let's start the TRANCEformation</p>`,
+      <p>Book your Free Discovery call today and let's start your TRANCEformation</p>`,
     coverImg: '/assets/images/marketing/marketing_3.jpg',
     heroImg: '/assets/images/marketing/marketing_post_01.jpg',
   },

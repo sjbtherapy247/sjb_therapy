@@ -4,6 +4,7 @@ import * as React from 'react';
 
 // emotion
 import createEmotionServer from '@emotion/server/create-instance';
+
 // utils
 import createEmotionCache from 'src/utils/createEmotionCache';
 // theme
@@ -11,6 +12,10 @@ import palette from 'src/theme/palette';
 import { primaryFont } from 'src/theme/typography';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+// Data & SEO
+// import TagManager from 'react-gtm-module';
+import Script from 'next/script';
+// import { Metadata } from 'next';
 
 // ----------------------------------------------------------------------
 
@@ -25,15 +30,19 @@ const Favicon = () => (
 const Meta = () => (
   <>
     {/* PWA primary color */}
-    <meta name="theme-color" content={palette('dark').primary.dark} />
+    <meta name="Primary Colour" content={palette('dark').primary.dark} />
+
   </>
 );
 
 export default function MyDocument({ emotionStyleTags }) {
   return (
-    <Html lang="en" className={primaryFont.className}>
+    <Html lang="en-US" className={primaryFont.className}>
       <Head>
-      
+      <Script id="gtmscript"strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KWSDD4C');`}} />
         <Favicon />
         <Meta/>
         {/* Emotion */}
@@ -42,7 +51,7 @@ export default function MyDocument({ emotionStyleTags }) {
 
       </Head>
       <body>
-          
+          <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSDD4C" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}} />
         <Main/>
         <NextScript />
       </body>
