@@ -82,7 +82,7 @@ const Footer = () => {
   return (
     <>
       <Grid container justifyContent={{ md: 'space-between' }}>
-        <Grid xs={12} md={5.5} sx={{ p: 4, bgcolor: 'background.neutral', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Grid xs={12} md={5.5} sx={{ p: 4, bgcolor: 'background.primary', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Stack spacing={{ xs: 3, md: 5 }}>
             <Box display="grid" gridTemplateColumns="repeat(3, 1fr)">
               <Stack spacing={1} alignItems="center">
@@ -112,7 +112,7 @@ const Footer = () => {
             </Box>
             <Stack alignItems="flex-start" spacing={0}>
               <Typography variant="body2" textAlign="center" sx={{ color: 'text.secondary', opacity: 0.8 }}>
-                Simon Baker is a clinical hypnotherapist and mental strength coach, who is giving you the mental edge.{' '}
+                Simon Baker is a Sydney based clinical hypnotherapist and strategic Psychotherapist, who will give you the mental edge no matter what you&apos;re here for. Whether it&apos;s for performance, anxiety, weight loss or something else, you&apos;re in the right place.{' '}
               </Typography>
             </Stack>
             <Stack direction="row" justifyContent="space-between">

@@ -4,7 +4,6 @@ import Head from 'next/head';
 import MainLayout from 'src/layouts/main';
 // sections
 import { ServicesView } from 'src/sections/_simo/view';
-
 import { servicesDescription } from 'src/sections/_simo/services/updated-svcs';
 import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
 import { useEffect, useState } from 'react';

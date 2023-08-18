@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 // lazy image
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
+// import SEO from 'next-seo/next-seo.config';
 // ----------------------------------------------------------------------
 
 import PropTypes from 'prop-types';
@@ -40,14 +40,12 @@ import Modal from 'src/components/modal/Modal';
 // import Script from 'next/script';
 // import TagManager from 'react-gtm-module';
 // import { NextSeo } from 'next-seo';
-// import SEO from '/next-seo.config';
 // import metadata from 'next'
 
 
 // ----------------------------------------------------------------------
 
 const clientSideEmotionCache = createEmotionCache();
-
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
@@ -57,17 +55,16 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        
       </Head>
 
       <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
         <SettingsProvider>
           <ThemeProvider>
             <LoadingCircular />
-            <Modal />
-            <Notification />
-            <MotionLazyContainer>
-              <ProgressBar />
+              <Modal />
+                <Notification />
+                  <MotionLazyContainer>
+                 <ProgressBar />
               {getLayout(<Component {...pageProps} />)}
             </MotionLazyContainer>
           </ThemeProvider>
