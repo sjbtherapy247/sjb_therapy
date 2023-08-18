@@ -27,6 +27,7 @@ const BENEFITS = [
   {
     title: 'Increased Self-Awareness',
     description: 'You will gain a deeper understanding of yourself, your emotions, and your thought patterns, facilitating your personal growth, self-acceptance, and self-empowerment.',
+    iconColor: 'primary',
   },
   {
     title: 'Improved Relationships',
