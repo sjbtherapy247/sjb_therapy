@@ -7,6 +7,7 @@ import ResearchView from 'src/sections/_simo/view/ResearchView';
 import { research } from 'src/sections/_simo/insights/articles';
 import { useSettingsContext } from 'src/components/settings';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
+// import { Metadata, ResolvingMetadata } from 'next';
 
 export async function getStaticProps() {
   return {
@@ -30,7 +31,10 @@ export default function ResearchPage({ researchDocs }) {
   return (
     <>
       <Head>
-        <title>InSights | SJB Therapy</title>
+        <meta name="title" content="Hypnotherapy Research & InSights | SJB Therapy" />
+        <meta name="description" content="Hypnotherapy Research and InSights - SjB Therapy" />
+        <meta name="keywords" content="insights, hypnotherapy, research," />
+        <title>Hypnotherapy Research & InSights | SJB Therapy</title>
         <link rel="canonical" href={`${host}/insights/`} />
         <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/insights/`} />
       </Head>

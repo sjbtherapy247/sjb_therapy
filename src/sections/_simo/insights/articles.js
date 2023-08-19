@@ -2,6 +2,7 @@ export const research = [
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
     url: 'hypnotherapy-understanding-the-mind-body-connection',
+    keywords: 'understanding the mind body connection',
     buttonTitle: 'Our Hypnotherapy Services',
     buttonLink: '/services#hypnotherapyServices',
     services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
@@ -76,6 +77,7 @@ export const research = [
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b2',
     url: 'quit-smoking-with-hypnosis',
+    keywords: 'quit smoking with hypnosis',
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
     buttonLink: '/hypnotherapy-services/quit-smoking-with-hypnotherapy/',
     services: 'If would like to know more about our Quit Smoking Forever service.. .',
@@ -144,6 +146,7 @@ export const research = [
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b3',
     url: 'hypnotherapy-enhancing-your-sports-and-business-performance',
+    keywords: 'enhance your sports and business performence',
     buttonTitle: 'Services - Sports Hypnotherapy - TRANCEformd',
     buttonLink: '/hypnotherapy-services/performance-hypnotherapy-tranceformd/',
     services: 'If you are ready to take the next step.. take a look at our services specific to your needs.',
@@ -182,8 +185,11 @@ export const research = [
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
-    content: `<h4>Introduction:</h4>
-      <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximising your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
+    content: 
+    
+    `<h4>Introduction:</h4>
+    
+    <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximising your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
 
       <h4>Benefits of Hypnotherapy for Sports and Business Performance:</h4>
 
@@ -220,7 +226,8 @@ export const research = [
   },
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b4',
-    url: 'hypnotherapy-synergy',
+    url: 'hypnotherapy-synergy-with-psychotherapy',
+    keywords: 'hypnotherapy with psychotherapy',
     title: 'The Synergy of Hypnotherapy and Psychotherapy: A Powerful Healing Combination',
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
     buttonLink: '/services#hypnotherapyServices',

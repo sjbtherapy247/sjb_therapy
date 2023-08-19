@@ -69,6 +69,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/eslint-parser": "^7.21.3",
+    "@storybook/preset-typescript": "^3.0.0",
     "eslint": "^8.37.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.4.3",

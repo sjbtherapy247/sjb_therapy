@@ -2,6 +2,7 @@ export const servicesDescription = [
   {
     title: 'Overcome Anxiety and Remove Phobias',
     url: 'overcome-anxiety-and-remove-phobias',
+    tags: 'overcome anxiety, remove phobias',
     buttonTitle: 'Insights - Mind Body Connection',
     buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
     insights: 'For more information on the mind body connection please see our InSights article.',
@@ -26,6 +27,7 @@ export const servicesDescription = [
   {
     title: 'Performance Hypnotherapy - TRANCEformd',
     url: 'performance-hypnotherapy-tranceformd',
+    tags: 'business and sports performance hypnotherapy',
     buttonTitle: 'Insights - Hypnotherapy for Sports and Performance',
     buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you achieve the next level of performance in sport or business, please read our InSights article',
@@ -67,12 +69,13 @@ export const servicesDescription = [
   {
     title: 'Quit Smoking with Hypnotherapy',
     url: 'quit-smoking-with-hypnotherapy',
+    tags: 'quit smoking or vaping with hypnotherapy',
     buttonTitle: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
     buttonLink: '/insights/quit-smoking-with-hypnosis/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'You can quit smoking with hypnotherapy today. It generally only takes one session and you&apos;ll be smoke free for life. Book in today and change your life forever.',
+    description: 'Quit smoking or vaping today with hypnotherapy. It can only take one session and you will be smoke free for life. Book in today and change your life forever.',
     content: `<p><h4>Quit Smoking or Vaping With Hypnotherapy<sup style='font-size: 12px'</h4></p>
-
+    
     <p>How to quit smoking or vaping with hypnotherapy is a journey that is a truly empowering and life-changing experience. As a clinical hypnotherapist, I offer a positive and effective path towards achieving a smoke-free life through the transformative practice of hypnotherapy.</p>
 
     <p>I recognise that smoking and vaping operate on both conscious and subconscious levels. By delving deep into the subconscious, hypnotherapy allows us to uncover the root causes of your smoking behaviors and reprogram them for a smoke-free life.</p>
@@ -92,13 +95,14 @@ export const servicesDescription = [
     icon: '/assets/icons/mental-health/quit-smoking-head-icon.png',
   },
   {
-    title: 'Stress Management Techniques',
-    url: 'hypnosis-for-stress-management',
-    buttonTitle: 'Insights - Powerful Healing Benefits',
-    buttonLink: '/insights/hypnotherapy-synergy/',
-    insights: 'For more information on how hypnotherapy can help you to harness your potential, please see our InSights article.',
-    description: 'Looking for Stress management techniques, relaxation exercises or mindfulness practices to help manage stress and improve overall well-being?',
-    content: `<title>Stress Management Techniques</title>
+  title: 'Stress Management Techniques',
+  url: 'hypnosis-for-stress-management',
+  tags: 'stress management techniques',
+  buttonTitle: 'Insights - Powerful Healing Benefits',
+  buttonLink: '/insights/hypnotherapy-synergy/',
+  insights: 'For more information on how hypnotherapy can help you to harness your potential, please see our InSights article.',
+  description: 'Looking for Stress management techniques, relaxation exercises or mindfulness practices to help manage stress and improve overall well-being?',
+  content: `<title>Stress Management Techniques</title>
 
   <p>Are you grappling with the constant strain of everyday life? Stress is a universal experience, but mastering effective techniques to manage it can be challenging. That's where hypnotherapy comes in. My evidence-based and personalised approach can help you regain control and embrace a more balanced life.</p>
 
@@ -133,6 +137,7 @@ export const servicesDescription = [
   {
     title: 'Hypnosis for Insomnia and sleep disorders',
     url: 'hypnosis-for-insomnia-and-sleep-disorders',
+    tags: 'hypnosis for sleep disorders | insomnia',
     buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
     buttonLink: '/insights',
     insights: 'For more information on how hypnotherapy can help with Anxiety & Phobias, please see our InSights article.',
@@ -162,6 +167,7 @@ export const servicesDescription = [
   {
     title: 'Hypnosis for Weight Loss and Binge Eating',
     url: 'weight-loss-and-binge-eating',
+    tags: 'hypnosis for weight loss and binge eating',
     buttonTitle: 'Insights - The Mind Body Connection',
     buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
     insights: 'For more information on how the mind and the body connect please see our InSights article.',
@@ -186,7 +192,7 @@ export const servicesDescription = [
   
     <em><p>"Simon's hypnotherapy sessions have been life-changing for me. I've experienced a shift in my mindset and approach to food, leading to sustainable and fast weight loss. I'm grateful for his empathetic guidance." - Sarah</p></em>
   
-    <em><p>"Hypnosis with Simon has helped me overcome my eating disorder tendencies. I've gained control over my eating habits and developed a healthier relationship with food and myself." - Anon Client</p></em>
+    <em><p>"Hypnosis with Simon has helped me overcome my binge eating tendencies. I've gained control over my eating habits and developed a healthier relationship with food and myself." - Anon Client</p></em>
   
     <h5>Book Your Free Discovery Call</h5>
   
@@ -197,6 +203,7 @@ export const servicesDescription = [
   {
     title: 'Effective Treatment for PTSD and Trauma',
     url: 'treatment-for-ptsd-and-trauma',
+    tags: 'treatment for ptsd and trauma',
     buttonTitle: 'Insights - Hypnotherapy for Sports & Business Performance',
     buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
@@ -231,6 +238,7 @@ export const servicesDescription = [
   {
     title: 'Hypnotherapy for Depression and Low Self-Esteem',
     url: 'hypnotherapy-for-depression-and-low-self-esteem',
+    tags: 'hypnotherapy for depression and low self esteem',
     buttonTitle: 'Insights - Hypnotherapy and Psychotherapy',
     buttonLink: '/insights/hypnotherapy-synergy/',
     insights: '*Note, I am not a medical doctor and these sessions are to help alieviate symptoms and change your subconscious mindset towards a brighter future. If you have experienced deeply personal childhood trauma or trauma of a sexual nature and have not talked to anyone about this yet, I recommend seeing your GP first to understand what help is available to you, given the correct diagnosis. I do work with other professionals to create a better outcome for clients, so please follow the GPs advice and then feel free to contact me to discuss your options.',
@@ -264,6 +272,7 @@ export const servicesDescription = [
   {
     title: 'Break Performance Anxiety and Stage Fright',
     url: 'performance-anxiety-and-stage-fright',
+    tags: 'break performance anxiety and stage freight',
     buttonTitle: 'Insights - Hypnotherapy uses',
     buttonLink: '/insights',
     insights: 'For more information on how hypnotherapy can help you, please see our InSights articles.',

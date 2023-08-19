@@ -40,6 +40,9 @@ export default function ResearchArticlePage({ researchDoc, researchDocs }) {
     <>
       <Head>
         <title>{researchDoc.title} | SJB Therapy</title>
+        <meta name="title" content={researchDoc.title} />
+        <meta name="description" content={researchDoc.description} />
+        <meta name="keywords" content={researchDoc.keywords} />
       </Head>
 
       <ArticleView post={researchDoc} allPosts={researchDocs} />

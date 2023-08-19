@@ -35,7 +35,7 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function PostItem({ post }) {
-  const { url, title, duration, coverImg, author, createdAt } = post;
+  const { url, title, duration, coverImg, author, createdAt, } = post;
 
   return (
     <Stack component={m.div} whileHover="hover" variants={varHover(1)} transition={varTranHover()} sx={{ borderRadius: 1, overflow: 'hidden', position: 'relative' }}>
