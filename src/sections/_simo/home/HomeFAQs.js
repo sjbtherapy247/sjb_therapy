@@ -11,6 +11,7 @@ import { Pattern01 } from 'src/assets/illustrations/pattern';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { bgGradient } from 'src/utils/cssStyles';
+// import { FAQPageJsonLd } from 'next-seo';
 
 // ----------------------------------------------------------------------
 
@@ -92,7 +93,7 @@ export default function HomeFAQs() {
                 my: { xs: 8, md: 10 },
               }}
             >
-              {CONTENTS.map((faq) => (
+              {CONTENTS.map ((faq) => (
                 <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
                   <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
                     <AccordionSummary>
