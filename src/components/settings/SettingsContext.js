@@ -76,8 +76,8 @@ export function SettingsProvider({ children }) {
       custlistener = onValue(custRef, (snapshot) => {
         if (snapshot.val()) {
           const customers = Object?.values(snapshot.val());
-          console.log('custIds loaded');
           const cust = customers.filter((item) => item.email === user.email);
+          console.log('custIds loaded', cust);
           setCustId(cust[0]?.id);
           setClient({ ...cust[0] });
         }
