@@ -39,7 +39,7 @@ export default function ResearchArticlePage({ researchDoc, researchDocs }) {
   return (
     <>
       <Head>
-        <title>{researchDoc.title} | SJB Therapy</title>
+    
         <meta name="title" content={researchDoc.title} />
         <meta name="description" content={researchDoc.description} />
         <meta name="keywords" content={researchDoc.keywords} />
