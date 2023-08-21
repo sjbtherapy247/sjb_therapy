@@ -43,7 +43,6 @@ ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ServicePage({ serviceDoc, services }) {
-  console.log(services);
   return (
     <>
       <Head>
