@@ -21,9 +21,9 @@ export const config = {
 // for some reason the local dev key works for a while..
 // TODO - switch whsec key to endpoint specific key in prod - DONE!
 export default async function handler(req, res) {
-  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Prod);
 
-  const webhookSecret = process.env.NODE_ENV === 'development' ? process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev : process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev_Vercel;
+  const webhookSecret = process.env.NODE_ENV === 'development' ? process.env.STRIPE_WEBHOOK_SECRET_Simo_Dev : process.env.STRIPE_WEBHOOK_SECRET_Simo_Prod_Vercel;
 
   if (req.method === 'POST') {
     const buf = await buffer(req);

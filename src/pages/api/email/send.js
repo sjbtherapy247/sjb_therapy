@@ -16,7 +16,7 @@ import SignUpEmail from 'src/components/email/SignupEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const { db } = createFirebaseAdminApp();
-const host = process.env.NODE_ENV === 'development' ? 'http://192.168.0.220:5002' : 'https://simo-dev.vercel.app'; /* : 'https://www.sjtherapy.com'; */
+const host = process.env.NODE_ENV === 'development' ? 'http://192.168.0.220:5002' : 'https://sjbtherapy.com';
 
 // Lets connect the email API server to the customer database
 const ref = db.ref('customers/');

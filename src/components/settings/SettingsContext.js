@@ -56,7 +56,7 @@ export function SettingsProvider({ children }) {
 
   const [user, loading, error] = useAuthState(auth);
 
-  const host = process.env.NODE_ENV === 'development' ? 'https://simo-dev.vercel.app' : 'https://simo-dev.vercel.app';
+  const host = process.env.NODE_ENV === 'development' ? 'https://simo-dev.vercel.app' : 'https://sjbtherapy.com';
 
   useEffect(() => {
     const purchaseRef = ref(db, 'purchases/');

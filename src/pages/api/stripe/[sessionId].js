@@ -2,7 +2,7 @@ import Stripe from 'stripe';
 import { createFirebaseAdminApp } from 'src/lib/createFireBaseAdminApp';
 
 const { db } = createFirebaseAdminApp();
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Dev);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_Simo_Prod);
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
