@@ -34,8 +34,8 @@ export default function AuthLoginForm() {
     password: Yup.string().required('Password is required').min(6, 'Password should be of minimum 6 characters length'),
   });
   const defaultValues = {
-    email: 'holymoly@this.com',
-    password: 'qwaszxer',
+    email: '',
+    password: '',
   };
   const methods = useForm({
     resolver: yupResolver(LoginSchema),
