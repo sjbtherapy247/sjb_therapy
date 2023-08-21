@@ -7,6 +7,11 @@ import ServiceView from 'src/sections/_simo/view/ServiceView';
 
 import { servicesDescription } from 'src/sections/_simo/services/updated-svcs';
 
+// import { Metadata } from 'next';
+//---------------------------------
+
+
+
 export async function getStaticPaths() {
   return {
     paths: servicesDescription.map((doc) => ({
@@ -30,6 +35,7 @@ export async function getStaticProps(context) {
   };
 }
 
+
 // ----------------------------------------------------------------------
 
 ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -37,11 +43,12 @@ ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function ServicePage({ serviceDoc, services }) {
-  console.log(services);
   return (
     <>
       <Head>
-        <title>{serviceDoc.title} | SJB Therapy</title>
+        <meta name="title" content={serviceDoc.title} />
+        <meta name="description" content={serviceDoc.description} />
+        <meta name="keywords" content={serviceDoc.tags} />
       </Head>
 
       <ServiceView service={serviceDoc} />

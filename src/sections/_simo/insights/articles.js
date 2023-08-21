@@ -2,8 +2,9 @@ export const research = [
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
     url: 'hypnotherapy-understanding-the-mind-body-connection',
+    keywords: 'understanding the mind body connection',
     buttonTitle: 'Our Hypnotherapy Services',
-    buttonLink: '/services#hypnotheraptServices',
+    buttonLink: '/services#hypnotherapyServices',
     services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
     title: 'The Science Behind Hypnotherapy: Understanding the Mind-Body Connection',
     description: "Hypnotherapy has gained recognition for its ability to harness the mind-body connection. Let's explore the scientific basis behind this powerful therapeutic approach.",
@@ -76,12 +77,12 @@ export const research = [
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b2',
     url: 'quit-smoking-with-hypnosis',
+    keywords: 'quit smoking with hypnosis',
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
     buttonLink: '/hypnotherapy-services/quit-smoking-with-hypnotherapy/',
     services: 'If would like to know more about our Quit Smoking Forever service.. .',
     title: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
-    description:
-      "Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let's explore how",
+    description: "Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let's explore how",
     category: 'Quit smoking',
     favorited: true,
     createdAt: '2023-03-29T23:21:51.781Z',
@@ -145,9 +146,10 @@ export const research = [
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b3',
     url: 'hypnotherapy-enhancing-your-sports-and-business-performance',
+    keywords: 'enhance your sports and business performence',
     buttonTitle: 'Services - Sports Hypnotherapy - TRANCEformd',
-    buttonLink: '/hypnotherapy-services/sports-hypnotherapy-tranceformd/',
-    services: "If you're ready to take the next step.. take a look at our services specific to your needs.",
+    buttonLink: '/hypnotherapy-services/performance-hypnotherapy-tranceformd/',
+    services: 'If you are ready to take the next step.. take a look at our services specific to your needs.',
     title: 'Harnessing the Power of Hypnotherapy for Enhanced Sports and Business Performance',
     description: 'Discover the transformative effects of hypnotherapy on sports and business performance. Unleash your full potential, overcome mental barriers, and achieve peak performance in your chosen field.',
     category: 'Sports and Business',
@@ -183,8 +185,11 @@ export const research = [
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
-    content: `<h4>Introduction:</h4>
-      <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximizing your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
+    content: 
+    
+    `<h4>Introduction:</h4>
+    
+    <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximising your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
 
       <h4>Benefits of Hypnotherapy for Sports and Business Performance:</h4>
 
@@ -215,19 +220,19 @@ export const research = [
       <h4>Conclusion:</h4>
       <p>In conclusion, hypnotherapy has emerged as a powerful tool for enhancing sports and business performance. By tapping into the immense power of the subconscious mind, individuals can overcome mental barriers, improve focus, increase motivation, and unleash their full potential. Whether you're an athlete seeking to achieve peak performance or a business professional striving for success, hypnotherapy can be a game-changer on your journey to excellence. Embrace the transformative possibilities of hypnotherapy, and elevate your sports and business performance to new heights.</p>
       
-      <p>Book your Free Discovery call today and let's start the TRANCEformation</p>`,
+      <p>Book your Free Discovery call today and let's start your TRANCEformation</p>`,
     coverImg: '/assets/images/marketing/marketing_3.jpg',
     heroImg: '/assets/images/marketing/marketing_post_01.jpg',
   },
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b4',
-    url: 'hypnotherapy-synergy',
+    url: 'hypnotherapy-synergy-with-psychotherapy',
+    keywords: 'hypnotherapy with psychotherapy',
     title: 'The Synergy of Hypnotherapy and Psychotherapy: A Powerful Healing Combination',
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
-    buttonLink: '/services#hypnotheraptServices',
+    buttonLink: '/services#hypnotherapyServices',
     services: "If you're ready to take the next step.. take a look at our services specific to your needs.",
-    description:
-      'I want to delve into a topic that lies at the heart of my practice: the dynamic synergy between hypnotherapy and psychotherapy. These two therapeutic approaches, when combined, create a powerful avenue for healing that goes beyond what either can achieve alone.',
+    description: 'I want to delve into a topic that lies at the heart of my practice: the dynamic synergy between hypnotherapy and psychotherapy. These two therapeutic approaches, when combined, create a powerful avenue for healing that goes beyond what either can achieve alone.',
     category: 'Marketing',
     favorited: false,
     createdAt: '2022-11-16T21:21:51.781Z',

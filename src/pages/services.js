@@ -4,7 +4,6 @@ import Head from 'next/head';
 import MainLayout from 'src/layouts/main';
 // sections
 import { ServicesView } from 'src/sections/_simo/view';
-
 import { servicesDescription } from 'src/sections/_simo/services/updated-svcs';
 import { sessionPricing } from 'src/sections/_simo/pricing/pricing';
 import { useEffect, useState } from 'react';
@@ -230,7 +229,9 @@ export default function ServicesPage({ servicesDocs, packages }) {
   return (
     <>
       <Head>
-        <title>Our Services | SJB Therapy</title>
+        <meta name="title" content="Hypnotherapy Services Sydney" />
+        <meta name="description" content="The hypnotherapy services we provide range from fears, phobias and anxieties, up to sporting and performance hypnosis. Read through and book your call today" />
+        <meta name="keywords" content="hypnotherapy, services, sydney" />
         <link rel="canonical" href={`${host}/services/`} />
         <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/services/`} />
       </Head>

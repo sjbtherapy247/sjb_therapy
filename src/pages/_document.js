@@ -2,13 +2,19 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 // next
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
+// import { Metadata } from 'next';
 // emotion
 import createEmotionServer from '@emotion/server/create-instance';
+
 // utils
 import createEmotionCache from 'src/utils/createEmotionCache';
 // theme
 import palette from 'src/theme/palette';
 import { primaryFont } from 'src/theme/typography';
+
+// Data & SEO
+// import TagManager from 'react-gtm-module';
 
 // ----------------------------------------------------------------------
 
@@ -23,30 +29,28 @@ const Favicon = () => (
 const Meta = () => (
   <>
     {/* PWA primary color */}
-    <meta name="theme-color" content={palette('dark').primary.dark} />
-    <meta
-      name="description"
-      content="Cultivating the power of hypnotherapy unlocks the gateway to personal transformation, enabling individuals to tap into their inner potential, overcome obstacles, and create positive and lasting change in their lives."
-    />
-    <meta name="keywords" content="hypnotherapy, psychotherapy, mental health, personal transformation" />
-    <meta name="author" content="TezD" />
-    {/* stop iOS causing hydration issues */}
-    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+    <meta name="Primary Colour" content={palette('dark').primary.dark} />
   </>
 );
 
 export default function MyDocument({ emotionStyleTags }) {
   return (
-    <Html lang="en" className={primaryFont.className}>
+    <Html lang="en-US" className={primaryFont.className}>
       <Head>
+      <Script id="gtmscript"strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KWSDD4C');`}} />
+      <meta name="theme-color" content={palette('light').primary.main} />
         <Favicon />
-        <Meta />
+        <Meta/>
         {/* Emotion */}
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}
-      </Head>
+        </Head>
       <body>
-        <Main />
+        <Main/>
+          <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSDD4C" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}} />
         <NextScript />
       </body>
     </Html>
@@ -82,7 +86,6 @@ MyDocument.getInitialProps = async (ctx) => {
     <style
       data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
-      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
   ));
