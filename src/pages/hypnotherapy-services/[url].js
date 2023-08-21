@@ -50,6 +50,7 @@ export default function ServicePage({ serviceDoc, services }) {
         <meta name="title" content={serviceDoc.title} />
         <meta name="description" content={serviceDoc.description} />
         <meta name="keywords" content={serviceDoc.tags} />
+
         
       </Head>
 

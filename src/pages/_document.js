@@ -15,7 +15,6 @@ import { primaryFont } from 'src/theme/typography';
 
 // Data & SEO
 // import TagManager from 'react-gtm-module';
-// import { DefaultSeoProps } from 'next-seo';
 
 // ----------------------------------------------------------------------
 
@@ -48,8 +47,7 @@ export default function MyDocument({ emotionStyleTags }) {
         {/* Emotion */}
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}
-
-      </Head>
+        </Head>
       <body>
         <Main/>
           <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSDD4C" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}} />
