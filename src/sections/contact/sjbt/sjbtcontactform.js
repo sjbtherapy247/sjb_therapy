@@ -59,7 +59,7 @@ export default function sjbtcontactform() {
         {isMdUp && (
           <Grid xs={12} md={6} lg={5}>
             <Image
-              alt="SjB Therapy Contact"
+              alt="travel-contact"
               src="/assets/illustrations/illustration_travel_contact.svg"
             />
           </Grid>
@@ -76,7 +76,7 @@ export default function sjbtcontactform() {
             <Typography variant="h3">Drop Us A Line</Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>
-              We will respond within 24 hours
+              I will respond within 24 hours
             </Typography>
           </Stack>
 

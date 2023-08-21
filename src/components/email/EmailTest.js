@@ -1,7 +1,7 @@
 import { Body, Button, Container, Head, Html, Hr, Img, Link, Preview, Section, Text } from '@react-email/components';
 
 const image = 'https://firebasestorage.googleapis.com/v0/b/sjbtherapy-365805.appspot.com/o/email.jpg?alt=media&token=5208b883-d055-4b40-9b08-9e2e07d88bc1';
-const host = process.env.NODE_ENV === 'development' ? 'http://192.168.0.220:5002' : 'https://simo-dev.vercel.app'; /* : 'https://www.sjtherapy.com'; */
+const host = process.env.NODE_ENV === 'development' ? 'http://192.168.0.220:5002' : 'https://sjbtherapy.com'; /* : 'https://www.sjtherapy.com'; */
 
 export const SJBTherapyEmailTest = ({ email, link, name }) => (
   // <Html>
