@@ -8,10 +8,10 @@ import * as Yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 // mui
-import { Box, Button, Container, Divider, FormControl, FormHelperText, Unstable_Grid2 as Grid, IconButton, InputAdornment, Link, Stack, TextField, Typography, alpha, useTheme } from '@mui/material';
+import { Box, Button, Unstable_Grid2 as Grid, IconButton, InputAdornment, Link, Stack, Typography, alpha, useTheme } from '@mui/material';
 import { _socialsSimo } from 'src/_mock';
 import Iconify from 'src/components/iconify/Iconify';
-import { useRef, useState } from 'react';
+// import { useRef, useState } from 'react';
 import { useSettingsContext } from 'src/components/settings';
 import { RHFTextField } from 'src/components/hook-form';
 import FormProvider from 'src/components/hook-form/FormProvider';
@@ -112,7 +112,8 @@ const Footer = () => {
             </Box>
             <Stack alignItems="flex-start" spacing={0}>
               <Typography variant="body2" textAlign="center" sx={{ color: 'text.secondary', opacity: 0.8 }}>
-                Simon Baker is a Sydney based clinical hypnotherapist and strategic Psychotherapist, who will give you the mental edge no matter what you&apos;re here for. Whether it&apos;s for performance, anxiety, weight loss or something else, you&apos;re in the right place.{' '}
+                Simon Baker is a Sydney based clinical hypnotherapist and strategic Psychotherapist, who will give you the mental edge no matter what you&apos;re here for. Whether it&apos;s for performance, anxiety, weight loss or something else,
+                you&apos;re in the right place.{' '}
               </Typography>
             </Stack>
             <Stack direction="row" justifyContent="space-between">

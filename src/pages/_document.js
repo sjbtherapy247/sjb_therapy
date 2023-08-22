@@ -37,20 +37,26 @@ export default function MyDocument({ emotionStyleTags }) {
   return (
     <Html lang="en-US" className={primaryFont.className}>
       <Head>
-      <Script id="gtmscript"strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        <Script
+          id="gtmscript"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KWSDD4C');`}} />
-      <meta name="theme-color" content={palette('light').primary.main} />
+      })(window,document,'script','dataLayer','GTM-KWSDD4C');`,
+          }}
+        />
+        <meta name="theme-color" content={palette('light').primary.dark} />
         <Favicon />
-        <Meta/>
+        <Meta />
         {/* Emotion */}
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}
-        </Head>
+      </Head>
       <body>
-        <Main/>
-          <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSDD4C" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}} />
+        <Main />
+        <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWSDD4C" height="0" width="0" style="display:none;visibility:hidden"></iframe>` }} />
         <NextScript />
       </body>
     </Html>
@@ -82,13 +88,7 @@ MyDocument.getInitialProps = async (ctx) => {
 
   const emotionStyles = extractCriticalToChunks(initialProps.html);
 
-  const emotionStyleTags = emotionStyles.styles.map((style) => (
-    <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
-      key={style.key}
-      dangerouslySetInnerHTML={{ __html: style.css }}
-    />
-  ));
+  const emotionStyleTags = emotionStyles.styles.map((style) => <style data-emotion={`${style.key} ${style.ids.join(' ')}`} key={style.key} dangerouslySetInnerHTML={{ __html: style.css }} />);
 
   return {
     ...initialProps,

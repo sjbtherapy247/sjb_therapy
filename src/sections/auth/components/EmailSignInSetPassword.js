@@ -5,7 +5,7 @@ import { auth, db } from 'src/lib/createFirebaseApp';
 import { useSettingsContext } from 'src/components/settings';
 import { useRouter } from 'next/router';
 import Iconify from 'src/components/iconify/Iconify';
-import { ref, update } from 'firebase/database';
+// import { ref, update } from 'firebase/database';
 import PasswordField from './PasswordField';
 
 const EmailSignInSetPassword = () => {

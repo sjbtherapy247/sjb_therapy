@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://simo-dev.vercel.app
+Host: https://sjbtherapy.com
 
 # Sitemaps
-Sitemap: https://simo-dev.vercel.app/sitemap.xml
+Sitemap: https://sjbtherapy.com/sitemap.xml

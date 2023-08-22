@@ -59,10 +59,6 @@ export default function ServicesView({ services, packages, prices }) {
         },
       });
       window.localStorage.setItem('emailForSignIn', responseJson?.customer_details?.email);
-      //   const purchaseRef = ref(db, `purchases/${responseJson.payment_intent.id.slice(-7).toUpperCase()}`);
-      //   console.log(responseJson);
-      //   update(purchaseRef, { line_items: responseJson.line_items.data[0] });
-      //   update(purchaseRef, { customer_details: responseJson.customer_details });
     } else {
       console.log('payment canceled!');
       console.log(responseJson);

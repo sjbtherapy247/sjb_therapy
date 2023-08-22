@@ -1,5 +1,5 @@
 const config = {
-  siteUrl: 'https://dev247.sjbtherapy.com',
+  siteUrl: 'https://sjbtherapy.com',
   generateRobotsTxt: true, // (Optional parameter for creating robots.txt file)
   // Other available options..
 };
