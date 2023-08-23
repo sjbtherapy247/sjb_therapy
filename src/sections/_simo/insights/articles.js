@@ -68,9 +68,7 @@ export const research = [
 
       <p>Simply put, hypnotherapy harnesses the mind-body connection for transformative change, backed by scientific evidence.</p>
 
-      <p>If you're ready to take the next step and change your life through hypnotherapy, book your free discovery call now</p>
-
-`,
+      <p>If you're ready to take the next step and change your life through hypnotherapy, book your free discovery call now</p>`,
     coverImg: '/assets/images/marketing/marketing_1.jpg',
     heroImg: '/assets/images/marketing/marketing_post_hero.jpg',
   },
@@ -82,7 +80,8 @@ export const research = [
     buttonLink: '/hypnotherapy-services/quit-smoking-with-hypnotherapy/',
     services: 'If would like to know more about our Quit Smoking Forever service.. .',
     title: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
-    description: "Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let's explore how",
+    description:
+      "Quitting smoking is a challenging journey, but with the right approach, it becomes an empowering and life-changing experience. Clinical hypnosis has emerged as a highly effective method to break free from the grip of smoking addiction. Let's explore how",
     category: 'Quit smoking',
     favorited: true,
     createdAt: '2023-03-29T23:21:51.781Z',
@@ -185,9 +184,7 @@ export const research = [
       quotes: 'Member since Mar 15, 2022',
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
-    content: 
-    
-    `<h4>Introduction:</h4>
+    content: `<h4>Introduction:</h4>
     
     <p>In the world of sports and business, performance is everything. Whether you're an athlete striving for athletic excellence or a professional aiming for success in the corporate arena, maximising your performance and reaching your goals is a top priority. While training, skill development, and strategy are essential components, the power of the mind often goes unrecognised. This is where hypnotherapy comes into play. Hypnotherapy, a therapeutic technique that taps into the subconscious mind, can be a game-changer when it comes to unlocking your true potential and achieving outstanding performance.</p>
 
@@ -232,7 +229,8 @@ export const research = [
     buttonTitle: 'Services - Quit Smoking with Hypnotherapy',
     buttonLink: '/services#hypnotherapyServices',
     services: "If you're ready to take the next step.. take a look at our services specific to your needs.",
-    description: 'I want to delve into a topic that lies at the heart of my practice: the dynamic synergy between hypnotherapy and psychotherapy. These two therapeutic approaches, when combined, create a powerful avenue for healing that goes beyond what either can achieve alone.',
+    description:
+      'I want to delve into a topic that lies at the heart of my practice: the dynamic synergy between hypnotherapy and psychotherapy. These two therapeutic approaches, when combined, create a powerful avenue for healing that goes beyond what either can achieve alone.',
     category: 'Marketing',
     favorited: false,
     createdAt: '2022-11-16T21:21:51.781Z',

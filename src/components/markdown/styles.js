@@ -14,7 +14,7 @@ const StyledMarkdown = styled('div', {
   // Heading
   '& h1': { ...MARGIN, ...theme.typography.h1 },
   '& h2': { ...MARGIN, ...theme.typography.h2 },
-  '& h3': { ...MARGIN, ...theme.typography.h3 },
+  '& h3': { ...MARGIN, ...theme.typography.h4 },
   '& h4': { ...MARGIN, ...theme.typography.h4 },
   '& h5': { ...MARGIN, ...theme.typography.h5 },
   '& h6': { ...MARGIN, ...theme.typography.h6 },
