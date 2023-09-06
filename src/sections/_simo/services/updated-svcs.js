@@ -95,14 +95,14 @@ export const servicesDescription = [
     icon: '/assets/icons/mental-health/quit-smoking-head-icon.png',
   },
   {
-  title: 'Stress Management Techniques',
-  url: 'hypnosis-for-stress-management',
-  tags: 'stress management techniques',
-  buttonTitle: 'Insights - Powerful Healing Benefits',
-  buttonLink: '/insights/hypnotherapy-synergy/',
-  insights: 'For more information on how hypnotherapy can help you to harness your potential, please see our InSights article.',
-  description: 'Looking for Stress management techniques, relaxation exercises or mindfulness practices to help manage stress and improve overall well-being?',
-  content: `<title>Stress Management Techniques</title>
+    title: 'Stress Management Techniques',
+    url: 'hypnosis-for-stress-management',
+    tags: 'stress management techniques',
+    buttonTitle: 'Insights - Powerful Healing Benefits',
+    buttonLink: '/insights/hypnotherapy-synergy/',
+    insights: 'For more information on how hypnotherapy can help you to harness your potential, please see our InSights article.',
+    description: 'Looking for Stress management techniques, relaxation exercises or mindfulness practices to help manage stress and improve overall well-being?',
+    content: `<title>Stress Management Techniques</title>
 
   <p>Are you grappling with the constant strain of everyday life? Stress is a universal experience, but mastering effective techniques to manage it can be challenging. That's where hypnotherapy comes in. My evidence-based and personalised approach can help you regain control and embrace a more balanced life.</p>
 
@@ -197,7 +197,7 @@ export const servicesDescription = [
     <h5>Book Your Free Discovery Call</h5>
   
     <p>Ready to take control of your journey towards a healthier you? Book your free discovery call with me, and let's discuss how hypnosis can support your weight loss and eating disorder goals.</p>`,
-    heroImg: '/assets/images/simon/weight-loss-binge-eating-med-sjbtherapy.webp',
+    heroImg: '/assets/images/simon/weight-loss-binge-eating-med-sjbtherapy.jpeg',
     icon: '/assets/icons/mental-health/weight-loss-binge-eating-icon-sjbtherapy.png',
   },
   {
@@ -241,7 +241,8 @@ export const servicesDescription = [
     tags: 'hypnotherapy for depression and low self esteem',
     buttonTitle: 'Insights - Hypnotherapy and Psychotherapy',
     buttonLink: '/insights/hypnotherapy-synergy/',
-    insights: '*Note, I am not a medical doctor and these sessions are to help alieviate symptoms and change your subconscious mindset towards a brighter future. If you have experienced deeply personal childhood trauma or trauma of a sexual nature and have not talked to anyone about this yet, I recommend seeing your GP first to understand what help is available to you, given the correct diagnosis. I do work with other professionals to create a better outcome for clients, so please follow the GPs advice and then feel free to contact me to discuss your options.',
+    insights:
+      '*Note, I am not a medical doctor and these sessions are to help alieviate symptoms and change your subconscious mindset towards a brighter future. If you have experienced deeply personal childhood trauma or trauma of a sexual nature and have not talked to anyone about this yet, I recommend seeing your GP first to understand what help is available to you, given the correct diagnosis. I do work with other professionals to create a better outcome for clients, so please follow the GPs advice and then feel free to contact me to discuss your options.',
     description: 'Using hypnotherapy for depression and low self esteem is the way to get back control of your subconscious mind and develop mental strength. Book your session today.',
     content: `<h4>Hypnotherapy for depression and low self esteem</h4>
 

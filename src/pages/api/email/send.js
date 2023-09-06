@@ -71,6 +71,7 @@ export default async function handler(req, res) {
             const data = await resend.emails.send({
               from: 'onboarding@sjbtherapy.com',
               to: email,
+              bcc: 'digital@sjbtherapy.com',
               subject: 'Welcome to SJB Therapy',
               html: '<strong>Please finalise your account setup</strong>',
               react: SignUpEmail({ link, email, name }),
