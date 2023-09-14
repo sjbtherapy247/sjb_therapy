@@ -62,7 +62,7 @@ export default function AccountMediaView() {
         >
           <Block label="Session Audio Recordings">
             <Autocomplete
-              options={OPTIONS}
+              options={audio}
               getOptionLabel={(option) => option.label}
               isOptionEqualToValue={(option, value) => option.label === value.label}
               value={music}
