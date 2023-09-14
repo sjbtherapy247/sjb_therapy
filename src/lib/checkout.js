@@ -3,10 +3,8 @@ import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_Simo_Prod);
 
 export const checkout = async (items, custId) => {
-  console.log(items);
   try {
     const lineitems = items.map((product) => ({ price: product.id, quantity: 1 }));
-    console.log(lineitems, custId);
     const response = await fetch('/api/stripe/', {
       method: 'POST',
       headers: {
@@ -16,7 +14,6 @@ export const checkout = async (items, custId) => {
     });
     if (!response.ok) throw new Error('failed to fetch stripe session');
     const data = await response.json();
-    console.log(data);
 
     const stripe = await stripePromise;
     const { error } = await stripe.redirectToCheckout({ sessionId: data.session.id });

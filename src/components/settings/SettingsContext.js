@@ -64,7 +64,6 @@ export function SettingsProvider({ children }) {
     let listener = () => {};
     let custlistener = () => {};
     if (user) {
-      console.log('user loaded', user);
       if (user.photoURL) setAvatar(user.photoURL);
       listener = onValue(purchaseRef, (snapshot) => {
         if (snapshot.val()) {
@@ -77,7 +76,6 @@ export function SettingsProvider({ children }) {
         if (snapshot.val()) {
           const customers = Object?.values(snapshot.val());
           const cust = customers.filter((item) => item.email === user.email);
-          console.log('custIds loaded', cust);
           setCustId(cust[0]?.id);
           setClient({ ...cust[0] });
         }

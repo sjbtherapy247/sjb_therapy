@@ -41,8 +41,6 @@ export default function VerificationView() {
   } = useSettingsContext();
 
   const verifyUser = async (oobCode, mode) => {
-    console.log('verify fct ran');
-
     if (oobCode) {
       dispatch({ type: 'START_LOADING' });
 

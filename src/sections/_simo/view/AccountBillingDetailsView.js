@@ -17,7 +17,6 @@ export default function AccountPersonalView() {
 
   const { name, email, address } = productsTable.length ? productsTable[0].billing_details : { name: '', email: '', address: {} };
 
-  console.log(productsTable);
   return (
     <AccountLayout>
       <Container>

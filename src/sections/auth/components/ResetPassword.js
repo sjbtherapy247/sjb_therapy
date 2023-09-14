@@ -15,7 +15,6 @@ const ResetPassword = () => {
     dispatch({ type: 'START_LOADING' });
     try {
       // await resetPassword(emailRef.current.value);
-      console.log('Reset password email sent!');
       // close the modal
       dispatch({ type: 'MODAL', payload: { ...modal, open: false } });
 

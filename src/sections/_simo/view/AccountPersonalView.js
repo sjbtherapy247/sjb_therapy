@@ -93,7 +93,6 @@ export default function AccountPersonalView() {
     if (phone === '' && productsTable?.length) {
       resetValues.phoneNumber = productsTable[0]?.customer_details.phone;
       update(ref(db, `customers/${custId}`), { phone: productsTable[0]?.customer_details.phone });
-      console.log('phone blank', productsTable);
     }
 
     reset(resetValues);
@@ -105,7 +104,6 @@ export default function AccountPersonalView() {
     try {
       // await new Promise((resolve) => setTimeout(resolve, 500));
       // reset();
-      console.log('DATA', data);
       await update(ref(db, `customers/${custId}/acct_per_details`), data);
       dispatch({
         type: 'UPDATE_ALERT',

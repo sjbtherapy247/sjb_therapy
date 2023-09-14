@@ -37,7 +37,6 @@ export default function ServicesPage({ servicesDocs, packages }) {
       body: JSON.stringify({ api_key: process.env.NEXT_PUBLIC_API_ROUTE_SECRET }),
     }).then((res) => res.json());
     setPricelist(price);
-    console.log('pricelist fetch', price);
   };
 
   useEffect(() => {

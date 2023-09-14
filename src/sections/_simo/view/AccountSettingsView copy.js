@@ -65,7 +65,6 @@ export default function AccountSettingsView() {
 
   const onSubmit = async (data) => {
     dispatch({ type: 'START_LOADING' });
-    console.log('DATA', data);
 
     // try {
     //   try {

@@ -63,7 +63,6 @@ export default function PurchaseSuccess({ checkout }) {
           api_key: process.env.NEXT_PUBLIC_API_ROUTE_SECRET,
         }),
       }).then((res) => res.json());
-      console.log(response);
     } catch (error) {
       console.error(error);
     }

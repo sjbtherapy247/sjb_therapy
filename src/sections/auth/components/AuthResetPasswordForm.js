@@ -63,7 +63,6 @@ export default function AuthResetPasswordForm() {
         }),
       });
       const resJson = await response.json();
-      console.log(resJson);
       router.push('/');
 
       dispatch({

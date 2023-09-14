@@ -31,7 +31,6 @@ const EmailSignInSetPassword = () => {
     savedEmailRef.current = window.localStorage.getItem('emailForSignIn');
     // no email render the email input box
     if (!savedEmailRef.current) setEmailSaved(false);
-    console.log('setEmail ran');
   }, []);
 
   const handleSubmit = async (e) => {
@@ -58,7 +57,6 @@ const EmailSignInSetPassword = () => {
     try {
       // The client SDK will parse the code from the link for you.
       const result = await signInWithEmailLink(auth, email, window.location.href);
-      console.log(result.user);
       // pick a profile pic from /assets/images/avatar/avatar_x
       const pic = Math.floor(Math.random() * 25);
       setAvatar(`/assets/images/avatar/avatar_${pic}.jpg`);

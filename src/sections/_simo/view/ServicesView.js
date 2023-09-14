@@ -34,7 +34,6 @@ export default function ServicesView({ services, packages, prices }) {
       query: { sessionId },
     } = router;
     if (sessionId) {
-      console.log('calling getcheckoutsession');
       getCheckoutSession(sessionId);
     }
   }, [router.isReady]);
@@ -61,7 +60,6 @@ export default function ServicesView({ services, packages, prices }) {
       window.localStorage.setItem('emailForSignIn', responseJson?.customer_details?.email);
     } else {
       console.log('payment canceled!');
-      console.log(responseJson);
     }
   }
   return (

@@ -46,8 +46,6 @@ export default function AccountMediaView() {
     getAudios();
   }, []);
 
-  console.log(audio);
-
   return (
     <AccountLayout>
       <Container>
