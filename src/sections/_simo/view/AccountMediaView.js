@@ -19,8 +19,11 @@ import { AccountLayout } from '../layout';
 // ----------------------------------------------------------------------
 
 export default function AccountMediaView() {
-
   const OPTIONS = [
+    {
+      link: 'https://firebasestorage.googleapis.com/v0/b/sjbtherapy-365805.appspot.com/o/Client%20Audios%2FSP01%2FSjB%20Therapy%20Session%201%20Audio%20-%20SP01%20131123.mp3?alt=media&token=952d63ae-68de-4171-97d0-b5b18aaaaaad',
+      label: 'SJB Therapy Session 1',
+    },
     { link: '/assets/relax-mp3/fireflies.mp3', label: 'Fireflies' },
     { link: '/assets/relax-mp3/catch-my-breath.mp3', label: 'Just Breath' },
     { link: '/assets/relax-mp3/mindfulness-journey.mp3', label: 'Mindfulness Awaits' },
@@ -29,14 +32,15 @@ export default function AccountMediaView() {
     { link: `https://www.dropbox.com/s/7cx04n8rr4w5rbg/video_02.mp4?dl=0`, label: 'Silent Video' },
   ];
 
-  const [music, setMusic] = useState(OPTIONS[0]);
+  const [music, setMusic] = useState(null);
+  // const [music, setMusic] = useState(OPTIONS[0]);
   const [play, setPlay] = useState(false);
 
   return (
     <AccountLayout>
       <Container>
         <Typography variant="h3" sx={{ mb: 5 }}>
-          Music and Therapy Session Audio
+          Therapy Session Audio & Music
         </Typography>
         <Box
           gap={3}
@@ -57,7 +61,7 @@ export default function AccountMediaView() {
                 setMusic(newValue);
                 setPlay(true);
               }}
-              renderInput={(params) => <TextField {...params} label="Music to help you relax!" />}
+              renderInput={(params) => <TextField {...params} label="Choose " />}
             />
           </Block>
 
