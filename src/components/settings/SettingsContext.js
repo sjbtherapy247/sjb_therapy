@@ -95,7 +95,10 @@ export function SettingsProvider({ children }) {
       //   }
       // });
     }
-    return () => listener();
+    return () => {
+      listener();
+      custlistener();
+    };
   }, [user]);
 
   // looks for cookie in local storage with thememode - so that theme persists across tabs

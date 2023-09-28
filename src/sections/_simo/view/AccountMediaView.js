@@ -16,6 +16,7 @@ import Player from 'src/components/player/Player';
 import { listAll, ref, getDownloadURL } from 'firebase/storage';
 import { storage } from 'src/lib/createFirebaseApp';
 // import { fi } from 'date-fns/locale';
+import { useSettingsContext } from 'src/components/settings';
 import { AccountLayout } from '../layout';
 // ----------------------------------------------------------------------
 
@@ -26,12 +27,15 @@ export default function AccountMediaView() {
     { link: '/assets/relax-mp3/mindfulness-journey.mp3', label: 'Mindfulness Awaits' },
   ];
 
+  const { client } = useSettingsContext();
+
   const [music, setMusic] = useState(null);
   const [play, setPlay] = useState(false);
   const [audio, setAudio] = useState([]);
 
   async function getAudios() {
-    const fileRef = ref(storage, 'Client Audios/SP01');
+    if (!client?.email) return;
+    const fileRef = ref(storage, `Client_Audios/${client?.email}`);
     listAll(fileRef).then((res) => {
       const audioList = [];
       res.items.forEach(async (itemRef) => {
@@ -44,13 +48,13 @@ export default function AccountMediaView() {
 
   useEffect(() => {
     getAudios();
-  }, []);
+  }, [client]);
 
   return (
     <AccountLayout>
       <Container>
         <Typography variant="h3" sx={{ mb: 5 }}>
-          Therapy Session Audio & Music
+          Therapy Session Audios & Updates
         </Typography>
         <Box
           gap={3}
