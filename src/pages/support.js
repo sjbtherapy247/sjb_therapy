@@ -1,11 +1,19 @@
 // next
 import Head from 'next/head';
 // layouts
-import MainLayout from 'src/layouts/main';
 import SimpleLayout from 'src/layouts/simple/SimpleLayout';
 // sections
 import { SupportView } from 'src/sections/support/view';
 
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Client Support | SJB Therapy',
+      canonical: 'https://sjbtherapy.com/support/',
+    },
+  };
+}
 // ----------------------------------------------------------------------
 
 SupportPage.getLayout = (page) => <SimpleLayout>{page}</SimpleLayout>;

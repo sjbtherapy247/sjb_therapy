@@ -1,5 +1,4 @@
 // next
-import Head from 'next/head';
 import { useSettingsContext } from 'src/components/settings';
 // sections
 import { LoginCoverView } from 'src/sections/auth/view';
@@ -7,6 +6,14 @@ import { useRouter } from 'next/router';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 import { useEffect } from 'react';
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Client Login | SJB Therapy',
+      canonical: 'https://sjbtherapy.com/auth/login-cover/',
+    },
+  };
+}
 // ----------------------------------------------------------------------
 
 export default function LoginCoverPage() {
@@ -15,7 +22,7 @@ export default function LoginCoverPage() {
 
   useEffect(() => {
     if (!loading && user) {
-      router.back();
+      router.push('/');
     }
   }, [user, loading]);
 
@@ -23,13 +30,5 @@ export default function LoginCoverPage() {
     return <LoadingScreen />;
   }
   // !loading !user
-  return (
-    <>
-      <Head>
-        <title>Login | SJB Therapy</title>
-      </Head>
-
-      <LoginCoverView />
-    </>
-  );
+  return <LoginCoverView />;
 }

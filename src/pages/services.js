@@ -15,6 +15,10 @@ export async function getStaticProps() {
     props: {
       servicesDocs: [...servicesDescription],
       packages: [...sessionPricing],
+      title: 'Hypnotherapy Services - SJB Therapy',
+      description: 'The hypnotherapy services we provide range from fears, phobias and anxieties, up to sporting and performance hypnosis. Read through and book your call today',
+      canonical: 'https://sjbtherapy.com/services/',
+      keywords: 'hypnotherapy, physcotherapy, services sydney, weight loss, anxiety, sports performance, insomnia, quit smoking, depression',
     },
   };
 }
@@ -50,17 +54,5 @@ export default function ServicesPage({ servicesDocs, packages }) {
     return <LoadingScreen />;
   }
 
-  return (
-    <>
-      <Head>
-        <meta name="title" content="Hypnotherapy Services Sydney" />
-        <meta name="description" content="The hypnotherapy services we provide range from fears, phobias and anxieties, up to sporting and performance hypnosis. Read through and book your call today" />
-        <meta name="keywords" content="hypnotherapy, services, sydney" />
-        <link rel="canonical" href={`${host}/services/`} />
-        <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/services/`} />
-      </Head>
-
-      <ServicesView services={servicesDocs} packages={packages} prices={pricelist} />
-    </>
-  );
+  return <ServicesView services={servicesDocs} packages={packages} prices={pricelist} />;
 }

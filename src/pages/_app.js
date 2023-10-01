@@ -42,35 +42,69 @@ import Modal from 'src/components/modal/Modal';
 // import { NextSeo } from 'next-seo';
 // import metadata from 'next'
 
-
 // ----------------------------------------------------------------------
 
 const clientSideEmotionCache = createEmotionCache();
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
+  const defaultTitle = 'SJB Therapy - Your next step to a better you!!';
+  const defaultDescription =
+    'SjB Therapy is a hypnotherapy practice dedicated to helping people improve their lives. Through the use hypnosis we help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.';
+  const defaultUrl = 'https://sjbtherapy';
+  const defaultImage = 'https://sjbtherapy/assets/sjb-logo/Hmain-darker.jpg';
+  const defaultKeywords = 'hypnotherapy, mental health, physcotherapy, well being, healing';
+  const { title, description, image, canonical, keywords } = pageProps;
+
+  const openGraphData = [
+    { property: 'og:type', content: 'website' },
+    { property: 'og:site_name', content: title || defaultTitle },
+    { property: 'og:description', content: description || defaultDescription },
+    { property: 'og:title', content: title || defaultTitle },
+    { property: 'og:url', content: canonical || defaultUrl },
+    { property: 'og:image', content: image || defaultImage },
+    { property: 'og:image:alt', content: defaultTitle },
+    { property: 'og:image:width', content: '960' },
+    { property: 'og:image:height', content: '675' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title || defaultTitle },
+    { name: 'twitter:description', content: description || defaultDescription },
+    { name: 'twitter:image', content: image || defaultImage },
+    { property: 'twitter:url', content: canonical || defaultUrl },
+    { property: 'twitter:domain', content: 'sjbtherapy' },
+    { property: 'twitter:image', content: image || defaultImage },
+  ];
+
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
-    <CacheProvider value={emotionCache}>
+    <>
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>{title || defaultTitle}</title>
+        <meta name="description" content={description || defaultDescription} />
+        <meta name="keywords" content={keywords || defaultKeywords} />
+        {openGraphData.map((og) => (
+          <meta key={og.property || og.name} {...og} />
+        ))}
+        <link rel="canonical" href={canonical || defaultUrl} />
+        <link rel="alternate" media="only screen and (max-width: 640px)" href={canonical || defaultUrl} />
       </Head>
-
-      <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
-        <SettingsProvider>
-          <ThemeProvider>
-            <LoadingCircular />
+      <CacheProvider value={emotionCache}>
+        <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
+          <SettingsProvider>
+            <ThemeProvider>
+              <LoadingCircular />
               <Modal />
-                <Notification />
-                  <MotionLazyContainer>
-                 <ProgressBar />
-              {getLayout(<Component {...pageProps} />)}
-            </MotionLazyContainer>
-          </ThemeProvider>
-        </SettingsProvider>
-      </LocalizationProvider>
-    </CacheProvider>
+              <Notification />
+              <MotionLazyContainer>
+                <ProgressBar />
+                {getLayout(<Component {...pageProps} />)}
+              </MotionLazyContainer>
+            </ThemeProvider>
+          </SettingsProvider>
+        </LocalizationProvider>
+      </CacheProvider>
+    </>
   );
 }
 

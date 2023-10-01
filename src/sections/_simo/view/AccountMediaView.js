@@ -1,12 +1,6 @@
 // next
 // @mui
 import { Box, Container, Typography, Stack, Autocomplete, TextField } from '@mui/material';
-
-// fb
-// import { db } from 'src/lib/createFirebaseApp';
-// import { ref, onValue } from 'firebase/database';
-// components
-import Iconify from 'src/components/iconify';
 //
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -33,20 +27,19 @@ export default function AccountMediaView() {
   const [play, setPlay] = useState(false);
   const [audio, setAudio] = useState([]);
 
-  async function getAudios() {
-    if (!client?.email) return;
-    const fileRef = ref(storage, `Client_Audios/${client?.email}`);
-    listAll(fileRef).then((res) => {
-      const audioList = [];
-      res.items.forEach(async (itemRef) => {
-        const link = await getDownloadURL(itemRef);
-        audioList.push({ link, label: itemRef.name.split('.')[0] });
-      });
-      setAudio(audioList);
-    });
-  }
-
   useEffect(() => {
+    async function getAudios() {
+      const fileRef = ref(storage, `Client_Audios/${client?.email}`);
+      listAll(fileRef).then((res) => {
+        const audioList = [];
+        res.items.forEach(async (itemRef) => {
+          const link = await getDownloadURL(itemRef);
+          audioList.push({ link, label: itemRef.name.split('.')[0] });
+        });
+        setAudio(audioList);
+      });
+    }
+    if (!client?.email) return;
     getAudios();
   }, [client]);
 

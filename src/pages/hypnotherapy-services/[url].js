@@ -10,8 +10,6 @@ import { servicesDescription } from 'src/sections/_simo/services/updated-svcs';
 // import { Metadata } from 'next';
 //---------------------------------
 
-
-
 export async function getStaticPaths() {
   return {
     paths: servicesDescription.map((doc) => ({
@@ -31,10 +29,14 @@ export async function getStaticProps(context) {
       // researchDocs: [...research],
       serviceDoc,
       services: servicesDescription,
+      title: serviceDoc.title || 'Research Article',
+      description: serviceDoc.description,
+      keywords: serviceDoc.keywords,
+      canonical: `https://sjbtherapy.com/hypnotherapy-services/${serviceDoc.url}`,
+      image: `https://sjbtherapy.com${serviceDoc.heroImg}`,
     },
   };
 }
-
 
 // ----------------------------------------------------------------------
 

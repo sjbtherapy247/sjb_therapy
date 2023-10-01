@@ -1,18 +1,17 @@
 // next
-import Head from 'next/head';
 // sections
 import { VerificationView } from 'src/sections/auth/view';
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Client Verification | SJB Therapy',
+      canonical: 'https://sjbtherapy.com/auth/verification/',
+    },
+  };
+}
 // ----------------------------------------------------------------------
 
 export default function RegisterCoverPage() {
-  return (
-    <>
-      <Head>
-        <title>Verification | SJB Therapy</title>
-      </Head>
-
-      <VerificationView />
-    </>
-  );
+  return <VerificationView />;
 }

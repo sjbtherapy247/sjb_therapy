@@ -13,6 +13,10 @@ export async function getStaticProps() {
   return {
     props: {
       researchDocs: [...research],
+      title: 'Hypnotherapy Research & InSights | SJB Therapy',
+      description: 'Hypnotherapy Research and InSights - SjB Therapy',
+      canonical: 'https://sjbtherapy.com/insights/',
+      keywords: 'insights, hypnotherapy, physcotherapy, research articles',
     },
   };
 }
@@ -28,18 +32,5 @@ export default function ResearchPage({ researchDocs }) {
   if (loading) {
     return <LoadingScreen />;
   }
-  return (
-    <>
-      <Head>
-        <meta name="title" content="Hypnotherapy Research & InSights | SJB Therapy" />
-        <meta name="description" content="Hypnotherapy Research and InSights - SjB Therapy" />
-        <meta name="keywords" content="insights, hypnotherapy, research," />
-        <title>Hypnotherapy Research & InSights | SJB Therapy</title>
-        <link rel="canonical" href={`${host}/insights/`} />
-        <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/insights/`} />
-      </Head>
-
-      <ResearchView researchDocs={researchDocs} />
-    </>
-  );
+  return <ResearchView researchDocs={researchDocs} />;
 }

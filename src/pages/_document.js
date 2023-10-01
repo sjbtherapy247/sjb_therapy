@@ -28,8 +28,11 @@ const Favicon = () => (
 
 const Meta = () => (
   <>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {/* stop iOS causing hydration issues */}
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
     {/* PWA primary color */}
-    <meta name="Primary Colour" content={palette('dark').primary.dark} />
+    <meta name="theme-color" content={palette('light').primary.dark} />
   </>
 );
 
@@ -37,6 +40,8 @@ export default function MyDocument({ emotionStyleTags }) {
   return (
     <Html lang="en-US" className={primaryFont.className}>
       <Head>
+        <Favicon />
+        <Meta />
         <Script
           id="gtmscript"
           strategy="afterInteractive"
@@ -47,9 +52,6 @@ export default function MyDocument({ emotionStyleTags }) {
       })(window,document,'script','dataLayer','GTM-KWSDD4C');`,
           }}
         />
-        <meta name="theme-color" content={palette('light').primary.dark} />
-        <Favicon />
-        <Meta />
         {/* Emotion */}
         <meta name="emotion-insertion-point" content="" />
         {emotionStyleTags}

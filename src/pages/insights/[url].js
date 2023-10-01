@@ -25,6 +25,11 @@ export async function getStaticProps(context) {
     props: {
       researchDocs: [...research],
       researchDoc,
+      title: researchDoc.title || 'Research Article',
+      description: researchDoc.description,
+      keywords: researchDoc.keywords,
+      canonical: `https://sjbtherapy.com/insights/${researchDoc.url}`,
+      image: `https://sjbtherapy.com${researchDoc.heroImg}`,
     },
   };
 }
@@ -39,7 +44,6 @@ export default function ResearchArticlePage({ researchDoc, researchDocs }) {
   return (
     <>
       <Head>
-    
         <meta name="title" content={researchDoc.title} />
         <meta name="description" content={researchDoc.description} />
         <meta name="keywords" content={researchDoc.keywords} />

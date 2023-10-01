@@ -8,6 +8,17 @@ import { MissionView } from 'src/sections/_simo/view';
 import { useSettingsContext } from 'src/components/settings';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Our Mission | SJB Therapy',
+      description: `Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found.`,
+      canonical: 'https://sjbtherapy.com/mission/',
+      keywords: 'Our Mission, healing and performance',
+    },
+  };
+}
+
 // ----------------------------------------------------------------------
 
 OurMissionPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -19,18 +30,5 @@ export default function OurMissionPage() {
   if (loading) {
     return <LoadingScreen />;
   }
-  return (
-    <>
-      <Head>
-        <title>Our Mission | SJB Therapy</title>
-        <link rel="canonical" href={`${host}/mission/`} />
-        <link rel="alternate" media="only screen and (max-width: 640px)" href={`${host}/mission/`} />
-        <meta name="Our Mission" content="Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found." />
-        <meta name="keywords" content="Our Mission, healing and performance" />
-        <meta name="description" content="Our mission is to combine healing and performance to everything we do. Your healing and mental strength is our passion and we will not stop until it's found." />
-      </Head>
-
-      <MissionView />
-    </>
-  );
+  return <MissionView />;
 }
