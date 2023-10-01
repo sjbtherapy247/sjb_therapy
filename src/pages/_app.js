@@ -52,7 +52,7 @@ export default function MyApp(props) {
   const defaultDescription =
     'SjB Therapy is a hypnotherapy practice dedicated to helping people improve their lives. Through the use hypnosis we help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.';
   const defaultUrl = 'https://sjbtherapy';
-  const defaultImage = 'https://sjbtherapy/assets/sjb-logo/Hmain-darker.jpg';
+  const defaultImage = 'https://sjbtherapy.com/assets/sjb-logo/Hmain-darker.jpg';
   const defaultKeywords = 'hypnotherapy, mental health, physcotherapy, well being, healing';
   const { title, description, image, canonical, keywords } = pageProps;
 
@@ -64,8 +64,8 @@ export default function MyApp(props) {
     { property: 'og:url', content: canonical || defaultUrl },
     { property: 'og:image', content: image || defaultImage },
     { property: 'og:image:alt', content: defaultTitle },
-    { property: 'og:image:width', content: '960' },
-    { property: 'og:image:height', content: '675' },
+    { property: 'og:image:width', content: '1088' },
+    { property: 'og:image:height', content: '718' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: title || defaultTitle },
     { name: 'twitter:description', content: description || defaultDescription },
