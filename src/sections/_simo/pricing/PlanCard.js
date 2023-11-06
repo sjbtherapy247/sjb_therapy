@@ -30,8 +30,8 @@ export default function PlanCard({ plan, prices }) {
 
   if (prices) {
     purchase = prices.filter((item) => item?.product?.name === stripeName);
-    if (license === 'Single Session' && user) purchase.pop();
-    if (license === 'Single Session' && !user) purchase.shift();
+    if (license === 'Single Session' && !user) purchase.pop();
+    if (license === 'Single Session' && user) purchase.shift();
 
     itemPrice = purchase[0].unit_amount / 100;
   }
