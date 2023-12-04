@@ -29,7 +29,8 @@ export default function AccountMediaView() {
 
   useEffect(() => {
     async function getAudios() {
-      const fileRef = ref(storage, `Client_Audios/${client?.email}`);
+      const fileRef = ref(storage, `Client_Audios/sjbtherapy_all_audios`);
+      const sjbtherapyFileRef = ref(storage, `Client_Audios/${client?.email}`);
       listAll(fileRef).then((res) => {
         const audioList = [];
         res.items.forEach(async (itemRef) => {
