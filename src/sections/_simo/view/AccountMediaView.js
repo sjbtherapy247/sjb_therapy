@@ -26,18 +26,31 @@ export default function AccountMediaView() {
   const [music, setMusic] = useState(null);
   const [play, setPlay] = useState(false);
   const [audio, setAudio] = useState([]);
+  const [audioSJB, setAudioSJB] = useState([]);
 
   useEffect(() => {
     async function getAudios() {
-      const fileRef = ref(storage, `Client_Audios/sjbtherapy_all_audios`);
-      const sjbtherapyFileRef = ref(storage, `Client_Audios/${client?.email}`);
+      const sjbtherapyFileRef = ref(storage, `Client_Audios/sjbtherapy_all_audio`);
+      const fileRef = ref(storage, `Client_Audios/${client?.email}`);
+      const clientAudio = [];
+      const sjbAudio = [];
+      const allAudio = [];
+      // const allAudio = []
       listAll(fileRef).then((res) => {
-        const audioList = [];
         res.items.forEach(async (itemRef) => {
           const link = await getDownloadURL(itemRef);
-          audioList.push({ link, label: itemRef.name.split('.')[0] });
+          clientAudio.push({ link, label: itemRef.name.split('.')[0] });
+          allAudio.push({ link, label: itemRef.name.split('.')[0] });
         });
-        setAudio(audioList);
+        setAudio(clientAudio);
+      });
+      listAll(sjbtherapyFileRef).then((res) => {
+        res.items.forEach(async (itemRef) => {
+          const link = await getDownloadURL(itemRef);
+          // sjbAudio.push({ link, label: itemRef.name.split('.')[0] });
+          allAudio.push({ link, label: itemRef.name.split('.')[0] });
+        });
+        setAudioSJB(allAudio);
       });
     }
     if (!client?.email) return;
@@ -60,7 +73,7 @@ export default function AccountMediaView() {
         >
           <Block label="Session Audio Recordings">
             <Autocomplete
-              options={audio}
+              options={audioSJB}
               getOptionLabel={(option) => option.label}
               isOptionEqualToValue={(option, value) => option.label === value.label}
               value={music}
