@@ -10,14 +10,14 @@ import { bgGradient } from 'src/utils/cssStyles';
 const VISIONS = [
   {
     name: 'Healing',
-    description: 'Believe in the power of the mind to heal.',
+    description: 'Belief in the power of the mind to TRANCEform oneself.',
   },
   {
     name: 'Learning',
     description: 'Committed to continuous learning and improvement.',
   },
   { name: 'Passion', 
-    description: 'Passionate about helping people improve their lives' },
+    description: 'Passionate about helping people improve their own lives' },
 ];
 
 const StyledRoot = styled('div')(({ theme }) => ({
