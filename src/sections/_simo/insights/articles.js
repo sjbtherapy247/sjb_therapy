@@ -258,7 +258,7 @@ export const research = [
       },
     ],
     author: {
-      name: 'Simon J Baker',
+      name: 'Simon Baker',
       role: 'Hypnotherapist',
       picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
       quotes: 'Member since Mar 15, 2022',
