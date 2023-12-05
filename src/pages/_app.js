@@ -71,7 +71,7 @@ export default function MyApp(props) {
     { name: 'twitter:description', content: description || defaultDescription },
     { name: 'twitter:image', content: image || defaultImage },
     { property: 'twitter:url', content: canonical || defaultUrl },
-    { property: 'twitter:domain', content: 'sjbtherapy' },
+    { property: 'twitter:domain', content: 'sjbtherapy.com' },
     { property: 'twitter:image', content: image || defaultImage },
   ];
 
