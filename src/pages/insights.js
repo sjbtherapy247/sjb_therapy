@@ -13,10 +13,10 @@ export async function getStaticProps() {
   return {
     props: {
       researchDocs: [...research],
-      title: 'Hypnotherapy Research & InSights | SJB Therapy',
-      description: 'Hypnotherapy Research and InSights - SjB Therapy',
+      title: 'Hypnotherapy InSights - News or Updates - SJB Therapy',
+      description: 'Hypnotherapy insights, news and updates right here on the SjB Therapy InSights page. Any news on current hypnosis treatments or articles will appear here first.',
       canonical: 'https://sjbtherapy.com/insights/',
-      keywords: 'insights, hypnotherapy, physcotherapy, research articles',
+      keywords: 'insights, hypnotherapy, physcotherapy, news,',
     },
   };
 }

@@ -16,7 +16,8 @@ const VISIONS = [
     name: 'Learning',
     description: 'Committed to continuous learning and improvement.',
   },
-  { name: 'Passion', description: 'Passionate about helping people improve their lives' },
+  { name: 'Passion', 
+    description: 'Passionate about helping people improve their lives' },
 ];
 
 const StyledRoot = styled('div')(({ theme }) => ({

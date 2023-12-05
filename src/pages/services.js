@@ -15,10 +15,10 @@ export async function getStaticProps() {
     props: {
       servicesDocs: [...servicesDescription],
       packages: [...sessionPricing],
-      title: 'Hypnotherapy Services - SJB Therapy',
-      description: 'The hypnotherapy services we provide range from fears, phobias and anxieties, up to sporting and performance hypnosis. Read through and book your call today',
+      title: 'Hypnotherapy Services Sydney - SJB Therapy',
+      description: 'Our range of hypnotherapy services cover fears, phobias and anxieties, up to sporting and performance hypnosis. We cover Sydney locally and online globally',
       canonical: 'https://sjbtherapy.com/services/',
-      keywords: 'hypnotherapy, physcotherapy, services sydney, weight loss, anxiety, sports performance, insomnia, quit smoking, depression',
+      keywords: 'hypnotherapy and hypnosis services sydney',
     },
   };
 }

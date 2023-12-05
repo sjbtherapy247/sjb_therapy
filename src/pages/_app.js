@@ -48,12 +48,12 @@ const clientSideEmotionCache = createEmotionCache();
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
-  const defaultTitle = 'SJB Therapy - Your next step to a better you!!';
+  const defaultTitle = 'Hypnotherapy - Free Session - SjB Therapy';
   const defaultDescription =
-    'SjB Therapy is a hypnotherapy practice dedicated to helping people improve their lives. Through the use hypnosis we help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.';
+    'Book a Free Session and remove anxiety, stress or fear or boost your sport or work performance with hypnotherapy.  TRANCEform your mind,TRANCEform your life.';
   const defaultUrl = 'https://sjbtherapy.com';
   const defaultImage = 'https://sjbtherapy.com/assets/sjb-logo/Hmain-darker.jpg';
-  const defaultKeywords = 'hypnotherapy, mental health, physcotherapy, well being, healing';
+  const defaultKeywords = 'hypnotherapy, free session, remove anxiety,';
   const { title, description, image, canonical, keywords } = pageProps;
 
   const openGraphData = [
