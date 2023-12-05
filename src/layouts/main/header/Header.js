@@ -118,7 +118,7 @@ export default function Header({ headerOnDark }) {
                     }),
                   }}
                 >
-                  <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
+                  <Image src="/assets/sjb-logo/hnav-logo.jpg" alt="SjB Therapy | Local Hypnotherapy" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
             </Link>
@@ -127,7 +127,7 @@ export default function Header({ headerOnDark }) {
             <Link href="/" component={NextLink}>
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
                 <Box sx={{ ml: 1, lineHeight: 0, position: 'relative', height: '54px', width: '54px', borderRadius: 1, overflow: 'hidden' }}>
-                  <Image src="/assets/sjb-logo/hicon.png" alt="SJB logo" disabledEffect sx={{ height: 1 }} />
+                  <Image src="/assets/sjb-logo/hicon.png" alt="SjB Therapy | Local Hypnotherapy" disabledEffect sx={{ height: 1 }} />
                 </Box>
               </Tooltip>
             </Link>
