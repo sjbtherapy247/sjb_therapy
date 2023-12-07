@@ -15,6 +15,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 // import SEO from 'next-seo/next-seo.config';
 // ----------------------------------------------------------------------
 
+// import { Analytics } from '@vercel/analytics/react';
+
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
 // next
@@ -48,8 +50,8 @@ const clientSideEmotionCache = createEmotionCache();
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
-  const defaultTitle = 'Hypnotherapy - Free Session - SjB Therapy';
-  const defaultDescription = 'Book a Free Session and remove anxiety, stress or fear or boost your sport or work performance with hypnotherapy.  TRANCEform your mind, TRANCEform your life.';
+  const defaultTitle = 'Local Hypnotherapy - Free Session - SjB Therapy';
+  const defaultDescription = 'Book a Free Session of local hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance.  TRANCEform your mind, TRANCEform your life.';
   const defaultUrl = 'https://sjbtherapy.com';
   const defaultImage = 'https://sjbtherapy.com/assets/sjb-logo/Hmain-darker.jpg';
   const defaultKeywords = 'local hypnotherapy, free session, remove anxiety,';
