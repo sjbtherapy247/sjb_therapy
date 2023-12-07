@@ -10,8 +10,8 @@ export const sessionPricing = [
     license: '3-Session Bundle',
     stripeName: '3-Session Bundle',
     price: '435',
-    commons: ['60 minutes each', 'Only $145 per session - Save $120', 'Online Only - In Person can be arranged', '3x Personalised audios', 'Personalised session notes', 'Online or in person sessions', 'Personalised Session tasking'],
-    options: [{ title: 'In Person Session - Please Contact' }, { title: 'Single Sessions can be transferred' },],
+    commons: ['Book a Discovery Call First', '60 minutes each', 'Only $145 per session - Save $120', 'Online Only - In Person can be arranged', '3x Personalised audios', 'Personalised session notes', 'Online or in person sessions', 'Personalised Session tasking'],
+    options: [{ title: 'Single Sessions can be transferred' },],
   },
   {
     license: 'TRANCEformd Program',
