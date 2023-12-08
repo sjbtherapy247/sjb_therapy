@@ -1,8 +1,15 @@
 export const sessionPricing = [
   {
+    license: '60min Hypnotherapy',
+    stripeName: '60min Hypnotherapy',
+    price: '185',
+    commons: ['Book a Discovery Call First', '60 minute online - $185', 'Online Only - In Person can be arranged', 'Personalised session audio', 'Personalised session notes', 'Personalised Session tasking',],
+    options: [{ title: 'In Person Session - Please Contact' }, { title: 'Discounted Further Sessions' }],
+  },
+  {
     license: 'Single Session',
     stripeName: 'Single Session',
-    price: 'From 185',
+    price: '185',
     commons: ['Book a Discovery Call First', '60 minute online - $185', '90 minute online - $245', 'Online Only - In Person can be arranged', 'Personalised session audio', 'Personalised session notes', 'Personalised Session tasking',],
     options: [{ title: 'In Person Session - Please Contact' }, { title: 'Discounted Further Sessions' }],
   },
@@ -20,6 +27,7 @@ export const sessionPricing = [
     commons: ['Serious about Sport or Business? This is for you', 'Proprietary techniques', '5 x 60 minute sessions', '5 x Personalised audios', 'Workbook for structure & notes', 'Direct  communication throughout', 'Online only - In person can be arranged'],
     options: [{ title: 'In-person sessions can be arranged - Please Contact' } ],
   },
+
  
   // {
   //  license: 'Quit Smoking',
