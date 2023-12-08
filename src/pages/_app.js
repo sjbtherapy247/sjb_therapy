@@ -37,6 +37,7 @@ import MotionLazyContainer from 'src/components/animate/MotionLazyContainer';
 import LoadingCircular from 'src/components/loading-circular/LoadingCircular';
 import Notification from 'src/components/notification/Notification';
 import Modal from 'src/components/modal/Modal';
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // data&SEO
 // import Script from 'next/script';
@@ -45,6 +46,7 @@ import Modal from 'src/components/modal/Modal';
 // import metadata from 'next'
 
 // ----------------------------------------------------------------------
+
 
 const clientSideEmotionCache = createEmotionCache();
 export default function MyApp(props) {
