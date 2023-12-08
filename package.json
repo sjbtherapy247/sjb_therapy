@@ -37,6 +37,7 @@
     "@react-email/components": "^0.0.12",
     "@stripe/stripe-js": "^1.54.0",
     "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.0",
     "date-fns": "^2.29.3",
     "firebase": "^9.23.0",
     "firebase-admin": "^11.9.0",
