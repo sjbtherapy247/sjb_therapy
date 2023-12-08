@@ -20,13 +20,13 @@ export const sessionPricing = [
     commons: ['Book a Discovery Call First', '60 minutes each', 'Only $145 per session - Save $120', 'Online Only - In Person can be arranged', '3x Personalised audios', 'Personalised session notes', 'Online or in person sessions', 'Personalised Session tasking'],
     options: [{ title: 'Single Sessions can be transferred' },],
   },
-  {
-    license: 'TRANCEformd Program',
-    stripeName: 'TRANCEformd Program',
-    price: '995',
-    commons: ['Serious about Sport or Business? This is for you', 'Proprietary techniques', '5 x 60 minute sessions', '5 x Personalised audios', 'Workbook for structure & notes', 'Direct  communication throughout', 'Online only - In person can be arranged'],
-    options: [{ title: 'In-person sessions can be arranged - Please Contact' } ],
-  },
+  // {
+  //  license: 'TRANCEformd Program',
+  //  stripeName: 'TRANCEformd Program',
+  //  price: '995',
+  //  commons: ['Serious about Sport or Business? This is for you', 'Proprietary techniques', '5 x 60 minute sessions', '5 x Personalised audios', 'Workbook for structure & notes', 'Direct  communication throughout', 'Online only - In person can be arranged'],
+  //  options: [{ title: 'In-person sessions can be arranged - Please Contact' } ],
+  //  },
 
  
   // {
