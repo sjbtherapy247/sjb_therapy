@@ -91,8 +91,7 @@ export default function PurchaseSuccess({ checkout }) {
             Your receipt has been emailed to {checkout.customer_details.email}
             <br />
             <br />
-            For existing clients,your purchase details and receipt are also available in your SJB Therapy account. For new clients we have also emailed you a link to access your new SJB Therapy account. Follow the instructions in your email to
-            complete account setup.
+            For existing clients,your purchase details and receipt are also available in your SJB Therapy account. For new clients we have also emailed you a link to access your new SJB Therapy account. Follow the instructions in your email to complete account setup.
             <br />
             <br />
             We will be in touch shortly to schedule your session.

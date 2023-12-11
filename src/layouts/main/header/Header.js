@@ -58,7 +58,7 @@ export default function Header({ headerOnDark }) {
   // }
 
   return (
-    <AppBar color="transparent" sx={{ boxShadow: 'none', width: '100vw' }}>
+    <AppBar color="transparent" sx={{ boxShadow: 'none', width: '99vw' }}>
       <Toolbar
         disableGutters
         sx={{
@@ -104,7 +104,7 @@ export default function Header({ headerOnDark }) {
               <Tooltip arrow placement="bottom" title="home" enterDelay={1000}>
                 <Box
                   sx={{
-                    ml: '2px',
+                    ml: '6px',
                     lineHeight: 0,
                     position: 'relative',
                     height: isOffset ? '64px' : '54px',
