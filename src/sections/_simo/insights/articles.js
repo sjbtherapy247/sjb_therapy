@@ -7,7 +7,7 @@ export const research = [
     buttonLink: '/services#hypnotherapyServices',
     services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
     title: 'Hypnotherapy for Insomnia - Embrace A Tranquil Nights Sleep',
-    description: "Hypnotherapy has gained recognition for its ability to harness the mind-body connection. Let's explore the scientific basis behind this powerful therapeutic approach.",
+    description: "Suffering from insomnia or are looking to sleep better? The No 1 way to get a better nights sleep is Hypnotherapy. Read my insights here, as to why it's better.",
     category: 'hypnotherapy',
     favorited: true,
     createdAt: '2023-06-05T01:21:51.781Z',
@@ -42,22 +42,23 @@ export const research = [
       about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
     },
     content: `
-
-      <h4>Introduction</h4>
-
-      <p>In the hustle and bustle of our modern lives, finding solace in the warm embrace of sleep can feel like an elusive dream. As someone who has treated clients that have struggled with insomnia for years, I embarked on a journey to discover what other solutions might be on offer for the humble insomniac. We all know the transformative power of hypnotherapy, it's a journey that led me to develop innovative techniques such as our TRANCEform program for sports and business people as well as many other personalised approaches for many of the conditions that can be corrected with hypnosis.</p>
+      <p>In the hustle and bustle of our modern lives, finding solace in the warm embrace of sleep can feel like an elusive dream. As someone who has treated clients that have struggled with insomnia for years, I embarked on a journey to discover what other solutions might be on offer for the humble insomniac. We all know the transformative power of hypnotherapy, it's a journey that led me to develop innovative techniques such as our <a href="/hypnotherapy-services/performance-hypnotherapy-tranceformd/">TRANCEform program</a> for sports and business people as well as many other personalised approaches for many of the conditions that can be corrected with hypnosis.</p>
 
       <p>Insomnia is the silent thief of restful nights, it affects millions around the world. Aside from hypnotherapy, there is a sea of sleep aids and medications, I found myself seeking a more holistic approach—one that doesn't just induce sleep but fosters a deep sense of relaxation and tranquility.</p>
 
       <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the *Journal of Clinical Sleep Medicine*, hypnotherapy has shown promise in improving sleep quality and reducing the time it takes to fall asleep.</p>
       <div>
+
       <img alt="Sleep Hypnosis - SjB THerapy" height='400px' width='100%' style="object-fit:cover" src="/assets/images/marketing/Sleep-Better-female-asleep-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" />
       </div>
-      <p><centre><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></centre></p>
+
+      <center><h3><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></h3></center>
 
       <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the *Journal of Clinical Sleep Medicine*, hypnotherapy has shown promise in improving sleep quality and reducing the time it takes to fall asleep.</p>
 
-      <p>In comparison, while melatonin is a popular over-the-counter supplement, its effectiveness varies wildly among individuals. The <bold>*National Sleep Foundation*</bold> suggests that melatonin may be more effective for certain types of insomnia, it doesn't say which, but its long-term effects and optimal dosage remain subjects of ongoing research.</p>
+      <br>
+
+      <p>In comparison, while melatonin is a popular over-the-counter supplement, its effectiveness varies wildly among individuals. The <strong>National Sleep Foundation</strong> suggests that melatonin may be more effective for certain types of insomnia, it doesn't say which, but its long-term effects and optimal dosage remain subjects of ongoing research.</p>
 
       <p>Recent statistics from the *American Academy of Sleep Medicine* indicate that insomnia affects approximately 10-30% of the population. That's anywhere between 33 and 99 million people… <strong>and that's just America!</strong> While medications may provide temporary relief, hypnotherapy offers a holistic approach, addressing the psychological and behavioural aspects of insomnia.</p>
 
@@ -79,8 +80,8 @@ export const research = [
 
       <p>Book yourself a free discovery call today and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>`,
 
-    coverImg: '/assets/images/marketing/marketing_1.jpg',
-    heroImg: '/assets/images/marketing/marketing_post_hero.jpg',
+    coverImg: '/assets/images/marketing/Sleep-Better-female-asleep-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp',
+    heroImg: '/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp',
   },
   {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
