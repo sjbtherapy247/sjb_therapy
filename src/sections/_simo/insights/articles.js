@@ -1,5 +1,84 @@
 export const research = [
   {
+    id: 'e99f09a7-dd88-49d5-b1c8-2daf80c2d7b9',
+    url: 'hypnotherapy-for-insomnia-embrace-a-tranquil-nights-sleep',
+    keywords: 'Hypnotherapy for Insomnia',
+    buttonTitle: 'Our Hypnotherapy Services',
+    buttonLink: '/services#hypnotherapyServices',
+    services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
+    title: 'Hypnotherapy for Insomnia - Embrace A Tranquil Nights Sleep',
+    description: "Hypnotherapy has gained recognition for its ability to harness the mind-body connection. Let's explore the scientific basis behind this powerful therapeutic approach.",
+    category: 'hypnotherapy',
+    favorited: true,
+    createdAt: '2023-06-05T01:21:51.781Z',
+    duration: '4 minutes read',
+    tags: [
+      {
+        label: 'Hypnotherapy',
+        path: '/',
+      },
+      {
+        label: 'Insomnia',
+        path: '',
+      },
+      {
+        label: 'Mindfullness',
+        path: '',
+      },
+      {
+        label: 'Personal Transformation',
+        path: '',
+      },
+      {
+        label: 'Mental Health',
+        path: '',
+      },
+    ],
+    author: {
+      name: 'Simon J Baker',
+      role: 'Hypnotherapist',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
+      quotes: 'Member since Mar 15, 2022',
+      about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
+    },
+    content: `
+
+      <h4>Introduction</h4>
+
+      <p>In the hustle and bustle of our modern lives, finding solace in the warm embrace of sleep can feel like an elusive dream. As someone who has treated clients that have struggled with insomnia for years, I embarked on a journey to discover what other solutions might be on offer for the humble insomniac. We all know the transformative power of hypnotherapy, it's a journey that led me to develop innovative techniques such as our TRANCEform program for sports and business people as well as many other personalised approaches for many of the conditions that can be corrected with hypnosis.</p>
+
+      <p>Insomnia is the silent thief of restful nights, it affects millions around the world. Aside from hypnotherapy, there is a sea of sleep aids and medications, I found myself seeking a more holistic approach—one that doesn't just induce sleep but fosters a deep sense of relaxation and tranquility.</p>
+
+      <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the *Journal of Clinical Sleep Medicine*, hypnotherapy has shown promise in improving sleep quality and reducing the time it takes to fall asleep.</p>
+      <div>
+      <img alt="research photo" height='300px' width='100%' style="object-fit:cover" src="/assets/images/marketing/marketing_post_01.jpg" />
+      </div>
+      <p><centre><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></centre></p>
+
+      <p>In comparison, while melatonin is a popular over-the-counter supplement, its effectiveness varies wildly among individuals. The <bold>*National Sleep Foundation*</bold> suggests that melatonin may be more effective for certain types of insomnia, it doesn't say which, but its long-term effects and optimal dosage remain subjects of ongoing research.</p>
+
+      <p>Recent statistics from the *American Academy of Sleep Medicine* indicate that insomnia affects approximately 10-30% of the population. That's anywhere between 33 and 99 million people… <strong>and that's just America!</strong> While medications may provide temporary relief, hypnotherapy offers a holistic approach, addressing the psychological and behavioural aspects of insomnia.</p>
+
+      <p><img alt="alt marketing"  height='300px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/marketing_post_02.jpg" /></p>
+
+      <p>Moreover, a meta-analysis published in the <strong>Journal of Sleep Research</strong> revealed that individuals undergoing hypnotherapy experienced significant improvements in sleep duration, sleep efficiency, and overall sleep quality.</p>
+
+      <p>Many people are on a  quest for a natural remedy, rather than medication. This is because they have tried the medication and it either doesn't work, the side effects outweigh the benefits or they have had something else happen in their life. This is where coming to see a hypnotherapist makes all the difference. We don't merely treat symptoms but we delve into the root causes of your insomnia and find out how it is running for you. It can be as simple as adopting a better routine around bedtime, or not watching any news programs from 4pm onwards! I'm not kidding either…</p>
+
+      <p>With our personalized approach and expertise we will tailor the hypnotherapy sessions to your unique needs, providing you with a sense of reassurance and trust throughout the process. Having provided hypnosis for sleep issues to many people now, i'm comfortable in saying that there really is no better way of helping people with insomnia.</p>
+
+      <p>Yes you can also meditate, I've tried it at least 30 times throughout my life and nearly every time, because there was no voice or guide helping my subconscious, I either fell asleep or got more frustrated. I know many people who have had a similar experience. Now i'm not bashing meditation, if it works for you, great. It just wasn't for me. Hypnotherapy on the other hand, is a fast track journey to where I and you want to go.</p>
+
+      <h4>Conclusion</h4>
+
+      <p>In conclusion, while traditional sleep aids may offer temporary relief, the holistic and enduring benefits of hypnotherapy make it a compelling choice for those seeking a sustainable solution to insomnia and sleepless nights.</p>
+
+      <p>Book yourself a free discovery call today and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>`,
+
+    coverImg: '/assets/images/marketing/marketing_1.jpg',
+    heroImg: '/assets/images/marketing/marketing_post_hero.jpg',
+  },
+  {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
     url: 'hypnotherapy-understanding-the-mind-body-connection',
     keywords: 'understanding the mind body connection',
