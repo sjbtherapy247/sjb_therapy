@@ -91,8 +91,7 @@ export default function MyApp(props) {
         ))}
         <link rel="canonical" href={canonical || defaultUrl} />
         <link rel="alternate" media="only screen and (max-width: 640px)" href={canonical || defaultUrl} />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4877735171187701"
-     crossorigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4877735171187701" crossorigin="anonymous"></script>
       </Head>
       <CacheProvider value={emotionCache}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
