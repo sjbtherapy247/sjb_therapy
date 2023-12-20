@@ -94,6 +94,7 @@ export default function MyApp(props) {
         <link rel="canonical" href={canonical || defaultUrl} />
         <link rel="alternate" media="only screen and (max-width: 640px)" href={canonical || defaultUrl} />
       </Head>
+  
       <CacheProvider value={emotionCache}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
           <SettingsProvider>
