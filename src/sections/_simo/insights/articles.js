@@ -51,7 +51,7 @@ export const research = [
 
       <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the *Journal of Clinical Sleep Medicine*, hypnotherapy has shown promise in improving sleep quality and reducing the time it takes to fall asleep.</p>
       <div>
-      <img alt="research photo" height='300px' width='100%' style="object-fit:cover" src="/assets/images/marketing/marketing_post_01.jpg" />
+      <img alt="research photo" height='300px' width='100%' style="object-fit:cover" src="/assets/images/marketing/Sleep-Better-female-asleep-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" />
       </div>
       <p><centre><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></centre></p>
 
@@ -59,7 +59,7 @@ export const research = [
 
       <p>Recent statistics from the *American Academy of Sleep Medicine* indicate that insomnia affects approximately 10-30% of the population. That's anywhere between 33 and 99 million people… <strong>and that's just America!</strong> While medications may provide temporary relief, hypnotherapy offers a holistic approach, addressing the psychological and behavioural aspects of insomnia.</p>
 
-      <p><img alt="alt marketing"  height='300px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/marketing_post_02.jpg" /></p>
+      <p><img alt="alt marketing"  height='300px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-male-insomniac-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" /></p>
 
       <p>Moreover, a meta-analysis published in the <strong>Journal of Sleep Research</strong> revealed that individuals undergoing hypnotherapy experienced significant improvements in sleep duration, sleep efficiency, and overall sleep quality.</p>
 
@@ -73,7 +73,9 @@ export const research = [
 
       <p>In conclusion, while traditional sleep aids may offer temporary relief, the holistic and enduring benefits of hypnotherapy make it a compelling choice for those seeking a sustainable solution to insomnia and sleepless nights.</p>
 
-      <p>Book yourself a free discovery call today and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>`,
+      <p>Book yourself a free discovery call today and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>
+      
+      <p><img alt="alt marketing"  height='300px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" /></p>`,
 
     coverImg: '/assets/images/marketing/marketing_1.jpg',
     heroImg: '/assets/images/marketing/marketing_post_hero.jpg',
