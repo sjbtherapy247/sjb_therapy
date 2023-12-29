@@ -1,21 +1,27 @@
 /** @type {import('next-sitemap').IConfig} */
 
-const config = {
+module.exports = {
   siteUrl: process.env.SITE_URL || 'https://sjbtherapy.com',
   generateRobotsTxt: true,
-  generateIndexSitemap: false,
+  changefreq: 'daily',
+  priority: 0.7,
   sitemapSize: 1000,
+  exclude: ['/account', '/support', '/server-sitemap.xml'],
+
   // optional
   robotsTxtOptions: {
-    additionalSitemaps: [
-    
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: []
+      },
     ],
-    
+    additionalSitemaps: [
+      'https://sjbtherapy.com/server-sitemap.xml',
+    ],
   },
 }
-
-export default config
-
 
 // next-sitemap.config.js
 
@@ -39,12 +45,3 @@ export default config
 //    ],
 //  },
 // }
-
-
-// const config = {
-  // siteUrl: 'https://sjbtherapy.com',
-  // generateRobotsTxt: true, // (Optional parameter for creating robots.txt file)
-  // Other available options..
-// };
-
-// module.exports = config;
