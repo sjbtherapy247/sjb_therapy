@@ -1,11 +1,21 @@
-const generateSitemap = require('./scripts/generate-sitemap');
+// ----------------------------------------------------------------------
 
 module.exports = {
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      generateSitemap();
-    }
-    return config;
-  }
-};
-
+    trailingSlash: true,
+      async redirects() {
+          return [
+              {
+                  source: '/support/',
+                  destination: '/',
+                  permanent: false,
+              },
+              {
+                  source: '/maintenance/',
+                  destination: '/',
+                  permanent: false,
+              }
+  
+        ]
+      }
+  
+  };

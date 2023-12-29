@@ -9,7 +9,7 @@
     "devssl": "node scripts/next-dev-ssl.js & next dev -p 5002",
     "start": "next start",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap --config=next-sitemap.config.js",
     "build-netlify": "next build && cp -r .next _next && mv _next .next/",
     "export": "next build && next export -o _static",
     "lint": "eslint --ext .js,.jsx .",
@@ -89,6 +89,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "globby": "^14.0.0",
     "prettier": "^2.8.7",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "@types/react": "^18.2.33",
+    "next-sitemap": "workspace:*"
   }
 }

@@ -1,41 +1,20 @@
 /** @type {import('next-sitemap').IConfig} */
 
-module.exports = {
-  siteUrl: 'https://sjbtherapy.com',
-  changefreq: 'daily',
-  priority: 0.7,
-  sitemapSize: 5000,
-  generateRobotsTxt: true, 
-  exclude: ['/server-sitemap.xml'],
-  alternateRefs: [
-  ],
-},
-  // Default transformation function
-  transform: async (config, path) => {
-    return {
-      loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
-      changefreq: config.changefreq,
-      priority: config.priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-      alternateRefs: config.alternateRefs ?? [],
-    }
-  },
-     additionalPaths: async (config) => [
-     await config.transform(config, '/additional-page'),
-   ],
+const config = {
+  siteUrl: process.env.SITE_URL || 'https://sjbtherapy.com',
+  generateRobotsTxt: true,
+  generateIndexSitemap: false,
+  sitemapSize: 1000,
+  // optional
   robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
-    ],
     additionalSitemaps: [
-      'https://sjbtherapy.com/server-sitemap.xml',
+    
     ],
+    
   },
+}
 
-
+export default config
 
 
 // next-sitemap.config.js
