@@ -18,8 +18,7 @@ const config = {
       },
     ],
     additionalSitemaps: [
-      'https://sjbtherapy.com/sitemap-0.xml',
-      'https://sjbtherapy.com/sitemap.xml',
+     
     ],
   },
 }
