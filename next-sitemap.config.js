@@ -6,7 +6,7 @@ const config = {
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 1000,
-  exclude: ['/account', '/support', '/server-sitemap.xml'],
+  exclude: [],
 
   // optional
   robotsTxtOptions: {

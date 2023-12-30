@@ -89,6 +89,6 @@
     "prettier": "^2.8.7",
     "typescript": "^5.0.2",
     "@types/react": "^18.2.33",
-    "next-sitemap": "workspace:*"
+    "next-sitemap": "^4.1.8"
   }
 }
