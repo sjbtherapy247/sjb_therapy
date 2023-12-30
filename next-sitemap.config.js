@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 
-module.exports = {
+const config = {
   siteUrl: process.env.SITE_URL || 'https://sjbtherapy.com',
   generateRobotsTxt: true,
   changefreq: 'daily',
@@ -18,10 +18,13 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://sjbtherapy.com/server-sitemap.xml',
+      'https://sjbtherapy.com/sitemap-0.xml',
+      'https://sjbtherapy.com/sitemap.xml',
     ],
   },
 }
+
+export default config
 
 // next-sitemap.config.js
 
