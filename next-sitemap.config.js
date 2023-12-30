@@ -2,7 +2,7 @@
 
 const config = {
   siteUrl: process.env.SITE_URL || 'https://sjbtherapy.com',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 1000,
