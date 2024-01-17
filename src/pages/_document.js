@@ -33,6 +33,7 @@ const Meta = () => (
     <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
     {/* PWA primary color */}
     <meta name="theme-color" content={palette('light').primary.dark} />
+    <meta name="google-adsense-account" content="ca-pub-4250297759847171" />
   </>
 );
 

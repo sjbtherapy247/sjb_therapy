@@ -1,5 +1,8 @@
 User-agent: *
-Disallow: /account
-Disallow: /support
+Allow: /
 
-Sitemap: https://sjbtherapy.com/sitemap.xml
+# Host
+Host: https://sjbtherapy.com
+
+# Sitemaps
+Sitemap: https://sjbtherapy.com/sitemap-0.xml
