@@ -53,17 +53,18 @@ export const research = [
       <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the <strong>Journal of Clinical Sleep Medicine</strong>, hypnotherapy has shown promise in <a href="/hypnotherapy-services/hypnosis-for-insomnia-and-sleep-disorders/">improving sleep quality</a> and reducing the time it takes to fall asleep.</p>
       <div>
 
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4877735171187701"
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
       data-ad-layout="in-article"
       data-ad-format="fluid"
-      data-ad-client="ca-pub-4877735171187701"
-      data-ad-slot="2249932817"></ins>
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
+
 
       <font color="#5e699d"><center><h3><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></h3></center></font>
 
@@ -81,14 +82,14 @@ export const research = [
 
       <p>Many people are on a quest for a <font color="#5e699d">natural remedy, rather than medication.</font> This is because they have tried the medication and it either doesn't work, the side effects outweigh the benefits or they have had something else happen in their life. This is where coming to see a hypnotherapist makes all the difference. We don't merely treat symptoms but we delve into the root causes of your insomnia and find out how it is running for you. It can be as simple as adopting a better routine around bedtime, or not watching any news programs from 4pm onwards! I'm not kidding either…</p>
 
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4877735171187701"
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
       data-ad-layout="in-article"
       data-ad-format="fluid"
-      data-ad-client="ca-pub-4877735171187701"
-      data-ad-slot="5614462751"></ins>
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
@@ -105,14 +106,14 @@ export const research = [
 
       <p><font color="#5e699d">Book yourself a free discovery call today</font> and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>
       
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4877735171187701"
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
       data-ad-layout="in-article"
       data-ad-format="fluid"
-      data-ad-client="ca-pub-4877735171187701"
-      data-ad-slot="3037751948"></ins>
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>`,
