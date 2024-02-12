@@ -79,7 +79,7 @@ export const _socialsSimo = [
     label: 'Instagram',
     icon: 'carbon:logo-instagram',
     color: '#E02D69',
-    href: 'https://www.instagram.com/simonjbaker247/',
+    href: 'https://www.instagram.com/simonjbaker24/',
   },
   {
     value: 'linkedin',
@@ -87,6 +87,13 @@ export const _socialsSimo = [
     icon: 'carbon:logo-linkedin',
     color: '#007EBB',
     href: 'https://www.linkedin.com/in/simon-baker-sjbtherapy/',
+  },
+  {
+    value: 'youtube',
+    label: 'YouTube',
+    icon: 'carbon:logo-youtube',
+    color: '#ff1902',
+    href: 'https://www.youtube.com/@simonjbaker24',
   },
   // {
   //   value: 'twitter',
