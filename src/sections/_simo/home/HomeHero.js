@@ -53,7 +53,9 @@ export default function HomeHero() {
                 Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will help you achieve your goals.
                 <br />
                 <br />
-                Together, we will discover the solutions and strategies that will empower you to overcome obstacles and propel you into a better future. Book your FREE discovery call and let&apos;s TRANCEform your life today.
+                Together, we will discover the solutions and strategies that will empower you to overcome obstacles and propel you into a better future. 
+                <br />
+                Book your FREE discovery call below and let&apos;s TRANCEform your life today.
               </Typography>
 
               <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">
