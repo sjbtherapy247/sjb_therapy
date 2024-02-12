@@ -42,7 +42,7 @@ export default function HomeHero() {
             >
               <div>
                 <Typography variant="h2">SjB Therapy</Typography>
-                <Typography variant="h5">TRANCEform Yourself Today</Typography>
+               
               </div>
               <div>
                 <Typography variant="h3">Unlock Your Mind</Typography>
