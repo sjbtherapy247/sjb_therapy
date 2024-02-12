@@ -33,7 +33,7 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeSimon() {
-  const name = 'Simon Baker';
+  const name = 'Simon J Baker';
   const role = 'Clinical Hypnotherapist & Strategic Psychotherapist';
   const photo = '/assets/images/simon/simon-baker-main-sjbtherapy.webp';
 
