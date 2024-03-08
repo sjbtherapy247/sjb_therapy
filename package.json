@@ -46,6 +46,7 @@
     "lodash.merge": "^4.6.2",
     "micro": "^10.0.1",
     "next": "^13.2.4",
+    "next-axiom": "^1.1.1",
     "next-seo": "^6.1.0",
     "next-share": "^0.25.0",
     "next-sitemap": "^4.1.8",
@@ -75,6 +76,7 @@
     "@babel/core": "^7.21.3",
     "@babel/eslint-parser": "^7.21.3",
     "@storybook/preset-typescript": "^3.0.0",
+    "@types/react": "^18.2.33",
     "eslint": "^8.37.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^13.4.3",
@@ -86,9 +88,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "next-sitemap": "^4.1.8",
     "prettier": "^2.8.7",
-    "typescript": "^5.0.2",
-    "@types/react": "^18.2.33",
-    "next-sitemap": "^4.1.8"
+    "typescript": "^5.0.2"
   }
 }

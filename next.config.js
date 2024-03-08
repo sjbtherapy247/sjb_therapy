@@ -1,4 +1,5 @@
 // ----------------------------------------------------------------------
+const { withAxiom } = require('next-axiom');
 
 module.exports = {
     trailingSlash: true,
