@@ -11,10 +11,10 @@ import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Our Mission - Healing and Performance - SjB Therapy',
-      description: `Our mission is to combine healing and performance in all hypnotherapy. Your wellness and mental strength is our passion and we won't stop until it's addressed.`,
+      title: 'My Mission - Healing and Performance - SjB Therapy',
+      description: `My mission is to combine healing and performance in all hypnotherapy. Your wellness and mental strength is my passion and I won't stop until it's addressed.`,
       canonical: 'https://sjbtherapy.com/mission/',
-      keywords: 'Our Mission, healing and performance',
+      keywords: 'My Mission, healing and performance',
     },
   };
 }

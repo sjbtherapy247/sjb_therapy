@@ -16,18 +16,18 @@ const CORE_VALUES = [
   },
   {
     title: 'Action',
-    description: 'Take action to overcome your current situation.',
+    description: 'You take action to conquer your current obstacle.',
     icon: '/assets/icons/mental-health/Action_icon.png',
   },
   {
-    title: 'TRANCEform & Grow',
-    description: 'Evolve in ways you never dreamt possible.',
-    icon: '/assets/icons/mental-health/TRANCEform-grow-icon.png',
+    title: 'Teamwork',
+    description: 'We work together, and you achieve your outcomes.',
+    icon: '/assets/icons/mental-health/Teamwork-icon.png',
   },
   {
-    title: 'Teamwork',
-    description: 'We work together, and you achieve great things.',
-    icon: '/assets/icons/mental-health/Teamwork-icon.png',
+    title: 'TRANCEform',
+    description: 'You Evolve in ways you never believed possible.',
+    icon: '/assets/icons/mental-health/TRANCEform-grow-icon.png',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function AboutCoreValues() {
       }}
     >
       <Typography sx={{ mb: 4 }} variant="h2">
-        Our Core Values
+        My Core Values
       </Typography>
       <Typography
         sx={{
@@ -55,8 +55,7 @@ export default function AboutCoreValues() {
           // maxWidth: { md: 540 },
         }}
       >
-        Our core values revolve around unlocking the potential in every client. We are dedicated to helping individuals heal and harness their inner abilities, overcome limitations, and achieve peak performance through the power of clinical
-        hypnotherapy.
+        M.A.T.T. are the core values below that I approach every client with. I am dedicated to helping every individual heal and harness their inner abilities, overcome limitations, and achieve transformation through the power of clinical hypnotherapy.  Basically I believe that everyone has a chance at a better life and I want to help them discover or re-discover that in themselves.
       </Typography>
 
       <Box

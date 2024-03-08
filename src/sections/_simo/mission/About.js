@@ -94,21 +94,21 @@ export default function About() {
             // textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          <Typography variant="h2">Who We Are?</Typography>
+          <Typography variant="h2">Who Am I?</Typography>
 
           <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-          SjB Therapy is my hypnotherapy practice and I am dedicated to helping people improve their lives. I use hypnosis to help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.
+          I`m Simon and SjB Therapy is my practice. I am dedicated to helping people improve their lives through a combination of psychotherapy, clinical hypnotherapy and counselling. I combine these skills to help people overcome a variety of challenges, including anxiety, depression, pain, addiction, personal performance and much more.
             <br />
             <br />
-            I believe that hypnotherapy with psychotherapy is a safe and effective way to make permanent changes in your life. It has been proven by experts and also by my many clients, that this modality provides the fastest way to make the changes you seek.
+            I believe that hypnotherapy with psychotherapy is a safe and effective way to make permanent changes in your life. It has been proven by the experts and also by mine and many other therapists clients, that this combination provides the fastest way to make the changes you seek.
             <br />
             <br />
-            I am also grateful for the opportunity to help you with whatever challenge/problem/belief you believe you have, and I will do everything possible to give you your desired outcome.
+            I am looking forward to helping you with whatever obstacle it is that you want to overcome and know that I will do everything possible to give you your desired outcome. Usually people go away with much more that they were initailly seeking help for. Read my reviews - <a href="https://bit.ly/3V6j9DC" target="_blank">SjB Therapy Google Reviews</a>
           </Typography>
 
           <Box sx={{ mt: 10 }}>
             {/* <m.div variants={varFade({ distance: 300 }).inUp}> */}
-            <Typography variant="h3">Simply Just Believe</Typography>
+            <Typography variant="h2">Simply Just Believe</Typography>
             <Typography sx={{ mt: 1, color: 'text.secondary' }}>in</Typography>
             <Typography sx={{ mt: 1, color: 'text.secondary' }}>Yourself / Progress / Never Giving Up / Hypnotherapy / Possibilities</Typography>
             {/* </m.div> */}

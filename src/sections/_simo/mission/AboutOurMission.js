@@ -10,14 +10,14 @@ import { bgGradient } from 'src/utils/cssStyles';
 const VISIONS = [
   {
     name: 'Healing',
-    description: 'Belief in the power of the mind to TRANCEform oneself.',
+    description: 'I belive that ones mind can heal people faster than anything else .',
   },
   {
     name: 'Learning',
-    description: 'Committed to continuous learning and improvement.',
+    description: 'I am committed to continuous learning and improvement.',
   },
   { name: 'Passion', 
-    description: 'Passionate about helping people improve their own lives' },
+    description: 'I am passionate about helping people overcome their obstacles.' },
 ];
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -74,9 +74,9 @@ export default function AboutOurMission() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          <Typography variant="h1">Our Mission</Typography>
+          <Typography variant="h1">The Mission</Typography>
 
-          <Typography sx={{ color: 'text.secondary' }}>Empowering individuals on their journey towards positive transformation and holistic well-being.</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>To empower individuals to take back control, on their journey towards a TRANCEformd and living an amazing life.</Typography>
         </Stack>
 
         <Grid container justifyContent="flex-start">
