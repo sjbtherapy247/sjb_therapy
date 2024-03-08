@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------
 const { withAxiom } = require('next-axiom');
 
-module.exports = {
+module.exports = withAxiom({
     trailingSlash: true,
       async redirects() {
           return [
@@ -19,4 +19,4 @@ module.exports = {
         ]
       }
   
-  };
+  });

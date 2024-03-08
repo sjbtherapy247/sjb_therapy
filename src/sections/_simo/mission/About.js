@@ -1,15 +1,15 @@
 import NextLink from 'next/link';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Box, Container, Typography, Button, Unstable_Grid2 as Grid, Link } from '@mui/material';
+import { Box, Typography, Button, Unstable_Grid2 as Grid, Link } from '@mui/material';
 // utils
-import { fShortenNumber } from 'src/utils/formatNumber';
+// import { fShortenNumber } from 'src/utils/formatNumber';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 // components
-import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
-import CountUp from 'src/components/count-up';
+// import Image from 'src/components/image';
+// import Iconify from 'src/components/iconify';
+// import CountUp from 'src/components/count-up';
 import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------

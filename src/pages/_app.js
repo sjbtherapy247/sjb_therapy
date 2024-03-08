@@ -49,6 +49,7 @@ import Modal from 'src/components/modal/Modal';
 
 
 const clientSideEmotionCache = createEmotionCache();
+export { reportWebVitals } from 'next-axiom';
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
