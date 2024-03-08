@@ -16,7 +16,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 // ----------------------------------------------------------------------
 
 // import { Analytics } from '@vercel/analytics/react';
-
+// import { AxiomWebVitals } from 'next-axiom';
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
 // next
@@ -50,6 +50,7 @@ import Modal from 'src/components/modal/Modal';
 
 const clientSideEmotionCache = createEmotionCache();
 export { reportWebVitals } from 'next-axiom';
+export { AxiomWebVitals } from 'next-axiom';
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
