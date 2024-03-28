@@ -45,8 +45,8 @@ export default function HomeHero() {
                
               </div>
               <div>
-                <Typography variant="h3">Unlock Your Mind</Typography>
-                <Typography variant="h5">TRANCEform your life</Typography>
+                <Typography variant="h3">TRANCEform Your Mind</Typography>
+                <Typography variant="h5">TRANSform Your Life</Typography>
               </div>
 
               <Typography color="text.secondary">
@@ -54,6 +54,7 @@ export default function HomeHero() {
                 <br />
                 <br />
                 Together, we will discover the solutions and strategies that will empower you to overcome obstacles and propel you into a better future. 
+                <br />
                 <br />
                 Book your FREE discovery call below and let&apos;s TRANCEform your life today.
               </Typography>
