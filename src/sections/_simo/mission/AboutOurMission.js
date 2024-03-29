@@ -76,7 +76,7 @@ export default function AboutOurMission() {
         >
           <Typography variant="h1">The Mission</Typography>
 
-          <Typography sx={{ color: 'text.secondary' }}>To empower individuals to take back control, on their journey towards a TRANCEformd and living an amazing life.</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>To empower individuals to take back control, on their journey towards a TRANCEformd and amazing life.</Typography>
         </Stack>
 
         <Grid container justifyContent="flex-start">
