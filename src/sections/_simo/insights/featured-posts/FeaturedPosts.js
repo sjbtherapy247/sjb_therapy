@@ -61,7 +61,7 @@ export default function FeaturedPosts({ posts }) {
     beforeChange: (current, next) => setSelected(next),
     ...CarouselDots({
       rounded: true,
-      sx: { pt: 4 },
+      sx: { mt: 5 },
     }),
   };
 
@@ -74,6 +74,7 @@ export default function FeaturedPosts({ posts }) {
   };
 
   const isMdUp = useResponsive('up', 'md');
+
   return (
     <StyledRoot>
       <Box
@@ -95,7 +96,7 @@ export default function FeaturedPosts({ posts }) {
           leftButtonProps={{
             sx: {
               // mt: -8,
-              left: 30,
+              left: 10,
               opacity: 0.8,
               display: isMdUp ? 'inline-flex' : 'none',
               color: 'common.white',
@@ -107,7 +108,7 @@ export default function FeaturedPosts({ posts }) {
             sx: {
               // mt: -8,
 
-              right: 30,
+              right: 10,
               opacity: 0.8,
               display: isMdUp ? 'inline-flex' : 'none',
 

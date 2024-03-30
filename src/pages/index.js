@@ -16,12 +16,13 @@ export async function getStaticProps() {
   return {
     props: {
       insights: [...research],
-      title: 'SJB Therapy - Your next step to a better you!!',
+      title: 'SJB Therapy - TRANCEform your Mind, TRANSform your Life',
       description:
         'SjB Therapy is a hypnotherapy practice dedicated to helping people improve their lives. Through the use hypnosis we help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.',
       canonical: 'https://sjbtherapy.com',
       // keywords: ' some keywords '
     },
+    
   };
 }
 
@@ -34,5 +35,6 @@ export default function HomePage({ insights }) {
   if (loading) {
     return <LoadingScreen />;
   }
+  
   return <HomeView insights={insights} />;
 }
