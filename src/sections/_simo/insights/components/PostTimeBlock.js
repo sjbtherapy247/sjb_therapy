@@ -15,7 +15,14 @@ export default function PostTimeBlock({ createdAt, duration, sx, ...other }) {
   }, [createdAt]);
 
   return (
-    <Stack flexWrap="wrap" direction="row" alignItems="center" sx={{ typography: 'caption', color: 'text.disabled', ...sx }} {...other}>
+    <Stack 
+      flexWrap="wrap" 
+      direction="row" 
+      alignItems="center" 
+      sx={{ typography: 'caption', color: 'text.disabled', ...sx }} 
+      {...other}
+      >
+
       {duration && (
         <>
           {duration}

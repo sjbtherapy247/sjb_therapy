@@ -52,7 +52,11 @@ export default function LatestPosts({ posts }) {
   };
 
   const viewAllBtn = (
-    <Button component={NextLink} href="/insights" color="primary" endIcon={<Iconify icon="carbon:chevron-right" />}>
+    <Button component={NextLink} 
+    href="/insights" 
+    color="primary" 
+    endIcon={<Iconify icon="carbon:chevron-right" />}
+    >
       View All
     </Button>
   );
@@ -65,7 +69,11 @@ export default function LatestPosts({ posts }) {
         px: 1,
       }}
     >
-      <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', md: 'space-between' }}>
+      <Stack 
+        direction="row" 
+        alignItems="center" 
+        justifyContent={{ xs: 'center', md: 'space-between' }}
+        >
         <Typography variant="h3">Our Latest InSights</Typography>
 
         {isMdUp && viewAllBtn}
