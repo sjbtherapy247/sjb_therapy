@@ -1,5 +1,127 @@
 export const research = [
   {
+    id: 'e99f09a7-dd88-49d5-b1c8-2daf80c2d7b9',
+    url: 'hypnotherapy-for-insomnia-embrace-a-tranquil-nights-sleep',
+    keywords: 'Hypnotherapy for Insomnia',
+    buttonTitle: 'Our Hypnotherapy Services',
+    buttonLink: '/services#hypnotherapyServices',
+    services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
+    title: 'Hypnotherapy for Insomnia - Embrace A Tranquil Nights Sleep',
+    description: "Suffering from insomnia or are looking to sleep better? The No 1 way to get a better nights sleep is Hypnotherapy. Read my insights here, as to why it's better.",
+    category: 'hypnotherapy',
+    favorited: true,
+    createdAt: '2023-06-05T01:21:51.781Z',
+    duration: '2 minutes read',
+    tags: [
+      {
+        label: 'Hypnotherapy',
+        path: '/',
+      },
+      {
+        label: 'Insomnia',
+        path: '',
+      },
+      {
+        label: 'Mindfullness',
+        path: '',
+      },
+      {
+        label: 'Sleep',
+        path: '',
+      },
+      {
+        label: 'Mental Health',
+        path: '',
+      },
+    ],
+    author: {
+      name: 'Simon J Baker',
+      role: 'Hypnotherapist',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
+      quotes: 'Member since Mar 15, 2022',
+      about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
+    },
+    content: `
+      
+      <p>In the hustle and bustle of our modern lives, finding solace in the warm embrace of sleep can feel like an elusive dream. As someone who has treated clients that have struggled with insomnia for years, I embarked on a journey to discover what other solutions might be on offer for the humble insomniac. We all know the transformative power of hypnotherapy, it's a journey that led me to develop innovative techniques such as our <a href="/hypnotherapy-services/performance-hypnotherapy-tranceformd/">TRANCEform program</a> for sports and business people as well as many other personalised approaches for many of the conditions that can be corrected with hypnosis.</p>
+
+      <img alt="Sleep Hypnosis - SjB THerapy" height='400px' width='100%' style="object-fit:cover" src="/assets/images/marketing/Sleep-Better-female-asleep-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" />
+      </div>
+
+      <p>Insomnia is the silent thief of restful nights, it affects millions around the world. Aside from hypnotherapy, there is a sea of sleep aids and medications, I found myself seeking a more holistic approach—one that doesn't just induce sleep but fosters a deep sense of relaxation and tranquility.</p>
+
+      <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the <strong>Journal of Clinical Sleep Medicine</strong>, hypnotherapy has shown promise in <a href="/hypnotherapy-services/hypnosis-for-insomnia-and-sleep-disorders/">improving sleep quality</a> and reducing the time it takes to fall asleep.</p>
+      <div>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+
+      <font color="#5e699d"><center><h3><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></h3></center></font>
+
+      <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the <font color="#5e699d"><strong>Journal of Clinical Sleep Medicine</strong></font>, hypnotherapy has shown promise in improving sleep quality and reducing the time it takes to fall asleep.</p>
+
+      <br>
+
+      <p>In comparison, while melatonin is a popular over-the-counter supplement, its effectiveness varies wildly among individuals. The <strong>National Sleep Foundation</strong> suggests that melatonin may be more effective for certain types of insomnia, it doesn't say which, but its long-term effects and optimal dosage remain subjects of ongoing research.</p>
+
+      <p>Recent statistics from the <strong>American Academy of Sleep Medicine</strong> indicate that insomnia affects approximately 10-30% of the population. That's anywhere between 33 and 99 million people… <font color="#5e699d">and that's just America!</font> While medications may provide temporary relief, <a href="/insights/hypnotherapy-understanding-the-mind-body-connection/">hypnotherapy offers a holistic approach</a>, addressing the psychological and behavioural aspects of insomnia.</p>
+
+      <p><img alt="Sleep Insomnia - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-male-insomniac-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" /></p>
+
+      <p>Moreover, a meta-analysis published in the <strong>Journal of Sleep Research</strong> revealed that individuals undergoing hypnotherapy experienced significant improvements in sleep duration, sleep efficiency, and overall sleep quality.</p>
+
+      <p>Many people are on a quest for a <font color="#5e699d">natural remedy, rather than medication.</font> This is because they have tried the medication and it either doesn't work, the side effects outweigh the benefits or they have had something else happen in their life. This is where coming to see a hypnotherapist makes all the difference. We don't merely treat symptoms but we delve into the root causes of your insomnia and find out how it is running for you. It can be as simple as adopting a better routine around bedtime, or not watching any news programs from 4pm onwards! I'm not kidding either…</p>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <p>With our personalized approach and expertise we will tailor the <a href="/services/#hypnotherapyPackages">hypnotherapy sessions</a> to your unique needs, providing you with a sense of reassurance and trust throughout the process. Having provided hypnosis for sleep issues to many people now, i'm comfortable in saying that there really is no better way of helping people with insomnia.</p>
+
+      <p>Yes you can also meditate, I've tried it at least 30 times throughout my life and nearly every time, because there was no voice or guide helping my subconscious, I either fell asleep or got more frustrated. I know many people who have had a similar experience. Now i'm not bashing meditation, if it works for you, great. It just wasn't for me. <font color="#5e699d">Hypnotherapy on the other hand</font>, is a fast track journey to where I and, you I suspect, want to go.</p>
+
+      <p><img alt="Sleep Better - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" /></p>
+
+      <font color="#5e699d"><h4>Conclusion</h4></font>
+
+      <p>In conclusion, while traditional sleep aids may offer temporary relief, the holistic and enduring benefits of hypnotherapy make it a compelling choice for those seeking a sustainable solution to insomnia and sleepless nights.</p>
+
+      <p><font color="#5e699d">Book yourself a free discovery call today</font> and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>`,
+
+    coverImg: '/assets/images/marketing/Sleep-Better-female-asleep-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp',
+    heroImg: '/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp',
+  },
+  {
     id: 'e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1',
     url: 'hypnotherapy-understanding-the-mind-body-connection',
     keywords: 'understanding the mind body connection',

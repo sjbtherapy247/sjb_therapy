@@ -42,24 +42,25 @@ export default function HomeHero() {
             >
               <div>
                 <Typography variant="h2">SjB Therapy</Typography>
-                <Typography variant="h5">Simply Just Believe</Typography>
+               
               </div>
               <div>
                 <Typography variant="h3">Unlock Your Mind</Typography>
-                <Typography variant="h5">Embrace Your Potential</Typography>
+                <Typography variant="h5">TRANCEform your life</Typography>
               </div>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right
-                place and you don&apos;t have to face things alone.
+                Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will help you achieve your goals.
                 <br />
                 <br />
-                Together, we can discover the solutions and strategies that will empower you to overcome obstacles and unlock your full potential. Book your free discovery call and we can explore the best path forward together and let your tomorrow begin today.
+                Together, we will discover the solutions and strategies that will empower you to overcome obstacles and propel you into a better future. 
+                <br />
+                Book your FREE discovery call below and let&apos;s TRANCEform your life today.
               </Typography>
 
               <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">
                 <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
-                  Your Free Discovery Call
+                  BOOK Your Free Discovery Call
                 </Button>
               </Link>
             </Stack>

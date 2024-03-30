@@ -16,7 +16,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 // ----------------------------------------------------------------------
 
 // import { Analytics } from '@vercel/analytics/react';
-
+// import { AxiomWebVitals } from 'next-axiom';
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
 // next
@@ -49,6 +49,8 @@ import Modal from 'src/components/modal/Modal';
 
 
 const clientSideEmotionCache = createEmotionCache();
+export { reportWebVitals } from 'next-axiom';
+export { AxiomWebVitals } from 'next-axiom';
 export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
@@ -86,12 +88,15 @@ export default function MyApp(props) {
         <title>{title || defaultTitle}</title>
         <meta name="description" content={description || defaultDescription} />
         <meta name="keywords" content={keywords || defaultKeywords} />
+        <meta name="google-adsense-account" content="ca-pub-4877735171187701" />
         {openGraphData.map((og) => (
           <meta key={og.property || og.name} {...og} />
+          
         ))}
         <link rel="canonical" href={canonical || defaultUrl} />
         <link rel="alternate" media="only screen and (max-width: 640px)" href={canonical || defaultUrl} />
       </Head>
+  
       <CacheProvider value={emotionCache}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
           <SettingsProvider>
