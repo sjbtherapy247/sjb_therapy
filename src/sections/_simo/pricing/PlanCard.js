@@ -26,15 +26,31 @@ export default function PlanCard({ plan, prices }) {
 
   const popular = license === '3-Session Bundle';
   let purchase = null;
-  // let itemPrice = null;
+  let itemPrice = null;
 
-  if (prices) {
+  if (prices && prices.length > 0) {
     purchase = prices.filter((item) => item?.product?.name === stripeName);
-    if (license === 'Single Session' && !user) purchase.pop();
-    if (license === 'Single Session' && user) purchase.shift();
+    
+    // Check if purchase array is not empty
+    if (purchase.length > 0) {
+        if (license === 'Single Session' && !user) purchase.pop();
+        if (license === 'Single Session' && user) purchase.shift();
 
-   // itemPrice = purchase[0].unit_amount / 100;
-  }
+        // Check if purchase array still has elements after potential modifications
+        if (purchase.length > 0) {
+            itemPrice = purchase[0].unit_amount / 100;
+        } else {
+            // Handle case where purchase array becomes empty after modifications
+            console.error('No eligible purchase found after license check.');
+        }
+    } else {
+        // Handle case where no purchase matches the filter
+        console.error('No purchase matching stripeName found.');
+    }
+} else {
+    // Handle case where prices array is either undefined or empty
+    console.error('No prices available.');
+}
 
   const handleCheckout = () => {
     setLoading(true);
