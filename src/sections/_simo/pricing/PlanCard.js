@@ -26,14 +26,14 @@ export default function PlanCard({ plan, prices }) {
 
   const popular = license === '3-Session Bundle';
   let purchase = null;
-  let itemPrice = null;
+ // let itemPrice = null;
 
   if (prices) {
     purchase = prices.filter((item) => item?.product?.name === stripeName);
     if (license === 'Single Session' && !user) purchase.pop();
     if (license === 'Single Session' && user) purchase.shift();
 
-    itemPrice = purchase[0].unit_amount / 100;
+   // itemPrice = purchase[0].unit_amount / 100;
   }
 
   const handleCheckout = () => {
