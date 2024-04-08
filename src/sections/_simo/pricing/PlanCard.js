@@ -26,7 +26,7 @@ export default function PlanCard({ plan, prices }) {
 
   const popular = license === '3-Session Bundle';
   let purchase = null;
- // let itemPrice = null;
+  // let itemPrice = null;
 
   if (prices) {
     purchase = prices.filter((item) => item?.product?.name === stripeName);
