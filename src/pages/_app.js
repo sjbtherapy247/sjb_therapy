@@ -15,7 +15,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 // import SEO from 'next-seo/next-seo.config';
 // ----------------------------------------------------------------------
 
-// import { Analytics } from '@vercel/analytics/react';
 // import { AxiomWebVitals } from 'next-axiom';
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
