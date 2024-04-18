@@ -1,5 +1,7 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { Readable } from 'stream';
+// import { getPages } from '.src/pages/'; // Adjust the path as needed
+
 
 const sitemapHandler = async (req, res) => {
   const links = [
