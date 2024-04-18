@@ -1,15 +1,13 @@
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://sjbtherapy.com',
-  generateRobotsTxt: false,
+  generateRobotsTxt: true,
   sitemapSize: 5000,
   outDir: './public',
-  // eslint-disable-next-line arrow-body-style
-  transform: async (config, path) => {
-    return {
+ 
+  transform: async (config, path) => ({
       loc: path,
       changefreq: 'daily',
       priority: 0.7,
       lastmod: new Date().toISOString()
-    };
-  }
+    })
 };

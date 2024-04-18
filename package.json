@@ -39,7 +39,7 @@
     "@vercel/speed-insights": "^1.0.2",
     "date-fns": "^2.29.3",
     "firebase": "^9.23.0",
-    "firebase-admin": "^11.9.0",
+    "firebase-admin": "^12.1.0",
     "framer-motion": "^10.9.2",
     "google-map-react": "^2.2.0",
     "http-proxy": "^1.18.1",
