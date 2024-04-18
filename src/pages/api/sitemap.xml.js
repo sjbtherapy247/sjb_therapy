@@ -1,18 +1,14 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { Readable } from 'stream';
-// import { getPages } from '.src/pages/'; // Adjust the path as needed
+import paths from '../../routes/paths';
 
 
 const sitemapHandler = async (req, res) => {
-  const links = [
-    { url: '/', changefreq: 'daily', priority: 0.7 },
-    { url: '/about', changefreq: 'monthly', priority: 0.5 },
-    { url: '/services', changefreq: 'monthly', priority: 0.5 },
-    { url: '/hypnotherapy-services', changefreq: 'monthly', priority: 0.5 },
-    { url: '/insights', changefreq: 'daily', priority: 0.5 },
-    { url: '/mission', changefreq: 'monthly', priority: 0.5 },
-    // Add more URLs dynamically based on your application
-  ];
+  const links = Object.values(paths).map(path => ({
+    url: `https://sjbtherapy.com${path}`,
+    changefreq: 'weekly',
+    priority: 0.5
+  }));
 
   const sitemapStream = new SitemapStream({ hostname: 'https://sjbtherapy.com' });
 
