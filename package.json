@@ -65,10 +65,12 @@
     "react-slick": "^0.29.0",
     "resend": "^2.0.0",
     "simplebar-react": "^3.2.3",
+    "sitemap": "^7.1.1",
     "slick-carousel": "^1.8.1",
     "stripe": "^12.9.0",
     "stylis": "^4.1.1",
     "stylis-plugin-rtl": "^2.0.2",
+    "xml2js": "^0.6.2",
     "yet-another-react-lightbox": "^3.2.0",
     "yup": "^1.0.2"
   },
