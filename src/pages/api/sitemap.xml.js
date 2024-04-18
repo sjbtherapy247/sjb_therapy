@@ -7,7 +7,7 @@ const sitemapHandler = async (req, res) => {
     // Add more URLs dynamically based on your application
   ];
 
-  const sitemapStream = new SitemapStream({ hostname: 'https://example.com' });
+  const sitemapStream = new SitemapStream({ hostname: 'https://sjbtherapy.com' });
 
   res.writeHead(200, {
     'Content-Type': 'application/xml',
