@@ -1,4 +1,4 @@
-export default handleRequest;
+
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { Readable } from 'stream';
 
