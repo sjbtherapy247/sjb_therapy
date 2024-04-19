@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /support
 
-Sitemap: https://sjbtherapy.com/api/sitemap.xml
+Sitemap: https://sjbtherapy.com/sitemap.xml
