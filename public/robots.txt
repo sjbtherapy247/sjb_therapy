@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /support
-Disallow: /auth/login-cover/
-Sitemap: https://sjbtherapy.com/sitemap.xml
+
+Sitemap: https://sjbtherapy.com/api/sitemap.xml
