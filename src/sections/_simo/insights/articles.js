@@ -247,7 +247,7 @@ export const research = [
 
       <p>Numerous studies have highlighted the effectiveness of hypnotherapy as a smoking cessation tool. According to a meta-analysis published in the Journal of Applied Psychology, hypnosis was found to be over three times as effective as nicotine replacement therapy and five times more effective than unassisted quit attempts. Furthermore, research from the American College of Chest Physicians revealed that hypnotherapy has a success rate of up to 64% in helping smokers quit long-term.</p>
 
-      <div><img alt="alt marketing"  height='300px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/marketing_post_02.jpg" /></div>>
+      <div><img alt="alt marketing"  height='300px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/marketing_post_02.jpg" /></div>
 
       <h4>Reprogramming the Subconscious</h4>
 
@@ -476,9 +476,10 @@ export const research = [
       
       <p>If you're ready to embark on a journey of holistic healing, I invite you to connect with me. Together, we can explore how the combination of hypnotherapy and psychotherapy can guide you toward a life of empowerment, resilience, and positive change.</p>
       
-      <p><strong>Remember, the power to heal is within you, and I'm here to support you every step of the way</strong></p>.
+      <p><strong>Remember, the power to heal is within you, and I'm here to support you every step of the way</strong></p>
 
       <p>Book your Free Discovery call today and let's start journey</p>`,
+      
     coverImg: '/assets/images/marketing/marketing_4.jpg',
     heroImg: '/assets/images/marketing/marketing_post_hero.jpg',
   },
