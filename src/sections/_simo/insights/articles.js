@@ -11,28 +11,13 @@ export const research = [
     category: 'hypnotherapy',
     favorited: true,
     createdAt: '2023-06-05T01:21:51.781Z',
-    duration: '2 minutes read',
+    duration: '3 minutes read',
     tags: [
-      {
-        label: 'Hypnotherapy',
-        path: '/',
-      },
-      {
-        label: 'Insomnia',
-        path: '',
-      },
-      {
-        label: 'Mindfullness',
-        path: '',
-      },
-      {
-        label: 'Sleep',
-        path: '',
-      },
-      {
-        label: 'Mental Health',
-        path: '',
-      },
+      { label: 'Hypnotherapy', path: '/hypnotherapy' },
+      { label: 'Insomnia', path: '/Insomnia' },
+      { label: 'Mindfulness', path: '/Mindfulness' },
+      { label: 'Sleep', path: '/Sleep' },
+      { label: 'Mental Health', path: '/Mental Health' },
     ],
     author: {
       name: 'Simon J Baker',
