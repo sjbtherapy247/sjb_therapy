@@ -18,25 +18,36 @@ async function fetchPages() {
 const handleRequest = async (req, res) => {
     try {
         const pages = await fetchPages();
-        console.log('Pages:', pages); // Debug output
+
+        const staticLinks = [
+            { url: '/', changefreq: 'daily', priority: 1.0 },
+            { url: '/about', changefreq: 'monthly', priority: 0.7 },
+            { url: '/service', changefreq: 'monthly', priority: 0.6 },
+            { url: '/mission', changefreq: 'monthly', priority: 0.6 },
+            { url: '/support', changefreq: 'monthly', priority: 0.6 },
+            { url: 'hypnotherapy-services/overcome-anxiety-and-remove-phobias', changefreq: 'monthly', priority: 0.6 },
+            // Add more static URLs as needed
+        ];
+
+        const dynamicLinks = pages.map(page => ({
+            url: `/${page.slug}`,
+            changefreq: 'weekly',
+            priority: 0.8
+        }));
+
+        const allLinks = [...staticLinks, ...dynamicLinks];
 
         const sitemapStream = new SitemapStream({ hostname: 'https://sjbtherapy.com' });
         const xmlStream = new Readable({
             read() {
-                pages.forEach(page => {
-                    console.log('Writing page to stream:', page); // Debug output
-                    sitemapStream.write({
-                        url: `/${page.slug}`,
-                        changefreq: 'daily',
-                        priority: 0.8
-                    });
+                allLinks.forEach(link => {
+                    sitemapStream.write(link);
                 });
                 sitemapStream.end();
             }
         });
 
         const xmlString = await streamToPromise(xmlStream.pipe(sitemapStream)).then(data => data.toString());
-        console.log('Sitemap XML String:', xmlString); // Debug output
 
         res.setHeader('Content-Type', 'application/xml');
         res.status(200).send(xmlString);
