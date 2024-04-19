@@ -20,3 +20,14 @@ module.exports = withAxiom({
       }
   
   });
+
+  module.exports = {
+    async rewrites() {
+      return [
+        {
+          source: '/sitemap.xml',
+          destination: '/api/sitemap.xml', // Adjust the destination if your endpoint is named differently
+        },
+      ];
+    },
+  };
