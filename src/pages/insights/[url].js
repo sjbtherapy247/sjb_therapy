@@ -29,7 +29,7 @@ export async function getStaticProps(context) {
       description: researchDoc.description,
       keywords: researchDoc.keywords,
       canonical: `https://sjbtherapy.com/insights/${researchDoc.url}`,
-      image: `https://sjbtherapy.com/assets/images/marketing/${researchDoc.heroImg}`,
+      image: `https://sjbtherapy.com/${researchDoc.heroImg}`,
     },
   };
 }
