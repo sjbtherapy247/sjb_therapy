@@ -15,8 +15,8 @@ export async function getStaticProps() {
     props: {
       servicesDocs: [...servicesDescription],
       packages: [...sessionPricing],
-      title: 'Hypnotherapy Services Sydney - SjB Therapy',
-      description: `Our range of hypnotherapy services cover fears, phobias and anxieties, up to sporting and performance hypnosis. We cover Sydney locally and online globally`,
+      title: 'Hypnotherapy Services Sydney - Simon Baker',
+      description: `My range of hypnotherapy services cover fears, phobias and anxieties, up to sporting and performance hypnosis. I cover Sydney locally and online globally`,
       canonical: 'https://sjbtherapy.com/services/',
       keywords: 'hypnotherapy services sydney',
     },

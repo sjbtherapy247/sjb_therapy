@@ -16,9 +16,9 @@ export async function getStaticProps() {
   return {
     props: {
       insights: [...research],
-      title: 'SJB Therapy - TRANCEform your Mind, TRANSform your Life',
+      title: 'Simon Baker Hypnotherapist - Hypnotherapy in Sydney',
       description:
-        'SjB Therapy is a hypnotherapy practice dedicated to helping people improve their lives. Through the use hypnosis we help people overcome a variety of challenges, including anxiety, depression, pain, addiction and also personal performance.',
+        'Welcome to my hypnotherapy practice. I am dedicated to helping people improve their lives, through the use hypnosis. Book your Free session today.',
       canonical: 'https://sjbtherapy.com',
       // keywords: ' some keywords '
     },

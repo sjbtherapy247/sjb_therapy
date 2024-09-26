@@ -11,7 +11,7 @@ import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
 export async function getStaticProps() {
   return {
     props: {
-      title: 'My Mission - Healing and Performance - SjB Therapy',
+      title: 'My Mission - Healing and Performance - Simon Baker',
       description: `My mission is to combine healing and performance in all hypnotherapy. Your wellness and mental strength is my passion and I won't stop until it's addressed.`,
       canonical: 'https://sjbtherapy.com/mission/',
       keywords: 'My Mission, healing and performance',

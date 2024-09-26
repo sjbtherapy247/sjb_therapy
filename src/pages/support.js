@@ -9,7 +9,7 @@
  export async function getStaticProps() {
    return {
      props: {
-       title: 'Client Support | SJB Therapy',
+       title: 'Client Support | Simon Baker',
       canonical: 'https://sjbtherapy.com/support/',
     },
   };
@@ -24,7 +24,7 @@
    return (
      <>
        <Head>
-         <title>Support | SJB Therapy</title>
+         <title>Hypnotherapy Support | Simon Baker</title>
        </Head>
 
       <SupportView />

@@ -34,9 +34,9 @@ const Meta = () => (
     <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
     <meta
       name="description"
-      content="Book a Free Session of local hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance.  TRANCEform your mind, TRANCEform your life.."
+      content="Book a Free Session of hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance. TRANCEform your mind, TRANCEform your life!"
     />
-    <meta name="keywords" content="Local Hypnotherapy, Quiz Anxiety and Perform" />
+    <meta name="keywords" content="Simon Baker Local Hypnotherapy Sydney" />
     <meta name="theme-color" content={palette('light').primary.dark} />
     <meta name="google-adsense-account" content="ca-pub-4250297759847171" />
     
