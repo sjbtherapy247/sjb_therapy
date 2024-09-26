@@ -11,6 +11,7 @@ import { Pattern01 } from 'src/assets/illustrations/pattern';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { bgGradient } from 'src/utils/cssStyles';
+
 // import { FAQPageJsonLd } from 'next-seo';
 
 // ----------------------------------------------------------------------
@@ -138,8 +139,9 @@ export default function HomeFAQs() {
                     WhatsApp {click && isSmUp ? ' ' : null}
                     {/* Message */}
                   </Button>
-                  <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com?SjB%20Therapy%20Home%20Page%20Enquiry" target="_blank" startIcon={<Iconify icon="mdi:email-outline" />}>
-                    Email
+                  <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com" target="_blank" startIcon={<Iconify icon="mdi:email-outline" />} onClick={handleClick}> 
+                    Email {click && isSmUp ? '': null}
+                    {/* email */}
                   </Button>
                 </Stack>
               </m.div>
