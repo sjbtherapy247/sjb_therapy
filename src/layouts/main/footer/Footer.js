@@ -112,7 +112,7 @@ const Footer = () => {
             </Box>
             <Stack alignItems="flex-start" spacing={0}>
               <Typography variant="body2" textAlign="center" sx={{ color: 'text.secondary', opacity: 0.8 }}>
-                Simon Baker is a Sydney based clinical hypnotherapist and strategic Psychotherapist, who will give you the mental edge no matter what you&apos;re here for. Whether it&apos;s for performance, anxiety, weight loss or something else,
+                Simon Baker is a Sydney based Clinical Hypnotherapist and Strategic Psychotherapist, who will give you the mental edge no matter what you&apos;re here for. Whether it&apos;s for performance, anxiety, weight loss or something else,
                 you&apos;re in the right place.{' '}
               </Typography>
             </Stack>
@@ -122,7 +122,7 @@ const Footer = () => {
               </Typography>
 
               <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                © 2023. All rights reserved
+                © 2022-2024. All rights reserved
               </Typography>
             </Stack>
           </Stack>

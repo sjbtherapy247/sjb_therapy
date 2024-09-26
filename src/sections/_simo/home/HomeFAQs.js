@@ -138,7 +138,7 @@ export default function HomeFAQs() {
                     WhatsApp {click && isSmUp ? ' ' : null}
                     {/* Message */}
                   </Button>
-                  <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com? subject=SjB Therapy Home Page Enquiry "target="_blank" startIcon={<Iconify icon="mdi:email-outline" />}>
+                  <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com?SjB%20Therapy%20Home%20Page%20Enquiry" target="_blank" startIcon={<Iconify icon="mdi:email-outline" />}>
                     Email
                   </Button>
                 </Stack>
