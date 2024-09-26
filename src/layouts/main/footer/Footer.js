@@ -89,8 +89,8 @@ const Footer = () => {
                 <Link component={NextLink} href="/services" variant="body2" sx={{ color: 'text.primary' }}>
                   Services
                 </Link>
-                <Link component={NextLink} href="/" variant="body2" sx={{ color: 'text.primary' }}>
-                  About Simon
+                <Link component={NextLink} href="/sitemap.xml" variant="body2" sx={{ color: 'text.primary' }}>
+                  Sitemap
                 </Link>
               </Stack>
               <Stack spacing={1} alignItems="center">
