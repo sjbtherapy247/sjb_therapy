@@ -1,5 +1,102 @@
 export const research = [
   {
+    
+    id: 'e99f09a7-dd88-49d5-b1c8-1t3500de4',
+    url: 'golf-pro-cameron-davis-top-4-reasons-he-used-hypnotherapy',
+    keywords: 'Hypnotherapy for Golf Performance',
+    buttonTitle: 'Our Hypnotherapy Services',
+    buttonLink: '/services#hypnotherapyServices',
+    services: 'If you would like to explore more on the types of issues Hypnotherapy can address, please head onto our services page.',
+    title: 'Golf Pro Cameron Davis Top FOUR! Reasons for Hypnotherapy',
+    description: "Australian Golf Pro Cameron Davis made waves at the Rocket Mortgage Classic, and a big part of his success? Hypnotherapy.",
+    category: 'hypnotherapy',
+    favorited: true,
+    createdAt: '2024-09-26T16:21:51.781Z',
+    duration: '3 minutes read',
+    tags: [
+      { label: 'Hypnotherapy', path: '/hypnotherapy' },
+      { label: 'Sport', path: '/Sport' },
+      { label: 'Mindfulness', path: '/Mindfulness' },
+      { label: 'Sleep', path: '/Sleep' },
+      { label: 'Mental Health', path: '/Mental Health' },
+    ],
+    author: {
+      name: 'Simon J Baker',
+      role: 'Hypnotherapist',
+      picture: '/assets/images/avatar/simon_baker_avatar.jpeg',
+      quotes: 'Member since Mar 15, 2022',
+      about: 'Simon is a clinical hypnotherapist and strategic psychotherapist that is on a journey to impact as many lives as possible with hypnotherapy',
+    },
+    content: `
+      
+    <p>I recently came across the inspiring story that really hit home and wanted to share it with you. If you haven't heard, Australian golf pro Cameron Davis 🏌 made waves at the Rocket Mortgage Classic, and a big part of his success? <a href="/">Hypnotherapy</a>.</p>
+    
+    <p><a href="https://www.pgatour.com/player/45157/cam-davis">Cameron Davis</a> attributed his victory to the powerful and rapid benefits of hypnotherapy. He spoke about how working with a hypnotherapist improved his focus, mental clarity, and overall game. It’s incredible how quickly hypnotherapy <a href="/hypnotherapy-services/performance-hypnotherapy-tranceformd/">transformed his performance</a> and helped him secure a win.</p>
+    
+    <p>He said in the article that he’d been seeing a psychologist for “Some Time..” and that he'd only been seeing the hypnotherapist for a few weeks… 
+    
+    Now I understand that the psychologist could have been doing great work and the hypnosis unlocked that final component for him, but, he hadn’t won on Tour before 🤔</p>
+
+    <p>I’ve seen firsthand the <font color="#5e699d"><strong>transformative power of hypnotherapy.</strong></font> As it taps into the subconscious mind, helping to change behaviors, thought patterns, and even physical performance. Whether you’re dealing with performance anxiety, mental blocks, or just need to sharpen your focus, hypnotherapy can make a significant difference.</p>
+    
+    <bold><blockquote>"It’s probably the best thing I’ve done for myself..."</bold>
+
+      Cameron Davies</blockquote>
+    
+    <strong>Cams Top ‘FOUR!’ Reasons for Hypnotherapy ️⛳️</strong>
+     
+    <p>So, Cameron Davis’ journey with hypnotherapy offers a powerful testament to its effectiveness in improving performance and achieving success. Here are the <strong>Top 4 Benefits</strong> he mentioned from his experience with hypnotherapy:</p>
+
+    <ul><strong>🎯 - Improved Focus and Mental Clarity:</strong> He noted that hypnotherapy significantly helped him get into the right frame of mind, enhancing his focus and mental clarity during competitions.</ul>
+    <ul><strong>📈 - Enhanced Performance:</strong> He attributed his ability to stay composed and perform well under pressure to the mental conditioning and relaxation techniques learned through hypnotherapy.</ul>
+    <ul><strong>💆‍♂️ - Stress and Anxiety Reduction:</strong>Hypnotherapy helped him manage stress and anxiety, allowing him to maintain calmness and composure during critical moments in tournaments.</ul>
+    <ul><strong>🧠 - Overall Mental Well-being:</strong> Davis emphasised how hypnotherapy contributed to his overall mental well-being, which in turn positively impacted his physical performance on the golf course.</ul>
+     
+    
+    <html>
+    <div align="center">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div>
+     </html>
+
+    <div><p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp"</p></div>
+
+    <font color="#5e699d"><h4>Conclusion</h4></font>
+    <p>If you’re inspired by <strong>Cameron Davis’ story</strong> and want to make similar leaps not only in your golf performance but also in your life, hypnotherapy could be the transformative tool you need. I offer personalised 1-on-1 hypnotherapy sessions designed to help you unlock your potential, overcome mental blocks, and achieve your goals.</p>
+
+     <p>These are fully tailored to your situation and needs which makes them much more powerful than just an audio. You actually get a tailored audio from your session, so it’s a Win-Win!</p>
+     
+     <p><strong><font color="#5e699d">Book yourself a free discovery call below</font></strong> and let's guide you towards the performance that you currently only dream of.</p> 
+
+     <p>If you're tired of hacking aroung, constantly frustrated with yourself, perhaps it's time to explore the magical realm of hypnotherapy. Once you embrace the idea, profound transformation can be yours. <Strong>FOUR!.</Strong></p>
+      
+      <html><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-4250297759847171"
+      data-ad-slot="8585906728"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></html> `,
+
+    coverImg: '/assets/images/marketing/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
+    heroImg: '/assets/images/marketing/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
+
+  },
+{
     id: 'e99f09a7-dd88-49d5-b1c8-2daf80c2d7b9',
     url: 'hypnotherapy-for-insomnia-embrace-a-tranquil-nights-sleep',
     keywords: 'Hypnotherapy for Insomnia',
@@ -36,9 +133,8 @@ export const research = [
       <p>Insomnia is the silent thief of restful nights, it affects millions around the world. Aside from hypnotherapy, there is a sea of sleep aids and medications, I found myself seeking a more holistic approach—one that doesn't just induce sleep but fosters a deep sense of relaxation and tranquility.</p>
 
       <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the <strong>Journal of Clinical Sleep Medicine</strong>, hypnotherapy has shown promise in <a href="/hypnotherapy-services/hypnosis-for-insomnia-and-sleep-disorders/">improving sleep quality</a> and reducing the time it takes to fall asleep.</p>
-      <div>
-
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      <br>
+      <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
@@ -48,8 +144,7 @@ export const research = [
       data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-
+      </script></div>
 
       <font color="#5e699d"><center><h3><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></h3></center></font>
 
@@ -83,7 +178,7 @@ export const research = [
 
       <p>Yes you can also meditate, I've tried it at least 30 times throughout my life and nearly every time, because there was no voice or guide helping my subconscious, I either fell asleep or got more frustrated. I know many people who have had a similar experience. Now i'm not bashing meditation, if it works for you, great. It just wasn't for me. <font color="#5e699d">Hypnotherapy on the other hand</font>, is a fast track journey to where I and, you I suspect, want to go.</p>
 
-      <p><img alt="Sleep Better - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" /></p>
+      <div><p><img alt="Sleep Better - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp"</p></div>
 
       <font color="#5e699d"><h4>Conclusion</h4></font>
 
@@ -484,3 +579,4 @@ export const research = [
     heroImg: '/assets/images/marketing/marketing_post_hero.jpg',
   },
 ];
+
