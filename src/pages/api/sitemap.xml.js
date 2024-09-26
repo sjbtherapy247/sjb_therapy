@@ -35,11 +35,12 @@ const handleRequest = async (req, res) => {
             { url: '/hypnotherapy-services/hypnotherapy-for-depression-and-low-self-esteem', changefreq: 'weekly', priority: 0.8 },
             { url: '/hypnotherapy-services/performance-anxiety-and-stage-fright', changefreq: 'weekly', priority: 0.8 },
             { url: '/insights', changefreq: 'weekly', priority: 0.9 },
-            { url: '/insights/hypnotherapy-understanding-the-mind-body-connection', changefreq: 'weekly', priority: 0.8 },
-            { url: '/insights/quit-smoking-with-hypnosis', changefreq: 'weekly', priority: 0.8 },
-            { url: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance', changefreq: 'weekly', priority: 0.8 },
-            { url: '/insights/hypnotherapy-synergy-with-psychotherapy', changefreq: 'weekly', priority: 0.8 },
-            { url: '/insights/hypnotherapy-for-insomnia-embrace-a-tranquil-nights-sleep', changefreq: 'weekly', priority: 0.8 },
+            { url: '/insights/hypnotherapy-understanding-the-mind-body-connection', changefreq: 'monthly', priority: 0.8 },
+            { url: '/insights/quit-smoking-with-hypnosis', changefreq: 'monthly', priority: 0.8 },
+            { url: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance', changefreq: 'monthly', priority: 0.8 },
+            { url: '/insights/hypnotherapy-synergy-with-psychotherapy', changefreq: 'monthly', priority: 0.8 },
+            { url: '/insights/hypnotherapy-for-insomnia-embrace-a-tranquil-nights-sleep', changefreq: 'monthly', priority: 0.8 },
+            { url: '/insights/golf-pro-cameron-davis-top-4-reasons-he-used-hypnotherapy', changefreq: 'monthly', priority: 0.8 },
            // Add more static URLs as needed
         ];
 
