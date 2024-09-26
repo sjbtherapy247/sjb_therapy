@@ -51,7 +51,7 @@ const clientSideEmotionCache = createEmotionCache();
 export { reportWebVitals } from 'next-axiom';
 export { AxiomWebVitals } from 'next-axiom';
 export default function MyApp(props) {
-  const { children, Component, pageProps, emotionCache = clientSideEmotionCache } = props;
+  const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
   const defaultTitle = 'Local Hypnotherapy - Free Session - SjB Therapy';
   const defaultDescription = 'Book a Free Session of local hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance.  TRANCEform your mind, TRANCEform your life.';
@@ -94,10 +94,10 @@ export default function MyApp(props) {
         <link rel="canonical" href={canonical || defaultUrl} />
         <link rel="alternate" media="only screen and (max-width: 640px)" href={canonical || defaultUrl} />
       </Head>
-      <body>
-      {children}
+      
+     
         <Analytics />
-      </body>
+      
       <CacheProvider value={emotionCache}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
           <SettingsProvider>
