@@ -37,6 +37,7 @@ import LoadingCircular from 'src/components/loading-circular/LoadingCircular';
 import Notification from 'src/components/notification/Notification';
 import Modal from 'src/components/modal/Modal';
 // import { SpeedInsights } from "@vercel/speed-insights/next"
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Analytics } from '@vercel/analytics/react';
 // data&SEO
 // import Script from 'next/script';
@@ -59,7 +60,7 @@ export default function MyApp(props) {
   const defaultImage = 'https://sjbtherapy.com/assets/sjb-logo/Hmain-darker.jpg';
   const defaultKeywords = 'local hypnotherapy, free session, remove anxiety,';
   const { title, description, image, canonical, keywords } = pageProps;
-
+  
   const openGraphData = [
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: title || defaultTitle },
@@ -96,8 +97,7 @@ export default function MyApp(props) {
       </Head>
       
      
-        <Analytics />
-      
+      <Analytics />
       <CacheProvider value={emotionCache}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
           <SettingsProvider>
