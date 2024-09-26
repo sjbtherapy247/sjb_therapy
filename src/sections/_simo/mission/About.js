@@ -97,13 +97,16 @@ export default function About() {
           <Typography variant="h2">Who Am I?</Typography>
 
           <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-          I`m Simon and SjB Therapy is my practice. I am dedicated to helping people improve their lives through a combination of psychotherapy, clinical hypnotherapy and counselling. I combine these skills to help people overcome a variety of challenges, including anxiety, depression, pain, addiction, personal performance and much more.
+          I`m Simon and I am dedicated to helping you improve your life through a combination of strategic psychotherapy and clinical hypnotherapy. I combine both these wonderful modalities to help people overcome a variety of challenges, including anxiety in all it&apos;s forms, depression, chronic pain, addictions, habits, personal performance, phobias and much more.
             <br />
             <br />
-            I believe that hypnotherapy with psychotherapy is a safe and effective way to make permanent changes in your life. It has been proven by the experts and also by mine and many other therapists clients, that this combination provides the fastest way to make the changes you seek.
+            I believe that hypnotherapy with psychotherapy is the safe and most effective way to make instant and lasting change in your life. It has been proven by both scientific experts and by mine and many other therapists anecdotal evidence, that this combination provides the fastest way to make the changes to the human mind.
             <br />
             <br />
-            I am looking forward to helping you with whatever obstacle it is that you want to overcome and know that I will do everything possible to give you your desired outcome. Usually people go away with much more that they were initailly seeking help for. Read my reviews - <a href="https://bit.ly/3V6j9DC" target="_blank">SjB Therapy Google Reviews</a>
+            I am looking forward to helping you with whatever obstacle, barrier or belief you want to overcome and know that I will do everything possible to give you your desired outcome. Usually people go away with much more that they were initailly seeking help for. 
+            <br />
+            <br />
+            Read my reviews - <a href="https://bit.ly/3V6j9DC" target="_blank">Simon Baker | The Hypnotherapist | Google Reviews</a>
           </Typography>
 
           <Box sx={{ mt: 10 }}>
@@ -118,7 +121,7 @@ export default function About() {
           </Button> */}
           <Link component={NextLink} href="/services/#hypnotherapyServices">
             <Button sx={{ mt: 4 }} variant="outlined">
-              Our Services
+              My Services
             </Button>
           </Link>
         </Grid>

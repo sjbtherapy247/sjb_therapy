@@ -9,15 +9,16 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 const VISIONS = [
   {
-    name: 'Healing',
-    description: 'I belive that ones mind can heal people faster than anything else .',
+    name: 'Challenge',
+    description: 'We will challenge the beliefs, thoughts, feelings and emotions that you currently have .',
   },
   {
-    name: 'Learning',
-    description: 'I am committed to continuous learning and improvement.',
+    name: 'Curiosity',
+    description: 'Let us be curious about what the possibilities are for both you and your future.',
   },
-  { name: 'Passion', 
-    description: 'I am passionate about helping people overcome their obstacles.' },
+  { 
+    name: 'Courage', 
+    description: 'The thing I will instill so you can accept the challenge and create the curiosity.' },
 ];
 
 const StyledRoot = styled('div')(({ theme }) => ({

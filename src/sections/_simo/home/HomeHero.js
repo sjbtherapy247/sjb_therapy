@@ -41,22 +41,25 @@ export default function HomeHero() {
               }}
             >
               <div>
-                <Typography variant="h2">SjB Therapy</Typography>
+                <Typography variant="h1">Hypnotherapy Sydney</Typography>
                
               </div>
               <div>
                 <Typography variant="h3">TRANCEform Your Mind</Typography>
-                <Typography variant="h5">TRANSform Your Life</Typography>
+                <Typography variant="h4">Transform Your Life</Typography>
               </div>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon. Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will help you achieve your goals.
+                Hi, I&apos;m Simon Baker - The Hypnotherapist, not the Mentalist! 
                 <br />
                 <br />
-                Together, we will discover the solutions and strategies that will empower you to overcome obstacles and propel you into a better future. 
+                Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will help you achieve your goals.
                 <br />
                 <br />
-                Book your FREE discovery call below and let&apos;s TRANCEform your life today.
+                If you&apos;re based in Sydney then we can meet face to face and if you&apos;re not, then that&apos;s fine, as we can meet virtually.
+                <br />
+                <br />
+                Book in your <bold>FREE</bold> discovery session below and let&apos;s TRANCEform your life today.
               </Typography>
 
               <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">

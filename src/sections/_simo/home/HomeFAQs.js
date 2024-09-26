@@ -125,11 +125,11 @@ export default function HomeFAQs() {
               }}
             >
               <m.div variants={varFade().inUp}>
-                <Typography variant="h3">More Questions?</Typography>
+                <Typography variant="h3">Got More Questions?</Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
-                <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please reach out with any specific questions you have.</Typography>
+                <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please reach out, I&apos;m happy to help</Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>

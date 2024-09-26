@@ -11,7 +11,7 @@ import SvgColor from 'src/components/svg-color';
 const CORE_VALUES = [
   {
     title: 'Mental Health',
-    description: 'Re-gain control over your mental health, permanently.',
+    description: 'Re-gain control of your mental health, permanently.',
     icon: '/assets/icons/mental-health/mental-health-icon.png',
   },
   {
@@ -26,7 +26,7 @@ const CORE_VALUES = [
   },
   {
     title: 'TRANCEform',
-    description: 'You Evolve in ways you never believed possible.',
+    description: 'You will TRANCEform yourself in ways you never believed possible.',
     icon: '/assets/icons/mental-health/TRANCEform-grow-icon.png',
   },
 ];

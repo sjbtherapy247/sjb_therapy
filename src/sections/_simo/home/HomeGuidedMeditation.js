@@ -45,20 +45,22 @@ export default function HomeGuidedMediation() {
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              <Typography color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.darker'} variant="h1">
+              <Typography color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.darker'} variant="h2">
                 What Is Hypnotherapy?
               </Typography>
               <Typography variant="h4">It&apos;s Like A Guided Meditation</Typography>
               <Typography color={theme.palette.grey[theme.palette.mode === 'light' ? 800 : 400]}>
+                It allows you fully relax and focus on the goals that matter most to you. By accessing the subconscious mind, which controls many of your habits and behaviors, hypnosis helps to re-train these patterns. 
                 <br />
-                Hypnotherapy or hypnosis, is used to bring you into a relaxed state where we work on the goals most important to you.
                 <br />
-                <br /> Your subconscious mind is the one that runs the programs that trip you up, this is the part of you that the hypnosis will re-train. By creating new neural pathways for your subconscious, you will have a new default setting.
-                Forgetting that you ever ran the old pattern. <br />
+                Through this process, new neural pathways are created, allowing you to replace old habits with healthier, more positive ones.
                 <br />
-                Once we&apos;ve explored your desired outcome, you&apos;ll be invited to embrace a state of deep relaxation, allowing your mind to soar freely. In this state of liberation, you&apos;ll have the power to choose a new path and embrace
-                the transformative outcomes you&apos;ve envisioned. We&apos;ll present you with a range of options, empowering you to make choices that resonate with your aspirations and embark on your journey towards a renewed life. Take control of
-                your destiny and embrace the freedom to craft your own extraordinary future.
+                <br />
+                In this relaxed state, you are empowered to make choices aligned with your aspirations, dreams and desires, helping you move towards the life you envision. 
+                <br />
+                <br/>
+                Hypnotherapy offers you a path to take back control, so that you can TRANCEform your future.
+                <br />
               </Typography>
             </Stack>
             <Link component={NextLink} href="/insights/hypnotherapy-understanding-the-mind-body-connection/">
