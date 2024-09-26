@@ -69,7 +69,7 @@ export const research = [
       </div>
      </html>
 
-    <p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.png" /></p>
+    <p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp" /></p>
 
     <font color="#5e699d"><h4>Conclusion</h4></font>
     <p>If you’re inspired by <strong>Cameron Davis’ story</strong> and want to make similar leaps not only in your golf performance but also in your life, hypnotherapy could be the transformative tool you need. I offer personalised 1-on-1 hypnotherapy sessions designed to help you unlock your potential, overcome mental blocks, and achieve your goals.</p>
@@ -91,8 +91,8 @@ export const research = [
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>`,
 
-    coverImg: '/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.png',
-    heroImg: '/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.png',
+    coverImg: '/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
+    heroImg: '/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
 
   },
 {
