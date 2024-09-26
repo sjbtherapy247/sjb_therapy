@@ -99,7 +99,7 @@ export const paths = {
     player: '/components/player',
     textMaxLine: '/components/text-max-line',
   },
-  // Others
+  // SjB Therapy
   home: '/',
   about: '/about',
   services: '/services',
