@@ -37,6 +37,7 @@ import LoadingCircular from 'src/components/loading-circular/LoadingCircular';
 import Notification from 'src/components/notification/Notification';
 import Modal from 'src/components/modal/Modal';
 // import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Analytics } from '@vercel/analytics/react';
 // data&SEO
@@ -98,6 +99,7 @@ export default function MyApp(props) {
       
      
       <Analytics />
+      <SpeedInsights />
       <CacheProvider value={emotionCache}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={enAU}>
           <SettingsProvider>
