@@ -13,7 +13,7 @@ module.exports = withAxiom({
       {
         source: '/maintenance/',
         destination: '/',
-        permanent: false,
+        permanent: false, 
       },
     ];
   },

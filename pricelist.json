@@ -41,25 +41,25 @@
     "unit_amount_decimal": "99500"
   },
   {
-    "id": "3sesh",
+    "id": "price_1NhPXSEu94tSBGzWlE6boD6S",
     "object": "price",
     "active": true,
     "billing_scheme": "per_unit",
     "created": 1691495884,
     "currency": "aud",
     "custom_unit_amount": null,
-    "livemode": false,
+    "livemode": true,
     "lookup_key": null,
     "metadata": {},
     "nickname": "3 Session Bundle",
     "product": {
-      "id": "prod_O62cTJJuUlCWRQ",
+      "id": "prod_OUOKqvhooqgLNX",
       "object": "product",
       "active": true,
       "attributes": [],
       "created": 1686975271,
-      "default_price": "3sesh",
-      "description": "3 Session Hypnotherapy Bundle - SjB Therapy",
+      "default_price": "price_1NhPXSEu94tSBGzWlE6boD6S",
+      "description": "3 Session Hypnotherapy Bundle - Simon Baker",
       "images": [],
       "livemode": false,
       "metadata": {},
@@ -82,7 +82,7 @@
     "unit_amount_decimal": "43500"
   },
   {
-    "id": "price_1NcoTjEu94tSBGzWZg9QBo6O",
+    "id": "price_1Niq6vEu94tSBGzWOqSflxtp",
     "object": "price",
     "active": true,
     "billing_scheme": "per_unit",
@@ -94,12 +94,12 @@
     "metadata": {},
     "nickname": "60 Minute Session",
     "product": {
-      "id": "prod_O62rJ5zo1vmx6W",
+      "id": "prod_OUOJ413pgOitL8",
       "object": "product",
       "active": true,
       "attributes": [],
       "created": 1686976212,
-      "default_price": "price_1NcoTjEu94tSBGzWZg9QBo6O",
+      "default_price": "price_1Niq6vEu94tSBGzWOqSflxtp",
       "description": "Single Hypnotherapy Session Online - Choose your 60 or 90 minute session.",
       "images": [],
       "livemode": false,
@@ -166,7 +166,7 @@
     "unit_amount_decimal": "10000"
   },
   {
-    "id": "price_1NJqm8Eu94tSBGzWUAF0bXUt",
+    "id": "price_1Niq6vEu94tSBGzWOqSflxtp",
     "object": "price",
     "active": true,
     "billing_scheme": "per_unit",
