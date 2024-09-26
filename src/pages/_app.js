@@ -37,7 +37,7 @@ import LoadingCircular from 'src/components/loading-circular/LoadingCircular';
 import Notification from 'src/components/notification/Notification';
 import Modal from 'src/components/modal/Modal';
 // import { SpeedInsights } from "@vercel/speed-insights/next"
-
+import { Analytics } from "@vercel/analytics/react"
 // data&SEO
 // import Script from 'next/script';
 // import TagManager from 'react-gtm-module';
