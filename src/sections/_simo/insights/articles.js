@@ -69,7 +69,7 @@ export const research = [
       </div>
      </html>
 
-    <p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp" /></p>
+    <div><p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp"</p></div>
 
     <font color="#5e699d"><h4>Conclusion</h4></font>
     <p>If you’re inspired by <strong>Cameron Davis’ story</strong> and want to make similar leaps not only in your golf performance but also in your life, hypnotherapy could be the transformative tool you need. I offer personalised 1-on-1 hypnotherapy sessions designed to help you unlock your potential, overcome mental blocks, and achieve your goals.</p>
@@ -179,7 +179,7 @@ export const research = [
 
       <p>Yes you can also meditate, I've tried it at least 30 times throughout my life and nearly every time, because there was no voice or guide helping my subconscious, I either fell asleep or got more frustrated. I know many people who have had a similar experience. Now i'm not bashing meditation, if it works for you, great. It just wasn't for me. <font color="#5e699d">Hypnotherapy on the other hand</font>, is a fast track journey to where I and, you I suspect, want to go.</p>
 
-      <p><img alt="Sleep Better - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp" /></p>
+      <div><p><img alt="Sleep Better - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp"</p></div>
 
       <font color="#5e699d"><h4>Conclusion</h4></font>
 
