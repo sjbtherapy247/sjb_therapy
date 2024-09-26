@@ -69,7 +69,7 @@ export const research = [
       </div>
      </html>
 
-    <div><p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp"</p></div>
+    <div><p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp"</p></div>
 
     <font color="#5e699d"><h4>Conclusion</h4></font>
     <p>If you’re inspired by <strong>Cameron Davis’ story</strong> and want to make similar leaps not only in your golf performance but also in your life, hypnotherapy could be the transformative tool you need. I offer personalised 1-on-1 hypnotherapy sessions designed to help you unlock your potential, overcome mental blocks, and achieve your goals.</p>
@@ -77,9 +77,10 @@ export const research = [
      <p>These are fully tailored to your situation and needs which makes them much more powerful than just an audio. You actually get a tailored audio from your session, so it’s a Win-Win!</p>
      
      <p><strong><font color="#5e699d">Book yourself a free discovery call below</font></strong> and let's guide you towards the performance that you currently only dream of.</p> 
+
      <p>If you're tired of hacking aroung, constantly frustrated with yourself, perhaps it's time to explore the magical realm of hypnotherapy. Once you embrace the idea, profound transformation can be yours. <Strong>FOUR!.</Strong></p>
       
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      <html><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
@@ -89,10 +90,10 @@ export const research = [
       data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>`,
+      </script></div></html> `,
 
-    coverImg: '/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
-    heroImg: '/assets/images/Insights/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
+    coverImg: '/assets/images/marketing/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
+    heroImg: '/assets/images/marketing/Cam_Davis_golf_hypnotherapy_Simon_Baker_Hypnotherapist_Sydney.webp',
 
   },
 {
@@ -132,9 +133,8 @@ export const research = [
       <p>Insomnia is the silent thief of restful nights, it affects millions around the world. Aside from hypnotherapy, there is a sea of sleep aids and medications, I found myself seeking a more holistic approach—one that doesn't just induce sleep but fosters a deep sense of relaxation and tranquility.</p>
 
       <p>Curious about the efficacy of hypnotherapy compared to traditional sleep aids like melatonin or prescription drugs, I delved into the available data. According to a study published in the <strong>Journal of Clinical Sleep Medicine</strong>, hypnotherapy has shown promise in <a href="/hypnotherapy-services/hypnosis-for-insomnia-and-sleep-disorders/">improving sleep quality</a> and reducing the time it takes to fall asleep.</p>
-      <div>
-
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+      <br>
+      <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
@@ -144,8 +144,7 @@ export const research = [
       data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-
+      </script></div>
 
       <font color="#5e699d"><center><h3><strong><quote>“The Numbers Don't Lie About Hypnotherapy's Impact”</quote></strong></h3></center></font>
 
