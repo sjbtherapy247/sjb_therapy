@@ -107,7 +107,7 @@ export const _socialsSimo = [
     label: 'TikTok',
     icon: 'carbon:logo-tiktok',
     colour: '#ffffff',
-    href: 'https://www.tiktok.com/@simonbaker.co',
+    href: 'https://www.tiktok.com/@simonbakerhypno',
   },
   // {
   //   value: 'twitter',
