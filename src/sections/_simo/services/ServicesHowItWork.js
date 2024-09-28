@@ -30,7 +30,11 @@ const TIMELINES = [
     title: 'Integration',
     description: 'This is where you note down the changes in your behaviour and feedback via a follow-up form. If already booked, you will then also look forward to your next session, if not then you will move be moving on with your life free of whatever it was you saw me for.',
   },
-
+  {
+    step: 'STEP 5',
+    title: 'Next Session',
+    description: 'If required and booked, this is where we follow up from the previous session and then look at some of the other things you would like to work on. This continues the work of TRANCEforming your mindset.',
+  },
 ];
 
 const COLORS = ['primary', 'warning', 'secondary', 'success'];
@@ -97,7 +101,7 @@ export default function MarketingServicesHowItWork() {
                 </Typography>
 
                 <Typography
-                  variant="body2"
+                  variant="body3"
                   sx={{
                     opacity: 0.72,
                     // maxWidth: { md: 360 },
