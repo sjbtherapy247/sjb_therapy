@@ -45,15 +45,15 @@ export default function HomeHero() {
                
               </div>
               <div>
-                <Typography variant="h3">TRANCEform Your Mind</Typography>
-                <Typography variant="h4">Transform Your Life</Typography>
+                <Typography variant="h3">TRANCEform Your Life</Typography>
+                <Typography variant="h4">With Hypnosis</Typography>
               </div>
 
               <Typography color="text.secondary">
                 Hi, I&apos;m Simon Baker - The Hypnotherapist, not the Mentalist! 
                 <br />
                 <br />
-                Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will help you achieve your goals.
+                Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will do everything to help you achieve your goals.
                 <br />
                 <br />
                 If you&apos;re based in Sydney then we can meet face to face and if you&apos;re not, then that&apos;s fine, as we can meet virtually.

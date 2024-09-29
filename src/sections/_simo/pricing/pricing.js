@@ -2,8 +2,8 @@ export const sessionPricing = [
   {
     license: '60min Hypnotherapy',
     stripeName: '60min Hypnotherapy',
-    price: '185',
-    commons: ['Book a Discovery Call First', '60 minute online - $185', 'Online Only - In Person can be arranged', 'Personalised session audio', 'Personalised session notes', 'Personalised Session tasking',],
+    price: '165',
+    commons: ['Book a Discovery Call First', '60 minute online', 'Online Only - In Person can be arranged', 'Personalised session audio', 'Personalised session notes', 'Personalised Session tasking',],
     options: [{ title: 'In Person Session - Please Contact' }, { title: 'Discounted Further Sessions' }],
   },
   {
@@ -16,8 +16,8 @@ export const sessionPricing = [
   {
     license: '90min Hypnotherapy',
     stripeName: 'Single Session',
-    price: '245',
-    commons: ['Book a Discovery Call First', '90 minute online - $245', 'Online Only - In Person can be arranged', 'Personalised session audio', 'Personalised session notes', 'Personalised Session tasking',],
+    price: '195',
+    commons: ['Book a Discovery Call First', '90 minute online', 'Online Only - In Person can be arranged', 'Personalised session audio', 'Personalised session notes', 'Personalised Session tasking',],
     options: [{ title: 'In Person Session - Please Contact' }, { title: 'Discounted Further Sessions' }],
   },
 
@@ -31,9 +31,9 @@ export const sessionPricing = [
 
  
   // {
-  //  license: 'Quit Smoking',
-  //   price: '425',
-  //   commons: ['Are you ready to Quit!', 'Single 90 minute session', 'Personalised to improve effectiveness', 'Online or in person'],
+  //  license: 'Quit Smoking Course',
+  //   price: '185',
+  //   commons: ['Are you ready to Quit!', 'Single 90 minute Group Session', 'Personalised to improve effectiveness', 'Online Couse Elements', 'Audio Downloads', 'Group Quit is Powerful!',],
   //   options: [{ title: 'Set yourself free forever' - 'Group Support for 3 months' } ],
   //  },
 ];

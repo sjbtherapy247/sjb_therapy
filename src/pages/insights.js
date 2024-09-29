@@ -14,7 +14,7 @@ export async function getStaticProps() {
     props: {
       researchDocs: [...research],
       title: 'Hypnotherapy InSights - News and Updates - Simon Baker',
-      description: 'Hypnotherapy insights, news and updates right here from Simon. Any news on current hypnosis treatments or articles will appear here first.',
+      description: 'Hypnosis Hypnotherapy insights, news and updates right here from Simon. Any news on current hypnosis treatments or articles that are amazing.',
       canonical: 'https://sjbtherapy.com/insights/',
       keywords: 'hypnotherapy, insights, physcotherapy, news,',
     },

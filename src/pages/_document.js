@@ -32,11 +32,8 @@ const Meta = () => (
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     {/* stop iOS causing hydration issues */}
     <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
-    <meta
-      name="description"
-      content="Book a Free Session of hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance. TRANCEform your mind, TRANCEform your life!"
-    />
-    <meta name="keywords" content="Simon Baker Local Hypnotherapy Sydney" />
+    <meta name="description" content="Hypnosis & Hypnotherapy in Sydney. Quit smoking or Vaping, Weight loss, Anxiety, Addiction, Phobia, Low Confidence, or More Performance. Book Online Today."/>
+    <meta name="keywords" content="Simon Baker The Hypnotherapist - Clinical Hypnotherapy Sydney" />
     <meta name="theme-color" content={palette('light').primary.dark} />
     <meta name="google-adsense-account" content="ca-pub-4250297759847171" />
     
