@@ -553,18 +553,6 @@ export const research = [
       
       <p>Imagine a person struggling with anxiety. Through integrated hypnotherapy and psychotherapy, we not only address the surface symptoms but also uncover the underlying triggers buried in the subconscious. This comprehensive approach equips individuals with tools to manage their anxiety and empowers them to navigate life's challenges more effectively.</p>
       
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-4250297759847171"
-     data-ad-slot="8585906728"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
       <h4>Conclusion</h4>
       
       <p>The synergy of hypnotherapy and psychotherapy presents an innovative and holistic way to achieve healing and personal growth. By blending these complementary therapies, I tap into the full spectrum of human experience conscious and subconscious to create lasting change. Research supports the efficacy of this approach, and my own practice has shown that it is a transformative path toward overcoming challenges and embracing positive transformation.</p>

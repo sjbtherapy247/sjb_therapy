@@ -57,6 +57,13 @@ export const _socials = [
     color: '#00AAEC',
     href: 'https://twitter.com',
   },
+  {
+    value: 'tiktok',
+    label: 'TikTok',
+    icon: 'carbon:logo-tiktok',
+    colour: '#ffffff',
+    href: 'https://www.tiktok.com/',
+  },
   // {
     // value: 'whatsapp',
     // label: 'WhatsApp',
@@ -72,7 +79,7 @@ export const _socialsSimo = [
     label: 'FaceBook',
     icon: 'carbon:logo-facebook',
     color: '#1877F2',
-    href: 'https://www.facebook.com/simonbaker.co/',
+    href: 'https://www.facebook.com/simonbakerhypno/',
   },
   {
     value: 'instagram',
@@ -94,6 +101,13 @@ export const _socialsSimo = [
     icon: 'carbon:logo-youtube',
     color: '#ff1902',
     href: 'https://www.youtube.com/@simonbakertv',
+  },
+  {
+    value: 'tiktok',
+    label: 'TikTok',
+    icon: 'carbon:logo-tiktok',
+    colour: '#ffffff',
+    href: 'https://www.tiktok.com/@simonbakerhypno',
   },
   // {
   //   value: 'twitter',

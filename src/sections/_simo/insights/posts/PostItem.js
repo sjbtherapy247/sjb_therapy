@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
+// import React from 'react';
 // next
 import NextLink from 'next/link';
 // @mui
@@ -13,6 +14,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 import Image from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
 import { varHover, varTranHover } from 'src/components/animate';
+// import player from 'src/components/player/lazy';
 //
 import PostTimeBlock from '../components/PostTimeBlock';
 
