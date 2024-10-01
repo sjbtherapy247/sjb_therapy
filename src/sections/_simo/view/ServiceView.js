@@ -65,7 +65,7 @@ export default function ServiceView({ service }) {
                 },
               }}
             >
-              <Typography variant="h1" component="h1" sx={{ mt: 0 }}>
+              <Typography variant="h2" component="h1" sx={{ mt: 0 }}>
                 {title}
                 {title.includes('TRANCE') && <sup style={{ fontSize: '20px' }}>TM</sup>}
               </Typography>
@@ -106,22 +106,28 @@ export default function ServiceView({ service }) {
                 pb: 5,
               }}
             >
-              <Typography variant="h5">{description}</Typography>
+              <Typography variant="h5" component="h2">{description}</Typography>
             </Stack>
             <Divider sx={{ mb: 4 }} />
+
             <Markdown content={content} />
+            
             {/* {tags.length && <PostTags tags={tags} />} */}
-            <Link component={NextLink} href="/services#hypnotherapyPackages">
-              <Button variant="contained" size="large" sx={{ mb: 3 }} endIcon={<Iconify icon="carbon:launch" />}>
+            <Divider><Link component={NextLink} href="/services#hypnotherapyPackages">
+            <center><Button variant="contained" size="large" sx={{ mb: 4 }} endIcon={<Iconify icon="carbon:launch" />}>
                 Book Now
-              </Button>
+              </Button></center>
             </Link>
-            <Typography>{insights}</Typography>
-            <Link component={NextLink} href={buttonLink}>
+            </Divider>
+
+            <center><Typography>{insights}</Typography></center>
+
+            <center><Link component={NextLink} href={buttonLink}>
               <Button variant="outlined" size="large" sx={{ mt: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                 {buttonTitle}
               </Button>
-            </Link>
+            </Link></center>
+
             {/* <PostSocialsShare /> */}
             <Stack direction="row" alignItems="center" sx={{ my: 3 }}>
               <Typography variant="subtitle2" sx={{ mr: 1.5 }}>

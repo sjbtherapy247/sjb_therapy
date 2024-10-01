@@ -173,13 +173,12 @@ export default function ArticleView({ post, allPosts }) {
             </Link>
             </Divider>
            
-              <Typography>{services}</Typography>
-              
+              <bold><center><Typography>{services}</Typography>
               <Link component={NextLink} href={buttonLink}>
-                <center><Button variant="outlined" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
+              <Button variant="outlined" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                   {buttonTitle}
-                </Button></center>
-              </Link>
+                </Button>
+              </Link></center></bold>
               
               <Divider sx={{ mb: 4,}}/>
 
