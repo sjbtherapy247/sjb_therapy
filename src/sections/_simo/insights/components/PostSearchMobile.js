@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import parse from 'autosuggest-highlight/parse';
+import parse from  'autosuggest-highlight/parse'
 import match from 'autosuggest-highlight/match';
 
 // @mui
