@@ -44,6 +44,7 @@ export const fullName = [
 ];
 
 export const firstName = [
+  'Simon',
   'Mossie',
   'David',
   'Ebba',

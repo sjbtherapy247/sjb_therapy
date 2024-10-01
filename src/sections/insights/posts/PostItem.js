@@ -58,7 +58,7 @@ export default function PostItem({ post }) {
         <Stack spacing={2}>
           <PostTimeBlock duration={duration} createdAt={createdAt} sx={{ color: 'inherit', opacity: 0.72 }} />
 
-          <Link component={NextLink} href={`/insights/${url}`} sx={{ color: 'inherit' }}>
+          <Link component={NextLink} href={`/_simo/insights/${url}`} sx={{ color: 'inherit' }}>
             <TextMaxLine line={6} variant="h4">
               {title}
             </TextMaxLine>

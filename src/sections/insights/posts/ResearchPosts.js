@@ -30,7 +30,7 @@ export default function ResearchPosts({ posts }) {
         ))}
       </Box>
 
-      {/* <Pagination
+      <Pagination
         count={4}
         color="primary"
         size="large"
@@ -40,7 +40,7 @@ export default function ResearchPosts({ posts }) {
             justifyContent: 'center',
           },
         }}
-      /> */}
+      />
     </>
   );
 }

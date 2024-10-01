@@ -126,7 +126,7 @@ export default function HomeFAQs() {
               }}
             >
               <m.div variants={varFade().inUp}>
-                <Typography variant="h3">Got More Questions?</Typography>
+                <Typography variant="h3">Still Have Questions?</Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
@@ -135,12 +135,25 @@ export default function HomeFAQs() {
 
               <m.div variants={varFade().inUp}>
                 <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Button size="large" color="primary" variant="contained" href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"target="_blank" startIcon={<Iconify icon="mdi:cellphone-sound" />} onClick={handleClick}>
+                  <Button 
+                  size="large" 
+                  color="primary" 
+                  variant="contained" 
+                  href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"target="_blank" 
+                  startIcon={<Iconify icon="mdi:cellphone-sound" />} 
+                  onClick={handleClick}>
                     WhatsApp {click && isSmUp ? ' ' : null}
                     {/* Message */}
                   </Button>
-                  <Button size="large" color="primary" variant="contained" href="mailto:hello@sjbtherapy.com" target="_blank" startIcon={<Iconify icon="mdi:email-outline" />} onClick={handleClick}> 
-                    Email {click && isSmUp ? '': null}
+
+                  <Button 
+                  size="large" 
+                  color="primary" 
+                  variant="contained" 
+                  href="mailto:hello@sjbtherapy.com" 
+                  target="_blank" 
+                  startIcon={<Iconify icon="mdi:email-outline" />} 
+                  onClick={handleClick}>Email {click && isSmUp ? '': null}
                     {/* email */}
                   </Button>
                 </Stack>
