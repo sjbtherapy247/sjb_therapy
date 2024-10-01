@@ -6,21 +6,31 @@ import useResponsive from 'src/hooks/useResponsive';
 // components
 import Iconify from 'src/components/iconify';
 //
+import Advertisement from 'src/sections/_simo/advertisement';
 import BlogSidebarAuthor from './BlogSidebarAuthor';
-import BlogSidebarCategories from './BlogSidebarCategories';
-import BlogSidebarPopularTags from './BlogSidebarPopularTags';
+// import BlogSidebarCategories from './BlogSidebarCategories';
+// import BlogSidebarPopularTags from './BlogSidebarPopularTags';
 import BlogSidebarRecentPosts from './BlogSidebarRecentPosts';
+
+
 
 // ----------------------------------------------------------------------
 
-export default function BlogSidebar({ author, categories, popularTags, recentPosts, advertisement, sx, ...other }) {
+export default function BlogSidebar({ 
+  author, 
+  categories, 
+  popularTags, 
+  recentPosts, 
+  advertisement, 
+  sx, 
+  ...other }) {
   const isMdUp = useResponsive('up', 'md');
 
   return (
     <>
-      {/* {author && isMdUp && <BlogSidebarAuthor author={author} />} */}
+      {author && isMdUp && <BlogSidebarAuthor author={author} />}
 
-      {/* {isMdUp && (
+      {isMdUp && (
         <TextField
           fullWidth
           hiddenLabel
@@ -33,7 +43,7 @@ export default function BlogSidebar({ author, categories, popularTags, recentPos
             ),
           }}
         />
-      )} */}
+      )} 
 
       <Stack
         spacing={5}
@@ -50,7 +60,7 @@ export default function BlogSidebar({ author, categories, popularTags, recentPos
 
         {/* {popularTags && <BlogSidebarPopularTags popularTags={popularTags} />} */}
 
-        {/* {advertisement && <Advertisement advertisement={advertisement} />} */}
+        {advertisement && <Advertisement advertisement={Advertisement} />}
       </Stack>
     </>
   );

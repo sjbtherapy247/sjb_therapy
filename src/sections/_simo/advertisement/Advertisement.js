@@ -49,7 +49,7 @@ export default function Advertisement({ advertisement, sx, ...other }) {
         </Typography>
 
         <Button href={path} variant="contained">
-          Go Now
+          Advertise Here
         </Button>
       </Stack>
 

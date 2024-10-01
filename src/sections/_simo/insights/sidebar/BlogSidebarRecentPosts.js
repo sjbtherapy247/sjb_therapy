@@ -6,7 +6,7 @@ import PostItemMobile from '../components/PostItemMobile';
 
 // ----------------------------------------------------------------------
 
-export default function BlogSidebarRecentPosts({ recentPosts }) {
+export default function BlogSidebarRecentPosts({ recentPosts, }) {
   return (
     <Stack spacing={3}>
       <Typography variant="h5">Recent InSights</Typography>

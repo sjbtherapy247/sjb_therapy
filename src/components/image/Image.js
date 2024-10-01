@@ -14,7 +14,7 @@ const Image = forwardRef(({ ratio, disabledEffect = false, effect = 'blur', sx, 
       component={LazyLoadImage}
       wrapperClassName="wrapper"
       effect={disabledEffect ? undefined : effect}
-      placeholderSrc={disabledEffect ? '/assets/transparent.png' : '/assets/placeholder.svg'}
+      placeholderSrc={disabledEffect ? '/assets/sjb-logo/hicon-round.png' : '/assets/images/marketing/marketing_get_free_seo.jpg'}
       sx={{ width: 1, height: 1, objectFit: 'cover' }}
       {...other}
     />
