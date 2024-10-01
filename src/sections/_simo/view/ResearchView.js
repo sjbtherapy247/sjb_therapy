@@ -7,6 +7,7 @@ import _mock, { _blogMarketingPosts, _categories, _tags } from 'src/_mock';
 // import { PostSearchMobile } from 'src/sections/blog/components';
 import BlogSidebar from 'src/sections/_simo/insights/sidebar';
 import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/insights';
+import { PostSearchMobile } from 'src/sections/_simo/insights/components';
 // import NewsletterMarketing from 'src/sections/newsletter/marketing';
 
 // ----------------------------------------------------------------------
@@ -14,7 +15,7 @@ import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/insights';
 export default function ReasearchView({ researchDocs }) {
   return (
     <>
-      {/* <PostSearchMobile /> */}
+      <PostSearchMobile />
 
       <FeaturedPosts posts={researchDocs.slice(0, 3)} />
 

@@ -83,11 +83,11 @@ export default function ArticleView({ post, allPosts }) {
                 },
               }}
             >
-              <Typography variant="body2" sx={{ opacity: 0.72, pb: 0 }}>
+              <Typography variant="body3" sx={{ opacity: 0.72, pb: 0 }}>
                 {duration}
               </Typography>
 
-              <Typography variant="h2" component="h2" sx={{ mt: 0 }}>
+              <Typography variant="h2" component="h1" sx={{ mt: 0 }}>
                 {title}
               </Typography>
 
@@ -112,7 +112,10 @@ export default function ArticleView({ post, allPosts }) {
       {/* <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" /> */}
 
       <Container>
-        <CustomBreadcrumbs sx={{ my: 3 }} links={[{ name: 'Home', href: '/' }, { name: 'InSights', href: '/insights#insights' }, { name: title }]} />
+        <CustomBreadcrumbs sx={{ my: 3 }} links={[
+          { name: 'Home', href: '/' }, 
+          { name: 'InSights', href: '/insights#insights' }, 
+          { name: title }]} />
       </Container>
 
       <Divider />
@@ -135,7 +138,7 @@ export default function ArticleView({ post, allPosts }) {
               <Typography variant="h2" component="h1">
                 {title}
               </Typography> */}
-              <Typography variant="h5">{description}</Typography>
+              <Typography variant="h5" component="h2">{description}</Typography>
             </Stack>
 
             <Divider />
@@ -158,21 +161,27 @@ export default function ArticleView({ post, allPosts }) {
               </Stack>
             </Stack>
 
-            <Divider sx={{ mb: 4 }} />
-
+            <Divider sx={{ mb: 4,}}/>
+            
             <Markdown content={content} firstLetter />
 
+           <Divider>
             <Link component={NextLink} href="/services#hypnotherapyPackages">
-              <Button variant="contained" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
+              <center><Button variant="contained" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                 Book Now
-              </Button>
+              </Button></center>
             </Link>
-            <Typography>{services}</Typography>
-            <Link component={NextLink} href={buttonLink}>
-              <Button variant="outlined" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
-                {buttonTitle}
-              </Button>
-            </Link>
+            </Divider>
+           <br></br>
+              <Typography>{services}</Typography>
+              <br></br>
+              <Link component={NextLink} href={buttonLink}>
+                <center><Button variant="outlined" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
+                  {buttonTitle}
+                </Button></center>
+              </Link>
+              <br></br>
+              <Divider sx={{ mb: 4,}}/>
 
             {tags.length && <PostTags tags={tags} />}
 
