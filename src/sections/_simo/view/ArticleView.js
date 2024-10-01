@@ -172,15 +172,15 @@ export default function ArticleView({ post, allPosts }) {
               </Button></center>
             </Link>
             </Divider>
-           <br></br>
+           
               <Typography>{services}</Typography>
-              <br></br>
+              
               <Link component={NextLink} href={buttonLink}>
                 <center><Button variant="outlined" size="large" sx={{ my: 2 }} endIcon={<Iconify icon="carbon:launch" />}>
                   {buttonTitle}
                 </Button></center>
               </Link>
-              <br></br>
+              
               <Divider sx={{ mb: 4,}}/>
 
             {tags.length && <PostTags tags={tags} />}
