@@ -1,1 +1,0 @@
-export { default } from 'src/sections/_simo/Advertisement';

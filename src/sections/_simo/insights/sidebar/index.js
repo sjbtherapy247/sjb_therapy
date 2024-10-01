@@ -6,7 +6,7 @@ import useResponsive from 'src/hooks/useResponsive';
 // components
 import Iconify from 'src/components/iconify';
 //
-import Advertisement from 'src/sections/_simo/advertisement';
+import Advertisement from 'src/sections/advertisement';
 import BlogSidebarAuthor from './BlogSidebarAuthor';
 // import BlogSidebarCategories from './BlogSidebarCategories';
 // import BlogSidebarPopularTags from './BlogSidebarPopularTags';
