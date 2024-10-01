@@ -37,22 +37,6 @@ export const research = [
     
     Now I understand that the psychologist could have been doing great work and the hypnosis unlocked that final component for him, but, he hadn’t won on Tour before 🤔</p>
 
-    <p>I’ve seen firsthand the <font color="#5e699d"><strong>transformative power of hypnotherapy.</strong></font> As it taps into the subconscious mind, helping to change behaviors, thought patterns, and even physical performance. Whether you’re dealing with performance anxiety, mental blocks, or just need to sharpen your focus, hypnotherapy can make a significant difference.</p>
-    
-    <bold><blockquote>"It’s probably the best thing I’ve done for myself..."</bold>
-
-      Cameron Davies</blockquote>
-    
-    <strong>Cams Top ‘FOUR!’ Reasons for Hypnotherapy ️⛳️</strong>
-     
-    <p>So, Cameron Davis’ journey with hypnotherapy offers a powerful testament to its effectiveness in improving performance and achieving success. Here are the <strong>Top 4 Benefits</strong> he mentioned from his experience with hypnotherapy:</p>
-
-    <ul><strong>🎯 - Improved Focus and Mental Clarity:</strong> He noted that hypnotherapy significantly helped him get into the right frame of mind, enhancing his focus and mental clarity during competitions.</ul>
-    <ul><strong>📈 - Enhanced Performance:</strong> He attributed his ability to stay composed and perform well under pressure to the mental conditioning and relaxation techniques learned through hypnotherapy.</ul>
-    <ul><strong>💆‍♂️ - Stress and Anxiety Reduction:</strong>Hypnotherapy helped him manage stress and anxiety, allowing him to maintain calmness and composure during critical moments in tournaments.</ul>
-    <ul><strong>🧠 - Overall Mental Well-being:</strong> Davis emphasised how hypnotherapy contributed to his overall mental well-being, which in turn positively impacted his physical performance on the golf course.</ul>
-     
-    
     <html>
     <div align="center">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
@@ -69,18 +53,24 @@ export const research = [
       </div>
      </html>
 
-    <div><p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Cam-Davis-Golf-Hypnotherapy-Simon-Baker-Hypnotherapist-Sydney.webp"</p></div>
+    <p>I’ve seen firsthand the <font color="#5e699d"><strong>transformative power of hypnotherapy.</strong></font> As it taps into the subconscious mind, helping to change behaviors, thought patterns, and even physical performance. Whether you’re dealing with performance anxiety, mental blocks, or just need to sharpen your focus, hypnotherapy can make a significant difference.</p>
+    
+    <bold><blockquote>"It’s probably the best thing I’ve done for myself..."</bold>
 
-    <font color="#5e699d"><h4>Conclusion</h4></font>
-    <p>If you’re inspired by <strong>Cameron Davis’ story</strong> and want to make similar leaps not only in your golf performance but also in your life, hypnotherapy could be the transformative tool you need. I offer personalised 1-on-1 hypnotherapy sessions designed to help you unlock your potential, overcome mental blocks, and achieve your goals.</p>
-
-     <p>These are fully tailored to your situation and needs which makes them much more powerful than just an audio. You actually get a tailored audio from your session, so it’s a Win-Win!</p>
+      Cameron Davies</blockquote>
+    
+    <strong>Cams Top ‘FOUR!’ Reasons for Hypnotherapy ️⛳️</strong>
      
-     <p><strong><font color="#5e699d">Book yourself a free discovery call below</font></strong> and let's guide you towards the performance that you currently only dream of.</p> 
+    <p>So, Cameron Davis’ journey with hypnotherapy offers a powerful testament to its effectiveness in improving performance and achieving success. Here are the <strong>Top 4 Benefits</strong> he mentioned from his experience with hypnotherapy:</p>
 
-     <p>If you're tired of hacking aroung, constantly frustrated with yourself, perhaps it's time to explore the magical realm of hypnotherapy. Once you embrace the idea, profound transformation can be yours. <Strong>FOUR!.</Strong></p>
-      
-      <html><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
+    <ul><strong>🎯 - Improved Focus and Mental Clarity:</strong> He noted that hypnotherapy significantly helped him get into the right frame of mind, enhancing his focus and mental clarity during competitions.</ul>
+    <ul><strong>📈 - Enhanced Performance:</strong> He attributed his ability to stay composed and perform well under pressure to the mental conditioning and relaxation techniques learned through hypnotherapy.</ul>
+    <ul><strong>💆‍♂️ - Stress and Anxiety Reduction:</strong>Hypnotherapy helped him manage stress and anxiety, allowing him to maintain calmness and composure during critical moments in tournaments.</ul>
+    <ul><strong>🧠 - Overall Mental Well-being:</strong> Davis emphasised how hypnotherapy contributed to his overall mental well-being, which in turn positively impacted his physical performance on the golf course.</ul>
+
+    <html>
+    <div align="center">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
       <ins class="adsbygoogle"
       style="display:block; text-align:center;"
@@ -90,7 +80,20 @@ export const research = [
       data-ad-slot="8585906728"></ins>
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
-      </script></div></html> `,
+      </script>
+      </div>
+     </html>
+     
+    <div><p><img alt="Improve Your Golf Performance - Simon Baker Hypnotherapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Cam-Davis-Golf-Hypnotherapy-Simon-Baker-Hypnotherapist-Sydney.webp"</p></div>
+    
+    <font color="#5e699d"><h4>Conclusion</h4></font>
+    <p>If you’re inspired by <strong>Cameron Davis’ story</strong> and want to make similar leaps not only in your golf performance but also in your life, hypnotherapy could be the transformative tool you need. I offer personalised 1-on-1 hypnotherapy sessions designed to help you unlock your potential, overcome mental blocks, and achieve your goals.</p>
+
+     <p>These are fully tailored to your situation and needs which makes them much more powerful than just an audio. You actually get a tailored audio from your session, so it’s a Win-Win!</p>
+     
+     <p><strong><font color="#5e699d">Book yourself a free discovery call below</font></strong> and let's guide you towards the performance that you currently only dream of.</p> 
+
+     <p>If you're tired of hacking aroung, constantly frustrated with yourself, perhaps it's time to explore the magical realm of hypnotherapy. Once you embrace the idea, profound transformation can be yours. <Strong>FOUR!.</Strong></p>`,
 
     coverImg: '/assets/images/marketing/Cam-Davis-Golf-Hypnotherapy-Simon-Baker-Hypnotherapist-Sydney.webp',
     heroImg: '/assets/images/marketing/Cam-Davis-Golf-Hypnotherapy-Simon-Baker-Hypnotherapist-Sydney.webp',
