@@ -16,10 +16,10 @@ export async function getStaticProps() {
   return {
     props: {
       insights: [...research],
-      title: 'Simon Baker Hypnotherapist - Hypnotherapy in Sydney',
+      title: DOMPurify.sanitize('Simon Baker Hypnotherapist - Hypnotherapy in Sydney'),
       description:
         'Welcome to my hypnotherapy practice. I am dedicated to helping people improve their lives, through the use hypnosis. Book your Free session today.',
-      canonical: 'https://sjbtherapy.com',
+      canonical: DOMPurify.sanitize('https://sjbtherapy.com'),
       // keywords: ' some keywords '
     },
     
