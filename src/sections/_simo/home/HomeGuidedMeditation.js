@@ -46,26 +46,39 @@ export default function HomeGuidedMediation() {
               }}
             >
               <Typography color={theme.palette.mode === 'dark' ? 'primary.main' : 'primary.darker'} variant="h2">
-                What Is Hypnotherapy?
+                What Is Clinical Hypnotherapy?
               </Typography>
-              <Typography variant="h4">It&apos;s Like A Guided Meditation</Typography>
+              <Typography variant="h4">It&apos;s how we train the subconscious mind FAST!</Typography>
               <Typography color={theme.palette.grey[theme.palette.mode === 'light' ? 800 : 400]}>
-                It allows you fully relax and focus on the goals that matter most to you. By accessing the subconscious mind, which controls many of your habits and behaviors, hypnosis helps to re-train these patterns. 
+                So, why hypnosis Simon? Well, firstly it helps people address a wide range of mental, emotional, and physical issues by allowing you to fully relax and focus on the goals that matter most to you. 
                 <br />
                 <br />
-                Through this process, new neural pathways are created, allowing you to replace old habits with healthier, more positive ones.
-                <br />
-                <br />
-                In this relaxed state, you are empowered to make choices aligned with your aspirations, dreams and desires, helping you move towards the life you envision. 
-                <br />
+                I don&apos;t kow of a faster, easier, non-pharmalogical way to treat such a wide range of conditions. That&apos;s why I became a hypnotherapist. I live my life in the front row and I want everyone to get back to their own front row. <br/>I call it <strong>`To TRANCEform` 🤖</strong> That&apos;s why I do it and that&apos;s why I love it 💛
                 <br/>
-                Hypnotherapy offers you a path to take back control, so that you can TRANCEform your future.
+                <br/>
+                By guiding you into a deeply relaxed state, I, <strong>Simon The Hypnotherapist</strong>, will help you modify your ingrained behaviors, thought patterns, and emotional responses so that they are either more easily controlled, or replaced with better alternatives.
                 <br />
+                <br />
+                Through this process, new neural pathways are created, allowing you to simply replace old habits with healthier, more positive ones that are aligned with your future goals.
+                <br />
+                <br />
+                The scope of hypnotherapy is broad, including applications for anxiety, phobias, pain management, smoking cessation, performance, improving sleep and much more. 
+                <br />
+                <br />
+                <h4>Some outcomes are: </h4>
+                <ul>🧠 You are empowered to reframe limiting beliefs </ul>
+                <ul>✅ You create new positive habits</ul>
+                <ul>🏃‍♀️ You pursue personal transformation</ul> 
+                There are so many positive outcomes, that cover many areas of ones life. This helps each person move towards the life they want, rather than, the life they have.
+                <br/>
+                <br/>
+                <h3>Book a call and take back control. Because life won&apos;t wait!</h3>
+              
               </Typography>
             </Stack>
-            <Link component={NextLink} href="/insights/hypnotherapy-understanding-the-mind-body-connection/">
+            <Link component={NextLink} href="/services">
               <Button sx={{ mt: 4 }} variant="outlined">
-                Read More
+                My Services
               </Button>
             </Link>
           </Grid>
