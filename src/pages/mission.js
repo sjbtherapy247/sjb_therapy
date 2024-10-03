@@ -26,9 +26,12 @@ OurMissionPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 // ----------------------------------------------------------------------
 
 export default function OurMissionPage() {
-  const { loading, host } = useSettingsContext();
+  const { loading, host, error } = useSettingsContext();
   if (loading) {
     return <LoadingScreen />;
+//  }
+ // if (error) {
+  //  return <ErrorComponent error={error} />;
   }
   return <MissionView />;
 }

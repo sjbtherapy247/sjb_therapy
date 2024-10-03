@@ -47,6 +47,7 @@
     "framer-motion": "^10.9.2",
     "google-map-react": "^2.2.0",
     "http-proxy": "^1.18.1",
+    "jsdom": "^25.0.1",
     "lodash.merge": "^4.6.2",
     "micro": "^10.0.1",
     "next": "^14.2.13",

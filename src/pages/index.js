@@ -7,7 +7,7 @@ import { HomeView } from 'src/sections/_simo/view';
 import { research } from 'src/sections/_simo/insights/articles';
 import { useSettingsContext } from 'src/components/settings';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
-import DOMPurify from 'dompurify';
+// import DOMPurify from 'dompurify';
 // ----------------------------------------------------------------------
 
 HomePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -16,10 +16,9 @@ export async function getStaticProps() {
   return {
     props: {
       insights: [...research],
-      title: DOMPurify.sanitize('Simon Baker Hypnotherapist - Hypnotherapy in Sydney'),
-      description:
-        'Welcome to my hypnotherapy practice. I am dedicated to helping people improve their lives, through the use hypnosis. Book your Free session today.',
-      canonical: DOMPurify.sanitize('https://sjbtherapy.com'),
+      title:'Simon Baker Hypnotherapist - Hypnotherapy in Sydney',
+      description: 'Welcome to my hypnotherapy practice. I am dedicated to helping people improve their lives, through the use hypnosis. Book your Free session today.',
+      canonical: 'https://sjbtherapy.com',
       // keywords: ' some keywords '
     },
     
@@ -36,5 +35,6 @@ export default function HomePage({ insights }) {
     return <LoadingScreen />;
   }
   
-  return <HomeView insights={insights} />;
-}
+  return <HomeView insights={insights} />;  
+} 
+

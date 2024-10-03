@@ -35,6 +35,10 @@ export default function PlanCard({ plan, prices }) {
     if (purchase.length > 0) {
         if (license === 'Single Session' && !user) purchase.pop();
         if (license === 'Single Session' && user) purchase.shift();
+        if (license === '60min Hypnotherapy' && user) purchase.pop();
+        if (license === '60min Hypnotherapy' && user) purchase.shift();
+        if (license === '3-Session Bundle' && user) purchase.pop();
+        if (license === '3-Session Bundle' && user) purchase.shift();
 
         // Check if purchase array still has elements after potential modifications
         if (purchase.length > 0) {

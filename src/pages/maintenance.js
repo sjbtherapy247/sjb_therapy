@@ -1,5 +1,6 @@
 // next
 // layouts
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 import CompactLayout from 'src/layouts/compact';
 // sections
 import { MaintenanceView } from 'src/sections/status/view';
@@ -19,5 +20,11 @@ MaintenancePage.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 // ----------------------------------------------------------------------
 
 export default function MaintenancePage() {
-  return <MaintenanceView />;
-}
+  return (
+  <ErrorBoundary>
+  <CompactLayout>
+    <MaintenanceView />
+  </CompactLayout>
+  </ErrorBoundary>
+)
+};
