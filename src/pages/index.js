@@ -7,7 +7,7 @@ import { HomeView } from 'src/sections/_simo/view';
 import { research } from 'src/sections/_simo/insights/articles';
 import { useSettingsContext } from 'src/components/settings';
 import LoadingScreen from 'src/components/loading-screen/LoadingScreen';
-
+import DOMPurify from 'dompurify';
 // ----------------------------------------------------------------------
 
 HomePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
