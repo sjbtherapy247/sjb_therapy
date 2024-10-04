@@ -53,7 +53,7 @@ export default function HomeGuidedMediation() {
                 So, why hypnosis Simon? Well, firstly it helps people address a wide range of mental, emotional, and physical issues by allowing you to fully relax and focus on the goals that matter most to you. 
                 <br />
                 <br />
-                I don&apos;t kow of a faster, easier, non-pharmalogical way to treat such a wide range of conditions. That&apos;s why I became a hypnotherapist. I live my life in the front row and I want everyone to get back to their own front row. <br/>I call it <strong>`To TRANCEform` 🤖</strong> That&apos;s why I do it and that&apos;s why I love it 💛
+                I don&apos;t know of a faster, easier, non-pharmacological way to treat such a wide range of conditions. That&apos;s why I became a hypnotherapist. I live my life in the front row and I want everyone to get back to their own front row. <br/>I call it <strong>`To TRANCEform` 🤖</strong> That&apos;s why I do it and that&apos;s why I love it 💛
                 <br/>
                 <br/>
                 By guiding you into a deeply relaxed state, I, <strong>Simon The Hypnotherapist</strong>, will help you modify your ingrained behaviors, thought patterns, and emotional responses so that they are either more easily controlled, or replaced with better alternatives.
@@ -62,14 +62,13 @@ export default function HomeGuidedMediation() {
                 Through this process, new neural pathways are created, allowing you to simply replace old habits with healthier, more positive ones that are aligned with your future goals.
                 <br />
                 <br />
-                The scope of hypnotherapy is broad, including applications for anxiety, phobias, pain management, smoking cessation, performance, improving sleep and much more. 
-                <br />
-                <br />
+                The scope of hypnotherapy is broad, including applications for anxiety, phobias, pain management, smoking cessation, performance, improved sleep, and much more. 
+                <br />              
                 <h4>Some outcomes are: </h4>
                 <ul>🧠 You are empowered to reframe limiting beliefs </ul>
                 <ul>✅ You create new positive habits</ul>
-                <ul>🏃‍♀️ You pursue personal transformation</ul> 
-                There are so many positive outcomes, that cover many areas of ones life. This helps each person move towards the life they want, rather than, the life they have.
+                <ul>🏃‍♀️ You pursue personal TRANCEformation</ul> 
+                There are so many positive outcomes, that cover many areas of ones life. This helps each person move towards the life they want, rather than the life they have.
                 <br/>
                 <br/>
                 <h3>Book a call and take back control. Because life won&apos;t wait!</h3>
