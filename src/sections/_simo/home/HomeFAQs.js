@@ -153,7 +153,7 @@ export default function HomeFAQs() {
                   target="_blank" 
                   startIcon={<Iconify icon="carbon:launch" />} 
                   onClick={handleClick}>Book A Call {click && isSmUp ? '': null}
-                    {/* email */}
+                    {/* Booking */}
                   </Button>
                 </Stack>
               </m.div>

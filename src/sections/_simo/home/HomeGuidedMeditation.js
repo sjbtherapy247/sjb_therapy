@@ -65,9 +65,9 @@ export default function HomeGuidedMediation() {
                 The scope of hypnotherapy is broad, including applications for anxiety, phobias, pain management, smoking cessation, performance, improved sleep, and much more. 
                 <br />              
                 <h4>Some outcomes are: </h4>
-                <ul>🧠 You are empowered to reframe limiting beliefs </ul>
+                <center><ul>🧠 You are empowered to reframe limiting beliefs </ul>
                 <ul>✅ You create new positive habits</ul>
-                <ul>🏃‍♀️ You pursue personal TRANCEformation</ul> 
+                <ul>🏃‍♀️ You pursue personal TRANCEformation</ul> </center>
                 There are so many positive outcomes, that cover many areas of ones life. This helps each person move towards the life they want, rather than the life they have.
                 <br/>
                 <br/>
