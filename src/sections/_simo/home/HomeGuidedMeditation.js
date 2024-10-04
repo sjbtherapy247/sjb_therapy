@@ -7,7 +7,7 @@ import { Stack, Container, Typography, Unstable_Grid2 as Grid, Button, Link } fr
 import { bgGradient } from 'src/utils/cssStyles';
 // components
 import { useTheme } from '@emotion/react';
-
+import Iconify from 'src/components/iconify';
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -75,10 +75,11 @@ export default function HomeGuidedMediation() {
               
               </Typography>
             </Stack>
-            <Link component={NextLink} href="/services">
-              <Button sx={{ mt: 4 }} variant="outlined">
-                My Services
-              </Button>
+            <Link component={NextLink} href="/services/#hypnotherapyPackages">
+              <center><Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
+                  BOOK Your Free Discovery Call
+                </Button></center>
+              
             </Link>
           </Grid>
         </Grid>

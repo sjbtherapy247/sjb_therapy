@@ -11,7 +11,6 @@ import { Pattern01 } from 'src/assets/illustrations/pattern';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { bgGradient } from 'src/utils/cssStyles';
-
 // import { FAQPageJsonLd } from 'next-seo';
 
 // ----------------------------------------------------------------------
@@ -150,10 +149,10 @@ export default function HomeFAQs() {
                   size="large" 
                   color="primary" 
                   variant="contained" 
-                  href="mailto:hello@sjbtherapy.com" 
+                  href="/services/#hypnotherapyPackages" 
                   target="_blank" 
-                  startIcon={<Iconify icon="mdi:email-outline" />} 
-                  onClick={handleClick}>Email {click && isSmUp ? '': null}
+                  startIcon={<Iconify icon="carbon:launch" />} 
+                  onClick={handleClick}>Book A Call {click && isSmUp ? '': null}
                     {/* email */}
                   </Button>
                 </Stack>
