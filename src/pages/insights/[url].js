@@ -1,10 +1,10 @@
 // next
-import Head from 'next/head';
+// import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
 import ArticleView from 'src/sections/_simo/view/ArticleView';
-
+import { NextSeo } from 'next-seo';
 import { research } from 'src/sections/_simo/insights/articles';
 
 export async function getStaticPaths() {
@@ -40,15 +40,34 @@ ResearchArticlePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function ResearchArticlePage({ researchDoc, researchDocs }) {
+export default function ResearchArticlePage({ researchDoc, researchDocs, title, description, keywords, canonical, image }) {
   return (
     <>
-      <Head>
-        <meta name="title" content={researchDoc.title} />
-        <meta name="description" content={researchDoc.description} />
-        <meta name="keywords" content={researchDoc.keywords} />
-      </Head>
-
+      <NextSeo>
+        title={researchDoc.title}
+        description={researchDoc.description}
+        canonical={researchDoc.canonical}
+        openGraph={{
+          url: researchDoc.canonical,
+          title: researchDoc.title,
+          description: researchDoc.description,
+          images: [
+            {
+              url: researchDoc.image,
+              width: 800,
+              height: 600,
+              alt: researchDoc.title,
+            },
+          ],
+        }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: researchDoc.keywords,
+          },
+        ]}
+        </NextSeo>
+     
       <ArticleView post={researchDoc} allPosts={researchDocs} />
     </>
   );
