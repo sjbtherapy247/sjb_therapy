@@ -1,10 +1,10 @@
 // next
-import Head from 'next/head';
+// import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
 import ServiceView from 'src/sections/_simo/view/ServiceView';
-
+import { NextSeo } from 'next-seo';
 import { servicesDescription } from 'src/sections/_simo/services/updated-svcs';
 
 // import { Metadata } from 'next';
@@ -47,13 +47,33 @@ ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 export default function ServicePage({ serviceDoc, services }) {
   return (
     <>
-      <Head>
-        <meta name="title" content={serviceDoc.title} />
-        <meta name="description" content={serviceDoc.description} />
-        <meta name="keywords" content={serviceDoc.tags} />
-      </Head>
+    <NextSeo>
+    title={serviceDoc.title}
+        description={serviceDoc.description}
+        canonical={serviceDoc.canonical}
+        openGraph={{
+          url: serviceDoc.canonical,
+          title: serviceDoc.title,
+          description: serviceDoc.description,
+          images: [
+            {
+              url: serviceDoc.image,
+              width: 800,
+              height: 600,
+              alt: serviceDoc.title,
+            },
+          ],
+        }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: serviceDoc.tags,
+          },
+        ]}
 
-      <ServiceView service={serviceDoc} />
+    </NextSeo>
+
+    <ServiceView service={serviceDoc} />
     </>
   );
 }
