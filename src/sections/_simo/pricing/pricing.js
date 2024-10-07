@@ -21,6 +21,15 @@ export const sessionPricing = [
     options: [{ title: 'In Person Session - Please Contact' }, { title: 'Discounted Further Sessions' }],
   },
 
+  {
+    license: 'Group Quit Smoking / Vaping',
+    stripeName: 'Group Quit Smoking / Vaping',
+    price: '245',
+    commons: ['Are you ready to Quit!', 'Online Course With Live Group Session', 'Using the Power Of A Group To Support You', 'Online Couse Elements', 'Audio Downloads', 'Group Quit is Powerful!',],
+    options: [{ title: 'Set yourself free forever' }, { title: 'Group Support for 3 months' }],
+  },
+];
+
   // {
   //  license: 'TRANCEformd Program',
   //  stripeName: 'TRANCEformd Program',
@@ -29,11 +38,3 @@ export const sessionPricing = [
   //  options: [{ title: 'In-person sessions can be arranged - Please Contact' } ],
   //  },
 
- 
-  // {
-  //  license: 'Quit Smoking Course',
-  //   price: '185',
-  //   commons: ['Are you ready to Quit!', 'Single 90 minute Group Session', 'Personalised to improve effectiveness', 'Online Couse Elements', 'Audio Downloads', 'Group Quit is Powerful!',],
-  //   options: [{ title: 'Set yourself free forever' - 'Group Support for 3 months' } ],
-  //  },
-];

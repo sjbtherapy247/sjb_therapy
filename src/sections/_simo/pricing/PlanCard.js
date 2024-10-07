@@ -74,7 +74,7 @@ export default function PlanCard({ plan, prices }) {
     >
       {popular && (
         <Label color="success" sx={{ position: 'absolute', top: 20, left: 20 }}>
-          POPULAR
+          MOST POPULAR
         </Label>
       )}
 
@@ -127,7 +127,7 @@ export default function PlanCard({ plan, prices }) {
         </Stack>
         {/* <Link component={NextLink} href="/"> */}
         <LoadingButton size="large" fullWidth loading={loading} variant="contained" color="primary" loadingIndicator={<CircularProgress color="primary" size={24} />} onClick={handleCheckout}>
-          Choose Package
+          Buy Now
         </LoadingButton>
         {/* </Link> */}
         <Stack alignItems="flex-end" spacing={3}>
