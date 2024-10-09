@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Client Login | SJB Therapy',
+      title: 'Client Login | TRANCEform with Simon',
       canonical: 'https://sjbtherapy.com/auth/login-cover/',
     },
   };

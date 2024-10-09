@@ -20,11 +20,11 @@ const handleRequest = async (req, res) => {
         const pages = await fetchPages();
 
         const staticLinks = [
-            { url: '/', changefreq: 'daily', priority: 1.0 },
-            { url: '/about', changefreq: 'weekly', priority: 0.6 },
-            { url: '/service', changefreq: 'weekly', priority: 0.8 },
-            { url: '/mission', changefreq: 'monthly', priority: 0.6 },
-            { url: '/support', changefreq: 'monthly', priority: 0.6 },
+            { url: '/', changefreq: 'weekly', priority: 1.0 },
+            { url: '/about/', changefreq: 'weekly', priority: 0.6 },
+            { url: '/service/', changefreq: 'weekly', priority: 0.8 },
+            { url: '/mission/', changefreq: 'monthly', priority: 0.6 },
+            { url: '/support/', changefreq: 'monthly', priority: 0.6 },
             { url: '/hypnotherapy-services/overcome-anxiety-and-remove-phobias', changefreq: 'weekly', priority: 0.8 },
             { url: '/hypnotherapy-services/performance-hypnotherapy-tranceformd', changefreq: 'weekly', priority: 0.8 },
             { url: '/hypnotherapy-services/quit-smoking-with-hypnotherapy', changefreq: 'weekly', priority: 0.8 },
@@ -34,7 +34,7 @@ const handleRequest = async (req, res) => {
             { url: '/hypnotherapy-services/treatment-for-ptsd-and-trauma', changefreq: 'weekly', priority: 0.8 },
             { url: '/hypnotherapy-services/hypnotherapy-for-depression-and-low-self-esteem', changefreq: 'weekly', priority: 0.8 },
             { url: '/hypnotherapy-services/performance-anxiety-and-stage-fright', changefreq: 'weekly', priority: 0.8 },
-            { url: '/insights', changefreq: 'weekly', priority: 0.9 },
+            { url: '/insights/', changefreq: 'weekly', priority: 0.9 },
             { url: '/insights/hypnotherapy-understanding-the-mind-body-connection', changefreq: 'monthly', priority: 0.8 },
             { url: '/insights/quit-smoking-with-hypnosis', changefreq: 'monthly', priority: 0.8 },
             { url: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance', changefreq: 'monthly', priority: 0.8 },

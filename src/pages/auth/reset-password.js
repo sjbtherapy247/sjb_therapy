@@ -7,7 +7,7 @@ import { ResetPasswordView } from 'src/sections/auth/view';
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Reset Password | SJB Therapy',
+      title: 'Reset Password | TRANCEform with Simon',
       canonical: 'https://sjbtherapy.com/auth/reset-password/',
     },
   };

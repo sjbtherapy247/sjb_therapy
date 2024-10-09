@@ -72,7 +72,7 @@ export default async function handler(req, res) {
               from: 'onboarding@sjbtherapy.com',
               to: email,
               bcc: 'digital@sjbtherapy.com',
-              subject: 'Welcome to SJB Therapy',
+              subject: 'Welcome to TRANCEform with Simon',
               html: '<strong>Please finalise your account setup</strong>',
               react: SignUpEmail({ link, email, name }),
             });
@@ -95,7 +95,7 @@ export default async function handler(req, res) {
             const data = await resend.emails.send({
               from: 'support@sjbtherapy.com',
               to: email,
-              subject: 'SJB Therapy - Reset Password',
+              subject: 'TRANCEform with Simon - Reset Password',
               html: '<strong>Request to reset password</strong>',
               react: ResetPasswordEmail({ link, email, name: firstName }),
             });
