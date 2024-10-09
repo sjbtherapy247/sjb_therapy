@@ -25,7 +25,25 @@ export const _tags = [
 ];
 
 // ----------------------------------------------------------------------
+const ASSOCIATION_NAME = [
+  'gordian_pillars_simon_baker',
+  'hca_simon_baker',
+  'ispa_founding_simon_baker',
+  'ispa_simon_baker',
+  'strategic_psychotherapist_simon_baker',
+];
 
+export const _associations = ASSOCIATION_NAME.map((association, index) => ({
+  id: _mock.id(index),
+  name: association,
+  image: `/assets/images/associations/${association}.png`,
+}));
+
+export const _brandsColor = ASSOCIATION_NAME.map((association, index) => ({
+  id: _mock.id(index),
+  name: association,
+  image: `/assets/images/associations/${association}.png`,
+}));
 // ----------------------------------------------------------------------
 
 export const _socials = [
