@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   return {
     paths: servicesDescription.map((doc) => ({
       params: {
-        url: doc.url,
+        url: doc.url.replace(/\/$/, ''), // Ensure no trailing slash
       },
     })),
     fallback: false,
@@ -26,12 +26,11 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      // researchDocs: [...research],
       serviceDoc,
       services: servicesDescription,
-      title: serviceDoc.title || 'Research Article',
-      description: serviceDoc?.description || null,
-      keywords: serviceDoc?.keywords || null,
+      title: serviceDoc.title || 'Hypnotherapy Service',
+      description: serviceDoc.description,
+      keywords: serviceDoc.keywords,
       canonical: `https://sjbtherapy.com/hypnotherapy-services/${serviceDoc.url}`,
       image: `https://sjbtherapy.com${serviceDoc.heroImg}`,
     },
@@ -50,9 +49,9 @@ export default function ServicePage({ serviceDoc, services }) {
     <NextSeo>
     title={serviceDoc.title}
         description={serviceDoc.description}
-        canonical={serviceDoc.canonical}
+        canonical={serviceDoc.url}
         openGraph={{
-          url: serviceDoc.canonical,
+          url: serviceDoc.url,
           title: serviceDoc.title,
           description: serviceDoc.description,
           images: [
@@ -67,7 +66,7 @@ export default function ServicePage({ serviceDoc, services }) {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: serviceDoc.tags,
+            content: serviceDoc.keywords,
           },
         ]}
 

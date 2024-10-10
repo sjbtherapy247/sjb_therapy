@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   return {
     paths: research.map((doc) => ({
       params: {
-        url: doc.url,
+        url: doc.url.replace(/\/$/, ''), // Ensure no trailing slash
       },
     })),
     fallback: false,
@@ -44,11 +44,11 @@ export default function ResearchArticlePage({ researchDoc, researchDocs, title, 
   return (
     <>
       <NextSeo>
-        title={researchDoc.title}
-        description={researchDoc.description}
-        canonical={researchDoc.canonical}
+        title= {researchDoc.title}
+        description= {researchDoc.description}
+        canonical= {researchDoc.url}
         openGraph={{
-          url: researchDoc.canonical,
+          url: researchDoc.url,
           title: researchDoc.title,
           description: researchDoc.description,
           images: [

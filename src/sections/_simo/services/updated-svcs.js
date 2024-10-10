@@ -2,7 +2,7 @@ export const servicesDescription = [
   {
     title: 'Overcome Anxiety and Remove Phobias',
     url: 'overcome-anxiety-and-remove-phobias',
-    tags: 'overcome anxiety, remove phobias',
+    keywords: 'overcome anxiety, remove phobias',
     buttonTitle: 'Insights - Mind Body Connection',
     buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
     insights: 'For more information on the mind body connection please see our InSights article.',
@@ -27,7 +27,7 @@ export const servicesDescription = [
   {
     title: 'Performance Hypnotherapy - TRANCEformd',
     url: 'performance-hypnotherapy-tranceformd',
-    tags: 'business and sports performance hypnotherapy',
+    keywords: 'business and sports performance hypnotherapy',
     buttonTitle: 'Insights - Hypnotherapy for Sports and Performance',
     buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you achieve the next level of performance in sport or business, please read our InSights article',
@@ -69,7 +69,7 @@ export const servicesDescription = [
   {
     title: 'Quit Smoking with Hypnotherapy',
     url: 'quit-smoking-with-hypnotherapy',
-    tags: 'quit smoking or vaping with hypnotherapy',
+    keywords: 'quit smoking or vaping with hypnotherapy',
     buttonTitle: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
     buttonLink: '/insights/quit-smoking-with-hypnosis/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
@@ -97,7 +97,7 @@ export const servicesDescription = [
   {
     title: 'Stress Management Techniques',
     url: 'hypnosis-for-stress-management',
-    tags: 'stress management techniques',
+    keywords: 'stress management techniques',
     buttonTitle: 'Insights - Powerful Healing Benefits',
     buttonLink: '/insights/hypnotherapy-synergy/',
     insights: 'For more information on how hypnotherapy can help you to harness your potential, please see our InSights article.',
@@ -137,7 +137,7 @@ export const servicesDescription = [
   {
     title: 'Hypnosis for Insomnia and sleep disorders',
     url: 'hypnosis-for-insomnia-and-sleep-disorders',
-    tags: 'hypnosis for sleep disorders | insomnia',
+    keywords: 'hypnosis for sleep disorders | insomnia',
     buttonTitle: 'Insights - Hypnotherapy for Anxiety & Phobias',
     buttonLink: '/insights',
     insights: 'For more information on how hypnotherapy can help with Anxiety & Phobias, please see our InSights article.',
@@ -167,7 +167,7 @@ export const servicesDescription = [
   {
     title: 'Hypnosis for Weight Loss and Binge Eating',
     url: 'weight-loss-and-binge-eating',
-    tags: 'hypnosis for weight loss and binge eating',
+    keywords: 'hypnosis for weight loss and binge eating',
     buttonTitle: 'Insights - The Mind Body Connection',
     buttonLink: '/insights/hypnotherapy-understanding-the-mind-body-connection/',
     insights: 'For more information on how the mind and the body connect please see our InSights article.',
@@ -203,7 +203,7 @@ export const servicesDescription = [
   {
     title: 'Effective Treatment for PTSD and Trauma',
     url: 'treatment-for-ptsd-and-trauma',
-    tags: 'treatment for ptsd and trauma',
+    keywords: 'treatment for ptsd and trauma',
     buttonTitle: 'Insights - Hypnotherapy for Sports & Business Performance',
     buttonLink: '/insights/hypnotherapy-enhancing-your-sports-and-business-performance/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
@@ -238,7 +238,7 @@ export const servicesDescription = [
   {
     title: 'Hypnotherapy for Depression and Low Self-Esteem',
     url: 'hypnotherapy-for-depression-and-low-self-esteem',
-    tags: 'hypnotherapy for depression and low self esteem',
+    keywords: 'hypnotherapy for depression and low self esteem',
     buttonTitle: 'Insights - Hypnotherapy and Psychotherapy',
     buttonLink: '/insights/hypnotherapy-synergy/',
     insights:
@@ -273,7 +273,7 @@ export const servicesDescription = [
   {
     title: 'Break Performance Anxiety and Stage Fright',
     url: 'performance-anxiety-and-stage-fright',
-    tags: 'break performance anxiety and stage freight',
+    keywords: 'break performance anxiety and stage freight',
     buttonTitle: 'Insights - Hypnotherapy uses',
     buttonLink: '/insights',
     insights: 'For more information on how hypnotherapy can help you, please see our InSights articles.',

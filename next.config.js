@@ -1,19 +1,24 @@
 // ----------------------------------------------------------------------
+
 const { withAxiom } = require('next-axiom');
 
 module.exports = withAxiom({
-  trailingSlash: true,
+  trailingSlash: false,
+  reactStrictMode: true, // Enable strict mode
+  images: {
+    domains: ['sjbtherapy.com'],
+  },
   async redirects() {
     return [
       {
         source: '/support/',
         destination: '/',
-        permanent: false,
+        permanent: true, // Change to permanent if redirect is long-term
       },
       {
         source: '/maintenance/',
         destination: '/',
-        permanent: false, 
+        permanent: true, // Same here
       },
     ];
   },
@@ -21,7 +26,7 @@ module.exports = withAxiom({
     return [
       {
         source: '/sitemap.xml',
-        destination: '/api/sitemap.xml', // Adjust the destination if your endpoint is named differently
+        destination: '/api/sitemap.xml',
       },
     ];
   },
