@@ -46,14 +46,14 @@ export default function ResearchArticlePage({ researchDoc, researchDocs, title, 
       <NextSeo>
         title= {researchDoc.title}
         description= {researchDoc.description}
-        canonical= {researchDoc.url}
+        canonical= `https://sjbtherapy.com/insights/${researchDoc.url}`,
         openGraph={{
           url: researchDoc.url,
           title: researchDoc.title,
           description: researchDoc.description,
           images: [
             {
-              url: researchDoc.image,
+              url: `https://sjbtherapy.com${researchDoc.heroImg}`,
               width: 800,
               height: 600,
               alt: researchDoc.title,

@@ -49,14 +49,14 @@ export default function ServicePage({ serviceDoc, services }) {
     <NextSeo>
     title={serviceDoc.title}
         description={serviceDoc.description}
-        canonical={serviceDoc.url}
+        canonical=`https://sjbtherapy.com/hypnotherapy-services/${serviceDoc.url}`,
         openGraph={{
           url: serviceDoc.url,
           title: serviceDoc.title,
           description: serviceDoc.description,
           images: [
             {
-              url: serviceDoc.image,
+              url: `https://sjbtherapy.com${serviceDoc.heroImg}`,
               width: 800,
               height: 600,
               alt: serviceDoc.title,
