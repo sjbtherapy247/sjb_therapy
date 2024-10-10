@@ -165,8 +165,6 @@ export const research = [
 
       <p>Moreover, a meta-analysis published in the <strong>Journal of Sleep Research</strong> revealed that individuals undergoing hypnotherapy experienced significant improvements in sleep duration, sleep efficiency, and overall sleep quality.</p>
 
-      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/AG6oGaa-O00?si=jXP-_j-lLL79J_8k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
-
       <p>Many people are on a quest for a <font color="#5e699d">natural remedy, rather than medication.</font> This is because they have tried the medication and it either doesn't work, the side effects outweigh the benefits or they have had something else happen in their life. This is where coming to see a hypnotherapist makes all the difference. We don't merely treat symptoms but we delve into the root causes of your insomnia and find out how it is running for you. It can be as simple as adopting a better routine around bedtime, or not watching any news programs from 4pm onwards! I'm not kidding either…</p>
 
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
@@ -187,11 +185,15 @@ export const research = [
 
       <div><p><img alt="Sleep Better - SjB Therapy"  height='400px' width='100%' style="object-fit:cover"  src="/assets/images/marketing/Sleep-Better-Chalk-Board-Hypnotherapy-For-Insomnia-SjB-Therapy-Sydney.webp"</p></div>
 
-      <font color="#5e699d"> ## Conclusion</font>
+      <font color="#5e699d"><h4>In Conclusion</h4></font>
 
       <p>In conclusion, while traditional sleep aids may offer temporary relief, the holistic and enduring benefits of hypnotherapy make it a compelling choice for those seeking a sustainable solution to insomnia and sleepless nights.</p>
-
-      <p><font color="#5e699d">Book yourself a free discovery call today</font> and let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>
+      <br>
+      <p><strong><font color="#5e699d">Book yourself a Free Discovery Call Below</font></strong>
+      <br> 
+      <br>
+    
+      And let's guide you towards the tranquil nights that you can only dream of. If you're tired of counting sheep, perhaps it's time to explore the realm of hypnotherapy and embrace the profound transformation it can bring to your sleep and overall well-being.</p>
       
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250297759847171"
       crossorigin="anonymous"></script>
