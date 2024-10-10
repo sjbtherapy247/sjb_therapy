@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import { useRef } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Avatar, Box, Card, CardContent, CardHeader, Unstable_Grid2 as Grid, Typography } from '@mui/material';
+import { Avatar, Box, Card, Typography, Unstable_Grid2 as Grid } from '@mui/material';
 // components
-import Image from 'src/components/image';
-import Carousel, { CarouselDots, CarouselArrows } from 'src/components/carousel';
+import Carousel, {CarouselDots} from 'src/components/carousel';
 
 // ----------------------------------------------------------------------
 
@@ -45,6 +44,7 @@ export default function HomeFamous() {
     slidesToShow: 1,
     slidesToScroll: 1,
     rtl: Boolean(theme.direction === 'rtl'),
+
     ...CarouselDots({
       rounded: true,
       sx: {
@@ -57,14 +57,6 @@ export default function HomeFamous() {
       },
     }),
   };
-
-  // const handlePrev = () => {
-  //   carouselRef.current?.slickPrev();
-  // };
-
-  // const handleNext = () => {
-  //   carouselRef.current?.slickNext();
-  // };
 
   return (
     <Box sx={{ py: 8, bgcolor: theme.mode === 'light' ? 'secondary.lighter' : 'background.default' }}>
@@ -81,18 +73,15 @@ export default function HomeFamous() {
             sx={{
               position: 'relative',
               '& .slick-list': {
-                // borderRadius: 2,
                 boxShadow: theme.customShadows.z16,
               },
             }}
           >
-            {/* <CarouselArrows filled onNext={handleNext} onPrev={handlePrev}> */}
             <Carousel ref={carouselRef} {...carouselSettings}>
               {data.map((item) => (
                 <CarouselItem key={item.name} item={item} />
               ))}
             </Carousel>
-            {/* </CarouselArrows> */}
           </Box>
         </Grid>
       </Grid>
@@ -118,20 +107,25 @@ function CarouselItem({ item }) {
         flexDirection: 'column',
         alignItems: 'center',
         height: { xs: '480px', md: '380px' },
+        textAlign: 'center',
+        boxShadow: 3,
       }}
     >
-      <CardHeader title={title} sx={{ fontStyle: 'italic', textAlign: 'center' }} titleTypographyProps={{ fontWeight: '200' }} />
-      <CardHeader
-        avatar={
-          <Avatar sx={{ mr: 2, height: '70px', width: '70px' }} variant="rounded" src={image}>
-            A
-          </Avatar>
-        }
-        title={name}
-        subheader={description}
+      <Typography variant="body3" sx={{ fontStyle: 'italic', mx: 3, mb: 2 }}>
+        {title}
+      </Typography>
+
+      <Avatar
+        sx={{ height: 70, width: 70, mb: 2 }}
+        variant="rounded"
+        src={image}
+        alt={name}
       />
-      {/* <Image alt={title} src={image} sx={{ height: '350px' }} /> */}
-      {/* <Typography>{item.title}</Typography> */}
+
+      <Typography variant="h5">{name}</Typography>
+      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        {description}
+      </Typography>
     </Card>
   );
 }
@@ -142,5 +136,5 @@ CarouselItem.propTypes = {
     title: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
-  }),
+  }).isRequired,
 };

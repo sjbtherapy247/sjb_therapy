@@ -1,16 +1,24 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Box, Button, Container, TextField, Typography, InputAdornment } from '@mui/material';
+import { Box, Container } from '@mui/material';
 // components
-// import SvgColor from 'src/components/svg-color';
 import Markdown from 'src/components/markdown/Markdown';
 
 // ----------------------------------------------------------------------
 
-export default function HomeBanner({ sx, ...other }) {
-  const quote = `<blockquote>If you think you can do a thing or think you can't do a thing, you're (probably) right - Henry Ford</blockquote> `;
+export default function HomeBanner({ sx = {}, ...other }) {
+  const quote = `<blockquote>If you think you can do a thing or think you can't do a thing, you're (probably) right - Henry Ford</blockquote>`;
+
   return (
-    <Box sx={{ py: 4, bgcolor: 'background.neutral' }} {...other}>
+    <Box
+      sx={{
+        py: { xs: 3, md: 4 }, // Responsive padding for different screen sizes
+        bgcolor: 'background.neutral',
+        textAlign: 'center', // Ensure the quote is centered
+        ...sx, // Merging additional styles passed as props
+      }}
+      {...other}
+    >
       <Container>
         <Markdown content={quote} />
       </Container>

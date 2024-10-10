@@ -1,33 +1,28 @@
 // next
 import NextLink from 'next/link';
 // @mui
-import { styled, alpha } from '@mui/material/styles';
-import { Stack, Button, Container, Typography, Unstable_Grid2 as Grid, Link } from '@mui/material';
+import { alpha } from '@mui/material/styles';
+import { Stack, Button, Container, Typography, Grid, Link, Box } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
-// routes
-// import { paths } from 'src/routes/paths';
 // components
 import Iconify from 'src/components/iconify';
 import HomeSimon from './HomeSimon';
 
 // ----------------------------------------------------------------------
 
-const StyledRoot = styled('div')(({ theme }) => ({
-  ...bgGradient({
-    color: alpha(theme.palette.background.default, 0.85),
-    imgUrl: '/assets/images/simon/20230513_145715.jpg',
-    // imgUrl: '/assets/background/overlay_2.jpg',
-  }),
-  position: 'relative',
-  overflow: 'hidden',
-}));
-
-// ----------------------------------------------------------------------
-
 export default function HomeHero() {
   return (
-    <StyledRoot>
+    <Box
+      sx={{
+        ...bgGradient({
+          color: (theme) => alpha(theme.palette.background.default, 0.85),
+          imgUrl: '/assets/images/simon/20230513_145715.jpg',
+        }),
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
       <Container sx={{ p: 0 }}>
         <Grid container columnSpacing={3} alignItems="center" sx={{ height: 1 }}>
           <Grid xs={12} md={6} sx={{ px: 4 }}>
@@ -40,30 +35,35 @@ export default function HomeHero() {
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              <div>
-                <Typography variant="h1">Hypnotherapy Sydney</Typography>
-               
-              </div>
-              <div>
+              <Typography variant="h1">Hypnotherapy Sydney</Typography>
+
+              <Box>
                 <Typography variant="h3">TRANCEform Your Life</Typography>
                 <Typography variant="h4">With Hypnosis</Typography>
-              </div>
+              </Box>
 
               <Typography color="text.secondary">
-                Hi, I&apos;m Simon Baker - The Hypnotherapist, not the Mentalist! 
+                Hi, I&apos;m Simon Baker - The Hypnotherapist, not the Mentalist!
                 <br />
                 <br />
-                Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential, know that you&apos;re in the right place and I will do everything to help you achieve your goals.
+                Whether you&apos;ve arrived here because you&apos;re facing a challenge or seeking to unlock your true potential,
+                know that you&apos;re in the right place and I will do everything to help you achieve your goals.
                 <br />
                 <br />
-                If you&apos;re based in Sydney then we can meet face to face and if you&apos;re not, then that&apos;s fine, as we can meet virtually.
+                If you&apos;re based in Sydney, we can meet face to face. If you&apos;re not, that&apos;s fine too,
+                as we can meet virtually.
                 <br />
                 <br />
-                Book in your <bold>FREE</bold> discovery session below and let&apos;s TRANCEform your life today.
+                Book in your <strong>FREE</strong> discovery session below and let&apos;s TRANCEform your life today.
               </Typography>
 
-              <Link component={NextLink} rel="noopener" href="/services#hypnotherapyPackages">
-                <Button color="primary" size="large" variant="contained" endIcon={<Iconify icon="carbon:launch" />}>
+              <Link component={NextLink} href="/services#hypnotherapyPackages" underline="none">
+                <Button
+                  color="primary"
+                  size="large"
+                  variant="contained"
+                  endIcon={<Iconify icon="carbon:launch" />}
+                >
                   BOOK Your Free Discovery Call
                 </Button>
               </Link>
@@ -75,6 +75,6 @@ export default function HomeHero() {
           </Grid>
         </Grid>
       </Container>
-    </StyledRoot>
+    </Box>
   );
 }

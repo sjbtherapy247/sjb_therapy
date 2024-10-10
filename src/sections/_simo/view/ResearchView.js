@@ -2,22 +2,46 @@
 import { Container, Unstable_Grid2 as Grid } from '@mui/material';
 // _mock
 import { _categories, _tags } from 'src/_mock';
-//
-// import { PostSearchMobile } from 'src/sections/blog/components';
+// SEO
+import { NextSeo } from 'next-seo';
+// sections
 import BlogSidebar from 'src/sections/_simo/insights/sidebar';
 import { FeaturedPosts, ResearchPosts } from 'src/sections/_simo/insights';
 import { PostSearchMobile } from 'src/sections/_simo/insights/components';
-// import NewsletterMarketing from 'src/sections/newsletter/marketing';
 
 // ----------------------------------------------------------------------
 
-export default function ReasearchView({ researchDocs }) {
+export default function ResearchView({ researchDocs }) {
+  const pageTitle = "Insights Articles - Simon Baker Hypnotherapy";
+  const pageDescription = "Browse insightful Insights articles from Simon on various topics including mental health, therapy, and wellness.";
+  
   return (
     <>
-      <PostSearchMobile />
+      {/* SEO configuration using NextSeo */}
+      <NextSeo
+        title={researchDocs.pageTitle}
+        description={researchDocs.pageDescription}
+        canonical="https://sjbtherapy.com/insights"
+        openGraph={{
+          url: 'https://sjbtherapy.com/insights',
+          title: pageTitle,
+          description: pageDescription,
+          images: [
+            {
+              url: 'https://sjbtherapy.com/images/research-banner.jpg', // Placeholder for any banner or featured image
+              width: 1200,
+              height: 630,
+              alt: 'Hypnotherapy Insights - Simon Baker Hypnotherapist',
+            },
+          ],
+        }}
+      />
 
+      {/* Search and Featured Posts */}
+      <PostSearchMobile />
       <FeaturedPosts posts={researchDocs.slice(0, 3)} />
 
+      {/* Main Content and Sidebar */}
       <Container
         maxWidth={false}
         sx={{
@@ -36,13 +60,6 @@ export default function ReasearchView({ researchDocs }) {
               popularTags={_tags}
               categories={_categories}
               recentPosts={researchDocs.slice(-4)}
-              // recentPosts={{ list: researchDocs.slice(-4) }}
-              // advertisement={{
-               //  title: 'Advertisement',
-                // description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',
-                // imageUrl: _mock.image.marketing(9),
-                // path: '',
-             //  }}
             />
           </Grid>
         </Grid>

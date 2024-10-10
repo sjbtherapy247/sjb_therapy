@@ -26,18 +26,17 @@ import { fDate } from 'src/utils/formatTime';
 // _mock
 // moved one level up
 // components
-// import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
-// import ReactPlayer from 'react-player';
 //
+// import Image from 'next/image';
 import { _socials } from 'src/_mock';
-// import Head from 'next/head';
-import { LatestPosts } from 'src/sections/_simo/insights';
+import Head from 'next/head';
+import { ResearchPosts, } from 'src/sections/_simo/insights';
 import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/insights/components';
 import { bgGradient } from 'src/utils/cssStyles';
-
+import { NextSeo } from 'next-seo';
 // ----------------------------------------------------------------------
 
 export default function ArticleView({ post, allPosts }) {
@@ -69,9 +68,35 @@ export default function ArticleView({ post, allPosts }) {
 
   return (
     <>
-      {/* <Head>
+    <NextSeo>
+       title= {ResearchPosts.title}
+        description= {ResearchPosts.description}
+        canonical= {ResearchPosts.url}
+        openGraph={{
+          url: ResearchPosts.url,
+          title: ResearchPosts.title,
+          description: ResearchPosts.description,
+          images: [
+            {
+              url: ResearchPosts.image,
+              width: 800,
+              height: 600,
+              alt: ResearchPosts.title,
+            },
+          ],
+        }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: ResearchPosts.keywords,
+          },
+        ]}
+        </NextSeo>
+      <Head>
         <title>{title}</title>
-      </Head> */}
+        <meta name="description" content={ResearchPosts.description} />
+        <meta name="keywords" content={ResearchPosts.keywords} />
+      </Head> 
       <Box
         sx={{
           py: 10,
@@ -126,6 +151,8 @@ export default function ArticleView({ post, allPosts }) {
       </Box>
 
       {/* <Image sx={{ mt: { xs: '64px', md: 0 } }} alt="hero" src={heroImg} ratio="21/9" /> */}
+      
+
 
       <Container>
         <CustomBreadcrumbs sx={{ my: 3 }} links={[
@@ -223,7 +250,7 @@ export default function ArticleView({ post, allPosts }) {
 
       <Divider />
 
-      <LatestPosts posts={allPosts.filter((doc) => doc.title !== title).slice(0, 6)} />
+      <ResearchPosts posts={allPosts.filter((doc) => doc.title !== title).slice(0, 6)} />
 
       <Popover
         open={!!open} /* open is e.currenttarget so force it to boolean */

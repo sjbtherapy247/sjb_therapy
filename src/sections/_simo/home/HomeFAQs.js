@@ -1,3 +1,6 @@
+// SEO
+import { FAQPageJsonLd } from 'next-seo';
+//
 import { m } from 'framer-motion';
 import { useState } from 'react';
 // @mui
@@ -11,7 +14,7 @@ import { Pattern01 } from 'src/assets/illustrations/pattern';
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { bgGradient } from 'src/utils/cssStyles';
-// import { FAQPageJsonLd } from 'next-seo';
+
 
 // ----------------------------------------------------------------------
 
@@ -50,7 +53,6 @@ const CONTENTS = [
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     color: alpha(theme.palette.background.default, 0.85),
-    // imgUrl: '/assets/images/simon/20230513_145715.jpg',
     imgUrl: '/assets/background/overlay_2.jpg',
   }),
   position: 'relative',
@@ -65,116 +67,125 @@ export default function HomeFAQs() {
   const handleChangeExpanded = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-  const [click, setClick] = useState(false);
 
-  const handleClick = () => {
-    setClick(true);
-  };
+  // FAQPageJsonLd integration for SEO
+  const faqSchema = CONTENTS.map((faq) => ({
+    question: faq.question,
+    answer: faq.answer,
+  }));
+
   return (
-    <StyledRoot>
-      <Container
-        component={MotionViewport}
-        sx={{
-          position: 'relative',
-          py: { xs: 4, md: 8 },
-          overflow: 'hidden',
-        }}
-      >
-        <Grid container spacing={{ md: 3 }} justifyContent="center">
-          <Grid xs={12} md={8}>
-            <m.div variants={varFade().inLeft}>
-              <Typography variant="h2" sx={{ textAlign: 'center', fontWeight: 500 }}>
-                Frequently Asked Questions
-              </Typography>
-            </m.div>
+    <>
+      {/* FAQ Schema for SEO */}
+      <FAQPageJsonLd
+        mainEntity={faqSchema}
+      />
 
-            <Box
-              sx={{
-                my: { xs: 8, md: 10 },
-              }}
-            >
-              {CONTENTS.map ((faq) => (
-                <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
-                  <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
-                    <AccordionSummary>
-                      <Typography color="text.secondary" variant="h6" fontStyle="italic" fontWeight="400" component="div" sx={{ flexGrow: 1 }}>
-                        {faq.question}
-                      </Typography>
-                      <Box sx={{ minWidth: '25px' }}>
-                        <Iconify color={theme.palette.primary.main} icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
-                      </Box>
-                    </AccordionSummary>
+      <StyledRoot>
+        <Container
+          component={MotionViewport}
+          sx={{
+            position: 'relative',
+            py: { xs: 4, md: 8 },
+            overflow: 'hidden',
+          }}
+        >
+          <Grid container spacing={{ md: 3 }} justifyContent="center">
+            <Grid xs={12} md={8}>
+              <m.div variants={varFade().inLeft}>
+                <Typography variant="h2" sx={{ textAlign: 'center', fontWeight: 500 }}>
+                  Frequently Asked Questions
+                </Typography>
+              </m.div>
 
-                    <AccordionDetails>
-                      <Typography color="text.secondary">{faq.answer}</Typography>
-                    </AccordionDetails>
-                  </Accordion>
+              <Box
+                sx={{
+                  my: { xs: 8, md: 10 },
+                }}
+              >
+                {CONTENTS.map((faq) => (
+                  <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
+                    <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
+                      <AccordionSummary>
+                        <Typography color="text.secondary" variant="h6" fontStyle="italic" fontWeight="400" component="div" sx={{ flexGrow: 1 }}>
+                          {faq.question}
+                        </Typography>
+                        <Box sx={{ minWidth: '25px' }}>
+                          <Iconify color={theme.palette.primary.main} icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
+                        </Box>
+                      </AccordionSummary>
+
+                      <AccordionDetails>
+                        <Typography color="text.secondary">{faq.answer}</Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  </m.div>
+                ))}
+              </Box>
+
+              <Box
+                sx={{
+                  borderWidth: 1,
+                  borderRadius: 3,
+                  textAlign: 'center',
+                  borderStyle: 'dashed',
+                  borderColor: alpha(theme.palette.grey[500], 0.32),
+                  px: { xs: 3, md: 0 },
+                  py: { xs: 6, md: 8 },
+                }}
+              >
+                <m.div variants={varFade().inUp}>
+                  <Typography variant="h3">Still Have Questions?</Typography>
                 </m.div>
-              ))}
-            </Box>
 
-            <Box
-              sx={{
-                borderWidth: 1,
-                borderRadius: 3,
-                textAlign: 'center',
-                borderStyle: 'dashed',
-                borderColor: alpha(theme.palette.grey[500], 0.32),
-                px: { xs: 3, md: 0 },
-                py: { xs: 6, md: 8 },
-              }}
-            >
-              <m.div variants={varFade().inUp}>
-                <Typography variant="h3">Still Have Questions?</Typography>
-              </m.div>
+                <m.div variants={varFade().inUp}>
+                  <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please reach out, I&apos;m happy to help</Typography>
+                </m.div>
 
-              <m.div variants={varFade().inUp}>
-                <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please reach out, I&apos;m happy to help</Typography>
-              </m.div>
+                <m.div variants={varFade().inUp}>
+                  <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Button
+                      size="large"
+                      color="primary"
+                      variant="contained"
+                      href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"
+                      target="_blank"
+                      startIcon={<Iconify icon="mdi:cellphone-sound" />}
+                    >
+                      WhatsApp
+                    </Button>
 
-              <m.div variants={varFade().inUp}>
-                <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Button 
-                  size="large" 
-                  color="primary" 
-                  variant="contained" 
-                  href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"target="_blank" 
-                  startIcon={<Iconify icon="mdi:cellphone-sound" />} 
-                  onClick={handleClick}>
-                    WhatsApp {click && isSmUp ? ' ' : null}
-                    {/* Message */}
-                  </Button>
-
-                  <Button 
-                  size="large" 
-                  color="primary" 
-                  variant="contained" 
-                  href="/services/#hypnotherapyPackages" 
-                  target="_blank" 
-                  startIcon={<Iconify icon="carbon:launch" />} 
-                  onClick={handleClick}>Book A Call {click && isSmUp ? '': null}
-                    {/* Booking */}
-                  </Button>
-                </Stack>
-              </m.div>
-            </Box>
+                    <Button
+                      size="large"
+                      color="primary"
+                      variant="contained"
+                      href="/services/#hypnotherapyPackages"
+                      target="_blank"
+                      startIcon={<Iconify icon="carbon:launch" />}
+                    >
+                      Book A Call
+                    </Button>
+                  </Stack>
+                </m.div>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
 
-        {isSmUp && (
-          <Pattern01
-            sx={{
-              top: 80,
-              left: 0,
-              right: 0,
-              zIndex: -1,
-              mx: 'auto',
-              maxWidth: 600,
-              maxHeight: 600,
-            }}
-          />
-        )}
-      </Container>
-    </StyledRoot>
+          {isSmUp && (
+            <Pattern01
+              sx={{
+                top: 80,
+                left: 0,
+                right: 0,
+                zIndex: -1,
+                mx: 'auto',
+                maxWidth: 600,
+                maxHeight: 600,
+              }}
+            />
+          )}
+        </Container>
+      </StyledRoot>
+    </>
   );
 }
