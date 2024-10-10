@@ -60,7 +60,7 @@ export default function MyApp(props) {
   const defaultKeywords = 'local hypnotherapy, free session, remove anxiety,';
 
   // Page-specific SEO properties
-  const { title, description, image, canonical, keywords } = pageProps;
+  const { title, description, image, canonical, keywords, } = pageProps;
 
   const openGraphData = {
     type: 'website',
