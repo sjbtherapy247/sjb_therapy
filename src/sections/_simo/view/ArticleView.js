@@ -1,7 +1,5 @@
-// next
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
-// import { MDXRemote } from 'next-mdx-remote';
 // @mui
 import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
 // utils
@@ -19,32 +17,21 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-export default function ArticleView({ mdxSource, post, allPosts }) {
-  const {
-    title,
-    description,
-    buttonTitle,
-    buttonLink,
-    services,
-    duration,
-    createdAt,
-    author,
-    favorited,
-    heroImg,
-    tags,
-    content,
-    url,
-  } = post;
+export default function ArticleView({ post, allPosts }) {
+  const { title, description, buttonTitle, buttonLink, services, duration, createdAt, author, favorited, heroImg, tags, content } = post;
 
   const [favorite, setFavorite] = useState(favorited);
   const [open, setOpen] = useState(null);
   const theme = useTheme();
 
   // Client-side render dates to avoid hydration issues between server and client rendering
-  const [clientsideDate, setClientsideDate] = useState(null);
+  const [clientsideDate, setClientsideDate] = useState('');
 
   useEffect(() => {
-    setClientsideDate(fDate(createdAt, 'dd/MM/yyyy p'));
+    // Ensure date is only set on the client side
+    if (createdAt) {
+      setClientsideDate(fDate(createdAt, 'dd/MM/yyyy p'));
+    }
   }, [createdAt]);
 
   const handleOpen = (event) => setOpen(event.currentTarget);
@@ -56,9 +43,9 @@ export default function ArticleView({ mdxSource, post, allPosts }) {
       <NextSeo
         title={title}
         description={description}
-        canonical={`https://sjbtherapy.com${url}`}
+        canonical={`https://sjbtherapy.com${post.url}`}
         openGraph={{
-          url: `https://sjbtherapy.com${url}`,
+          url: `https://sjbtherapy.com${post.url}`,
           title,
           description,
           images: [
@@ -108,10 +95,10 @@ export default function ArticleView({ mdxSource, post, allPosts }) {
                 {title}
               </Typography>
               <Typography variant="caption" sx={{ opacity: 0.72 }}>
-                {clientsideDate}
+                {clientsideDate || 'Loading...'}
               </Typography>
               <Stack direction="row">
-                {_socials(title, url, description).map((social) => (
+                {_socials.map((social) => (
                   <Link key={social.value} href={social.href} target="_blank" underline="none">
                     <IconButton color="primary">
                       <Iconify icon={social.icon} />
@@ -192,7 +179,7 @@ export default function ArticleView({ mdxSource, post, allPosts }) {
               <Typography variant="subtitle2" sx={{ mr: 1.5 }}>
                 Share:
               </Typography>
-              {_socials(title, url, description).map((social) => (
+              {_socials.map((social) => (
                 <Link key={social.value} href={social.href} target="_blank" underline="none">
                   <IconButton sx={{ color: social.color }}>
                     <Iconify icon={social.icon} />
@@ -220,7 +207,7 @@ export default function ArticleView({ mdxSource, post, allPosts }) {
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
         PaperProps={{ sx: { width: 200, p: 1 } }}
       >
-        {_socials(title, url).map((social) => (
+        {_socials.map((social) => (
           <Link key={social.value} href={social.href} target="_blank" underline="none">
             <MenuItem onClick={handleClose} sx={{ typography: 'body2', color: theme.palette.primary.main }}>
               <Iconify icon={social.icon} width={24} sx={{ mr: 1 }} />
