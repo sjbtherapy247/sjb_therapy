@@ -1,5 +1,3 @@
-// next
-// import Head from 'next/head';
 // layouts
 import MainLayout from 'src/layouts/main';
 // sections
@@ -14,12 +12,19 @@ export async function getStaticPaths() {
         url: doc.url.replace(/\/$/, ''), // Ensure no trailing slash
       },
     })),
-    fallback: false,
+    fallback: 'blocking', // Enabling ISR if you want to add more posts in the future
   };
 }
 
 export async function getStaticProps(context) {
-  const researchDoc = research.filter((doc) => doc.url === context.params.url)[0];
+  const researchDoc = research.find((doc) => doc.url === context.params.url);
+
+  // Return 404 if no matching article is found
+  if (!researchDoc) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
@@ -27,10 +32,11 @@ export async function getStaticProps(context) {
       researchDoc,
       title: researchDoc.title || 'Research Article',
       description: researchDoc.description,
-      keywords: researchDoc.keywords,
+      keywords: researchDoc.keywords || '',
       canonical: `https://sjbtherapy.com/insights/${researchDoc.url}`,
-      image: `https://sjbtherapy.com${researchDoc.heroImg}`,
+      image: `https://sjbtherapy.com${researchDoc.heroImg || ''}`,
     },
+    revalidate: 10, // Revalidate every 10 seconds for ISR (Incremental Static Regeneration)
   };
 }
 
@@ -43,31 +49,38 @@ ResearchArticlePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 export default function ResearchArticlePage({ researchDoc, researchDocs, title, description, keywords, canonical, image }) {
   return (
     <>
-      <NextSeo>
-        title= {researchDoc.title}
-        description= {researchDoc.description}
-        canonical= `https://sjbtherapy.com/insights/${researchDoc.url}`,
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={canonical}
         openGraph={{
-          url: researchDoc.url,
-          title: researchDoc.title,
-          description: researchDoc.description,
+          url: canonical,
+          title,
+          description,
           images: [
             {
-              url: `https://sjbtherapy.com${researchDoc.heroImg}`,
+              url: image || 'https://sjbtherapy.com/default-image.jpg', // Fallback image
               width: 800,
               height: 600,
-              alt: researchDoc.title,
+              alt: title,
             },
           ],
         }}
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: researchDoc.keywords,
+            content: keywords,
           },
         ]}
-        </NextSeo>
-     
+        twitter={{
+          cardType: 'summary_large_image',
+          site: '@yourtwitterhandle', // Replace with actual Twitter handle
+          title,
+          description,
+          image: image || 'https://sjbtherapy.com/default-image.jpg', // Fallback image
+        }}
+      />
+
       <ArticleView post={researchDoc} allPosts={researchDocs} />
     </>
   );

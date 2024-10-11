@@ -1,6 +1,7 @@
 // next
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
+import { MDXRemote } from 'next-mdx-remote';
 // @mui
 import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
 // utils
@@ -38,6 +39,11 @@ export default function ArticleView({ post, allPosts }) {
 
   return (
     <>
+    <Container>
+        <h1>{title}</h1>
+        <MDXRemote {...content} />
+      </Container>
+
       <NextSeo
         title={title}
         description={description}
@@ -62,7 +68,7 @@ export default function ArticleView({ post, allPosts }) {
           },
         ]}
       />
-
+  
       <Box
         sx={{
           py: 10,
