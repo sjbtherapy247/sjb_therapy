@@ -10,7 +10,7 @@ import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 import { NextSeo } from 'next-seo';
 // mock/socials
-import { _socials } from 'src/_mock';
+import { _socialsInsights } from 'src/_mock';
 import { ResearchPosts } from 'src/sections/_simo/insights';
 import { PostTags, PostAuthor } from 'src/sections/_simo/insights/components';
 import { bgGradient } from 'src/utils/cssStyles';
@@ -24,11 +24,13 @@ export default function ArticleView({ post, allPosts }) {
   const [open, setOpen] = useState(null);
   const theme = useTheme();
 
+  // Generate social links for this article
+  const socialLinks = _socialsInsights(title, post.url, description, heroImg);
+
   // Client-side render dates to avoid hydration issues between server and client rendering
   const [clientsideDate, setClientsideDate] = useState('');
 
   useEffect(() => {
-    // Ensure date is only set on the client side
     if (createdAt) {
       setClientsideDate(fDate(createdAt, 'dd/MM/yyyy p'));
     }
@@ -38,14 +40,39 @@ export default function ArticleView({ post, allPosts }) {
   const handleClose = () => setOpen(null);
   const handleChangeFavorite = (event) => setFavorite(event.target.checked);
 
+  // JSON-LD for the article
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "image": `https://sjbtherapy.com${heroImg}`,
+    "author": {
+      "@type": "Person",
+      "name": author.name,
+      "url": "https://sjbtherapy.com",
+    },
+    "datePublished": createdAt,
+    "url": `https://sjbtherapy.com/insights/${post.url}`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "SJB Therapy",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sjbtherapy.com/logo.png"
+      }
+    }
+  };
+
   return (
     <>
+      {/* SEO and JSON-LD */}
       <NextSeo
         title={title}
         description={description}
-        canonical={`https://sjbtherapy.com${post.url}`}
+        canonical={`https://sjbtherapy.com/insights/${post.url}`}
         openGraph={{
-          url: `https://sjbtherapy.com${post.url}`,
+          url: `https://sjbtherapy.com/insights/${post.url}`,
           title,
           description,
           images: [
@@ -63,6 +90,11 @@ export default function ArticleView({ post, allPosts }) {
             content: post.keywords,
           },
         ]}
+        // Dynamically inject JSON-LD schema
+        jsonLd={{
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(jsonLd),
+        }}
       />
 
       <Box
@@ -98,7 +130,7 @@ export default function ArticleView({ post, allPosts }) {
                 {clientsideDate || 'Loading...'}
               </Typography>
               <Stack direction="row">
-                {_socials.map((social) => (
+                {socialLinks.map((social) => (
                   <Link key={social.value} href={social.href} target="_blank" underline="none">
                     <IconButton color="primary">
                       <Iconify icon={social.icon} />
@@ -179,7 +211,7 @@ export default function ArticleView({ post, allPosts }) {
               <Typography variant="subtitle2" sx={{ mr: 1.5 }}>
                 Share:
               </Typography>
-              {_socials.map((social) => (
+              {socialLinks.map((social) => (
                 <Link key={social.value} href={social.href} target="_blank" underline="none">
                   <IconButton sx={{ color: social.color }}>
                     <Iconify icon={social.icon} />
@@ -205,9 +237,11 @@ export default function ArticleView({ post, allPosts }) {
         anchorEl={open}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
-        PaperProps={{ sx: { width: 200, p: 1 } }}
+        PaperProps={{
+          sx: { width: 200, p: 1 },
+        }}
       >
-        {_socials.map((social) => (
+        {socialLinks.map((social) => (
           <Link key={social.value} href={social.href} target="_blank" underline="none">
             <MenuItem onClick={handleClose} sx={{ typography: 'body2', color: theme.palette.primary.main }}>
               <Iconify icon={social.icon} width={24} sx={{ mr: 1 }} />

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 import createEmotionServer from '@emotion/server/create-instance';
@@ -20,14 +19,14 @@ const Meta = () => (
     <meta charSet="UTF-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
-    <meta name="description" content="Hypnosis & Hypnotherapy in Sydney. Quit smoking or Vaping, Weight loss, Anxiety, Addiction, Phobia, Low Confidence, or More Performance. Book Online Today." />
+    <meta name="description" content="Hypnosis & Hypnotherapy in Sydney. Quit smoking, lose weight, reduce anxiety, and improve performance. Book Online Today." />
     <meta name="keywords" content="Simon Baker The Hypnotherapist - Clinical Hypnotherapy Sydney" />
     <meta name="theme-color" content={palette('light').primary.dark} />
     <meta name="google-adsense-account" content="ca-pub-4250297759847171" />
     {/* Open Graph meta tags for social media */}
     <meta property="og:title" content="Simon Baker - Clinical Hypnotherapy in Sydney" />
     <meta property="og:description" content="Quit smoking, lose weight, or improve your life with hypnotherapy. Book online with Simon Baker." />
-    <meta property="og:image" content="/assets/images/simon/simon-baker-main-sjbtherapy.webp" />
+    <meta property="og:image" content="https://sjbtherapy.com/assets/images/simon/simon-baker-main-sjbtherapy.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.sjbtherapy.com" />
   </>

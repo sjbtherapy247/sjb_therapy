@@ -1,43 +1,82 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; 
 import NextLink from 'next/link';
-
 // @mui
-import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
-// routes
-// import { paths } from 'src/routes/paths';
-// utils
-// _mock
-// moved one level up
+import { Stack, Avatar, Divider, Popover, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
+// seo
+import { NextSeo } from 'next-seo'; // Ensure this is imported
 // components
-// import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 import Markdown from 'src/components/markdown';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
-//
-import { _socials } from 'src/_mock';
-// import Head from 'next/head';
-// import { LatestPosts } from 'src/sections/_simo/insights';
-import { PostTags, PostAuthor, PostSocialsShare } from 'src/sections/_simo/insights/components';
+import { _socialsServices } from 'src/_mock'; // Import social links for services
 import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
 export default function ServiceView({ service }) {
-  const { insights, buttonLink, buttonTitle, url, title, description, heroImg, /* tags, */ content } = service;
+  const { insights, buttonLink, buttonTitle, url, title, description, heroImg, content } = service;
 
   const [open, setOpen] = useState(null);
   const theme = useTheme();
 
-  const handleOpen = (event) => {
-    setOpen(event.currentTarget);
-  };
+  // Dynamically generate social sharing links for the current service
+  const socialLinks = _socialsServices(title, url, description, heroImg);
 
-  const handleClose = () => {
-    setOpen(null);
+  const handleOpen = (event) => setOpen(event.currentTarget);
+  const handleClose = () => setOpen(null);
+
+  // JSON-LD schema for the current service
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": title,
+    "description": description,
+    "image": `https://sjbtherapy.com${heroImg}`,
+    "url": `https://sjbtherapy.com/services/${url}`,
+    "provider": {
+      "@type": "Organization",
+      "name": "SJB Therapy",
+      "url": "https://sjbtherapy.com",
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Global",
+    },
   };
 
   return (
     <>
+      {/* SEO and JSON-LD */}
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{
+          type: 'website',
+          url: `https://sjbtherapy.com/services/${url}`,
+          title,
+          description,
+          images: [
+            {
+              url: `https://sjbtherapy.com${heroImg}`,
+              width: 800,
+              height: 600,
+              alt: title,
+            },
+          ],
+        }}
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content: service.keywords,
+          },
+        ]}
+        // Dynamically inject JSON-LD schema
+        jsonLd={{
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(jsonLd),
+        }}
+      />
+
       <Box
         sx={{
           py: 10,
@@ -58,7 +97,6 @@ export default function ServiceView({ service }) {
                 md: 'center',
               }}
               sx={{
-                // color: 'common.white',
                 textAlign: {
                   xs: 'center',
                   md: 'center',
@@ -71,9 +109,9 @@ export default function ServiceView({ service }) {
               </Typography>
 
               <Stack direction="row">
-                {_socials.map((social) => (
+                {socialLinks.map((social) => (
                   <Link key={social.value} href={social.href} target="_blank" underline="none">
-                    <IconButton color="primary" /* sx={{ color: social.color }} */>
+                    <IconButton color="primary">
                       <Iconify icon={social.icon} />
                     </IconButton>
                   </Link>
@@ -111,13 +149,13 @@ export default function ServiceView({ service }) {
             <Divider sx={{ mb: 4 }} />
 
             <Markdown content={content} />
-            
-            {/* {tags.length && <PostTags tags={tags} />} */}
-            <Divider><Link component={NextLink} href="/services#hypnotherapyPackages">
-            <center><Button variant="contained" size="large" sx={{ mb: 4 }} endIcon={<Iconify icon="carbon:launch" />}>
-                Book Now
-              </Button></center>
-            </Link>
+
+            <Divider>
+              <Link component={NextLink} href="/services#hypnotherapyPackages">
+                <center><Button variant="contained" size="large" sx={{ mb: 4 }} endIcon={<Iconify icon="carbon:launch" />}>
+                    Book Now
+                  </Button></center>
+              </Link>
             </Divider>
 
             <center><Typography>{insights}</Typography></center>
@@ -128,12 +166,11 @@ export default function ServiceView({ service }) {
               </Button>
             </Link></center>
 
-            {/* <PostSocialsShare /> */}
             <Stack direction="row" alignItems="center" sx={{ my: 3 }}>
               <Typography variant="subtitle2" sx={{ mr: 1.5 }}>
                 Share:
               </Typography>
-              {_socials.map((social) => (
+              {socialLinks.map((social) => (
                 <Link key={social.value} href={social.href} target="_blank" underline="none">
                   <IconButton sx={{ color: social.color }}>
                     <Iconify icon={social.icon} />
@@ -148,7 +185,7 @@ export default function ServiceView({ service }) {
       <Divider />
 
       <Popover
-        open={!!open} /* open is e.currenttarget so force it to boolean */
+        open={!!open}
         onClose={handleClose}
         anchorEl={open}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
@@ -157,7 +194,7 @@ export default function ServiceView({ service }) {
           sx: { width: 200, p: 1 },
         }}
       >
-        {_socials.map((social) => (
+        {socialLinks.map((social) => (
           <Link key={social.value} href={social.href} target="_blank" underline="none">
             <MenuItem onClick={handleClose} sx={{ typography: 'body2', color: theme.palette.primary.main }}>
               <Iconify icon={social.icon} width={24} sx={{ mr: 1, color: social.color }} />

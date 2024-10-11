@@ -45,7 +45,55 @@ export const _brandsColor = ASSOCIATION_NAME.map((association, index) => ({
   image: `/assets/images/associations/${association}.png`,
 }));
 // ----------------------------------------------------------------------
+export const _socialsInsights = (title, url, description, heroImg) => [
+  {
+    value: 'facebook',
+    label: 'Facebook',
+    icon: 'carbon:logo-facebook',
+    color: '#1877F2',
+    href: `https://www.facebook.com/sharer/sharer.php?u=https://sjbtherapy.com/insights/${url}&quote=${encodeURIComponent(description)}&picture=https://sjbtherapy.com${heroImg}`,
+  },
+  {
+    value: 'linkedin',
+    label: 'LinkedIn',
+    icon: 'carbon:logo-linkedin',
+    color: '#007EBB',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=https://sjbtherapy.com/insights/${url}&summary=${encodeURIComponent(description)}&source=https://sjbtherapy.com${heroImg}`,
+  },
+  {
+    value: 'twitter',
+    label: 'Twitter',
+    icon: 'carbon:logo-twitter',
+    color: '#00AAEC',
+    href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=https://sjbtherapy.com/insights/${url}`,
+  },
+];
+// ----------------------------------------------------------------------
+export const _socialsServices = (title, url, description, heroImg, coverImg) => [
+  {
+    value: 'facebook',
+    label: 'Facebook',
+    icon: 'carbon:logo-facebook',
+    color: '#1877F2',
+    href: `https://www.facebook.com/sharer/sharer.php?u=https://sjbtherapy.com/hypnotherapy-services/${url}&quote=${encodeURIComponent(description)}&picture=https://sjbtherapy.com${coverImg}`,
+  },
+  {
+    value: 'linkedin',
+    label: 'LinkedIn',
+    icon: 'carbon:logo-linkedin',
+    color: '#007EBB',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=https://sjbtherapy.com/hypnotherapy-services/${url}&summary=${encodeURIComponent(description)}&source=https://sjbtherapy.com${coverImg}`,
+  },
+  {
+    value: 'twitter',
+    label: 'Twitter',
+    icon: 'carbon:logo-twitter',
+    color: '#00AAEC',
+    href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=https://sjbtherapy.com/hypnotherapy-services/${url}`,
+  },
+];
 
+// ----------------------------------------------------------------------
 export const _socials = [
   {
     value: 'facebook',

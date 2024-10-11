@@ -57,10 +57,10 @@ export default function MyApp(props) {
   const defaultDescription = 'Book a Free Session of hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance. TRANCEform your mind, TRANCEform your life.';
   const defaultUrl = 'https://sjbtherapy.com';
   const defaultImage = 'https://sjbtherapy.com/assets/sjb-logo/Hmain-darker.jpg';
-  const defaultKeywords = 'local hypnotherapy, free session, remove anxiety,';
+  const defaultKeywords = 'local hypnotherapy, free session, remove anxiety';
 
   // Page-specific SEO properties
-  const { title, description, image, canonical, keywords, } = pageProps;
+  const { title, description, image, canonical, keywords } = pageProps;
 
   const openGraphData = {
     type: 'website',
