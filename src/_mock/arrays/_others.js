@@ -46,42 +46,38 @@ export const _brandsColor = ASSOCIATION_NAME.map((association, index) => ({
 }));
 // ----------------------------------------------------------------------
 
-export const _socials = [
+export const _socials = (title, url, description, heroImg, coverImg) => [
   {
     value: 'facebook',
-    label: 'FaceBook',
+    label: 'Facebook',
     icon: 'carbon:logo-facebook',
     color: '#1877F2',
-    href: 'https://www.facebook.com/',
-  },
-  {
-    value: 'instagram',
-    label: 'Instagram',
-    icon: 'carbon:logo-instagram',
-    color: '#E02D69',
-    href: 'https://instagram.com',
+    href: `https://www.facebook.com/sharer/sharer.php?u=https://sjbtherapy.com/insights/${url}&quote=${encodeURIComponent(description)}&picture=https://sjbtherapy.com${coverImg}`,
   },
   {
     value: 'linkedin',
-    label: 'Linkedin',
+    label: 'LinkedIn',
     icon: 'carbon:logo-linkedin',
     color: '#007EBB',
-    href: 'https://www.linkedin.com',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=https://sjbtherapy.com/insights/${url}&summary=${encodeURIComponent(description)}&source=https://sjbtherapy.com${coverImg}`,
   },
   {
     value: 'twitter',
     label: 'Twitter',
     icon: 'carbon:logo-twitter',
     color: '#00AAEC',
-    href: 'https://twitter.com',
+    href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=https://sjbtherapy.com/insights/${url}`,
   },
   {
     value: 'tiktok',
     label: 'TikTok',
     icon: 'carbon:logo-tiktok',
-    colour: '#ffffff',
-    href: 'https://www.tiktok.com/',
+    color: '#ffffff',
+    href: 'https://www.tiktok.com/', // TikTok doesn't support direct URL sharing
   },
+
+
+  
   // {
     // value: 'whatsapp',
     // label: 'WhatsApp',

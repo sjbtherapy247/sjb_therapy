@@ -1,7 +1,7 @@
 // next
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
-import { MDXRemote } from 'next-mdx-remote';
+// import { MDXRemote } from 'next-mdx-remote';
 // @mui
 import { Stack, Avatar, Divider, Popover, Checkbox, MenuItem, Container, Typography, IconButton, Unstable_Grid2 as Grid, Box, alpha, useTheme, Link, Button } from '@mui/material';
 // utils
@@ -19,8 +19,22 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-export default function ArticleView({ post, allPosts }) {
-  const { title, description, buttonTitle, buttonLink, services, duration, createdAt, author, favorited, heroImg, tags, content } = post;
+export default function ArticleView({ mdxSource, post, allPosts }) {
+  const {
+    title,
+    description,
+    buttonTitle,
+    buttonLink,
+    services,
+    duration,
+    createdAt,
+    author,
+    favorited,
+    heroImg,
+    tags,
+    content,
+    url,
+  } = post;
 
   const [favorite, setFavorite] = useState(favorited);
   const [open, setOpen] = useState(null);
@@ -39,17 +53,12 @@ export default function ArticleView({ post, allPosts }) {
 
   return (
     <>
-    <Container>
-        <h1>{title}</h1>
-        <MDXRemote {...content} />
-      </Container>
-
       <NextSeo
         title={title}
         description={description}
-        canonical={`https://sjbtherapy.com${post.url}`}
+        canonical={`https://sjbtherapy.com${url}`}
         openGraph={{
-          url: `https://sjbtherapy.com${post.url}`,
+          url: `https://sjbtherapy.com${url}`,
           title,
           description,
           images: [
@@ -68,7 +77,7 @@ export default function ArticleView({ post, allPosts }) {
           },
         ]}
       />
-  
+
       <Box
         sx={{
           py: 10,
@@ -102,7 +111,7 @@ export default function ArticleView({ post, allPosts }) {
                 {clientsideDate}
               </Typography>
               <Stack direction="row">
-                {_socials.map((social) => (
+                {_socials(title, url, description).map((social) => (
                   <Link key={social.value} href={social.href} target="_blank" underline="none">
                     <IconButton color="primary">
                       <Iconify icon={social.icon} />
@@ -183,7 +192,7 @@ export default function ArticleView({ post, allPosts }) {
               <Typography variant="subtitle2" sx={{ mr: 1.5 }}>
                 Share:
               </Typography>
-              {_socials.map((social) => (
+              {_socials(title, url, description).map((social) => (
                 <Link key={social.value} href={social.href} target="_blank" underline="none">
                   <IconButton sx={{ color: social.color }}>
                     <Iconify icon={social.icon} />
@@ -211,7 +220,7 @@ export default function ArticleView({ post, allPosts }) {
         transformOrigin={{ vertical: 'top', horizontal: 'center' }}
         PaperProps={{ sx: { width: 200, p: 1 } }}
       >
-        {_socials.map((social) => (
+        {_socials(title, url).map((social) => (
           <Link key={social.value} href={social.href} target="_blank" underline="none">
             <MenuItem onClick={handleClose} sx={{ typography: 'body2', color: theme.palette.primary.main }}>
               <Iconify icon={social.icon} width={24} sx={{ mr: 1 }} />
