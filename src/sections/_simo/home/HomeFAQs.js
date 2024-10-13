@@ -1,11 +1,10 @@
 // SEO
 import { FAQPageJsonLd } from 'next-seo';
-//
 import { m } from 'framer-motion';
 import { useState } from 'react';
 // @mui
-import { alpha } from '@mui/material/styles';
-import { Box, Button, Accordion, Container, Typography, AccordionDetails, AccordionSummary, Unstable_Grid2 as Grid, useTheme, Stack, styled } from '@mui/material';
+import { alpha, useTheme } from '@mui/material/styles';
+import { Box, Button, Accordion, Container, Typography, AccordionDetails, AccordionSummary, Unstable_Grid2 as Grid, Stack, styled } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 // assets
@@ -17,7 +16,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
-const CONTENTS = [
+const FAQ_CONTENTS = [
   {
     question: `What is hypnotherapy?`,
     answer: `Hypnotherapy is a therapeutic approach that utilises hypnosis to induce a relaxed state of focused attention. In this state, individuals become more open to suggestions, allowing for exploration of the subconscious mind and addressing various issues.`,
@@ -46,10 +45,11 @@ const CONTENTS = [
     question: 'Are hypnotherapy and psychotherapy evidence-based practices?',
     answer: `Yes, both hypnotherapy and psychotherapy have a foundation in evidence-based practices. Numerous studies support the effectiveness of these therapies for various conditions, and many therapists adhere to evidence-based treatment approaches to ensure optimal results.`,
   },
-  // Add more FAQs as needed...
+  // Add more FAQs as needed
 ];
 
 // ----------------------------------------------------------------------
+
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     color: alpha(theme.palette.background.default, 0.85),
@@ -60,8 +60,8 @@ const StyledRoot = styled('div')(({ theme }) => ({
 }));
 
 export default function HomeFAQs() {
-  const isSmUp = useResponsive('up', 'sm');
   const theme = useTheme();
+  const isSmUp = useResponsive('up', 'sm');
   const [expanded, setExpanded] = useState(false);
 
   const handleChangeExpanded = (panel) => (event, isExpanded) => {
@@ -69,7 +69,7 @@ export default function HomeFAQs() {
   };
 
   // FAQ Schema integration for SEO
-  const faqSchema = CONTENTS.map((faq) => ({
+  const faqSchema = FAQ_CONTENTS.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -80,7 +80,7 @@ export default function HomeFAQs() {
 
   return (
     <>
-      {/* FAQ Schema for SEO */}
+      {/* Structured FAQ Data for SEO */}
       <FAQPageJsonLd mainEntity={faqSchema} />
 
       <StyledRoot>
@@ -95,22 +95,21 @@ export default function HomeFAQs() {
           <Grid container spacing={{ md: 3 }} justifyContent="center">
             <Grid xs={12} md={8}>
               <m.div variants={varFade().inLeft}>
-                <Typography variant="h2" sx={{ textAlign: 'center', fontWeight: 500 }}>
+                <Typography variant="h2" align="center" fontWeight={500}>
                   Frequently Asked Questions
                 </Typography>
               </m.div>
 
               <Box sx={{ my: { xs: 8, md: 10 } }}>
-                {CONTENTS.map((faq) => (
+                {FAQ_CONTENTS.map((faq, index) => (
                   <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
-                    <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
+                    <Accordion expanded={expanded === index} onChange={handleChangeExpanded(index)}>
                       <AccordionSummary>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}>
+                        <Typography variant="h6" sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}>
                           {faq.question}
                         </Typography>
-                        <Iconify icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
+                        <Iconify icon={expanded === index ? 'carbon:subtract' : 'carbon:add'} />
                       </AccordionSummary>
-
                       <AccordionDetails>
                         <Typography>{faq.answer}</Typography>
                       </AccordionDetails>
@@ -135,27 +134,27 @@ export default function HomeFAQs() {
                 </m.div>
 
                 <m.div variants={varFade().inUp}>
-                  <Typography sx={{ mt: 3, mb: 5 }}>Please reach out, I&apos;m happy to help</Typography>
+                  <Typography sx={{ mt: 3, mb: 5 }}>
+                    Please reach out, I&apos;m happy to help.
+                  </Typography>
                 </m.div>
 
                 <Stack direction="row" spacing={{ xs: 4, sm: 8 }} justifyContent="center">
                   <Button
                     size="large"
-                    color="primary"
                     variant="contained"
+                    color="primary"
                     href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"
                     target="_blank"
                     startIcon={<Iconify icon="mdi:cellphone-sound" />}
                   >
                     WhatsApp
                   </Button>
-
                   <Button
                     size="large"
-                    color="primary"
                     variant="contained"
+                    color="primary"
                     href="/services/#hypnotherapyPackages"
-                    target="_blank"
                     startIcon={<Iconify icon="carbon:launch" />}
                   >
                     Book A Call
