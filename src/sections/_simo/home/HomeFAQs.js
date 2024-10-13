@@ -15,7 +15,6 @@ import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { bgGradient } from 'src/utils/cssStyles';
 
-
 // ----------------------------------------------------------------------
 
 const CONTENTS = [
@@ -47,6 +46,7 @@ const CONTENTS = [
     question: 'Are hypnotherapy and psychotherapy evidence-based practices?',
     answer: `Yes, both hypnotherapy and psychotherapy have a foundation in evidence-based practices. Numerous studies support the effectiveness of these therapies for various conditions, and many therapists adhere to evidence-based treatment approaches to ensure optimal results.`,
   },
+  // Add more FAQs as needed...
 ];
 
 // ----------------------------------------------------------------------
@@ -68,18 +68,20 @@ export default function HomeFAQs() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // FAQPageJsonLd integration for SEO
+  // Updated FAQPageJsonLd integration for SEO
   const faqSchema = CONTENTS.map((faq) => ({
-    question: faq.question,
-    answer: faq.answer,
+    '@type': 'Question',
+    name: faq.question, // Correct field for question
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer, // Correct field for answer
+    },
   }));
 
   return (
     <>
       {/* FAQ Schema for SEO */}
-      <FAQPageJsonLd
-        mainEntity={faqSchema}
-      />
+      <FAQPageJsonLd mainEntity={faqSchema} />
 
       <StyledRoot>
         <Container
@@ -98,11 +100,7 @@ export default function HomeFAQs() {
                 </Typography>
               </m.div>
 
-              <Box
-                sx={{
-                  my: { xs: 8, md: 10 },
-                }}
-              >
+              <Box sx={{ my: { xs: 8, md: 10 } }}>
                 {CONTENTS.map((faq) => (
                   <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
                     <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
