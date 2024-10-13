@@ -68,13 +68,13 @@ export default function HomeFAQs() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // Updated FAQPageJsonLd integration for SEO
+  // FAQ Schema integration for SEO
   const faqSchema = CONTENTS.map((faq) => ({
     '@type': 'Question',
-    name: faq.question, // Correct field for question
+    name: faq.question,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: faq.answer, // Correct field for answer
+      text: faq.answer,
     },
   }));
 
@@ -105,16 +105,14 @@ export default function HomeFAQs() {
                   <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
                     <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
                       <AccordionSummary>
-                        <Typography color="text.secondary" variant="h6" fontStyle="italic" fontWeight="400" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}>
                           {faq.question}
                         </Typography>
-                        <Box sx={{ minWidth: '25px' }}>
-                          <Iconify color={theme.palette.primary.main} icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
-                        </Box>
+                        <Iconify icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
                       </AccordionSummary>
 
                       <AccordionDetails>
-                        <Typography color="text.secondary">{faq.answer}</Typography>
+                        <Typography>{faq.answer}</Typography>
                       </AccordionDetails>
                     </Accordion>
                   </m.div>
@@ -137,34 +135,32 @@ export default function HomeFAQs() {
                 </m.div>
 
                 <m.div variants={varFade().inUp}>
-                  <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>Please reach out, I&apos;m happy to help</Typography>
+                  <Typography sx={{ mt: 3, mb: 5 }}>Please reach out, I&apos;m happy to help</Typography>
                 </m.div>
 
-                <m.div variants={varFade().inUp}>
-                  <Stack direction="row" spacing={{ xs: 4, sm: 8 }} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Button
-                      size="large"
-                      color="primary"
-                      variant="contained"
-                      href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"
-                      target="_blank"
-                      startIcon={<Iconify icon="mdi:cellphone-sound" />}
-                    >
-                      WhatsApp
-                    </Button>
+                <Stack direction="row" spacing={{ xs: 4, sm: 8 }} justifyContent="center">
+                  <Button
+                    size="large"
+                    color="primary"
+                    variant="contained"
+                    href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"
+                    target="_blank"
+                    startIcon={<Iconify icon="mdi:cellphone-sound" />}
+                  >
+                    WhatsApp
+                  </Button>
 
-                    <Button
-                      size="large"
-                      color="primary"
-                      variant="contained"
-                      href="/services/#hypnotherapyPackages"
-                      target="_blank"
-                      startIcon={<Iconify icon="carbon:launch" />}
-                    >
-                      Book A Call
-                    </Button>
-                  </Stack>
-                </m.div>
+                  <Button
+                    size="large"
+                    color="primary"
+                    variant="contained"
+                    href="/services/#hypnotherapyPackages"
+                    target="_blank"
+                    startIcon={<Iconify icon="carbon:launch" />}
+                  >
+                    Book A Call
+                  </Button>
+                </Stack>
               </Box>
             </Grid>
           </Grid>
