@@ -67,13 +67,13 @@ export const servicesDescription = [
     icon: '/assets/icons/mental-health/tranceformd-head-icon.png',
   },
   {
-    title: 'Quit Smoking with Hypnotherapy',
+    title: 'Smoking Cessation using Hypnosis ',
     url: 'quit-smoking-with-hypnotherapy',
     keywords: 'quit smoking or vaping with hypnotherapy',
     buttonTitle: 'Quit Smoking with Hypnosis: Achieve Lasting Results',
     buttonLink: '/insights/quit-smoking-with-hypnosis/',
     insights: 'For more information on how hypnotherapy can help you quit smoking please see our InSights article.',
-    description: 'Quit smoking or vaping today with hypnotherapy. It can only take one session and you will be smoke free for life. Book in today and change your life forever.',
+    description: 'Smoking Cessation or Quit Vaping today with hypnotherapy. It may only take one session and you will be smoke free for life. Book in today and change your life forever.',
     content: `<p><h4>Quit Smoking or Vaping With Hypnotherapy<sup style='font-size: 12px'</h4></p>
     
     <p>How to quit smoking or vaping with hypnotherapy is a journey that is a truly empowering and life-changing experience. As a clinical hypnotherapist, I offer a positive and effective path towards achieving a smoke-free life through the transformative practice of hypnotherapy.</p>
