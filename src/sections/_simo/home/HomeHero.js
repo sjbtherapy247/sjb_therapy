@@ -1,12 +1,14 @@
 import NextLink from 'next/link';
 // @mui
 import { alpha } from '@mui/material/styles';
-import { Stack, Button, Container, Typography, Grid, Link, Box } from '@mui/material';
+import { Stack, Button, Container, Typography, Link, Box } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // components
-import Iconify from 'src/components/iconify';
 import dynamic from 'next/dynamic';
+// Iconify static imports
+import { Icon } from '@iconify/react';
+import launchIcon from '@iconify/icons-carbon/launch';
 
 // Dynamically load the HomeSimon component
 const HomeSimon = dynamic(() => import('./HomeSimon'), { ssr: false });
@@ -23,11 +25,11 @@ export default function HomeHero() {
         }),
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '90vh', // Ensures it takes full viewport height
-        pt: { xs: 8, md: 8 }, // Padding to prevent the top content from being cut off by the menu
+        minHeight: '90vh', // Full viewport height
+        pt: { xs: 8, md: 8 }, // Prevents content from being cut off
       }}
     >
-      <Container 
+      <Container
         sx={{
           p: 2,
           height: '100%',
@@ -62,7 +64,7 @@ export default function HomeHero() {
               With Hypnosis
             </Typography>
           </Box>
-          
+
           <Stack spacing={2} sx={{ mt: 2 }}>
             <Typography color="text.secondary" sx={{ fontSize: { xs: '1.1rem', md: '1.1rem' } }}>
               Hi, I&apos;m Simon Baker - The Hypnotherapist, not the Mentalist!
@@ -86,7 +88,7 @@ export default function HomeHero() {
               color="primary"
               size="large"
               variant="contained"
-              endIcon={<Iconify icon="carbon:launch" />}
+              endIcon={<Icon icon={launchIcon} />}
               sx={{ fontSize: { xs: '1rem', md: '1rem' } }}
             >
               BOOK Your Free Discovery Call
@@ -101,7 +103,7 @@ export default function HomeHero() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            mt: { xs: 3, md: 2 }, // Adds spacing above HomeSimon on mobile
+            mt: { xs: 3, md: 2 },
             pb: { xs: 2, md: 2 },
           }}
         >
