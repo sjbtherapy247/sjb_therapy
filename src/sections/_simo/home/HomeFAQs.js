@@ -49,7 +49,6 @@ const FAQ_CONTENTS = [
 ];
 
 // ----------------------------------------------------------------------
-
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     color: alpha(theme.palette.background.default, 0.85),
@@ -60,27 +59,27 @@ const StyledRoot = styled('div')(({ theme }) => ({
 }));
 
 export default function HomeFAQs() {
-  const theme = useTheme();
   const isSmUp = useResponsive('up', 'sm');
+  const theme = useTheme();
   const [expanded, setExpanded] = useState(false);
 
   const handleChangeExpanded = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // FAQ Schema integration for SEO
-  const faqSchema = FAQ_CONTENTS.map((faq) => ({
+  // JSON-LD schema generation using the updated `question` and `answer` fields.
+  const faqSchema = FAQ_CONTENTS.map(({ question, answer }) => ({
     '@type': 'Question',
-    name: faq.question,
+    name: question,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: faq.answer,
+      text: answer,
     },
   }));
 
   return (
     <>
-      {/* Structured FAQ Data for SEO */}
+      {/* FAQ Schema for SEO */}
       <FAQPageJsonLd mainEntity={faqSchema} />
 
       <StyledRoot>
@@ -95,23 +94,38 @@ export default function HomeFAQs() {
           <Grid container spacing={{ md: 3 }} justifyContent="center">
             <Grid xs={12} md={8}>
               <m.div variants={varFade().inLeft}>
-                <Typography variant="h2" align="center" fontWeight={500}>
+                <Typography
+                  variant="h2"
+                  sx={{ textAlign: 'center', fontWeight: 500 }}
+                >
                   Frequently Asked Questions
                 </Typography>
               </m.div>
 
               <Box sx={{ my: { xs: 8, md: 10 } }}>
-                {FAQ_CONTENTS.map((faq, index) => (
-                  <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
-                    <Accordion expanded={expanded === index} onChange={handleChangeExpanded(index)}>
+                {FAQ_CONTENTS.map(({ question, answer }) => (
+                  <m.div key={question} variants={varFade({ durationIn: 0.5 }).inRight}>
+                    <Accordion
+                      expanded={expanded === question}
+                      onChange={handleChangeExpanded(question)}
+                    >
                       <AccordionSummary>
-                        <Typography variant="h6" sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}>
-                          {faq.question}
+                        <Typography
+                          variant="h6"
+                          component="div"
+                          sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}
+                        >
+                          {question}
                         </Typography>
-                        <Iconify icon={expanded === index ? 'carbon:subtract' : 'carbon:add'} />
+                        <Iconify
+                          icon={
+                            expanded === question ? 'carbon:subtract' : 'carbon:add'
+                          }
+                        />
                       </AccordionSummary>
+
                       <AccordionDetails>
-                        <Typography>{faq.answer}</Typography>
+                        <Typography>{answer}</Typography>
                       </AccordionDetails>
                     </Accordion>
                   </m.div>
@@ -139,22 +153,28 @@ export default function HomeFAQs() {
                   </Typography>
                 </m.div>
 
-                <Stack direction="row" spacing={{ xs: 4, sm: 8 }} justifyContent="center">
+                <Stack
+                  direction="row"
+                  spacing={{ xs: 4, sm: 8 }}
+                  justifyContent="center"
+                >
                   <Button
                     size="large"
-                    variant="contained"
                     color="primary"
+                    variant="contained"
                     href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"
                     target="_blank"
                     startIcon={<Iconify icon="mdi:cellphone-sound" />}
                   >
                     WhatsApp
                   </Button>
+
                   <Button
                     size="large"
-                    variant="contained"
                     color="primary"
+                    variant="contained"
                     href="/services/#hypnotherapyPackages"
+                    target="_blank"
                     startIcon={<Iconify icon="carbon:launch" />}
                   >
                     Book A Call
