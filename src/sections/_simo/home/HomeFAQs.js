@@ -1,10 +1,11 @@
 // SEO
 import { FAQPageJsonLd } from 'next-seo';
+//
 import { m } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
-import { Box, Button, Accordion, Container, Typography, AccordionDetails, AccordionSummary, Unstable_Grid2 as Grid, Stack, styled } from '@mui/material';
+import { alpha } from '@mui/material/styles';
+import { Box, Button, Accordion, Container, Typography, AccordionDetails, AccordionSummary, Unstable_Grid2 as Grid, useTheme, Stack, styled } from '@mui/material';
 // hooks
 import useResponsive from 'src/hooks/useResponsive';
 // assets
@@ -16,34 +17,36 @@ import { bgGradient } from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
+// Renaming FAQ content for clarity
+
 const FAQ_CONTENTS = [
   {
     question: `What is hypnotherapy?`,
-    answer: `Hypnotherapy is a therapeutic approach that utilises hypnosis to induce a relaxed state of focused attention. In this state, individuals become more open to suggestions, allowing for exploration of the subconscious mind and addressing various issues.`,
+    answer: '<p>Hypnotherapy is a therapeutic approach that utilises hypnosis to induce a relaxed state of focused attention. In this state, individuals become more open to suggestions, allowing for exploration of the subconscious mind and addressing various issues.</p>',
   },
   {
     question: 'How does hypnotherapy work?',
-    answer: `Hypnotherapy works by guiding individuals into a state of deep relaxation and heightened suggestibility. In this state, the therapist can help individuals access their subconscious mind, where they can explore and address underlying thoughts, emotions, and behaviours.`,
+    answer: `<p>Hypnotherapy works by guiding individuals into a state of deep relaxation and heightened suggestibility. In this state, the therapist can help individuals access their subconscious mind, where they can explore and address underlying thoughts, emotions, and behaviours.</p>`,
   },
   {
     question: 'What can hypnotherapy help with?',
-    answer: `Hypnotherapy can assist with a wide range of issues, including managing stress and anxiety, overcoming phobias and fears, improving sleep patterns, boosting confidence and self-esteem, addressing habits or addictions, managing pain, and promoting overall well-being.`,
+    answer: `<p>Hypnotherapy can assist with a wide range of issues, including managing stress and anxiety, overcoming phobias and fears, improving sleep patterns, boosting confidence and self-esteem, addressing habits or addictions, managing pain, and promoting overall well-being.</p>`,
   },
   {
     question: 'What does it feel like to be hypnotised?',
-    answer: `Being hypnotised is often described as a state of deep relaxation and focused concentration. Individuals mostly feel calm, peaceful, and detached from their surroundings. Some people may experience heightened awareness or a sense of inward focus.`,
+    answer: `<p>Being hypnotised is often described as a state of deep relaxation and focused concentration. Individuals mostly feel calm, peaceful, and detached from their surroundings. Some people may experience heightened awareness or a sense of inward focus.</p>`,
   },
   {
     question: 'What is the difference between hypnotherapy and psychotherapy?',
-    answer: `Hypnotherapy is a therapeutic approach that utilises hypnosis to access the subconscious mind, whereas psychotherapy encompasses various talk therapies focused on addressing emotional and mental health issues.`,
+    answer: `<p>Hypnotherapy is a therapeutic approach that utilises hypnosis to access the subconscious mind, whereas psychotherapy encompasses various talk therapies focused on addressing emotional and mental health issues.</p>`,
   },
   {
     question: 'How long does hypnotherapy or psychotherapy treatment typically last?',
-    answer: `A typical session lasts 60 minutes, the number of appointments varies depending on the individual and their specific needs. Some issues may be resolved in one session, while others may require more. Simon will work with you to determine the appropriate treatment length.`,
+    answer: `<p>A typical session lasts 60 minutes, the number of appointments varies depending on the individual and their specific needs. Some issues may be resolved in one session, while others may require more. Simon will work with you to determine the appropriate treatment length.</p>`,
   },
   {
     question: 'Are hypnotherapy and psychotherapy evidence-based practices?',
-    answer: `Yes, both hypnotherapy and psychotherapy have a foundation in evidence-based practices. Numerous studies support the effectiveness of these therapies for various conditions, and many therapists adhere to evidence-based treatment approaches to ensure optimal results.`,
+    answer: `<p>Yes, both hypnotherapy and psychotherapy have a foundation in evidence-based practices. Numerous studies support the effectiveness of these therapies for various conditions, and many therapists adhere to evidence-based treatment approaches to ensure optimal results.</p>`,
   },
   // Add more FAQs as needed
 ];
@@ -67,15 +70,19 @@ export default function HomeFAQs() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // JSON-LD schema generation using the updated `question` and `answer` fields.
-  const faqSchema = FAQ_CONTENTS.map(({ question, answer }) => ({
-    '@type': 'Question',
-    name: question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: answer,
-    },
-  }));
+  // Memoize the FAQ schema to avoid recalculation on each render
+  const faqSchema = useMemo(
+    () =>
+      FAQ_CONTENTS.map((faq) => ({
+        '@type': 'Question',
+        name: faq.name,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.text,
+        },
+      })),
+    []
+  );
 
   return (
     <>
@@ -94,38 +101,24 @@ export default function HomeFAQs() {
           <Grid container spacing={{ md: 3 }} justifyContent="center">
             <Grid xs={12} md={8}>
               <m.div variants={varFade().inLeft}>
-                <Typography
-                  variant="h2"
-                  sx={{ textAlign: 'center', fontWeight: 500 }}
-                >
+                <Typography variant="h2" sx={{ textAlign: 'center', fontWeight: 500 }}>
                   Frequently Asked Questions
                 </Typography>
               </m.div>
 
               <Box sx={{ my: { xs: 8, md: 10 } }}>
-                {FAQ_CONTENTS.map(({ question, answer }) => (
-                  <m.div key={question} variants={varFade({ durationIn: 0.5 }).inRight}>
-                    <Accordion
-                      expanded={expanded === question}
-                      onChange={handleChangeExpanded(question)}
-                    >
+                {FAQ_CONTENTS.map((faq) => (
+                  <m.div key={faq.name} variants={varFade({ durationIn: 0.5 }).inRight}>
+                    <Accordion expanded={expanded === faq.name} onChange={handleChangeExpanded(faq.name)}>
                       <AccordionSummary>
-                        <Typography
-                          variant="h6"
-                          component="div"
-                          sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}
-                        >
-                          {question}
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}>
+                          {faq.name}
                         </Typography>
-                        <Iconify
-                          icon={
-                            expanded === question ? 'carbon:subtract' : 'carbon:add'
-                          }
-                        />
+                        <Iconify icon={expanded === faq.name ? 'carbon:subtract' : 'carbon:add'} />
                       </AccordionSummary>
 
                       <AccordionDetails>
-                        <Typography>{answer}</Typography>
+                        <Typography>{faq.text}</Typography>
                       </AccordionDetails>
                     </Accordion>
                   </m.div>
@@ -148,16 +141,10 @@ export default function HomeFAQs() {
                 </m.div>
 
                 <m.div variants={varFade().inUp}>
-                  <Typography sx={{ mt: 3, mb: 5 }}>
-                    Please reach out, I&apos;m happy to help.
-                  </Typography>
+                  <Typography sx={{ mt: 3, mb: 5 }}>Please reach out, I&apos;m happy to help</Typography>
                 </m.div>
 
-                <Stack
-                  direction="row"
-                  spacing={{ xs: 4, sm: 8 }}
-                  justifyContent="center"
-                >
+                <Stack direction="row" spacing={{ xs: 4, sm: 8 }} justifyContent="center">
                   <Button
                     size="large"
                     color="primary"
