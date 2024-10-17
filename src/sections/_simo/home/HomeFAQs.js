@@ -18,7 +18,6 @@ import { bgGradient } from 'src/utils/cssStyles';
 // ----------------------------------------------------------------------
 
 // Renaming FAQ content for clarity
-
 const FAQ_CONTENTS = [
   {
     question: `What is hypnotherapy?`,
@@ -75,10 +74,10 @@ export default function HomeFAQs() {
     () =>
       FAQ_CONTENTS.map((faq) => ({
         '@type': 'Question',
-        name: faq.name,
+        name: faq.question,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: faq.text,
+          text: faq.answer,
         },
       })),
     []
@@ -108,17 +107,20 @@ export default function HomeFAQs() {
 
               <Box sx={{ my: { xs: 8, md: 10 } }}>
                 {FAQ_CONTENTS.map((faq) => (
-                  <m.div key={faq.name} variants={varFade({ durationIn: 0.5 }).inRight}>
-                    <Accordion expanded={expanded === faq.name} onChange={handleChangeExpanded(faq.name)}>
+                  <m.div key={faq.question} variants={varFade({ durationIn: 0.5 }).inRight}>
+                    <Accordion expanded={expanded === faq.question} onChange={handleChangeExpanded(faq.question)}>
                       <AccordionSummary>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontStyle: 'italic', fontWeight: 400 }}>
-                          {faq.name}
+                          {faq.question}
                         </Typography>
-                        <Iconify icon={expanded === faq.name ? 'carbon:subtract' : 'carbon:add'} />
+                        <Iconify icon={expanded === faq.question ? 'carbon:subtract' : 'carbon:add'} />
                       </AccordionSummary>
 
                       <AccordionDetails>
-                        <Typography>{faq.text}</Typography>
+                        <Typography
+                          component="div"
+                          dangerouslySetInnerHTML={{ __html: faq.answer }} // Safely render HTML from string
+                        />
                       </AccordionDetails>
                     </Accordion>
                   </m.div>
