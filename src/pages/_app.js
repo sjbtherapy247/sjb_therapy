@@ -53,18 +53,18 @@ export default function MyApp(props) {
   const { Component, pageProps, emotionCache = clientSideEmotionCache } = props;
 
   // Default SEO settings
-  const defaultTitle = 'Clinical Hypnotherapy - TRANCEform with Simon';
-  const defaultDescription = 'Book a Free Session of hypnotherapy and remove anxiety, stress or fear. Boost your sport or work performance. TRANCEform your mind, TRANCEform your life.';
+  const defaultTitle = 'TRANCEform Hypnosis - Clinical Hypnotherapy by Design';
+  const defaultDescription = 'TRANCEform your mind, TRANCEform your life. Remove anxiety, stress, fear, or boost your sport or work performance by using the power of hypnosis. ';
   const defaultUrl = 'https://sjbtherapy.com';
   const defaultImage = 'https://sjbtherapy.com/assets/sjb-logo/Hmain-darker.jpg';
-  const defaultKeywords = 'local hypnotherapy, free session, remove anxiety';
+  const defaultKeywords = 'Transform Hypnosis, Local Hypnotherapy';
 
   // Page-specific SEO properties
   const { title, description, image, canonical, keywords } = pageProps;
 
   const openGraphData = {
     type: 'website',
-    site_name: title || defaultTitle,
+    site_name: 'TRANCEform with Simon - Clinical Hypnosis',
     description: description || defaultDescription,
     title: title || defaultTitle,
     url: canonical || defaultUrl,
