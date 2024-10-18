@@ -68,13 +68,14 @@ export default function ServicesView({ services, packages, prices }) {
 
       <ServicesInclude services={services} />
 
+      <Testimonial />
+
       <ServicesHowItWork />
 
       <ServicesBenefits />
 
       <PricingHome plans={packages} prices={prices} />
 
-      <Testimonial />
     </>
   );
 }

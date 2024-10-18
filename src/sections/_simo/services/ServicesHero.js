@@ -58,19 +58,17 @@ export default function ServicesHero() {
               }}
             >
               <Typography sx={{ pb: 4 }} variant="h1">
-                Our Services
+                My Services
               </Typography>
 
               <Typography color="text.secondary" sx={{ textAlign: { xs: 'left', sm: 'center' } }}>
-                Here at SjB Therapy, I offer a wide range of services to address various mental and emotional concerns. These therapies can help with issues such as anxiety, phobias, stress management, self-esteem, weight management, smoking
-                cessation, sleep disorders, trauma, relationship difficulties, and personal growth.
+                I offer a wide range of hypnotherapy services to address various mental and emotional concerns. These therapies can help with issues such as anxiety, phobias, stress management, self-esteem, weight management, smoking cessation, sleep disorders, trauma, relationship difficulties, and personal growth.
                 <br />
                 <br />
-                Whether you seek relief from specific fears, want to improve your well-being, or desire to overcome past traumas, our hypnotherapy and psychotherapy solutions will provide effective interventions that are then tailored to your
-                individual needs.
+                Whether you seek relief from specific fears, want to improve your well-being, or have a desire to overcome past traumas, my clinical hypnosis and strategic psychotherapy solutions will provide effective interventions that are then tailored to your individual needs.
                 <br />
                 <br />
-                If your specific circumstances aren&apos;t listed below, please reach out for your discovery call to discuss.
+                If your specific circumstances aren&apos;t listed below, please reach out for your discovery call to discuss as I know I can help.
               </Typography>
             </Stack>
           </Grid>
