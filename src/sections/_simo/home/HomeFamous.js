@@ -1,39 +1,37 @@
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
-// @mui
 import { useTheme } from '@mui/material/styles';
 import { Avatar, Box, Card, Typography, Unstable_Grid2 as Grid } from '@mui/material';
-// components
-import Carousel, {CarouselDots} from 'src/components/carousel';
+import Carousel, { CarouselDots } from 'src/components/carousel';
+import Image from 'next/image';
 
-// ----------------------------------------------------------------------
+const data = [
+  {
+    title:
+      'The American singer and former member of the Black Eyed Peas, whose real name is Stacy Ferguson, has publicly shared her use of hypnotherapy to overcome her addiction to crystal meth. She has credited hypnotherapy as an important part of her recovery process. ',
+    image: '/assets/images/simon/Fergie.png',
+    name: 'Fergie',
+    description: 'Beat Drug Addiction',
+  },
+  {
+    title:
+      'The English actor, known for his roles in "Pirates of the Caribbean" and "Lord of the Rings" franchises, has reportedly used hypnotherapy to overcome a fear of flying. He has spoken about how hypnotherapy helped him deal with his anxiety and conquer his fear of flying. ',
+    image: '/assets/images/simon/Orlando-Bloom.jpeg',
+    name: 'Orlando Bloom',
+    description: 'Fear Of Flying',
+  },
+  {
+    title:
+      'The renowned Hollywood actor has been open about his positive experience with hypnotherapy to quit smoking. He has credited hypnotherapy as a helpful tool in overcoming his addiction to cigarettes. ',
+    image: '/assets/images/simon/Matt-Damon.jpeg',
+    name: 'Matt Damon',
+    description: 'Quit Smoking',
+  },
+];
 
 export default function HomeFamous() {
   const theme = useTheme();
   const carouselRef = useRef(null);
-
-  const data = [
-    {
-      title:
-        'The American singer and former member of the Black Eyed Peas, whose real name is Stacy Ferguson, has publicly shared her use of hypnotherapy to overcome her addiction to crystal meth. She has credited hypnotherapy as an important part of her recovery process.	',
-      image: '/assets/images/simon/Fergie.png',
-      name: 'Fergie',
-      description: 'Beat Drug Addiction',
-    },
-    {
-      title:
-        'The English actor, known for his roles in "Pirates of the Caribbean" and "Lord of the Rings" franchises, has reportedly used hypnotherapy to overcome a fear of flying. He has spoken about how hypnotherapy helped him deal with his anxiety and conquer his fear of flying.	',
-      image: '/assets/images/simon/Orlando-Bloom.jpeg',
-      name: 'Orlando Bloom',
-      description: 'Fear Of Flying',
-    },
-    {
-      title: 'The renowned Hollywood actor has been open about his positive experience with hypnotherapy to quit smoking. He has credited hypnotherapy as a helpful tool in overcoming his addiction to cigarettes. ',
-      image: '/assets/images/simon/Matt-Damon.jpeg',
-      name: 'Matt Damon',
-      description: 'Quit Smoking',
-    },
-  ];
 
   const carouselSettings = {
     dots: true,
@@ -44,7 +42,6 @@ export default function HomeFamous() {
     slidesToShow: 1,
     slidesToScroll: 1,
     rtl: Boolean(theme.direction === 'rtl'),
-
     ...CarouselDots({
       rounded: true,
       sx: {
@@ -89,12 +86,6 @@ export default function HomeFamous() {
   );
 }
 
-HomeFamous.propTypes = {
-  data: PropTypes.array,
-};
-
-// ----------------------------------------------------------------------
-
 function CarouselItem({ item }) {
   const { image, title, name, description } = item;
 
@@ -111,18 +102,15 @@ function CarouselItem({ item }) {
         boxShadow: 3,
       }}
     >
-      <Typography variant="body3" sx={{ fontStyle: 'italic', mx: 3, mb: 2 }}>
+      <Typography variant="body3" sx={{ fontStyle: 'italic', mx: 3, mb: 3 }}>
         {title}
       </Typography>
 
-      <Avatar
-        sx={{ height: 70, width: 70, mb: 2 }}
-        variant="rounded"
-        src={image}
-        alt={name}
-      />
+      <Avatar sx={{ height: 100, width: 100, mb: 2 }} variant="rounded">
+        <Image src={image} alt={name} width={100} height={100}/>
+      </Avatar>
 
-      <Typography variant="h5">{name}</Typography>
+      <Typography variant="h4">{name}</Typography>
       <Typography variant="body2" sx={{ color: 'text.secondary' }}>
         {description}
       </Typography>

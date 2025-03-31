@@ -6,7 +6,7 @@ import { bgGradient } from 'src/utils/cssStyles';
 // _mock
 import { _socialsSimo } from 'src/_mock';
 // components
-import Image from 'src/components/image';
+import Image from 'next/image';
 import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
@@ -27,7 +27,6 @@ const StyledOverlay = styled('div')(({ theme }) => ({
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.short,
   }),
-  // '&:hover': { opacity: 1 },
 }));
 
 // ----------------------------------------------------------------------
@@ -62,11 +61,9 @@ export default function HomeSimon() {
             </Stack>
           </StyledOverlay>
 
-          <Image src={photo} alt={name} sx={{ height: '500px' }} />
+          <Image src={photo} alt={name} layout="responsive" width={400} height={500} />
         </Box>
       </Card>
-
-    
     </Stack>
   );
 }

@@ -40,7 +40,7 @@ export default function LoadingScreen({ sx }) {
             opacity: [1, 0.48, 1, 0.48, 1],
           }}
           transition={{
-            duration: 1,
+            duration: 0.5,
             ease: 'easeInOut',
             repeatDelay: 1,
             repeat: Infinity,

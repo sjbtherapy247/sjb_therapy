@@ -1,23 +1,20 @@
 // SEO
 import { FAQPageJsonLd } from 'next-seo';
-//
 import { m } from 'framer-motion';
 import { useState, useMemo } from 'react';
-// @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Button, Accordion, Container, Typography, AccordionDetails, AccordionSummary, Unstable_Grid2 as Grid, useTheme, Stack, styled } from '@mui/material';
-// hooks
 import useResponsive from 'src/hooks/useResponsive';
-// assets
 import { Pattern01 } from 'src/assets/illustrations/pattern';
-// components
 import Iconify from 'src/components/iconify';
 import { MotionViewport, varFade } from 'src/components/animate';
 import { bgGradient } from 'src/utils/cssStyles';
 
-// ----------------------------------------------------------------------
+// Function to strip HTML tags from a string
+function stripHtml(html) {
+  return html.replace(/<[^>]*>?/gm, '');
+}
 
-// Renaming FAQ content for clarity
 const FAQ_CONTENTS = [
   {
     question: `What is hypnotherapy?`,
@@ -47,10 +44,8 @@ const FAQ_CONTENTS = [
     question: 'Are hypnotherapy and psychotherapy evidence-based practices?',
     answer: `<p>Yes, both hypnotherapy and psychotherapy have a foundation in evidence-based practices. Numerous studies support the effectiveness of these therapies for various conditions, and many therapists adhere to evidence-based treatment approaches to ensure optimal results.</p>`,
   },
-  // Add more FAQs as needed
 ];
 
-// ----------------------------------------------------------------------
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
     color: alpha(theme.palette.background.default, 0.85),
@@ -69,7 +64,6 @@ export default function HomeFAQs() {
     setExpanded(isExpanded ? panel : false);
   };
 
-  // Memoize the FAQ schema to avoid recalculation on each render
   const faqSchema = useMemo(
     () =>
       FAQ_CONTENTS.map((faq) => ({
@@ -77,7 +71,7 @@ export default function HomeFAQs() {
         name: faq.question,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: faq.answer,
+          text: typeof faq.answer === 'string' ? stripHtml(faq.answer) : '', // Strip HTML and check type
         },
       })),
     []
@@ -85,18 +79,10 @@ export default function HomeFAQs() {
 
   return (
     <>
-      {/* FAQ Schema for SEO */}
       <FAQPageJsonLd mainEntity={faqSchema} />
 
       <StyledRoot>
-        <Container
-          component={MotionViewport}
-          sx={{
-            position: 'relative',
-            py: { xs: 4, md: 8 },
-            overflow: 'hidden',
-          }}
-        >
+        <Container component={MotionViewport} sx={{ position: 'relative', py: { xs: 4, md: 8 }, overflow: 'hidden' }}>
           <Grid container spacing={{ md: 3 }} justifyContent="center">
             <Grid xs={12} md={8}>
               <m.div variants={varFade().inLeft}>
@@ -117,27 +103,14 @@ export default function HomeFAQs() {
                       </AccordionSummary>
 
                       <AccordionDetails>
-                        <Typography
-                          component="div"
-                          dangerouslySetInnerHTML={{ __html: faq.answer }} // Safely render HTML from string
-                        />
+                        <Typography component="div" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                       </AccordionDetails>
                     </Accordion>
                   </m.div>
                 ))}
               </Box>
 
-              <Box
-                sx={{
-                  borderWidth: 1,
-                  borderRadius: 3,
-                  textAlign: 'center',
-                  borderStyle: 'dashed',
-                  borderColor: alpha(theme.palette.grey[500], 0.32),
-                  px: { xs: 3, md: 0 },
-                  py: { xs: 6, md: 8 },
-                }}
-              >
+              <Box sx={{ borderWidth: 1, borderRadius: 3, textAlign: 'center', borderStyle: 'dashed', borderColor: alpha(theme.palette.grey[500], 0.32), px: { xs: 3, md: 0 }, py: { xs: 6, md: 8 } }}>
                 <m.div variants={varFade().inUp}>
                   <Typography variant="h3">Still Have Questions?</Typography>
                 </m.div>
@@ -147,25 +120,11 @@ export default function HomeFAQs() {
                 </m.div>
 
                 <Stack direction="row" spacing={{ xs: 4, sm: 8 }} justifyContent="center">
-                  <Button
-                    size="large"
-                    color="primary"
-                    variant="contained"
-                    href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please"
-                    target="_blank"
-                    startIcon={<Iconify icon="mdi:cellphone-sound" />}
-                  >
+                  <Button size="large" color="primary" variant="contained" href="https://wa.me/61413506300?text=Hi%20Simon%20I%20would%20like%20to%20know%20more%20about%20your%20services%20please" target="_blank" startIcon={<Iconify icon="mdi:cellphone-sound" />}>
                     WhatsApp
                   </Button>
 
-                  <Button
-                    size="large"
-                    color="primary"
-                    variant="contained"
-                    href="/services/#hypnotherapyPackages"
-                    target="_blank"
-                    startIcon={<Iconify icon="carbon:launch" />}
-                  >
+                  <Button size="large" color="primary" variant="contained" href="/services/#hypnotherapyPackages" target="_blank" startIcon={<Iconify icon="carbon:launch" />}>
                     Book A Call
                   </Button>
                 </Stack>
@@ -174,17 +133,7 @@ export default function HomeFAQs() {
           </Grid>
 
           {isSmUp && (
-            <Pattern01
-              sx={{
-                top: 80,
-                left: 0,
-                right: 0,
-                zIndex: -1,
-                mx: 'auto',
-                maxWidth: 600,
-                maxHeight: 600,
-              }}
-            />
+            <Pattern01 sx={{ top: 80, left: 0, right: 0, zIndex: -1, mx: 'auto', maxWidth: 600, maxHeight: 600 }} />
           )}
         </Container>
       </StyledRoot>
