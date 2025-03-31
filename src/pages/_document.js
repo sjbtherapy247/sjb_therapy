@@ -30,8 +30,8 @@ const Meta = () => (
       content="Hypnotherapy Sydney, Simon Baker Hypnotherapist, quit smoking hypnosis, reduce anxiety, weight loss hypnosis"
     />
     <meta name="theme-color" content={palette('light').primary.dark} />
-    <meta name="google-adsense-account" content="ca-pub-4250297759847171" />
-    
+    <meta name="google-adsense-account" content={process.env.NEXT_PUBLIC_ADSENSE_ID} />
+
     {/* Open Graph meta tags for social media */}
     <meta property="og:title" content="Simon Baker - Hypnotherapy in Sydney: Quit Smoking, Reduce Anxiety" />
     <meta
@@ -66,7 +66,7 @@ export default function MyDocument({ emotionStyleTags }) {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-KWSDD4C');
+              })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
             `,
           }}
         />
@@ -76,7 +76,7 @@ export default function MyDocument({ emotionStyleTags }) {
         <noscript>
           <iframe
             title="Google Tag Manager"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KWSDD4C"
+            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
