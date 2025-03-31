@@ -2,8 +2,7 @@
 import NextLink from 'next/link';
 import Image from 'next/image';
 // @mui
-import { styled, alpha, useTheme } from '@mui/material';
-import { Stack, Container, Typography, Grid, Button, Link } from '@mui/material';
+import { styled, alpha, useTheme, Stack, Container, Typography, Grid, Button, Link } from '@mui/material';
 // utils
 import { bgGradient } from 'src/utils/cssStyles';
 // components
@@ -60,7 +59,7 @@ export default function HomeGuidedMediation() {
                 So, why hypnosis Simon? Well, firstly it helps people address a wide range of mental, emotional, and physical issues by allowing you to fully relax and focus on the goals that matter most to you.
                 <br />
                 <br />
-                I don&apos;t know of a faster, easier, non-pharmacological way to treat such a wide range of conditions. That&apos;s why I became a hypnotherapist. I live my life in the front row and I want everyone to get back to their own front row. <br />I call it <strong>`To TRANCEform` 🤖</strong> That&apos;s why I do it and that&apos;t why I love it 💛
+                I don&apos;t know of a faster, easier, non-pharmacological way to treat such a wide range of conditions. That&apos;s why I became a hypnotherapist. I live my life in the front row and I want everyone to get back to their own front row. <br />I call it <strong>`To TRANCEform` 🤖</strong> That&apos;t why I do it and that&apos;s why I love it 💛
                 <br />
                 <br />
                 By guiding you into a deeply relaxed state, I, <strong>Simon The Hypnotherapist</strong>, will help you modify your ingrained behaviors, thought patterns, and emotional responses so that they are either more easily controlled, or replaced with better alternatives.
@@ -83,9 +82,9 @@ export default function HomeGuidedMediation() {
                 There are so many positive outcomes, that cover many areas of ones life. This helps each person move towards the life they want, rather than the life they have.
                 <br />
                 <br />
-                <centre>
+                <center>
                   <h3>Book a call and take back control. Because life won&apos;t wait!</h3>
-                </centre>
+                </center>
               </Typography>
             </Stack>
             <Link component={NextLink} href="/services/#hypnotherapyPackages">

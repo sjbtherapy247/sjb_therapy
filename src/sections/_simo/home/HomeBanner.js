@@ -17,18 +17,18 @@ export default function HomeBanner({ quote, sx = {}, ...other }) {
     >
       <Container>
         <Typography
-          variant="h2" // Larger variant for the opening quote
+          variant="h2"
           component="blockquote"
           paragraph
-          sx={{ fontStyle: 'italic', display: 'inline' }} // Inline display
+          sx={{ fontStyle: 'italic', display: 'inline' }}
         >
           {firstQuote}
         </Typography>
         <Typography
-          variant="h5" // Original variant for the rest of the quote
+          variant="h5"
           component="blockquote"
           paragraph
-          sx={{ fontStyle: 'italic', display: 'inline' }} // Inline display
+          sx={{ fontStyle: 'italic', display: 'inline' }}
         >
           {restOfQuote}
         </Typography>
@@ -38,10 +38,10 @@ export default function HomeBanner({ quote, sx = {}, ...other }) {
 }
 
 HomeBanner.propTypes = {
-  quote: PropTypes.string.isRequired,
+  quote: PropTypes.string, // Removed isRequired
   sx: PropTypes.object,
 };
 
 HomeBanner.defaultProps = {
-    quote: "If you think you can do a thing or think you can't do a thing, you're (probably) right - Henry Ford",
-}
+  quote: "If you think you can do a thing or think you can't do a thing, you're (probably) right - Henry Ford",
+};
