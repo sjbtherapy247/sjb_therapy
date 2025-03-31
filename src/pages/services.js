@@ -15,10 +15,10 @@ export async function getStaticProps() {
     props: {
       servicesDocs: [...servicesDescription],
       packages: [...sessionPricing],
-      title: 'Hypnotherapy Services Sydney - Simon Baker',
-      description: `My range of hypnotherapy services cover fears, phobias and anxieties, up to sporting and performance hypnosis. I cover Sydney locally and online globally`,
-      canonical: 'https://sjbtherapy.com/services/',
-      keywords: 'hypnotherapy services sydney',
+      title: servicesDescription[0].title, // Use the first service's title
+      description: servicesDescription[0].description, // Use the first service's description
+      canonical: `https://sjbtherapy.com/services/${servicesDescription[0].url}/`, // Use the first service's URL
+      keywords: servicesDescription[0].keywords, // Use the first service's keywords
     },
   };
 }
@@ -29,7 +29,7 @@ ServicesPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function ServicesPage({ servicesDocs, packages }) {
+export default function ServicesPage({ servicesDocs, packages, title, description, canonical, keywords }) {
   const [pricelist, setPricelist] = useState(null);
 
   const getPricelist = async () => {
@@ -54,5 +54,15 @@ export default function ServicesPage({ servicesDocs, packages }) {
     return <LoadingScreen />;
   }
 
-  return <ServicesView services={servicesDocs} packages={packages} prices={pricelist} />;
+  return (
+    <ServicesView
+      services={servicesDocs}
+      packages={packages}
+      prices={pricelist}
+      title={title}
+      description={description}
+      canonical={canonical}
+      keywords={keywords}
+    />
+  );
 }

@@ -46,12 +46,12 @@ ServicePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 export default function ServicePage({ serviceDoc, services }) {
   return (
     <>
-    <NextSeo>
-    title={serviceDoc.title}
+      <NextSeo
+        title={serviceDoc.title}
         description={serviceDoc.description}
-        canonical=`https://sjbtherapy.com/hypnotherapy-services/${serviceDoc.url}`,
+        canonical={`https://sjbtherapy.com/hypnotherapy-services/${serviceDoc.url}`}
         openGraph={{
-          url: serviceDoc.url,
+          url: `https://sjbtherapy.com/hypnotherapy-services/${serviceDoc.url}`, // Updated URL
           title: serviceDoc.title,
           description: serviceDoc.description,
           images: [
@@ -69,10 +69,9 @@ export default function ServicePage({ serviceDoc, services }) {
             content: serviceDoc.keywords,
           },
         ]}
+      />
 
-    </NextSeo>
-
-    <ServiceView service={serviceDoc} />
+      <ServiceView service={serviceDoc} />
     </>
   );
 }
