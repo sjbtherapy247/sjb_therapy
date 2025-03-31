@@ -68,10 +68,10 @@ export default function HomeFAQs() {
     () =>
       FAQ_CONTENTS.map((faq) => ({
         '@type': 'Question',
-        name: faq.question,
+        name: faq.question, // Added 'name' property
         acceptedAnswer: {
           '@type': 'Answer',
-          text: typeof faq.answer === 'string' ? stripHtml(faq.answer) : '', // Strip HTML and check type
+          text: typeof faq.answer === 'string' ? stripHtml(faq.answer) : '',
         },
       })),
     []
